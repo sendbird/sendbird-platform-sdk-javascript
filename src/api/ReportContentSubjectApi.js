@@ -13,6 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
+import InlineResponse20071 from '../model/InlineResponse20071';
+import InlineResponse20072 from '../model/InlineResponse20072';
+import InlineResponse20072ReportLogs from '../model/InlineResponse20072ReportLogs';
 import ReportChannelByUrlData from '../model/ReportChannelByUrlData';
 import ReportMessageByIdData from '../model/ReportMessageByIdData';
 import ReportUserByIdData from '../model/ReportUserByIdData';
@@ -40,7 +43,7 @@ export default class ReportContentSubjectApi {
      * Callback function to receive the result of the listReports operation.
      * @callback module:api/ReportContentSubjectApi~listReportsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20071} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -54,6 +57,7 @@ export default class ReportContentSubjectApi {
      * @param {Number} opts.startTs 
      * @param {Number} opts.endTs 
      * @param {module:api/ReportContentSubjectApi~listReportsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20071}
      */
     listReports(opts, callback) {
       opts = opts || {};
@@ -76,7 +80,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20071;
       return this.apiClient.callApi(
         '/v3/report', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -88,7 +92,7 @@ export default class ReportContentSubjectApi {
      * Callback function to receive the result of the listReportsOnChannelByUrl operation.
      * @callback module:api/ReportContentSubjectApi~listReportsOnChannelByUrlCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20072} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -102,6 +106,7 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/ReportContentSubjectApi~listReportsOnChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20072}
      */
     listReportsOnChannelByUrl(channelType, channelUrl, opts, callback) {
       opts = opts || {};
@@ -132,7 +137,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20072;
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -144,7 +149,7 @@ export default class ReportContentSubjectApi {
      * Callback function to receive the result of the listReportsOnMessageById operation.
      * @callback module:api/ReportContentSubjectApi~listReportsOnMessageByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20072} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -159,6 +164,7 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/ReportContentSubjectApi~listReportsOnMessageByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20072}
      */
     listReportsOnMessageById(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
@@ -194,7 +200,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20072;
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}/messages/{message_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -206,7 +212,7 @@ export default class ReportContentSubjectApi {
      * Callback function to receive the result of the listReportsOnUserById operation.
      * @callback module:api/ReportContentSubjectApi~listReportsOnUserByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20072} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -219,6 +225,7 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/ReportContentSubjectApi~listReportsOnUserByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20072}
      */
     listReportsOnUserById(offendingUserId, opts, callback) {
       opts = opts || {};
@@ -244,7 +251,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20072;
       return this.apiClient.callApi(
         '/v3/report/users/{offending_user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -256,7 +263,7 @@ export default class ReportContentSubjectApi {
      * Callback function to receive the result of the reportChannelByUrl operation.
      * @callback module:api/ReportContentSubjectApi~reportChannelByUrlCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20072ReportLogs} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -269,6 +276,7 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.apiToken 
      * @param {module:model/ReportChannelByUrlData} opts.reportChannelByUrlData 
      * @param {module:api/ReportContentSubjectApi~reportChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20072ReportLogs}
      */
     reportChannelByUrl(channelType, channelUrl, opts, callback) {
       opts = opts || {};
@@ -297,7 +305,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20072ReportLogs;
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -309,7 +317,7 @@ export default class ReportContentSubjectApi {
      * Callback function to receive the result of the reportMessageById operation.
      * @callback module:api/ReportContentSubjectApi~reportMessageByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20072ReportLogs} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -323,6 +331,7 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.apiToken 
      * @param {module:model/ReportMessageByIdData} opts.reportMessageByIdData 
      * @param {module:api/ReportContentSubjectApi~reportMessageByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20072ReportLogs}
      */
     reportMessageById(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
@@ -356,7 +365,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20072ReportLogs;
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}/messages/{message_id}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -368,7 +377,7 @@ export default class ReportContentSubjectApi {
      * Callback function to receive the result of the reportUserById operation.
      * @callback module:api/ReportContentSubjectApi~reportUserByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20072ReportLogs} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -380,6 +389,7 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.apiToken 
      * @param {module:model/ReportUserByIdData} opts.reportUserByIdData 
      * @param {module:api/ReportContentSubjectApi~reportUserByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20072ReportLogs}
      */
     reportUserById(offendingUserId, opts, callback) {
       opts = opts || {};
@@ -403,7 +413,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20072ReportLogs;
       return this.apiClient.callApi(
         '/v3/report/users/{offending_user_id}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -415,7 +425,7 @@ export default class ReportContentSubjectApi {
      * Callback function to receive the result of the viewModeratedMessageById operation.
      * @callback module:api/ReportContentSubjectApi~viewModeratedMessageByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Object.<String, {String: String}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -428,6 +438,7 @@ export default class ReportContentSubjectApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/ReportContentSubjectApi~viewModeratedMessageByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {String: String}>}
      */
     viewModeratedMessageById(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
@@ -461,7 +472,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = {'String': 'String'};
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}/profanity_messages/{message_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

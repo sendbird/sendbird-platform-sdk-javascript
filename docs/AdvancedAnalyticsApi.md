@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.AdvancedAnalyticsApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## retrieveAdvancedAnalyticsMetrics
 
-> retrieveAdvancedAnalyticsMetrics(opts)
+> InlineResponse20063 retrieveAdvancedAnalyticsMetrics(opts)
 
 Retrieve Advanced analytics metrics
 
@@ -29,7 +29,7 @@ apiInstance.retrieveAdvancedAnalyticsMetrics(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20063**](InlineResponse20063.md)
 
 ### Authorization
 

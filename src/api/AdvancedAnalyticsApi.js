@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import InlineResponse20063 from '../model/InlineResponse20063';
 
 /**
 * AdvancedAnalytics service.
@@ -37,7 +38,7 @@ export default class AdvancedAnalyticsApi {
      * Callback function to receive the result of the retrieveAdvancedAnalyticsMetrics operation.
      * @callback module:api/AdvancedAnalyticsApi~retrieveAdvancedAnalyticsMetricsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20063} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -47,6 +48,7 @@ export default class AdvancedAnalyticsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/AdvancedAnalyticsApi~retrieveAdvancedAnalyticsMetricsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20063}
      */
     retrieveAdvancedAnalyticsMetrics(opts, callback) {
       opts = opts || {};
@@ -65,7 +67,7 @@ export default class AdvancedAnalyticsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20063;
       return this.apiClient.callApi(
         '/v3/statistics/metric', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

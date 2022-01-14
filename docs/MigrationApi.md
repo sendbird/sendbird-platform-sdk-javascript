@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.MigrationApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -25,7 +25,7 @@ let apiInstance = new SendbirdPlatformSdk.MigrationApi();
 let targetChannelUrl = "targetChannelUrl_example"; // String | 
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
-  'body': null // Object | 
+  'body': {key: null} // Object | 
 };
 apiInstance.migrateMessagesByUrl(targetChannelUrl, opts, (error, data, response) => {
   if (error) {

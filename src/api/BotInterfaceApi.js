@@ -13,8 +13,12 @@
 
 
 import ApiClient from "../ApiClient";
+import AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage from '../model/AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage';
 import CreateBotData from '../model/CreateBotData';
+import InlineResponse20066 from '../model/InlineResponse20066';
+import InlineResponse20066Bots from '../model/InlineResponse20066Bots';
 import JoinChannelsData from '../model/JoinChannelsData';
+import SendBirdGroupChannelCollection from '../model/SendBirdGroupChannelCollection';
 import SendBotSMessageData from '../model/SendBotSMessageData';
 import UpdateBotByIdData from '../model/UpdateBotByIdData';
 
@@ -41,7 +45,7 @@ export default class BotInterfaceApi {
      * Callback function to receive the result of the createBot operation.
      * @callback module:api/BotInterfaceApi~createBotCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20066Bots} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -52,6 +56,7 @@ export default class BotInterfaceApi {
      * @param {String} opts.apiToken 
      * @param {module:model/CreateBotData} opts.createBotData 
      * @param {module:api/BotInterfaceApi~createBotCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20066Bots}
      */
     createBot(opts, callback) {
       opts = opts || {};
@@ -70,7 +75,7 @@ export default class BotInterfaceApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20066Bots;
       return this.apiClient.callApi(
         '/v3/bots', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -128,7 +133,7 @@ export default class BotInterfaceApi {
      * Callback function to receive the result of the joinChannels operation.
      * @callback module:api/BotInterfaceApi~joinChannelsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdGroupChannelCollection} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -140,6 +145,7 @@ export default class BotInterfaceApi {
      * @param {String} opts.apiToken 
      * @param {module:model/JoinChannelsData} opts.joinChannelsData 
      * @param {module:api/BotInterfaceApi~joinChannelsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdGroupChannelCollection}
      */
     joinChannels(botUserid, opts, callback) {
       opts = opts || {};
@@ -163,7 +169,7 @@ export default class BotInterfaceApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdGroupChannelCollection;
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}/channels', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -275,7 +281,7 @@ export default class BotInterfaceApi {
      * Callback function to receive the result of the listBots operation.
      * @callback module:api/BotInterfaceApi~listBotsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20066} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -287,6 +293,7 @@ export default class BotInterfaceApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/BotInterfaceApi~listBotsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20066}
      */
     listBots(opts, callback) {
       opts = opts || {};
@@ -307,7 +314,7 @@ export default class BotInterfaceApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20066;
       return this.apiClient.callApi(
         '/v3/bots', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -319,7 +326,7 @@ export default class BotInterfaceApi {
      * Callback function to receive the result of the sendBotsMessage operation.
      * @callback module:api/BotInterfaceApi~sendBotsMessageCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -331,6 +338,7 @@ export default class BotInterfaceApi {
      * @param {String} opts.apiToken 
      * @param {module:model/SendBotSMessageData} opts.sendBotSMessageData 
      * @param {module:api/BotInterfaceApi~sendBotsMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage}
      */
     sendBotsMessage(botUserid, opts, callback) {
       opts = opts || {};
@@ -354,7 +362,7 @@ export default class BotInterfaceApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage;
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}/send', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -366,7 +374,7 @@ export default class BotInterfaceApi {
      * Callback function to receive the result of the updateBotById operation.
      * @callback module:api/BotInterfaceApi~updateBotByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20066Bots} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -378,6 +386,7 @@ export default class BotInterfaceApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateBotByIdData} opts.updateBotByIdData 
      * @param {module:api/BotInterfaceApi~updateBotByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20066Bots}
      */
     updateBotById(botUserid, opts, callback) {
       opts = opts || {};
@@ -401,7 +410,7 @@ export default class BotInterfaceApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20066Bots;
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -413,7 +422,7 @@ export default class BotInterfaceApi {
      * Callback function to receive the result of the viewBotById operation.
      * @callback module:api/BotInterfaceApi~viewBotByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20066Bots} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -424,6 +433,7 @@ export default class BotInterfaceApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/BotInterfaceApi~viewBotByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20066Bots}
      */
     viewBotById(botUserid, opts, callback) {
       opts = opts || {};
@@ -447,7 +457,7 @@ export default class BotInterfaceApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20066Bots;
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

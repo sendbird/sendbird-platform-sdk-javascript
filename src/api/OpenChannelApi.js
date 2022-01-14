@@ -13,6 +13,13 @@
 
 
 import ApiClient from "../ApiClient";
+import InlineResponse20031 from '../model/InlineResponse20031';
+import InlineResponse20032 from '../model/InlineResponse20032';
+import InlineResponse20033 from '../model/InlineResponse20033';
+import InlineResponse20034 from '../model/InlineResponse20034';
+import InlineResponse20034BannedList from '../model/InlineResponse20034BannedList';
+import InlineResponse20035 from '../model/InlineResponse20035';
+import InlineResponse20036 from '../model/InlineResponse20036';
 import OcBanUserData from '../model/OcBanUserData';
 import OcCreateChannelData from '../model/OcCreateChannelData';
 import OcFreezeChannelData from '../model/OcFreezeChannelData';
@@ -20,6 +27,8 @@ import OcMuteUserData from '../model/OcMuteUserData';
 import OcRegisterOperatorsData from '../model/OcRegisterOperatorsData';
 import OcUpdateBanByIdData from '../model/OcUpdateBanByIdData';
 import OcUpdateChannelByUrlData from '../model/OcUpdateChannelByUrlData';
+import SendBirdOpenChannel from '../model/SendBirdOpenChannel';
+import SendBirdUser from '../model/SendBirdUser';
 
 /**
 * OpenChannel service.
@@ -44,7 +53,7 @@ export default class OpenChannelApi {
      * Callback function to receive the result of the ocBanUser operation.
      * @callback module:api/OpenChannelApi~ocBanUserCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20034BannedList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -56,6 +65,7 @@ export default class OpenChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/OcBanUserData} opts.ocBanUserData 
      * @param {module:api/OpenChannelApi~ocBanUserCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20034BannedList}
      */
     ocBanUser(channelUrl, opts, callback) {
       opts = opts || {};
@@ -79,7 +89,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20034BannedList;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/ban', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -99,7 +109,7 @@ export default class OpenChannelApi {
      * Cancel the registration of operators
      * ## Cancel the registration of operators  Cancels the registration of operators from an open channel but leave them as participants.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-cancel-the-registration-of-operators ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to cancel the registration of operators.
      * @param {String} channelUrl 
-     * @param {Array} operatorIds 
+     * @param {Array.<String>} operatorIds 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Boolean} opts.deleteAll 
@@ -121,7 +131,7 @@ export default class OpenChannelApi {
         'channel_url': channelUrl
       };
       let queryParams = {
-        'operator_ids': operatorIds,
+        'operator_ids': this.apiClient.buildCollectionParam(operatorIds, 'multi'),
         'delete_all': opts['deleteAll']
       };
       let headerParams = {
@@ -145,7 +155,7 @@ export default class OpenChannelApi {
      * Callback function to receive the result of the ocCreateChannel operation.
      * @callback module:api/OpenChannelApi~ocCreateChannelCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdOpenChannel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -156,6 +166,7 @@ export default class OpenChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/OcCreateChannelData} opts.ocCreateChannelData 
      * @param {module:api/OpenChannelApi~ocCreateChannelCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdOpenChannel}
      */
     ocCreateChannel(opts, callback) {
       opts = opts || {};
@@ -174,7 +185,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdOpenChannel;
       return this.apiClient.callApi(
         '/v3/open_channels', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -232,7 +243,7 @@ export default class OpenChannelApi {
      * Callback function to receive the result of the ocFreezeChannel operation.
      * @callback module:api/OpenChannelApi~ocFreezeChannelCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdOpenChannel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -244,6 +255,7 @@ export default class OpenChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/OcFreezeChannelData} opts.ocFreezeChannelData 
      * @param {module:api/OpenChannelApi~ocFreezeChannelCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdOpenChannel}
      */
     ocFreezeChannel(channelUrl, opts, callback) {
       opts = opts || {};
@@ -267,7 +279,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdOpenChannel;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/freeze', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -279,7 +291,7 @@ export default class OpenChannelApi {
      * Callback function to receive the result of the ocListBannedUsers operation.
      * @callback module:api/OpenChannelApi~ocListBannedUsersCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20034} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -292,6 +304,7 @@ export default class OpenChannelApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/OpenChannelApi~ocListBannedUsersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20034}
      */
     ocListBannedUsers(channelUrl, opts, callback) {
       opts = opts || {};
@@ -317,7 +330,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20034;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/ban', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -329,7 +342,7 @@ export default class OpenChannelApi {
      * Callback function to receive the result of the ocListChannels operation.
      * @callback module:api/OpenChannelApi~ocListChannelsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20031} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -347,6 +360,7 @@ export default class OpenChannelApi {
      * @param {Boolean} opts.showMetadata 
      * @param {String} opts.customType 
      * @param {module:api/OpenChannelApi~ocListChannelsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20031}
      */
     ocListChannels(opts, callback) {
       opts = opts || {};
@@ -373,7 +387,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20031;
       return this.apiClient.callApi(
         '/v3/open_channels', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -385,7 +399,7 @@ export default class OpenChannelApi {
      * Callback function to receive the result of the ocListMutedUsers operation.
      * @callback module:api/OpenChannelApi~ocListMutedUsersCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20032} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -398,6 +412,7 @@ export default class OpenChannelApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/OpenChannelApi~ocListMutedUsersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20032}
      */
     ocListMutedUsers(channelUrl, opts, callback) {
       opts = opts || {};
@@ -423,7 +438,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20032;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/mute', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -435,7 +450,7 @@ export default class OpenChannelApi {
      * Callback function to receive the result of the ocListOperators operation.
      * @callback module:api/OpenChannelApi~ocListOperatorsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20035} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -448,6 +463,7 @@ export default class OpenChannelApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/OpenChannelApi~ocListOperatorsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20035}
      */
     ocListOperators(channelUrl, opts, callback) {
       opts = opts || {};
@@ -473,7 +489,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20035;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/operators', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -485,7 +501,7 @@ export default class OpenChannelApi {
      * Callback function to receive the result of the ocListParticipants operation.
      * @callback module:api/OpenChannelApi~ocListParticipantsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20033} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -498,6 +514,7 @@ export default class OpenChannelApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/OpenChannelApi~ocListParticipantsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20033}
      */
     ocListParticipants(channelUrl, opts, callback) {
       opts = opts || {};
@@ -523,7 +540,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20033;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/participants', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -535,7 +552,7 @@ export default class OpenChannelApi {
      * Callback function to receive the result of the ocMuteUser operation.
      * @callback module:api/OpenChannelApi~ocMuteUserCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdOpenChannel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -547,6 +564,7 @@ export default class OpenChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/OcMuteUserData} opts.ocMuteUserData 
      * @param {module:api/OpenChannelApi~ocMuteUserCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdOpenChannel}
      */
     ocMuteUser(channelUrl, opts, callback) {
       opts = opts || {};
@@ -570,7 +588,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdOpenChannel;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/mute', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -733,7 +751,7 @@ export default class OpenChannelApi {
      * Callback function to receive the result of the ocUpdateBanById operation.
      * @callback module:api/OpenChannelApi~ocUpdateBanByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdUser} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -746,6 +764,7 @@ export default class OpenChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/OcUpdateBanByIdData} opts.ocUpdateBanByIdData 
      * @param {module:api/OpenChannelApi~ocUpdateBanByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdUser}
      */
     ocUpdateBanById(channelUrl, bannedUserId, opts, callback) {
       opts = opts || {};
@@ -774,7 +793,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdUser;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/ban/{banned_user_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -786,7 +805,7 @@ export default class OpenChannelApi {
      * Callback function to receive the result of the ocUpdateChannelByUrl operation.
      * @callback module:api/OpenChannelApi~ocUpdateChannelByUrlCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdOpenChannel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -798,6 +817,7 @@ export default class OpenChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/OcUpdateChannelByUrlData} opts.ocUpdateChannelByUrlData 
      * @param {module:api/OpenChannelApi~ocUpdateChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdOpenChannel}
      */
     ocUpdateChannelByUrl(channelUrl, opts, callback) {
       opts = opts || {};
@@ -821,7 +841,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdOpenChannel;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -833,7 +853,7 @@ export default class OpenChannelApi {
      * Callback function to receive the result of the ocViewBanById operation.
      * @callback module:api/OpenChannelApi~ocViewBanByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdUser} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -845,6 +865,7 @@ export default class OpenChannelApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/OpenChannelApi~ocViewBanByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdUser}
      */
     ocViewBanById(channelUrl, bannedUserId, opts, callback) {
       opts = opts || {};
@@ -873,7 +894,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdUser;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/ban/{banned_user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -885,7 +906,7 @@ export default class OpenChannelApi {
      * Callback function to receive the result of the ocViewChannelByUrl operation.
      * @callback module:api/OpenChannelApi~ocViewChannelByUrlCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdOpenChannel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -896,6 +917,7 @@ export default class OpenChannelApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/OpenChannelApi~ocViewChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdOpenChannel}
      */
     ocViewChannelByUrl(channelUrl, opts, callback) {
       opts = opts || {};
@@ -919,7 +941,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdOpenChannel;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -931,7 +953,7 @@ export default class OpenChannelApi {
      * Callback function to receive the result of the ocViewMuteById operation.
      * @callback module:api/OpenChannelApi~ocViewMuteByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20036} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -943,6 +965,7 @@ export default class OpenChannelApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/OpenChannelApi~ocViewMuteByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20036}
      */
     ocViewMuteById(channelUrl, mutedUserId, opts, callback) {
       opts = opts || {};
@@ -971,7 +994,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20036;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/mute/{muted_user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

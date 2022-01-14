@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.AnnouncementsApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 ## getDetailedOpenRateOfAnnouncementById
 
-> getDetailedOpenRateOfAnnouncementById(uniqueId, opts)
+> InlineResponse20043 getDetailedOpenRateOfAnnouncementById(uniqueId, opts)
 
 Get detailed open rate of an announcement
 
@@ -40,7 +40,7 @@ apiInstance.getDetailedOpenRateOfAnnouncementById(uniqueId, opts, (error, data, 
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20043**](InlineResponse20043.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 
 ## getDetailedOpenRateOfAnnouncementGroup
 
-> getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts)
+> InlineResponse20047 getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts)
 
 Get detailed open rate of an announcement group
 
@@ -89,7 +89,7 @@ apiInstance.getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts, (err
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ No authorization required
 
 ## getDetailedOpenStatusOfAnnouncementById
 
-> getDetailedOpenStatusOfAnnouncementById(uniqueId, opts)
+> InlineResponse20044 getDetailedOpenStatusOfAnnouncementById(uniqueId, opts)
 
 Get detailed open status of an announcement
 
@@ -135,15 +135,15 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'limit': 56, // Number | 
   'next': "next_example", // String | 
-  'uniqueIds': null, // Array | 
-  'channelUrls': null, // Array | 
+  'uniqueIds': ["null"], // [String] | 
+  'channelUrls': ["null"], // [String] | 
   'hasOpened': true // Boolean | 
 };
 apiInstance.getDetailedOpenStatusOfAnnouncementById(uniqueId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -157,13 +157,13 @@ Name | Type | Description  | Notes
  **apiToken** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **next** | **String**|  | [optional] 
- **uniqueIds** | [**Array**](.md)|  | [optional] 
- **channelUrls** | [**Array**](.md)|  | [optional] 
+ **uniqueIds** | [**[String]**](String.md)|  | [optional] 
+ **channelUrls** | [**[String]**](String.md)|  | [optional] 
  **hasOpened** | **Boolean**|  | [optional] 
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ No authorization required
 
 ## getStatistics
 
-> getStatistics(opts)
+> InlineResponse20045 getStatistics(opts)
 
 Get statistics - weekly
 
@@ -196,7 +196,7 @@ apiInstance.getStatistics(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20045**](InlineResponse20045.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ No authorization required
 
 ## getStatisticsDaily
 
-> getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts)
+> InlineResponse20045 getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts)
 
 Get statistics - daily
 
@@ -250,7 +250,7 @@ apiInstance.getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMont
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20045**](InlineResponse20045.md)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ No authorization required
 
 ## getStatisticsMonthly
 
-> getStatisticsMonthly(opts)
+> InlineResponse20045 getStatisticsMonthly(opts)
 
 Get statistics - monthly
 
@@ -304,7 +304,7 @@ apiInstance.getStatisticsMonthly(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20045**](InlineResponse20045.md)
 
 ### Authorization
 
@@ -332,7 +332,7 @@ No authorization required
 
 ## listAnnouncementGroups
 
-> listAnnouncementGroups(opts)
+> InlineResponse20046 listAnnouncementGroups(opts)
 
 List announcement groups
 
@@ -353,7 +353,7 @@ apiInstance.listAnnouncementGroups(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20046**](InlineResponse20046.md)
 
 ### Authorization
 
@@ -383,7 +383,7 @@ No authorization required
 
 ## listAnnouncements
 
-> listAnnouncements(opts)
+> InlineResponse20040 listAnnouncements(opts)
 
 List announcements
 
@@ -407,7 +407,7 @@ apiInstance.listAnnouncements(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -426,7 +426,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20040**](InlineResponse20040.md)
 
 ### Authorization
 
@@ -440,7 +440,7 @@ No authorization required
 
 ## scheduleAnnouncement
 
-> scheduleAnnouncement(opts)
+> InlineResponse20041 scheduleAnnouncement(opts)
 
 Schedule an announcement
 
@@ -460,7 +460,7 @@ apiInstance.scheduleAnnouncement(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -475,7 +475,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -489,7 +489,7 @@ No authorization required
 
 ## updateAnnouncementById
 
-> updateAnnouncementById(uniqueId, opts)
+> InlineResponse20042 updateAnnouncementById(uniqueId, opts)
 
 Update an announcement
 
@@ -510,7 +510,7 @@ apiInstance.updateAnnouncementById(uniqueId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -526,7 +526,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20042**](InlineResponse20042.md)
 
 ### Authorization
 
@@ -540,7 +540,7 @@ No authorization required
 
 ## viewAnnouncementById
 
-> viewAnnouncementById(uniqueId, opts)
+> InlineResponse20040Announcements viewAnnouncementById(uniqueId, opts)
 
 View an announcement
 
@@ -560,7 +560,7 @@ apiInstance.viewAnnouncementById(uniqueId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -575,7 +575,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20040Announcements**](InlineResponse20040Announcements.md)
 
 ### Authorization
 

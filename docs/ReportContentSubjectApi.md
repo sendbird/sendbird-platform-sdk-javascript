@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.ReportContentSubjectApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## listReports
 
-> listReports(opts)
+> InlineResponse20071 listReports(opts)
 
 List reports
 
@@ -40,7 +40,7 @@ apiInstance.listReports(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20071**](InlineResponse20071.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ No authorization required
 
 ## listReportsOnChannelByUrl
 
-> listReportsOnChannelByUrl(channelType, channelUrl, opts)
+> InlineResponse20072 listReportsOnChannelByUrl(channelType, channelUrl, opts)
 
 List reports on a channel
 
@@ -95,7 +95,7 @@ apiInstance.listReportsOnChannelByUrl(channelType, channelUrl, opts, (error, dat
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20072**](InlineResponse20072.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ No authorization required
 
 ## listReportsOnMessageById
 
-> listReportsOnMessageById(channelType, channelUrl, messageId, opts)
+> InlineResponse20072 listReportsOnMessageById(channelType, channelUrl, messageId, opts)
 
 List reports on a message
 
@@ -151,7 +151,7 @@ apiInstance.listReportsOnMessageById(channelType, channelUrl, messageId, opts, (
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20072**](InlineResponse20072.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ No authorization required
 
 ## listReportsOnUserById
 
-> listReportsOnUserById(offendingUserId, opts)
+> InlineResponse20072 listReportsOnUserById(offendingUserId, opts)
 
 List reports on a user
 
@@ -206,7 +206,7 @@ apiInstance.listReportsOnUserById(offendingUserId, opts, (error, data, response)
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20072**](InlineResponse20072.md)
 
 ### Authorization
 
@@ -237,7 +237,7 @@ No authorization required
 
 ## reportChannelByUrl
 
-> reportChannelByUrl(channelType, channelUrl, opts)
+> InlineResponse20072ReportLogs reportChannelByUrl(channelType, channelUrl, opts)
 
 Report a channel
 
@@ -259,7 +259,7 @@ apiInstance.reportChannelByUrl(channelType, channelUrl, opts, (error, data, resp
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20072ReportLogs**](InlineResponse20072ReportLogs.md)
 
 ### Authorization
 
@@ -290,7 +290,7 @@ No authorization required
 
 ## reportMessageById
 
-> reportMessageById(channelType, channelUrl, messageId, opts)
+> InlineResponse20072ReportLogs reportMessageById(channelType, channelUrl, messageId, opts)
 
 Report a message
 
@@ -313,7 +313,7 @@ apiInstance.reportMessageById(channelType, channelUrl, messageId, opts, (error, 
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20072ReportLogs**](InlineResponse20072ReportLogs.md)
 
 ### Authorization
 
@@ -345,7 +345,7 @@ No authorization required
 
 ## reportUserById
 
-> reportUserById(offendingUserId, opts)
+> InlineResponse20072ReportLogs reportUserById(offendingUserId, opts)
 
 Report a user
 
@@ -366,7 +366,7 @@ apiInstance.reportUserById(offendingUserId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20072ReportLogs**](InlineResponse20072ReportLogs.md)
 
 ### Authorization
 
@@ -396,7 +396,7 @@ No authorization required
 
 ## viewModeratedMessageById
 
-> viewModeratedMessageById(channelType, channelUrl, messageId, opts)
+> {String: String} viewModeratedMessageById(channelType, channelUrl, messageId, opts)
 
 View a moderated message
 
@@ -418,7 +418,7 @@ apiInstance.viewModeratedMessageById(channelType, channelUrl, messageId, opts, (
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -435,7 +435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**{String: String}**
 
 ### Authorization
 

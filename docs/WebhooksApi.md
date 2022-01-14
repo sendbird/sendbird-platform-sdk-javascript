@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.WebhooksApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## chooseWhichEventsToSubscribeTo
 
-> chooseWhichEventsToSubscribeTo(opts)
+> InlineResponse20068 chooseWhichEventsToSubscribeTo(opts)
 
 Choose which events to subscribe to
 
@@ -31,7 +31,7 @@ apiInstance.chooseWhichEventsToSubscribeTo(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20068**](InlineResponse20068.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ No authorization required
 
 ## retrieveListOfSubscribedEvents
 
-> retrieveListOfSubscribedEvents(opts)
+> InlineResponse20067 retrieveListOfSubscribedEvents(opts)
 
 Retrieve a list of subscribed events
 
@@ -80,7 +80,7 @@ apiInstance.retrieveListOfSubscribedEvents(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20067**](InlineResponse20067.md)
 
 ### Authorization
 

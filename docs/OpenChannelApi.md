@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.OpenChannelApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -28,7 +28,7 @@ Method | HTTP request | Description
 
 ## ocBanUser
 
-> ocBanUser(channelUrl, opts)
+> InlineResponse20034BannedList ocBanUser(channelUrl, opts)
 
 Ban a user
 
@@ -49,7 +49,7 @@ apiInstance.ocBanUser(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20034BannedList**](InlineResponse20034BannedList.md)
 
 ### Authorization
 
@@ -92,7 +92,7 @@ import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
 let channelUrl = "channelUrl_example"; // String | 
-let operatorIds = null; // Array | 
+let operatorIds = ["null"]; // [String] | 
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'deleteAll': true // Boolean | 
@@ -112,7 +112,7 @@ apiInstance.ocCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts, (e
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **channelUrl** | **String**|  | 
- **operatorIds** | [**Array**](.md)|  | 
+ **operatorIds** | [**[String]**](String.md)|  | 
  **apiToken** | **String**|  | [optional] 
  **deleteAll** | **Boolean**|  | [optional] 
 
@@ -132,7 +132,7 @@ No authorization required
 
 ## ocCreateChannel
 
-> ocCreateChannel(opts)
+> SendBirdOpenChannel ocCreateChannel(opts)
 
 Create a channel
 
@@ -152,7 +152,7 @@ apiInstance.ocCreateChannel(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdOpenChannel**](SendBirdOpenChannel.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ No authorization required
 
 ## ocFreezeChannel
 
-> ocFreezeChannel(channelUrl, opts)
+> SendBirdOpenChannel ocFreezeChannel(channelUrl, opts)
 
 Freeze a channel
 
@@ -251,7 +251,7 @@ apiInstance.ocFreezeChannel(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdOpenChannel**](SendBirdOpenChannel.md)
 
 ### Authorization
 
@@ -281,7 +281,7 @@ No authorization required
 
 ## ocListBannedUsers
 
-> ocListBannedUsers(channelUrl, opts)
+> InlineResponse20034 ocListBannedUsers(channelUrl, opts)
 
 List banned users
 
@@ -303,7 +303,7 @@ apiInstance.ocListBannedUsers(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -334,7 +334,7 @@ No authorization required
 
 ## ocListChannels
 
-> ocListChannels(opts)
+> InlineResponse20031 ocListChannels(opts)
 
 List channels
 
@@ -361,7 +361,7 @@ apiInstance.ocListChannels(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20031**](InlineResponse20031.md)
 
 ### Authorization
 
@@ -397,7 +397,7 @@ No authorization required
 
 ## ocListMutedUsers
 
-> ocListMutedUsers(channelUrl, opts)
+> InlineResponse20032 ocListMutedUsers(channelUrl, opts)
 
 List muted users
 
@@ -419,7 +419,7 @@ apiInstance.ocListMutedUsers(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 
@@ -450,7 +450,7 @@ No authorization required
 
 ## ocListOperators
 
-> ocListOperators(channelUrl, opts)
+> InlineResponse20035 ocListOperators(channelUrl, opts)
 
 List operators
 
@@ -472,7 +472,7 @@ apiInstance.ocListOperators(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -489,7 +489,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20035**](InlineResponse20035.md)
 
 ### Authorization
 
@@ -503,7 +503,7 @@ No authorization required
 
 ## ocListParticipants
 
-> ocListParticipants(channelUrl, opts)
+> InlineResponse20033 ocListParticipants(channelUrl, opts)
 
 List participants
 
@@ -525,7 +525,7 @@ apiInstance.ocListParticipants(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -542,7 +542,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20033**](InlineResponse20033.md)
 
 ### Authorization
 
@@ -556,7 +556,7 @@ No authorization required
 
 ## ocMuteUser
 
-> ocMuteUser(channelUrl, opts)
+> SendBirdOpenChannel ocMuteUser(channelUrl, opts)
 
 Mute a user
 
@@ -577,7 +577,7 @@ apiInstance.ocMuteUser(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -593,7 +593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdOpenChannel**](SendBirdOpenChannel.md)
 
 ### Authorization
 
@@ -760,7 +760,7 @@ No authorization required
 
 ## ocUpdateBanById
 
-> ocUpdateBanById(channelUrl, bannedUserId, opts)
+> SendBirdUser ocUpdateBanById(channelUrl, bannedUserId, opts)
 
 Update a ban
 
@@ -782,7 +782,7 @@ apiInstance.ocUpdateBanById(channelUrl, bannedUserId, opts, (error, data, respon
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -799,7 +799,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdUser**](SendBirdUser.md)
 
 ### Authorization
 
@@ -813,7 +813,7 @@ No authorization required
 
 ## ocUpdateChannelByUrl
 
-> ocUpdateChannelByUrl(channelUrl, opts)
+> SendBirdOpenChannel ocUpdateChannelByUrl(channelUrl, opts)
 
 Update a channel
 
@@ -834,7 +834,7 @@ apiInstance.ocUpdateChannelByUrl(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -850,7 +850,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdOpenChannel**](SendBirdOpenChannel.md)
 
 ### Authorization
 
@@ -864,7 +864,7 @@ No authorization required
 
 ## ocViewBanById
 
-> ocViewBanById(channelUrl, bannedUserId, opts)
+> SendBirdUser ocViewBanById(channelUrl, bannedUserId, opts)
 
 View a ban
 
@@ -885,7 +885,7 @@ apiInstance.ocViewBanById(channelUrl, bannedUserId, opts, (error, data, response
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -901,7 +901,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdUser**](SendBirdUser.md)
 
 ### Authorization
 
@@ -915,7 +915,7 @@ No authorization required
 
 ## ocViewChannelByUrl
 
-> ocViewChannelByUrl(channelUrl, opts)
+> SendBirdOpenChannel ocViewChannelByUrl(channelUrl, opts)
 
 View a channel
 
@@ -935,7 +935,7 @@ apiInstance.ocViewChannelByUrl(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -950,7 +950,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdOpenChannel**](SendBirdOpenChannel.md)
 
 ### Authorization
 
@@ -964,7 +964,7 @@ No authorization required
 
 ## ocViewMuteById
 
-> ocViewMuteById(channelUrl, mutedUserId, opts)
+> InlineResponse20036 ocViewMuteById(channelUrl, mutedUserId, opts)
 
 View a mute
 
@@ -985,7 +985,7 @@ apiInstance.ocViewMuteById(channelUrl, mutedUserId, opts, (error, data, response
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1001,7 +1001,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20036**](InlineResponse20036.md)
 
 ### Authorization
 

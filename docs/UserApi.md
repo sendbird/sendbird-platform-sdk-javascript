@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.UserApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -45,7 +45,7 @@ Method | HTTP request | Description
 
 ## addRegistrationOrDeviceToken
 
-> addRegistrationOrDeviceToken(userId, tokenType, opts)
+> InlineResponse20026 addRegistrationOrDeviceToken(userId, tokenType, opts)
 
 Add a registration or device token
 
@@ -67,7 +67,7 @@ apiInstance.addRegistrationOrDeviceToken(userId, tokenType, opts, (error, data, 
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20026**](InlineResponse20026.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ No authorization required
 
 ## blockUser
 
-> blockUser(userId, opts)
+> SendBirdUser blockUser(userId, opts)
 
 Block a user
 
@@ -170,7 +170,7 @@ apiInstance.blockUser(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdUser**](SendBirdUser.md)
 
 ### Authorization
 
@@ -200,7 +200,7 @@ No authorization required
 
 ## choosePushNotificationContentTemplate
 
-> choosePushNotificationContentTemplate(userId, opts)
+> InlineResponse20030 choosePushNotificationContentTemplate(userId, opts)
 
 Choose a push notification content template
 
@@ -215,13 +215,13 @@ let apiInstance = new SendbirdPlatformSdk.UserApi();
 let userId = "userId_example"; // String | 
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
-  'body': null // Object | 
+  'body': {key: null} // Object | 
 };
 apiInstance.choosePushNotificationContentTemplate(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20030**](InlineResponse20030.md)
 
 ### Authorization
 
@@ -251,7 +251,7 @@ No authorization required
 
 ## createUser
 
-> createUser(opts)
+> SendBirdUser createUser(opts)
 
 Create a user
 
@@ -271,7 +271,7 @@ apiInstance.createUser(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdUser**](SendBirdUser.md)
 
 ### Authorization
 
@@ -400,7 +400,7 @@ No authorization required
 
 ## listBannedChannels
 
-> listBannedChannels(userId, opts)
+> InlineResponse20023 listBannedChannels(userId, opts)
 
 List banned channels
 
@@ -422,7 +422,7 @@ apiInstance.listBannedChannels(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -439,7 +439,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20023**](InlineResponse20023.md)
 
 ### Authorization
 
@@ -453,7 +453,7 @@ No authorization required
 
 ## listBlockedUsers
 
-> listBlockedUsers(userId, opts)
+> InlineResponse20017 listBlockedUsers(userId, opts)
 
 List blocked users
 
@@ -478,7 +478,7 @@ apiInstance.listBlockedUsers(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20017**](InlineResponse20017.md)
 
 ### Authorization
 
@@ -512,7 +512,7 @@ No authorization required
 
 ## listMutedChannels
 
-> listMutedChannels(userId, opts)
+> InlineResponse20024 listMutedChannels(userId, opts)
 
 List muted channels
 
@@ -534,7 +534,7 @@ apiInstance.listMutedChannels(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -551,7 +551,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20024**](InlineResponse20024.md)
 
 ### Authorization
 
@@ -565,7 +565,7 @@ No authorization required
 
 ## listMyGroupChannels
 
-> listMyGroupChannels(userId, opts)
+> InlineResponse20018 listMyGroupChannels(userId, opts)
 
 List my group channels
 
@@ -625,7 +625,7 @@ apiInstance.listMyGroupChannels(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -680,7 +680,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -694,7 +694,7 @@ No authorization required
 
 ## listRegistrationOrDeviceTokens
 
-> listRegistrationOrDeviceTokens(userId, tokenType, opts)
+> InlineResponse20025 listRegistrationOrDeviceTokens(userId, tokenType, opts)
 
 List registration or device tokens
 
@@ -715,7 +715,7 @@ apiInstance.listRegistrationOrDeviceTokens(userId, tokenType, opts, (error, data
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -731,7 +731,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 
@@ -745,7 +745,7 @@ No authorization required
 
 ## listUsers
 
-> listUsers(opts)
+> InlineResponse20017 listUsers(opts)
 
 List users
 
@@ -773,7 +773,7 @@ apiInstance.listUsers(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -796,7 +796,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20017**](InlineResponse20017.md)
 
 ### Authorization
 
@@ -814,7 +814,7 @@ No authorization required
 
 Mark all messages as read
 
-## Mark all messages as read  Marks all of a user’s unread messages as read in the joined group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-mark-all-messages-as-read ----------------------------
+## Mark all messages as read  Marks all of a user&#39;s unread messages as read in the joined group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-mark-all-messages-as-read ----------------------------
 
 ### Example
 
@@ -963,7 +963,7 @@ No authorization required
 
 ## removeRegistrationOrDeviceToken
 
-> removeRegistrationOrDeviceToken(userId, opts)
+> InlineResponse20027 removeRegistrationOrDeviceToken(userId, opts)
 
 Remove a registration or device token - When unregistering all device tokens
 
@@ -983,7 +983,7 @@ apiInstance.removeRegistrationOrDeviceToken(userId, opts, (error, data, response
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -998,7 +998,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -1012,7 +1012,7 @@ No authorization required
 
 ## removeRegistrationOrDeviceTokenByToken
 
-> removeRegistrationOrDeviceTokenByToken(userId, tokenType, token, opts)
+> InlineResponse20027 removeRegistrationOrDeviceTokenByToken(userId, tokenType, token, opts)
 
 Remove a registration or device token - When unregistering a specific token
 
@@ -1034,7 +1034,7 @@ apiInstance.removeRegistrationOrDeviceTokenByToken(userId, tokenType, token, opt
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1051,7 +1051,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -1065,7 +1065,7 @@ No authorization required
 
 ## removeRegistrationOrDeviceTokenFromOwnerByToken
 
-> removeRegistrationOrDeviceTokenFromOwnerByToken(tokenType, token, opts)
+> InlineResponse20028 removeRegistrationOrDeviceTokenFromOwnerByToken(tokenType, token, opts)
 
 Remove a registration or device token from an owner
 
@@ -1086,7 +1086,7 @@ apiInstance.removeRegistrationOrDeviceTokenFromOwnerByToken(tokenType, token, op
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1102,7 +1102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20028**](InlineResponse20028.md)
 
 ### Authorization
 
@@ -1216,7 +1216,7 @@ No authorization required
 
 ## updateChannelInvitationPreference
 
-> updateChannelInvitationPreference(userId, opts)
+> InlineResponse2006 updateChannelInvitationPreference(userId, opts)
 
 Update channel invitation preference
 
@@ -1237,7 +1237,7 @@ apiInstance.updateChannelInvitationPreference(userId, opts, (error, data, respon
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1253,7 +1253,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -1267,7 +1267,7 @@ No authorization required
 
 ## updateCountPreferenceOfChannelByUrl
 
-> updateCountPreferenceOfChannelByUrl(userId, channelUrl, opts)
+> InlineResponse20022 updateCountPreferenceOfChannelByUrl(userId, channelUrl, opts)
 
 Update count preference of a channel
 
@@ -1289,7 +1289,7 @@ apiInstance.updateCountPreferenceOfChannelByUrl(userId, channelUrl, opts, (error
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1306,7 +1306,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20022**](InlineResponse20022.md)
 
 ### Authorization
 
@@ -1320,7 +1320,7 @@ No authorization required
 
 ## updatePushPreferences
 
-> updatePushPreferences(userId, opts)
+> InlineResponse20029 updatePushPreferences(userId, opts)
 
 Update push preferences
 
@@ -1341,7 +1341,7 @@ apiInstance.updatePushPreferences(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1357,7 +1357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -1371,7 +1371,7 @@ No authorization required
 
 ## updatePushPreferencesForChannelByUrl
 
-> updatePushPreferencesForChannelByUrl(userId, channelUrl, opts)
+> InlineResponse20029 updatePushPreferencesForChannelByUrl(userId, channelUrl, opts)
 
 Update push preferences for a channel
 
@@ -1393,7 +1393,7 @@ apiInstance.updatePushPreferencesForChannelByUrl(userId, channelUrl, opts, (erro
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1410,7 +1410,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -1424,7 +1424,7 @@ No authorization required
 
 ## updateUserById
 
-> updateUserById(userId, opts)
+> SendBirdUser updateUserById(userId, opts)
 
 Update a user
 
@@ -1445,7 +1445,7 @@ apiInstance.updateUserById(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1461,7 +1461,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdUser**](SendBirdUser.md)
 
 ### Authorization
 
@@ -1475,7 +1475,7 @@ No authorization required
 
 ## viewChannelInvitationPreference
 
-> viewChannelInvitationPreference(userId, opts)
+> InlineResponse2006 viewChannelInvitationPreference(userId, opts)
 
 View channel invitation preference
 
@@ -1495,7 +1495,7 @@ apiInstance.viewChannelInvitationPreference(userId, opts, (error, data, response
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1510,7 +1510,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -1524,7 +1524,7 @@ No authorization required
 
 ## viewCountPreferenceOfChannelByUrl
 
-> viewCountPreferenceOfChannelByUrl(userId, channelUrl, opts)
+> InlineResponse20022 viewCountPreferenceOfChannelByUrl(userId, channelUrl, opts)
 
 View count preference of a channel
 
@@ -1545,7 +1545,7 @@ apiInstance.viewCountPreferenceOfChannelByUrl(userId, channelUrl, opts, (error, 
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1561,7 +1561,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20022**](InlineResponse20022.md)
 
 ### Authorization
 
@@ -1575,7 +1575,7 @@ No authorization required
 
 ## viewNumberOfChannelsByJoinStatus
 
-> viewNumberOfChannelsByJoinStatus(userId, opts)
+> InlineResponse20021 viewNumberOfChannelsByJoinStatus(userId, opts)
 
 View number of channels by join status
 
@@ -1596,7 +1596,7 @@ apiInstance.viewNumberOfChannelsByJoinStatus(userId, opts, (error, data, respons
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1612,7 +1612,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20021**](InlineResponse20021.md)
 
 ### Authorization
 
@@ -1626,11 +1626,11 @@ No authorization required
 
 ## viewNumberOfChannelsWithUnreadMessages
 
-> viewNumberOfChannelsWithUnreadMessages(userId, opts)
+> InlineResponse20019 viewNumberOfChannelsWithUnreadMessages(userId, opts)
 
 View number of channels with unread messages
 
-## View number of channels with unread messages  Retrieves the total number of a user’s group channels with unread messages.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-channels-with-unread-messages ----------------------------
+## View number of channels with unread messages  Retrieves the total number of a user&#39;s group channels with unread messages.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-channels-with-unread-messages ----------------------------
 
 ### Example
 
@@ -1641,14 +1641,14 @@ let apiInstance = new SendbirdPlatformSdk.UserApi();
 let userId = "userId_example"; // String | 
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
-  'customTypes': null, // Array | 
+  'customTypes': ["null"], // [String] | 
   'superMode': "superMode_example" // String | 
 };
 apiInstance.viewNumberOfChannelsWithUnreadMessages(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1660,12 +1660,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**|  | 
  **apiToken** | **String**|  | [optional] 
- **customTypes** | [**Array**](.md)|  | [optional] 
+ **customTypes** | [**[String]**](String.md)|  | [optional] 
  **superMode** | **String**|  | [optional] 
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -1679,7 +1679,7 @@ No authorization required
 
 ## viewNumberOfUnreadItems
 
-> viewNumberOfUnreadItems(userId, opts)
+> InlineResponse20020 viewNumberOfUnreadItems(userId, opts)
 
 View number of unread items
 
@@ -1701,7 +1701,7 @@ apiInstance.viewNumberOfUnreadItems(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1718,7 +1718,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 
@@ -1732,11 +1732,11 @@ No authorization required
 
 ## viewNumberOfUnreadMessages
 
-> viewNumberOfUnreadMessages(userId, opts)
+> InlineResponse20019 viewNumberOfUnreadMessages(userId, opts)
 
 View number of unread messages
 
-## View number of unread messages  Retrieves the total number of a user’s currently unread messages in the group channels. The unread counts feature is only available for the group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-unread-messages ----------------------------   &#x60;user_id&#x60;      Type: string      Description: Specifies the unique ID of the user to retrieve the number.
+## View number of unread messages  Retrieves the total number of a user&#39;s currently unread messages in the group channels. The unread counts feature is only available for the group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-unread-messages ----------------------------   &#x60;user_id&#x60;      Type: string      Description: Specifies the unique ID of the user to retrieve the number.
 
 ### Example
 
@@ -1754,7 +1754,7 @@ apiInstance.viewNumberOfUnreadMessages(userId, opts, (error, data, response) => 
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1771,7 +1771,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -1785,11 +1785,11 @@ No authorization required
 
 ## viewPushPreferences
 
-> viewPushPreferences(userId, opts)
+> InlineResponse20029 viewPushPreferences(userId, opts)
 
 View push preferences
 
-## View push preferences  Retrieves a user’s push preferences about whether the user has set &#x60;do_not_disturb&#x60; to pause notifications for a certain period of time, and the time frame in which the user has applied the setting.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-push-preferences ----------------------------
+## View push preferences  Retrieves a user&#39;s push preferences about whether the user has set &#x60;do_not_disturb&#x60; to pause notifications for a certain period of time, and the time frame in which the user has applied the setting.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-push-preferences ----------------------------
 
 ### Example
 
@@ -1805,7 +1805,7 @@ apiInstance.viewPushPreferences(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1820,7 +1820,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -1834,7 +1834,7 @@ No authorization required
 
 ## viewPushPreferencesForChannelByUrl
 
-> viewPushPreferencesForChannelByUrl(userId, channelUrl, opts)
+> InlineResponse20029 viewPushPreferencesForChannelByUrl(userId, channelUrl, opts)
 
 View push preferences for a channel
 
@@ -1855,7 +1855,7 @@ apiInstance.viewPushPreferencesForChannelByUrl(userId, channelUrl, opts, (error,
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1871,7 +1871,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -1885,7 +1885,7 @@ No authorization required
 
 ## viewUserById
 
-> viewUserById(userId, opts)
+> SendBirdUser viewUserById(userId, opts)
 
 View a user
 
@@ -1908,7 +1908,7 @@ apiInstance.viewUserById(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1926,7 +1926,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdUser**](SendBirdUser.md)
 
 ### Authorization
 
@@ -1940,7 +1940,7 @@ No authorization required
 
 ## viewWhoOwnsRegistrationOrDeviceTokenByToken
 
-> viewWhoOwnsRegistrationOrDeviceTokenByToken(tokenType, token, opts)
+> InlineResponse20028 viewWhoOwnsRegistrationOrDeviceTokenByToken(tokenType, token, opts)
 
 View who owns a registration or device token
 
@@ -1961,7 +1961,7 @@ apiInstance.viewWhoOwnsRegistrationOrDeviceTokenByToken(tokenType, token, opts, 
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1977,7 +1977,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20028**](InlineResponse20028.md)
 
 ### Authorization
 

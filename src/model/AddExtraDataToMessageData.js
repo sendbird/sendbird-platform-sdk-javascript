@@ -25,7 +25,7 @@ class AddExtraDataToMessageData {
      * @param channelType {String} Specifies the type of the channel. Either open_channels or group_channels.
      * @param channelUrl {String} Specifies the URL of the target channel.
      * @param messageId {Number} Specifies the unique ID of the message to add key-values items for additional information.
-     * @param sortedMetaarray {String} Specifies a `JSON` object of one or more key-values items which store additional message information. Each item consists of a key and the values in an array. Items are saved and will be returned in the exact order they’ve been specified.
+     * @param sortedMetaarray {String} Specifies a `JSON` object of one or more key-values items which store additional message information. Each item consists of a key and the values in an array. Items are saved and will be returned in the exact order they've been specified.
      * @param metaarray {String} (Deprecated) Specifies a `JSON` object of one or more key-values items which store additional message information. The item consists of a key and the values in an array.
      */
     constructor(channelType, channelUrl, messageId, sortedMetaarray, metaarray) { 
@@ -98,7 +98,7 @@ AddExtraDataToMessageData.prototype['channel_url'] = undefined;
 AddExtraDataToMessageData.prototype['message_id'] = undefined;
 
 /**
- * Specifies a `JSON` object of one or more key-values items which store additional message information. Each item consists of a key and the values in an array. Items are saved and will be returned in the exact order they’ve been specified.
+ * Specifies a `JSON` object of one or more key-values items which store additional message information. Each item consists of a key and the values in an array. Items are saved and will be returned in the exact order they've been specified.
  * @member {String} sorted_metaarray
  */
 AddExtraDataToMessageData.prototype['sorted_metaarray'] = undefined;

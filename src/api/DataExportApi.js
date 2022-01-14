@@ -13,6 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
+import InlineResponse20064 from '../model/InlineResponse20064';
+import InlineResponse20064ExportedData from '../model/InlineResponse20064ExportedData';
+import InlineResponse20065 from '../model/InlineResponse20065';
 import RegisterAndScheduleDataExportData from '../model/RegisterAndScheduleDataExportData';
 
 /**
@@ -38,7 +41,7 @@ export default class DataExportApi {
      * Callback function to receive the result of the listDataExportsByMessageChannelOrUser operation.
      * @callback module:api/DataExportApi~listDataExportsByMessageChannelOrUserCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20064} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -51,6 +54,7 @@ export default class DataExportApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/DataExportApi~listDataExportsByMessageChannelOrUserCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20064}
      */
     listDataExportsByMessageChannelOrUser(dataType, opts, callback) {
       opts = opts || {};
@@ -76,7 +80,7 @@ export default class DataExportApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20064;
       return this.apiClient.callApi(
         '/v3/export/{data_type}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -88,7 +92,7 @@ export default class DataExportApi {
      * Callback function to receive the result of the registerAndScheduleDataExport operation.
      * @callback module:api/DataExportApi~registerAndScheduleDataExportCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20064ExportedData} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -100,6 +104,7 @@ export default class DataExportApi {
      * @param {String} opts.apiToken 
      * @param {module:model/RegisterAndScheduleDataExportData} opts.registerAndScheduleDataExportData 
      * @param {module:api/DataExportApi~registerAndScheduleDataExportCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20064ExportedData}
      */
     registerAndScheduleDataExport(dataType, opts, callback) {
       opts = opts || {};
@@ -123,7 +128,7 @@ export default class DataExportApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20064ExportedData;
       return this.apiClient.callApi(
         '/v3/export/{data_type}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -135,7 +140,7 @@ export default class DataExportApi {
      * Callback function to receive the result of the viewDataExportById operation.
      * @callback module:api/DataExportApi~viewDataExportByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20065} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -147,6 +152,7 @@ export default class DataExportApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/DataExportApi~viewDataExportByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20065}
      */
     viewDataExportById(dataType, requestId, opts, callback) {
       opts = opts || {};
@@ -175,7 +181,7 @@ export default class DataExportApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20065;
       return this.apiClient.callApi(
         '/v3/export/{data_type}/{request_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

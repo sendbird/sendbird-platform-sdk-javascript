@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.DataPrivacyApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -62,7 +62,7 @@ No authorization required
 
 ## listGdprRequests
 
-> listGdprRequests(opts)
+> InlineResponse20069 listGdprRequests(opts)
 
 List GDPR requests
 
@@ -83,7 +83,7 @@ apiInstance.listGdprRequests(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20069**](InlineResponse20069.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ No authorization required
 
 ## registerGdprRequest
 
-> registerGdprRequest(opts)
+> InlineResponse20070 registerGdprRequest(opts)
 
 Register a GDPR request
 
@@ -133,7 +133,7 @@ apiInstance.registerGdprRequest(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20070**](InlineResponse20070.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ No authorization required
 
 ## viewGdprRequestById
 
-> viewGdprRequestById(requestId, opts)
+> InlineResponse20069Requests viewGdprRequestById(requestId, opts)
 
 View a GDPR request
 
@@ -182,7 +182,7 @@ apiInstance.viewGdprRequestById(requestId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20069Requests**](InlineResponse20069Requests.md)
 
 ### Authorization
 

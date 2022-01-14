@@ -27,6 +27,17 @@ import GcRegisterOperatorsData from '../model/GcRegisterOperatorsData';
 import GcResetChatHistoryData from '../model/GcResetChatHistoryData';
 import GcUpdateBanByIdData from '../model/GcUpdateBanByIdData';
 import GcUpdateChannelByUrlData from '../model/GcUpdateChannelByUrlData';
+import InlineResponse20018 from '../model/InlineResponse20018';
+import InlineResponse20032 from '../model/InlineResponse20032';
+import InlineResponse20034 from '../model/InlineResponse20034';
+import InlineResponse20034BannedList from '../model/InlineResponse20034BannedList';
+import InlineResponse20035 from '../model/InlineResponse20035';
+import InlineResponse20036 from '../model/InlineResponse20036';
+import InlineResponse20037 from '../model/InlineResponse20037';
+import InlineResponse20038 from '../model/InlineResponse20038';
+import InlineResponse20039 from '../model/InlineResponse20039';
+import SendBirdGroupChannel from '../model/SendBirdGroupChannel';
+import SendBirdUser from '../model/SendBirdUser';
 
 /**
 * GroupChannel service.
@@ -51,7 +62,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcAcceptInvitation operation.
      * @callback module:api/GroupChannelApi~gcAcceptInvitationCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdGroupChannel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -63,6 +74,7 @@ export default class GroupChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/GcAcceptInvitationData} opts.gcAcceptInvitationData 
      * @param {module:api/GroupChannelApi~gcAcceptInvitationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdGroupChannel}
      */
     gcAcceptInvitation(channelUrl, opts, callback) {
       opts = opts || {};
@@ -86,7 +98,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdGroupChannel;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/accept', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -98,7 +110,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcBanUser operation.
      * @callback module:api/GroupChannelApi~gcBanUserCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20034BannedList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -110,6 +122,7 @@ export default class GroupChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/GcBanUserData} opts.gcBanUserData 
      * @param {module:api/GroupChannelApi~gcBanUserCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20034BannedList}
      */
     gcBanUser(channelUrl, opts, callback) {
       opts = opts || {};
@@ -133,7 +146,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20034BannedList;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/ban', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -153,7 +166,7 @@ export default class GroupChannelApi {
      * Cancel the registration of operators
      * ## Cancel the registration of operators  Cancels the registration of operators from a group channel but leave them as members.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-cancel-the-registration-of-operators ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to cancel the registration of operators.
      * @param {String} channelUrl 
-     * @param {Array} operatorIds 
+     * @param {Array.<String>} operatorIds 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Boolean} opts.deleteAll 
@@ -175,7 +188,7 @@ export default class GroupChannelApi {
         'channel_url': channelUrl
       };
       let queryParams = {
-        'operator_ids': operatorIds,
+        'operator_ids': this.apiClient.buildCollectionParam(operatorIds, 'multi'),
         'delete_all': opts['deleteAll']
       };
       let headerParams = {
@@ -199,7 +212,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcCheckIfMemberById operation.
      * @callback module:api/GroupChannelApi~gcCheckIfMemberByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20038} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -211,6 +224,7 @@ export default class GroupChannelApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/GroupChannelApi~gcCheckIfMemberByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20038}
      */
     gcCheckIfMemberById(channelUrl, userId, opts, callback) {
       opts = opts || {};
@@ -239,7 +253,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20038;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/members/{user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -251,7 +265,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcCreateChannel operation.
      * @callback module:api/GroupChannelApi~gcCreateChannelCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdGroupChannel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -262,6 +276,7 @@ export default class GroupChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/GcCreateChannelData} opts.gcCreateChannelData 
      * @param {module:api/GroupChannelApi~gcCreateChannelCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdGroupChannel}
      */
     gcCreateChannel(opts, callback) {
       opts = opts || {};
@@ -280,7 +295,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdGroupChannel;
       return this.apiClient.callApi(
         '/v3/group_channels', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -385,7 +400,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcFreezeChannel operation.
      * @callback module:api/GroupChannelApi~gcFreezeChannelCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdGroupChannel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -397,6 +412,7 @@ export default class GroupChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/GcFreezeChannelData} opts.gcFreezeChannelData 
      * @param {module:api/GroupChannelApi~gcFreezeChannelCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdGroupChannel}
      */
     gcFreezeChannel(channelUrl, opts, callback) {
       opts = opts || {};
@@ -420,7 +436,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdGroupChannel;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/freeze', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -479,7 +495,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcInviteAsMembers operation.
      * @callback module:api/GroupChannelApi~gcInviteAsMembersCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdGroupChannel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -491,6 +507,7 @@ export default class GroupChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/GcInviteAsMembersData} opts.gcInviteAsMembersData 
      * @param {module:api/GroupChannelApi~gcInviteAsMembersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdGroupChannel}
      */
     gcInviteAsMembers(channelUrl, opts, callback) {
       opts = opts || {};
@@ -514,7 +531,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdGroupChannel;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/invite', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -532,7 +549,7 @@ export default class GroupChannelApi {
 
     /**
      * Join a channel
-     * ## Join a channel  Allows a user to join a [public](#4-private-vs-public) group channel. Since a user is allowed to join up to 2,000 group channels, a user who already belongs to a maximum number of group channels can’t join a new channel.  > __Note__: This action is only permitted for public group channels where the `is_public` property is true.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-join-a-channel ----------------------------
+     * ## Join a channel  Allows a user to join a [public](#4-private-vs-public) group channel. Since a user is allowed to join up to 2,000 group channels, a user who already belongs to a maximum number of group channels can't join a new channel.  > __Note__: This action is only permitted for public group channels where the `is_public` property is true.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-join-a-channel ----------------------------
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
@@ -620,7 +637,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcListBannedUsers operation.
      * @callback module:api/GroupChannelApi~gcListBannedUsersCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20034} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -633,6 +650,7 @@ export default class GroupChannelApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/GroupChannelApi~gcListBannedUsersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20034}
      */
     gcListBannedUsers(channelUrl, opts, callback) {
       opts = opts || {};
@@ -658,7 +676,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20034;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/ban', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -670,7 +688,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcListChannels operation.
      * @callback module:api/GroupChannelApi~gcListChannelsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20018} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -722,6 +740,7 @@ export default class GroupChannelApi {
      * @param {String} opts.membersIn 
      * @param {String} opts.userId 
      * @param {module:api/GroupChannelApi~gcListChannelsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20018}
      */
     gcListChannels(opts, callback) {
       opts = opts || {};
@@ -782,7 +801,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20018;
       return this.apiClient.callApi(
         '/v3/group_channels', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -794,7 +813,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcListMembers operation.
      * @callback module:api/GroupChannelApi~gcListMembersCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20037} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -814,6 +833,7 @@ export default class GroupChannelApi {
      * @param {String} opts.mutedMemberFilter 
      * @param {String} opts.nicknameStartswith 
      * @param {module:api/GroupChannelApi~gcListMembersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20037}
      */
     gcListMembers(channelUrl, opts, callback) {
       opts = opts || {};
@@ -846,7 +866,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20037;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/members', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -858,7 +878,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcListMutedUsers operation.
      * @callback module:api/GroupChannelApi~gcListMutedUsersCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20032} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -871,6 +891,7 @@ export default class GroupChannelApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/GroupChannelApi~gcListMutedUsersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20032}
      */
     gcListMutedUsers(channelUrl, opts, callback) {
       opts = opts || {};
@@ -896,7 +917,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20032;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/mute', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -908,7 +929,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcListOperators operation.
      * @callback module:api/GroupChannelApi~gcListOperatorsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20035} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -921,6 +942,7 @@ export default class GroupChannelApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/GroupChannelApi~gcListOperatorsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20035}
      */
     gcListOperators(channelUrl, opts, callback) {
       opts = opts || {};
@@ -946,7 +968,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20035;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/operators', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -958,7 +980,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcMuteUser operation.
      * @callback module:api/GroupChannelApi~gcMuteUserCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdGroupChannel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -970,6 +992,7 @@ export default class GroupChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/GcMuteUserData} opts.gcMuteUserData 
      * @param {module:api/GroupChannelApi~gcMuteUserCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdGroupChannel}
      */
     gcMuteUser(channelUrl, opts, callback) {
       opts = opts || {};
@@ -993,7 +1016,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdGroupChannel;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/mute', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1005,7 +1028,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcRegisterOperators operation.
      * @callback module:api/GroupChannelApi~gcRegisterOperatorsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20039} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1017,6 +1040,7 @@ export default class GroupChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/GcRegisterOperatorsData} opts.gcRegisterOperatorsData 
      * @param {module:api/GroupChannelApi~gcRegisterOperatorsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20039}
      */
     gcRegisterOperators(channelUrl, opts, callback) {
       opts = opts || {};
@@ -1040,7 +1064,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20039;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/operators', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1058,7 +1082,7 @@ export default class GroupChannelApi {
 
     /**
      * Reset chat history
-     * ## Reset chat history  Resets the properties related to a user’s chat history in a group channel, then clears the existing messages in the channel on the user’s side only. A user can no longer see the messages in a group channel once this action is called, but those messages are not deleted from the database of the Sendbird system. All other members in the channel can retrieve and see the messages.  This action simply clears the messages for the user by updating the `last_message` and `read_receipt` properties of the [channel](#2-types-of-a-channel-3-resource-representation) resource in addition to other internally managed data such as the number of the user’s unread message.  Using the `reset_all` property, you can also reset the properties related to all users' chat history in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-reset-chat-history ----------------------------
+     * ## Reset chat history  Resets the properties related to a user's chat history in a group channel, then clears the existing messages in the channel on the user's side only. A user can no longer see the messages in a group channel once this action is called, but those messages are not deleted from the database of the Sendbird system. All other members in the channel can retrieve and see the messages.  This action simply clears the messages for the user by updating the `last_message` and `read_receipt` properties of the [channel](#2-types-of-a-channel-3-resource-representation) resource in addition to other internally managed data such as the number of the user's unread message.  Using the `reset_all` property, you can also reset the properties related to all users' chat history in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-reset-chat-history ----------------------------
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
@@ -1257,7 +1281,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcUpdateBanById operation.
      * @callback module:api/GroupChannelApi~gcUpdateBanByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdUser} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1270,6 +1294,7 @@ export default class GroupChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/GcUpdateBanByIdData} opts.gcUpdateBanByIdData 
      * @param {module:api/GroupChannelApi~gcUpdateBanByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdUser}
      */
     gcUpdateBanById(channelUrl, bannedUserId, opts, callback) {
       opts = opts || {};
@@ -1298,7 +1323,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdUser;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/ban/{banned_user_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1310,7 +1335,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcUpdateChannelByUrl operation.
      * @callback module:api/GroupChannelApi~gcUpdateChannelByUrlCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdGroupChannel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1322,6 +1347,7 @@ export default class GroupChannelApi {
      * @param {String} opts.apiToken 
      * @param {module:model/GcUpdateChannelByUrlData} opts.gcUpdateChannelByUrlData 
      * @param {module:api/GroupChannelApi~gcUpdateChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdGroupChannel}
      */
     gcUpdateChannelByUrl(channelUrl, opts, callback) {
       opts = opts || {};
@@ -1345,7 +1371,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdGroupChannel;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1357,7 +1383,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcViewBanById operation.
      * @callback module:api/GroupChannelApi~gcViewBanByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdUser} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1369,6 +1395,7 @@ export default class GroupChannelApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/GroupChannelApi~gcViewBanByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdUser}
      */
     gcViewBanById(channelUrl, bannedUserId, opts, callback) {
       opts = opts || {};
@@ -1397,7 +1424,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdUser;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/ban/{banned_user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1409,7 +1436,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcViewChannelByUrl operation.
      * @callback module:api/GroupChannelApi~gcViewChannelByUrlCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdGroupChannel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1425,6 +1452,7 @@ export default class GroupChannelApi {
      * @param {Boolean} opts.readReceipt 
      * @param {Boolean} opts.member 
      * @param {module:api/GroupChannelApi~gcViewChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdGroupChannel}
      */
     gcViewChannelByUrl(channelUrl, opts, callback) {
       opts = opts || {};
@@ -1453,7 +1481,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdGroupChannel;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1465,7 +1493,7 @@ export default class GroupChannelApi {
      * Callback function to receive the result of the gcViewMuteById operation.
      * @callback module:api/GroupChannelApi~gcViewMuteByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20036} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1477,6 +1505,7 @@ export default class GroupChannelApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/GroupChannelApi~gcViewMuteByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20036}
      */
     gcViewMuteById(channelUrl, mutedUserId, opts, callback) {
       opts = opts || {};
@@ -1505,7 +1534,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20036;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/mute/{muted_user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.DataExportApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## listDataExportsByMessageChannelOrUser
 
-> listDataExportsByMessageChannelOrUser(dataType, opts)
+> InlineResponse20064 listDataExportsByMessageChannelOrUser(dataType, opts)
 
 List data exports by message, channel, or user
 
@@ -34,7 +34,7 @@ apiInstance.listDataExportsByMessageChannelOrUser(dataType, opts, (error, data, 
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20064**](InlineResponse20064.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ No authorization required
 
 ## registerAndScheduleDataExport
 
-> registerAndScheduleDataExport(dataType, opts)
+> InlineResponse20064ExportedData registerAndScheduleDataExport(dataType, opts)
 
 Register and schedule a data export
 
@@ -86,7 +86,7 @@ apiInstance.registerAndScheduleDataExport(dataType, opts, (error, data, response
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20064ExportedData**](InlineResponse20064ExportedData.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ No authorization required
 
 ## viewDataExportById
 
-> viewDataExportById(dataType, requestId, opts)
+> InlineResponse20065 viewDataExportById(dataType, requestId, opts)
 
 View a data export
 
@@ -137,7 +137,7 @@ apiInstance.viewDataExportById(dataType, requestId, opts, (error, data, response
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20065**](InlineResponse20065.md)
 
 ### Authorization
 

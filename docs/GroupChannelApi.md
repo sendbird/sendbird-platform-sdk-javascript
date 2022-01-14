@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.GroupChannelApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -37,7 +37,7 @@ Method | HTTP request | Description
 
 ## gcAcceptInvitation
 
-> gcAcceptInvitation(channelUrl, opts)
+> SendBirdGroupChannel gcAcceptInvitation(channelUrl, opts)
 
 Accept an invitation
 
@@ -58,7 +58,7 @@ apiInstance.gcAcceptInvitation(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdGroupChannel**](SendBirdGroupChannel.md)
 
 ### Authorization
 
@@ -88,7 +88,7 @@ No authorization required
 
 ## gcBanUser
 
-> gcBanUser(channelUrl, opts)
+> InlineResponse20034BannedList gcBanUser(channelUrl, opts)
 
 Ban a user
 
@@ -109,7 +109,7 @@ apiInstance.gcBanUser(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20034BannedList**](InlineResponse20034BannedList.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let channelUrl = "channelUrl_example"; // String | 
-let operatorIds = null; // Array | 
+let operatorIds = ["null"]; // [String] | 
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'deleteAll': true // Boolean | 
@@ -172,7 +172,7 @@ apiInstance.gcCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts, (e
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **channelUrl** | **String**|  | 
- **operatorIds** | [**Array**](.md)|  | 
+ **operatorIds** | [**[String]**](String.md)|  | 
  **apiToken** | **String**|  | [optional] 
  **deleteAll** | **Boolean**|  | [optional] 
 
@@ -192,7 +192,7 @@ No authorization required
 
 ## gcCheckIfMemberById
 
-> gcCheckIfMemberById(channelUrl, userId, opts)
+> InlineResponse20038 gcCheckIfMemberById(channelUrl, userId, opts)
 
 Check if member
 
@@ -213,7 +213,7 @@ apiInstance.gcCheckIfMemberById(channelUrl, userId, opts, (error, data, response
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -243,7 +243,7 @@ No authorization required
 
 ## gcCreateChannel
 
-> gcCreateChannel(opts)
+> SendBirdGroupChannel gcCreateChannel(opts)
 
 Create a channel
 
@@ -263,7 +263,7 @@ apiInstance.gcCreateChannel(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdGroupChannel**](SendBirdGroupChannel.md)
 
 ### Authorization
 
@@ -392,7 +392,7 @@ No authorization required
 
 ## gcFreezeChannel
 
-> gcFreezeChannel(channelUrl, opts)
+> SendBirdGroupChannel gcFreezeChannel(channelUrl, opts)
 
 Freeze a channel
 
@@ -413,7 +413,7 @@ apiInstance.gcFreezeChannel(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -429,7 +429,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdGroupChannel**](SendBirdGroupChannel.md)
 
 ### Authorization
 
@@ -494,7 +494,7 @@ No authorization required
 
 ## gcInviteAsMembers
 
-> gcInviteAsMembers(channelUrl, opts)
+> SendBirdGroupChannel gcInviteAsMembers(channelUrl, opts)
 
 Invite as members
 
@@ -515,7 +515,7 @@ apiInstance.gcInviteAsMembers(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -531,7 +531,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdGroupChannel**](SendBirdGroupChannel.md)
 
 ### Authorization
 
@@ -549,7 +549,7 @@ No authorization required
 
 Join a channel
 
-## Join a channel  Allows a user to join a [public](#4-private-vs-public) group channel. Since a user is allowed to join up to 2,000 group channels, a user who already belongs to a maximum number of group channels can’t join a new channel.  &gt; __Note__: This action is only permitted for public group channels where the &#x60;is_public&#x60; property is true.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-join-a-channel ----------------------------
+## Join a channel  Allows a user to join a [public](#4-private-vs-public) group channel. Since a user is allowed to join up to 2,000 group channels, a user who already belongs to a maximum number of group channels can&#39;t join a new channel.  &gt; __Note__: This action is only permitted for public group channels where the &#x60;is_public&#x60; property is true.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-join-a-channel ----------------------------
 
 ### Example
 
@@ -647,7 +647,7 @@ No authorization required
 
 ## gcListBannedUsers
 
-> gcListBannedUsers(channelUrl, opts)
+> InlineResponse20034 gcListBannedUsers(channelUrl, opts)
 
 List banned users
 
@@ -669,7 +669,7 @@ apiInstance.gcListBannedUsers(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -686,7 +686,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -700,7 +700,7 @@ No authorization required
 
 ## gcListChannels
 
-> gcListChannels(opts)
+> InlineResponse20018 gcListChannels(opts)
 
 List channels
 
@@ -761,7 +761,7 @@ apiInstance.gcListChannels(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -817,7 +817,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -831,7 +831,7 @@ No authorization required
 
 ## gcListMembers
 
-> gcListMembers(channelUrl, opts)
+> InlineResponse20037 gcListMembers(channelUrl, opts)
 
 List members
 
@@ -860,7 +860,7 @@ apiInstance.gcListMembers(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -884,7 +884,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20037**](InlineResponse20037.md)
 
 ### Authorization
 
@@ -898,7 +898,7 @@ No authorization required
 
 ## gcListMutedUsers
 
-> gcListMutedUsers(channelUrl, opts)
+> InlineResponse20032 gcListMutedUsers(channelUrl, opts)
 
 List muted users
 
@@ -920,7 +920,7 @@ apiInstance.gcListMutedUsers(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -937,7 +937,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 
@@ -951,7 +951,7 @@ No authorization required
 
 ## gcListOperators
 
-> gcListOperators(channelUrl, opts)
+> InlineResponse20035 gcListOperators(channelUrl, opts)
 
 List operators
 
@@ -973,7 +973,7 @@ apiInstance.gcListOperators(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -990,7 +990,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20035**](InlineResponse20035.md)
 
 ### Authorization
 
@@ -1004,7 +1004,7 @@ No authorization required
 
 ## gcMuteUser
 
-> gcMuteUser(channelUrl, opts)
+> SendBirdGroupChannel gcMuteUser(channelUrl, opts)
 
 Mute a user
 
@@ -1025,7 +1025,7 @@ apiInstance.gcMuteUser(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1041,7 +1041,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdGroupChannel**](SendBirdGroupChannel.md)
 
 ### Authorization
 
@@ -1055,7 +1055,7 @@ No authorization required
 
 ## gcRegisterOperators
 
-> gcRegisterOperators(channelUrl, opts)
+> InlineResponse20039 gcRegisterOperators(channelUrl, opts)
 
 Register operators
 
@@ -1076,7 +1076,7 @@ apiInstance.gcRegisterOperators(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1092,7 +1092,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20039**](InlineResponse20039.md)
 
 ### Authorization
 
@@ -1110,7 +1110,7 @@ No authorization required
 
 Reset chat history
 
-## Reset chat history  Resets the properties related to a user’s chat history in a group channel, then clears the existing messages in the channel on the user’s side only. A user can no longer see the messages in a group channel once this action is called, but those messages are not deleted from the database of the Sendbird system. All other members in the channel can retrieve and see the messages.  This action simply clears the messages for the user by updating the &#x60;last_message&#x60; and &#x60;read_receipt&#x60; properties of the [channel](#2-types-of-a-channel-3-resource-representation) resource in addition to other internally managed data such as the number of the user’s unread message.  Using the &#x60;reset_all&#x60; property, you can also reset the properties related to all users&#39; chat history in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-reset-chat-history ----------------------------
+## Reset chat history  Resets the properties related to a user&#39;s chat history in a group channel, then clears the existing messages in the channel on the user&#39;s side only. A user can no longer see the messages in a group channel once this action is called, but those messages are not deleted from the database of the Sendbird system. All other members in the channel can retrieve and see the messages.  This action simply clears the messages for the user by updating the &#x60;last_message&#x60; and &#x60;read_receipt&#x60; properties of the [channel](#2-types-of-a-channel-3-resource-representation) resource in addition to other internally managed data such as the number of the user&#39;s unread message.  Using the &#x60;reset_all&#x60; property, you can also reset the properties related to all users&#39; chat history in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-reset-chat-history ----------------------------
 
 ### Example
 
@@ -1312,7 +1312,7 @@ No authorization required
 
 ## gcUpdateBanById
 
-> gcUpdateBanById(channelUrl, bannedUserId, opts)
+> SendBirdUser gcUpdateBanById(channelUrl, bannedUserId, opts)
 
 Update a ban
 
@@ -1334,7 +1334,7 @@ apiInstance.gcUpdateBanById(channelUrl, bannedUserId, opts, (error, data, respon
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1351,7 +1351,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdUser**](SendBirdUser.md)
 
 ### Authorization
 
@@ -1365,7 +1365,7 @@ No authorization required
 
 ## gcUpdateChannelByUrl
 
-> gcUpdateChannelByUrl(channelUrl, opts)
+> SendBirdGroupChannel gcUpdateChannelByUrl(channelUrl, opts)
 
 Update a channel
 
@@ -1386,7 +1386,7 @@ apiInstance.gcUpdateChannelByUrl(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1402,7 +1402,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdGroupChannel**](SendBirdGroupChannel.md)
 
 ### Authorization
 
@@ -1416,7 +1416,7 @@ No authorization required
 
 ## gcViewBanById
 
-> gcViewBanById(channelUrl, bannedUserId, opts)
+> SendBirdUser gcViewBanById(channelUrl, bannedUserId, opts)
 
 View a ban
 
@@ -1437,7 +1437,7 @@ apiInstance.gcViewBanById(channelUrl, bannedUserId, opts, (error, data, response
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1453,7 +1453,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdUser**](SendBirdUser.md)
 
 ### Authorization
 
@@ -1467,7 +1467,7 @@ No authorization required
 
 ## gcViewChannelByUrl
 
-> gcViewChannelByUrl(channelUrl, opts)
+> SendBirdGroupChannel gcViewChannelByUrl(channelUrl, opts)
 
 View a channel
 
@@ -1492,7 +1492,7 @@ apiInstance.gcViewChannelByUrl(channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1512,7 +1512,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdGroupChannel**](SendBirdGroupChannel.md)
 
 ### Authorization
 
@@ -1526,7 +1526,7 @@ No authorization required
 
 ## gcViewMuteById
 
-> gcViewMuteById(channelUrl, mutedUserId, opts)
+> InlineResponse20036 gcViewMuteById(channelUrl, mutedUserId, opts)
 
 View a mute
 
@@ -1547,7 +1547,7 @@ apiInstance.gcViewMuteById(channelUrl, mutedUserId, opts, (error, data, response
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1563,7 +1563,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20036**](InlineResponse20036.md)
 
 ### Authorization
 

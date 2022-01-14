@@ -15,6 +15,14 @@
 import ApiClient from "../ApiClient";
 import AddEmojisData from '../model/AddEmojisData';
 import EnableReactionsData from '../model/EnableReactionsData';
+import InlineResponse20052 from '../model/InlineResponse20052';
+import InlineResponse20056 from '../model/InlineResponse20056';
+import InlineResponse20057 from '../model/InlineResponse20057';
+import InlineResponse20058 from '../model/InlineResponse20058';
+import InlineResponse20059 from '../model/InlineResponse20059';
+import InlineResponse20060 from '../model/InlineResponse20060';
+import SendBirdEmoji from '../model/SendBirdEmoji';
+import SendBirdEmojiCategory from '../model/SendBirdEmojiCategory';
 import UpdateEmojiCategoryUrlByIdData from '../model/UpdateEmojiCategoryUrlByIdData';
 import UpdateEmojiUrlByKeyData from '../model/UpdateEmojiUrlByKeyData';
 import UseDefaultEmojisData from '../model/UseDefaultEmojisData';
@@ -42,7 +50,7 @@ export default class EmojisApi {
      * Callback function to receive the result of the addEmojiCategories operation.
      * @callback module:api/EmojisApi~addEmojiCategoriesCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20058} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -51,8 +59,9 @@ export default class EmojisApi {
      * ## Add emoji categories  Adds a list of one or more new emoji categories to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-add-emoji-categories
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {Object} opts.body 
+     * @param {Object.<String, Object>} opts.body 
      * @param {module:api/EmojisApi~addEmojiCategoriesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20058}
      */
     addEmojiCategories(opts, callback) {
       opts = opts || {};
@@ -71,7 +80,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20058;
       return this.apiClient.callApi(
         '/v3/emoji_categories', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -83,7 +92,7 @@ export default class EmojisApi {
      * Callback function to receive the result of the addEmojis operation.
      * @callback module:api/EmojisApi~addEmojisCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20060} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -94,6 +103,7 @@ export default class EmojisApi {
      * @param {String} opts.apiToken 
      * @param {module:model/AddEmojisData} opts.addEmojisData 
      * @param {module:api/EmojisApi~addEmojisCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20060}
      */
     addEmojis(opts, callback) {
       opts = opts || {};
@@ -112,7 +122,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20060;
       return this.apiClient.callApi(
         '/v3/emojis', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -216,7 +226,7 @@ export default class EmojisApi {
      * Callback function to receive the result of the enableReactions operation.
      * @callback module:api/EmojisApi~enableReactionsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20052} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -227,6 +237,7 @@ export default class EmojisApi {
      * @param {String} opts.apiToken 
      * @param {module:model/EnableReactionsData} opts.enableReactionsData 
      * @param {module:api/EmojisApi~enableReactionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20052}
      */
     enableReactions(opts, callback) {
       opts = opts || {};
@@ -245,7 +256,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20052;
       return this.apiClient.callApi(
         '/v3/applications/settings/reactions', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -257,7 +268,7 @@ export default class EmojisApi {
      * Callback function to receive the result of the getEmojiByKey operation.
      * @callback module:api/EmojisApi~getEmojiByKeyCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdEmoji} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -268,6 +279,7 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/EmojisApi~getEmojiByKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdEmoji}
      */
     getEmojiByKey(emojiKey, opts, callback) {
       opts = opts || {};
@@ -291,7 +303,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdEmoji;
       return this.apiClient.callApi(
         '/v3/emojis/{emoji_key}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -303,7 +315,7 @@ export default class EmojisApi {
      * Callback function to receive the result of the getEmojiCategoryById operation.
      * @callback module:api/EmojisApi~getEmojiCategoryByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdEmojiCategory} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -314,6 +326,7 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/EmojisApi~getEmojiCategoryByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdEmojiCategory}
      */
     getEmojiCategoryById(emojiCategoryId, opts, callback) {
       opts = opts || {};
@@ -337,7 +350,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdEmojiCategory;
       return this.apiClient.callApi(
         '/v3/emoji_categories/{emoji_category_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -349,7 +362,7 @@ export default class EmojisApi {
      * Callback function to receive the result of the listAllEmojisAndEmojiCategories operation.
      * @callback module:api/EmojisApi~listAllEmojisAndEmojiCategoriesCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20057} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -359,6 +372,7 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/EmojisApi~listAllEmojisAndEmojiCategoriesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20057}
      */
     listAllEmojisAndEmojiCategories(opts, callback) {
       opts = opts || {};
@@ -377,7 +391,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20057;
       return this.apiClient.callApi(
         '/v3/emoji_categories', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -389,7 +403,7 @@ export default class EmojisApi {
      * Callback function to receive the result of the listEmojis operation.
      * @callback module:api/EmojisApi~listEmojisCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20059} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -399,6 +413,7 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/EmojisApi~listEmojisCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20059}
      */
     listEmojis(opts, callback) {
       opts = opts || {};
@@ -417,7 +432,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20059;
       return this.apiClient.callApi(
         '/v3/emojis', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -429,7 +444,7 @@ export default class EmojisApi {
      * Callback function to receive the result of the updateEmojiCategoryUrlById operation.
      * @callback module:api/EmojisApi~updateEmojiCategoryUrlByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdEmojiCategory} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -441,6 +456,7 @@ export default class EmojisApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateEmojiCategoryUrlByIdData} opts.updateEmojiCategoryUrlByIdData 
      * @param {module:api/EmojisApi~updateEmojiCategoryUrlByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdEmojiCategory}
      */
     updateEmojiCategoryUrlById(emojiCategoryId, opts, callback) {
       opts = opts || {};
@@ -464,7 +480,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdEmojiCategory;
       return this.apiClient.callApi(
         '/v3/emoji_categories/{emoji_category_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -476,7 +492,7 @@ export default class EmojisApi {
      * Callback function to receive the result of the updateEmojiUrlByKey operation.
      * @callback module:api/EmojisApi~updateEmojiUrlByKeyCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdEmoji} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -488,6 +504,7 @@ export default class EmojisApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateEmojiUrlByKeyData} opts.updateEmojiUrlByKeyData 
      * @param {module:api/EmojisApi~updateEmojiUrlByKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdEmoji}
      */
     updateEmojiUrlByKey(emojiKey, opts, callback) {
       opts = opts || {};
@@ -511,7 +528,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdEmoji;
       return this.apiClient.callApi(
         '/v3/emojis/{emoji_key}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -523,7 +540,7 @@ export default class EmojisApi {
      * Callback function to receive the result of the useDefaultEmojis operation.
      * @callback module:api/EmojisApi~useDefaultEmojisCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20056} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -534,6 +551,7 @@ export default class EmojisApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UseDefaultEmojisData} opts.useDefaultEmojisData 
      * @param {module:api/EmojisApi~useDefaultEmojisCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20056}
      */
     useDefaultEmojis(opts, callback) {
       opts = opts || {};
@@ -552,7 +570,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20056;
       return this.apiClient.callApi(
         '/v3/applications/settings/use_default_emoji', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,

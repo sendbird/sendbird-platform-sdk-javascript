@@ -13,6 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
+import InlineResponse20069 from '../model/InlineResponse20069';
+import InlineResponse20069Requests from '../model/InlineResponse20069Requests';
+import InlineResponse20070 from '../model/InlineResponse20070';
 import RegisterGdprRequestData from '../model/RegisterGdprRequestData';
 
 /**
@@ -84,7 +87,7 @@ export default class DataPrivacyApi {
      * Callback function to receive the result of the listGdprRequests operation.
      * @callback module:api/DataPrivacyApi~listGdprRequestsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20069} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -96,6 +99,7 @@ export default class DataPrivacyApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/DataPrivacyApi~listGdprRequestsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20069}
      */
     listGdprRequests(opts, callback) {
       opts = opts || {};
@@ -116,7 +120,7 @@ export default class DataPrivacyApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20069;
       return this.apiClient.callApi(
         '/v3/privacy/gdpr', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -128,7 +132,7 @@ export default class DataPrivacyApi {
      * Callback function to receive the result of the registerGdprRequest operation.
      * @callback module:api/DataPrivacyApi~registerGdprRequestCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20070} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -139,6 +143,7 @@ export default class DataPrivacyApi {
      * @param {String} opts.apiToken 
      * @param {module:model/RegisterGdprRequestData} opts.registerGdprRequestData 
      * @param {module:api/DataPrivacyApi~registerGdprRequestCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20070}
      */
     registerGdprRequest(opts, callback) {
       opts = opts || {};
@@ -157,7 +162,7 @@ export default class DataPrivacyApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20070;
       return this.apiClient.callApi(
         '/v3/privacy/gdpr', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -169,7 +174,7 @@ export default class DataPrivacyApi {
      * Callback function to receive the result of the viewGdprRequestById operation.
      * @callback module:api/DataPrivacyApi~viewGdprRequestByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20069Requests} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -180,6 +185,7 @@ export default class DataPrivacyApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/DataPrivacyApi~viewGdprRequestByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20069Requests}
      */
     viewGdprRequestById(requestId, opts, callback) {
       opts = opts || {};
@@ -203,7 +209,7 @@ export default class DataPrivacyApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20069Requests;
       return this.apiClient.callApi(
         '/v3/privacy/gdpr/{request_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -13,6 +13,15 @@
 
 
 import ApiClient from "../ApiClient";
+import InlineResponse20040 from '../model/InlineResponse20040';
+import InlineResponse20040Announcements from '../model/InlineResponse20040Announcements';
+import InlineResponse20041 from '../model/InlineResponse20041';
+import InlineResponse20042 from '../model/InlineResponse20042';
+import InlineResponse20043 from '../model/InlineResponse20043';
+import InlineResponse20044 from '../model/InlineResponse20044';
+import InlineResponse20045 from '../model/InlineResponse20045';
+import InlineResponse20046 from '../model/InlineResponse20046';
+import InlineResponse20047 from '../model/InlineResponse20047';
 import ScheduleAnnouncementData from '../model/ScheduleAnnouncementData';
 import UpdateAnnouncementByIdData from '../model/UpdateAnnouncementByIdData';
 
@@ -39,7 +48,7 @@ export default class AnnouncementsApi {
      * Callback function to receive the result of the getDetailedOpenRateOfAnnouncementById operation.
      * @callback module:api/AnnouncementsApi~getDetailedOpenRateOfAnnouncementByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20043} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -50,6 +59,7 @@ export default class AnnouncementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/AnnouncementsApi~getDetailedOpenRateOfAnnouncementByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20043}
      */
     getDetailedOpenRateOfAnnouncementById(uniqueId, opts, callback) {
       opts = opts || {};
@@ -73,7 +83,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20043;
       return this.apiClient.callApi(
         '/v3/announcement_open_rate/{unique_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -85,7 +95,7 @@ export default class AnnouncementsApi {
      * Callback function to receive the result of the getDetailedOpenRateOfAnnouncementGroup operation.
      * @callback module:api/AnnouncementsApi~getDetailedOpenRateOfAnnouncementGroupCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20047} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -96,6 +106,7 @@ export default class AnnouncementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/AnnouncementsApi~getDetailedOpenRateOfAnnouncementGroupCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20047}
      */
     getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts, callback) {
       opts = opts || {};
@@ -119,7 +130,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20047;
       return this.apiClient.callApi(
         '/v3/announcement_open_rate_by_group/{announcement_group}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -131,7 +142,7 @@ export default class AnnouncementsApi {
      * Callback function to receive the result of the getDetailedOpenStatusOfAnnouncementById operation.
      * @callback module:api/AnnouncementsApi~getDetailedOpenStatusOfAnnouncementByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20044} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -143,10 +154,11 @@ export default class AnnouncementsApi {
      * @param {String} opts.apiToken 
      * @param {Number} opts.limit 
      * @param {String} opts.next 
-     * @param {Array} opts.uniqueIds 
-     * @param {Array} opts.channelUrls 
+     * @param {Array.<String>} opts.uniqueIds 
+     * @param {Array.<String>} opts.channelUrls 
      * @param {Boolean} opts.hasOpened 
      * @param {module:api/AnnouncementsApi~getDetailedOpenStatusOfAnnouncementByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20044}
      */
     getDetailedOpenStatusOfAnnouncementById(uniqueId, opts, callback) {
       opts = opts || {};
@@ -162,8 +174,8 @@ export default class AnnouncementsApi {
       let queryParams = {
         'limit': opts['limit'],
         'next': opts['next'],
-        'unique_ids': opts['uniqueIds'],
-        'channel_urls': opts['channelUrls'],
+        'unique_ids': this.apiClient.buildCollectionParam(opts['uniqueIds'], 'multi'),
+        'channel_urls': this.apiClient.buildCollectionParam(opts['channelUrls'], 'multi'),
         'has_opened': opts['hasOpened']
       };
       let headerParams = {
@@ -175,7 +187,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20044;
       return this.apiClient.callApi(
         '/v3/announcement_open_status/{unique_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -187,7 +199,7 @@ export default class AnnouncementsApi {
      * Callback function to receive the result of the getStatistics operation.
      * @callback module:api/AnnouncementsApi~getStatisticsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20045} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -197,6 +209,7 @@ export default class AnnouncementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/AnnouncementsApi~getStatisticsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20045}
      */
     getStatistics(opts, callback) {
       opts = opts || {};
@@ -215,7 +228,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20045;
       return this.apiClient.callApi(
         '/v3/announcement_stats/weekly', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -227,7 +240,7 @@ export default class AnnouncementsApi {
      * Callback function to receive the result of the getStatisticsDaily operation.
      * @callback module:api/AnnouncementsApi~getStatisticsDailyCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20045} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -244,6 +257,7 @@ export default class AnnouncementsApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.announcementGroup 
      * @param {module:api/AnnouncementsApi~getStatisticsDailyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20045}
      */
     getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts, callback) {
       opts = opts || {};
@@ -293,7 +307,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20045;
       return this.apiClient.callApi(
         '/v3/announcement_stats/daily', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -305,7 +319,7 @@ export default class AnnouncementsApi {
      * Callback function to receive the result of the getStatisticsMonthly operation.
      * @callback module:api/AnnouncementsApi~getStatisticsMonthlyCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20045} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -315,6 +329,7 @@ export default class AnnouncementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/AnnouncementsApi~getStatisticsMonthlyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20045}
      */
     getStatisticsMonthly(opts, callback) {
       opts = opts || {};
@@ -333,7 +348,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20045;
       return this.apiClient.callApi(
         '/v3/announcement_stats/monthly', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -345,7 +360,7 @@ export default class AnnouncementsApi {
      * Callback function to receive the result of the listAnnouncementGroups operation.
      * @callback module:api/AnnouncementsApi~listAnnouncementGroupsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20046} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -357,6 +372,7 @@ export default class AnnouncementsApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/AnnouncementsApi~listAnnouncementGroupsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20046}
      */
     listAnnouncementGroups(opts, callback) {
       opts = opts || {};
@@ -377,7 +393,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20046;
       return this.apiClient.callApi(
         '/v3/announcement_group', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -389,7 +405,7 @@ export default class AnnouncementsApi {
      * Callback function to receive the result of the listAnnouncements operation.
      * @callback module:api/AnnouncementsApi~listAnnouncementsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20040} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -404,6 +420,7 @@ export default class AnnouncementsApi {
      * @param {String} opts.status 
      * @param {String} opts.announcementGroup 
      * @param {module:api/AnnouncementsApi~listAnnouncementsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20040}
      */
     listAnnouncements(opts, callback) {
       opts = opts || {};
@@ -427,7 +444,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20040;
       return this.apiClient.callApi(
         '/v3/announcements', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -439,7 +456,7 @@ export default class AnnouncementsApi {
      * Callback function to receive the result of the scheduleAnnouncement operation.
      * @callback module:api/AnnouncementsApi~scheduleAnnouncementCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20041} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -450,6 +467,7 @@ export default class AnnouncementsApi {
      * @param {String} opts.apiToken 
      * @param {module:model/ScheduleAnnouncementData} opts.scheduleAnnouncementData 
      * @param {module:api/AnnouncementsApi~scheduleAnnouncementCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20041}
      */
     scheduleAnnouncement(opts, callback) {
       opts = opts || {};
@@ -468,7 +486,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20041;
       return this.apiClient.callApi(
         '/v3/announcements', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -480,7 +498,7 @@ export default class AnnouncementsApi {
      * Callback function to receive the result of the updateAnnouncementById operation.
      * @callback module:api/AnnouncementsApi~updateAnnouncementByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20042} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -492,6 +510,7 @@ export default class AnnouncementsApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateAnnouncementByIdData} opts.updateAnnouncementByIdData 
      * @param {module:api/AnnouncementsApi~updateAnnouncementByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20042}
      */
     updateAnnouncementById(uniqueId, opts, callback) {
       opts = opts || {};
@@ -515,7 +534,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20042;
       return this.apiClient.callApi(
         '/v3/announcements/{unique_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -527,7 +546,7 @@ export default class AnnouncementsApi {
      * Callback function to receive the result of the viewAnnouncementById operation.
      * @callback module:api/AnnouncementsApi~viewAnnouncementByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20040Announcements} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -538,6 +557,7 @@ export default class AnnouncementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/AnnouncementsApi~viewAnnouncementByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20040Announcements}
      */
     viewAnnouncementById(uniqueId, opts, callback) {
       opts = opts || {};
@@ -561,7 +581,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20040Announcements;
       return this.apiClient.callApi(
         '/v3/announcements/{unique_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

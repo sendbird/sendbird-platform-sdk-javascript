@@ -34,7 +34,7 @@ class RegisterAndScheduleDataExportData {
      * @param userIds {Array.<Number>} Specifies an array of the IDs of the users to export their information. This property is effective only when the data_type parameter is set to users. (Default: all users)
      * @param showReadReceipt {Boolean} Determines whether to include information about the read receipts of each channel in the exported data. The read receipt indicates the timestamps of when each user has last read the messages in the channel, in [Unix milliseconds](/docs/chat/v3/platform-api/guides/miscellaneous#2-timestamps). (Default: true)
      * @param showChannelMetadata {Boolean} Determines whether to include [channel metadata](/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-channel-metadata) in the result files.
-     * @param neighboringMessageLimit {Number} Specifies the maximum number of other users’ messages to be exported, which took place after the specified message of a user filtered by the sender_ids property. Even if there may be more messages that took place, if the quantity exceeds the number of the neighboring_message_limit, they are omitted. Only the messages that took place right after the specified message will be counted and exported. This can be used to better analyze the context. Acceptable values are 1 to 10, inclusive. (Default: 0)
+     * @param neighboringMessageLimit {Number} Specifies the maximum number of other users' messages to be exported, which took place after the specified message of a user filtered by the sender_ids property. Even if there may be more messages that took place, if the quantity exceeds the number of the neighboring_message_limit, they are omitted. Only the messages that took place right after the specified message will be counted and exported. This can be used to better analyze the context. Acceptable values are 1 to 10, inclusive. (Default: 0)
      */
     constructor(startTs, endTs, format, csvDelimiter, timezone, senderIds, excludeSenderIds, channelUrls, excludeChannelUrls, userIds, showReadReceipt, showChannelMetadata, neighboringMessageLimit) { 
         
@@ -192,7 +192,7 @@ RegisterAndScheduleDataExportData.prototype['show_read_receipt'] = undefined;
 RegisterAndScheduleDataExportData.prototype['show_channel_metadata'] = undefined;
 
 /**
- * Specifies the maximum number of other users’ messages to be exported, which took place after the specified message of a user filtered by the sender_ids property. Even if there may be more messages that took place, if the quantity exceeds the number of the neighboring_message_limit, they are omitted. Only the messages that took place right after the specified message will be counted and exported. This can be used to better analyze the context. Acceptable values are 1 to 10, inclusive. (Default: 0)
+ * Specifies the maximum number of other users' messages to be exported, which took place after the specified message of a user filtered by the sender_ids property. Even if there may be more messages that took place, if the quantity exceeds the number of the neighboring_message_limit, they are omitted. Only the messages that took place right after the specified message will be counted and exported. This can be used to better analyze the context. Acceptable values are 1 to 10, inclusive. (Default: 0)
  * @member {Number} neighboring_message_limit
  */
 RegisterAndScheduleDataExportData.prototype['neighboring_message_limit'] = undefined;

@@ -15,8 +15,16 @@
 import ApiClient from "../ApiClient";
 import AddExtraDataToMessageData from '../model/AddExtraDataToMessageData';
 import AddReactionToAMessageData from '../model/AddReactionToAMessageData';
+import AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage from '../model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage';
 import GcMarkAllMessagesAsDeliveredData from '../model/GcMarkAllMessagesAsDeliveredData';
 import GcMarkAllMessagesAsReadData from '../model/GcMarkAllMessagesAsReadData';
+import InlineResponse20048 from '../model/InlineResponse20048';
+import InlineResponse20049 from '../model/InlineResponse20049';
+import InlineResponse20050 from '../model/InlineResponse20050';
+import InlineResponse20051 from '../model/InlineResponse20051';
+import InlineResponse20053 from '../model/InlineResponse20053';
+import InlineResponse20054 from '../model/InlineResponse20054';
+import InlineResponse20055 from '../model/InlineResponse20055';
 import SendMessageData from '../model/SendMessageData';
 import UpdateExtraDataInMessageData from '../model/UpdateExtraDataInMessageData';
 import UpdateMessageByIdData from '../model/UpdateMessageByIdData';
@@ -44,7 +52,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the addExtraDataToMessage operation.
      * @callback module:api/MessagesApi~addExtraDataToMessageCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20055} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -58,6 +66,7 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {module:model/AddExtraDataToMessageData} opts.addExtraDataToMessageData 
      * @param {module:api/MessagesApi~addExtraDataToMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20055}
      */
     addExtraDataToMessage(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
@@ -91,7 +100,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20055;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -103,7 +112,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the addReactionToAMessage operation.
      * @callback module:api/MessagesApi~addReactionToAMessageCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20054} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -117,6 +126,7 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {module:model/AddReactionToAMessageData} opts.addReactionToAMessageData 
      * @param {module:api/MessagesApi~addReactionToAMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20054}
      */
     addReactionToAMessage(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
@@ -150,7 +160,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20054;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/reactions', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -220,7 +230,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the gcMarkAllMessagesAsDelivered operation.
      * @callback module:api/MessagesApi~gcMarkAllMessagesAsDeliveredCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20051} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -232,6 +242,7 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {module:model/GcMarkAllMessagesAsDeliveredData} opts.gcMarkAllMessagesAsDeliveredData 
      * @param {module:api/MessagesApi~gcMarkAllMessagesAsDeliveredCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20051}
      */
     gcMarkAllMessagesAsDelivered(channelUrl, opts, callback) {
       opts = opts || {};
@@ -255,7 +266,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20051;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/messages/mark_as_delivered', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -314,7 +325,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the gcViewNumberOfEachMembersUnreadMessages operation.
      * @callback module:api/MessagesApi~gcViewNumberOfEachMembersUnreadMessagesCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20050} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -326,6 +337,7 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.userIds 
      * @param {module:api/MessagesApi~gcViewNumberOfEachMembersUnreadMessagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20050}
      */
     gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts, callback) {
       opts = opts || {};
@@ -350,7 +362,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20050;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/messages/unread_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -362,7 +374,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the listMessages operation.
      * @callback module:api/MessagesApi~listMessagesCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20048} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -392,6 +404,7 @@ export default class MessagesApi {
      * @param {String} opts.customType 
      * @param {Boolean} opts.withMetaArray 
      * @param {module:api/MessagesApi~listMessagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20048}
      */
     listMessages(channelType, channelUrl, messageTs, messageId, opts, callback) {
       opts = opts || {};
@@ -446,7 +459,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20048;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -458,7 +471,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the listReactionsOfMessage operation.
      * @callback module:api/MessagesApi~listReactionsOfMessageCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20053} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -472,6 +485,7 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {Boolean} opts.listUsers 
      * @param {module:api/MessagesApi~listReactionsOfMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20053}
      */
     listReactionsOfMessage(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
@@ -506,7 +520,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20053;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/reactions', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -530,7 +544,7 @@ export default class MessagesApi {
      * @param {String} messageId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {Array} opts.keys 
+     * @param {Array.<String>} opts.keys 
      * @param {module:api/MessagesApi~removeExtraDataFromMessageCallback} callback The callback function, accepting three arguments: error, data, response
      */
     removeExtraDataFromMessage(channelType, channelUrl, messageId, opts, callback) {
@@ -555,7 +569,7 @@ export default class MessagesApi {
         'message_id': messageId
       };
       let queryParams = {
-        'keys': opts['keys']
+        'keys': this.apiClient.buildCollectionParam(opts['keys'], 'multi')
       };
       let headerParams = {
         'Api-Token': opts['apiToken']
@@ -578,7 +592,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the removeReactionFromAMessage operation.
      * @callback module:api/MessagesApi~removeReactionFromAMessageCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20054} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -593,6 +607,7 @@ export default class MessagesApi {
      * @param {String} opts.userId 
      * @param {String} opts.reaction 
      * @param {module:api/MessagesApi~removeReactionFromAMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20054}
      */
     removeReactionFromAMessage(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
@@ -628,7 +643,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20054;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/reactions', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -640,7 +655,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the sendMessage operation.
      * @callback module:api/MessagesApi~sendMessageCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -653,6 +668,7 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {module:model/SendMessageData} opts.sendMessageData 
      * @param {module:api/MessagesApi~sendMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage}
      */
     sendMessage(channelType, channelUrl, opts, callback) {
       opts = opts || {};
@@ -681,7 +697,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -693,7 +709,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the translateMessageIntoOtherLanguages operation.
      * @callback module:api/MessagesApi~translateMessageIntoOtherLanguagesCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -705,8 +721,9 @@ export default class MessagesApi {
      * @param {String} messageId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {Object} opts.body 
+     * @param {Object.<String, Object>} opts.body 
      * @param {module:api/MessagesApi~translateMessageIntoOtherLanguagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage}
      */
     translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
@@ -740,7 +757,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/translation', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -752,7 +769,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the updateExtraDataInMessage operation.
      * @callback module:api/MessagesApi~updateExtraDataInMessageCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20055} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -766,6 +783,7 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateExtraDataInMessageData} opts.updateExtraDataInMessageData 
      * @param {module:api/MessagesApi~updateExtraDataInMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20055}
      */
     updateExtraDataInMessage(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
@@ -799,7 +817,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20055;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -811,7 +829,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the updateMessageById operation.
      * @callback module:api/MessagesApi~updateMessageByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -825,6 +843,7 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateMessageByIdData} opts.updateMessageByIdData 
      * @param {module:api/MessagesApi~updateMessageByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage}
      */
     updateMessageById(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
@@ -858,7 +877,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -870,7 +889,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the viewMessageById operation.
      * @callback module:api/MessagesApi~viewMessageByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -885,6 +904,7 @@ export default class MessagesApi {
      * @param {Boolean} opts.withSortedMetaArray 
      * @param {Boolean} opts.withMetaArray 
      * @param {module:api/MessagesApi~viewMessageByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage}
      */
     viewMessageById(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
@@ -920,7 +940,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -932,7 +952,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the viewTotalNumberOfMessagesInChannel operation.
      * @callback module:api/MessagesApi~viewTotalNumberOfMessagesInChannelCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20049} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -944,6 +964,7 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/MessagesApi~viewTotalNumberOfMessagesInChannelCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20049}
      */
     viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts, callback) {
       opts = opts || {};
@@ -972,7 +993,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20049;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/total_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

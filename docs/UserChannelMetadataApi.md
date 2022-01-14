@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.UserChannelMetadataApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -30,7 +30,7 @@ Method | HTTP request | Description
 
 ## createChannelMetacounter
 
-> createChannelMetacounter(channelType, channelUrl, opts)
+> {String: AnyOfstringnumber} createChannelMetacounter(channelType, channelUrl, opts)
 
 Create a channel metacounter
 
@@ -52,7 +52,7 @@ apiInstance.createChannelMetacounter(channelType, channelUrl, opts, (error, data
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**{String: AnyOfstringnumber}**](AnyOfstringnumber.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ No authorization required
 
 ## createChannelMetadata
 
-> createChannelMetadata(channelType, channelUrl, opts)
+> InlineResponse20062 createChannelMetadata(channelType, channelUrl, opts)
 
 Create a channel metadata
 
@@ -105,7 +105,7 @@ apiInstance.createChannelMetadata(channelType, channelUrl, opts, (error, data, r
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20062**](InlineResponse20062.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ No authorization required
 
 ## createUserMetadata
 
-> createUserMetadata(userId, opts)
+> InlineResponse20048UserMetadata createUserMetadata(userId, opts)
 
 Create a user metadata
 
@@ -157,7 +157,7 @@ apiInstance.createUserMetadata(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20048UserMetadata**](InlineResponse20048UserMetadata.md)
 
 ### Authorization
 
@@ -499,7 +499,7 @@ No authorization required
 
 ## updateChannelMetacounter
 
-> updateChannelMetacounter(channelType, channelUrl, opts)
+> {String: AnyOfstringnumber} updateChannelMetacounter(channelType, channelUrl, opts)
 
 Update a channel metacounter - When updating existing items of a channel metacounter by their keys or adding new items to the metacounter
 
@@ -521,7 +521,7 @@ apiInstance.updateChannelMetacounter(channelType, channelUrl, opts, (error, data
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -538,7 +538,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**{String: AnyOfstringnumber}**](AnyOfstringnumber.md)
 
 ### Authorization
 
@@ -552,7 +552,7 @@ No authorization required
 
 ## updateChannelMetacounterByKey
 
-> updateChannelMetacounterByKey(channelType, channelUrl, key, opts)
+> {String: String} updateChannelMetacounterByKey(channelType, channelUrl, key, opts)
 
 Update a channel metacounter - When updating a specific item of a channel metacounter by its key
 
@@ -569,13 +569,13 @@ let channelUrl = "channelUrl_example"; // String |
 let key = "key_example"; // String | 
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
-  'body': null // Object | 
+  'body': {key: null} // Object | 
 };
 apiInstance.updateChannelMetacounterByKey(channelType, channelUrl, key, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -593,7 +593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**{String: String}**
 
 ### Authorization
 
@@ -607,7 +607,7 @@ No authorization required
 
 ## updateChannelMetadata
 
-> updateChannelMetadata(channelType, channelUrl, opts)
+> {String: String} updateChannelMetadata(channelType, channelUrl, opts)
 
 Update a channel metadata - When updating existing items of a channel metadata by their keys or adding new items to the metadata
 
@@ -629,7 +629,7 @@ apiInstance.updateChannelMetadata(channelType, channelUrl, opts, (error, data, r
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -646,7 +646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**{String: String}**
 
 ### Authorization
 
@@ -660,7 +660,7 @@ No authorization required
 
 ## updateChannelMetadataByKey
 
-> updateChannelMetadataByKey(channelType, channelUrl, key, opts)
+> {String: String} updateChannelMetadataByKey(channelType, channelUrl, key, opts)
 
 Update a channel metadata - When updating a specific item of a channel metadata by its key
 
@@ -677,13 +677,13 @@ let channelUrl = "channelUrl_example"; // String |
 let key = "key_example"; // String | 
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
-  'body': null // Object | 
+  'body': {key: null} // Object | 
 };
 apiInstance.updateChannelMetadataByKey(channelType, channelUrl, key, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -701,7 +701,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**{String: String}**
 
 ### Authorization
 
@@ -715,7 +715,7 @@ No authorization required
 
 ## updateUserMetadata
 
-> updateUserMetadata(userId, opts)
+> InlineResponse20061 updateUserMetadata(userId, opts)
 
 Update a user metadata - When updating existing items of a user metadata by their keys or adding new items to the metadata
 
@@ -736,7 +736,7 @@ apiInstance.updateUserMetadata(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -752,7 +752,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20061**](InlineResponse20061.md)
 
 ### Authorization
 
@@ -766,7 +766,7 @@ No authorization required
 
 ## updateUserMetadataByKey
 
-> updateUserMetadataByKey(userId, key, opts)
+> {String: String} updateUserMetadataByKey(userId, key, opts)
 
 Update a user metadata - When updating a specific item of a user metadata by its key
 
@@ -782,13 +782,13 @@ let userId = "userId_example"; // String |
 let key = "key_example"; // String | 
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
-  'body': null // Object | 
+  'body': {key: null} // Object | 
 };
 apiInstance.updateUserMetadataByKey(userId, key, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -805,7 +805,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**{String: String}**
 
 ### Authorization
 
@@ -819,7 +819,7 @@ No authorization required
 
 ## viewChannelMetacounter
 
-> viewChannelMetacounter(channelType, channelUrl, opts)
+> {String: AnyOfstringnumber} viewChannelMetacounter(channelType, channelUrl, opts)
 
 View a channel metacounter - When retrieving all items of a channel metacounter
 
@@ -836,13 +836,13 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'key': "key_example", // String | 
-  'keys': null // Array | 
+  'keys': ["null"] // [String] | 
 };
 apiInstance.viewChannelMetacounter(channelType, channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -856,11 +856,11 @@ Name | Type | Description  | Notes
  **channelUrl** | **String**|  | 
  **apiToken** | **String**|  | [optional] 
  **key** | **String**|  | [optional] 
- **keys** | [**Array**](.md)|  | [optional] 
+ **keys** | [**[String]**](String.md)|  | [optional] 
 
 ### Return type
 
-null (empty response body)
+[**{String: AnyOfstringnumber}**](AnyOfstringnumber.md)
 
 ### Authorization
 
@@ -874,7 +874,7 @@ No authorization required
 
 ## viewChannelMetacounterByKey
 
-> viewChannelMetacounterByKey(channelType, channelUrl, key, opts)
+> {String: AnyOfstringnumber} viewChannelMetacounterByKey(channelType, channelUrl, key, opts)
 
 View a channel metacounter - When retrieving a specific item of a channel metacounter by its key
 
@@ -896,7 +896,7 @@ apiInstance.viewChannelMetacounterByKey(channelType, channelUrl, key, opts, (err
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -913,7 +913,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**{String: AnyOfstringnumber}**](AnyOfstringnumber.md)
 
 ### Authorization
 
@@ -927,7 +927,7 @@ No authorization required
 
 ## viewChannelMetadata
 
-> viewChannelMetadata(channelType, channelUrl, opts)
+> {String: String} viewChannelMetadata(channelType, channelUrl, opts)
 
 View a channel metadata - When retrieving all items of a channel metadata
 
@@ -944,13 +944,13 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'key': "key_example", // String | 
-  'keys': null // Array | 
+  'keys': ["null"] // [String] | 
 };
 apiInstance.viewChannelMetadata(channelType, channelUrl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -964,11 +964,11 @@ Name | Type | Description  | Notes
  **channelUrl** | **String**|  | 
  **apiToken** | **String**|  | [optional] 
  **key** | **String**|  | [optional] 
- **keys** | [**Array**](.md)|  | [optional] 
+ **keys** | [**[String]**](String.md)|  | [optional] 
 
 ### Return type
 
-null (empty response body)
+**{String: String}**
 
 ### Authorization
 
@@ -982,7 +982,7 @@ No authorization required
 
 ## viewChannelMetadataByKey
 
-> viewChannelMetadataByKey(channelType, channelUrl, key, opts)
+> {String: String} viewChannelMetadataByKey(channelType, channelUrl, key, opts)
 
 View a channel metadata - When retrieving a specific item of a channel metadata by its key
 
@@ -1004,7 +1004,7 @@ apiInstance.viewChannelMetadataByKey(channelType, channelUrl, key, opts, (error,
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1021,7 +1021,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**{String: String}**
 
 ### Authorization
 
@@ -1035,7 +1035,7 @@ No authorization required
 
 ## viewUserMetadata
 
-> viewUserMetadata(userId, opts)
+> InlineResponse20048UserMetadata viewUserMetadata(userId, opts)
 
 View a user metadata - When retrieving all items of a user metadata
 
@@ -1051,13 +1051,13 @@ let userId = "userId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'key': "key_example", // String | 
-  'keys': null // Array | 
+  'keys': ["null"] // [String] | 
 };
 apiInstance.viewUserMetadata(userId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1070,11 +1070,11 @@ Name | Type | Description  | Notes
  **userId** | **String**|  | 
  **apiToken** | **String**|  | [optional] 
  **key** | **String**|  | [optional] 
- **keys** | [**Array**](.md)|  | [optional] 
+ **keys** | [**[String]**](String.md)|  | [optional] 
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20048UserMetadata**](InlineResponse20048UserMetadata.md)
 
 ### Authorization
 
@@ -1088,7 +1088,7 @@ No authorization required
 
 ## viewUserMetadataByKey
 
-> viewUserMetadataByKey(userId, key, opts)
+> {String: String} viewUserMetadataByKey(userId, key, opts)
 
 View a user metadata - When retrieving a specific item of a user metadata by its key
 
@@ -1109,7 +1109,7 @@ apiInstance.viewUserMetadataByKey(userId, key, opts, (error, data, response) => 
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1125,7 +1125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**{String: String}**
 
 ### Authorization
 

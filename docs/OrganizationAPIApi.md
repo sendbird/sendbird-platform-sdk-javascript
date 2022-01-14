@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.OrganizationAPIApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## createApplication
 
-> createApplication(opts)
+> InlineResponse200Results createApplication(opts)
 
 Create an application
 
@@ -27,13 +27,13 @@ import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 let apiInstance = new SendbirdPlatformSdk.OrganizationAPIApi();
 let opts = {
   'SENDBIRDORGANIZATIONAPITOKEN': {{ORG_API_TOKEN}}, // String | 
-  'body': null // Object | 
+  'body': {key: null} // Object | 
 };
 apiInstance.createApplication(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200Results**](InlineResponse200Results.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ No authorization required
 
 ## listApplications
 
-> listApplications(opts)
+> InlineResponse200 listApplications(opts)
 
 List applications
 
@@ -130,7 +130,7 @@ apiInstance.listApplications(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ No authorization required
 
 ## viewApplicationById
 
-> viewApplicationById(appId, opts)
+> InlineResponse200Results viewApplicationById(appId, opts)
 
 View an application
 
@@ -178,7 +178,7 @@ apiInstance.viewApplicationById(appId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200Results**](InlineResponse200Results.md)
 
 ### Authorization
 

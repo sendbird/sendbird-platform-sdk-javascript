@@ -13,6 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import InlineResponse200 from '../model/InlineResponse200';
+import InlineResponse200Results from '../model/InlineResponse200Results';
 
 /**
 * OrganizationAPI service.
@@ -37,7 +39,7 @@ export default class OrganizationAPIApi {
      * Callback function to receive the result of the createApplication operation.
      * @callback module:api/OrganizationAPIApi~createApplicationCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse200Results} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -46,8 +48,9 @@ export default class OrganizationAPIApi {
      * ## Create an application  Creates a new application under your organization.  https://sendbird.com/docs/chat/v3/platform-api/guides/organization-api#2-create-an-application
      * @param {Object} opts Optional parameters
      * @param {String} opts.SENDBIRDORGANIZATIONAPITOKEN 
-     * @param {Object} opts.body 
+     * @param {Object.<String, Object>} opts.body 
      * @param {module:api/OrganizationAPIApi~createApplicationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse200Results}
      */
     createApplication(opts, callback) {
       opts = opts || {};
@@ -66,7 +69,7 @@ export default class OrganizationAPIApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse200Results;
       return this.apiClient.callApi(
         '/api/v2/applications', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -124,7 +127,7 @@ export default class OrganizationAPIApi {
      * Callback function to receive the result of the listApplications operation.
      * @callback module:api/OrganizationAPIApi~listApplicationsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse200} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -134,6 +137,7 @@ export default class OrganizationAPIApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.SENDBIRDORGANIZATIONAPITOKEN 
      * @param {module:api/OrganizationAPIApi~listApplicationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse200}
      */
     listApplications(opts, callback) {
       opts = opts || {};
@@ -152,7 +156,7 @@ export default class OrganizationAPIApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse200;
       return this.apiClient.callApi(
         '/api/v2/applications', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -164,7 +168,7 @@ export default class OrganizationAPIApi {
      * Callback function to receive the result of the viewApplicationById operation.
      * @callback module:api/OrganizationAPIApi~viewApplicationByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse200Results} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -175,6 +179,7 @@ export default class OrganizationAPIApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.SENDBIRDORGANIZATIONAPITOKEN 
      * @param {module:api/OrganizationAPIApi~viewApplicationByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse200Results}
      */
     viewApplicationById(appId, opts, callback) {
       opts = opts || {};
@@ -198,7 +203,7 @@ export default class OrganizationAPIApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse200Results;
       return this.apiClient.callApi(
         '/api/v2/applications/{app_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

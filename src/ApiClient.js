@@ -28,13 +28,18 @@ import querystring from "querystring";
 * @class
 */
 class ApiClient {
-    constructor() {
+    /**
+     * The base URL against which to resolve every API call's (relative) path.
+     * Overrides the default value set in spec file if present
+     * @param {String} basePath
+     */
+    constructor(basePath = 'https://api-APP_ID.sendbird.com') {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default https://api-.sendbird.com
+         * @default https://api-APP_ID.sendbird.com
          */
-        this.basePath = 'https://api-.sendbird.com'.replace(/\/+$/, '');
+        this.basePath = basePath.replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.
@@ -592,7 +597,7 @@ class ApiClient {
               'variables': {
                 app_id: {
                     'description': "Replace with the APP_ID for your app in the Sendbird dashboard",
-                    'default_value': "",
+                    'default_value': "APP_ID",
                   }
                 }
             }

@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.EmojisApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## addEmojiCategories
 
-> addEmojiCategories(opts)
+> InlineResponse20058 addEmojiCategories(opts)
 
 Add emoji categories
 
@@ -35,13 +35,13 @@ import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
-  'body': null // Object | 
+  'body': {key: null} // Object | 
 };
 apiInstance.addEmojiCategories(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20058**](InlineResponse20058.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 
 ## addEmojis
 
-> addEmojis(opts)
+> InlineResponse20060 addEmojis(opts)
 
 Add emojis
 
@@ -90,7 +90,7 @@ apiInstance.addEmojis(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20060**](InlineResponse20060.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ No authorization required
 
 ## enableReactions
 
-> enableReactions(opts)
+> InlineResponse20052 enableReactions(opts)
 
 Enable reactions
 
@@ -237,7 +237,7 @@ apiInstance.enableReactions(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20052**](InlineResponse20052.md)
 
 ### Authorization
 
@@ -266,7 +266,7 @@ No authorization required
 
 ## getEmojiByKey
 
-> getEmojiByKey(emojiKey, opts)
+> SendBirdEmoji getEmojiByKey(emojiKey, opts)
 
 Get an emoji
 
@@ -286,7 +286,7 @@ apiInstance.getEmojiByKey(emojiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdEmoji**](SendBirdEmoji.md)
 
 ### Authorization
 
@@ -315,7 +315,7 @@ No authorization required
 
 ## getEmojiCategoryById
 
-> getEmojiCategoryById(emojiCategoryId, opts)
+> SendBirdEmojiCategory getEmojiCategoryById(emojiCategoryId, opts)
 
 Get an emoji category
 
@@ -335,7 +335,7 @@ apiInstance.getEmojiCategoryById(emojiCategoryId, opts, (error, data, response) 
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdEmojiCategory**](SendBirdEmojiCategory.md)
 
 ### Authorization
 
@@ -364,7 +364,7 @@ No authorization required
 
 ## listAllEmojisAndEmojiCategories
 
-> listAllEmojisAndEmojiCategories(opts)
+> InlineResponse20057 listAllEmojisAndEmojiCategories(opts)
 
 List all emojis and emoji categories
 
@@ -383,7 +383,7 @@ apiInstance.listAllEmojisAndEmojiCategories(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -397,7 +397,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20057**](InlineResponse20057.md)
 
 ### Authorization
 
@@ -411,7 +411,7 @@ No authorization required
 
 ## listEmojis
 
-> listEmojis(opts)
+> InlineResponse20059 listEmojis(opts)
 
 List emojis
 
@@ -430,7 +430,7 @@ apiInstance.listEmojis(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20059**](InlineResponse20059.md)
 
 ### Authorization
 
@@ -458,7 +458,7 @@ No authorization required
 
 ## updateEmojiCategoryUrlById
 
-> updateEmojiCategoryUrlById(emojiCategoryId, opts)
+> SendBirdEmojiCategory updateEmojiCategoryUrlById(emojiCategoryId, opts)
 
 Update an emoji category URL
 
@@ -479,7 +479,7 @@ apiInstance.updateEmojiCategoryUrlById(emojiCategoryId, opts, (error, data, resp
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdEmojiCategory**](SendBirdEmojiCategory.md)
 
 ### Authorization
 
@@ -509,7 +509,7 @@ No authorization required
 
 ## updateEmojiUrlByKey
 
-> updateEmojiUrlByKey(emojiKey, opts)
+> SendBirdEmoji updateEmojiUrlByKey(emojiKey, opts)
 
 Update an emoji URL
 
@@ -530,7 +530,7 @@ apiInstance.updateEmojiUrlByKey(emojiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -546,7 +546,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdEmoji**](SendBirdEmoji.md)
 
 ### Authorization
 
@@ -560,7 +560,7 @@ No authorization required
 
 ## useDefaultEmojis
 
-> useDefaultEmojis(opts)
+> InlineResponse20056 useDefaultEmojis(opts)
 
 Use default emojis
 
@@ -580,7 +580,7 @@ apiInstance.useDefaultEmojis(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -595,7 +595,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20056**](InlineResponse20056.md)
 
 ### Authorization
 

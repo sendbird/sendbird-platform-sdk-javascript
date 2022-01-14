@@ -18,6 +18,22 @@ import AddFcmPushConfigurationData from '../model/AddFcmPushConfigurationData';
 import AddHmsPushConfigurationData from '../model/AddHmsPushConfigurationData';
 import AddIpToWhitelistData from '../model/AddIpToWhitelistData';
 import GenerateSecondaryApiTokenData from '../model/GenerateSecondaryApiTokenData';
+import InlineResponse2001 from '../model/InlineResponse2001';
+import InlineResponse20010 from '../model/InlineResponse20010';
+import InlineResponse20011 from '../model/InlineResponse20011';
+import InlineResponse20012 from '../model/InlineResponse20012';
+import InlineResponse20013 from '../model/InlineResponse20013';
+import InlineResponse20014 from '../model/InlineResponse20014';
+import InlineResponse20015 from '../model/InlineResponse20015';
+import InlineResponse20016 from '../model/InlineResponse20016';
+import InlineResponse2002 from '../model/InlineResponse2002';
+import InlineResponse2003 from '../model/InlineResponse2003';
+import InlineResponse2004 from '../model/InlineResponse2004';
+import InlineResponse2005 from '../model/InlineResponse2005';
+import InlineResponse2006 from '../model/InlineResponse2006';
+import InlineResponse2007 from '../model/InlineResponse2007';
+import InlineResponse2008 from '../model/InlineResponse2008';
+import InlineResponse2009 from '../model/InlineResponse2009';
 import UpdateApnsPushConfigurationByIdData from '../model/UpdateApnsPushConfigurationByIdData';
 import UpdateDefaultChannelInvitationPreferenceData from '../model/UpdateDefaultChannelInvitationPreferenceData';
 import UpdateFcmPushConfigurationByIdData from '../model/UpdateFcmPushConfigurationByIdData';
@@ -47,7 +63,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the addApnsPushConfiguration operation.
      * @callback module:api/ApplicationApi~addApnsPushConfigurationCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2004} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -58,6 +74,7 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {module:model/AddApnsPushConfigurationData} opts.addApnsPushConfigurationData 
      * @param {module:api/ApplicationApi~addApnsPushConfigurationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2004}
      */
     addApnsPushConfiguration(opts, callback) {
       opts = opts || {};
@@ -76,7 +93,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2004;
       return this.apiClient.callApi(
         '/v3/applications/push/apns', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -88,7 +105,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the addFcmPushConfiguration operation.
      * @callback module:api/ApplicationApi~addFcmPushConfigurationCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2002} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -99,6 +116,7 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {module:model/AddFcmPushConfigurationData} opts.addFcmPushConfigurationData 
      * @param {module:api/ApplicationApi~addFcmPushConfigurationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2002}
      */
     addFcmPushConfiguration(opts, callback) {
       opts = opts || {};
@@ -117,7 +135,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2002;
       return this.apiClient.callApi(
         '/v3/applications/push/fcm', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -129,7 +147,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the addHmsPushConfiguration operation.
      * @callback module:api/ApplicationApi~addHmsPushConfigurationCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2003} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -140,6 +158,7 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {module:model/AddHmsPushConfigurationData} opts.addHmsPushConfigurationData 
      * @param {module:api/ApplicationApi~addHmsPushConfigurationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2003}
      */
     addHmsPushConfiguration(opts, callback) {
       opts = opts || {};
@@ -158,7 +177,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2003;
       return this.apiClient.callApi(
         '/v3/applications/push/hms', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -170,7 +189,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the addIpToWhitelist operation.
      * @callback module:api/ApplicationApi~addIpToWhitelistCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2007} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -181,6 +200,7 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {module:model/AddIpToWhitelistData} opts.addIpToWhitelistData 
      * @param {module:api/ApplicationApi~addIpToWhitelistCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2007}
      */
     addIpToWhitelist(opts, callback) {
       opts = opts || {};
@@ -199,7 +219,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2007;
       return this.apiClient.callApi(
         '/v3/applications/settings/ip_whitelist', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -211,17 +231,18 @@ export default class ApplicationApi {
      * Callback function to receive the result of the deleteAllowedIpsFromWhitelist operation.
      * @callback module:api/ApplicationApi~deleteAllowedIpsFromWhitelistCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2007} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Delete allowed IPs from a whitelist
      * ## Delete allowed IPs from a whitelist  Deletes allowed IPs from the whitelist by specifying their IP addresses or ranges. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-delete-allowed-ips-from-a-whitelist
-     * @param {Array} ipWhitelistAddresses 
+     * @param {Array.<String>} ipWhitelistAddresses 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/ApplicationApi~deleteAllowedIpsFromWhitelistCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2007}
      */
     deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts, callback) {
       opts = opts || {};
@@ -234,7 +255,7 @@ export default class ApplicationApi {
       let pathParams = {
       };
       let queryParams = {
-        'ip_whitelist_addresses': ipWhitelistAddresses
+        'ip_whitelist_addresses': this.apiClient.buildCollectionParam(ipWhitelistAddresses, 'multi')
       };
       let headerParams = {
         'Api-Token': opts['apiToken']
@@ -245,7 +266,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2007;
       return this.apiClient.callApi(
         '/v3/applications/settings/ip_whitelist', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -257,7 +278,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the deleteApnsCertificateById operation.
      * @callback module:api/ApplicationApi~deleteApnsCertificateByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20014} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -268,6 +289,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/ApplicationApi~deleteApnsCertificateByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20014}
      */
     deleteApnsCertificateById(providerId, opts, callback) {
       opts = opts || {};
@@ -291,7 +313,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20014;
       return this.apiClient.callApi(
         '/v3/applications/push/apns/cert/{provider_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -303,7 +325,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the generateSecondaryApiToken operation.
      * @callback module:api/ApplicationApi~generateSecondaryApiTokenCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2008} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -314,6 +336,7 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {module:model/GenerateSecondaryApiTokenData} opts.generateSecondaryApiTokenData 
      * @param {module:api/ApplicationApi~generateSecondaryApiTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2008}
      */
     generateSecondaryApiToken(opts, callback) {
       opts = opts || {};
@@ -332,7 +355,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2008;
       return this.apiClient.callApi(
         '/v3/applications/api_tokens', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -344,7 +367,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the listPushConfigurations operation.
      * @callback module:api/ApplicationApi~listPushConfigurationsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20013} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -355,6 +378,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/ApplicationApi~listPushConfigurationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20013}
      */
     listPushConfigurations(pushType, opts, callback) {
       opts = opts || {};
@@ -378,7 +402,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20013;
       return this.apiClient.callApi(
         '/v3/applications/push/{push_type}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -390,7 +414,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the listPushNotificationContentTemplates operation.
      * @callback module:api/ApplicationApi~listPushNotificationContentTemplatesCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2005} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -400,6 +424,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/ApplicationApi~listPushNotificationContentTemplatesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2005}
      */
     listPushNotificationContentTemplates(opts, callback) {
       opts = opts || {};
@@ -418,7 +443,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2005;
       return this.apiClient.callApi(
         '/v3/applications/push/message_templates', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -430,7 +455,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the listSecondaryApiTokens operation.
      * @callback module:api/ApplicationApi~listSecondaryApiTokensCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2009} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -440,6 +465,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/ApplicationApi~listSecondaryApiTokensCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2009}
      */
     listSecondaryApiTokens(opts, callback) {
       opts = opts || {};
@@ -458,7 +484,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2009;
       return this.apiClient.callApi(
         '/v3/applications/api_tokens', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -470,7 +496,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the removePushConfigurationById operation.
      * @callback module:api/ApplicationApi~removePushConfigurationByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20014} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -482,6 +508,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/ApplicationApi~removePushConfigurationByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20014}
      */
     removePushConfigurationById(pushType, providerId, opts, callback) {
       opts = opts || {};
@@ -510,7 +537,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20014;
       return this.apiClient.callApi(
         '/v3/applications/push/{push_type}/{provider_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -522,16 +549,17 @@ export default class ApplicationApi {
      * Callback function to receive the result of the retrieveIpWhitelist operation.
      * @callback module:api/ApplicationApi~retrieveIpWhitelistCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2007} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Retrieve an IP whitelist
-     * ## Retrieve an IP whitelist  Retrieves a list of all the IP ranges and addresses that have access to your Sendbird application. This list is called an IP whitelist and its addresses are granted API access when the IP whitelist API enables [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notations.  If you specify which IP addresses or ranges to include in the whitelist, any unlisted foreign IP addresses will be denied access. If you don’t specify any IP address or range to include in the whitelist, all IP addresses will be granted API access. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-retrieve-an-ip-whitelist
+     * ## Retrieve an IP whitelist  Retrieves a list of all the IP ranges and addresses that have access to your Sendbird application. This list is called an IP whitelist and its addresses are granted API access when the IP whitelist API enables [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notations.  If you specify which IP addresses or ranges to include in the whitelist, any unlisted foreign IP addresses will be denied access. If you don't specify any IP address or range to include in the whitelist, all IP addresses will be granted API access. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-retrieve-an-ip-whitelist
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/ApplicationApi~retrieveIpWhitelistCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2007}
      */
     retrieveIpWhitelist(opts, callback) {
       opts = opts || {};
@@ -550,7 +578,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2007;
       return this.apiClient.callApi(
         '/v3/applications/settings/ip_whitelist', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -608,7 +636,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the updateApnsPushConfigurationById operation.
      * @callback module:api/ApplicationApi~updateApnsPushConfigurationByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20015} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -620,6 +648,7 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateApnsPushConfigurationByIdData} opts.updateApnsPushConfigurationByIdData 
      * @param {module:api/ApplicationApi~updateApnsPushConfigurationByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20015}
      */
     updateApnsPushConfigurationById(providerId, opts, callback) {
       opts = opts || {};
@@ -643,7 +672,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20015;
       return this.apiClient.callApi(
         '/v3/applications/push/apns/{provider_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -655,7 +684,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the updateDefaultChannelInvitationPreference operation.
      * @callback module:api/ApplicationApi~updateDefaultChannelInvitationPreferenceCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2006} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -666,6 +695,7 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateDefaultChannelInvitationPreferenceData} opts.updateDefaultChannelInvitationPreferenceData 
      * @param {module:api/ApplicationApi~updateDefaultChannelInvitationPreferenceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2006}
      */
     updateDefaultChannelInvitationPreference(opts, callback) {
       opts = opts || {};
@@ -684,7 +714,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2006;
       return this.apiClient.callApi(
         '/v3/applications/default_channel_invitation_preference', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -696,7 +726,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the updateFcmPushConfigurationById operation.
      * @callback module:api/ApplicationApi~updateFcmPushConfigurationByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20015} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -708,6 +738,7 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateFcmPushConfigurationByIdData} opts.updateFcmPushConfigurationByIdData 
      * @param {module:api/ApplicationApi~updateFcmPushConfigurationByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20015}
      */
     updateFcmPushConfigurationById(providerId, opts, callback) {
       opts = opts || {};
@@ -731,7 +762,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20015;
       return this.apiClient.callApi(
         '/v3/applications/push/fcm/{provider_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -743,7 +774,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the updateHmsPushConfigurationById operation.
      * @callback module:api/ApplicationApi~updateHmsPushConfigurationByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20015} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -755,6 +786,7 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateHmsPushConfigurationByIdData} opts.updateHmsPushConfigurationByIdData 
      * @param {module:api/ApplicationApi~updateHmsPushConfigurationByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20015}
      */
     updateHmsPushConfigurationById(providerId, opts, callback) {
       opts = opts || {};
@@ -778,7 +810,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20015;
       return this.apiClient.callApi(
         '/v3/applications/push/hms/{provider_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -790,7 +822,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the updatePushNotificationContentTemplate operation.
      * @callback module:api/ApplicationApi~updatePushNotificationContentTemplateCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20016} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -802,6 +834,7 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdatePushNotificationContentTemplateData} opts.updatePushNotificationContentTemplateData 
      * @param {module:api/ApplicationApi~updatePushNotificationContentTemplateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20016}
      */
     updatePushNotificationContentTemplate(templateName, opts, callback) {
       opts = opts || {};
@@ -825,7 +858,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20016;
       return this.apiClient.callApi(
         '/v3/applications/push/message_templates/{template_name}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -837,7 +870,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the viewDefaultChannelInvitationPreference operation.
      * @callback module:api/ApplicationApi~viewDefaultChannelInvitationPreferenceCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2006} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -847,6 +880,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/ApplicationApi~viewDefaultChannelInvitationPreferenceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2006}
      */
     viewDefaultChannelInvitationPreference(opts, callback) {
       opts = opts || {};
@@ -865,7 +899,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2006;
       return this.apiClient.callApi(
         '/v3/applications/default_channel_invitation_preference', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -877,7 +911,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the viewNumberOfConcurrentConnections operation.
      * @callback module:api/ApplicationApi~viewNumberOfConcurrentConnectionsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2001} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -887,6 +921,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/ApplicationApi~viewNumberOfConcurrentConnectionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2001}
      */
     viewNumberOfConcurrentConnections(opts, callback) {
       opts = opts || {};
@@ -905,7 +940,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2001;
       return this.apiClient.callApi(
         '/v3/applications/ccu', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -917,7 +952,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the viewNumberOfDailyActiveUsers operation.
      * @callback module:api/ApplicationApi~viewNumberOfDailyActiveUsersCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20012} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -928,6 +963,7 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.date 
      * @param {module:api/ApplicationApi~viewNumberOfDailyActiveUsersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20012}
      */
     viewNumberOfDailyActiveUsers(opts, callback) {
       opts = opts || {};
@@ -947,7 +983,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20012;
       return this.apiClient.callApi(
         '/v3/applications/dau', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -959,7 +995,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the viewNumberOfMonthlyActiveUsers operation.
      * @callback module:api/ApplicationApi~viewNumberOfMonthlyActiveUsersCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20011} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -970,6 +1006,7 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.date 
      * @param {module:api/ApplicationApi~viewNumberOfMonthlyActiveUsersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20011}
      */
     viewNumberOfMonthlyActiveUsers(opts, callback) {
       opts = opts || {};
@@ -989,7 +1026,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20011;
       return this.apiClient.callApi(
         '/v3/applications/mau', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1001,7 +1038,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the viewNumberOfPeakConnections operation.
      * @callback module:api/ApplicationApi~viewNumberOfPeakConnectionsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20010} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1018,6 +1055,7 @@ export default class ApplicationApi {
      * @param {Number} opts.startDay 
      * @param {Number} opts.endDay 
      * @param {module:api/ApplicationApi~viewNumberOfPeakConnectionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20010}
      */
     viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts, callback) {
       opts = opts || {};
@@ -1063,7 +1101,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20010;
       return this.apiClient.callApi(
         '/v3/applications/peak_connections', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1075,7 +1113,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the viewPushConfigurationById operation.
      * @callback module:api/ApplicationApi~viewPushConfigurationByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20013} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1087,6 +1125,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/ApplicationApi~viewPushConfigurationByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20013}
      */
     viewPushConfigurationById(pushType, providerId, opts, callback) {
       opts = opts || {};
@@ -1115,7 +1154,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20013;
       return this.apiClient.callApi(
         '/v3/applications/push/{push_type}/{provider_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1127,7 +1166,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the viewPushNotificationContentTemplate operation.
      * @callback module:api/ApplicationApi~viewPushNotificationContentTemplateCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20016} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1138,6 +1177,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/ApplicationApi~viewPushNotificationContentTemplateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20016}
      */
     viewPushNotificationContentTemplate(templateName, opts, callback) {
       opts = opts || {};
@@ -1161,7 +1201,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20016;
       return this.apiClient.callApi(
         '/v3/applications/push/message_templates/{template_name}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1173,7 +1213,7 @@ export default class ApplicationApi {
      * Callback function to receive the result of the viewSecondaryApiTokenByToken operation.
      * @callback module:api/ApplicationApi~viewSecondaryApiTokenByTokenCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2008} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1184,6 +1224,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/ApplicationApi~viewSecondaryApiTokenByTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2008}
      */
     viewSecondaryApiTokenByToken(apiToken2, opts, callback) {
       opts = opts || {};
@@ -1207,7 +1248,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2008;
       return this.apiClient.callApi(
         '/v3/applications/api_tokens/{api_token}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

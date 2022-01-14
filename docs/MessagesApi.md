@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.MessagesApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 ## addExtraDataToMessage
 
-> addExtraDataToMessage(channelType, channelUrl, messageId, opts)
+> InlineResponse20055 addExtraDataToMessage(channelType, channelUrl, messageId, opts)
 
 Add extra data to a message
 
@@ -48,7 +48,7 @@ apiInstance.addExtraDataToMessage(channelType, channelUrl, messageId, opts, (err
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20055**](InlineResponse20055.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ No authorization required
 
 ## addReactionToAMessage
 
-> addReactionToAMessage(channelType, channelUrl, messageId, opts)
+> InlineResponse20054 addReactionToAMessage(channelType, channelUrl, messageId, opts)
 
 Add a reaction to a message
 
@@ -103,7 +103,7 @@ apiInstance.addReactionToAMessage(channelType, channelUrl, messageId, opts, (err
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20054**](InlineResponse20054.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ No authorization required
 
 ## gcMarkAllMessagesAsDelivered
 
-> gcMarkAllMessagesAsDelivered(channelUrl, opts)
+> InlineResponse20051 gcMarkAllMessagesAsDelivered(channelUrl, opts)
 
 Mark all messages as delivered
 
@@ -209,7 +209,7 @@ apiInstance.gcMarkAllMessagesAsDelivered(channelUrl, opts, (error, data, respons
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -290,7 +290,7 @@ No authorization required
 
 ## gcViewNumberOfEachMembersUnreadMessages
 
-> gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts)
+> InlineResponse20050 gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts)
 
 View number of each member&#39;s unread messages
 
@@ -311,7 +311,7 @@ apiInstance.gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts, (error, da
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20050**](InlineResponse20050.md)
 
 ### Authorization
 
@@ -341,7 +341,7 @@ No authorization required
 
 ## listMessages
 
-> listMessages(channelType, channelUrl, messageTs, messageId, opts)
+> InlineResponse20048 listMessages(channelType, channelUrl, messageTs, messageId, opts)
 
 List messages
 
@@ -380,7 +380,7 @@ apiInstance.listMessages(channelType, channelUrl, messageTs, messageId, opts, (e
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20048**](InlineResponse20048.md)
 
 ### Authorization
 
@@ -428,7 +428,7 @@ No authorization required
 
 ## listReactionsOfMessage
 
-> listReactionsOfMessage(channelType, channelUrl, messageId, opts)
+> InlineResponse20053 listReactionsOfMessage(channelType, channelUrl, messageId, opts)
 
 List reactions of a message
 
@@ -451,7 +451,7 @@ apiInstance.listReactionsOfMessage(channelType, channelUrl, messageId, opts, (er
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -469,7 +469,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20053**](InlineResponse20053.md)
 
 ### Authorization
 
@@ -500,7 +500,7 @@ let channelUrl = "channelUrl_example"; // String |
 let messageId = "messageId_example"; // String | 
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
-  'keys': null // Array | 
+  'keys': ["null"] // [String] | 
 };
 apiInstance.removeExtraDataFromMessage(channelType, channelUrl, messageId, opts, (error, data, response) => {
   if (error) {
@@ -520,7 +520,7 @@ Name | Type | Description  | Notes
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
  **apiToken** | **String**|  | [optional] 
- **keys** | [**Array**](.md)|  | [optional] 
+ **keys** | [**[String]**](String.md)|  | [optional] 
 
 ### Return type
 
@@ -538,7 +538,7 @@ No authorization required
 
 ## removeReactionFromAMessage
 
-> removeReactionFromAMessage(channelType, channelUrl, messageId, opts)
+> InlineResponse20054 removeReactionFromAMessage(channelType, channelUrl, messageId, opts)
 
 Remove a reaction from a message
 
@@ -562,7 +562,7 @@ apiInstance.removeReactionFromAMessage(channelType, channelUrl, messageId, opts,
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -581,7 +581,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20054**](InlineResponse20054.md)
 
 ### Authorization
 
@@ -595,7 +595,7 @@ No authorization required
 
 ## sendMessage
 
-> sendMessage(channelType, channelUrl, opts)
+> AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage sendMessage(channelType, channelUrl, opts)
 
 Send a message
 
@@ -617,7 +617,7 @@ apiInstance.sendMessage(channelType, channelUrl, opts, (error, data, response) =
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -634,7 +634,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage**](AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage.md)
 
 ### Authorization
 
@@ -648,7 +648,7 @@ No authorization required
 
 ## translateMessageIntoOtherLanguages
 
-> translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts)
+> AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts)
 
 Translate a message into other languages
 
@@ -665,13 +665,13 @@ let channelUrl = "channelUrl_example"; // String |
 let messageId = "messageId_example"; // String | 
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
-  'body': null // Object | 
+  'body': {key: null} // Object | 
 };
 apiInstance.translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -689,7 +689,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage**](AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage.md)
 
 ### Authorization
 
@@ -703,7 +703,7 @@ No authorization required
 
 ## updateExtraDataInMessage
 
-> updateExtraDataInMessage(channelType, channelUrl, messageId, opts)
+> InlineResponse20055 updateExtraDataInMessage(channelType, channelUrl, messageId, opts)
 
 Update extra data in a message
 
@@ -726,7 +726,7 @@ apiInstance.updateExtraDataInMessage(channelType, channelUrl, messageId, opts, (
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -744,7 +744,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20055**](InlineResponse20055.md)
 
 ### Authorization
 
@@ -758,7 +758,7 @@ No authorization required
 
 ## updateMessageById
 
-> updateMessageById(channelType, channelUrl, messageId, opts)
+> AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage updateMessageById(channelType, channelUrl, messageId, opts)
 
 Update a message
 
@@ -781,7 +781,7 @@ apiInstance.updateMessageById(channelType, channelUrl, messageId, opts, (error, 
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -799,7 +799,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage**](AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage.md)
 
 ### Authorization
 
@@ -813,7 +813,7 @@ No authorization required
 
 ## viewMessageById
 
-> viewMessageById(channelType, channelUrl, messageId, opts)
+> AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage viewMessageById(channelType, channelUrl, messageId, opts)
 
 View a message
 
@@ -837,7 +837,7 @@ apiInstance.viewMessageById(channelType, channelUrl, messageId, opts, (error, da
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -856,7 +856,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage**](AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage.md)
 
 ### Authorization
 
@@ -870,7 +870,7 @@ No authorization required
 
 ## viewTotalNumberOfMessagesInChannel
 
-> viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts)
+> InlineResponse20049 viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts)
 
 View total number of messages in a channel
 
@@ -891,7 +891,7 @@ apiInstance.viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts, (e
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -907,7 +907,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20049**](InlineResponse20049.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.ApplicationApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -35,7 +35,7 @@ Method | HTTP request | Description
 
 ## addApnsPushConfiguration
 
-> addApnsPushConfiguration(opts)
+> InlineResponse2004 addApnsPushConfiguration(opts)
 
 Add an APNs push configuration
 
@@ -55,7 +55,7 @@ apiInstance.addApnsPushConfiguration(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ No authorization required
 
 ## addFcmPushConfiguration
 
-> addFcmPushConfiguration(opts)
+> InlineResponse2002 addFcmPushConfiguration(opts)
 
 Add a FCM push configuration
 
@@ -104,7 +104,7 @@ apiInstance.addFcmPushConfiguration(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ No authorization required
 
 ## addHmsPushConfiguration
 
-> addHmsPushConfiguration(opts)
+> InlineResponse2003 addHmsPushConfiguration(opts)
 
 Add an HMS push configuration
 
@@ -153,7 +153,7 @@ apiInstance.addHmsPushConfiguration(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -182,7 +182,7 @@ No authorization required
 
 ## addIpToWhitelist
 
-> addIpToWhitelist(opts)
+> InlineResponse2007 addIpToWhitelist(opts)
 
 Add an IP to a whitelist
 
@@ -202,7 +202,7 @@ apiInstance.addIpToWhitelist(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -231,7 +231,7 @@ No authorization required
 
 ## deleteAllowedIpsFromWhitelist
 
-> deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts)
+> InlineResponse2007 deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts)
 
 Delete allowed IPs from a whitelist
 
@@ -243,7 +243,7 @@ Delete allowed IPs from a whitelist
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let ipWhitelistAddresses = null; // Array | 
+let ipWhitelistAddresses = ["null"]; // [String] | 
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
@@ -251,7 +251,7 @@ apiInstance.deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts, (error, da
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -261,12 +261,12 @@ apiInstance.deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts, (error, da
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ipWhitelistAddresses** | [**Array**](.md)|  | 
+ **ipWhitelistAddresses** | [**[String]**](String.md)|  | 
  **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -280,7 +280,7 @@ No authorization required
 
 ## deleteApnsCertificateById
 
-> deleteApnsCertificateById(providerId, opts)
+> InlineResponse20014 deleteApnsCertificateById(providerId, opts)
 
 Delete an APNs certificate
 
@@ -300,7 +300,7 @@ apiInstance.deleteApnsCertificateById(providerId, opts, (error, data, response) 
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -329,7 +329,7 @@ No authorization required
 
 ## generateSecondaryApiToken
 
-> generateSecondaryApiToken(opts)
+> InlineResponse2008 generateSecondaryApiToken(opts)
 
 Generate a secondary API token
 
@@ -349,7 +349,7 @@ apiInstance.generateSecondaryApiToken(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -378,7 +378,7 @@ No authorization required
 
 ## listPushConfigurations
 
-> listPushConfigurations(pushType, opts)
+> InlineResponse20013 listPushConfigurations(pushType, opts)
 
 List push configurations
 
@@ -398,7 +398,7 @@ apiInstance.listPushConfigurations(pushType, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -413,7 +413,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 
@@ -427,7 +427,7 @@ No authorization required
 
 ## listPushNotificationContentTemplates
 
-> listPushNotificationContentTemplates(opts)
+> InlineResponse2005 listPushNotificationContentTemplates(opts)
 
 List push notification content templates
 
@@ -446,7 +446,7 @@ apiInstance.listPushNotificationContentTemplates(opts, (error, data, response) =
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -460,7 +460,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -474,7 +474,7 @@ No authorization required
 
 ## listSecondaryApiTokens
 
-> listSecondaryApiTokens(opts)
+> InlineResponse2009 listSecondaryApiTokens(opts)
 
 List secondary API tokens
 
@@ -493,7 +493,7 @@ apiInstance.listSecondaryApiTokens(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -507,7 +507,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -521,7 +521,7 @@ No authorization required
 
 ## removePushConfigurationById
 
-> removePushConfigurationById(pushType, providerId, opts)
+> InlineResponse20014 removePushConfigurationById(pushType, providerId, opts)
 
 Remove a push configuration
 
@@ -542,7 +542,7 @@ apiInstance.removePushConfigurationById(pushType, providerId, opts, (error, data
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -558,7 +558,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -572,11 +572,11 @@ No authorization required
 
 ## retrieveIpWhitelist
 
-> retrieveIpWhitelist(opts)
+> InlineResponse2007 retrieveIpWhitelist(opts)
 
 Retrieve an IP whitelist
 
-## Retrieve an IP whitelist  Retrieves a list of all the IP ranges and addresses that have access to your Sendbird application. This list is called an IP whitelist and its addresses are granted API access when the IP whitelist API enables [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notations.  If you specify which IP addresses or ranges to include in the whitelist, any unlisted foreign IP addresses will be denied access. If you don’t specify any IP address or range to include in the whitelist, all IP addresses will be granted API access. You can configure the IP whitelist under Settings &gt; Security &gt; Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-retrieve-an-ip-whitelist
+## Retrieve an IP whitelist  Retrieves a list of all the IP ranges and addresses that have access to your Sendbird application. This list is called an IP whitelist and its addresses are granted API access when the IP whitelist API enables [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notations.  If you specify which IP addresses or ranges to include in the whitelist, any unlisted foreign IP addresses will be denied access. If you don&#39;t specify any IP address or range to include in the whitelist, all IP addresses will be granted API access. You can configure the IP whitelist under Settings &gt; Security &gt; Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-retrieve-an-ip-whitelist
 
 ### Example
 
@@ -591,7 +591,7 @@ apiInstance.retrieveIpWhitelist(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -605,7 +605,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -668,7 +668,7 @@ No authorization required
 
 ## updateApnsPushConfigurationById
 
-> updateApnsPushConfigurationById(providerId, opts)
+> InlineResponse20015 updateApnsPushConfigurationById(providerId, opts)
 
 Update an APNs push configuration
 
@@ -689,7 +689,7 @@ apiInstance.updateApnsPushConfigurationById(providerId, opts, (error, data, resp
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -705,7 +705,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -719,7 +719,7 @@ No authorization required
 
 ## updateDefaultChannelInvitationPreference
 
-> updateDefaultChannelInvitationPreference(opts)
+> InlineResponse2006 updateDefaultChannelInvitationPreference(opts)
 
 Update default channel invitation preference
 
@@ -739,7 +739,7 @@ apiInstance.updateDefaultChannelInvitationPreference(opts, (error, data, respons
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -754,7 +754,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -768,7 +768,7 @@ No authorization required
 
 ## updateFcmPushConfigurationById
 
-> updateFcmPushConfigurationById(providerId, opts)
+> InlineResponse20015 updateFcmPushConfigurationById(providerId, opts)
 
 Update a FCM push configuration
 
@@ -789,7 +789,7 @@ apiInstance.updateFcmPushConfigurationById(providerId, opts, (error, data, respo
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -805,7 +805,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -819,7 +819,7 @@ No authorization required
 
 ## updateHmsPushConfigurationById
 
-> updateHmsPushConfigurationById(providerId, opts)
+> InlineResponse20015 updateHmsPushConfigurationById(providerId, opts)
 
 Update an HMS push configuration
 
@@ -840,7 +840,7 @@ apiInstance.updateHmsPushConfigurationById(providerId, opts, (error, data, respo
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -856,7 +856,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -870,7 +870,7 @@ No authorization required
 
 ## updatePushNotificationContentTemplate
 
-> updatePushNotificationContentTemplate(templateName, opts)
+> InlineResponse20016 updatePushNotificationContentTemplate(templateName, opts)
 
 Update a push notification content template
 
@@ -891,7 +891,7 @@ apiInstance.updatePushNotificationContentTemplate(templateName, opts, (error, da
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -907,7 +907,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -921,7 +921,7 @@ No authorization required
 
 ## viewDefaultChannelInvitationPreference
 
-> viewDefaultChannelInvitationPreference(opts)
+> InlineResponse2006 viewDefaultChannelInvitationPreference(opts)
 
 View default channel invitation preference
 
@@ -940,7 +940,7 @@ apiInstance.viewDefaultChannelInvitationPreference(opts, (error, data, response)
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -968,7 +968,7 @@ No authorization required
 
 ## viewNumberOfConcurrentConnections
 
-> viewNumberOfConcurrentConnections(opts)
+> InlineResponse2001 viewNumberOfConcurrentConnections(opts)
 
 View number of concurrent connections
 
@@ -987,7 +987,7 @@ apiInstance.viewNumberOfConcurrentConnections(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1001,7 +1001,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -1015,7 +1015,7 @@ No authorization required
 
 ## viewNumberOfDailyActiveUsers
 
-> viewNumberOfDailyActiveUsers(opts)
+> InlineResponse20012 viewNumberOfDailyActiveUsers(opts)
 
 View number of daily active users
 
@@ -1035,7 +1035,7 @@ apiInstance.viewNumberOfDailyActiveUsers(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1050,7 +1050,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 
@@ -1064,7 +1064,7 @@ No authorization required
 
 ## viewNumberOfMonthlyActiveUsers
 
-> viewNumberOfMonthlyActiveUsers(opts)
+> InlineResponse20011 viewNumberOfMonthlyActiveUsers(opts)
 
 View number of monthly active users
 
@@ -1084,7 +1084,7 @@ apiInstance.viewNumberOfMonthlyActiveUsers(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1099,7 +1099,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -1113,7 +1113,7 @@ No authorization required
 
 ## viewNumberOfPeakConnections
 
-> viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts)
+> InlineResponse20010 viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts)
 
 View number of peak connections
 
@@ -1139,7 +1139,7 @@ apiInstance.viewNumberOfPeakConnections(timeDimension, startYear, startMonth, en
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1160,7 +1160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -1174,7 +1174,7 @@ No authorization required
 
 ## viewPushConfigurationById
 
-> viewPushConfigurationById(pushType, providerId, opts)
+> InlineResponse20013 viewPushConfigurationById(pushType, providerId, opts)
 
 View a push configuration
 
@@ -1195,7 +1195,7 @@ apiInstance.viewPushConfigurationById(pushType, providerId, opts, (error, data, 
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1211,7 +1211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 
@@ -1225,7 +1225,7 @@ No authorization required
 
 ## viewPushNotificationContentTemplate
 
-> viewPushNotificationContentTemplate(templateName, opts)
+> InlineResponse20016 viewPushNotificationContentTemplate(templateName, opts)
 
 View a push notification content template
 
@@ -1245,7 +1245,7 @@ apiInstance.viewPushNotificationContentTemplate(templateName, opts, (error, data
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1260,7 +1260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -1274,7 +1274,7 @@ No authorization required
 
 ## viewSecondaryApiTokenByToken
 
-> viewSecondaryApiTokenByToken(apiToken2, opts)
+> InlineResponse2008 viewSecondaryApiTokenByToken(apiToken2, opts)
 
 View a secondary API token
 
@@ -1294,7 +1294,7 @@ apiInstance.viewSecondaryApiTokenByToken(apiToken2, opts, (error, data, response
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1309,7 +1309,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 

@@ -47,7 +47,7 @@ export default class MigrationApi {
      * @param {String} targetChannelUrl 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {Object} opts.body 
+     * @param {Object.<String, Object>} opts.body 
      * @param {module:api/MigrationApi~migrateMessagesByUrlCallback} callback The callback function, accepting three arguments: error, data, response
      */
     migrateMessagesByUrl(targetChannelUrl, opts, callback) {

@@ -1,6 +1,6 @@
 # SendbirdPlatformSdk.BotInterfaceApi
 
-All URIs are relative to *https://api-.sendbird.com*
+All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## createBot
 
-> createBot(opts)
+> InlineResponse20066Bots createBot(opts)
 
 Create a bot
 
@@ -38,7 +38,7 @@ apiInstance.createBot(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20066Bots**](InlineResponse20066Bots.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ No authorization required
 
 ## joinChannels
 
-> joinChannels(botUserid, opts)
+> SendBirdGroupChannelCollection joinChannels(botUserid, opts)
 
 Join channels
 
@@ -137,7 +137,7 @@ apiInstance.joinChannels(botUserid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SendBirdGroupChannelCollection**](SendBirdGroupChannelCollection.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ No authorization required
 
 ## listBots
 
-> listBots(opts)
+> InlineResponse20066 listBots(opts)
 
 List bots
 
@@ -290,7 +290,7 @@ apiInstance.listBots(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20066**](InlineResponse20066.md)
 
 ### Authorization
 
@@ -320,7 +320,7 @@ No authorization required
 
 ## sendBotsMessage
 
-> sendBotsMessage(botUserid, opts)
+> AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage sendBotsMessage(botUserid, opts)
 
 Send a bot&#39;s message
 
@@ -341,7 +341,7 @@ apiInstance.sendBotsMessage(botUserid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage**](AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage.md)
 
 ### Authorization
 
@@ -371,7 +371,7 @@ No authorization required
 
 ## updateBotById
 
-> updateBotById(botUserid, opts)
+> InlineResponse20066Bots updateBotById(botUserid, opts)
 
 Update a bot
 
@@ -392,7 +392,7 @@ apiInstance.updateBotById(botUserid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20066Bots**](InlineResponse20066Bots.md)
 
 ### Authorization
 
@@ -422,7 +422,7 @@ No authorization required
 
 ## viewBotById
 
-> viewBotById(botUserid, opts)
+> InlineResponse20066Bots viewBotById(botUserid, opts)
 
 View a bot
 
@@ -442,7 +442,7 @@ apiInstance.viewBotById(botUserid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -457,7 +457,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse20066Bots**](InlineResponse20066Bots.md)
 
 ### Authorization
 

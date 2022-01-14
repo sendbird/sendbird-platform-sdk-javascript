@@ -13,9 +13,13 @@
 
 
 import ApiClient from "../ApiClient";
+import AnyOfstringnumber from '../model/AnyOfstringnumber';
 import CreateChannelMetacounterData from '../model/CreateChannelMetacounterData';
 import CreateChannelMetadataData from '../model/CreateChannelMetadataData';
 import CreateUserMetadataData from '../model/CreateUserMetadataData';
+import InlineResponse20048UserMetadata from '../model/InlineResponse20048UserMetadata';
+import InlineResponse20061 from '../model/InlineResponse20061';
+import InlineResponse20062 from '../model/InlineResponse20062';
 import UpdateChannelMetacounterData from '../model/UpdateChannelMetacounterData';
 import UpdateChannelMetadataData from '../model/UpdateChannelMetadataData';
 import UpdateUserMetadataData from '../model/UpdateUserMetadataData';
@@ -43,7 +47,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the createChannelMetacounter operation.
      * @callback module:api/UserChannelMetadataApi~createChannelMetacounterCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Object.<String, module:model/{String: AnyOfstringnumber}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -56,6 +60,7 @@ export default class UserChannelMetadataApi {
      * @param {String} opts.apiToken 
      * @param {module:model/CreateChannelMetacounterData} opts.createChannelMetacounterData 
      * @param {module:api/UserChannelMetadataApi~createChannelMetacounterCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, module:model/{String: AnyOfstringnumber}>}
      */
     createChannelMetacounter(channelType, channelUrl, opts, callback) {
       opts = opts || {};
@@ -84,7 +89,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = {'String': AnyOfstringnumber};
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -96,7 +101,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the createChannelMetadata operation.
      * @callback module:api/UserChannelMetadataApi~createChannelMetadataCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20062} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -109,6 +114,7 @@ export default class UserChannelMetadataApi {
      * @param {String} opts.apiToken 
      * @param {module:model/CreateChannelMetadataData} opts.createChannelMetadataData 
      * @param {module:api/UserChannelMetadataApi~createChannelMetadataCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20062}
      */
     createChannelMetadata(channelType, channelUrl, opts, callback) {
       opts = opts || {};
@@ -137,7 +143,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20062;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metadata', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -149,7 +155,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the createUserMetadata operation.
      * @callback module:api/UserChannelMetadataApi~createUserMetadataCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20048UserMetadata} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -161,6 +167,7 @@ export default class UserChannelMetadataApi {
      * @param {String} opts.apiToken 
      * @param {module:model/CreateUserMetadataData} opts.createUserMetadataData 
      * @param {module:api/UserChannelMetadataApi~createUserMetadataCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20048UserMetadata}
      */
     createUserMetadata(userId, opts, callback) {
       opts = opts || {};
@@ -184,7 +191,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20048UserMetadata;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -518,7 +525,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the updateChannelMetacounter operation.
      * @callback module:api/UserChannelMetadataApi~updateChannelMetacounterCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Object.<String, module:model/{String: AnyOfstringnumber}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -531,6 +538,7 @@ export default class UserChannelMetadataApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateChannelMetacounterData} opts.updateChannelMetacounterData 
      * @param {module:api/UserChannelMetadataApi~updateChannelMetacounterCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, module:model/{String: AnyOfstringnumber}>}
      */
     updateChannelMetacounter(channelType, channelUrl, opts, callback) {
       opts = opts || {};
@@ -559,7 +567,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = {'String': AnyOfstringnumber};
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -571,7 +579,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the updateChannelMetacounterByKey operation.
      * @callback module:api/UserChannelMetadataApi~updateChannelMetacounterByKeyCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Object.<String, {String: String}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -583,8 +591,9 @@ export default class UserChannelMetadataApi {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {Object} opts.body 
+     * @param {Object.<String, Object>} opts.body 
      * @param {module:api/UserChannelMetadataApi~updateChannelMetacounterByKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {String: String}>}
      */
     updateChannelMetacounterByKey(channelType, channelUrl, key, opts, callback) {
       opts = opts || {};
@@ -618,7 +627,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = {'String': 'String'};
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter/{key}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -630,7 +639,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the updateChannelMetadata operation.
      * @callback module:api/UserChannelMetadataApi~updateChannelMetadataCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Object.<String, {String: String}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -643,6 +652,7 @@ export default class UserChannelMetadataApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateChannelMetadataData} opts.updateChannelMetadataData 
      * @param {module:api/UserChannelMetadataApi~updateChannelMetadataCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {String: String}>}
      */
     updateChannelMetadata(channelType, channelUrl, opts, callback) {
       opts = opts || {};
@@ -671,7 +681,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = {'String': 'String'};
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metadata', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -683,7 +693,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the updateChannelMetadataByKey operation.
      * @callback module:api/UserChannelMetadataApi~updateChannelMetadataByKeyCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Object.<String, {String: String}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -695,8 +705,9 @@ export default class UserChannelMetadataApi {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {Object} opts.body 
+     * @param {Object.<String, Object>} opts.body 
      * @param {module:api/UserChannelMetadataApi~updateChannelMetadataByKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {String: String}>}
      */
     updateChannelMetadataByKey(channelType, channelUrl, key, opts, callback) {
       opts = opts || {};
@@ -730,7 +741,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = {'String': 'String'};
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metadata/{key}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -742,7 +753,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the updateUserMetadata operation.
      * @callback module:api/UserChannelMetadataApi~updateUserMetadataCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20061} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -754,6 +765,7 @@ export default class UserChannelMetadataApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateUserMetadataData} opts.updateUserMetadataData 
      * @param {module:api/UserChannelMetadataApi~updateUserMetadataCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20061}
      */
     updateUserMetadata(userId, opts, callback) {
       opts = opts || {};
@@ -777,7 +789,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20061;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -789,7 +801,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the updateUserMetadataByKey operation.
      * @callback module:api/UserChannelMetadataApi~updateUserMetadataByKeyCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Object.<String, {String: String}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -800,8 +812,9 @@ export default class UserChannelMetadataApi {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {Object} opts.body 
+     * @param {Object.<String, Object>} opts.body 
      * @param {module:api/UserChannelMetadataApi~updateUserMetadataByKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {String: String}>}
      */
     updateUserMetadataByKey(userId, key, opts, callback) {
       opts = opts || {};
@@ -830,7 +843,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = {'String': 'String'};
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata/{key}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -842,7 +855,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the viewChannelMetacounter operation.
      * @callback module:api/UserChannelMetadataApi~viewChannelMetacounterCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Object.<String, module:model/{String: AnyOfstringnumber}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -854,8 +867,9 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.key 
-     * @param {Array} opts.keys 
+     * @param {Array.<String>} opts.keys 
      * @param {module:api/UserChannelMetadataApi~viewChannelMetacounterCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, module:model/{String: AnyOfstringnumber}>}
      */
     viewChannelMetacounter(channelType, channelUrl, opts, callback) {
       opts = opts || {};
@@ -875,7 +889,7 @@ export default class UserChannelMetadataApi {
       };
       let queryParams = {
         'key': opts['key'],
-        'keys': opts['keys']
+        'keys': this.apiClient.buildCollectionParam(opts['keys'], 'multi')
       };
       let headerParams = {
         'Api-Token': opts['apiToken']
@@ -886,7 +900,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = {'String': AnyOfstringnumber};
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -898,7 +912,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the viewChannelMetacounterByKey operation.
      * @callback module:api/UserChannelMetadataApi~viewChannelMetacounterByKeyCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Object.<String, module:model/{String: AnyOfstringnumber}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -911,6 +925,7 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/UserChannelMetadataApi~viewChannelMetacounterByKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, module:model/{String: AnyOfstringnumber}>}
      */
     viewChannelMetacounterByKey(channelType, channelUrl, key, opts, callback) {
       opts = opts || {};
@@ -944,7 +959,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = {'String': AnyOfstringnumber};
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter/{key}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -956,7 +971,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the viewChannelMetadata operation.
      * @callback module:api/UserChannelMetadataApi~viewChannelMetadataCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Object.<String, {String: String}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -968,8 +983,9 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.key 
-     * @param {Array} opts.keys 
+     * @param {Array.<String>} opts.keys 
      * @param {module:api/UserChannelMetadataApi~viewChannelMetadataCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {String: String}>}
      */
     viewChannelMetadata(channelType, channelUrl, opts, callback) {
       opts = opts || {};
@@ -989,7 +1005,7 @@ export default class UserChannelMetadataApi {
       };
       let queryParams = {
         'key': opts['key'],
-        'keys': opts['keys']
+        'keys': this.apiClient.buildCollectionParam(opts['keys'], 'multi')
       };
       let headerParams = {
         'Api-Token': opts['apiToken']
@@ -1000,7 +1016,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = {'String': 'String'};
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metadata', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1012,7 +1028,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the viewChannelMetadataByKey operation.
      * @callback module:api/UserChannelMetadataApi~viewChannelMetadataByKeyCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Object.<String, {String: String}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1025,6 +1041,7 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/UserChannelMetadataApi~viewChannelMetadataByKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {String: String}>}
      */
     viewChannelMetadataByKey(channelType, channelUrl, key, opts, callback) {
       opts = opts || {};
@@ -1058,7 +1075,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = {'String': 'String'};
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metadata/{key}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1070,7 +1087,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the viewUserMetadata operation.
      * @callback module:api/UserChannelMetadataApi~viewUserMetadataCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20048UserMetadata} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1081,8 +1098,9 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.key 
-     * @param {Array} opts.keys 
+     * @param {Array.<String>} opts.keys 
      * @param {module:api/UserChannelMetadataApi~viewUserMetadataCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20048UserMetadata}
      */
     viewUserMetadata(userId, opts, callback) {
       opts = opts || {};
@@ -1097,7 +1115,7 @@ export default class UserChannelMetadataApi {
       };
       let queryParams = {
         'key': opts['key'],
-        'keys': opts['keys']
+        'keys': this.apiClient.buildCollectionParam(opts['keys'], 'multi')
       };
       let headerParams = {
         'Api-Token': opts['apiToken']
@@ -1108,7 +1126,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20048UserMetadata;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1120,7 +1138,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the viewUserMetadataByKey operation.
      * @callback module:api/UserChannelMetadataApi~viewUserMetadataByKeyCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Object.<String, {String: String}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1132,6 +1150,7 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/UserChannelMetadataApi~viewUserMetadataByKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {String: String}>}
      */
     viewUserMetadataByKey(userId, key, opts, callback) {
       opts = opts || {};
@@ -1160,7 +1179,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = {'String': 'String'};
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata/{key}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

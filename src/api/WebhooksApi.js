@@ -14,6 +14,8 @@
 
 import ApiClient from "../ApiClient";
 import ChooseWhichEventsToSubscribeToData from '../model/ChooseWhichEventsToSubscribeToData';
+import InlineResponse20067 from '../model/InlineResponse20067';
+import InlineResponse20068 from '../model/InlineResponse20068';
 
 /**
 * Webhooks service.
@@ -38,7 +40,7 @@ export default class WebhooksApi {
      * Callback function to receive the result of the chooseWhichEventsToSubscribeTo operation.
      * @callback module:api/WebhooksApi~chooseWhichEventsToSubscribeToCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20068} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -49,6 +51,7 @@ export default class WebhooksApi {
      * @param {String} opts.apiToken 
      * @param {module:model/ChooseWhichEventsToSubscribeToData} opts.chooseWhichEventsToSubscribeToData 
      * @param {module:api/WebhooksApi~chooseWhichEventsToSubscribeToCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20068}
      */
     chooseWhichEventsToSubscribeTo(opts, callback) {
       opts = opts || {};
@@ -67,7 +70,7 @@ export default class WebhooksApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20068;
       return this.apiClient.callApi(
         '/v3/applications/settings/webhook', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -79,7 +82,7 @@ export default class WebhooksApi {
      * Callback function to receive the result of the retrieveListOfSubscribedEvents operation.
      * @callback module:api/WebhooksApi~retrieveListOfSubscribedEventsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20067} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -90,6 +93,7 @@ export default class WebhooksApi {
      * @param {String} opts.apiToken 
      * @param {Boolean} opts.displayAllWebhookCategories 
      * @param {module:api/WebhooksApi~retrieveListOfSubscribedEventsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20067}
      */
     retrieveListOfSubscribedEvents(opts, callback) {
       opts = opts || {};
@@ -109,7 +113,7 @@ export default class WebhooksApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20067;
       return this.apiClient.callApi(
         '/v3/applications/settings/webhook', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

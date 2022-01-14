@@ -17,10 +17,26 @@ import AddRegistrationOrDeviceTokenData from '../model/AddRegistrationOrDeviceTo
 import BanFromChannelsWithCustomChannelTypesData from '../model/BanFromChannelsWithCustomChannelTypesData';
 import BlockUserData from '../model/BlockUserData';
 import CreateUserData from '../model/CreateUserData';
+import InlineResponse20017 from '../model/InlineResponse20017';
+import InlineResponse20018 from '../model/InlineResponse20018';
+import InlineResponse20019 from '../model/InlineResponse20019';
+import InlineResponse20020 from '../model/InlineResponse20020';
+import InlineResponse20021 from '../model/InlineResponse20021';
+import InlineResponse20022 from '../model/InlineResponse20022';
+import InlineResponse20023 from '../model/InlineResponse20023';
+import InlineResponse20024 from '../model/InlineResponse20024';
+import InlineResponse20025 from '../model/InlineResponse20025';
+import InlineResponse20026 from '../model/InlineResponse20026';
+import InlineResponse20027 from '../model/InlineResponse20027';
+import InlineResponse20028 from '../model/InlineResponse20028';
+import InlineResponse20029 from '../model/InlineResponse20029';
+import InlineResponse20030 from '../model/InlineResponse20030';
+import InlineResponse2006 from '../model/InlineResponse2006';
 import LeaveMyGroupChannelsData from '../model/LeaveMyGroupChannelsData';
 import MarkAllMessagesAsReadData from '../model/MarkAllMessagesAsReadData';
 import MuteInChannelsWithCustomChannelTypesData from '../model/MuteInChannelsWithCustomChannelTypesData';
 import RegisterAsOperatorToChannelsWithCustomChannelTypesData from '../model/RegisterAsOperatorToChannelsWithCustomChannelTypesData';
+import SendBirdUser from '../model/SendBirdUser';
 import UpdateChannelInvitationPreferenceData from '../model/UpdateChannelInvitationPreferenceData';
 import UpdateCountPreferenceOfChannelByUrlData from '../model/UpdateCountPreferenceOfChannelByUrlData';
 import UpdatePushPreferencesData from '../model/UpdatePushPreferencesData';
@@ -50,7 +66,7 @@ export default class UserApi {
      * Callback function to receive the result of the addRegistrationOrDeviceToken operation.
      * @callback module:api/UserApi~addRegistrationOrDeviceTokenCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20026} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -63,6 +79,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {module:model/AddRegistrationOrDeviceTokenData} opts.addRegistrationOrDeviceTokenData 
      * @param {module:api/UserApi~addRegistrationOrDeviceTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20026}
      */
     addRegistrationOrDeviceToken(userId, tokenType, opts, callback) {
       opts = opts || {};
@@ -91,7 +108,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20026;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/{token_type}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -150,7 +167,7 @@ export default class UserApi {
      * Callback function to receive the result of the blockUser operation.
      * @callback module:api/UserApi~blockUserCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdUser} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -162,6 +179,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {module:model/BlockUserData} opts.blockUserData 
      * @param {module:api/UserApi~blockUserCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdUser}
      */
     blockUser(userId, opts, callback) {
       opts = opts || {};
@@ -185,7 +203,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdUser;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/block', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -197,7 +215,7 @@ export default class UserApi {
      * Callback function to receive the result of the choosePushNotificationContentTemplate operation.
      * @callback module:api/UserApi~choosePushNotificationContentTemplateCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20030} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -207,8 +225,9 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {Object} opts.body 
+     * @param {Object.<String, Object>} opts.body 
      * @param {module:api/UserApi~choosePushNotificationContentTemplateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20030}
      */
     choosePushNotificationContentTemplate(userId, opts, callback) {
       opts = opts || {};
@@ -232,7 +251,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20030;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/template', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -244,7 +263,7 @@ export default class UserApi {
      * Callback function to receive the result of the createUser operation.
      * @callback module:api/UserApi~createUserCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdUser} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -255,6 +274,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {module:model/CreateUserData} opts.createUserData 
      * @param {module:api/UserApi~createUserCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdUser}
      */
     createUser(opts, callback) {
       opts = opts || {};
@@ -273,7 +293,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdUser;
       return this.apiClient.callApi(
         '/v3/users', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -378,7 +398,7 @@ export default class UserApi {
      * Callback function to receive the result of the listBannedChannels operation.
      * @callback module:api/UserApi~listBannedChannelsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20023} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -391,6 +411,7 @@ export default class UserApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/UserApi~listBannedChannelsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20023}
      */
     listBannedChannels(userId, opts, callback) {
       opts = opts || {};
@@ -416,7 +437,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20023;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/ban', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -428,7 +449,7 @@ export default class UserApi {
      * Callback function to receive the result of the listBlockedUsers operation.
      * @callback module:api/UserApi~listBlockedUsersCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20017} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -444,6 +465,7 @@ export default class UserApi {
      * @param {String} opts.metadatakey 
      * @param {String} opts.metadatavaluesIn 
      * @param {module:api/UserApi~listBlockedUsersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20017}
      */
     listBlockedUsers(userId, opts, callback) {
       opts = opts || {};
@@ -472,7 +494,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20017;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/block', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -484,7 +506,7 @@ export default class UserApi {
      * Callback function to receive the result of the listMutedChannels operation.
      * @callback module:api/UserApi~listMutedChannelsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20024} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -497,6 +519,7 @@ export default class UserApi {
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {module:api/UserApi~listMutedChannelsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20024}
      */
     listMutedChannels(userId, opts, callback) {
       opts = opts || {};
@@ -522,7 +545,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20024;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/mute', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -534,7 +557,7 @@ export default class UserApi {
      * Callback function to receive the result of the listMyGroupChannels operation.
      * @callback module:api/UserApi~listMyGroupChannelsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20018} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -585,6 +608,7 @@ export default class UserApi {
      * @param {String} opts.metacounterValueLte 
      * @param {String} opts.customType 
      * @param {module:api/UserApi~listMyGroupChannelsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20018}
      */
     listMyGroupChannels(userId, opts, callback) {
       opts = opts || {};
@@ -648,7 +672,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20018;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/my_group_channels', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -660,7 +684,7 @@ export default class UserApi {
      * Callback function to receive the result of the listRegistrationOrDeviceTokens operation.
      * @callback module:api/UserApi~listRegistrationOrDeviceTokensCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20025} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -672,6 +696,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/UserApi~listRegistrationOrDeviceTokensCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20025}
      */
     listRegistrationOrDeviceTokens(userId, tokenType, opts, callback) {
       opts = opts || {};
@@ -700,7 +725,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20025;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/{token_type}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -712,7 +737,7 @@ export default class UserApi {
      * Callback function to receive the result of the listUsers operation.
      * @callback module:api/UserApi~listUsersCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20017} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -731,6 +756,7 @@ export default class UserApi {
      * @param {String} opts.metadatakey 
      * @param {String} opts.metadatavaluesIn 
      * @param {module:api/UserApi~listUsersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20017}
      */
     listUsers(opts, callback) {
       opts = opts || {};
@@ -758,7 +784,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20017;
       return this.apiClient.callApi(
         '/v3/users', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -776,7 +802,7 @@ export default class UserApi {
 
     /**
      * Mark all messages as read
-     * ## Mark all messages as read  Marks all of a user’s unread messages as read in the joined group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-mark-all-messages-as-read ----------------------------
+     * ## Mark all messages as read  Marks all of a user's unread messages as read in the joined group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-mark-all-messages-as-read ----------------------------
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
@@ -911,7 +937,7 @@ export default class UserApi {
      * Callback function to receive the result of the removeRegistrationOrDeviceToken operation.
      * @callback module:api/UserApi~removeRegistrationOrDeviceTokenCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20027} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -922,6 +948,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/UserApi~removeRegistrationOrDeviceTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20027}
      */
     removeRegistrationOrDeviceToken(userId, opts, callback) {
       opts = opts || {};
@@ -945,7 +972,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20027;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -957,7 +984,7 @@ export default class UserApi {
      * Callback function to receive the result of the removeRegistrationOrDeviceTokenByToken operation.
      * @callback module:api/UserApi~removeRegistrationOrDeviceTokenByTokenCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20027} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -970,6 +997,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/UserApi~removeRegistrationOrDeviceTokenByTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20027}
      */
     removeRegistrationOrDeviceTokenByToken(userId, tokenType, token, opts, callback) {
       opts = opts || {};
@@ -1003,7 +1031,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20027;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/{token_type}/{token}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1015,7 +1043,7 @@ export default class UserApi {
      * Callback function to receive the result of the removeRegistrationOrDeviceTokenFromOwnerByToken operation.
      * @callback module:api/UserApi~removeRegistrationOrDeviceTokenFromOwnerByTokenCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20028} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1027,6 +1055,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/UserApi~removeRegistrationOrDeviceTokenFromOwnerByTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20028}
      */
     removeRegistrationOrDeviceTokenFromOwnerByToken(tokenType, token, opts, callback) {
       opts = opts || {};
@@ -1055,7 +1084,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20028;
       return this.apiClient.callApi(
         '/v3/push/device_tokens/{token_type}/{token}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1165,7 +1194,7 @@ export default class UserApi {
      * Callback function to receive the result of the updateChannelInvitationPreference operation.
      * @callback module:api/UserApi~updateChannelInvitationPreferenceCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2006} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1177,6 +1206,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateChannelInvitationPreferenceData} opts.updateChannelInvitationPreferenceData 
      * @param {module:api/UserApi~updateChannelInvitationPreferenceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2006}
      */
     updateChannelInvitationPreference(userId, opts, callback) {
       opts = opts || {};
@@ -1200,7 +1230,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2006;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/channel_invitation_preference', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1212,7 +1242,7 @@ export default class UserApi {
      * Callback function to receive the result of the updateCountPreferenceOfChannelByUrl operation.
      * @callback module:api/UserApi~updateCountPreferenceOfChannelByUrlCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20022} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1225,6 +1255,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateCountPreferenceOfChannelByUrlData} opts.updateCountPreferenceOfChannelByUrlData 
      * @param {module:api/UserApi~updateCountPreferenceOfChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20022}
      */
     updateCountPreferenceOfChannelByUrl(userId, channelUrl, opts, callback) {
       opts = opts || {};
@@ -1253,7 +1284,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20022;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/count_preference/{channel_url}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1265,7 +1296,7 @@ export default class UserApi {
      * Callback function to receive the result of the updatePushPreferences operation.
      * @callback module:api/UserApi~updatePushPreferencesCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20029} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1277,6 +1308,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdatePushPreferencesData} opts.updatePushPreferencesData 
      * @param {module:api/UserApi~updatePushPreferencesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20029}
      */
     updatePushPreferences(userId, opts, callback) {
       opts = opts || {};
@@ -1300,7 +1332,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20029;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1312,7 +1344,7 @@ export default class UserApi {
      * Callback function to receive the result of the updatePushPreferencesForChannelByUrl operation.
      * @callback module:api/UserApi~updatePushPreferencesForChannelByUrlCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20029} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1325,6 +1357,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdatePushPreferencesForChannelByUrlData} opts.updatePushPreferencesForChannelByUrlData 
      * @param {module:api/UserApi~updatePushPreferencesForChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20029}
      */
     updatePushPreferencesForChannelByUrl(userId, channelUrl, opts, callback) {
       opts = opts || {};
@@ -1353,7 +1386,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20029;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference/{channel_url}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1365,7 +1398,7 @@ export default class UserApi {
      * Callback function to receive the result of the updateUserById operation.
      * @callback module:api/UserApi~updateUserByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdUser} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1377,6 +1410,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateUserByIdData} opts.updateUserByIdData 
      * @param {module:api/UserApi~updateUserByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdUser}
      */
     updateUserById(userId, opts, callback) {
       opts = opts || {};
@@ -1400,7 +1434,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdUser;
       return this.apiClient.callApi(
         '/v3/users/{user_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1412,7 +1446,7 @@ export default class UserApi {
      * Callback function to receive the result of the viewChannelInvitationPreference operation.
      * @callback module:api/UserApi~viewChannelInvitationPreferenceCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse2006} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1423,6 +1457,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/UserApi~viewChannelInvitationPreferenceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2006}
      */
     viewChannelInvitationPreference(userId, opts, callback) {
       opts = opts || {};
@@ -1446,7 +1481,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2006;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/channel_invitation_preference', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1458,7 +1493,7 @@ export default class UserApi {
      * Callback function to receive the result of the viewCountPreferenceOfChannelByUrl operation.
      * @callback module:api/UserApi~viewCountPreferenceOfChannelByUrlCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20022} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1470,6 +1505,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/UserApi~viewCountPreferenceOfChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20022}
      */
     viewCountPreferenceOfChannelByUrl(userId, channelUrl, opts, callback) {
       opts = opts || {};
@@ -1498,7 +1534,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20022;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/count_preference/{channel_url}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1510,7 +1546,7 @@ export default class UserApi {
      * Callback function to receive the result of the viewNumberOfChannelsByJoinStatus operation.
      * @callback module:api/UserApi~viewNumberOfChannelsByJoinStatusCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20021} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1522,6 +1558,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.state 
      * @param {module:api/UserApi~viewNumberOfChannelsByJoinStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20021}
      */
     viewNumberOfChannelsByJoinStatus(userId, opts, callback) {
       opts = opts || {};
@@ -1546,7 +1583,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20021;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/group_channel_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1558,19 +1595,20 @@ export default class UserApi {
      * Callback function to receive the result of the viewNumberOfChannelsWithUnreadMessages operation.
      * @callback module:api/UserApi~viewNumberOfChannelsWithUnreadMessagesCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20019} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * View number of channels with unread messages
-     * ## View number of channels with unread messages  Retrieves the total number of a user’s group channels with unread messages.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-channels-with-unread-messages ----------------------------
+     * ## View number of channels with unread messages  Retrieves the total number of a user's group channels with unread messages.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-channels-with-unread-messages ----------------------------
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {Array} opts.customTypes 
+     * @param {Array.<String>} opts.customTypes 
      * @param {String} opts.superMode 
      * @param {module:api/UserApi~viewNumberOfChannelsWithUnreadMessagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20019}
      */
     viewNumberOfChannelsWithUnreadMessages(userId, opts, callback) {
       opts = opts || {};
@@ -1584,7 +1622,7 @@ export default class UserApi {
         'user_id': userId
       };
       let queryParams = {
-        'custom_types': opts['customTypes'],
+        'custom_types': this.apiClient.buildCollectionParam(opts['customTypes'], 'multi'),
         'super_mode': opts['superMode']
       };
       let headerParams = {
@@ -1596,7 +1634,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20019;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/unread_channel_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1608,7 +1646,7 @@ export default class UserApi {
      * Callback function to receive the result of the viewNumberOfUnreadItems operation.
      * @callback module:api/UserApi~viewNumberOfUnreadItemsCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20020} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1621,6 +1659,7 @@ export default class UserApi {
      * @param {String} opts.customType 
      * @param {String} opts.itemKeys 
      * @param {module:api/UserApi~viewNumberOfUnreadItemsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20020}
      */
     viewNumberOfUnreadItems(userId, opts, callback) {
       opts = opts || {};
@@ -1646,7 +1685,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20020;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/unread_item_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1658,19 +1697,20 @@ export default class UserApi {
      * Callback function to receive the result of the viewNumberOfUnreadMessages operation.
      * @callback module:api/UserApi~viewNumberOfUnreadMessagesCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20019} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * View number of unread messages
-     * ## View number of unread messages  Retrieves the total number of a user’s currently unread messages in the group channels. The unread counts feature is only available for the group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-unread-messages ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the user to retrieve the number.
+     * ## View number of unread messages  Retrieves the total number of a user's currently unread messages in the group channels. The unread counts feature is only available for the group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-unread-messages ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the user to retrieve the number.
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.customTypes 
      * @param {String} opts.superMode 
      * @param {module:api/UserApi~viewNumberOfUnreadMessagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20019}
      */
     viewNumberOfUnreadMessages(userId, opts, callback) {
       opts = opts || {};
@@ -1696,7 +1736,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20019;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/unread_message_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1708,17 +1748,18 @@ export default class UserApi {
      * Callback function to receive the result of the viewPushPreferences operation.
      * @callback module:api/UserApi~viewPushPreferencesCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20029} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * View push preferences
-     * ## View push preferences  Retrieves a user’s push preferences about whether the user has set `do_not_disturb` to pause notifications for a certain period of time, and the time frame in which the user has applied the setting.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-push-preferences ----------------------------
+     * ## View push preferences  Retrieves a user's push preferences about whether the user has set `do_not_disturb` to pause notifications for a certain period of time, and the time frame in which the user has applied the setting.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-push-preferences ----------------------------
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/UserApi~viewPushPreferencesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20029}
      */
     viewPushPreferences(userId, opts, callback) {
       opts = opts || {};
@@ -1742,7 +1783,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20029;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1754,7 +1795,7 @@ export default class UserApi {
      * Callback function to receive the result of the viewPushPreferencesForChannelByUrl operation.
      * @callback module:api/UserApi~viewPushPreferencesForChannelByUrlCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20029} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1766,6 +1807,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/UserApi~viewPushPreferencesForChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20029}
      */
     viewPushPreferencesForChannelByUrl(userId, channelUrl, opts, callback) {
       opts = opts || {};
@@ -1794,7 +1836,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20029;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference/{channel_url}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1806,7 +1848,7 @@ export default class UserApi {
      * Callback function to receive the result of the viewUserById operation.
      * @callback module:api/UserApi~viewUserByIdCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/SendBirdUser} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1820,6 +1862,7 @@ export default class UserApi {
      * @param {String} opts.customTypes 
      * @param {String} opts.superMode 
      * @param {module:api/UserApi~viewUserByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdUser}
      */
     viewUserById(userId, opts, callback) {
       opts = opts || {};
@@ -1846,7 +1889,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = SendBirdUser;
       return this.apiClient.callApi(
         '/v3/users/{user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1858,7 +1901,7 @@ export default class UserApi {
      * Callback function to receive the result of the viewWhoOwnsRegistrationOrDeviceTokenByToken operation.
      * @callback module:api/UserApi~viewWhoOwnsRegistrationOrDeviceTokenByTokenCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/InlineResponse20028} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1870,6 +1913,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/UserApi~viewWhoOwnsRegistrationOrDeviceTokenByTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20028}
      */
     viewWhoOwnsRegistrationOrDeviceTokenByToken(tokenType, token, opts, callback) {
       opts = opts || {};
@@ -1898,7 +1942,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse20028;
       return this.apiClient.callApi(
         '/v3/push/device_tokens/{token_type}/{token}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
