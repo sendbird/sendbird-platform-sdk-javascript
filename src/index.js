@@ -179,133 +179,35 @@ import ReportChannelByUrlData from './model/ReportChannelByUrlData';
 import ReportMessageByIdData from './model/ReportMessageByIdData';
 import ReportUserByIdData from './model/ReportUserByIdData';
 import ScheduleAnnouncementData from './model/ScheduleAnnouncementData';
+import SendBirdAdditionalProperties from './model/SendBirdAdditionalProperties';
 import SendBirdAdminMessage from './model/SendBirdAdminMessage';
-import SendBirdAppInfo from './model/SendBirdAppInfo';
 import SendBirdAppleCriticalAlertOptions from './model/SendBirdAppleCriticalAlertOptions';
-import SendBirdApplicationUserListQuery from './model/SendBirdApplicationUserListQuery';
-import SendBirdBannedUserListQuery from './model/SendBirdBannedUserListQuery';
 import SendBirdBaseChannel from './model/SendBirdBaseChannel';
 import SendBirdBaseMessageInstance from './model/SendBirdBaseMessageInstance';
-import SendBirdBaseMessageParams from './model/SendBirdBaseMessageParams';
-import SendBirdBlockedUserListQuery from './model/SendBirdBlockedUserListQuery';
-import SendBirdCollectionEventSource from './model/SendBirdCollectionEventSource';
-import SendBirdDiscoveryObject from './model/SendBirdDiscoveryObject';
-import SendBirdDistinctGroupChannelResponse from './model/SendBirdDistinctGroupChannelResponse';
+import SendBirdChannelResponse from './model/SendBirdChannelResponse';
 import SendBirdEmoji from './model/SendBirdEmoji';
 import SendBirdEmojiCategory from './model/SendBirdEmojiCategory';
-import SendBirdEmojiContainer from './model/SendBirdEmojiContainer';
-import SendBirdFileMessage from './model/SendBirdFileMessage';
 import SendBirdFileMessageParams from './model/SendBirdFileMessageParams';
-import SendBirdFileMessagesCallbackObject from './model/SendBirdFileMessagesCallbackObject';
-import SendBirdFriendListQuery from './model/SendBirdFriendListQuery';
-import SendBirdGetFriendChangeLogs from './model/SendBirdGetFriendChangeLogs';
 import SendBirdGroupChannel from './model/SendBirdGroupChannel';
-import SendBirdGroupChannelChangeLogs from './model/SendBirdGroupChannelChangeLogs';
-import SendBirdGroupChannelChangeLogsParams from './model/SendBirdGroupChannelChangeLogsParams';
 import SendBirdGroupChannelCollection from './model/SendBirdGroupChannelCollection';
-import SendBirdGroupChannelCollectionHandler from './model/SendBirdGroupChannelCollectionHandler';
-import SendBirdGroupChannelCollectionStatic from './model/SendBirdGroupChannelCollectionStatic';
-import SendBirdGroupChannelCollectionStaticGroupChannelOrder from './model/SendBirdGroupChannelCollectionStaticGroupChannelOrder';
-import SendBirdGroupChannelContext from './model/SendBirdGroupChannelContext';
-import SendBirdGroupChannelContextSource from './model/SendBirdGroupChannelContextSource';
-import SendBirdGroupChannelFilter from './model/SendBirdGroupChannelFilter';
-import SendBirdGroupChannelFilterSearchFilter from './model/SendBirdGroupChannelFilterSearchFilter';
-import SendBirdGroupChannelFilterStatic from './model/SendBirdGroupChannelFilterStatic';
-import SendBirdGroupChannelFilterStaticHiddenChannelFilter from './model/SendBirdGroupChannelFilterStaticHiddenChannelFilter';
-import SendBirdGroupChannelFilterStaticMemberStateFilter from './model/SendBirdGroupChannelFilterStaticMemberStateFilter';
-import SendBirdGroupChannelFilterStaticPublicChannelFilter from './model/SendBirdGroupChannelFilterStaticPublicChannelFilter';
-import SendBirdGroupChannelFilterStaticQueryType from './model/SendBirdGroupChannelFilterStaticQueryType';
-import SendBirdGroupChannelFilterStaticSearchField from './model/SendBirdGroupChannelFilterStaticSearchField';
-import SendBirdGroupChannelFilterStaticSuperChannelFilter from './model/SendBirdGroupChannelFilterStaticSuperChannelFilter';
-import SendBirdGroupChannelFilterStaticUnreadChannelFilter from './model/SendBirdGroupChannelFilterStaticUnreadChannelFilter';
-import SendBirdGroupChannelFilterUserIdsFilter from './model/SendBirdGroupChannelFilterUserIdsFilter';
-import SendBirdGroupChannelListQuery from './model/SendBirdGroupChannelListQuery';
-import SendBirdGroupChannelMemberListQuery from './model/SendBirdGroupChannelMemberListQuery';
-import SendBirdGroupChannelOrder from './model/SendBirdGroupChannelOrder';
-import SendBirdGroupChannelParams from './model/SendBirdGroupChannelParams';
-import SendBirdGroupChannelTotalUnreadMessageCountParams from './model/SendBirdGroupChannelTotalUnreadMessageCountParams';
-import SendBirdHiddenChannelFilter from './model/SendBirdHiddenChannelFilter';
-import SendBirdLogLevel from './model/SendBirdLogLevel';
 import SendBirdMember from './model/SendBirdMember';
-import SendBirdMemberStateFilter from './model/SendBirdMemberStateFilter';
-import SendBirdMessageChangeLogs from './model/SendBirdMessageChangeLogs';
-import SendBirdMessageChangeLogsParams from './model/SendBirdMessageChangeLogsParams';
-import SendBirdMessageCollection from './model/SendBirdMessageCollection';
-import SendBirdMessageCollectionHandler from './model/SendBirdMessageCollectionHandler';
-import SendBirdMessageCollectionInitPolicy from './model/SendBirdMessageCollectionInitPolicy';
-import SendBirdMessageCollectionStatic from './model/SendBirdMessageCollectionStatic';
-import SendBirdMessageCollectionStaticMessageCollectionInitPolicy from './model/SendBirdMessageCollectionStaticMessageCollectionInitPolicy';
-import SendBirdMessageContext from './model/SendBirdMessageContext';
-import SendBirdMessageFilter from './model/SendBirdMessageFilter';
-import SendBirdMessageListParams from './model/SendBirdMessageListParams';
 import SendBirdMessageMetaArray from './model/SendBirdMessageMetaArray';
-import SendBirdMessageRetrievalParams from './model/SendBirdMessageRetrievalParams';
-import SendBirdMessageSearchQuery from './model/SendBirdMessageSearchQuery';
-import SendBirdMessageSearchQueryOptions from './model/SendBirdMessageSearchQueryOptions';
-import SendBirdMessageSendingStatus from './model/SendBirdMessageSendingStatus';
-import SendBirdMessageTypeFilter from './model/SendBirdMessageTypeFilter';
-import SendBirdMutedInfo from './model/SendBirdMutedInfo';
-import SendBirdMutedUserListQuery from './model/SendBirdMutedUserListQuery';
+import SendBirdMessageResponse from './model/SendBirdMessageResponse';
 import SendBirdOGImage from './model/SendBirdOGImage';
 import SendBirdOGMetaData from './model/SendBirdOGMetaData';
 import SendBirdOpenChannel from './model/SendBirdOpenChannel';
-import SendBirdOpenChannelListQuery from './model/SendBirdOpenChannelListQuery';
-import SendBirdOpenChannelParams from './model/SendBirdOpenChannelParams';
-import SendBirdOperatorListQuery from './model/SendBirdOperatorListQuery';
-import SendBirdOptions from './model/SendBirdOptions';
-import SendBirdParticipantListQuery from './model/SendBirdParticipantListQuery';
 import SendBirdPlugin from './model/SendBirdPlugin';
 import SendBirdPoll from './model/SendBirdPoll';
 import SendBirdPollDetails from './model/SendBirdPollDetails';
-import SendBirdPollListQuery from './model/SendBirdPollListQuery';
 import SendBirdPollOption from './model/SendBirdPollOption';
-import SendBirdPollParams from './model/SendBirdPollParams';
-import SendBirdPollRetrievalParams from './model/SendBirdPollRetrievalParams';
-import SendBirdPollStatic from './model/SendBirdPollStatic';
-import SendBirdPollStaticStatus from './model/SendBirdPollStaticStatus';
-import SendBirdPollStatus from './model/SendBirdPollStatus';
-import SendBirdPollUpdateEvent from './model/SendBirdPollUpdateEvent';
 import SendBirdPollUpdatedVoteCount from './model/SendBirdPollUpdatedVoteCount';
-import SendBirdPollVoteEvent from './model/SendBirdPollVoteEvent';
-import SendBirdPollVoterListQuery from './model/SendBirdPollVoterListQuery';
-import SendBirdPreviousMessageListQuery from './model/SendBirdPreviousMessageListQuery';
-import SendBirdPublicChannelFilter from './model/SendBirdPublicChannelFilter';
-import SendBirdPublicGroupChannelListQuery from './model/SendBirdPublicGroupChannelListQuery';
-import SendBirdPushTokens from './model/SendBirdPushTokens';
-import SendBirdQueryType from './model/SendBirdQueryType';
 import SendBirdReaction from './model/SendBirdReaction';
-import SendBirdReactionEvent from './model/SendBirdReactionEvent';
-import SendBirdReplyType from './model/SendBirdReplyType';
-import SendBirdRestrictedUser from './model/SendBirdRestrictedUser';
-import SendBirdRestrictedUserStatic from './model/SendBirdRestrictedUserStatic';
-import SendBirdRestrictedUserStaticRestrictionType from './model/SendBirdRestrictedUserStaticRestrictionType';
 import SendBirdRestrictionInfo from './model/SendBirdRestrictionInfo';
-import SendBirdRestrictionType from './model/SendBirdRestrictionType';
-import SendBirdScheduledUserMessage from './model/SendBirdScheduledUserMessage';
-import SendBirdScheduledUserMessageParams from './model/SendBirdScheduledUserMessageParams';
-import SendBirdSearchField from './model/SendBirdSearchField';
-import SendBirdSearchFilterParams from './model/SendBirdSearchFilterParams';
-import SendBirdSendBirdError from './model/SendBirdSendBirdError';
-import SendBirdSendBirdInstance from './model/SendBirdSendBirdInstance';
-import SendBirdSendBirdInstanceBaseChannel from './model/SendBirdSendBirdInstanceBaseChannel';
-import SendBirdSendBirdInstanceBaseChannelMessageTypeFilter from './model/SendBirdSendBirdInstanceBaseChannelMessageTypeFilter';
-import SendBirdSendBirdInstanceBaseMessage from './model/SendBirdSendBirdInstanceBaseMessage';
-import SendBirdSendBirdInstanceBaseMessageReplyType from './model/SendBirdSendBirdInstanceBaseMessageReplyType';
 import SendBirdSender from './model/SendBirdSender';
-import SendBirdStatic from './model/SendBirdStatic';
-import SendBirdStaticLogLevel from './model/SendBirdStaticLogLevel';
-import SendBirdSuperChannelFilter from './model/SendBirdSuperChannelFilter';
 import SendBirdThreadInfo from './model/SendBirdThreadInfo';
-import SendBirdThreadInfoUpdateEvent from './model/SendBirdThreadInfoUpdateEvent';
-import SendBirdThreadedMessageListInfo from './model/SendBirdThreadedMessageListInfo';
-import SendBirdThreadedMessageListParams from './model/SendBirdThreadedMessageListParams';
 import SendBirdThumbnailObject from './model/SendBirdThumbnailObject';
 import SendBirdThumbnailSize from './model/SendBirdThumbnailSize';
-import SendBirdUnreadChannelFilter from './model/SendBirdUnreadChannelFilter';
 import SendBirdUser from './model/SendBirdUser';
-import SendBirdUserIdsFilterParams from './model/SendBirdUserIdsFilterParams';
-import SendBirdUserListQuery from './model/SendBirdUserListQuery';
-import SendBirdUserMessage from './model/SendBirdUserMessage';
 import SendBirdUserMessageParams from './model/SendBirdUserMessageParams';
 import SendBotSMessageData from './model/SendBotSMessageData';
 import SendMessageData from './model/SendMessageData';
@@ -1382,34 +1284,22 @@ export {
     ScheduleAnnouncementData,
 
     /**
+     * The SendBirdAdditionalProperties model constructor.
+     * @property {module:model/SendBirdAdditionalProperties}
+     */
+    SendBirdAdditionalProperties,
+
+    /**
      * The SendBirdAdminMessage model constructor.
      * @property {module:model/SendBirdAdminMessage}
      */
     SendBirdAdminMessage,
 
     /**
-     * The SendBirdAppInfo model constructor.
-     * @property {module:model/SendBirdAppInfo}
-     */
-    SendBirdAppInfo,
-
-    /**
      * The SendBirdAppleCriticalAlertOptions model constructor.
      * @property {module:model/SendBirdAppleCriticalAlertOptions}
      */
     SendBirdAppleCriticalAlertOptions,
-
-    /**
-     * The SendBirdApplicationUserListQuery model constructor.
-     * @property {module:model/SendBirdApplicationUserListQuery}
-     */
-    SendBirdApplicationUserListQuery,
-
-    /**
-     * The SendBirdBannedUserListQuery model constructor.
-     * @property {module:model/SendBirdBannedUserListQuery}
-     */
-    SendBirdBannedUserListQuery,
 
     /**
      * The SendBirdBaseChannel model constructor.
@@ -1424,34 +1314,10 @@ export {
     SendBirdBaseMessageInstance,
 
     /**
-     * The SendBirdBaseMessageParams model constructor.
-     * @property {module:model/SendBirdBaseMessageParams}
+     * The SendBirdChannelResponse model constructor.
+     * @property {module:model/SendBirdChannelResponse}
      */
-    SendBirdBaseMessageParams,
-
-    /**
-     * The SendBirdBlockedUserListQuery model constructor.
-     * @property {module:model/SendBirdBlockedUserListQuery}
-     */
-    SendBirdBlockedUserListQuery,
-
-    /**
-     * The SendBirdCollectionEventSource model constructor.
-     * @property {module:model/SendBirdCollectionEventSource}
-     */
-    SendBirdCollectionEventSource,
-
-    /**
-     * The SendBirdDiscoveryObject model constructor.
-     * @property {module:model/SendBirdDiscoveryObject}
-     */
-    SendBirdDiscoveryObject,
-
-    /**
-     * The SendBirdDistinctGroupChannelResponse model constructor.
-     * @property {module:model/SendBirdDistinctGroupChannelResponse}
-     */
-    SendBirdDistinctGroupChannelResponse,
+    SendBirdChannelResponse,
 
     /**
      * The SendBirdEmoji model constructor.
@@ -1466,40 +1332,10 @@ export {
     SendBirdEmojiCategory,
 
     /**
-     * The SendBirdEmojiContainer model constructor.
-     * @property {module:model/SendBirdEmojiContainer}
-     */
-    SendBirdEmojiContainer,
-
-    /**
-     * The SendBirdFileMessage model constructor.
-     * @property {module:model/SendBirdFileMessage}
-     */
-    SendBirdFileMessage,
-
-    /**
      * The SendBirdFileMessageParams model constructor.
      * @property {module:model/SendBirdFileMessageParams}
      */
     SendBirdFileMessageParams,
-
-    /**
-     * The SendBirdFileMessagesCallbackObject model constructor.
-     * @property {module:model/SendBirdFileMessagesCallbackObject}
-     */
-    SendBirdFileMessagesCallbackObject,
-
-    /**
-     * The SendBirdFriendListQuery model constructor.
-     * @property {module:model/SendBirdFriendListQuery}
-     */
-    SendBirdFriendListQuery,
-
-    /**
-     * The SendBirdGetFriendChangeLogs model constructor.
-     * @property {module:model/SendBirdGetFriendChangeLogs}
-     */
-    SendBirdGetFriendChangeLogs,
 
     /**
      * The SendBirdGroupChannel model constructor.
@@ -1508,160 +1344,10 @@ export {
     SendBirdGroupChannel,
 
     /**
-     * The SendBirdGroupChannelChangeLogs model constructor.
-     * @property {module:model/SendBirdGroupChannelChangeLogs}
-     */
-    SendBirdGroupChannelChangeLogs,
-
-    /**
-     * The SendBirdGroupChannelChangeLogsParams model constructor.
-     * @property {module:model/SendBirdGroupChannelChangeLogsParams}
-     */
-    SendBirdGroupChannelChangeLogsParams,
-
-    /**
      * The SendBirdGroupChannelCollection model constructor.
      * @property {module:model/SendBirdGroupChannelCollection}
      */
     SendBirdGroupChannelCollection,
-
-    /**
-     * The SendBirdGroupChannelCollectionHandler model constructor.
-     * @property {module:model/SendBirdGroupChannelCollectionHandler}
-     */
-    SendBirdGroupChannelCollectionHandler,
-
-    /**
-     * The SendBirdGroupChannelCollectionStatic model constructor.
-     * @property {module:model/SendBirdGroupChannelCollectionStatic}
-     */
-    SendBirdGroupChannelCollectionStatic,
-
-    /**
-     * The SendBirdGroupChannelCollectionStaticGroupChannelOrder model constructor.
-     * @property {module:model/SendBirdGroupChannelCollectionStaticGroupChannelOrder}
-     */
-    SendBirdGroupChannelCollectionStaticGroupChannelOrder,
-
-    /**
-     * The SendBirdGroupChannelContext model constructor.
-     * @property {module:model/SendBirdGroupChannelContext}
-     */
-    SendBirdGroupChannelContext,
-
-    /**
-     * The SendBirdGroupChannelContextSource model constructor.
-     * @property {module:model/SendBirdGroupChannelContextSource}
-     */
-    SendBirdGroupChannelContextSource,
-
-    /**
-     * The SendBirdGroupChannelFilter model constructor.
-     * @property {module:model/SendBirdGroupChannelFilter}
-     */
-    SendBirdGroupChannelFilter,
-
-    /**
-     * The SendBirdGroupChannelFilterSearchFilter model constructor.
-     * @property {module:model/SendBirdGroupChannelFilterSearchFilter}
-     */
-    SendBirdGroupChannelFilterSearchFilter,
-
-    /**
-     * The SendBirdGroupChannelFilterStatic model constructor.
-     * @property {module:model/SendBirdGroupChannelFilterStatic}
-     */
-    SendBirdGroupChannelFilterStatic,
-
-    /**
-     * The SendBirdGroupChannelFilterStaticHiddenChannelFilter model constructor.
-     * @property {module:model/SendBirdGroupChannelFilterStaticHiddenChannelFilter}
-     */
-    SendBirdGroupChannelFilterStaticHiddenChannelFilter,
-
-    /**
-     * The SendBirdGroupChannelFilterStaticMemberStateFilter model constructor.
-     * @property {module:model/SendBirdGroupChannelFilterStaticMemberStateFilter}
-     */
-    SendBirdGroupChannelFilterStaticMemberStateFilter,
-
-    /**
-     * The SendBirdGroupChannelFilterStaticPublicChannelFilter model constructor.
-     * @property {module:model/SendBirdGroupChannelFilterStaticPublicChannelFilter}
-     */
-    SendBirdGroupChannelFilterStaticPublicChannelFilter,
-
-    /**
-     * The SendBirdGroupChannelFilterStaticQueryType model constructor.
-     * @property {module:model/SendBirdGroupChannelFilterStaticQueryType}
-     */
-    SendBirdGroupChannelFilterStaticQueryType,
-
-    /**
-     * The SendBirdGroupChannelFilterStaticSearchField model constructor.
-     * @property {module:model/SendBirdGroupChannelFilterStaticSearchField}
-     */
-    SendBirdGroupChannelFilterStaticSearchField,
-
-    /**
-     * The SendBirdGroupChannelFilterStaticSuperChannelFilter model constructor.
-     * @property {module:model/SendBirdGroupChannelFilterStaticSuperChannelFilter}
-     */
-    SendBirdGroupChannelFilterStaticSuperChannelFilter,
-
-    /**
-     * The SendBirdGroupChannelFilterStaticUnreadChannelFilter model constructor.
-     * @property {module:model/SendBirdGroupChannelFilterStaticUnreadChannelFilter}
-     */
-    SendBirdGroupChannelFilterStaticUnreadChannelFilter,
-
-    /**
-     * The SendBirdGroupChannelFilterUserIdsFilter model constructor.
-     * @property {module:model/SendBirdGroupChannelFilterUserIdsFilter}
-     */
-    SendBirdGroupChannelFilterUserIdsFilter,
-
-    /**
-     * The SendBirdGroupChannelListQuery model constructor.
-     * @property {module:model/SendBirdGroupChannelListQuery}
-     */
-    SendBirdGroupChannelListQuery,
-
-    /**
-     * The SendBirdGroupChannelMemberListQuery model constructor.
-     * @property {module:model/SendBirdGroupChannelMemberListQuery}
-     */
-    SendBirdGroupChannelMemberListQuery,
-
-    /**
-     * The SendBirdGroupChannelOrder model constructor.
-     * @property {module:model/SendBirdGroupChannelOrder}
-     */
-    SendBirdGroupChannelOrder,
-
-    /**
-     * The SendBirdGroupChannelParams model constructor.
-     * @property {module:model/SendBirdGroupChannelParams}
-     */
-    SendBirdGroupChannelParams,
-
-    /**
-     * The SendBirdGroupChannelTotalUnreadMessageCountParams model constructor.
-     * @property {module:model/SendBirdGroupChannelTotalUnreadMessageCountParams}
-     */
-    SendBirdGroupChannelTotalUnreadMessageCountParams,
-
-    /**
-     * The SendBirdHiddenChannelFilter model constructor.
-     * @property {module:model/SendBirdHiddenChannelFilter}
-     */
-    SendBirdHiddenChannelFilter,
-
-    /**
-     * The SendBirdLogLevel model constructor.
-     * @property {module:model/SendBirdLogLevel}
-     */
-    SendBirdLogLevel,
 
     /**
      * The SendBirdMember model constructor.
@@ -1670,118 +1356,16 @@ export {
     SendBirdMember,
 
     /**
-     * The SendBirdMemberStateFilter model constructor.
-     * @property {module:model/SendBirdMemberStateFilter}
-     */
-    SendBirdMemberStateFilter,
-
-    /**
-     * The SendBirdMessageChangeLogs model constructor.
-     * @property {module:model/SendBirdMessageChangeLogs}
-     */
-    SendBirdMessageChangeLogs,
-
-    /**
-     * The SendBirdMessageChangeLogsParams model constructor.
-     * @property {module:model/SendBirdMessageChangeLogsParams}
-     */
-    SendBirdMessageChangeLogsParams,
-
-    /**
-     * The SendBirdMessageCollection model constructor.
-     * @property {module:model/SendBirdMessageCollection}
-     */
-    SendBirdMessageCollection,
-
-    /**
-     * The SendBirdMessageCollectionHandler model constructor.
-     * @property {module:model/SendBirdMessageCollectionHandler}
-     */
-    SendBirdMessageCollectionHandler,
-
-    /**
-     * The SendBirdMessageCollectionInitPolicy model constructor.
-     * @property {module:model/SendBirdMessageCollectionInitPolicy}
-     */
-    SendBirdMessageCollectionInitPolicy,
-
-    /**
-     * The SendBirdMessageCollectionStatic model constructor.
-     * @property {module:model/SendBirdMessageCollectionStatic}
-     */
-    SendBirdMessageCollectionStatic,
-
-    /**
-     * The SendBirdMessageCollectionStaticMessageCollectionInitPolicy model constructor.
-     * @property {module:model/SendBirdMessageCollectionStaticMessageCollectionInitPolicy}
-     */
-    SendBirdMessageCollectionStaticMessageCollectionInitPolicy,
-
-    /**
-     * The SendBirdMessageContext model constructor.
-     * @property {module:model/SendBirdMessageContext}
-     */
-    SendBirdMessageContext,
-
-    /**
-     * The SendBirdMessageFilter model constructor.
-     * @property {module:model/SendBirdMessageFilter}
-     */
-    SendBirdMessageFilter,
-
-    /**
-     * The SendBirdMessageListParams model constructor.
-     * @property {module:model/SendBirdMessageListParams}
-     */
-    SendBirdMessageListParams,
-
-    /**
      * The SendBirdMessageMetaArray model constructor.
      * @property {module:model/SendBirdMessageMetaArray}
      */
     SendBirdMessageMetaArray,
 
     /**
-     * The SendBirdMessageRetrievalParams model constructor.
-     * @property {module:model/SendBirdMessageRetrievalParams}
+     * The SendBirdMessageResponse model constructor.
+     * @property {module:model/SendBirdMessageResponse}
      */
-    SendBirdMessageRetrievalParams,
-
-    /**
-     * The SendBirdMessageSearchQuery model constructor.
-     * @property {module:model/SendBirdMessageSearchQuery}
-     */
-    SendBirdMessageSearchQuery,
-
-    /**
-     * The SendBirdMessageSearchQueryOptions model constructor.
-     * @property {module:model/SendBirdMessageSearchQueryOptions}
-     */
-    SendBirdMessageSearchQueryOptions,
-
-    /**
-     * The SendBirdMessageSendingStatus model constructor.
-     * @property {module:model/SendBirdMessageSendingStatus}
-     */
-    SendBirdMessageSendingStatus,
-
-    /**
-     * The SendBirdMessageTypeFilter model constructor.
-     * @property {module:model/SendBirdMessageTypeFilter}
-     */
-    SendBirdMessageTypeFilter,
-
-    /**
-     * The SendBirdMutedInfo model constructor.
-     * @property {module:model/SendBirdMutedInfo}
-     */
-    SendBirdMutedInfo,
-
-    /**
-     * The SendBirdMutedUserListQuery model constructor.
-     * @property {module:model/SendBirdMutedUserListQuery}
-     */
-    SendBirdMutedUserListQuery,
+    SendBirdMessageResponse,
 
     /**
      * The SendBirdOGImage model constructor.
@@ -1802,36 +1386,6 @@ export {
     SendBirdOpenChannel,
 
     /**
-     * The SendBirdOpenChannelListQuery model constructor.
-     * @property {module:model/SendBirdOpenChannelListQuery}
-     */
-    SendBirdOpenChannelListQuery,
-
-    /**
-     * The SendBirdOpenChannelParams model constructor.
-     * @property {module:model/SendBirdOpenChannelParams}
-     */
-    SendBirdOpenChannelParams,
-
-    /**
-     * The SendBirdOperatorListQuery model constructor.
-     * @property {module:model/SendBirdOperatorListQuery}
-     */
-    SendBirdOperatorListQuery,
-
-    /**
-     * The SendBirdOptions model constructor.
-     * @property {module:model/SendBirdOptions}
-     */
-    SendBirdOptions,
-
-    /**
-     * The SendBirdParticipantListQuery model constructor.
-     * @property {module:model/SendBirdParticipantListQuery}
-     */
-    SendBirdParticipantListQuery,
-
-    /**
      * The SendBirdPlugin model constructor.
      * @property {module:model/SendBirdPlugin}
      */
@@ -1850,52 +1404,10 @@ export {
     SendBirdPollDetails,
 
     /**
-     * The SendBirdPollListQuery model constructor.
-     * @property {module:model/SendBirdPollListQuery}
-     */
-    SendBirdPollListQuery,
-
-    /**
      * The SendBirdPollOption model constructor.
      * @property {module:model/SendBirdPollOption}
      */
     SendBirdPollOption,
-
-    /**
-     * The SendBirdPollParams model constructor.
-     * @property {module:model/SendBirdPollParams}
-     */
-    SendBirdPollParams,
-
-    /**
-     * The SendBirdPollRetrievalParams model constructor.
-     * @property {module:model/SendBirdPollRetrievalParams}
-     */
-    SendBirdPollRetrievalParams,
-
-    /**
-     * The SendBirdPollStatic model constructor.
-     * @property {module:model/SendBirdPollStatic}
-     */
-    SendBirdPollStatic,
-
-    /**
-     * The SendBirdPollStaticStatus model constructor.
-     * @property {module:model/SendBirdPollStaticStatus}
-     */
-    SendBirdPollStaticStatus,
-
-    /**
-     * The SendBirdPollStatus model constructor.
-     * @property {module:model/SendBirdPollStatus}
-     */
-    SendBirdPollStatus,
-
-    /**
-     * The SendBirdPollUpdateEvent model constructor.
-     * @property {module:model/SendBirdPollUpdateEvent}
-     */
-    SendBirdPollUpdateEvent,
 
     /**
      * The SendBirdPollUpdatedVoteCount model constructor.
@@ -1904,82 +1416,10 @@ export {
     SendBirdPollUpdatedVoteCount,
 
     /**
-     * The SendBirdPollVoteEvent model constructor.
-     * @property {module:model/SendBirdPollVoteEvent}
-     */
-    SendBirdPollVoteEvent,
-
-    /**
-     * The SendBirdPollVoterListQuery model constructor.
-     * @property {module:model/SendBirdPollVoterListQuery}
-     */
-    SendBirdPollVoterListQuery,
-
-    /**
-     * The SendBirdPreviousMessageListQuery model constructor.
-     * @property {module:model/SendBirdPreviousMessageListQuery}
-     */
-    SendBirdPreviousMessageListQuery,
-
-    /**
-     * The SendBirdPublicChannelFilter model constructor.
-     * @property {module:model/SendBirdPublicChannelFilter}
-     */
-    SendBirdPublicChannelFilter,
-
-    /**
-     * The SendBirdPublicGroupChannelListQuery model constructor.
-     * @property {module:model/SendBirdPublicGroupChannelListQuery}
-     */
-    SendBirdPublicGroupChannelListQuery,
-
-    /**
-     * The SendBirdPushTokens model constructor.
-     * @property {module:model/SendBirdPushTokens}
-     */
-    SendBirdPushTokens,
-
-    /**
-     * The SendBirdQueryType model constructor.
-     * @property {module:model/SendBirdQueryType}
-     */
-    SendBirdQueryType,
-
-    /**
      * The SendBirdReaction model constructor.
      * @property {module:model/SendBirdReaction}
      */
     SendBirdReaction,
-
-    /**
-     * The SendBirdReactionEvent model constructor.
-     * @property {module:model/SendBirdReactionEvent}
-     */
-    SendBirdReactionEvent,
-
-    /**
-     * The SendBirdReplyType model constructor.
-     * @property {module:model/SendBirdReplyType}
-     */
-    SendBirdReplyType,
-
-    /**
-     * The SendBirdRestrictedUser model constructor.
-     * @property {module:model/SendBirdRestrictedUser}
-     */
-    SendBirdRestrictedUser,
-
-    /**
-     * The SendBirdRestrictedUserStatic model constructor.
-     * @property {module:model/SendBirdRestrictedUserStatic}
-     */
-    SendBirdRestrictedUserStatic,
-
-    /**
-     * The SendBirdRestrictedUserStaticRestrictionType model constructor.
-     * @property {module:model/SendBirdRestrictedUserStaticRestrictionType}
-     */
-    SendBirdRestrictedUserStaticRestrictionType,
 
     /**
      * The SendBirdRestrictionInfo model constructor.
@@ -1988,118 +1428,16 @@ export {
     SendBirdRestrictionInfo,
 
     /**
-     * The SendBirdRestrictionType model constructor.
-     * @property {module:model/SendBirdRestrictionType}
-     */
-    SendBirdRestrictionType,
-
-    /**
-     * The SendBirdScheduledUserMessage model constructor.
-     * @property {module:model/SendBirdScheduledUserMessage}
-     */
-    SendBirdScheduledUserMessage,
-
-    /**
-     * The SendBirdScheduledUserMessageParams model constructor.
-     * @property {module:model/SendBirdScheduledUserMessageParams}
-     */
-    SendBirdScheduledUserMessageParams,
-
-    /**
-     * The SendBirdSearchField model constructor.
-     * @property {module:model/SendBirdSearchField}
-     */
-    SendBirdSearchField,
-
-    /**
-     * The SendBirdSearchFilterParams model constructor.
-     * @property {module:model/SendBirdSearchFilterParams}
-     */
-    SendBirdSearchFilterParams,
-
-    /**
-     * The SendBirdSendBirdError model constructor.
-     * @property {module:model/SendBirdSendBirdError}
-     */
-    SendBirdSendBirdError,
-
-    /**
-     * The SendBirdSendBirdInstance model constructor.
-     * @property {module:model/SendBirdSendBirdInstance}
-     */
-    SendBirdSendBirdInstance,
-
-    /**
-     * The SendBirdSendBirdInstanceBaseChannel model constructor.
-     * @property {module:model/SendBirdSendBirdInstanceBaseChannel}
-     */
-    SendBirdSendBirdInstanceBaseChannel,
-
-    /**
-     * The SendBirdSendBirdInstanceBaseChannelMessageTypeFilter model constructor.
-     * @property {module:model/SendBirdSendBirdInstanceBaseChannelMessageTypeFilter}
-     */
-    SendBirdSendBirdInstanceBaseChannelMessageTypeFilter,
-
-    /**
-     * The SendBirdSendBirdInstanceBaseMessage model constructor.
-     * @property {module:model/SendBirdSendBirdInstanceBaseMessage}
-     */
-    SendBirdSendBirdInstanceBaseMessage,
-
-    /**
-     * The SendBirdSendBirdInstanceBaseMessageReplyType model constructor.
-     * @property {module:model/SendBirdSendBirdInstanceBaseMessageReplyType}
-     */
-    SendBirdSendBirdInstanceBaseMessageReplyType,
-
-    /**
      * The SendBirdSender model constructor.
      * @property {module:model/SendBirdSender}
      */
     SendBirdSender,
 
     /**
-     * The SendBirdStatic model constructor.
-     * @property {module:model/SendBirdStatic}
-     */
-    SendBirdStatic,
-
-    /**
-     * The SendBirdStaticLogLevel model constructor.
-     * @property {module:model/SendBirdStaticLogLevel}
-     */
-    SendBirdStaticLogLevel,
-
-    /**
-     * The SendBirdSuperChannelFilter model constructor.
-     * @property {module:model/SendBirdSuperChannelFilter}
-     */
-    SendBirdSuperChannelFilter,
-
-    /**
      * The SendBirdThreadInfo model constructor.
      * @property {module:model/SendBirdThreadInfo}
      */
     SendBirdThreadInfo,
-
-    /**
-     * The SendBirdThreadInfoUpdateEvent model constructor.
-     * @property {module:model/SendBirdThreadInfoUpdateEvent}
-     */
-    SendBirdThreadInfoUpdateEvent,
-
-    /**
-     * The SendBirdThreadedMessageListInfo model constructor.
-     * @property {module:model/SendBirdThreadedMessageListInfo}
-     */
-    SendBirdThreadedMessageListInfo,
-
-    /**
-     * The SendBirdThreadedMessageListParams model constructor.
-     * @property {module:model/SendBirdThreadedMessageListParams}
-     */
-    SendBirdThreadedMessageListParams,
 
     /**
      * The SendBirdThumbnailObject model constructor.
@@ -2114,34 +1452,10 @@ export {
     SendBirdThumbnailSize,
 
     /**
-     * The SendBirdUnreadChannelFilter model constructor.
-     * @property {module:model/SendBirdUnreadChannelFilter}
-     */
-    SendBirdUnreadChannelFilter,
-
-    /**
      * The SendBirdUser model constructor.
      * @property {module:model/SendBirdUser}
      */
     SendBirdUser,
-
-    /**
-     * The SendBirdUserIdsFilterParams model constructor.
-     * @property {module:model/SendBirdUserIdsFilterParams}
-     */
-    SendBirdUserIdsFilterParams,
-
-    /**
-     * The SendBirdUserListQuery model constructor.
-     * @property {module:model/SendBirdUserListQuery}
-     */
-    SendBirdUserListQuery,
-
-    /**
-     * The SendBirdUserMessage model constructor.
-     * @property {module:model/SendBirdUserMessage}
-     */
-    SendBirdUserMessage,
 
     /**
      * The SendBirdUserMessageParams model constructor.

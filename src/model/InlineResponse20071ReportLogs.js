@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import AnyOfSendBirdOpenChannelSendBirdGroupChannel from './AnyOfSendBirdOpenChannelSendBirdGroupChannel';
-import AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage from './AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage';
+import SendBirdChannelResponse from './SendBirdChannelResponse';
+import SendBirdMessageResponse from './SendBirdMessageResponse';
 import SendBirdUser from './SendBirdUser';
 
 /**
@@ -60,10 +60,10 @@ class InlineResponse20071ReportLogs {
                 obj['offending_user'] = SendBirdUser.constructFromObject(data['offending_user']);
             }
             if (data.hasOwnProperty('reported_message')) {
-                obj['reported_message'] = ApiClient.convertToType(data['reported_message'], AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage);
+                obj['reported_message'] = SendBirdMessageResponse.constructFromObject(data['reported_message']);
             }
             if (data.hasOwnProperty('channel')) {
-                obj['channel'] = ApiClient.convertToType(data['channel'], AnyOfSendBirdOpenChannelSendBirdGroupChannel);
+                obj['channel'] = SendBirdChannelResponse.constructFromObject(data['channel']);
             }
             if (data.hasOwnProperty('report_description')) {
                 obj['report_description'] = ApiClient.convertToType(data['report_description'], 'String');
@@ -94,12 +94,12 @@ InlineResponse20071ReportLogs.prototype['report_category'] = undefined;
 InlineResponse20071ReportLogs.prototype['offending_user'] = undefined;
 
 /**
- * @member {module:model/AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage} reported_message
+ * @member {module:model/SendBirdMessageResponse} reported_message
  */
 InlineResponse20071ReportLogs.prototype['reported_message'] = undefined;
 
 /**
- * @member {module:model/AnyOfSendBirdOpenChannelSendBirdGroupChannel} channel
+ * @member {module:model/SendBirdChannelResponse} channel
  */
 InlineResponse20071ReportLogs.prototype['channel'] = undefined;
 

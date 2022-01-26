@@ -320,7 +320,7 @@ No authorization required
 
 ## sendBotsMessage
 
-> AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage sendBotsMessage(botUserid, opts)
+> SendBirdMessageResponse sendBotsMessage(botUserid, opts)
 
 Send a bot&#39;s message
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage**](AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage.md)
+[**SendBirdMessageResponse**](SendBirdMessageResponse.md)
 
 ### Authorization
 

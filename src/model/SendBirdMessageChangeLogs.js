@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage from './AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage';
+import SendBirdMessageResponse from './SendBirdMessageResponse';
 
 /**
  * The SendBirdMessageChangeLogs model module.
@@ -58,7 +58,7 @@ class SendBirdMessageChangeLogs {
                 obj['token'] = ApiClient.convertToType(data['token'], 'String');
             }
             if (data.hasOwnProperty('updatedMessages')) {
-                obj['updatedMessages'] = ApiClient.convertToType(data['updatedMessages'], [AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage]);
+                obj['updatedMessages'] = ApiClient.convertToType(data['updatedMessages'], [SendBirdMessageResponse]);
             }
         }
         return obj;
@@ -83,7 +83,7 @@ SendBirdMessageChangeLogs.prototype['hasMore'] = undefined;
 SendBirdMessageChangeLogs.prototype['token'] = undefined;
 
 /**
- * @member {Array.<module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage>} updatedMessages
+ * @member {Array.<module:model/SendBirdMessageResponse>} updatedMessages
  */
 SendBirdMessageChangeLogs.prototype['updatedMessages'] = undefined;
 

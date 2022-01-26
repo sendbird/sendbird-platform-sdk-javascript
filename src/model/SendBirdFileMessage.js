@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage from './AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage';
 import ModelObject from './ModelObject';
+import SendBirdAdminMessage from './SendBirdAdminMessage';
 import SendBirdAppleCriticalAlertOptions from './SendBirdAppleCriticalAlertOptions';
 import SendBirdFileMessageParams from './SendBirdFileMessageParams';
 import SendBirdMessageMetaArray from './SendBirdMessageMetaArray';
@@ -113,7 +113,7 @@ class SendBirdFileMessage {
                 obj['ogMetaData'] = SendBirdOGMetaData.constructFromObject(data['ogMetaData']);
             }
             if (data.hasOwnProperty('parentMessage')) {
-                obj['parentMessage'] = ApiClient.convertToType(data['parentMessage'], AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage);
+                obj['parentMessage'] = SendBirdAdminMessage.constructFromObject(data['parentMessage']);
             }
             if (data.hasOwnProperty('parentMessageId')) {
                 obj['parentMessageId'] = ApiClient.convertToType(data['parentMessageId'], 'Number');
@@ -261,7 +261,7 @@ SendBirdFileMessage.prototype['name'] = undefined;
 SendBirdFileMessage.prototype['ogMetaData'] = undefined;
 
 /**
- * @member {module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage} parentMessage
+ * @member {module:model/SendBirdAdminMessage} parentMessage
  */
 SendBirdFileMessage.prototype['parentMessage'] = undefined;
 

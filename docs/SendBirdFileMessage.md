@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **metaArrays** | [**[SendBirdMessageMetaArray]**](SendBirdMessageMetaArray.md) |  | [optional] 
 **name** | **String** |  | [optional] 
 **ogMetaData** | [**SendBirdOGMetaData**](SendBirdOGMetaData.md) |  | [optional] 
-**parentMessage** | [**AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage**](AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage.md) |  | [optional] 
+**parentMessage** | [**SendBirdAdminMessage**](SendBirdAdminMessage.md) |  | [optional] 
 **parentMessageId** | **Number** |  | [optional] 
 **parentMessageText** | **String** |  | [optional] 
 **plainUrl** | **String** |  | [optional] 

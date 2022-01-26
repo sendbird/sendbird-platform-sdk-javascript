@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **reportCategory** | **String** |  | [optional] 
 **reportingUser** | [**SendBirdUser**](SendBirdUser.md) |  | [optional] 
 **offendingUser** | [**SendBirdUser**](SendBirdUser.md) |  | [optional] 
-**reportedMessage** | [**AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage**](AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage.md) |  | [optional] 
-**channel** | [**AnyOfSendBirdOpenChannelSendBirdGroupChannel**](AnyOfSendBirdOpenChannelSendBirdGroupChannel.md) |  | [optional] 
+**reportedMessage** | [**SendBirdMessageResponse**](SendBirdMessageResponse.md) |  | [optional] 
+**channel** | [**SendBirdChannelResponse**](SendBirdChannelResponse.md) |  | [optional] 
 **reportDescription** | **String** |  | [optional] 
 **createdAt** | **Number** |  | [optional] 
 

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import AnyOfSendBirdGroupChannelSendBirdOpenChannel from './AnyOfSendBirdGroupChannelSendBirdOpenChannel';
+import SendBirdChannelResponse from './SendBirdChannelResponse';
 
 /**
  * The InlineResponse20023BannedChannels model module.
@@ -58,7 +58,7 @@ class InlineResponse20023BannedChannels {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('channel')) {
-                obj['channel'] = ApiClient.convertToType(data['channel'], AnyOfSendBirdGroupChannelSendBirdOpenChannel);
+                obj['channel'] = SendBirdChannelResponse.constructFromObject(data['channel']);
             }
         }
         return obj;
@@ -83,7 +83,7 @@ InlineResponse20023BannedChannels.prototype['end_at'] = undefined;
 InlineResponse20023BannedChannels.prototype['description'] = undefined;
 
 /**
- * @member {module:model/AnyOfSendBirdGroupChannelSendBirdOpenChannel} channel
+ * @member {module:model/SendBirdChannelResponse} channel
  */
 InlineResponse20023BannedChannels.prototype['channel'] = undefined;
 

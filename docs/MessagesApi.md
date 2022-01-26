@@ -595,7 +595,7 @@ No authorization required
 
 ## sendMessage
 
-> AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage sendMessage(channelType, channelUrl, opts)
+> SendBirdMessageResponse sendMessage(channelType, channelUrl, opts)
 
 Send a message
 
@@ -634,7 +634,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage**](AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage.md)
+[**SendBirdMessageResponse**](SendBirdMessageResponse.md)
 
 ### Authorization
 
@@ -648,7 +648,7 @@ No authorization required
 
 ## translateMessageIntoOtherLanguages
 
-> AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts)
+> SendBirdMessageResponse translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts)
 
 Translate a message into other languages
 
@@ -689,7 +689,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage**](AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage.md)
+[**SendBirdMessageResponse**](SendBirdMessageResponse.md)
 
 ### Authorization
 
@@ -758,7 +758,7 @@ No authorization required
 
 ## updateMessageById
 
-> AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage updateMessageById(channelType, channelUrl, messageId, opts)
+> SendBirdMessageResponse updateMessageById(channelType, channelUrl, messageId, opts)
 
 Update a message
 
@@ -799,7 +799,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage**](AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage.md)
+[**SendBirdMessageResponse**](SendBirdMessageResponse.md)
 
 ### Authorization
 
@@ -813,7 +813,7 @@ No authorization required
 
 ## viewMessageById
 
-> AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage viewMessageById(channelType, channelUrl, messageId, opts)
+> SendBirdMessageResponse viewMessageById(channelType, channelUrl, messageId, opts)
 
 View a message
 
@@ -856,7 +856,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage**](AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage.md)
+[**SendBirdMessageResponse**](SendBirdMessageResponse.md)
 
 ### Authorization
 

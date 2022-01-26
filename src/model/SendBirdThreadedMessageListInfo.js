@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage from './AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage';
+import SendBirdMessageResponse from './SendBirdMessageResponse';
 
 /**
  * The SendBirdThreadedMessageListInfo model module.
@@ -49,10 +49,10 @@ class SendBirdThreadedMessageListInfo {
             obj = obj || new SendBirdThreadedMessageListInfo();
 
             if (data.hasOwnProperty('parentMessage')) {
-                obj['parentMessage'] = ApiClient.convertToType(data['parentMessage'], AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage);
+                obj['parentMessage'] = SendBirdMessageResponse.constructFromObject(data['parentMessage']);
             }
             if (data.hasOwnProperty('threadedReplies')) {
-                obj['threadedReplies'] = ApiClient.convertToType(data['threadedReplies'], [AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage]);
+                obj['threadedReplies'] = ApiClient.convertToType(data['threadedReplies'], [SendBirdMessageResponse]);
             }
         }
         return obj;
@@ -62,12 +62,12 @@ class SendBirdThreadedMessageListInfo {
 }
 
 /**
- * @member {module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage} parentMessage
+ * @member {module:model/SendBirdMessageResponse} parentMessage
  */
 SendBirdThreadedMessageListInfo.prototype['parentMessage'] = undefined;
 
 /**
- * @member {Array.<module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage>} threadedReplies
+ * @member {Array.<module:model/SendBirdMessageResponse>} threadedReplies
  */
 SendBirdThreadedMessageListInfo.prototype['threadedReplies'] = undefined;
 

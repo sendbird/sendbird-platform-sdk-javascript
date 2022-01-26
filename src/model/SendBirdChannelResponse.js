@@ -12,23 +12,27 @@
  */
 
 import ApiClient from '../ApiClient';
+import SendBirdGroupChannel from './SendBirdGroupChannel';
 import SendBirdMember from './SendBirdMember';
 import SendBirdMessageResponse from './SendBirdMessageResponse';
+import SendBirdOpenChannel from './SendBirdOpenChannel';
 import SendBirdUser from './SendBirdUser';
 
 /**
- * The SendBirdGroupChannel model module.
- * @module model/SendBirdGroupChannel
+ * The SendBirdChannelResponse model module.
+ * @module model/SendBirdChannelResponse
  * @version 1.0.0
  */
-class SendBirdGroupChannel {
+class SendBirdChannelResponse {
     /**
-     * Constructs a new <code>SendBirdGroupChannel</code>.
-     * @alias module:model/SendBirdGroupChannel
+     * Constructs a new <code>SendBirdChannelResponse</code>.
+     * @alias module:model/SendBirdChannelResponse
+     * @implements module:model/SendBirdGroupChannel
+     * @implements module:model/SendBirdOpenChannel
      */
     constructor() { 
-        
-        SendBirdGroupChannel.initialize(this);
+        SendBirdGroupChannel.initialize(this);SendBirdOpenChannel.initialize(this);
+        SendBirdChannelResponse.initialize(this);
     }
 
     /**
@@ -40,15 +44,17 @@ class SendBirdGroupChannel {
     }
 
     /**
-     * Constructs a <code>SendBirdGroupChannel</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>SendBirdChannelResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/SendBirdGroupChannel} obj Optional instance to populate.
-     * @return {module:model/SendBirdGroupChannel} The populated <code>SendBirdGroupChannel</code> instance.
+     * @param {module:model/SendBirdChannelResponse} obj Optional instance to populate.
+     * @return {module:model/SendBirdChannelResponse} The populated <code>SendBirdChannelResponse</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new SendBirdGroupChannel();
+            obj = obj || new SendBirdChannelResponse();
+            SendBirdGroupChannel.constructFromObject(data, obj);
+            SendBirdOpenChannel.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('coverUrl')) {
                 obj['coverUrl'] = ApiClient.convertToType(data['coverUrl'], 'String');
@@ -155,6 +161,12 @@ class SendBirdGroupChannel {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
+            if (data.hasOwnProperty('operators')) {
+                obj['operators'] = ApiClient.convertToType(data['operators'], [SendBirdUser]);
+            }
+            if (data.hasOwnProperty('participantCount')) {
+                obj['participantCount'] = ApiClient.convertToType(data['participantCount'], 'Number');
+            }
         }
         return obj;
     }
@@ -165,179 +177,375 @@ class SendBirdGroupChannel {
 /**
  * @member {String} coverUrl
  */
-SendBirdGroupChannel.prototype['coverUrl'] = undefined;
+SendBirdChannelResponse.prototype['coverUrl'] = undefined;
 
 /**
  * @member {Number} createdAt
  */
-SendBirdGroupChannel.prototype['createdAt'] = undefined;
+SendBirdChannelResponse.prototype['createdAt'] = undefined;
 
 /**
  * @member {module:model/SendBirdUser} creator
  */
-SendBirdGroupChannel.prototype['creator'] = undefined;
+SendBirdChannelResponse.prototype['creator'] = undefined;
 
 /**
  * @member {String} customType
  */
-SendBirdGroupChannel.prototype['customType'] = undefined;
+SendBirdChannelResponse.prototype['customType'] = undefined;
 
 /**
  * @member {String} data
  */
-SendBirdGroupChannel.prototype['data'] = undefined;
+SendBirdChannelResponse.prototype['data'] = undefined;
 
 /**
- * @member {module:model/SendBirdGroupChannel.HiddenStateEnum} hiddenState
+ * @member {module:model/SendBirdChannelResponse.HiddenStateEnum} hiddenState
  */
-SendBirdGroupChannel.prototype['hiddenState'] = undefined;
+SendBirdChannelResponse.prototype['hiddenState'] = undefined;
 
 /**
  * @member {Number} invitedAt
  */
-SendBirdGroupChannel.prototype['invitedAt'] = undefined;
+SendBirdChannelResponse.prototype['invitedAt'] = undefined;
 
 /**
  * @member {module:model/SendBirdUser} inviter
  */
-SendBirdGroupChannel.prototype['inviter'] = undefined;
+SendBirdChannelResponse.prototype['inviter'] = undefined;
 
 /**
  * @member {Boolean} isAccessCodeRequired
  */
-SendBirdGroupChannel.prototype['isAccessCodeRequired'] = undefined;
+SendBirdChannelResponse.prototype['isAccessCodeRequired'] = undefined;
 
 /**
  * @member {Boolean} isBroadcast
  */
-SendBirdGroupChannel.prototype['isBroadcast'] = undefined;
+SendBirdChannelResponse.prototype['isBroadcast'] = undefined;
 
 /**
  * @member {Boolean} isDiscoverable
  */
-SendBirdGroupChannel.prototype['isDiscoverable'] = undefined;
+SendBirdChannelResponse.prototype['isDiscoverable'] = undefined;
 
 /**
  * @member {Boolean} isDistinct
  */
-SendBirdGroupChannel.prototype['isDistinct'] = undefined;
+SendBirdChannelResponse.prototype['isDistinct'] = undefined;
 
 /**
  * @member {Boolean} isEphemeral
  */
-SendBirdGroupChannel.prototype['isEphemeral'] = undefined;
+SendBirdChannelResponse.prototype['isEphemeral'] = undefined;
 
 /**
  * @member {Boolean} isFrozen
  */
-SendBirdGroupChannel.prototype['isFrozen'] = undefined;
+SendBirdChannelResponse.prototype['isFrozen'] = undefined;
 
 /**
  * @member {Boolean} isHidden
  */
-SendBirdGroupChannel.prototype['isHidden'] = undefined;
+SendBirdChannelResponse.prototype['isHidden'] = undefined;
 
 /**
  * @member {Boolean} isPublic
  */
-SendBirdGroupChannel.prototype['isPublic'] = undefined;
+SendBirdChannelResponse.prototype['isPublic'] = undefined;
 
 /**
  * @member {Boolean} isPushEnabled
  */
-SendBirdGroupChannel.prototype['isPushEnabled'] = undefined;
+SendBirdChannelResponse.prototype['isPushEnabled'] = undefined;
 
 /**
  * @member {Boolean} isSuper
  */
-SendBirdGroupChannel.prototype['isSuper'] = undefined;
+SendBirdChannelResponse.prototype['isSuper'] = undefined;
 
 /**
  * @member {Number} joinedAt
  */
-SendBirdGroupChannel.prototype['joinedAt'] = undefined;
+SendBirdChannelResponse.prototype['joinedAt'] = undefined;
 
 /**
  * @member {Number} joinedMemberCount
  */
-SendBirdGroupChannel.prototype['joinedMemberCount'] = undefined;
+SendBirdChannelResponse.prototype['joinedMemberCount'] = undefined;
 
 /**
  * @member {module:model/SendBirdMessageResponse} lastMessage
  */
-SendBirdGroupChannel.prototype['lastMessage'] = undefined;
+SendBirdChannelResponse.prototype['lastMessage'] = undefined;
 
 /**
  * @member {Number} memberCount
  */
-SendBirdGroupChannel.prototype['memberCount'] = undefined;
+SendBirdChannelResponse.prototype['memberCount'] = undefined;
 
 /**
  * @member {Array.<module:model/SendBirdMember>} members
  */
-SendBirdGroupChannel.prototype['members'] = undefined;
+SendBirdChannelResponse.prototype['members'] = undefined;
 
 /**
  * @member {Number} messageOffsetTimestamp
  */
-SendBirdGroupChannel.prototype['messageOffsetTimestamp'] = undefined;
+SendBirdChannelResponse.prototype['messageOffsetTimestamp'] = undefined;
 
 /**
  * @member {Number} messageSurvivalSeconds
  */
-SendBirdGroupChannel.prototype['messageSurvivalSeconds'] = undefined;
+SendBirdChannelResponse.prototype['messageSurvivalSeconds'] = undefined;
 
 /**
  * @member {String} myCountPreference
  */
-SendBirdGroupChannel.prototype['myCountPreference'] = undefined;
+SendBirdChannelResponse.prototype['myCountPreference'] = undefined;
 
 /**
  * @member {Number} myLastRead
  */
-SendBirdGroupChannel.prototype['myLastRead'] = undefined;
+SendBirdChannelResponse.prototype['myLastRead'] = undefined;
 
 /**
- * @member {module:model/SendBirdGroupChannel.MyMemberStateEnum} myMemberState
+ * @member {module:model/SendBirdChannelResponse.MyMemberStateEnum} myMemberState
  */
-SendBirdGroupChannel.prototype['myMemberState'] = undefined;
+SendBirdChannelResponse.prototype['myMemberState'] = undefined;
 
 /**
- * @member {module:model/SendBirdGroupChannel.MyMutedStateEnum} myMutedState
+ * @member {module:model/SendBirdChannelResponse.MyMutedStateEnum} myMutedState
  */
-SendBirdGroupChannel.prototype['myMutedState'] = undefined;
+SendBirdChannelResponse.prototype['myMutedState'] = undefined;
 
 /**
- * @member {module:model/SendBirdGroupChannel.MyPushTriggerOptionEnum} myPushTriggerOption
+ * @member {module:model/SendBirdChannelResponse.MyPushTriggerOptionEnum} myPushTriggerOption
  */
-SendBirdGroupChannel.prototype['myPushTriggerOption'] = undefined;
+SendBirdChannelResponse.prototype['myPushTriggerOption'] = undefined;
 
 /**
- * @member {module:model/SendBirdGroupChannel.MyRoleEnum} myRole
+ * @member {module:model/SendBirdChannelResponse.MyRoleEnum} myRole
  */
-SendBirdGroupChannel.prototype['myRole'] = undefined;
+SendBirdChannelResponse.prototype['myRole'] = undefined;
 
 /**
  * @member {String} name
  */
-SendBirdGroupChannel.prototype['name'] = undefined;
+SendBirdChannelResponse.prototype['name'] = undefined;
 
 /**
  * @member {Number} unreadMentionCount
  */
-SendBirdGroupChannel.prototype['unreadMentionCount'] = undefined;
+SendBirdChannelResponse.prototype['unreadMentionCount'] = undefined;
 
 /**
  * @member {Number} unreadMessageCount
  */
-SendBirdGroupChannel.prototype['unreadMessageCount'] = undefined;
+SendBirdChannelResponse.prototype['unreadMessageCount'] = undefined;
 
 /**
  * @member {String} url
  */
+SendBirdChannelResponse.prototype['url'] = undefined;
+
+/**
+ * @member {Array.<module:model/SendBirdUser>} operators
+ */
+SendBirdChannelResponse.prototype['operators'] = undefined;
+
+/**
+ * @member {Number} participantCount
+ */
+SendBirdChannelResponse.prototype['participantCount'] = undefined;
+
+
+// Implement SendBirdGroupChannel interface:
+/**
+ * @member {String} coverUrl
+ */
+SendBirdGroupChannel.prototype['coverUrl'] = undefined;
+/**
+ * @member {Number} createdAt
+ */
+SendBirdGroupChannel.prototype['createdAt'] = undefined;
+/**
+ * @member {module:model/SendBirdUser} creator
+ */
+SendBirdGroupChannel.prototype['creator'] = undefined;
+/**
+ * @member {String} customType
+ */
+SendBirdGroupChannel.prototype['customType'] = undefined;
+/**
+ * @member {String} data
+ */
+SendBirdGroupChannel.prototype['data'] = undefined;
+/**
+ * @member {module:model/SendBirdGroupChannel.HiddenStateEnum} hiddenState
+ */
+SendBirdGroupChannel.prototype['hiddenState'] = undefined;
+/**
+ * @member {Number} invitedAt
+ */
+SendBirdGroupChannel.prototype['invitedAt'] = undefined;
+/**
+ * @member {module:model/SendBirdUser} inviter
+ */
+SendBirdGroupChannel.prototype['inviter'] = undefined;
+/**
+ * @member {Boolean} isAccessCodeRequired
+ */
+SendBirdGroupChannel.prototype['isAccessCodeRequired'] = undefined;
+/**
+ * @member {Boolean} isBroadcast
+ */
+SendBirdGroupChannel.prototype['isBroadcast'] = undefined;
+/**
+ * @member {Boolean} isDiscoverable
+ */
+SendBirdGroupChannel.prototype['isDiscoverable'] = undefined;
+/**
+ * @member {Boolean} isDistinct
+ */
+SendBirdGroupChannel.prototype['isDistinct'] = undefined;
+/**
+ * @member {Boolean} isEphemeral
+ */
+SendBirdGroupChannel.prototype['isEphemeral'] = undefined;
+/**
+ * @member {Boolean} isFrozen
+ */
+SendBirdGroupChannel.prototype['isFrozen'] = undefined;
+/**
+ * @member {Boolean} isHidden
+ */
+SendBirdGroupChannel.prototype['isHidden'] = undefined;
+/**
+ * @member {Boolean} isPublic
+ */
+SendBirdGroupChannel.prototype['isPublic'] = undefined;
+/**
+ * @member {Boolean} isPushEnabled
+ */
+SendBirdGroupChannel.prototype['isPushEnabled'] = undefined;
+/**
+ * @member {Boolean} isSuper
+ */
+SendBirdGroupChannel.prototype['isSuper'] = undefined;
+/**
+ * @member {Number} joinedAt
+ */
+SendBirdGroupChannel.prototype['joinedAt'] = undefined;
+/**
+ * @member {Number} joinedMemberCount
+ */
+SendBirdGroupChannel.prototype['joinedMemberCount'] = undefined;
+/**
+ * @member {module:model/SendBirdMessageResponse} lastMessage
+ */
+SendBirdGroupChannel.prototype['lastMessage'] = undefined;
+/**
+ * @member {Number} memberCount
+ */
+SendBirdGroupChannel.prototype['memberCount'] = undefined;
+/**
+ * @member {Array.<module:model/SendBirdMember>} members
+ */
+SendBirdGroupChannel.prototype['members'] = undefined;
+/**
+ * @member {Number} messageOffsetTimestamp
+ */
+SendBirdGroupChannel.prototype['messageOffsetTimestamp'] = undefined;
+/**
+ * @member {Number} messageSurvivalSeconds
+ */
+SendBirdGroupChannel.prototype['messageSurvivalSeconds'] = undefined;
+/**
+ * @member {String} myCountPreference
+ */
+SendBirdGroupChannel.prototype['myCountPreference'] = undefined;
+/**
+ * @member {Number} myLastRead
+ */
+SendBirdGroupChannel.prototype['myLastRead'] = undefined;
+/**
+ * @member {module:model/SendBirdGroupChannel.MyMemberStateEnum} myMemberState
+ */
+SendBirdGroupChannel.prototype['myMemberState'] = undefined;
+/**
+ * @member {module:model/SendBirdGroupChannel.MyMutedStateEnum} myMutedState
+ */
+SendBirdGroupChannel.prototype['myMutedState'] = undefined;
+/**
+ * @member {module:model/SendBirdGroupChannel.MyPushTriggerOptionEnum} myPushTriggerOption
+ */
+SendBirdGroupChannel.prototype['myPushTriggerOption'] = undefined;
+/**
+ * @member {module:model/SendBirdGroupChannel.MyRoleEnum} myRole
+ */
+SendBirdGroupChannel.prototype['myRole'] = undefined;
+/**
+ * @member {String} name
+ */
+SendBirdGroupChannel.prototype['name'] = undefined;
+/**
+ * @member {Number} unreadMentionCount
+ */
+SendBirdGroupChannel.prototype['unreadMentionCount'] = undefined;
+/**
+ * @member {Number} unreadMessageCount
+ */
+SendBirdGroupChannel.prototype['unreadMessageCount'] = undefined;
+/**
+ * @member {String} url
+ */
 SendBirdGroupChannel.prototype['url'] = undefined;
-
-
+// Implement SendBirdOpenChannel interface:
+/**
+ * @member {String} coverUrl
+ */
+SendBirdOpenChannel.prototype['coverUrl'] = undefined;
+/**
+ * @member {Number} createdAt
+ */
+SendBirdOpenChannel.prototype['createdAt'] = undefined;
+/**
+ * @member {module:model/SendBirdUser} creator
+ */
+SendBirdOpenChannel.prototype['creator'] = undefined;
+/**
+ * @member {String} customType
+ */
+SendBirdOpenChannel.prototype['customType'] = undefined;
+/**
+ * @member {String} data
+ */
+SendBirdOpenChannel.prototype['data'] = undefined;
+/**
+ * @member {Boolean} isEphemeral
+ */
+SendBirdOpenChannel.prototype['isEphemeral'] = undefined;
+/**
+ * @member {Boolean} isFrozen
+ */
+SendBirdOpenChannel.prototype['isFrozen'] = undefined;
+/**
+ * @member {String} name
+ */
+SendBirdOpenChannel.prototype['name'] = undefined;
+/**
+ * @member {Array.<module:model/SendBirdUser>} operators
+ */
+SendBirdOpenChannel.prototype['operators'] = undefined;
+/**
+ * @member {Number} participantCount
+ */
+SendBirdOpenChannel.prototype['participantCount'] = undefined;
+/**
+ * @member {String} url
+ */
+SendBirdOpenChannel.prototype['url'] = undefined;
 
 
 
@@ -346,7 +554,7 @@ SendBirdGroupChannel.prototype['url'] = undefined;
  * @enum {String}
  * @readonly
  */
-SendBirdGroupChannel['HiddenStateEnum'] = {
+SendBirdChannelResponse['HiddenStateEnum'] = {
 
     /**
      * value: "hidden_allow_auto_unhide"
@@ -373,7 +581,7 @@ SendBirdGroupChannel['HiddenStateEnum'] = {
  * @enum {String}
  * @readonly
  */
-SendBirdGroupChannel['MyMemberStateEnum'] = {
+SendBirdChannelResponse['MyMemberStateEnum'] = {
 
     /**
      * value: "invited"
@@ -400,7 +608,7 @@ SendBirdGroupChannel['MyMemberStateEnum'] = {
  * @enum {String}
  * @readonly
  */
-SendBirdGroupChannel['MyMutedStateEnum'] = {
+SendBirdChannelResponse['MyMutedStateEnum'] = {
 
     /**
      * value: "muted"
@@ -421,7 +629,7 @@ SendBirdGroupChannel['MyMutedStateEnum'] = {
  * @enum {String}
  * @readonly
  */
-SendBirdGroupChannel['MyPushTriggerOptionEnum'] = {
+SendBirdChannelResponse['MyPushTriggerOptionEnum'] = {
 
     /**
      * value: "all"
@@ -454,7 +662,7 @@ SendBirdGroupChannel['MyPushTriggerOptionEnum'] = {
  * @enum {String}
  * @readonly
  */
-SendBirdGroupChannel['MyRoleEnum'] = {
+SendBirdChannelResponse['MyRoleEnum'] = {
 
     /**
      * value: "none"
@@ -471,5 +679,5 @@ SendBirdGroupChannel['MyRoleEnum'] = {
 
 
 
-export default SendBirdGroupChannel;
+export default SendBirdChannelResponse;
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**parentMessage** | [**AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage**](AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage.md) |  | [optional] 
-**threadedReplies** | [**[AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage]**](AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage.md) |  | [optional] 
+**parentMessage** | [**SendBirdMessageResponse**](SendBirdMessageResponse.md) |  | [optional] 
+**threadedReplies** | [**[SendBirdMessageResponse]**](SendBirdMessageResponse.md) |  | [optional] 
 
 

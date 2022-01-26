@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import AnyOfSendBirdGroupChannelSendBirdOpenChannel from './AnyOfSendBirdGroupChannelSendBirdOpenChannel';
+import SendBirdChannelResponse from './SendBirdChannelResponse';
 
 /**
  * The InlineResponse20024 model module.
@@ -49,7 +49,7 @@ class InlineResponse20024 {
             obj = obj || new InlineResponse20024();
 
             if (data.hasOwnProperty('muted_channels')) {
-                obj['muted_channels'] = ApiClient.convertToType(data['muted_channels'], [AnyOfSendBirdGroupChannelSendBirdOpenChannel]);
+                obj['muted_channels'] = ApiClient.convertToType(data['muted_channels'], [SendBirdChannelResponse]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -62,7 +62,7 @@ class InlineResponse20024 {
 }
 
 /**
- * @member {Array.<module:model/AnyOfSendBirdGroupChannelSendBirdOpenChannel>} muted_channels
+ * @member {Array.<module:model/SendBirdChannelResponse>} muted_channels
  */
 InlineResponse20024.prototype['muted_channels'] = undefined;
 

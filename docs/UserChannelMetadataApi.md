@@ -30,7 +30,7 @@ Method | HTTP request | Description
 
 ## createChannelMetacounter
 
-> {String: AnyOfstringnumber} createChannelMetacounter(channelType, channelUrl, opts)
+> {String: SendBirdAdditionalProperties} createChannelMetacounter(channelType, channelUrl, opts)
 
 Create a channel metacounter
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**{String: AnyOfstringnumber}**](AnyOfstringnumber.md)
+[**{String: SendBirdAdditionalProperties}**](SendBirdAdditionalProperties.md)
 
 ### Authorization
 
@@ -499,7 +499,7 @@ No authorization required
 
 ## updateChannelMetacounter
 
-> {String: AnyOfstringnumber} updateChannelMetacounter(channelType, channelUrl, opts)
+> {String: SendBirdAdditionalProperties} updateChannelMetacounter(channelType, channelUrl, opts)
 
 Update a channel metacounter - When updating existing items of a channel metacounter by their keys or adding new items to the metacounter
 
@@ -538,7 +538,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**{String: AnyOfstringnumber}**](AnyOfstringnumber.md)
+[**{String: SendBirdAdditionalProperties}**](SendBirdAdditionalProperties.md)
 
 ### Authorization
 
@@ -819,7 +819,7 @@ No authorization required
 
 ## viewChannelMetacounter
 
-> {String: AnyOfstringnumber} viewChannelMetacounter(channelType, channelUrl, opts)
+> {String: SendBirdAdditionalProperties} viewChannelMetacounter(channelType, channelUrl, opts)
 
 View a channel metacounter - When retrieving all items of a channel metacounter
 
@@ -860,7 +860,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**{String: AnyOfstringnumber}**](AnyOfstringnumber.md)
+[**{String: SendBirdAdditionalProperties}**](SendBirdAdditionalProperties.md)
 
 ### Authorization
 
@@ -874,7 +874,7 @@ No authorization required
 
 ## viewChannelMetacounterByKey
 
-> {String: AnyOfstringnumber} viewChannelMetacounterByKey(channelType, channelUrl, key, opts)
+> {String: SendBirdAdditionalProperties} viewChannelMetacounterByKey(channelType, channelUrl, key, opts)
 
 View a channel metacounter - When retrieving a specific item of a channel metacounter by its key
 
@@ -913,7 +913,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**{String: AnyOfstringnumber}**](AnyOfstringnumber.md)
+[**{String: SendBirdAdditionalProperties}**](SendBirdAdditionalProperties.md)
 
 ### Authorization
 

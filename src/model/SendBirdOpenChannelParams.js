@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import AnyOfFilestring from './AnyOfFilestring';
 
 /**
  * The SendBirdOpenChannelParams model module.
@@ -52,7 +51,7 @@ class SendBirdOpenChannelParams {
                 obj['channelUrl'] = ApiClient.convertToType(data['channelUrl'], 'String');
             }
             if (data.hasOwnProperty('coverUrlOrImage')) {
-                obj['coverUrlOrImage'] = ApiClient.convertToType(data['coverUrlOrImage'], AnyOfFilestring);
+                obj['coverUrlOrImage'] = ApiClient.convertToType(data['coverUrlOrImage'], 'String');
             }
             if (data.hasOwnProperty('customType')) {
                 obj['customType'] = ApiClient.convertToType(data['customType'], 'String');
@@ -76,7 +75,7 @@ class SendBirdOpenChannelParams {
 SendBirdOpenChannelParams.prototype['channelUrl'] = undefined;
 
 /**
- * @member {module:model/AnyOfFilestring} coverUrlOrImage
+ * @member {String} coverUrlOrImage
  */
 SendBirdOpenChannelParams.prototype['coverUrlOrImage'] = undefined;
 

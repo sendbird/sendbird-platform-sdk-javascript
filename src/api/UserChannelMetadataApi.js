@@ -13,13 +13,13 @@
 
 
 import ApiClient from "../ApiClient";
-import AnyOfstringnumber from '../model/AnyOfstringnumber';
 import CreateChannelMetacounterData from '../model/CreateChannelMetacounterData';
 import CreateChannelMetadataData from '../model/CreateChannelMetadataData';
 import CreateUserMetadataData from '../model/CreateUserMetadataData';
 import InlineResponse20048UserMetadata from '../model/InlineResponse20048UserMetadata';
 import InlineResponse20061 from '../model/InlineResponse20061';
 import InlineResponse20062 from '../model/InlineResponse20062';
+import SendBirdAdditionalProperties from '../model/SendBirdAdditionalProperties';
 import UpdateChannelMetacounterData from '../model/UpdateChannelMetacounterData';
 import UpdateChannelMetadataData from '../model/UpdateChannelMetadataData';
 import UpdateUserMetadataData from '../model/UpdateUserMetadataData';
@@ -47,7 +47,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the createChannelMetacounter operation.
      * @callback module:api/UserChannelMetadataApi~createChannelMetacounterCallback
      * @param {String} error Error message, if any.
-     * @param {Object.<String, module:model/{String: AnyOfstringnumber}>} data The data returned by the service call.
+     * @param {Object.<String, module:model/{String: SendBirdAdditionalProperties}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -60,7 +60,7 @@ export default class UserChannelMetadataApi {
      * @param {String} opts.apiToken 
      * @param {module:model/CreateChannelMetacounterData} opts.createChannelMetacounterData 
      * @param {module:api/UserChannelMetadataApi~createChannelMetacounterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, module:model/{String: AnyOfstringnumber}>}
+     * data is of type: {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
      */
     createChannelMetacounter(channelType, channelUrl, opts, callback) {
       opts = opts || {};
@@ -89,7 +89,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = {'String': AnyOfstringnumber};
+      let returnType = {'String': SendBirdAdditionalProperties};
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -525,7 +525,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the updateChannelMetacounter operation.
      * @callback module:api/UserChannelMetadataApi~updateChannelMetacounterCallback
      * @param {String} error Error message, if any.
-     * @param {Object.<String, module:model/{String: AnyOfstringnumber}>} data The data returned by the service call.
+     * @param {Object.<String, module:model/{String: SendBirdAdditionalProperties}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -538,7 +538,7 @@ export default class UserChannelMetadataApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateChannelMetacounterData} opts.updateChannelMetacounterData 
      * @param {module:api/UserChannelMetadataApi~updateChannelMetacounterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, module:model/{String: AnyOfstringnumber}>}
+     * data is of type: {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
      */
     updateChannelMetacounter(channelType, channelUrl, opts, callback) {
       opts = opts || {};
@@ -567,7 +567,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = {'String': AnyOfstringnumber};
+      let returnType = {'String': SendBirdAdditionalProperties};
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -855,7 +855,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the viewChannelMetacounter operation.
      * @callback module:api/UserChannelMetadataApi~viewChannelMetacounterCallback
      * @param {String} error Error message, if any.
-     * @param {Object.<String, module:model/{String: AnyOfstringnumber}>} data The data returned by the service call.
+     * @param {Object.<String, module:model/{String: SendBirdAdditionalProperties}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -869,7 +869,7 @@ export default class UserChannelMetadataApi {
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
      * @param {module:api/UserChannelMetadataApi~viewChannelMetacounterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, module:model/{String: AnyOfstringnumber}>}
+     * data is of type: {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
      */
     viewChannelMetacounter(channelType, channelUrl, opts, callback) {
       opts = opts || {};
@@ -900,7 +900,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = {'String': AnyOfstringnumber};
+      let returnType = {'String': SendBirdAdditionalProperties};
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -912,7 +912,7 @@ export default class UserChannelMetadataApi {
      * Callback function to receive the result of the viewChannelMetacounterByKey operation.
      * @callback module:api/UserChannelMetadataApi~viewChannelMetacounterByKeyCallback
      * @param {String} error Error message, if any.
-     * @param {Object.<String, module:model/{String: AnyOfstringnumber}>} data The data returned by the service call.
+     * @param {Object.<String, module:model/{String: SendBirdAdditionalProperties}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -925,7 +925,7 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:api/UserChannelMetadataApi~viewChannelMetacounterByKeyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, module:model/{String: AnyOfstringnumber}>}
+     * data is of type: {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
      */
     viewChannelMetacounterByKey(channelType, channelUrl, key, opts, callback) {
       opts = opts || {};
@@ -959,7 +959,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = {'String': AnyOfstringnumber};
+      let returnType = {'String': SendBirdAdditionalProperties};
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter/{key}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

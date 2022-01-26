@@ -1,4 +1,4 @@
-# SendbirdPlatformSdk.SendBirdGroupChannel
+# SendbirdPlatformSdk.SendBirdChannelResponse
 
 ## Properties
 
@@ -39,6 +39,8 @@ Name | Type | Description | Notes
 **unreadMentionCount** | **Number** |  | [optional] 
 **unreadMessageCount** | **Number** |  | [optional] 
 **url** | **String** |  | [optional] 
+**operators** | [**[SendBirdUser]**](SendBirdUser.md) |  | [optional] 
+**participantCount** | **Number** |  | [optional] 
 
 
 

@@ -13,12 +13,12 @@
 
 
 import ApiClient from "../ApiClient";
-import AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage from '../model/AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage';
 import CreateBotData from '../model/CreateBotData';
 import InlineResponse20066 from '../model/InlineResponse20066';
 import InlineResponse20066Bots from '../model/InlineResponse20066Bots';
 import JoinChannelsData from '../model/JoinChannelsData';
 import SendBirdGroupChannelCollection from '../model/SendBirdGroupChannelCollection';
+import SendBirdMessageResponse from '../model/SendBirdMessageResponse';
 import SendBotSMessageData from '../model/SendBotSMessageData';
 import UpdateBotByIdData from '../model/UpdateBotByIdData';
 
@@ -326,7 +326,7 @@ export default class BotInterfaceApi {
      * Callback function to receive the result of the sendBotsMessage operation.
      * @callback module:api/BotInterfaceApi~sendBotsMessageCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage} data The data returned by the service call.
+     * @param {module:model/SendBirdMessageResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -338,7 +338,7 @@ export default class BotInterfaceApi {
      * @param {String} opts.apiToken 
      * @param {module:model/SendBotSMessageData} opts.sendBotSMessageData 
      * @param {module:api/BotInterfaceApi~sendBotsMessageCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage}
+     * data is of type: {@link module:model/SendBirdMessageResponse}
      */
     sendBotsMessage(botUserid, opts, callback) {
       opts = opts || {};
@@ -362,7 +362,7 @@ export default class BotInterfaceApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = AnyOfSendBirdUserMessageSendBirdAdminMessageSendBirdFileMessage;
+      let returnType = SendBirdMessageResponse;
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}/send', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

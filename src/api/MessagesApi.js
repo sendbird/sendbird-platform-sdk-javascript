@@ -15,7 +15,6 @@
 import ApiClient from "../ApiClient";
 import AddExtraDataToMessageData from '../model/AddExtraDataToMessageData';
 import AddReactionToAMessageData from '../model/AddReactionToAMessageData';
-import AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage from '../model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage';
 import GcMarkAllMessagesAsDeliveredData from '../model/GcMarkAllMessagesAsDeliveredData';
 import GcMarkAllMessagesAsReadData from '../model/GcMarkAllMessagesAsReadData';
 import InlineResponse20048 from '../model/InlineResponse20048';
@@ -25,6 +24,7 @@ import InlineResponse20051 from '../model/InlineResponse20051';
 import InlineResponse20053 from '../model/InlineResponse20053';
 import InlineResponse20054 from '../model/InlineResponse20054';
 import InlineResponse20055 from '../model/InlineResponse20055';
+import SendBirdMessageResponse from '../model/SendBirdMessageResponse';
 import SendMessageData from '../model/SendMessageData';
 import UpdateExtraDataInMessageData from '../model/UpdateExtraDataInMessageData';
 import UpdateMessageByIdData from '../model/UpdateMessageByIdData';
@@ -655,7 +655,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the sendMessage operation.
      * @callback module:api/MessagesApi~sendMessageCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage} data The data returned by the service call.
+     * @param {module:model/SendBirdMessageResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -668,7 +668,7 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {module:model/SendMessageData} opts.sendMessageData 
      * @param {module:api/MessagesApi~sendMessageCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage}
+     * data is of type: {@link module:model/SendBirdMessageResponse}
      */
     sendMessage(channelType, channelUrl, opts, callback) {
       opts = opts || {};
@@ -697,7 +697,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage;
+      let returnType = SendBirdMessageResponse;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -709,7 +709,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the translateMessageIntoOtherLanguages operation.
      * @callback module:api/MessagesApi~translateMessageIntoOtherLanguagesCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage} data The data returned by the service call.
+     * @param {module:model/SendBirdMessageResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -723,7 +723,7 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
      * @param {module:api/MessagesApi~translateMessageIntoOtherLanguagesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage}
+     * data is of type: {@link module:model/SendBirdMessageResponse}
      */
     translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
@@ -757,7 +757,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage;
+      let returnType = SendBirdMessageResponse;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/translation', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -829,7 +829,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the updateMessageById operation.
      * @callback module:api/MessagesApi~updateMessageByIdCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage} data The data returned by the service call.
+     * @param {module:model/SendBirdMessageResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -843,7 +843,7 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateMessageByIdData} opts.updateMessageByIdData 
      * @param {module:api/MessagesApi~updateMessageByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage}
+     * data is of type: {@link module:model/SendBirdMessageResponse}
      */
     updateMessageById(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
@@ -877,7 +877,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage;
+      let returnType = SendBirdMessageResponse;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -889,7 +889,7 @@ export default class MessagesApi {
      * Callback function to receive the result of the viewMessageById operation.
      * @callback module:api/MessagesApi~viewMessageByIdCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage} data The data returned by the service call.
+     * @param {module:model/SendBirdMessageResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -904,7 +904,7 @@ export default class MessagesApi {
      * @param {Boolean} opts.withSortedMetaArray 
      * @param {Boolean} opts.withMetaArray 
      * @param {module:api/MessagesApi~viewMessageByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage}
+     * data is of type: {@link module:model/SendBirdMessageResponse}
      */
     viewMessageById(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
@@ -940,7 +940,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = AnyOfSendBirdAdminMessageSendBirdUserMessageSendBirdFileMessage;
+      let returnType = SendBirdMessageResponse;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
