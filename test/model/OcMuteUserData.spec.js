@@ -50,7 +50,7 @@
   describe('OcMuteUserData', function() {
     it('should create an instance of OcMuteUserData', function() {
       // uncomment below and update the code to test OcMuteUserData
-      //var instane = new SendbirdPlatformSdk.OcMuteUserData();
+      //var instance = new SendbirdPlatformSdk.OcMuteUserData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.OcMuteUserData);
     });
 

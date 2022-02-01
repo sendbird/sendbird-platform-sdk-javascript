@@ -50,7 +50,7 @@
   describe('OcUpdateChannelByUrlData', function() {
     it('should create an instance of OcUpdateChannelByUrlData', function() {
       // uncomment below and update the code to test OcUpdateChannelByUrlData
-      //var instane = new SendbirdPlatformSdk.OcUpdateChannelByUrlData();
+      //var instance = new SendbirdPlatformSdk.OcUpdateChannelByUrlData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.OcUpdateChannelByUrlData);
     });
 

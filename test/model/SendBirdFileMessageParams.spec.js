@@ -54,13 +54,13 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.SendBirdFileMessageParams);
     });
 
-    it('should have the property appleCriticalAlertOptions (base name: "appleCriticalAlertOptions")', function() {
+    it('should have the property appleCriticalAlertOptions (base name: "apple_critical_alert_options")', function() {
       // uncomment below and update the code to test the property appleCriticalAlertOptions
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property customType (base name: "customType")', function() {
+    it('should have the property customType (base name: "custom_type")', function() {
       // uncomment below and update the code to test the property customType
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();
@@ -78,79 +78,79 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property fileName (base name: "fileName")', function() {
+    it('should have the property fileName (base name: "file_name")', function() {
       // uncomment below and update the code to test the property fileName
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property fileSize (base name: "fileSize")', function() {
+    it('should have the property fileSize (base name: "file_size")', function() {
       // uncomment below and update the code to test the property fileSize
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property fileUrl (base name: "fileUrl")', function() {
+    it('should have the property fileUrl (base name: "file_url")', function() {
       // uncomment below and update the code to test the property fileUrl
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property isReplyToChannel (base name: "isReplyToChannel")', function() {
+    it('should have the property isReplyToChannel (base name: "is_reply_to_channel")', function() {
       // uncomment below and update the code to test the property isReplyToChannel
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property mentionType (base name: "mentionType")', function() {
+    it('should have the property mentionType (base name: "mention_type")', function() {
       // uncomment below and update the code to test the property mentionType
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property mentionedUserIds (base name: "mentionedUserIds")', function() {
+    it('should have the property mentionedUserIds (base name: "mentioned_user_ids")', function() {
       // uncomment below and update the code to test the property mentionedUserIds
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property mentionedUsers (base name: "mentionedUsers")', function() {
+    it('should have the property mentionedUsers (base name: "mentioned_users")', function() {
       // uncomment below and update the code to test the property mentionedUsers
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property metaArrayKeys (base name: "metaArrayKeys")', function() {
+    it('should have the property metaArrayKeys (base name: "meta_array_keys")', function() {
       // uncomment below and update the code to test the property metaArrayKeys
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property metaArrays (base name: "metaArrays")', function() {
+    it('should have the property metaArrays (base name: "meta_arrays")', function() {
       // uncomment below and update the code to test the property metaArrays
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property mimeType (base name: "mimeType")', function() {
+    it('should have the property mimeType (base name: "mime_type")', function() {
       // uncomment below and update the code to test the property mimeType
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property parentMessageId (base name: "parentMessageId")', function() {
+    it('should have the property parentMessageId (base name: "parent_message_id")', function() {
       // uncomment below and update the code to test the property parentMessageId
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property pushNotificationDeliveryOption (base name: "pushNotificationDeliveryOption")', function() {
+    it('should have the property pushNotificationDeliveryOption (base name: "push_notification_delivery_option")', function() {
       // uncomment below and update the code to test the property pushNotificationDeliveryOption
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property thumbnailSizes (base name: "thumbnailSizes")', function() {
+    it('should have the property thumbnailSizes (base name: "thumbnail_sizes")', function() {
       // uncomment below and update the code to test the property thumbnailSizes
       //var instance = new SendbirdPlatformSdk.SendBirdFileMessageParams();
       //expect(instance).to.be();

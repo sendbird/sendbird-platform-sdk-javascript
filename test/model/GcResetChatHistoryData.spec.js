@@ -50,7 +50,7 @@
   describe('GcResetChatHistoryData', function() {
     it('should create an instance of GcResetChatHistoryData', function() {
       // uncomment below and update the code to test GcResetChatHistoryData
-      //var instane = new SendbirdPlatformSdk.GcResetChatHistoryData();
+      //var instance = new SendbirdPlatformSdk.GcResetChatHistoryData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.GcResetChatHistoryData);
     });
 

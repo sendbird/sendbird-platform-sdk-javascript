@@ -47,8 +47,8 @@ class File {
         if (data) {
             obj = obj || new File();
 
-            if (data.hasOwnProperty('lastModified')) {
-                obj['lastModified'] = ApiClient.convertToType(data['lastModified'], 'Number');
+            if (data.hasOwnProperty('last_modified')) {
+                obj['last_modified'] = ApiClient.convertToType(data['last_modified'], 'Number');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -59,8 +59,8 @@ class File {
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
-            if (data.hasOwnProperty('webkitRelativePath')) {
-                obj['webkitRelativePath'] = ApiClient.convertToType(data['webkitRelativePath'], 'String');
+            if (data.hasOwnProperty('webkit_relative_path')) {
+                obj['webkit_relative_path'] = ApiClient.convertToType(data['webkit_relative_path'], 'String');
             }
         }
         return obj;
@@ -70,9 +70,9 @@ class File {
 }
 
 /**
- * @member {Number} lastModified
+ * @member {Number} last_modified
  */
-File.prototype['lastModified'] = undefined;
+File.prototype['last_modified'] = undefined;
 
 /**
  * @member {String} name
@@ -90,9 +90,9 @@ File.prototype['size'] = undefined;
 File.prototype['type'] = undefined;
 
 /**
- * @member {String} webkitRelativePath
+ * @member {String} webkit_relative_path
  */
-File.prototype['webkitRelativePath'] = undefined;
+File.prototype['webkit_relative_path'] = undefined;
 
 
 

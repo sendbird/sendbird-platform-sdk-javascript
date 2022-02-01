@@ -54,55 +54,55 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.SendBirdMember);
     });
 
-    it('should have the property connectionStatus (base name: "connectionStatus")', function() {
+    it('should have the property connectionStatus (base name: "connection_status")', function() {
       // uncomment below and update the code to test the property connectionStatus
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
     });
 
-    it('should have the property friendDiscoveryKey (base name: "friendDiscoveryKey")', function() {
+    it('should have the property friendDiscoveryKey (base name: "friend_discovery_key")', function() {
       // uncomment below and update the code to test the property friendDiscoveryKey
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
     });
 
-    it('should have the property friendName (base name: "friendName")', function() {
+    it('should have the property friendName (base name: "friend_name")', function() {
       // uncomment below and update the code to test the property friendName
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
     });
 
-    it('should have the property isActive (base name: "isActive")', function() {
+    it('should have the property isActive (base name: "is_active")', function() {
       // uncomment below and update the code to test the property isActive
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
     });
 
-    it('should have the property isBlockedByMe (base name: "isBlockedByMe")', function() {
+    it('should have the property isBlockedByMe (base name: "is_blocked_by_me")', function() {
       // uncomment below and update the code to test the property isBlockedByMe
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
     });
 
-    it('should have the property isBlockingMe (base name: "isBlockingMe")', function() {
+    it('should have the property isBlockingMe (base name: "is_blocking_me")', function() {
       // uncomment below and update the code to test the property isBlockingMe
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
     });
 
-    it('should have the property isMuted (base name: "isMuted")', function() {
+    it('should have the property isMuted (base name: "is_muted")', function() {
       // uncomment below and update the code to test the property isMuted
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
     });
 
-    it('should have the property lastSeenAt (base name: "lastSeenAt")', function() {
+    it('should have the property lastSeenAt (base name: "last_seen_at")', function() {
       // uncomment below and update the code to test the property lastSeenAt
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
     });
 
-    it('should have the property metaData (base name: "metaData")', function() {
+    it('should have the property metaData (base name: "meta_data")', function() {
       // uncomment below and update the code to test the property metaData
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
@@ -114,31 +114,31 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property plainProfileUrl (base name: "plainProfileUrl")', function() {
+    it('should have the property plainProfileUrl (base name: "plain_profile_url")', function() {
       // uncomment below and update the code to test the property plainProfileUrl
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
     });
 
-    it('should have the property preferredLanguages (base name: "preferredLanguages")', function() {
+    it('should have the property preferredLanguages (base name: "preferred_languages")', function() {
       // uncomment below and update the code to test the property preferredLanguages
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
     });
 
-    it('should have the property profileUrl (base name: "profileUrl")', function() {
+    it('should have the property profileUrl (base name: "profile_url")', function() {
       // uncomment below and update the code to test the property profileUrl
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
     });
 
-    it('should have the property requireAuth (base name: "requireAuth")', function() {
+    it('should have the property requireAuth (base name: "require_auth")', function() {
       // uncomment below and update the code to test the property requireAuth
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
     });
 
-    it('should have the property restrictionInfo (base name: "restrictionInfo")', function() {
+    it('should have the property restrictionInfo (base name: "restriction_info")', function() {
       // uncomment below and update the code to test the property restrictionInfo
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
@@ -156,7 +156,7 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property userId (base name: "userId")', function() {
+    it('should have the property userId (base name: "user_id")', function() {
       // uncomment below and update the code to test the property userId
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();

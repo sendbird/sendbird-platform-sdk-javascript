@@ -48,29 +48,29 @@ class SendBirdPollOption {
         if (data) {
             obj = obj || new SendBirdPollOption();
 
-            if (data.hasOwnProperty('createdAt')) {
-                obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Number');
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Number');
             }
-            if (data.hasOwnProperty('createdBy')) {
-                obj['createdBy'] = ApiClient.convertToType(data['createdBy'], 'String');
+            if (data.hasOwnProperty('created_by')) {
+                obj['created_by'] = ApiClient.convertToType(data['created_by'], 'String');
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'Number');
             }
-            if (data.hasOwnProperty('partialVoters')) {
-                obj['partialVoters'] = ApiClient.convertToType(data['partialVoters'], [SendBirdUser]);
+            if (data.hasOwnProperty('partial_voters')) {
+                obj['partial_voters'] = ApiClient.convertToType(data['partial_voters'], [SendBirdUser]);
             }
-            if (data.hasOwnProperty('pollId')) {
-                obj['pollId'] = ApiClient.convertToType(data['pollId'], 'Number');
+            if (data.hasOwnProperty('poll_id')) {
+                obj['poll_id'] = ApiClient.convertToType(data['poll_id'], 'Number');
             }
             if (data.hasOwnProperty('text')) {
                 obj['text'] = ApiClient.convertToType(data['text'], 'String');
             }
-            if (data.hasOwnProperty('updatedAt')) {
-                obj['updatedAt'] = ApiClient.convertToType(data['updatedAt'], 'Number');
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Number');
             }
-            if (data.hasOwnProperty('voteCount')) {
-                obj['voteCount'] = ApiClient.convertToType(data['voteCount'], 'Number');
+            if (data.hasOwnProperty('vote_count')) {
+                obj['vote_count'] = ApiClient.convertToType(data['vote_count'], 'Number');
             }
         }
         return obj;
@@ -80,14 +80,14 @@ class SendBirdPollOption {
 }
 
 /**
- * @member {Number} createdAt
+ * @member {Number} created_at
  */
-SendBirdPollOption.prototype['createdAt'] = undefined;
+SendBirdPollOption.prototype['created_at'] = undefined;
 
 /**
- * @member {String} createdBy
+ * @member {String} created_by
  */
-SendBirdPollOption.prototype['createdBy'] = undefined;
+SendBirdPollOption.prototype['created_by'] = undefined;
 
 /**
  * @member {Number} id
@@ -95,14 +95,14 @@ SendBirdPollOption.prototype['createdBy'] = undefined;
 SendBirdPollOption.prototype['id'] = undefined;
 
 /**
- * @member {Array.<module:model/SendBirdUser>} partialVoters
+ * @member {Array.<module:model/SendBirdUser>} partial_voters
  */
-SendBirdPollOption.prototype['partialVoters'] = undefined;
+SendBirdPollOption.prototype['partial_voters'] = undefined;
 
 /**
- * @member {Number} pollId
+ * @member {Number} poll_id
  */
-SendBirdPollOption.prototype['pollId'] = undefined;
+SendBirdPollOption.prototype['poll_id'] = undefined;
 
 /**
  * @member {String} text
@@ -110,14 +110,14 @@ SendBirdPollOption.prototype['pollId'] = undefined;
 SendBirdPollOption.prototype['text'] = undefined;
 
 /**
- * @member {Number} updatedAt
+ * @member {Number} updated_at
  */
-SendBirdPollOption.prototype['updatedAt'] = undefined;
+SendBirdPollOption.prototype['updated_at'] = undefined;
 
 /**
- * @member {Number} voteCount
+ * @member {Number} vote_count
  */
-SendBirdPollOption.prototype['voteCount'] = undefined;
+SendBirdPollOption.prototype['vote_count'] = undefined;
 
 
 

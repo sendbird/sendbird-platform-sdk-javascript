@@ -50,7 +50,7 @@
   describe('LeaveMyGroupChannelsData', function() {
     it('should create an instance of LeaveMyGroupChannelsData', function() {
       // uncomment below and update the code to test LeaveMyGroupChannelsData
-      //var instane = new SendbirdPlatformSdk.LeaveMyGroupChannelsData();
+      //var instance = new SendbirdPlatformSdk.LeaveMyGroupChannelsData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.LeaveMyGroupChannelsData);
     });
 

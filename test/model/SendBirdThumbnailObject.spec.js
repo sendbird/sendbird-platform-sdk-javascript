@@ -60,7 +60,7 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property plainUrl (base name: "plainUrl")', function() {
+    it('should have the property plainUrl (base name: "plain_url")', function() {
       // uncomment below and update the code to test the property plainUrl
       //var instance = new SendbirdPlatformSdk.SendBirdThumbnailObject();
       //expect(instance).to.be();

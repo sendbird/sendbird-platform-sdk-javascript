@@ -50,7 +50,7 @@
   describe('AddExtraDataToMessageData', function() {
     it('should create an instance of AddExtraDataToMessageData', function() {
       // uncomment below and update the code to test AddExtraDataToMessageData
-      //var instane = new SendbirdPlatformSdk.AddExtraDataToMessageData();
+      //var instance = new SendbirdPlatformSdk.AddExtraDataToMessageData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.AddExtraDataToMessageData);
     });
 

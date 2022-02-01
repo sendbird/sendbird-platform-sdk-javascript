@@ -54,7 +54,7 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.SendBirdOGMetaData);
     });
 
-    it('should have the property defaultImage (base name: "defaultImage")', function() {
+    it('should have the property defaultImage (base name: "default_image")', function() {
       // uncomment below and update the code to test the property defaultImage
       //var instance = new SendbirdPlatformSdk.SendBirdOGMetaData();
       //expect(instance).to.be();

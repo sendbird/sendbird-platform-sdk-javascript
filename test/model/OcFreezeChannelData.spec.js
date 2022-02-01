@@ -50,7 +50,7 @@
   describe('OcFreezeChannelData', function() {
     it('should create an instance of OcFreezeChannelData', function() {
       // uncomment below and update the code to test OcFreezeChannelData
-      //var instane = new SendbirdPlatformSdk.OcFreezeChannelData();
+      //var instance = new SendbirdPlatformSdk.OcFreezeChannelData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.OcFreezeChannelData);
     });
 

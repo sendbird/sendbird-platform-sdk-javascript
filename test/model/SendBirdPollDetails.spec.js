@@ -54,37 +54,37 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.SendBirdPollDetails);
     });
 
-    it('should have the property allowMultipleVotes (base name: "allowMultipleVotes")', function() {
+    it('should have the property allowMultipleVotes (base name: "allow_multiple_votes")', function() {
       // uncomment below and update the code to test the property allowMultipleVotes
       //var instance = new SendbirdPlatformSdk.SendBirdPollDetails();
       //expect(instance).to.be();
     });
 
-    it('should have the property allowUserSuggestion (base name: "allowUserSuggestion")', function() {
+    it('should have the property allowUserSuggestion (base name: "allow_user_suggestion")', function() {
       // uncomment below and update the code to test the property allowUserSuggestion
       //var instance = new SendbirdPlatformSdk.SendBirdPollDetails();
       //expect(instance).to.be();
     });
 
-    it('should have the property closeAt (base name: "closeAt")', function() {
+    it('should have the property closeAt (base name: "close_at")', function() {
       // uncomment below and update the code to test the property closeAt
       //var instance = new SendbirdPlatformSdk.SendBirdPollDetails();
       //expect(instance).to.be();
     });
 
-    it('should have the property createdAt (base name: "createdAt")', function() {
+    it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
       //var instance = new SendbirdPlatformSdk.SendBirdPollDetails();
       //expect(instance).to.be();
     });
 
-    it('should have the property createdBy (base name: "createdBy")', function() {
+    it('should have the property createdBy (base name: "created_by")', function() {
       // uncomment below and update the code to test the property createdBy
       //var instance = new SendbirdPlatformSdk.SendBirdPollDetails();
       //expect(instance).to.be();
     });
 
-    it('should have the property isAnonymous (base name: "isAnonymous")', function() {
+    it('should have the property isAnonymous (base name: "is_anonymous")', function() {
       // uncomment below and update the code to test the property isAnonymous
       //var instance = new SendbirdPlatformSdk.SendBirdPollDetails();
       //expect(instance).to.be();
@@ -102,13 +102,13 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property updatedAt (base name: "updatedAt")', function() {
+    it('should have the property updatedAt (base name: "updated_at")', function() {
       // uncomment below and update the code to test the property updatedAt
       //var instance = new SendbirdPlatformSdk.SendBirdPollDetails();
       //expect(instance).to.be();
     });
 
-    it('should have the property voterCount (base name: "voterCount")', function() {
+    it('should have the property voterCount (base name: "voter_count")', function() {
       // uncomment below and update the code to test the property voterCount
       //var instance = new SendbirdPlatformSdk.SendBirdPollDetails();
       //expect(instance).to.be();

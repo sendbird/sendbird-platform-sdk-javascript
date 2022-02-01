@@ -54,13 +54,13 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.SendBirdBaseChannel);
     });
 
-    it('should have the property coverUrl (base name: "coverUrl")', function() {
+    it('should have the property coverUrl (base name: "cover_url")', function() {
       // uncomment below and update the code to test the property coverUrl
       //var instance = new SendbirdPlatformSdk.SendBirdBaseChannel();
       //expect(instance).to.be();
     });
 
-    it('should have the property createdAt (base name: "createdAt")', function() {
+    it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
       //var instance = new SendbirdPlatformSdk.SendBirdBaseChannel();
       //expect(instance).to.be();
@@ -72,7 +72,7 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property customType (base name: "customType")', function() {
+    it('should have the property customType (base name: "custom_type")', function() {
       // uncomment below and update the code to test the property customType
       //var instance = new SendbirdPlatformSdk.SendBirdBaseChannel();
       //expect(instance).to.be();
@@ -84,13 +84,13 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property isEphemeral (base name: "isEphemeral")', function() {
+    it('should have the property isEphemeral (base name: "is_ephemeral")', function() {
       // uncomment below and update the code to test the property isEphemeral
       //var instance = new SendbirdPlatformSdk.SendBirdBaseChannel();
       //expect(instance).to.be();
     });
 
-    it('should have the property isFrozen (base name: "isFrozen")', function() {
+    it('should have the property isFrozen (base name: "is_frozen")', function() {
       // uncomment below and update the code to test the property isFrozen
       //var instance = new SendbirdPlatformSdk.SendBirdBaseChannel();
       //expect(instance).to.be();

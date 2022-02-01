@@ -53,8 +53,8 @@ class SendBirdOGImage {
             if (data.hasOwnProperty('height')) {
                 obj['height'] = ApiClient.convertToType(data['height'], 'Number');
             }
-            if (data.hasOwnProperty('secureUrl')) {
-                obj['secureUrl'] = ApiClient.convertToType(data['secureUrl'], 'String');
+            if (data.hasOwnProperty('secure_url')) {
+                obj['secure_url'] = ApiClient.convertToType(data['secure_url'], 'String');
             }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -83,9 +83,9 @@ SendBirdOGImage.prototype['alt'] = undefined;
 SendBirdOGImage.prototype['height'] = undefined;
 
 /**
- * @member {String} secureUrl
+ * @member {String} secure_url
  */
-SendBirdOGImage.prototype['secureUrl'] = undefined;
+SendBirdOGImage.prototype['secure_url'] = undefined;
 
 /**
  * @member {String} type

@@ -50,7 +50,7 @@
   describe('GcHideOrArchiveChannelData', function() {
     it('should create an instance of GcHideOrArchiveChannelData', function() {
       // uncomment below and update the code to test GcHideOrArchiveChannelData
-      //var instane = new SendbirdPlatformSdk.GcHideOrArchiveChannelData();
+      //var instance = new SendbirdPlatformSdk.GcHideOrArchiveChannelData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.GcHideOrArchiveChannelData);
     });
 

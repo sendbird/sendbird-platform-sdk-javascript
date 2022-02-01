@@ -50,7 +50,7 @@
   describe('GcMarkAllMessagesAsDeliveredData', function() {
     it('should create an instance of GcMarkAllMessagesAsDeliveredData', function() {
       // uncomment below and update the code to test GcMarkAllMessagesAsDeliveredData
-      //var instane = new SendbirdPlatformSdk.GcMarkAllMessagesAsDeliveredData();
+      //var instance = new SendbirdPlatformSdk.GcMarkAllMessagesAsDeliveredData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.GcMarkAllMessagesAsDeliveredData);
     });
 

@@ -50,7 +50,7 @@
   describe('UpdatePushNotificationContentTemplateData', function() {
     it('should create an instance of UpdatePushNotificationContentTemplateData', function() {
       // uncomment below and update the code to test UpdatePushNotificationContentTemplateData
-      //var instane = new SendbirdPlatformSdk.UpdatePushNotificationContentTemplateData();
+      //var instance = new SendbirdPlatformSdk.UpdatePushNotificationContentTemplateData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.UpdatePushNotificationContentTemplateData);
     });
 

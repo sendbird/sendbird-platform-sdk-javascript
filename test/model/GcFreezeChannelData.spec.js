@@ -50,7 +50,7 @@
   describe('GcFreezeChannelData', function() {
     it('should create an instance of GcFreezeChannelData', function() {
       // uncomment below and update the code to test GcFreezeChannelData
-      //var instane = new SendbirdPlatformSdk.GcFreezeChannelData();
+      //var instance = new SendbirdPlatformSdk.GcFreezeChannelData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.GcFreezeChannelData);
     });
 

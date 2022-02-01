@@ -22,24 +22,13 @@ class SendMessageData {
     /**
      * Constructs a new <code>SendMessageData</code>.
      * @alias module:model/SendMessageData
-     * @param channelType {String} Specifies the type of the channel. Either open_channels or group_channels.
-     * @param channelUrl {String} Specifies the URL of the channel to send a message to.
-     * @param messageType {String} Specifies the type of the message as ADMM.
+     * @param userId {String} Specifies the user ID of the sender.
+     * @param messageType {String} Specifies the type of the message as MESG, FILE or ADMM
      * @param message {String} Specifies the content of the message.
-     * @param customType {String} Specifies a custom message type which is used for message grouping. The length is limited to 128 characters.<br /><br /> Custom types are also used within Sendbird's [Advanced analytics](/docs/chat/v3/platform-api/guides/advanced-analytics) to segment metrics, which enables the sub-classification of data views.
-     * @param data {String} Specifies additional message information such as custom font size, font type or `JSON` formatted string.
-     * @param sendPush {Boolean} Determines whether to send a push notification for the message to the members of the channel (applicable to group channels only). Unlike text and file messages, a push notification for an admin message is not sent by default. (Default: false)
-     * @param mentionType {String} Specifies the mentioning type which indicates the user scope who will get a notification for the message. Acceptable values are users and channel. If set to users, only the specified users with the mentioned_users property below will get notified. If set to channel, all users in the channel will get notified. (Default: users)
-     * @param mentionedUserIds {Array.<Number>} Specifies an array of one or more IDs of the users who will get a notification for the message.
-     * @param isSilent {Boolean} Determines whether to send a message without updating some of the channel properties. If a message is sent in a channel, with this property set to true, the channel's last_message is updated only for the sender while its unread_message_count remains unchanged for all channel members. Also, the message doesn't send a push notification to message receivers. If the message is sent to a hidden channel, the channel still remains hidden. (Default: false)</br></br>  Once the value of this property is set, it can't be reverted.
-     * @param sortedMetaarray {String} Specifies a `JSON` object of one or more key-values items which store additional message information. Each item consists of a key and the values in an array. Items are saved and will be returned in the exact order they've been specified.
-     * @param createdAt {Number} Specifies the time that the message was sent, in [Unix milliseconds](/docs/chat/v3/platform-api/guides/miscellaneous#2-timestamps) format. This property can be used when migrating the messages of other system to Sendbird server. If specified, the server sets the message's creation time as the property value.
-     * @param dedupId {String} Specifies the unique message ID created by other system. In general, this property is used to prevent the same message data from getting inserted when migrating the messages of the other system to Sendbird server. If specified, the server performs a duplicate check using the property value.
-     * @param metaarray {String} (Deprecated) Specifies a `JSON` object of one or more key-values items which store additional message information. The item consists of a key and the values in an array.
      */
-    constructor(channelType, channelUrl, messageType, message, customType, data, sendPush, mentionType, mentionedUserIds, isSilent, sortedMetaarray, createdAt, dedupId, metaarray) { 
+    constructor(userId, messageType, message) { 
         
-        SendMessageData.initialize(this, channelType, channelUrl, messageType, message, customType, data, sendPush, mentionType, mentionedUserIds, isSilent, sortedMetaarray, createdAt, dedupId, metaarray);
+        SendMessageData.initialize(this, userId, messageType, message);
     }
 
     /**
@@ -47,21 +36,10 @@ class SendMessageData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, channelType, channelUrl, messageType, message, customType, data, sendPush, mentionType, mentionedUserIds, isSilent, sortedMetaarray, createdAt, dedupId, metaarray) { 
-        obj['channel_type'] = channelType;
-        obj['channel_url'] = channelUrl;
+    static initialize(obj, userId, messageType, message) { 
+        obj['user_id'] = userId;
         obj['message_type'] = messageType;
         obj['message'] = message;
-        obj['custom_type'] = customType;
-        obj['data'] = data;
-        obj['send_push'] = sendPush;
-        obj['mention_type'] = mentionType;
-        obj['mentioned_user_ids'] = mentionedUserIds;
-        obj['is_silent'] = isSilent;
-        obj['sorted_metaarray'] = sortedMetaarray;
-        obj['created_at'] = createdAt;
-        obj['dedup_id'] = dedupId;
-        obj['metaarray'] = metaarray;
     }
 
     /**
@@ -75,6 +53,9 @@ class SendMessageData {
         if (data) {
             obj = obj || new SendMessageData();
 
+            if (data.hasOwnProperty('user_id')) {
+                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
+            }
             if (data.hasOwnProperty('channel_type')) {
                 obj['channel_type'] = ApiClient.convertToType(data['channel_type'], 'String');
             }
@@ -100,7 +81,7 @@ class SendMessageData {
                 obj['mention_type'] = ApiClient.convertToType(data['mention_type'], 'String');
             }
             if (data.hasOwnProperty('mentioned_user_ids')) {
-                obj['mentioned_user_ids'] = ApiClient.convertToType(data['mentioned_user_ids'], ['Number']);
+                obj['mentioned_user_ids'] = ApiClient.convertToType(data['mentioned_user_ids'], ['String']);
             }
             if (data.hasOwnProperty('is_silent')) {
                 obj['is_silent'] = ApiClient.convertToType(data['is_silent'], 'Boolean');
@@ -114,8 +95,14 @@ class SendMessageData {
             if (data.hasOwnProperty('dedup_id')) {
                 obj['dedup_id'] = ApiClient.convertToType(data['dedup_id'], 'String');
             }
-            if (data.hasOwnProperty('metaarray')) {
-                obj['metaarray'] = ApiClient.convertToType(data['metaarray'], 'String');
+            if (data.hasOwnProperty('apns_bundle_id')) {
+                obj['apns_bundle_id'] = ApiClient.convertToType(data['apns_bundle_id'], 'String');
+            }
+            if (data.hasOwnProperty('sound')) {
+                obj['sound'] = ApiClient.convertToType(data['sound'], 'String');
+            }
+            if (data.hasOwnProperty('volume')) {
+                obj['volume'] = ApiClient.convertToType(data['volume'], 'Number');
             }
         }
         return obj;
@@ -123,6 +110,12 @@ class SendMessageData {
 
 
 }
+
+/**
+ * Specifies the user ID of the sender.
+ * @member {String} user_id
+ */
+SendMessageData.prototype['user_id'] = undefined;
 
 /**
  * Specifies the type of the channel. Either open_channels or group_channels.
@@ -137,7 +130,7 @@ SendMessageData.prototype['channel_type'] = undefined;
 SendMessageData.prototype['channel_url'] = undefined;
 
 /**
- * Specifies the type of the message as ADMM.
+ * Specifies the type of the message as MESG, FILE or ADMM
  * @member {String} message_type
  */
 SendMessageData.prototype['message_type'] = undefined;
@@ -161,7 +154,7 @@ SendMessageData.prototype['custom_type'] = undefined;
 SendMessageData.prototype['data'] = undefined;
 
 /**
- * Determines whether to send a push notification for the message to the members of the channel (applicable to group channels only). Unlike text and file messages, a push notification for an admin message is not sent by default. (Default: false)
+ * Determines whether to send a push notification for the message to the members of the channel (applicable to group channels only). Unlike text and file messages, a push notification for an admin message is not sent by default. (Default: true)
  * @member {Boolean} send_push
  */
 SendMessageData.prototype['send_push'] = undefined;
@@ -174,7 +167,7 @@ SendMessageData.prototype['mention_type'] = undefined;
 
 /**
  * Specifies an array of one or more IDs of the users who will get a notification for the message.
- * @member {Array.<Number>} mentioned_user_ids
+ * @member {Array.<String>} mentioned_user_ids
  */
 SendMessageData.prototype['mentioned_user_ids'] = undefined;
 
@@ -203,10 +196,22 @@ SendMessageData.prototype['created_at'] = undefined;
 SendMessageData.prototype['dedup_id'] = undefined;
 
 /**
- * (Deprecated) Specifies a `JSON` object of one or more key-values items which store additional message information. The item consists of a key and the values in an array.
- * @member {String} metaarray
+ * Specifies the bundle ID of the client app in order to send a push notification to iOS devices. You can find this in Settings > Chat > Notifications > Push notification services
+ * @member {String} apns_bundle_id
  */
-SendMessageData.prototype['metaarray'] = undefined;
+SendMessageData.prototype['apns_bundle_id'] = undefined;
+
+/**
+ * Specifies the name of the file that sounds for critical alerts.
+ * @member {String} sound
+ */
+SendMessageData.prototype['sound'] = undefined;
+
+/**
+ * Specifies the volume of the critical alert sound. The volume ranges from 0.0 to 1.0, which indicates silent and full volume, respectively. (Default 1.0)
+ * @member {Number} volume
+ */
+SendMessageData.prototype['volume'] = undefined;
 
 
 

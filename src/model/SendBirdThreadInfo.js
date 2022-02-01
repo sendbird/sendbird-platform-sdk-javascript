@@ -48,17 +48,17 @@ class SendBirdThreadInfo {
         if (data) {
             obj = obj || new SendBirdThreadInfo();
 
-            if (data.hasOwnProperty('lastRepliedAt')) {
-                obj['lastRepliedAt'] = ApiClient.convertToType(data['lastRepliedAt'], 'Number');
+            if (data.hasOwnProperty('last_replied_at')) {
+                obj['last_replied_at'] = ApiClient.convertToType(data['last_replied_at'], 'Number');
             }
-            if (data.hasOwnProperty('mostRepliedUsers')) {
-                obj['mostRepliedUsers'] = ApiClient.convertToType(data['mostRepliedUsers'], [SendBirdUser]);
+            if (data.hasOwnProperty('most_replied_users')) {
+                obj['most_replied_users'] = ApiClient.convertToType(data['most_replied_users'], [SendBirdUser]);
             }
-            if (data.hasOwnProperty('replyCount')) {
-                obj['replyCount'] = ApiClient.convertToType(data['replyCount'], 'Number');
+            if (data.hasOwnProperty('reply_count')) {
+                obj['reply_count'] = ApiClient.convertToType(data['reply_count'], 'Number');
             }
-            if (data.hasOwnProperty('updatedAt')) {
-                obj['updatedAt'] = ApiClient.convertToType(data['updatedAt'], 'Number');
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Number');
             }
         }
         return obj;
@@ -68,24 +68,24 @@ class SendBirdThreadInfo {
 }
 
 /**
- * @member {Number} lastRepliedAt
+ * @member {Number} last_replied_at
  */
-SendBirdThreadInfo.prototype['lastRepliedAt'] = undefined;
+SendBirdThreadInfo.prototype['last_replied_at'] = undefined;
 
 /**
- * @member {Array.<module:model/SendBirdUser>} mostRepliedUsers
+ * @member {Array.<module:model/SendBirdUser>} most_replied_users
  */
-SendBirdThreadInfo.prototype['mostRepliedUsers'] = undefined;
+SendBirdThreadInfo.prototype['most_replied_users'] = undefined;
 
 /**
- * @member {Number} replyCount
+ * @member {Number} reply_count
  */
-SendBirdThreadInfo.prototype['replyCount'] = undefined;
+SendBirdThreadInfo.prototype['reply_count'] = undefined;
 
 /**
- * @member {Number} updatedAt
+ * @member {Number} updated_at
  */
-SendBirdThreadInfo.prototype['updatedAt'] = undefined;
+SendBirdThreadInfo.prototype['updated_at'] = undefined;
 
 
 

@@ -50,7 +50,7 @@
   describe('UpdateChannelMetadataData', function() {
     it('should create an instance of UpdateChannelMetadataData', function() {
       // uncomment below and update the code to test UpdateChannelMetadataData
-      //var instane = new SendbirdPlatformSdk.UpdateChannelMetadataData();
+      //var instance = new SendbirdPlatformSdk.UpdateChannelMetadataData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.UpdateChannelMetadataData);
     });
 

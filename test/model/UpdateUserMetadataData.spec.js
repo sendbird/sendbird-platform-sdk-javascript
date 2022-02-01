@@ -50,7 +50,7 @@
   describe('UpdateUserMetadataData', function() {
     it('should create an instance of UpdateUserMetadataData', function() {
       // uncomment below and update the code to test UpdateUserMetadataData
-      //var instane = new SendbirdPlatformSdk.UpdateUserMetadataData();
+      //var instance = new SendbirdPlatformSdk.UpdateUserMetadataData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.UpdateUserMetadataData);
     });
 

@@ -50,7 +50,7 @@
   describe('UpdateBotByIdData', function() {
     it('should create an instance of UpdateBotByIdData', function() {
       // uncomment below and update the code to test UpdateBotByIdData
-      //var instane = new SendbirdPlatformSdk.UpdateBotByIdData();
+      //var instance = new SendbirdPlatformSdk.UpdateBotByIdData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.UpdateBotByIdData);
     });
 

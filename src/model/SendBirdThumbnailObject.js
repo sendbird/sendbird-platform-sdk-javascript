@@ -50,8 +50,8 @@ class SendBirdThumbnailObject {
             if (data.hasOwnProperty('height')) {
                 obj['height'] = ApiClient.convertToType(data['height'], 'Number');
             }
-            if (data.hasOwnProperty('plainUrl')) {
-                obj['plainUrl'] = ApiClient.convertToType(data['plainUrl'], 'String');
+            if (data.hasOwnProperty('plain_url')) {
+                obj['plain_url'] = ApiClient.convertToType(data['plain_url'], 'String');
             }
             if (data.hasOwnProperty('real_height')) {
                 obj['real_height'] = ApiClient.convertToType(data['real_height'], 'Number');
@@ -78,9 +78,9 @@ class SendBirdThumbnailObject {
 SendBirdThumbnailObject.prototype['height'] = undefined;
 
 /**
- * @member {String} plainUrl
+ * @member {String} plain_url
  */
-SendBirdThumbnailObject.prototype['plainUrl'] = undefined;
+SendBirdThumbnailObject.prototype['plain_url'] = undefined;
 
 /**
  * @member {Number} real_height

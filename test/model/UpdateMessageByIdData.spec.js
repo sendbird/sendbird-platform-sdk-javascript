@@ -50,7 +50,7 @@
   describe('UpdateMessageByIdData', function() {
     it('should create an instance of UpdateMessageByIdData', function() {
       // uncomment below and update the code to test UpdateMessageByIdData
-      //var instane = new SendbirdPlatformSdk.UpdateMessageByIdData();
+      //var instance = new SendbirdPlatformSdk.UpdateMessageByIdData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.UpdateMessageByIdData);
     });
 

@@ -50,7 +50,7 @@
   describe('JoinChannelsData', function() {
     it('should create an instance of JoinChannelsData', function() {
       // uncomment below and update the code to test JoinChannelsData
-      //var instane = new SendbirdPlatformSdk.JoinChannelsData();
+      //var instance = new SendbirdPlatformSdk.JoinChannelsData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.JoinChannelsData);
     });
 

@@ -48,23 +48,23 @@ class SendBirdPollDetails {
         if (data) {
             obj = obj || new SendBirdPollDetails();
 
-            if (data.hasOwnProperty('allowMultipleVotes')) {
-                obj['allowMultipleVotes'] = ApiClient.convertToType(data['allowMultipleVotes'], 'Boolean');
+            if (data.hasOwnProperty('allow_multiple_votes')) {
+                obj['allow_multiple_votes'] = ApiClient.convertToType(data['allow_multiple_votes'], 'Boolean');
             }
-            if (data.hasOwnProperty('allowUserSuggestion')) {
-                obj['allowUserSuggestion'] = ApiClient.convertToType(data['allowUserSuggestion'], 'Boolean');
+            if (data.hasOwnProperty('allow_user_suggestion')) {
+                obj['allow_user_suggestion'] = ApiClient.convertToType(data['allow_user_suggestion'], 'Boolean');
             }
-            if (data.hasOwnProperty('closeAt')) {
-                obj['closeAt'] = ApiClient.convertToType(data['closeAt'], 'Number');
+            if (data.hasOwnProperty('close_at')) {
+                obj['close_at'] = ApiClient.convertToType(data['close_at'], 'Number');
             }
-            if (data.hasOwnProperty('createdAt')) {
-                obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Number');
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Number');
             }
-            if (data.hasOwnProperty('createdBy')) {
-                obj['createdBy'] = ApiClient.convertToType(data['createdBy'], 'String');
+            if (data.hasOwnProperty('created_by')) {
+                obj['created_by'] = ApiClient.convertToType(data['created_by'], 'String');
             }
-            if (data.hasOwnProperty('isAnonymous')) {
-                obj['isAnonymous'] = ApiClient.convertToType(data['isAnonymous'], 'Boolean');
+            if (data.hasOwnProperty('is_anonymous')) {
+                obj['is_anonymous'] = ApiClient.convertToType(data['is_anonymous'], 'Boolean');
             }
             if (data.hasOwnProperty('options')) {
                 obj['options'] = ApiClient.convertToType(data['options'], [SendBirdPollOption]);
@@ -72,11 +72,11 @@ class SendBirdPollDetails {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
-            if (data.hasOwnProperty('updatedAt')) {
-                obj['updatedAt'] = ApiClient.convertToType(data['updatedAt'], 'Number');
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Number');
             }
-            if (data.hasOwnProperty('voterCount')) {
-                obj['voterCount'] = ApiClient.convertToType(data['voterCount'], 'Number');
+            if (data.hasOwnProperty('voter_count')) {
+                obj['voter_count'] = ApiClient.convertToType(data['voter_count'], 'Number');
             }
         }
         return obj;
@@ -86,34 +86,34 @@ class SendBirdPollDetails {
 }
 
 /**
- * @member {Boolean} allowMultipleVotes
+ * @member {Boolean} allow_multiple_votes
  */
-SendBirdPollDetails.prototype['allowMultipleVotes'] = undefined;
+SendBirdPollDetails.prototype['allow_multiple_votes'] = undefined;
 
 /**
- * @member {Boolean} allowUserSuggestion
+ * @member {Boolean} allow_user_suggestion
  */
-SendBirdPollDetails.prototype['allowUserSuggestion'] = undefined;
+SendBirdPollDetails.prototype['allow_user_suggestion'] = undefined;
 
 /**
- * @member {Number} closeAt
+ * @member {Number} close_at
  */
-SendBirdPollDetails.prototype['closeAt'] = undefined;
+SendBirdPollDetails.prototype['close_at'] = undefined;
 
 /**
- * @member {Number} createdAt
+ * @member {Number} created_at
  */
-SendBirdPollDetails.prototype['createdAt'] = undefined;
+SendBirdPollDetails.prototype['created_at'] = undefined;
 
 /**
- * @member {String} createdBy
+ * @member {String} created_by
  */
-SendBirdPollDetails.prototype['createdBy'] = undefined;
+SendBirdPollDetails.prototype['created_by'] = undefined;
 
 /**
- * @member {Boolean} isAnonymous
+ * @member {Boolean} is_anonymous
  */
-SendBirdPollDetails.prototype['isAnonymous'] = undefined;
+SendBirdPollDetails.prototype['is_anonymous'] = undefined;
 
 /**
  * @member {Array.<module:model/SendBirdPollOption>} options
@@ -126,14 +126,14 @@ SendBirdPollDetails.prototype['options'] = undefined;
 SendBirdPollDetails.prototype['status'] = undefined;
 
 /**
- * @member {Number} updatedAt
+ * @member {Number} updated_at
  */
-SendBirdPollDetails.prototype['updatedAt'] = undefined;
+SendBirdPollDetails.prototype['updated_at'] = undefined;
 
 /**
- * @member {Number} voterCount
+ * @member {Number} voter_count
  */
-SendBirdPollDetails.prototype['voterCount'] = undefined;
+SendBirdPollDetails.prototype['voter_count'] = undefined;
 
 
 

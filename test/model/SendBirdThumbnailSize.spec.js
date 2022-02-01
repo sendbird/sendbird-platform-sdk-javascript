@@ -54,13 +54,13 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.SendBirdThumbnailSize);
     });
 
-    it('should have the property maxHeight (base name: "maxHeight")', function() {
+    it('should have the property maxHeight (base name: "max_height")', function() {
       // uncomment below and update the code to test the property maxHeight
       //var instance = new SendbirdPlatformSdk.SendBirdThumbnailSize();
       //expect(instance).to.be();
     });
 
-    it('should have the property maxWidth (base name: "maxWidth")', function() {
+    it('should have the property maxWidth (base name: "max_width")', function() {
       // uncomment below and update the code to test the property maxWidth
       //var instance = new SendbirdPlatformSdk.SendBirdThumbnailSize();
       //expect(instance).to.be();

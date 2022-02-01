@@ -50,7 +50,7 @@
   describe('UpdateExtraDataInMessageData', function() {
     it('should create an instance of UpdateExtraDataInMessageData', function() {
       // uncomment below and update the code to test UpdateExtraDataInMessageData
-      //var instane = new SendbirdPlatformSdk.UpdateExtraDataInMessageData();
+      //var instance = new SendbirdPlatformSdk.UpdateExtraDataInMessageData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.UpdateExtraDataInMessageData);
     });
 

@@ -54,13 +54,13 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.SendBirdPollUpdatedVoteCount);
     });
 
-    it('should have the property optionId (base name: "optionId")', function() {
+    it('should have the property optionId (base name: "option_id")', function() {
       // uncomment below and update the code to test the property optionId
       //var instance = new SendbirdPlatformSdk.SendBirdPollUpdatedVoteCount();
       //expect(instance).to.be();
     });
 
-    it('should have the property voteCount (base name: "voteCount")', function() {
+    it('should have the property voteCount (base name: "vote_count")', function() {
       // uncomment below and update the code to test the property voteCount
       //var instance = new SendbirdPlatformSdk.SendBirdPollUpdatedVoteCount();
       //expect(instance).to.be();

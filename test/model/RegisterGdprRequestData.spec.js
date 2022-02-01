@@ -50,7 +50,7 @@
   describe('RegisterGdprRequestData', function() {
     it('should create an instance of RegisterGdprRequestData', function() {
       // uncomment below and update the code to test RegisterGdprRequestData
-      //var instane = new SendbirdPlatformSdk.RegisterGdprRequestData();
+      //var instance = new SendbirdPlatformSdk.RegisterGdprRequestData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.RegisterGdprRequestData);
     });
 

@@ -50,7 +50,7 @@
   describe('UpdateCountPreferenceOfChannelByUrlData', function() {
     it('should create an instance of UpdateCountPreferenceOfChannelByUrlData', function() {
       // uncomment below and update the code to test UpdateCountPreferenceOfChannelByUrlData
-      //var instane = new SendbirdPlatformSdk.UpdateCountPreferenceOfChannelByUrlData();
+      //var instance = new SendbirdPlatformSdk.UpdateCountPreferenceOfChannelByUrlData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.UpdateCountPreferenceOfChannelByUrlData);
     });
 

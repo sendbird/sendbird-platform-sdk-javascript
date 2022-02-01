@@ -54,25 +54,25 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.SendBirdThreadInfo);
     });
 
-    it('should have the property lastRepliedAt (base name: "lastRepliedAt")', function() {
+    it('should have the property lastRepliedAt (base name: "last_replied_at")', function() {
       // uncomment below and update the code to test the property lastRepliedAt
       //var instance = new SendbirdPlatformSdk.SendBirdThreadInfo();
       //expect(instance).to.be();
     });
 
-    it('should have the property mostRepliedUsers (base name: "mostRepliedUsers")', function() {
+    it('should have the property mostRepliedUsers (base name: "most_replied_users")', function() {
       // uncomment below and update the code to test the property mostRepliedUsers
       //var instance = new SendbirdPlatformSdk.SendBirdThreadInfo();
       //expect(instance).to.be();
     });
 
-    it('should have the property replyCount (base name: "replyCount")', function() {
+    it('should have the property replyCount (base name: "reply_count")', function() {
       // uncomment below and update the code to test the property replyCount
       //var instance = new SendbirdPlatformSdk.SendBirdThreadInfo();
       //expect(instance).to.be();
     });
 
-    it('should have the property updatedAt (base name: "updatedAt")', function() {
+    it('should have the property updatedAt (base name: "updated_at")', function() {
       // uncomment below and update the code to test the property updatedAt
       //var instance = new SendbirdPlatformSdk.SendBirdThreadInfo();
       //expect(instance).to.be();

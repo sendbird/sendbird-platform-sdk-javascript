@@ -50,7 +50,7 @@
   describe('EnableReactionsData', function() {
     it('should create an instance of EnableReactionsData', function() {
       // uncomment below and update the code to test EnableReactionsData
-      //var instane = new SendbirdPlatformSdk.EnableReactionsData();
+      //var instance = new SendbirdPlatformSdk.EnableReactionsData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.EnableReactionsData);
     });
 

@@ -50,7 +50,7 @@
   describe('AddRegistrationOrDeviceTokenData', function() {
     it('should create an instance of AddRegistrationOrDeviceTokenData', function() {
       // uncomment below and update the code to test AddRegistrationOrDeviceTokenData
-      //var instane = new SendbirdPlatformSdk.AddRegistrationOrDeviceTokenData();
+      //var instance = new SendbirdPlatformSdk.AddRegistrationOrDeviceTokenData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.AddRegistrationOrDeviceTokenData);
     });
 

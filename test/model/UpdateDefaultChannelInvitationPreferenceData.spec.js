@@ -50,7 +50,7 @@
   describe('UpdateDefaultChannelInvitationPreferenceData', function() {
     it('should create an instance of UpdateDefaultChannelInvitationPreferenceData', function() {
       // uncomment below and update the code to test UpdateDefaultChannelInvitationPreferenceData
-      //var instane = new SendbirdPlatformSdk.UpdateDefaultChannelInvitationPreferenceData();
+      //var instance = new SendbirdPlatformSdk.UpdateDefaultChannelInvitationPreferenceData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.UpdateDefaultChannelInvitationPreferenceData);
     });
 

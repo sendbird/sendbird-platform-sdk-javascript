@@ -50,7 +50,7 @@
   describe('OcBanUserData', function() {
     it('should create an instance of OcBanUserData', function() {
       // uncomment below and update the code to test OcBanUserData
-      //var instane = new SendbirdPlatformSdk.OcBanUserData();
+      //var instance = new SendbirdPlatformSdk.OcBanUserData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.OcBanUserData);
     });
 

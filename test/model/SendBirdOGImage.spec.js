@@ -66,7 +66,7 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property secureUrl (base name: "secureUrl")', function() {
+    it('should have the property secureUrl (base name: "secure_url")', function() {
       // uncomment below and update the code to test the property secureUrl
       //var instance = new SendbirdPlatformSdk.SendBirdOGImage();
       //expect(instance).to.be();

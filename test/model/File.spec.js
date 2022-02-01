@@ -54,7 +54,7 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.File);
     });
 
-    it('should have the property lastModified (base name: "lastModified")', function() {
+    it('should have the property lastModified (base name: "last_modified")', function() {
       // uncomment below and update the code to test the property lastModified
       //var instance = new SendbirdPlatformSdk.File();
       //expect(instance).to.be();
@@ -78,7 +78,7 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property webkitRelativePath (base name: "webkitRelativePath")', function() {
+    it('should have the property webkitRelativePath (base name: "webkit_relative_path")', function() {
       // uncomment below and update the code to test the property webkitRelativePath
       //var instance = new SendbirdPlatformSdk.File();
       //expect(instance).to.be();

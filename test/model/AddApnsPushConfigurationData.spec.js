@@ -50,7 +50,7 @@
   describe('AddApnsPushConfigurationData', function() {
     it('should create an instance of AddApnsPushConfigurationData', function() {
       // uncomment below and update the code to test AddApnsPushConfigurationData
-      //var instane = new SendbirdPlatformSdk.AddApnsPushConfigurationData();
+      //var instance = new SendbirdPlatformSdk.AddApnsPushConfigurationData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.AddApnsPushConfigurationData);
     });
 

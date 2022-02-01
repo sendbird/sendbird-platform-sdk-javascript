@@ -48,44 +48,44 @@ class SendBirdSender {
         if (data) {
             obj = obj || new SendBirdSender();
 
-            if (data.hasOwnProperty('connectionStatus')) {
-                obj['connectionStatus'] = ApiClient.convertToType(data['connectionStatus'], 'String');
+            if (data.hasOwnProperty('connection_status')) {
+                obj['connection_status'] = ApiClient.convertToType(data['connection_status'], 'String');
             }
-            if (data.hasOwnProperty('friendDiscoveryKey')) {
-                obj['friendDiscoveryKey'] = ApiClient.convertToType(data['friendDiscoveryKey'], 'String');
+            if (data.hasOwnProperty('friend_discovery_key')) {
+                obj['friend_discovery_key'] = ApiClient.convertToType(data['friend_discovery_key'], 'String');
             }
-            if (data.hasOwnProperty('friendName')) {
-                obj['friendName'] = ApiClient.convertToType(data['friendName'], 'String');
+            if (data.hasOwnProperty('friend_name')) {
+                obj['friend_name'] = ApiClient.convertToType(data['friend_name'], 'String');
             }
-            if (data.hasOwnProperty('isActive')) {
-                obj['isActive'] = ApiClient.convertToType(data['isActive'], 'Boolean');
+            if (data.hasOwnProperty('is_active')) {
+                obj['is_active'] = ApiClient.convertToType(data['is_active'], 'Boolean');
             }
-            if (data.hasOwnProperty('isBlockedByMe')) {
-                obj['isBlockedByMe'] = ApiClient.convertToType(data['isBlockedByMe'], 'Boolean');
+            if (data.hasOwnProperty('is_blocked_by_me')) {
+                obj['is_blocked_by_me'] = ApiClient.convertToType(data['is_blocked_by_me'], 'Boolean');
             }
-            if (data.hasOwnProperty('lastSeenAt')) {
-                obj['lastSeenAt'] = ApiClient.convertToType(data['lastSeenAt'], 'String');
+            if (data.hasOwnProperty('last_seen_at')) {
+                obj['last_seen_at'] = ApiClient.convertToType(data['last_seen_at'], 'String');
             }
-            if (data.hasOwnProperty('metaData')) {
-                obj['metaData'] = ModelObject.constructFromObject(data['metaData']);
+            if (data.hasOwnProperty('meta_data')) {
+                obj['meta_data'] = ModelObject.constructFromObject(data['meta_data']);
             }
             if (data.hasOwnProperty('nickname')) {
                 obj['nickname'] = ApiClient.convertToType(data['nickname'], 'String');
             }
-            if (data.hasOwnProperty('plainProfileUrl')) {
-                obj['plainProfileUrl'] = ApiClient.convertToType(data['plainProfileUrl'], 'String');
+            if (data.hasOwnProperty('plain_profile_url')) {
+                obj['plain_profile_url'] = ApiClient.convertToType(data['plain_profile_url'], 'String');
             }
-            if (data.hasOwnProperty('preferredLanguages')) {
-                obj['preferredLanguages'] = ApiClient.convertToType(data['preferredLanguages'], ['String']);
+            if (data.hasOwnProperty('preferred_languages')) {
+                obj['preferred_languages'] = ApiClient.convertToType(data['preferred_languages'], ['String']);
             }
-            if (data.hasOwnProperty('profileUrl')) {
-                obj['profileUrl'] = ApiClient.convertToType(data['profileUrl'], 'String');
+            if (data.hasOwnProperty('profile_url')) {
+                obj['profile_url'] = ApiClient.convertToType(data['profile_url'], 'String');
             }
-            if (data.hasOwnProperty('requireAuth')) {
-                obj['requireAuth'] = ApiClient.convertToType(data['requireAuth'], 'Boolean');
+            if (data.hasOwnProperty('require_auth')) {
+                obj['require_auth'] = ApiClient.convertToType(data['require_auth'], 'Boolean');
             }
-            if (data.hasOwnProperty('userId')) {
-                obj['userId'] = ApiClient.convertToType(data['userId'], 'String');
+            if (data.hasOwnProperty('user_id')) {
+                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
             }
         }
         return obj;
@@ -95,39 +95,39 @@ class SendBirdSender {
 }
 
 /**
- * @member {String} connectionStatus
+ * @member {String} connection_status
  */
-SendBirdSender.prototype['connectionStatus'] = undefined;
+SendBirdSender.prototype['connection_status'] = undefined;
 
 /**
- * @member {String} friendDiscoveryKey
+ * @member {String} friend_discovery_key
  */
-SendBirdSender.prototype['friendDiscoveryKey'] = undefined;
+SendBirdSender.prototype['friend_discovery_key'] = undefined;
 
 /**
- * @member {String} friendName
+ * @member {String} friend_name
  */
-SendBirdSender.prototype['friendName'] = undefined;
+SendBirdSender.prototype['friend_name'] = undefined;
 
 /**
- * @member {Boolean} isActive
+ * @member {Boolean} is_active
  */
-SendBirdSender.prototype['isActive'] = undefined;
+SendBirdSender.prototype['is_active'] = undefined;
 
 /**
- * @member {Boolean} isBlockedByMe
+ * @member {Boolean} is_blocked_by_me
  */
-SendBirdSender.prototype['isBlockedByMe'] = undefined;
+SendBirdSender.prototype['is_blocked_by_me'] = undefined;
 
 /**
- * @member {String} lastSeenAt
+ * @member {String} last_seen_at
  */
-SendBirdSender.prototype['lastSeenAt'] = undefined;
+SendBirdSender.prototype['last_seen_at'] = undefined;
 
 /**
- * @member {module:model/ModelObject} metaData
+ * @member {module:model/ModelObject} meta_data
  */
-SendBirdSender.prototype['metaData'] = undefined;
+SendBirdSender.prototype['meta_data'] = undefined;
 
 /**
  * @member {String} nickname
@@ -135,29 +135,29 @@ SendBirdSender.prototype['metaData'] = undefined;
 SendBirdSender.prototype['nickname'] = undefined;
 
 /**
- * @member {String} plainProfileUrl
+ * @member {String} plain_profile_url
  */
-SendBirdSender.prototype['plainProfileUrl'] = undefined;
+SendBirdSender.prototype['plain_profile_url'] = undefined;
 
 /**
- * @member {Array.<String>} preferredLanguages
+ * @member {Array.<String>} preferred_languages
  */
-SendBirdSender.prototype['preferredLanguages'] = undefined;
+SendBirdSender.prototype['preferred_languages'] = undefined;
 
 /**
- * @member {String} profileUrl
+ * @member {String} profile_url
  */
-SendBirdSender.prototype['profileUrl'] = undefined;
+SendBirdSender.prototype['profile_url'] = undefined;
 
 /**
- * @member {Boolean} requireAuth
+ * @member {Boolean} require_auth
  */
-SendBirdSender.prototype['requireAuth'] = undefined;
+SendBirdSender.prototype['require_auth'] = undefined;
 
 /**
- * @member {String} userId
+ * @member {String} user_id
  */
-SendBirdSender.prototype['userId'] = undefined;
+SendBirdSender.prototype['user_id'] = undefined;
 
 
 

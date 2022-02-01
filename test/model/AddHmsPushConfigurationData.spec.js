@@ -50,7 +50,7 @@
   describe('AddHmsPushConfigurationData', function() {
     it('should create an instance of AddHmsPushConfigurationData', function() {
       // uncomment below and update the code to test AddHmsPushConfigurationData
-      //var instane = new SendbirdPlatformSdk.AddHmsPushConfigurationData();
+      //var instance = new SendbirdPlatformSdk.AddHmsPushConfigurationData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.AddHmsPushConfigurationData);
     });
 

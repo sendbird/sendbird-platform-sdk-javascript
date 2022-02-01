@@ -50,7 +50,7 @@
   describe('UpdateEmojiCategoryUrlByIdData', function() {
     it('should create an instance of UpdateEmojiCategoryUrlByIdData', function() {
       // uncomment below and update the code to test UpdateEmojiCategoryUrlByIdData
-      //var instane = new SendbirdPlatformSdk.UpdateEmojiCategoryUrlByIdData();
+      //var instance = new SendbirdPlatformSdk.UpdateEmojiCategoryUrlByIdData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.UpdateEmojiCategoryUrlByIdData);
     });
 

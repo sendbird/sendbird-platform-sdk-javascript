@@ -54,13 +54,13 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.SendBirdGroupChannelCollection);
     });
 
-    it('should have the property channelList (base name: "channelList")', function() {
+    it('should have the property channelList (base name: "channel_list")', function() {
       // uncomment below and update the code to test the property channelList
       //var instance = new SendbirdPlatformSdk.SendBirdGroupChannelCollection();
       //expect(instance).to.be();
     });
 
-    it('should have the property hasMore (base name: "hasMore")', function() {
+    it('should have the property hasMore (base name: "has_more")', function() {
       // uncomment below and update the code to test the property hasMore
       //var instance = new SendbirdPlatformSdk.SendBirdGroupChannelCollection();
       //expect(instance).to.be();

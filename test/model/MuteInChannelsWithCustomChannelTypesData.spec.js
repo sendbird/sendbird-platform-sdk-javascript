@@ -50,7 +50,7 @@
   describe('MuteInChannelsWithCustomChannelTypesData', function() {
     it('should create an instance of MuteInChannelsWithCustomChannelTypesData', function() {
       // uncomment below and update the code to test MuteInChannelsWithCustomChannelTypesData
-      //var instane = new SendbirdPlatformSdk.MuteInChannelsWithCustomChannelTypesData();
+      //var instance = new SendbirdPlatformSdk.MuteInChannelsWithCustomChannelTypesData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.MuteInChannelsWithCustomChannelTypesData);
     });
 

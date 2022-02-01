@@ -54,13 +54,13 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.SendBirdUserMessageParams);
     });
 
-    it('should have the property appleCriticalAlertOptions (base name: "appleCriticalAlertOptions")', function() {
+    it('should have the property appleCriticalAlertOptions (base name: "apple_critical_alert_options")', function() {
       // uncomment below and update the code to test the property appleCriticalAlertOptions
       //var instance = new SendbirdPlatformSdk.SendBirdUserMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property customType (base name: "customType")', function() {
+    it('should have the property customType (base name: "custom_type")', function() {
       // uncomment below and update the code to test the property customType
       //var instance = new SendbirdPlatformSdk.SendBirdUserMessageParams();
       //expect(instance).to.be();
@@ -72,25 +72,25 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property isReplyToChannel (base name: "isReplyToChannel")', function() {
+    it('should have the property isReplyToChannel (base name: "is_reply_to_channel")', function() {
       // uncomment below and update the code to test the property isReplyToChannel
       //var instance = new SendbirdPlatformSdk.SendBirdUserMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property mentionType (base name: "mentionType")', function() {
+    it('should have the property mentionType (base name: "mention_type")', function() {
       // uncomment below and update the code to test the property mentionType
       //var instance = new SendbirdPlatformSdk.SendBirdUserMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property mentionedUserIds (base name: "mentionedUserIds")', function() {
+    it('should have the property mentionedUserIds (base name: "mentioned_user_ids")', function() {
       // uncomment below and update the code to test the property mentionedUserIds
       //var instance = new SendbirdPlatformSdk.SendBirdUserMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property mentionedUsers (base name: "mentionedUsers")', function() {
+    it('should have the property mentionedUsers (base name: "mentioned_users")', function() {
       // uncomment below and update the code to test the property mentionedUsers
       //var instance = new SendbirdPlatformSdk.SendBirdUserMessageParams();
       //expect(instance).to.be();
@@ -102,43 +102,43 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property metaArrayKeys (base name: "metaArrayKeys")', function() {
+    it('should have the property metaArrayKeys (base name: "meta_array_keys")', function() {
       // uncomment below and update the code to test the property metaArrayKeys
       //var instance = new SendbirdPlatformSdk.SendBirdUserMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property metaArrays (base name: "metaArrays")', function() {
+    it('should have the property metaArrays (base name: "meta_arrays")', function() {
       // uncomment below and update the code to test the property metaArrays
       //var instance = new SendbirdPlatformSdk.SendBirdUserMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property parentMessageId (base name: "parentMessageId")', function() {
+    it('should have the property parentMessageId (base name: "parent_message_id")', function() {
       // uncomment below and update the code to test the property parentMessageId
       //var instance = new SendbirdPlatformSdk.SendBirdUserMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property pollId (base name: "pollId")', function() {
+    it('should have the property pollId (base name: "poll_id")', function() {
       // uncomment below and update the code to test the property pollId
       //var instance = new SendbirdPlatformSdk.SendBirdUserMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property pushNotificationDeliveryOption (base name: "pushNotificationDeliveryOption")', function() {
+    it('should have the property pushNotificationDeliveryOption (base name: "push_notification_delivery_option")', function() {
       // uncomment below and update the code to test the property pushNotificationDeliveryOption
       //var instance = new SendbirdPlatformSdk.SendBirdUserMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property targetLanguages (base name: "targetLanguages")', function() {
+    it('should have the property targetLanguages (base name: "target_languages")', function() {
       // uncomment below and update the code to test the property targetLanguages
       //var instance = new SendbirdPlatformSdk.SendBirdUserMessageParams();
       //expect(instance).to.be();
     });
 
-    it('should have the property translationTargetLanguages (base name: "translationTargetLanguages")', function() {
+    it('should have the property translationTargetLanguages (base name: "translation_target_languages")', function() {
       // uncomment below and update the code to test the property translationTargetLanguages
       //var instance = new SendbirdPlatformSdk.SendBirdUserMessageParams();
       //expect(instance).to.be();

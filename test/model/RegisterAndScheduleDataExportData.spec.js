@@ -50,7 +50,7 @@
   describe('RegisterAndScheduleDataExportData', function() {
     it('should create an instance of RegisterAndScheduleDataExportData', function() {
       // uncomment below and update the code to test RegisterAndScheduleDataExportData
-      //var instane = new SendbirdPlatformSdk.RegisterAndScheduleDataExportData();
+      //var instance = new SendbirdPlatformSdk.RegisterAndScheduleDataExportData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.RegisterAndScheduleDataExportData);
     });
 

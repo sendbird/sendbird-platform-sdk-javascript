@@ -50,7 +50,7 @@
   describe('RegisterAsOperatorToChannelsWithCustomChannelTypesData', function() {
     it('should create an instance of RegisterAsOperatorToChannelsWithCustomChannelTypesData', function() {
       // uncomment below and update the code to test RegisterAsOperatorToChannelsWithCustomChannelTypesData
-      //var instane = new SendbirdPlatformSdk.RegisterAsOperatorToChannelsWithCustomChannelTypesData();
+      //var instance = new SendbirdPlatformSdk.RegisterAsOperatorToChannelsWithCustomChannelTypesData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.RegisterAsOperatorToChannelsWithCustomChannelTypesData);
     });
 

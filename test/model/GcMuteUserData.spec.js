@@ -50,7 +50,7 @@
   describe('GcMuteUserData', function() {
     it('should create an instance of GcMuteUserData', function() {
       // uncomment below and update the code to test GcMuteUserData
-      //var instane = new SendbirdPlatformSdk.GcMuteUserData();
+      //var instance = new SendbirdPlatformSdk.GcMuteUserData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.GcMuteUserData);
     });
 

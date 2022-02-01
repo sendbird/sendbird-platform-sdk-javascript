@@ -50,7 +50,7 @@
   describe('GcBanUserData', function() {
     it('should create an instance of GcBanUserData', function() {
       // uncomment below and update the code to test GcBanUserData
-      //var instane = new SendbirdPlatformSdk.GcBanUserData();
+      //var instance = new SendbirdPlatformSdk.GcBanUserData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.GcBanUserData);
     });
 

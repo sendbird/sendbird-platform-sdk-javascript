@@ -50,7 +50,7 @@
   describe('GcDeclineInvitationData', function() {
     it('should create an instance of GcDeclineInvitationData', function() {
       // uncomment below and update the code to test GcDeclineInvitationData
-      //var instane = new SendbirdPlatformSdk.GcDeclineInvitationData();
+      //var instance = new SendbirdPlatformSdk.GcDeclineInvitationData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.GcDeclineInvitationData);
     });
 

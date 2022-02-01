@@ -50,7 +50,7 @@
   describe('GcUpdateChannelByUrlData', function() {
     it('should create an instance of GcUpdateChannelByUrlData', function() {
       // uncomment below and update the code to test GcUpdateChannelByUrlData
-      //var instane = new SendbirdPlatformSdk.GcUpdateChannelByUrlData();
+      //var instance = new SendbirdPlatformSdk.GcUpdateChannelByUrlData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.GcUpdateChannelByUrlData);
     });
 

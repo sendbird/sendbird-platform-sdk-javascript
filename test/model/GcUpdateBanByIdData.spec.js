@@ -50,7 +50,7 @@
   describe('GcUpdateBanByIdData', function() {
     it('should create an instance of GcUpdateBanByIdData', function() {
       // uncomment below and update the code to test GcUpdateBanByIdData
-      //var instane = new SendbirdPlatformSdk.GcUpdateBanByIdData();
+      //var instance = new SendbirdPlatformSdk.GcUpdateBanByIdData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.GcUpdateBanByIdData);
     });
 

@@ -50,7 +50,7 @@
   describe('AddIpToWhitelistData', function() {
     it('should create an instance of AddIpToWhitelistData', function() {
       // uncomment below and update the code to test AddIpToWhitelistData
-      //var instane = new SendbirdPlatformSdk.AddIpToWhitelistData();
+      //var instance = new SendbirdPlatformSdk.AddIpToWhitelistData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.AddIpToWhitelistData);
     });
 

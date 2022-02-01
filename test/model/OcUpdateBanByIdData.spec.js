@@ -50,7 +50,7 @@
   describe('OcUpdateBanByIdData', function() {
     it('should create an instance of OcUpdateBanByIdData', function() {
       // uncomment below and update the code to test OcUpdateBanByIdData
-      //var instane = new SendbirdPlatformSdk.OcUpdateBanByIdData();
+      //var instance = new SendbirdPlatformSdk.OcUpdateBanByIdData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.OcUpdateBanByIdData);
     });
 

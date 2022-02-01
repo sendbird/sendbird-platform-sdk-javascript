@@ -50,7 +50,7 @@
   describe('AddReactionToAMessageData', function() {
     it('should create an instance of AddReactionToAMessageData', function() {
       // uncomment below and update the code to test AddReactionToAMessageData
-      //var instane = new SendbirdPlatformSdk.AddReactionToAMessageData();
+      //var instance = new SendbirdPlatformSdk.AddReactionToAMessageData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.AddReactionToAMessageData);
     });
 

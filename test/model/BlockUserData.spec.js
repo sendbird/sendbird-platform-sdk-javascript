@@ -50,7 +50,7 @@
   describe('BlockUserData', function() {
     it('should create an instance of BlockUserData', function() {
       // uncomment below and update the code to test BlockUserData
-      //var instane = new SendbirdPlatformSdk.BlockUserData();
+      //var instance = new SendbirdPlatformSdk.BlockUserData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.BlockUserData);
     });
 

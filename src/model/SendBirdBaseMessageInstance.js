@@ -56,71 +56,71 @@ class SendBirdBaseMessageInstance {
         if (data) {
             obj = obj || new SendBirdBaseMessageInstance();
 
-            if (data.hasOwnProperty('appleCriticalAlertOptions')) {
-                obj['appleCriticalAlertOptions'] = SendBirdAppleCriticalAlertOptions.constructFromObject(data['appleCriticalAlertOptions']);
+            if (data.hasOwnProperty('apple_critical_alert_options')) {
+                obj['apple_critical_alert_options'] = SendBirdAppleCriticalAlertOptions.constructFromObject(data['apple_critical_alert_options']);
             }
-            if (data.hasOwnProperty('channelType')) {
-                obj['channelType'] = ApiClient.convertToType(data['channelType'], 'String');
+            if (data.hasOwnProperty('channel_type')) {
+                obj['channel_type'] = ApiClient.convertToType(data['channel_type'], 'String');
             }
-            if (data.hasOwnProperty('channelUrl')) {
-                obj['channelUrl'] = ApiClient.convertToType(data['channelUrl'], 'String');
+            if (data.hasOwnProperty('channel_url')) {
+                obj['channel_url'] = ApiClient.convertToType(data['channel_url'], 'String');
             }
-            if (data.hasOwnProperty('createdAt')) {
-                obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Number');
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Number');
             }
-            if (data.hasOwnProperty('customType')) {
-                obj['customType'] = ApiClient.convertToType(data['customType'], 'String');
+            if (data.hasOwnProperty('custom_type')) {
+                obj['custom_type'] = ApiClient.convertToType(data['custom_type'], 'String');
             }
             if (data.hasOwnProperty('data')) {
                 obj['data'] = ApiClient.convertToType(data['data'], 'String');
             }
-            if (data.hasOwnProperty('isReplyToChannel')) {
-                obj['isReplyToChannel'] = ApiClient.convertToType(data['isReplyToChannel'], 'Boolean');
+            if (data.hasOwnProperty('is_reply_to_channel')) {
+                obj['is_reply_to_channel'] = ApiClient.convertToType(data['is_reply_to_channel'], 'Boolean');
             }
-            if (data.hasOwnProperty('mentionType')) {
-                obj['mentionType'] = ApiClient.convertToType(data['mentionType'], 'String');
+            if (data.hasOwnProperty('mention_type')) {
+                obj['mention_type'] = ApiClient.convertToType(data['mention_type'], 'String');
             }
-            if (data.hasOwnProperty('mentionedUsers')) {
-                obj['mentionedUsers'] = ApiClient.convertToType(data['mentionedUsers'], [SendBirdUser]);
+            if (data.hasOwnProperty('mentioned_users')) {
+                obj['mentioned_users'] = ApiClient.convertToType(data['mentioned_users'], [SendBirdUser]);
             }
-            if (data.hasOwnProperty('messageId')) {
-                obj['messageId'] = ApiClient.convertToType(data['messageId'], 'Number');
+            if (data.hasOwnProperty('message_id')) {
+                obj['message_id'] = ApiClient.convertToType(data['message_id'], 'Number');
             }
-            if (data.hasOwnProperty('messageType')) {
-                obj['messageType'] = ApiClient.convertToType(data['messageType'], 'String');
+            if (data.hasOwnProperty('message_type')) {
+                obj['message_type'] = ApiClient.convertToType(data['message_type'], 'String');
             }
-            if (data.hasOwnProperty('metaArray')) {
-                obj['metaArray'] = ModelObject.constructFromObject(data['metaArray']);
+            if (data.hasOwnProperty('meta_array')) {
+                obj['meta_array'] = ModelObject.constructFromObject(data['meta_array']);
             }
-            if (data.hasOwnProperty('metaArrays')) {
-                obj['metaArrays'] = ApiClient.convertToType(data['metaArrays'], [SendBirdMessageMetaArray]);
+            if (data.hasOwnProperty('meta_arrays')) {
+                obj['meta_arrays'] = ApiClient.convertToType(data['meta_arrays'], [SendBirdMessageMetaArray]);
             }
-            if (data.hasOwnProperty('ogMetaData')) {
-                obj['ogMetaData'] = SendBirdOGMetaData.constructFromObject(data['ogMetaData']);
+            if (data.hasOwnProperty('og_meta_data')) {
+                obj['og_meta_data'] = SendBirdOGMetaData.constructFromObject(data['og_meta_data']);
             }
-            if (data.hasOwnProperty('parentMessage')) {
-                obj['parentMessage'] = SendBirdMessageResponse.constructFromObject(data['parentMessage']);
+            if (data.hasOwnProperty('parent_message')) {
+                obj['parent_message'] = SendBirdMessageResponse.constructFromObject(data['parent_message']);
             }
-            if (data.hasOwnProperty('parentMessageId')) {
-                obj['parentMessageId'] = ApiClient.convertToType(data['parentMessageId'], 'Number');
+            if (data.hasOwnProperty('parent_message_id')) {
+                obj['parent_message_id'] = ApiClient.convertToType(data['parent_message_id'], 'Number');
             }
-            if (data.hasOwnProperty('parentMessageText')) {
-                obj['parentMessageText'] = ApiClient.convertToType(data['parentMessageText'], 'String');
+            if (data.hasOwnProperty('parent_message_text')) {
+                obj['parent_message_text'] = ApiClient.convertToType(data['parent_message_text'], 'String');
             }
             if (data.hasOwnProperty('reactions')) {
                 obj['reactions'] = ApiClient.convertToType(data['reactions'], [SendBirdReaction]);
             }
-            if (data.hasOwnProperty('sendingStatus')) {
-                obj['sendingStatus'] = ApiClient.convertToType(data['sendingStatus'], 'String');
+            if (data.hasOwnProperty('sending_status')) {
+                obj['sending_status'] = ApiClient.convertToType(data['sending_status'], 'String');
             }
             if (data.hasOwnProperty('silent')) {
                 obj['silent'] = ApiClient.convertToType(data['silent'], 'Boolean');
             }
-            if (data.hasOwnProperty('threadInfo')) {
-                obj['threadInfo'] = SendBirdThreadInfo.constructFromObject(data['threadInfo']);
+            if (data.hasOwnProperty('thread_info')) {
+                obj['thread_info'] = SendBirdThreadInfo.constructFromObject(data['thread_info']);
             }
-            if (data.hasOwnProperty('updatedAt')) {
-                obj['updatedAt'] = ApiClient.convertToType(data['updatedAt'], 'Number');
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Number');
             }
         }
         return obj;
@@ -130,29 +130,29 @@ class SendBirdBaseMessageInstance {
 }
 
 /**
- * @member {module:model/SendBirdAppleCriticalAlertOptions} appleCriticalAlertOptions
+ * @member {module:model/SendBirdAppleCriticalAlertOptions} apple_critical_alert_options
  */
-SendBirdBaseMessageInstance.prototype['appleCriticalAlertOptions'] = undefined;
+SendBirdBaseMessageInstance.prototype['apple_critical_alert_options'] = undefined;
 
 /**
- * @member {String} channelType
+ * @member {String} channel_type
  */
-SendBirdBaseMessageInstance.prototype['channelType'] = undefined;
+SendBirdBaseMessageInstance.prototype['channel_type'] = undefined;
 
 /**
- * @member {String} channelUrl
+ * @member {String} channel_url
  */
-SendBirdBaseMessageInstance.prototype['channelUrl'] = undefined;
+SendBirdBaseMessageInstance.prototype['channel_url'] = undefined;
 
 /**
- * @member {Number} createdAt
+ * @member {Number} created_at
  */
-SendBirdBaseMessageInstance.prototype['createdAt'] = undefined;
+SendBirdBaseMessageInstance.prototype['created_at'] = undefined;
 
 /**
- * @member {String} customType
+ * @member {String} custom_type
  */
-SendBirdBaseMessageInstance.prototype['customType'] = undefined;
+SendBirdBaseMessageInstance.prototype['custom_type'] = undefined;
 
 /**
  * @member {String} data
@@ -160,59 +160,59 @@ SendBirdBaseMessageInstance.prototype['customType'] = undefined;
 SendBirdBaseMessageInstance.prototype['data'] = undefined;
 
 /**
- * @member {Boolean} isReplyToChannel
+ * @member {Boolean} is_reply_to_channel
  */
-SendBirdBaseMessageInstance.prototype['isReplyToChannel'] = undefined;
+SendBirdBaseMessageInstance.prototype['is_reply_to_channel'] = undefined;
 
 /**
- * @member {String} mentionType
+ * @member {String} mention_type
  */
-SendBirdBaseMessageInstance.prototype['mentionType'] = undefined;
+SendBirdBaseMessageInstance.prototype['mention_type'] = undefined;
 
 /**
- * @member {Array.<module:model/SendBirdUser>} mentionedUsers
+ * @member {Array.<module:model/SendBirdUser>} mentioned_users
  */
-SendBirdBaseMessageInstance.prototype['mentionedUsers'] = undefined;
+SendBirdBaseMessageInstance.prototype['mentioned_users'] = undefined;
 
 /**
- * @member {Number} messageId
+ * @member {Number} message_id
  */
-SendBirdBaseMessageInstance.prototype['messageId'] = undefined;
+SendBirdBaseMessageInstance.prototype['message_id'] = undefined;
 
 /**
- * @member {module:model/SendBirdBaseMessageInstance.MessageTypeEnum} messageType
+ * @member {module:model/SendBirdBaseMessageInstance.MessageTypeEnum} message_type
  */
-SendBirdBaseMessageInstance.prototype['messageType'] = undefined;
+SendBirdBaseMessageInstance.prototype['message_type'] = undefined;
 
 /**
- * @member {module:model/ModelObject} metaArray
+ * @member {module:model/ModelObject} meta_array
  */
-SendBirdBaseMessageInstance.prototype['metaArray'] = undefined;
+SendBirdBaseMessageInstance.prototype['meta_array'] = undefined;
 
 /**
- * @member {Array.<module:model/SendBirdMessageMetaArray>} metaArrays
+ * @member {Array.<module:model/SendBirdMessageMetaArray>} meta_arrays
  */
-SendBirdBaseMessageInstance.prototype['metaArrays'] = undefined;
+SendBirdBaseMessageInstance.prototype['meta_arrays'] = undefined;
 
 /**
- * @member {module:model/SendBirdOGMetaData} ogMetaData
+ * @member {module:model/SendBirdOGMetaData} og_meta_data
  */
-SendBirdBaseMessageInstance.prototype['ogMetaData'] = undefined;
+SendBirdBaseMessageInstance.prototype['og_meta_data'] = undefined;
 
 /**
- * @member {module:model/SendBirdMessageResponse} parentMessage
+ * @member {module:model/SendBirdMessageResponse} parent_message
  */
-SendBirdBaseMessageInstance.prototype['parentMessage'] = undefined;
+SendBirdBaseMessageInstance.prototype['parent_message'] = undefined;
 
 /**
- * @member {Number} parentMessageId
+ * @member {Number} parent_message_id
  */
-SendBirdBaseMessageInstance.prototype['parentMessageId'] = undefined;
+SendBirdBaseMessageInstance.prototype['parent_message_id'] = undefined;
 
 /**
- * @member {String} parentMessageText
+ * @member {String} parent_message_text
  */
-SendBirdBaseMessageInstance.prototype['parentMessageText'] = undefined;
+SendBirdBaseMessageInstance.prototype['parent_message_text'] = undefined;
 
 /**
  * @member {Array.<module:model/SendBirdReaction>} reactions
@@ -220,9 +220,9 @@ SendBirdBaseMessageInstance.prototype['parentMessageText'] = undefined;
 SendBirdBaseMessageInstance.prototype['reactions'] = undefined;
 
 /**
- * @member {module:model/SendBirdBaseMessageInstance.SendingStatusEnum} sendingStatus
+ * @member {module:model/SendBirdBaseMessageInstance.SendingStatusEnum} sending_status
  */
-SendBirdBaseMessageInstance.prototype['sendingStatus'] = undefined;
+SendBirdBaseMessageInstance.prototype['sending_status'] = undefined;
 
 /**
  * @member {Boolean} silent
@@ -230,21 +230,21 @@ SendBirdBaseMessageInstance.prototype['sendingStatus'] = undefined;
 SendBirdBaseMessageInstance.prototype['silent'] = undefined;
 
 /**
- * @member {module:model/SendBirdThreadInfo} threadInfo
+ * @member {module:model/SendBirdThreadInfo} thread_info
  */
-SendBirdBaseMessageInstance.prototype['threadInfo'] = undefined;
+SendBirdBaseMessageInstance.prototype['thread_info'] = undefined;
 
 /**
- * @member {Number} updatedAt
+ * @member {Number} updated_at
  */
-SendBirdBaseMessageInstance.prototype['updatedAt'] = undefined;
+SendBirdBaseMessageInstance.prototype['updated_at'] = undefined;
 
 
 
 
 
 /**
- * Allowed values for the <code>messageType</code> property.
+ * Allowed values for the <code>message_type</code> property.
  * @enum {String}
  * @readonly
  */
@@ -277,7 +277,7 @@ SendBirdBaseMessageInstance['MessageTypeEnum'] = {
 
 
 /**
- * Allowed values for the <code>sendingStatus</code> property.
+ * Allowed values for the <code>sending_status</code> property.
  * @enum {String}
  * @readonly
  */

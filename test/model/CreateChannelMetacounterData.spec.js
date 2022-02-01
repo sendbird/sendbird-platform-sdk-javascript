@@ -50,7 +50,7 @@
   describe('CreateChannelMetacounterData', function() {
     it('should create an instance of CreateChannelMetacounterData', function() {
       // uncomment below and update the code to test CreateChannelMetacounterData
-      //var instane = new SendbirdPlatformSdk.CreateChannelMetacounterData();
+      //var instance = new SendbirdPlatformSdk.CreateChannelMetacounterData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.CreateChannelMetacounterData);
     });
 

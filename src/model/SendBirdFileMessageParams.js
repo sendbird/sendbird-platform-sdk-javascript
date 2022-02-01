@@ -51,11 +51,11 @@ class SendBirdFileMessageParams {
         if (data) {
             obj = obj || new SendBirdFileMessageParams();
 
-            if (data.hasOwnProperty('appleCriticalAlertOptions')) {
-                obj['appleCriticalAlertOptions'] = SendBirdAppleCriticalAlertOptions.constructFromObject(data['appleCriticalAlertOptions']);
+            if (data.hasOwnProperty('apple_critical_alert_options')) {
+                obj['apple_critical_alert_options'] = SendBirdAppleCriticalAlertOptions.constructFromObject(data['apple_critical_alert_options']);
             }
-            if (data.hasOwnProperty('customType')) {
-                obj['customType'] = ApiClient.convertToType(data['customType'], 'String');
+            if (data.hasOwnProperty('custom_type')) {
+                obj['custom_type'] = ApiClient.convertToType(data['custom_type'], 'String');
             }
             if (data.hasOwnProperty('data')) {
                 obj['data'] = ApiClient.convertToType(data['data'], 'String');
@@ -63,44 +63,44 @@ class SendBirdFileMessageParams {
             if (data.hasOwnProperty('file')) {
                 obj['file'] = 'Blob'.constructFromObject(data['file']);
             }
-            if (data.hasOwnProperty('fileName')) {
-                obj['fileName'] = ApiClient.convertToType(data['fileName'], 'String');
+            if (data.hasOwnProperty('file_name')) {
+                obj['file_name'] = ApiClient.convertToType(data['file_name'], 'String');
             }
-            if (data.hasOwnProperty('fileSize')) {
-                obj['fileSize'] = ApiClient.convertToType(data['fileSize'], 'Number');
+            if (data.hasOwnProperty('file_size')) {
+                obj['file_size'] = ApiClient.convertToType(data['file_size'], 'Number');
             }
-            if (data.hasOwnProperty('fileUrl')) {
-                obj['fileUrl'] = ApiClient.convertToType(data['fileUrl'], 'String');
+            if (data.hasOwnProperty('file_url')) {
+                obj['file_url'] = ApiClient.convertToType(data['file_url'], 'String');
             }
-            if (data.hasOwnProperty('isReplyToChannel')) {
-                obj['isReplyToChannel'] = ApiClient.convertToType(data['isReplyToChannel'], 'Boolean');
+            if (data.hasOwnProperty('is_reply_to_channel')) {
+                obj['is_reply_to_channel'] = ApiClient.convertToType(data['is_reply_to_channel'], 'Boolean');
             }
-            if (data.hasOwnProperty('mentionType')) {
-                obj['mentionType'] = ApiClient.convertToType(data['mentionType'], 'String');
+            if (data.hasOwnProperty('mention_type')) {
+                obj['mention_type'] = ApiClient.convertToType(data['mention_type'], 'String');
             }
-            if (data.hasOwnProperty('mentionedUserIds')) {
-                obj['mentionedUserIds'] = ApiClient.convertToType(data['mentionedUserIds'], ['String']);
+            if (data.hasOwnProperty('mentioned_user_ids')) {
+                obj['mentioned_user_ids'] = ApiClient.convertToType(data['mentioned_user_ids'], ['String']);
             }
-            if (data.hasOwnProperty('mentionedUsers')) {
-                obj['mentionedUsers'] = ApiClient.convertToType(data['mentionedUsers'], [SendBirdUser]);
+            if (data.hasOwnProperty('mentioned_users')) {
+                obj['mentioned_users'] = ApiClient.convertToType(data['mentioned_users'], [SendBirdUser]);
             }
-            if (data.hasOwnProperty('metaArrayKeys')) {
-                obj['metaArrayKeys'] = ApiClient.convertToType(data['metaArrayKeys'], ['String']);
+            if (data.hasOwnProperty('meta_array_keys')) {
+                obj['meta_array_keys'] = ApiClient.convertToType(data['meta_array_keys'], ['String']);
             }
-            if (data.hasOwnProperty('metaArrays')) {
-                obj['metaArrays'] = ApiClient.convertToType(data['metaArrays'], [SendBirdMessageMetaArray]);
+            if (data.hasOwnProperty('meta_arrays')) {
+                obj['meta_arrays'] = ApiClient.convertToType(data['meta_arrays'], [SendBirdMessageMetaArray]);
             }
-            if (data.hasOwnProperty('mimeType')) {
-                obj['mimeType'] = ApiClient.convertToType(data['mimeType'], 'String');
+            if (data.hasOwnProperty('mime_type')) {
+                obj['mime_type'] = ApiClient.convertToType(data['mime_type'], 'String');
             }
-            if (data.hasOwnProperty('parentMessageId')) {
-                obj['parentMessageId'] = ApiClient.convertToType(data['parentMessageId'], 'Number');
+            if (data.hasOwnProperty('parent_message_id')) {
+                obj['parent_message_id'] = ApiClient.convertToType(data['parent_message_id'], 'Number');
             }
-            if (data.hasOwnProperty('pushNotificationDeliveryOption')) {
-                obj['pushNotificationDeliveryOption'] = ApiClient.convertToType(data['pushNotificationDeliveryOption'], 'String');
+            if (data.hasOwnProperty('push_notification_delivery_option')) {
+                obj['push_notification_delivery_option'] = ApiClient.convertToType(data['push_notification_delivery_option'], 'String');
             }
-            if (data.hasOwnProperty('thumbnailSizes')) {
-                obj['thumbnailSizes'] = ApiClient.convertToType(data['thumbnailSizes'], [SendBirdThumbnailSize]);
+            if (data.hasOwnProperty('thumbnail_sizes')) {
+                obj['thumbnail_sizes'] = ApiClient.convertToType(data['thumbnail_sizes'], [SendBirdThumbnailSize]);
             }
         }
         return obj;
@@ -110,14 +110,14 @@ class SendBirdFileMessageParams {
 }
 
 /**
- * @member {module:model/SendBirdAppleCriticalAlertOptions} appleCriticalAlertOptions
+ * @member {module:model/SendBirdAppleCriticalAlertOptions} apple_critical_alert_options
  */
-SendBirdFileMessageParams.prototype['appleCriticalAlertOptions'] = undefined;
+SendBirdFileMessageParams.prototype['apple_critical_alert_options'] = undefined;
 
 /**
- * @member {String} customType
+ * @member {String} custom_type
  */
-SendBirdFileMessageParams.prototype['customType'] = undefined;
+SendBirdFileMessageParams.prototype['custom_type'] = undefined;
 
 /**
  * @member {String} data
@@ -130,76 +130,76 @@ SendBirdFileMessageParams.prototype['data'] = undefined;
 SendBirdFileMessageParams.prototype['file'] = undefined;
 
 /**
- * @member {String} fileName
+ * @member {String} file_name
  */
-SendBirdFileMessageParams.prototype['fileName'] = undefined;
+SendBirdFileMessageParams.prototype['file_name'] = undefined;
 
 /**
- * @member {Number} fileSize
+ * @member {Number} file_size
  */
-SendBirdFileMessageParams.prototype['fileSize'] = undefined;
+SendBirdFileMessageParams.prototype['file_size'] = undefined;
 
 /**
- * @member {String} fileUrl
+ * @member {String} file_url
  */
-SendBirdFileMessageParams.prototype['fileUrl'] = undefined;
+SendBirdFileMessageParams.prototype['file_url'] = undefined;
 
 /**
- * @member {Boolean} isReplyToChannel
+ * @member {Boolean} is_reply_to_channel
  */
-SendBirdFileMessageParams.prototype['isReplyToChannel'] = undefined;
+SendBirdFileMessageParams.prototype['is_reply_to_channel'] = undefined;
 
 /**
- * @member {module:model/SendBirdFileMessageParams.MentionTypeEnum} mentionType
+ * @member {module:model/SendBirdFileMessageParams.MentionTypeEnum} mention_type
  */
-SendBirdFileMessageParams.prototype['mentionType'] = undefined;
+SendBirdFileMessageParams.prototype['mention_type'] = undefined;
 
 /**
- * @member {Array.<String>} mentionedUserIds
+ * @member {Array.<String>} mentioned_user_ids
  */
-SendBirdFileMessageParams.prototype['mentionedUserIds'] = undefined;
+SendBirdFileMessageParams.prototype['mentioned_user_ids'] = undefined;
 
 /**
- * @member {Array.<module:model/SendBirdUser>} mentionedUsers
+ * @member {Array.<module:model/SendBirdUser>} mentioned_users
  */
-SendBirdFileMessageParams.prototype['mentionedUsers'] = undefined;
+SendBirdFileMessageParams.prototype['mentioned_users'] = undefined;
 
 /**
- * @member {Array.<String>} metaArrayKeys
+ * @member {Array.<String>} meta_array_keys
  */
-SendBirdFileMessageParams.prototype['metaArrayKeys'] = undefined;
+SendBirdFileMessageParams.prototype['meta_array_keys'] = undefined;
 
 /**
- * @member {Array.<module:model/SendBirdMessageMetaArray>} metaArrays
+ * @member {Array.<module:model/SendBirdMessageMetaArray>} meta_arrays
  */
-SendBirdFileMessageParams.prototype['metaArrays'] = undefined;
+SendBirdFileMessageParams.prototype['meta_arrays'] = undefined;
 
 /**
- * @member {String} mimeType
+ * @member {String} mime_type
  */
-SendBirdFileMessageParams.prototype['mimeType'] = undefined;
+SendBirdFileMessageParams.prototype['mime_type'] = undefined;
 
 /**
- * @member {Number} parentMessageId
+ * @member {Number} parent_message_id
  */
-SendBirdFileMessageParams.prototype['parentMessageId'] = undefined;
+SendBirdFileMessageParams.prototype['parent_message_id'] = undefined;
 
 /**
- * @member {module:model/SendBirdFileMessageParams.PushNotificationDeliveryOptionEnum} pushNotificationDeliveryOption
+ * @member {module:model/SendBirdFileMessageParams.PushNotificationDeliveryOptionEnum} push_notification_delivery_option
  */
-SendBirdFileMessageParams.prototype['pushNotificationDeliveryOption'] = undefined;
+SendBirdFileMessageParams.prototype['push_notification_delivery_option'] = undefined;
 
 /**
- * @member {Array.<module:model/SendBirdThumbnailSize>} thumbnailSizes
+ * @member {Array.<module:model/SendBirdThumbnailSize>} thumbnail_sizes
  */
-SendBirdFileMessageParams.prototype['thumbnailSizes'] = undefined;
+SendBirdFileMessageParams.prototype['thumbnail_sizes'] = undefined;
 
 
 
 
 
 /**
- * Allowed values for the <code>mentionType</code> property.
+ * Allowed values for the <code>mention_type</code> property.
  * @enum {String}
  * @readonly
  */
@@ -220,7 +220,7 @@ SendBirdFileMessageParams['MentionTypeEnum'] = {
 
 
 /**
- * Allowed values for the <code>pushNotificationDeliveryOption</code> property.
+ * Allowed values for the <code>push_notification_delivery_option</code> property.
  * @enum {String}
  * @readonly
  */

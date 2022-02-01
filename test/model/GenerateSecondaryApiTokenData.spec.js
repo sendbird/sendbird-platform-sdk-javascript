@@ -50,7 +50,7 @@
   describe('GenerateSecondaryApiTokenData', function() {
     it('should create an instance of GenerateSecondaryApiTokenData', function() {
       // uncomment below and update the code to test GenerateSecondaryApiTokenData
-      //var instane = new SendbirdPlatformSdk.GenerateSecondaryApiTokenData();
+      //var instance = new SendbirdPlatformSdk.GenerateSecondaryApiTokenData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.GenerateSecondaryApiTokenData);
     });
 

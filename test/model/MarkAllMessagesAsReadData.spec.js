@@ -50,7 +50,7 @@
   describe('MarkAllMessagesAsReadData', function() {
     it('should create an instance of MarkAllMessagesAsReadData', function() {
       // uncomment below and update the code to test MarkAllMessagesAsReadData
-      //var instane = new SendbirdPlatformSdk.MarkAllMessagesAsReadData();
+      //var instance = new SendbirdPlatformSdk.MarkAllMessagesAsReadData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.MarkAllMessagesAsReadData);
     });
 

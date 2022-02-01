@@ -50,50 +50,50 @@ class SendBirdUserMessageParams {
         if (data) {
             obj = obj || new SendBirdUserMessageParams();
 
-            if (data.hasOwnProperty('appleCriticalAlertOptions')) {
-                obj['appleCriticalAlertOptions'] = SendBirdAppleCriticalAlertOptions.constructFromObject(data['appleCriticalAlertOptions']);
+            if (data.hasOwnProperty('apple_critical_alert_options')) {
+                obj['apple_critical_alert_options'] = SendBirdAppleCriticalAlertOptions.constructFromObject(data['apple_critical_alert_options']);
             }
-            if (data.hasOwnProperty('customType')) {
-                obj['customType'] = ApiClient.convertToType(data['customType'], 'String');
+            if (data.hasOwnProperty('custom_type')) {
+                obj['custom_type'] = ApiClient.convertToType(data['custom_type'], 'String');
             }
             if (data.hasOwnProperty('data')) {
                 obj['data'] = ApiClient.convertToType(data['data'], 'String');
             }
-            if (data.hasOwnProperty('isReplyToChannel')) {
-                obj['isReplyToChannel'] = ApiClient.convertToType(data['isReplyToChannel'], 'Boolean');
+            if (data.hasOwnProperty('is_reply_to_channel')) {
+                obj['is_reply_to_channel'] = ApiClient.convertToType(data['is_reply_to_channel'], 'Boolean');
             }
-            if (data.hasOwnProperty('mentionType')) {
-                obj['mentionType'] = ApiClient.convertToType(data['mentionType'], 'String');
+            if (data.hasOwnProperty('mention_type')) {
+                obj['mention_type'] = ApiClient.convertToType(data['mention_type'], 'String');
             }
-            if (data.hasOwnProperty('mentionedUserIds')) {
-                obj['mentionedUserIds'] = ApiClient.convertToType(data['mentionedUserIds'], ['String']);
+            if (data.hasOwnProperty('mentioned_user_ids')) {
+                obj['mentioned_user_ids'] = ApiClient.convertToType(data['mentioned_user_ids'], ['String']);
             }
-            if (data.hasOwnProperty('mentionedUsers')) {
-                obj['mentionedUsers'] = ApiClient.convertToType(data['mentionedUsers'], [SendBirdUser]);
+            if (data.hasOwnProperty('mentioned_users')) {
+                obj['mentioned_users'] = ApiClient.convertToType(data['mentioned_users'], [SendBirdUser]);
             }
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
             }
-            if (data.hasOwnProperty('metaArrayKeys')) {
-                obj['metaArrayKeys'] = ApiClient.convertToType(data['metaArrayKeys'], ['String']);
+            if (data.hasOwnProperty('meta_array_keys')) {
+                obj['meta_array_keys'] = ApiClient.convertToType(data['meta_array_keys'], ['String']);
             }
-            if (data.hasOwnProperty('metaArrays')) {
-                obj['metaArrays'] = ApiClient.convertToType(data['metaArrays'], [SendBirdMessageMetaArray]);
+            if (data.hasOwnProperty('meta_arrays')) {
+                obj['meta_arrays'] = ApiClient.convertToType(data['meta_arrays'], [SendBirdMessageMetaArray]);
             }
-            if (data.hasOwnProperty('parentMessageId')) {
-                obj['parentMessageId'] = ApiClient.convertToType(data['parentMessageId'], 'Number');
+            if (data.hasOwnProperty('parent_message_id')) {
+                obj['parent_message_id'] = ApiClient.convertToType(data['parent_message_id'], 'Number');
             }
-            if (data.hasOwnProperty('pollId')) {
-                obj['pollId'] = ApiClient.convertToType(data['pollId'], 'Number');
+            if (data.hasOwnProperty('poll_id')) {
+                obj['poll_id'] = ApiClient.convertToType(data['poll_id'], 'Number');
             }
-            if (data.hasOwnProperty('pushNotificationDeliveryOption')) {
-                obj['pushNotificationDeliveryOption'] = ApiClient.convertToType(data['pushNotificationDeliveryOption'], 'String');
+            if (data.hasOwnProperty('push_notification_delivery_option')) {
+                obj['push_notification_delivery_option'] = ApiClient.convertToType(data['push_notification_delivery_option'], 'String');
             }
-            if (data.hasOwnProperty('targetLanguages')) {
-                obj['targetLanguages'] = ApiClient.convertToType(data['targetLanguages'], ['String']);
+            if (data.hasOwnProperty('target_languages')) {
+                obj['target_languages'] = ApiClient.convertToType(data['target_languages'], ['String']);
             }
-            if (data.hasOwnProperty('translationTargetLanguages')) {
-                obj['translationTargetLanguages'] = ApiClient.convertToType(data['translationTargetLanguages'], ['String']);
+            if (data.hasOwnProperty('translation_target_languages')) {
+                obj['translation_target_languages'] = ApiClient.convertToType(data['translation_target_languages'], ['String']);
             }
         }
         return obj;
@@ -103,14 +103,14 @@ class SendBirdUserMessageParams {
 }
 
 /**
- * @member {module:model/SendBirdAppleCriticalAlertOptions} appleCriticalAlertOptions
+ * @member {module:model/SendBirdAppleCriticalAlertOptions} apple_critical_alert_options
  */
-SendBirdUserMessageParams.prototype['appleCriticalAlertOptions'] = undefined;
+SendBirdUserMessageParams.prototype['apple_critical_alert_options'] = undefined;
 
 /**
- * @member {String} customType
+ * @member {String} custom_type
  */
-SendBirdUserMessageParams.prototype['customType'] = undefined;
+SendBirdUserMessageParams.prototype['custom_type'] = undefined;
 
 /**
  * @member {String} data
@@ -118,24 +118,24 @@ SendBirdUserMessageParams.prototype['customType'] = undefined;
 SendBirdUserMessageParams.prototype['data'] = undefined;
 
 /**
- * @member {Boolean} isReplyToChannel
+ * @member {Boolean} is_reply_to_channel
  */
-SendBirdUserMessageParams.prototype['isReplyToChannel'] = undefined;
+SendBirdUserMessageParams.prototype['is_reply_to_channel'] = undefined;
 
 /**
- * @member {module:model/SendBirdUserMessageParams.MentionTypeEnum} mentionType
+ * @member {module:model/SendBirdUserMessageParams.MentionTypeEnum} mention_type
  */
-SendBirdUserMessageParams.prototype['mentionType'] = undefined;
+SendBirdUserMessageParams.prototype['mention_type'] = undefined;
 
 /**
- * @member {Array.<String>} mentionedUserIds
+ * @member {Array.<String>} mentioned_user_ids
  */
-SendBirdUserMessageParams.prototype['mentionedUserIds'] = undefined;
+SendBirdUserMessageParams.prototype['mentioned_user_ids'] = undefined;
 
 /**
- * @member {Array.<module:model/SendBirdUser>} mentionedUsers
+ * @member {Array.<module:model/SendBirdUser>} mentioned_users
  */
-SendBirdUserMessageParams.prototype['mentionedUsers'] = undefined;
+SendBirdUserMessageParams.prototype['mentioned_users'] = undefined;
 
 /**
  * @member {String} message
@@ -143,46 +143,46 @@ SendBirdUserMessageParams.prototype['mentionedUsers'] = undefined;
 SendBirdUserMessageParams.prototype['message'] = undefined;
 
 /**
- * @member {Array.<String>} metaArrayKeys
+ * @member {Array.<String>} meta_array_keys
  */
-SendBirdUserMessageParams.prototype['metaArrayKeys'] = undefined;
+SendBirdUserMessageParams.prototype['meta_array_keys'] = undefined;
 
 /**
- * @member {Array.<module:model/SendBirdMessageMetaArray>} metaArrays
+ * @member {Array.<module:model/SendBirdMessageMetaArray>} meta_arrays
  */
-SendBirdUserMessageParams.prototype['metaArrays'] = undefined;
+SendBirdUserMessageParams.prototype['meta_arrays'] = undefined;
 
 /**
- * @member {Number} parentMessageId
+ * @member {Number} parent_message_id
  */
-SendBirdUserMessageParams.prototype['parentMessageId'] = undefined;
+SendBirdUserMessageParams.prototype['parent_message_id'] = undefined;
 
 /**
- * @member {Number} pollId
+ * @member {Number} poll_id
  */
-SendBirdUserMessageParams.prototype['pollId'] = undefined;
+SendBirdUserMessageParams.prototype['poll_id'] = undefined;
 
 /**
- * @member {module:model/SendBirdUserMessageParams.PushNotificationDeliveryOptionEnum} pushNotificationDeliveryOption
+ * @member {module:model/SendBirdUserMessageParams.PushNotificationDeliveryOptionEnum} push_notification_delivery_option
  */
-SendBirdUserMessageParams.prototype['pushNotificationDeliveryOption'] = undefined;
+SendBirdUserMessageParams.prototype['push_notification_delivery_option'] = undefined;
 
 /**
- * @member {Array.<String>} targetLanguages
+ * @member {Array.<String>} target_languages
  */
-SendBirdUserMessageParams.prototype['targetLanguages'] = undefined;
+SendBirdUserMessageParams.prototype['target_languages'] = undefined;
 
 /**
- * @member {Array.<String>} translationTargetLanguages
+ * @member {Array.<String>} translation_target_languages
  */
-SendBirdUserMessageParams.prototype['translationTargetLanguages'] = undefined;
+SendBirdUserMessageParams.prototype['translation_target_languages'] = undefined;
 
 
 
 
 
 /**
- * Allowed values for the <code>mentionType</code> property.
+ * Allowed values for the <code>mention_type</code> property.
  * @enum {String}
  * @readonly
  */
@@ -203,7 +203,7 @@ SendBirdUserMessageParams['MentionTypeEnum'] = {
 
 
 /**
- * Allowed values for the <code>pushNotificationDeliveryOption</code> property.
+ * Allowed values for the <code>push_notification_delivery_option</code> property.
  * @enum {String}
  * @readonly
  */

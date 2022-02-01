@@ -50,7 +50,7 @@
   describe('OcRegisterOperatorsData', function() {
     it('should create an instance of OcRegisterOperatorsData', function() {
       // uncomment below and update the code to test OcRegisterOperatorsData
-      //var instane = new SendbirdPlatformSdk.OcRegisterOperatorsData();
+      //var instance = new SendbirdPlatformSdk.OcRegisterOperatorsData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.OcRegisterOperatorsData);
     });
 

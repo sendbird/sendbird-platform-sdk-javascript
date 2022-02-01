@@ -50,11 +50,11 @@ class SendBirdRestrictionInfo {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
-            if (data.hasOwnProperty('endAt')) {
-                obj['endAt'] = ApiClient.convertToType(data['endAt'], 'Number');
+            if (data.hasOwnProperty('end_at')) {
+                obj['end_at'] = ApiClient.convertToType(data['end_at'], 'Number');
             }
-            if (data.hasOwnProperty('restrictionType')) {
-                obj['restrictionType'] = ApiClient.convertToType(data['restrictionType'], 'String');
+            if (data.hasOwnProperty('restriction_type')) {
+                obj['restriction_type'] = ApiClient.convertToType(data['restriction_type'], 'String');
             }
         }
         return obj;
@@ -69,21 +69,21 @@ class SendBirdRestrictionInfo {
 SendBirdRestrictionInfo.prototype['description'] = undefined;
 
 /**
- * @member {Number} endAt
+ * @member {Number} end_at
  */
-SendBirdRestrictionInfo.prototype['endAt'] = undefined;
+SendBirdRestrictionInfo.prototype['end_at'] = undefined;
 
 /**
- * @member {module:model/SendBirdRestrictionInfo.RestrictionTypeEnum} restrictionType
+ * @member {module:model/SendBirdRestrictionInfo.RestrictionTypeEnum} restriction_type
  */
-SendBirdRestrictionInfo.prototype['restrictionType'] = undefined;
+SendBirdRestrictionInfo.prototype['restriction_type'] = undefined;
 
 
 
 
 
 /**
- * Allowed values for the <code>restrictionType</code> property.
+ * Allowed values for the <code>restriction_type</code> property.
  * @enum {String}
  * @readonly
  */

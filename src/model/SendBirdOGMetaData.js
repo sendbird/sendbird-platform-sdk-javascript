@@ -48,8 +48,8 @@ class SendBirdOGMetaData {
         if (data) {
             obj = obj || new SendBirdOGMetaData();
 
-            if (data.hasOwnProperty('defaultImage')) {
-                obj['defaultImage'] = SendBirdOGImage.constructFromObject(data['defaultImage']);
+            if (data.hasOwnProperty('default_image')) {
+                obj['default_image'] = SendBirdOGImage.constructFromObject(data['default_image']);
             }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
@@ -68,9 +68,9 @@ class SendBirdOGMetaData {
 }
 
 /**
- * @member {module:model/SendBirdOGImage} defaultImage
+ * @member {module:model/SendBirdOGImage} default_image
  */
-SendBirdOGMetaData.prototype['defaultImage'] = undefined;
+SendBirdOGMetaData.prototype['default_image'] = undefined;
 
 /**
  * @member {String} description

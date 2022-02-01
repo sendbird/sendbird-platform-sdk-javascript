@@ -50,7 +50,7 @@
   describe('BanFromChannelsWithCustomChannelTypesData', function() {
     it('should create an instance of BanFromChannelsWithCustomChannelTypesData', function() {
       // uncomment below and update the code to test BanFromChannelsWithCustomChannelTypesData
-      //var instane = new SendbirdPlatformSdk.BanFromChannelsWithCustomChannelTypesData();
+      //var instance = new SendbirdPlatformSdk.BanFromChannelsWithCustomChannelTypesData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.BanFromChannelsWithCustomChannelTypesData);
     });
 

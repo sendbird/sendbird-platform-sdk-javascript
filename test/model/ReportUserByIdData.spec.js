@@ -50,7 +50,7 @@
   describe('ReportUserByIdData', function() {
     it('should create an instance of ReportUserByIdData', function() {
       // uncomment below and update the code to test ReportUserByIdData
-      //var instane = new SendbirdPlatformSdk.ReportUserByIdData();
+      //var instance = new SendbirdPlatformSdk.ReportUserByIdData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.ReportUserByIdData);
     });
 

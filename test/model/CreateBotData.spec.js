@@ -50,7 +50,7 @@
   describe('CreateBotData', function() {
     it('should create an instance of CreateBotData', function() {
       // uncomment below and update the code to test CreateBotData
-      //var instane = new SendbirdPlatformSdk.CreateBotData();
+      //var instance = new SendbirdPlatformSdk.CreateBotData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.CreateBotData);
     });
 

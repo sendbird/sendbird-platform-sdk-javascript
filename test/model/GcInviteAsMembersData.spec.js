@@ -50,7 +50,7 @@
   describe('GcInviteAsMembersData', function() {
     it('should create an instance of GcInviteAsMembersData', function() {
       // uncomment below and update the code to test GcInviteAsMembersData
-      //var instane = new SendbirdPlatformSdk.GcInviteAsMembersData();
+      //var instance = new SendbirdPlatformSdk.GcInviteAsMembersData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.GcInviteAsMembersData);
     });
 

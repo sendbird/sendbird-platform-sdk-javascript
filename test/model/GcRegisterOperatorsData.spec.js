@@ -50,7 +50,7 @@
   describe('GcRegisterOperatorsData', function() {
     it('should create an instance of GcRegisterOperatorsData', function() {
       // uncomment below and update the code to test GcRegisterOperatorsData
-      //var instane = new SendbirdPlatformSdk.GcRegisterOperatorsData();
+      //var instance = new SendbirdPlatformSdk.GcRegisterOperatorsData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.GcRegisterOperatorsData);
     });
 

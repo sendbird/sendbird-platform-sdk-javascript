@@ -48,11 +48,11 @@ class SendBirdGroupChannelCollection {
         if (data) {
             obj = obj || new SendBirdGroupChannelCollection();
 
-            if (data.hasOwnProperty('channelList')) {
-                obj['channelList'] = ApiClient.convertToType(data['channelList'], [SendBirdGroupChannel]);
+            if (data.hasOwnProperty('channel_list')) {
+                obj['channel_list'] = ApiClient.convertToType(data['channel_list'], [SendBirdGroupChannel]);
             }
-            if (data.hasOwnProperty('hasMore')) {
-                obj['hasMore'] = ApiClient.convertToType(data['hasMore'], 'Boolean');
+            if (data.hasOwnProperty('has_more')) {
+                obj['has_more'] = ApiClient.convertToType(data['has_more'], 'Boolean');
             }
         }
         return obj;
@@ -62,14 +62,14 @@ class SendBirdGroupChannelCollection {
 }
 
 /**
- * @member {Array.<module:model/SendBirdGroupChannel>} channelList
+ * @member {Array.<module:model/SendBirdGroupChannel>} channel_list
  */
-SendBirdGroupChannelCollection.prototype['channelList'] = undefined;
+SendBirdGroupChannelCollection.prototype['channel_list'] = undefined;
 
 /**
- * @member {Boolean} hasMore
+ * @member {Boolean} has_more
  */
-SendBirdGroupChannelCollection.prototype['hasMore'] = undefined;
+SendBirdGroupChannelCollection.prototype['has_more'] = undefined;
 
 
 

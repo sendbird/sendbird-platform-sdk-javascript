@@ -50,7 +50,7 @@
   describe('UseDefaultEmojisData', function() {
     it('should create an instance of UseDefaultEmojisData', function() {
       // uncomment below and update the code to test UseDefaultEmojisData
-      //var instane = new SendbirdPlatformSdk.UseDefaultEmojisData();
+      //var instance = new SendbirdPlatformSdk.UseDefaultEmojisData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.UseDefaultEmojisData);
     });
 

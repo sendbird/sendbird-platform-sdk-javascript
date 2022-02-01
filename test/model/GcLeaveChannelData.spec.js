@@ -50,7 +50,7 @@
   describe('GcLeaveChannelData', function() {
     it('should create an instance of GcLeaveChannelData', function() {
       // uncomment below and update the code to test GcLeaveChannelData
-      //var instane = new SendbirdPlatformSdk.GcLeaveChannelData();
+      //var instance = new SendbirdPlatformSdk.GcLeaveChannelData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.GcLeaveChannelData);
     });
 

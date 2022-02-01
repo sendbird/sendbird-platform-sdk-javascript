@@ -50,7 +50,7 @@
   describe('AddEmojisData', function() {
     it('should create an instance of AddEmojisData', function() {
       // uncomment below and update the code to test AddEmojisData
-      //var instane = new SendbirdPlatformSdk.AddEmojisData();
+      //var instance = new SendbirdPlatformSdk.AddEmojisData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.AddEmojisData);
     });
 

@@ -50,7 +50,7 @@
   describe('ScheduleAnnouncementData', function() {
     it('should create an instance of ScheduleAnnouncementData', function() {
       // uncomment below and update the code to test ScheduleAnnouncementData
-      //var instane = new SendbirdPlatformSdk.ScheduleAnnouncementData();
+      //var instance = new SendbirdPlatformSdk.ScheduleAnnouncementData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.ScheduleAnnouncementData);
     });
 

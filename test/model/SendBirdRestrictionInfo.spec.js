@@ -60,13 +60,13 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property endAt (base name: "endAt")', function() {
+    it('should have the property endAt (base name: "end_at")', function() {
       // uncomment below and update the code to test the property endAt
       //var instance = new SendbirdPlatformSdk.SendBirdRestrictionInfo();
       //expect(instance).to.be();
     });
 
-    it('should have the property restrictionType (base name: "restrictionType")', function() {
+    it('should have the property restrictionType (base name: "restriction_type")', function() {
       // uncomment below and update the code to test the property restrictionType
       //var instance = new SendbirdPlatformSdk.SendBirdRestrictionInfo();
       //expect(instance).to.be();

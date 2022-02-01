@@ -50,7 +50,7 @@
   describe('UpdateEmojiUrlByKeyData', function() {
     it('should create an instance of UpdateEmojiUrlByKeyData', function() {
       // uncomment below and update the code to test UpdateEmojiUrlByKeyData
-      //var instane = new SendbirdPlatformSdk.UpdateEmojiUrlByKeyData();
+      //var instance = new SendbirdPlatformSdk.UpdateEmojiUrlByKeyData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.UpdateEmojiUrlByKeyData);
     });
 

@@ -47,11 +47,11 @@ class SendBirdPollUpdatedVoteCount {
         if (data) {
             obj = obj || new SendBirdPollUpdatedVoteCount();
 
-            if (data.hasOwnProperty('optionId')) {
-                obj['optionId'] = ApiClient.convertToType(data['optionId'], 'Number');
+            if (data.hasOwnProperty('option_id')) {
+                obj['option_id'] = ApiClient.convertToType(data['option_id'], 'Number');
             }
-            if (data.hasOwnProperty('voteCount')) {
-                obj['voteCount'] = ApiClient.convertToType(data['voteCount'], 'Number');
+            if (data.hasOwnProperty('vote_count')) {
+                obj['vote_count'] = ApiClient.convertToType(data['vote_count'], 'Number');
             }
         }
         return obj;
@@ -61,14 +61,14 @@ class SendBirdPollUpdatedVoteCount {
 }
 
 /**
- * @member {Number} optionId
+ * @member {Number} option_id
  */
-SendBirdPollUpdatedVoteCount.prototype['optionId'] = undefined;
+SendBirdPollUpdatedVoteCount.prototype['option_id'] = undefined;
 
 /**
- * @member {Number} voteCount
+ * @member {Number} vote_count
  */
-SendBirdPollUpdatedVoteCount.prototype['voteCount'] = undefined;
+SendBirdPollUpdatedVoteCount.prototype['vote_count'] = undefined;
 
 
 

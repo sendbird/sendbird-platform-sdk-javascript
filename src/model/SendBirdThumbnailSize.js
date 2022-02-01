@@ -47,11 +47,11 @@ class SendBirdThumbnailSize {
         if (data) {
             obj = obj || new SendBirdThumbnailSize();
 
-            if (data.hasOwnProperty('maxHeight')) {
-                obj['maxHeight'] = ApiClient.convertToType(data['maxHeight'], 'Number');
+            if (data.hasOwnProperty('max_height')) {
+                obj['max_height'] = ApiClient.convertToType(data['max_height'], 'Number');
             }
-            if (data.hasOwnProperty('maxWidth')) {
-                obj['maxWidth'] = ApiClient.convertToType(data['maxWidth'], 'Number');
+            if (data.hasOwnProperty('max_width')) {
+                obj['max_width'] = ApiClient.convertToType(data['max_width'], 'Number');
             }
         }
         return obj;
@@ -61,14 +61,14 @@ class SendBirdThumbnailSize {
 }
 
 /**
- * @member {Number} maxHeight
+ * @member {Number} max_height
  */
-SendBirdThumbnailSize.prototype['maxHeight'] = undefined;
+SendBirdThumbnailSize.prototype['max_height'] = undefined;
 
 /**
- * @member {Number} maxWidth
+ * @member {Number} max_width
  */
-SendBirdThumbnailSize.prototype['maxWidth'] = undefined;
+SendBirdThumbnailSize.prototype['max_width'] = undefined;
 
 
 

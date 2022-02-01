@@ -50,7 +50,7 @@
   describe('OcCreateChannelData', function() {
     it('should create an instance of OcCreateChannelData', function() {
       // uncomment below and update the code to test OcCreateChannelData
-      //var instane = new SendbirdPlatformSdk.OcCreateChannelData();
+      //var instance = new SendbirdPlatformSdk.OcCreateChannelData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.OcCreateChannelData);
     });
 

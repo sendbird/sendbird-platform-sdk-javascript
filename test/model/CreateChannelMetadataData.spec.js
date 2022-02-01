@@ -50,7 +50,7 @@
   describe('CreateChannelMetadataData', function() {
     it('should create an instance of CreateChannelMetadataData', function() {
       // uncomment below and update the code to test CreateChannelMetadataData
-      //var instane = new SendbirdPlatformSdk.CreateChannelMetadataData();
+      //var instance = new SendbirdPlatformSdk.CreateChannelMetadataData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.CreateChannelMetadataData);
     });
 

@@ -50,8 +50,14 @@
   describe('SendMessageData', function() {
     it('should create an instance of SendMessageData', function() {
       // uncomment below and update the code to test SendMessageData
-      //var instane = new SendbirdPlatformSdk.SendMessageData();
+      //var instance = new SendbirdPlatformSdk.SendMessageData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.SendMessageData);
+    });
+
+    it('should have the property userId (base name: "user_id")', function() {
+      // uncomment below and update the code to test the property userId
+      //var instance = new SendbirdPlatformSdk.SendMessageData();
+      //expect(instance).to.be();
     });
 
     it('should have the property channelType (base name: "channel_type")', function() {
@@ -132,8 +138,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property metaarray (base name: "metaarray")', function() {
-      // uncomment below and update the code to test the property metaarray
+    it('should have the property apnsBundleId (base name: "apns_bundle_id")', function() {
+      // uncomment below and update the code to test the property apnsBundleId
+      //var instance = new SendbirdPlatformSdk.SendMessageData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sound (base name: "sound")', function() {
+      // uncomment below and update the code to test the property sound
+      //var instance = new SendbirdPlatformSdk.SendMessageData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property volume (base name: "volume")', function() {
+      // uncomment below and update the code to test the property volume
       //var instance = new SendbirdPlatformSdk.SendMessageData();
       //expect(instance).to.be();
     });

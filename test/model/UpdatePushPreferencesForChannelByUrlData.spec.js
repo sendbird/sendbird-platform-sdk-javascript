@@ -50,7 +50,7 @@
   describe('UpdatePushPreferencesForChannelByUrlData', function() {
     it('should create an instance of UpdatePushPreferencesForChannelByUrlData', function() {
       // uncomment below and update the code to test UpdatePushPreferencesForChannelByUrlData
-      //var instane = new SendbirdPlatformSdk.UpdatePushPreferencesForChannelByUrlData();
+      //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesForChannelByUrlData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.UpdatePushPreferencesForChannelByUrlData);
     });
 

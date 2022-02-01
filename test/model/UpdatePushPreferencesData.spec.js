@@ -50,7 +50,7 @@
   describe('UpdatePushPreferencesData', function() {
     it('should create an instance of UpdatePushPreferencesData', function() {
       // uncomment below and update the code to test UpdatePushPreferencesData
-      //var instane = new SendbirdPlatformSdk.UpdatePushPreferencesData();
+      //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.UpdatePushPreferencesData);
     });
 

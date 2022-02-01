@@ -50,11 +50,11 @@ class SendBirdReaction {
             if (data.hasOwnProperty('key')) {
                 obj['key'] = ApiClient.convertToType(data['key'], 'String');
             }
-            if (data.hasOwnProperty('updatedAt')) {
-                obj['updatedAt'] = ApiClient.convertToType(data['updatedAt'], 'Number');
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Number');
             }
-            if (data.hasOwnProperty('userIds')) {
-                obj['userIds'] = ApiClient.convertToType(data['userIds'], ['String']);
+            if (data.hasOwnProperty('user_ids')) {
+                obj['user_ids'] = ApiClient.convertToType(data['user_ids'], ['String']);
             }
         }
         return obj;
@@ -69,14 +69,14 @@ class SendBirdReaction {
 SendBirdReaction.prototype['key'] = undefined;
 
 /**
- * @member {Number} updatedAt
+ * @member {Number} updated_at
  */
-SendBirdReaction.prototype['updatedAt'] = undefined;
+SendBirdReaction.prototype['updated_at'] = undefined;
 
 /**
- * @member {Array.<String>} userIds
+ * @member {Array.<String>} user_ids
  */
-SendBirdReaction.prototype['userIds'] = undefined;
+SendBirdReaction.prototype['user_ids'] = undefined;
 
 
 

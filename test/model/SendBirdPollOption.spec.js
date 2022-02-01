@@ -54,13 +54,13 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.SendBirdPollOption);
     });
 
-    it('should have the property createdAt (base name: "createdAt")', function() {
+    it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
       //var instance = new SendbirdPlatformSdk.SendBirdPollOption();
       //expect(instance).to.be();
     });
 
-    it('should have the property createdBy (base name: "createdBy")', function() {
+    it('should have the property createdBy (base name: "created_by")', function() {
       // uncomment below and update the code to test the property createdBy
       //var instance = new SendbirdPlatformSdk.SendBirdPollOption();
       //expect(instance).to.be();
@@ -72,13 +72,13 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property partialVoters (base name: "partialVoters")', function() {
+    it('should have the property partialVoters (base name: "partial_voters")', function() {
       // uncomment below and update the code to test the property partialVoters
       //var instance = new SendbirdPlatformSdk.SendBirdPollOption();
       //expect(instance).to.be();
     });
 
-    it('should have the property pollId (base name: "pollId")', function() {
+    it('should have the property pollId (base name: "poll_id")', function() {
       // uncomment below and update the code to test the property pollId
       //var instance = new SendbirdPlatformSdk.SendBirdPollOption();
       //expect(instance).to.be();
@@ -90,13 +90,13 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property updatedAt (base name: "updatedAt")', function() {
+    it('should have the property updatedAt (base name: "updated_at")', function() {
       // uncomment below and update the code to test the property updatedAt
       //var instance = new SendbirdPlatformSdk.SendBirdPollOption();
       //expect(instance).to.be();
     });
 
-    it('should have the property voteCount (base name: "voteCount")', function() {
+    it('should have the property voteCount (base name: "vote_count")', function() {
       // uncomment below and update the code to test the property voteCount
       //var instance = new SendbirdPlatformSdk.SendBirdPollOption();
       //expect(instance).to.be();

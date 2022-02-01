@@ -60,13 +60,13 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property updatedAt (base name: "updatedAt")', function() {
+    it('should have the property updatedAt (base name: "updated_at")', function() {
       // uncomment below and update the code to test the property updatedAt
       //var instance = new SendbirdPlatformSdk.SendBirdReaction();
       //expect(instance).to.be();
     });
 
-    it('should have the property userIds (base name: "userIds")', function() {
+    it('should have the property userIds (base name: "user_ids")', function() {
       // uncomment below and update the code to test the property userIds
       //var instance = new SendbirdPlatformSdk.SendBirdReaction();
       //expect(instance).to.be();

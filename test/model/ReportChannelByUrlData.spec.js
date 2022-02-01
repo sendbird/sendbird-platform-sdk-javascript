@@ -50,7 +50,7 @@
   describe('ReportChannelByUrlData', function() {
     it('should create an instance of ReportChannelByUrlData', function() {
       // uncomment below and update the code to test ReportChannelByUrlData
-      //var instane = new SendbirdPlatformSdk.ReportChannelByUrlData();
+      //var instance = new SendbirdPlatformSdk.ReportChannelByUrlData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.ReportChannelByUrlData);
     });
 

@@ -48,26 +48,26 @@ class SendBirdBaseChannel {
         if (data) {
             obj = obj || new SendBirdBaseChannel();
 
-            if (data.hasOwnProperty('coverUrl')) {
-                obj['coverUrl'] = ApiClient.convertToType(data['coverUrl'], 'String');
+            if (data.hasOwnProperty('cover_url')) {
+                obj['cover_url'] = ApiClient.convertToType(data['cover_url'], 'String');
             }
-            if (data.hasOwnProperty('createdAt')) {
-                obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Number');
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Number');
             }
             if (data.hasOwnProperty('creator')) {
                 obj['creator'] = SendBirdUser.constructFromObject(data['creator']);
             }
-            if (data.hasOwnProperty('customType')) {
-                obj['customType'] = ApiClient.convertToType(data['customType'], 'String');
+            if (data.hasOwnProperty('custom_type')) {
+                obj['custom_type'] = ApiClient.convertToType(data['custom_type'], 'String');
             }
             if (data.hasOwnProperty('data')) {
                 obj['data'] = ApiClient.convertToType(data['data'], 'String');
             }
-            if (data.hasOwnProperty('isEphemeral')) {
-                obj['isEphemeral'] = ApiClient.convertToType(data['isEphemeral'], 'Boolean');
+            if (data.hasOwnProperty('is_ephemeral')) {
+                obj['is_ephemeral'] = ApiClient.convertToType(data['is_ephemeral'], 'Boolean');
             }
-            if (data.hasOwnProperty('isFrozen')) {
-                obj['isFrozen'] = ApiClient.convertToType(data['isFrozen'], 'Boolean');
+            if (data.hasOwnProperty('is_frozen')) {
+                obj['is_frozen'] = ApiClient.convertToType(data['is_frozen'], 'Boolean');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -83,14 +83,14 @@ class SendBirdBaseChannel {
 }
 
 /**
- * @member {String} coverUrl
+ * @member {String} cover_url
  */
-SendBirdBaseChannel.prototype['coverUrl'] = undefined;
+SendBirdBaseChannel.prototype['cover_url'] = undefined;
 
 /**
- * @member {Number} createdAt
+ * @member {Number} created_at
  */
-SendBirdBaseChannel.prototype['createdAt'] = undefined;
+SendBirdBaseChannel.prototype['created_at'] = undefined;
 
 /**
  * @member {module:model/SendBirdUser} creator
@@ -98,9 +98,9 @@ SendBirdBaseChannel.prototype['createdAt'] = undefined;
 SendBirdBaseChannel.prototype['creator'] = undefined;
 
 /**
- * @member {String} customType
+ * @member {String} custom_type
  */
-SendBirdBaseChannel.prototype['customType'] = undefined;
+SendBirdBaseChannel.prototype['custom_type'] = undefined;
 
 /**
  * @member {String} data
@@ -108,14 +108,14 @@ SendBirdBaseChannel.prototype['customType'] = undefined;
 SendBirdBaseChannel.prototype['data'] = undefined;
 
 /**
- * @member {Boolean} isEphemeral
+ * @member {Boolean} is_ephemeral
  */
-SendBirdBaseChannel.prototype['isEphemeral'] = undefined;
+SendBirdBaseChannel.prototype['is_ephemeral'] = undefined;
 
 /**
- * @member {Boolean} isFrozen
+ * @member {Boolean} is_frozen
  */
-SendBirdBaseChannel.prototype['isFrozen'] = undefined;
+SendBirdBaseChannel.prototype['is_frozen'] = undefined;
 
 /**
  * @member {String} name

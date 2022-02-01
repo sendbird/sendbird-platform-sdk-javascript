@@ -50,7 +50,7 @@
   describe('UpdateFcmPushConfigurationByIdData', function() {
     it('should create an instance of UpdateFcmPushConfigurationByIdData', function() {
       // uncomment below and update the code to test UpdateFcmPushConfigurationByIdData
-      //var instane = new SendbirdPlatformSdk.UpdateFcmPushConfigurationByIdData();
+      //var instance = new SendbirdPlatformSdk.UpdateFcmPushConfigurationByIdData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.UpdateFcmPushConfigurationByIdData);
     });
 

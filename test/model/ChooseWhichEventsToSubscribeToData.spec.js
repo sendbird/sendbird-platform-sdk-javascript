@@ -50,7 +50,7 @@
   describe('ChooseWhichEventsToSubscribeToData', function() {
     it('should create an instance of ChooseWhichEventsToSubscribeToData', function() {
       // uncomment below and update the code to test ChooseWhichEventsToSubscribeToData
-      //var instane = new SendbirdPlatformSdk.ChooseWhichEventsToSubscribeToData();
+      //var instance = new SendbirdPlatformSdk.ChooseWhichEventsToSubscribeToData();
       //expect(instance).to.be.a(SendbirdPlatformSdk.ChooseWhichEventsToSubscribeToData);
     });
 
