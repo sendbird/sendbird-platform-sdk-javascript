@@ -54,26 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse200);
     });
 
-    it('should have the property count (base name: "count")', function() {
-      // uncomment below and update the code to test the property count
-      //var instance = new SendbirdPlatformSdk.InlineResponse200();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property previous (base name: "previous")', function() {
-      // uncomment below and update the code to test the property previous
-      //var instance = new SendbirdPlatformSdk.InlineResponse200();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property next (base name: "next")', function() {
-      // uncomment below and update the code to test the property next
-      //var instance = new SendbirdPlatformSdk.InlineResponse200();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property results (base name: "results")', function() {
-      // uncomment below and update the code to test the property results
+    it('should have the property ccu (base name: "ccu")', function() {
+      // uncomment below and update the code to test the property ccu
       //var instance = new SendbirdPlatformSdk.InlineResponse200();
       //expect(instance).to.be();
     });

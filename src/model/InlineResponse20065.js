@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20064File from './InlineResponse20064File';
+import InlineResponse20065Bots from './InlineResponse20065Bots';
 
 /**
  * The InlineResponse20065 model module.
@@ -48,47 +48,11 @@ class InlineResponse20065 {
         if (data) {
             obj = obj || new InlineResponse20065();
 
-            if (data.hasOwnProperty('request_id')) {
-                obj['request_id'] = ApiClient.convertToType(data['request_id'], 'String');
+            if (data.hasOwnProperty('bots')) {
+                obj['bots'] = ApiClient.convertToType(data['bots'], [InlineResponse20065Bots]);
             }
-            if (data.hasOwnProperty('data_type')) {
-                obj['data_type'] = ApiClient.convertToType(data['data_type'], 'String');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
-            }
-            if (data.hasOwnProperty('format')) {
-                obj['format'] = ApiClient.convertToType(data['format'], 'String');
-            }
-            if (data.hasOwnProperty('csv_delimiter')) {
-                obj['csv_delimiter'] = ApiClient.convertToType(data['csv_delimiter'], 'String');
-            }
-            if (data.hasOwnProperty('timezone')) {
-                obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
-            }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Number');
-            }
-            if (data.hasOwnProperty('start_ts')) {
-                obj['start_ts'] = ApiClient.convertToType(data['start_ts'], 'Number');
-            }
-            if (data.hasOwnProperty('end_ts')) {
-                obj['end_ts'] = ApiClient.convertToType(data['end_ts'], 'Number');
-            }
-            if (data.hasOwnProperty('channel_urls')) {
-                obj['channel_urls'] = ApiClient.convertToType(data['channel_urls'], ['String']);
-            }
-            if (data.hasOwnProperty('channel_custom_types')) {
-                obj['channel_custom_types'] = ApiClient.convertToType(data['channel_custom_types'], ['String']);
-            }
-            if (data.hasOwnProperty('sender_ids')) {
-                obj['sender_ids'] = ApiClient.convertToType(data['sender_ids'], ['String']);
-            }
-            if (data.hasOwnProperty('file')) {
-                obj['file'] = InlineResponse20064File.constructFromObject(data['file']);
-            }
-            if (data.hasOwnProperty('user_ids')) {
-                obj['user_ids'] = ApiClient.convertToType(data['user_ids'], ['Number']);
+            if (data.hasOwnProperty('next')) {
+                obj['next'] = ApiClient.convertToType(data['next'], 'String');
             }
         }
         return obj;
@@ -98,74 +62,14 @@ class InlineResponse20065 {
 }
 
 /**
- * @member {String} request_id
+ * @member {Array.<module:model/InlineResponse20065Bots>} bots
  */
-InlineResponse20065.prototype['request_id'] = undefined;
+InlineResponse20065.prototype['bots'] = undefined;
 
 /**
- * @member {String} data_type
+ * @member {String} next
  */
-InlineResponse20065.prototype['data_type'] = undefined;
-
-/**
- * @member {String} status
- */
-InlineResponse20065.prototype['status'] = undefined;
-
-/**
- * @member {String} format
- */
-InlineResponse20065.prototype['format'] = undefined;
-
-/**
- * @member {String} csv_delimiter
- */
-InlineResponse20065.prototype['csv_delimiter'] = undefined;
-
-/**
- * @member {String} timezone
- */
-InlineResponse20065.prototype['timezone'] = undefined;
-
-/**
- * @member {Number} created_at
- */
-InlineResponse20065.prototype['created_at'] = undefined;
-
-/**
- * @member {Number} start_ts
- */
-InlineResponse20065.prototype['start_ts'] = undefined;
-
-/**
- * @member {Number} end_ts
- */
-InlineResponse20065.prototype['end_ts'] = undefined;
-
-/**
- * @member {Array.<String>} channel_urls
- */
-InlineResponse20065.prototype['channel_urls'] = undefined;
-
-/**
- * @member {Array.<String>} channel_custom_types
- */
-InlineResponse20065.prototype['channel_custom_types'] = undefined;
-
-/**
- * @member {Array.<String>} sender_ids
- */
-InlineResponse20065.prototype['sender_ids'] = undefined;
-
-/**
- * @member {module:model/InlineResponse20064File} file
- */
-InlineResponse20065.prototype['file'] = undefined;
-
-/**
- * @member {Array.<Number>} user_ids
- */
-InlineResponse20065.prototype['user_ids'] = undefined;
+InlineResponse20065.prototype['next'] = undefined;
 
 
 

@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ipWhitelistAddresses** | **[String]** |  | [optional] 
+**token** | **String** |  | [optional] 
+**createdAt** | **Number** |  | [optional] 
 
 

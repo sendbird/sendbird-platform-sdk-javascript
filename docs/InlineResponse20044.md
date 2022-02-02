@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**openStatus** | [**[InlineResponse20044OpenStatus]**](InlineResponse20044OpenStatus.md) |  | [optional] 
-**next** | **String** |  | [optional] 
+**statistics** | [**[InlineResponse20044Statistics]**](InlineResponse20044Statistics.md) |  | [optional] 
+**week** | **Number** |  | [optional] 
 
 

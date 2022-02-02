@@ -54,8 +54,68 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20028);
     });
 
-    it('should have the property userId (base name: "user_id")', function() {
-      // uncomment below and update the code to test the property userId
+    it('should have the property pushTriggerOption (base name: "push_trigger_option")', function() {
+      // uncomment below and update the code to test the property pushTriggerOption
+      //var instance = new SendbirdPlatformSdk.InlineResponse20028();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property doNotDisturb (base name: "do_not_disturb")', function() {
+      // uncomment below and update the code to test the property doNotDisturb
+      //var instance = new SendbirdPlatformSdk.InlineResponse20028();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property startHour (base name: "start_hour")', function() {
+      // uncomment below and update the code to test the property startHour
+      //var instance = new SendbirdPlatformSdk.InlineResponse20028();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property startMin (base name: "start_min")', function() {
+      // uncomment below and update the code to test the property startMin
+      //var instance = new SendbirdPlatformSdk.InlineResponse20028();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property endHour (base name: "end_hour")', function() {
+      // uncomment below and update the code to test the property endHour
+      //var instance = new SendbirdPlatformSdk.InlineResponse20028();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property endMin (base name: "end_min")', function() {
+      // uncomment below and update the code to test the property endMin
+      //var instance = new SendbirdPlatformSdk.InlineResponse20028();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property snoozeEnabled (base name: "snooze_enabled")', function() {
+      // uncomment below and update the code to test the property snoozeEnabled
+      //var instance = new SendbirdPlatformSdk.InlineResponse20028();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property snoozeStartTs (base name: "snooze_start_ts")', function() {
+      // uncomment below and update the code to test the property snoozeStartTs
+      //var instance = new SendbirdPlatformSdk.InlineResponse20028();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property snoozeEndTs (base name: "snooze_end_ts")', function() {
+      // uncomment below and update the code to test the property snoozeEndTs
+      //var instance = new SendbirdPlatformSdk.InlineResponse20028();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property timezone (base name: "timezone")', function() {
+      // uncomment below and update the code to test the property timezone
+      //var instance = new SendbirdPlatformSdk.InlineResponse20028();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property pushSound (base name: "push_sound")', function() {
+      // uncomment below and update the code to test the property pushSound
       //var instance = new SendbirdPlatformSdk.InlineResponse20028();
       //expect(instance).to.be();
     });

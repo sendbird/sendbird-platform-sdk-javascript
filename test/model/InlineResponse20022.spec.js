@@ -54,8 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20022);
     });
 
-    it('should have the property countPreference (base name: "count_preference")', function() {
-      // uncomment below and update the code to test the property countPreference
+    it('should have the property bannedChannels (base name: "banned_channels")', function() {
+      // uncomment below and update the code to test the property bannedChannels
+      //var instance = new SendbirdPlatformSdk.InlineResponse20022();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property next (base name: "next")', function() {
+      // uncomment below and update the code to test the property next
       //var instance = new SendbirdPlatformSdk.InlineResponse20022();
       //expect(instance).to.be();
     });

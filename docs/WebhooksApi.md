@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## chooseWhichEventsToSubscribeTo
 
-> InlineResponse20068 chooseWhichEventsToSubscribeTo(opts)
+> InlineResponse20067 chooseWhichEventsToSubscribeTo(opts)
 
 Choose which events to subscribe to
 
@@ -27,13 +27,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'chooseWhichEventsToSubscribeToData': new SendbirdPlatformSdk.ChooseWhichEventsToSubscribeToData() // ChooseWhichEventsToSubscribeToData | 
 };
-apiInstance.chooseWhichEventsToSubscribeTo(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.chooseWhichEventsToSubscribeTo(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -46,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**InlineResponse20067**](InlineResponse20067.md)
 
 ### Authorization
 
@@ -60,7 +59,7 @@ No authorization required
 
 ## retrieveListOfSubscribedEvents
 
-> InlineResponse20067 retrieveListOfSubscribedEvents(opts)
+> InlineResponse20066 retrieveListOfSubscribedEvents(opts)
 
 Retrieve a list of subscribed events
 
@@ -76,13 +75,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'displayAllWebhookCategories': true // Boolean | 
 };
-apiInstance.retrieveListOfSubscribedEvents(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.retrieveListOfSubscribedEvents(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -95,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20067**](InlineResponse20067.md)
+[**InlineResponse20066**](InlineResponse20066.md)
 
 ### Authorization
 

@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20025);
     });
 
-    it('should have the property tokens (base name: "tokens")', function() {
-      // uncomment below and update the code to test the property tokens
+    it('should have the property token (base name: "token")', function() {
+      // uncomment below and update the code to test the property token
       //var instance = new SendbirdPlatformSdk.InlineResponse20025();
       //expect(instance).to.be();
     });

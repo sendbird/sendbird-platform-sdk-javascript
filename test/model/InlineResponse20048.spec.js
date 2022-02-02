@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20048);
     });
 
-    it('should have the property messages (base name: "messages")', function() {
-      // uncomment below and update the code to test the property messages
+    it('should have the property total (base name: "total")', function() {
+      // uncomment below and update the code to test the property total
       //var instance = new SendbirdPlatformSdk.InlineResponse20048();
       //expect(instance).to.be();
     });

@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mutedList** | [**[SendBirdUser]**](SendBirdUser.md) |  | [optional] 
-**totalMuteCount** | **Number** |  | [optional] 
+**participants** | [**[SendBirdUser]**](SendBirdUser.md) |  | [optional] 
 **next** | **String** |  | [optional] 
 
 

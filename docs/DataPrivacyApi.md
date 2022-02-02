@@ -29,13 +29,12 @@ let requestId = "requestId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.cancelTheRegistrationOfGdprRequestById(requestId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.cancelTheRegistrationOfGdprRequestById(requestId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -57,12 +56,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## listGdprRequests
 
-> InlineResponse20069 listGdprRequests(opts)
+> InlineResponse20068 listGdprRequests(opts)
 
 List GDPR requests
 
@@ -79,13 +78,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listGdprRequests(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listGdprRequests(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -99,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20069**](InlineResponse20069.md)
+[**InlineResponse20068**](InlineResponse20068.md)
 
 ### Authorization
 
@@ -113,7 +111,7 @@ No authorization required
 
 ## registerGdprRequest
 
-> InlineResponse20070 registerGdprRequest(opts)
+> InlineResponse20069 registerGdprRequest(opts)
 
 Register a GDPR request
 
@@ -129,13 +127,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'registerGdprRequestData': new SendbirdPlatformSdk.RegisterGdprRequestData() // RegisterGdprRequestData | 
 };
-apiInstance.registerGdprRequest(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.registerGdprRequest(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -148,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20070**](InlineResponse20070.md)
+[**InlineResponse20069**](InlineResponse20069.md)
 
 ### Authorization
 
@@ -162,7 +159,7 @@ No authorization required
 
 ## viewGdprRequestById
 
-> InlineResponse20069Requests viewGdprRequestById(requestId, opts)
+> InlineResponse20068Requests viewGdprRequestById(requestId, opts)
 
 View a GDPR request
 
@@ -178,13 +175,12 @@ let requestId = "requestId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewGdprRequestById(requestId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewGdprRequestById(requestId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -197,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20069Requests**](InlineResponse20069Requests.md)
+[**InlineResponse20068Requests**](InlineResponse20068Requests.md)
 
 ### Authorization
 

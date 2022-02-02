@@ -15,12 +15,12 @@
 import ApiClient from "../ApiClient";
 import AddEmojisData from '../model/AddEmojisData';
 import EnableReactionsData from '../model/EnableReactionsData';
-import InlineResponse20052 from '../model/InlineResponse20052';
+import InlineResponse20051 from '../model/InlineResponse20051';
+import InlineResponse20055 from '../model/InlineResponse20055';
 import InlineResponse20056 from '../model/InlineResponse20056';
 import InlineResponse20057 from '../model/InlineResponse20057';
 import InlineResponse20058 from '../model/InlineResponse20058';
 import InlineResponse20059 from '../model/InlineResponse20059';
-import InlineResponse20060 from '../model/InlineResponse20060';
 import SendBirdEmoji from '../model/SendBirdEmoji';
 import SendBirdEmojiCategory from '../model/SendBirdEmojiCategory';
 import UpdateEmojiCategoryUrlByIdData from '../model/UpdateEmojiCategoryUrlByIdData';
@@ -46,13 +46,6 @@ export default class EmojisApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the addEmojiCategories operation.
-     * @callback module:api/EmojisApi~addEmojiCategoriesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20058} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Add emoji categories
@@ -60,10 +53,9 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
-     * @param {module:api/EmojisApi~addEmojiCategoriesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20058}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20057} and HTTP response
      */
-    addEmojiCategories(opts, callback) {
+    addEmojiCategoriesWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['body'];
 
@@ -80,21 +72,29 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20058;
+      let returnType = InlineResponse20057;
       return this.apiClient.callApi(
         '/v3/emoji_categories', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the addEmojis operation.
-     * @callback module:api/EmojisApi~addEmojisCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20060} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Add emoji categories
+     * ## Add emoji categories  Adds a list of one or more new emoji categories to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-add-emoji-categories
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {Object.<String, Object>} opts.body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20057}
      */
+    addEmojiCategories(opts) {
+      return this.addEmojiCategoriesWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Add emojis
@@ -102,10 +102,9 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddEmojisData} opts.addEmojisData 
-     * @param {module:api/EmojisApi~addEmojisCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20060}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20059} and HTTP response
      */
-    addEmojis(opts, callback) {
+    addEmojisWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['addEmojisData'];
 
@@ -122,21 +121,29 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20060;
+      let returnType = InlineResponse20059;
       return this.apiClient.callApi(
         '/v3/emojis', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteEmojiByKey operation.
-     * @callback module:api/EmojisApi~deleteEmojiByKeyCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Add emojis
+     * ## Add emojis  Adds a list of one or more new emojis to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-add-emojis
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/AddEmojisData} opts.addEmojisData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20059}
      */
+    addEmojis(opts) {
+      return this.addEmojisWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete an emoji
@@ -144,9 +151,9 @@ export default class EmojisApi {
      * @param {String} emojiKey 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/EmojisApi~deleteEmojiByKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteEmojiByKey(emojiKey, opts, callback) {
+    deleteEmojiByKeyWithHttpInfo(emojiKey, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'emojiKey' is set
@@ -167,22 +174,30 @@ export default class EmojisApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['application/json'];
+      let accepts = [];
       let returnType = null;
       return this.apiClient.callApi(
         '/v3/emojis/{emoji_key}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteEmojiCategoryById operation.
-     * @callback module:api/EmojisApi~deleteEmojiCategoryByIdCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete an emoji
+     * ## Delete an emoji  Deletes an emoji from the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-delete-an-emoji ----------------------------
+     * @param {String} emojiKey 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteEmojiByKey(emojiKey, opts) {
+      return this.deleteEmojiByKeyWithHttpInfo(emojiKey, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete an emoji category
@@ -190,9 +205,9 @@ export default class EmojisApi {
      * @param {String} emojiCategoryId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/EmojisApi~deleteEmojiCategoryByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteEmojiCategoryById(emojiCategoryId, opts, callback) {
+    deleteEmojiCategoryByIdWithHttpInfo(emojiCategoryId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'emojiCategoryId' is set
@@ -213,22 +228,30 @@ export default class EmojisApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['application/json'];
+      let accepts = [];
       let returnType = null;
       return this.apiClient.callApi(
         '/v3/emoji_categories/{emoji_category_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the enableReactions operation.
-     * @callback module:api/EmojisApi~enableReactionsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20052} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete an emoji category
+     * ## Delete an emoji category  Deletes an emoji category with the specified ID.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-delete-an-emoji-category ----------------------------
+     * @param {String} emojiCategoryId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteEmojiCategoryById(emojiCategoryId, opts) {
+      return this.deleteEmojiCategoryByIdWithHttpInfo(emojiCategoryId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Enable reactions
@@ -236,10 +259,9 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/EnableReactionsData} opts.enableReactionsData 
-     * @param {module:api/EmojisApi~enableReactionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20052}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20051} and HTTP response
      */
-    enableReactions(opts, callback) {
+    enableReactionsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['enableReactionsData'];
 
@@ -256,21 +278,29 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20052;
+      let returnType = InlineResponse20051;
       return this.apiClient.callApi(
         '/v3/applications/settings/reactions', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getEmojiByKey operation.
-     * @callback module:api/EmojisApi~getEmojiByKeyCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SendBirdEmoji} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Enable reactions
+     * ## Enable reactions  Turn on or off reactions in a Sendbird application.  > __Note__: This action also allows reactions in UIKit.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-enable-reactions
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/EnableReactionsData} opts.enableReactionsData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20051}
      */
+    enableReactions(opts) {
+      return this.enableReactionsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get an emoji
@@ -278,10 +308,9 @@ export default class EmojisApi {
      * @param {String} emojiKey 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/EmojisApi~getEmojiByKeyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SendBirdEmoji}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdEmoji} and HTTP response
      */
-    getEmojiByKey(emojiKey, opts, callback) {
+    getEmojiByKeyWithHttpInfo(emojiKey, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'emojiKey' is set
@@ -307,17 +336,25 @@ export default class EmojisApi {
       return this.apiClient.callApi(
         '/v3/emojis/{emoji_key}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getEmojiCategoryById operation.
-     * @callback module:api/EmojisApi~getEmojiCategoryByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SendBirdEmojiCategory} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get an emoji
+     * ## Get an emoji  Retrieves an emoji with the specified key.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-get-an-emoji ----------------------------
+     * @param {String} emojiKey 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdEmoji}
      */
+    getEmojiByKey(emojiKey, opts) {
+      return this.getEmojiByKeyWithHttpInfo(emojiKey, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get an emoji category
@@ -325,10 +362,9 @@ export default class EmojisApi {
      * @param {String} emojiCategoryId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/EmojisApi~getEmojiCategoryByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SendBirdEmojiCategory}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdEmojiCategory} and HTTP response
      */
-    getEmojiCategoryById(emojiCategoryId, opts, callback) {
+    getEmojiCategoryByIdWithHttpInfo(emojiCategoryId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'emojiCategoryId' is set
@@ -354,27 +390,34 @@ export default class EmojisApi {
       return this.apiClient.callApi(
         '/v3/emoji_categories/{emoji_category_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the listAllEmojisAndEmojiCategories operation.
-     * @callback module:api/EmojisApi~listAllEmojisAndEmojiCategoriesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20057} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get an emoji category
+     * ## Get an emoji category  Retrieves an emoji category with the specified ID, including its emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-get-an-emoji-category ----------------------------   `emoji_category_id`      Type: int      Description: Specifies the unique ID of the emoji category to retrieve.
+     * @param {String} emojiCategoryId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdEmojiCategory}
      */
+    getEmojiCategoryById(emojiCategoryId, opts) {
+      return this.getEmojiCategoryByIdWithHttpInfo(emojiCategoryId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * List all emojis and emoji categories
      * ## List all emojis and emoji categories  Retrieves a list of all emoji categories registered to the application, including their emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-all-emojis-and-emoji-categories
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/EmojisApi~listAllEmojisAndEmojiCategoriesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20057}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20056} and HTTP response
      */
-    listAllEmojisAndEmojiCategories(opts, callback) {
+    listAllEmojisAndEmojiCategoriesWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -391,31 +434,37 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20057;
+      let returnType = InlineResponse20056;
       return this.apiClient.callApi(
         '/v3/emoji_categories', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the listEmojis operation.
-     * @callback module:api/EmojisApi~listEmojisCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20059} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * List all emojis and emoji categories
+     * ## List all emojis and emoji categories  Retrieves a list of all emoji categories registered to the application, including their emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-all-emojis-and-emoji-categories
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20056}
      */
+    listAllEmojisAndEmojiCategories(opts) {
+      return this.listAllEmojisAndEmojiCategoriesWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * List emojis
      * ## List emojis  Retrieves a list of all emojis registered to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-emojis
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/EmojisApi~listEmojisCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20059}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20058} and HTTP response
      */
-    listEmojis(opts, callback) {
+    listEmojisWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -432,21 +481,28 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20059;
+      let returnType = InlineResponse20058;
       return this.apiClient.callApi(
         '/v3/emojis', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateEmojiCategoryUrlById operation.
-     * @callback module:api/EmojisApi~updateEmojiCategoryUrlByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SendBirdEmojiCategory} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * List emojis
+     * ## List emojis  Retrieves a list of all emojis registered to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-emojis
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20058}
      */
+    listEmojis(opts) {
+      return this.listEmojisWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update an emoji category URL
@@ -455,10 +511,9 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateEmojiCategoryUrlByIdData} opts.updateEmojiCategoryUrlByIdData 
-     * @param {module:api/EmojisApi~updateEmojiCategoryUrlByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SendBirdEmojiCategory}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdEmojiCategory} and HTTP response
      */
-    updateEmojiCategoryUrlById(emojiCategoryId, opts, callback) {
+    updateEmojiCategoryUrlByIdWithHttpInfo(emojiCategoryId, opts) {
       opts = opts || {};
       let postBody = opts['updateEmojiCategoryUrlByIdData'];
       // verify the required parameter 'emojiCategoryId' is set
@@ -484,17 +539,26 @@ export default class EmojisApi {
       return this.apiClient.callApi(
         '/v3/emoji_categories/{emoji_category_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateEmojiUrlByKey operation.
-     * @callback module:api/EmojisApi~updateEmojiUrlByKeyCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SendBirdEmoji} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update an emoji category URL
+     * ## Update an emoji category URL  Updates the URL of an emoji category with the specified ID.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-update-an-emoji-category-url ----------------------------
+     * @param {String} emojiCategoryId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateEmojiCategoryUrlByIdData} opts.updateEmojiCategoryUrlByIdData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdEmojiCategory}
      */
+    updateEmojiCategoryUrlById(emojiCategoryId, opts) {
+      return this.updateEmojiCategoryUrlByIdWithHttpInfo(emojiCategoryId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update an emoji URL
@@ -503,10 +567,9 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateEmojiUrlByKeyData} opts.updateEmojiUrlByKeyData 
-     * @param {module:api/EmojisApi~updateEmojiUrlByKeyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SendBirdEmoji}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdEmoji} and HTTP response
      */
-    updateEmojiUrlByKey(emojiKey, opts, callback) {
+    updateEmojiUrlByKeyWithHttpInfo(emojiKey, opts) {
       opts = opts || {};
       let postBody = opts['updateEmojiUrlByKeyData'];
       // verify the required parameter 'emojiKey' is set
@@ -532,17 +595,26 @@ export default class EmojisApi {
       return this.apiClient.callApi(
         '/v3/emojis/{emoji_key}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the useDefaultEmojis operation.
-     * @callback module:api/EmojisApi~useDefaultEmojisCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20056} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update an emoji URL
+     * ## Update an emoji URL  Updates the image URL of an emoji with the specified key.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-update-an-emoji-url ----------------------------
+     * @param {String} emojiKey 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateEmojiUrlByKeyData} opts.updateEmojiUrlByKeyData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdEmoji}
      */
+    updateEmojiUrlByKey(emojiKey, opts) {
+      return this.updateEmojiUrlByKeyWithHttpInfo(emojiKey, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Use default emojis
@@ -550,10 +622,9 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UseDefaultEmojisData} opts.useDefaultEmojisData 
-     * @param {module:api/EmojisApi~useDefaultEmojisCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20056}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20055} and HTTP response
      */
-    useDefaultEmojis(opts, callback) {
+    useDefaultEmojisWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['useDefaultEmojisData'];
 
@@ -570,12 +641,27 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20056;
+      let returnType = InlineResponse20055;
       return this.apiClient.callApi(
         '/v3/applications/settings/use_default_emoji', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Use default emojis
+     * ## Use default emojis  Determines whether to use the 7 default emojis initially provided.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-use-default-emojis
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UseDefaultEmojisData} opts.useDefaultEmojisData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20055}
+     */
+    useDefaultEmojis(opts) {
+      return this.useDefaultEmojisWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

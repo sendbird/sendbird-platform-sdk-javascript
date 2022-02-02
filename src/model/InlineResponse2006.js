@@ -47,8 +47,8 @@ class InlineResponse2006 {
         if (data) {
             obj = obj || new InlineResponse2006();
 
-            if (data.hasOwnProperty('auto_accept')) {
-                obj['auto_accept'] = ApiClient.convertToType(data['auto_accept'], 'Boolean');
+            if (data.hasOwnProperty('ip_whitelist_addresses')) {
+                obj['ip_whitelist_addresses'] = ApiClient.convertToType(data['ip_whitelist_addresses'], ['String']);
             }
         }
         return obj;
@@ -58,9 +58,9 @@ class InlineResponse2006 {
 }
 
 /**
- * @member {Boolean} auto_accept
+ * @member {Array.<String>} ip_whitelist_addresses
  */
-InlineResponse2006.prototype['auto_accept'] = undefined;
+InlineResponse2006.prototype['ip_whitelist_addresses'] = undefined;
 
 
 

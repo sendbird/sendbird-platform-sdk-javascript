@@ -48,11 +48,8 @@ class InlineResponse20032 {
         if (data) {
             obj = obj || new InlineResponse20032();
 
-            if (data.hasOwnProperty('muted_list')) {
-                obj['muted_list'] = ApiClient.convertToType(data['muted_list'], [SendBirdUser]);
-            }
-            if (data.hasOwnProperty('total_mute_count')) {
-                obj['total_mute_count'] = ApiClient.convertToType(data['total_mute_count'], 'Number');
+            if (data.hasOwnProperty('participants')) {
+                obj['participants'] = ApiClient.convertToType(data['participants'], [SendBirdUser]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -65,14 +62,9 @@ class InlineResponse20032 {
 }
 
 /**
- * @member {Array.<module:model/SendBirdUser>} muted_list
+ * @member {Array.<module:model/SendBirdUser>} participants
  */
-InlineResponse20032.prototype['muted_list'] = undefined;
-
-/**
- * @member {Number} total_mute_count
- */
-InlineResponse20032.prototype['total_mute_count'] = undefined;
+InlineResponse20032.prototype['participants'] = undefined;
 
 /**
  * @member {String} next

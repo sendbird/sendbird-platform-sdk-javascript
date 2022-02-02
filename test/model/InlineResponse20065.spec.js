@@ -54,86 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20065);
     });
 
-    it('should have the property requestId (base name: "request_id")', function() {
-      // uncomment below and update the code to test the property requestId
+    it('should have the property bots (base name: "bots")', function() {
+      // uncomment below and update the code to test the property bots
       //var instance = new SendbirdPlatformSdk.InlineResponse20065();
       //expect(instance).to.be();
     });
 
-    it('should have the property dataType (base name: "data_type")', function() {
-      // uncomment below and update the code to test the property dataType
-      //var instance = new SendbirdPlatformSdk.InlineResponse20065();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new SendbirdPlatformSdk.InlineResponse20065();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property format (base name: "format")', function() {
-      // uncomment below and update the code to test the property format
-      //var instance = new SendbirdPlatformSdk.InlineResponse20065();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property csvDelimiter (base name: "csv_delimiter")', function() {
-      // uncomment below and update the code to test the property csvDelimiter
-      //var instance = new SendbirdPlatformSdk.InlineResponse20065();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property timezone (base name: "timezone")', function() {
-      // uncomment below and update the code to test the property timezone
-      //var instance = new SendbirdPlatformSdk.InlineResponse20065();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new SendbirdPlatformSdk.InlineResponse20065();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property startTs (base name: "start_ts")', function() {
-      // uncomment below and update the code to test the property startTs
-      //var instance = new SendbirdPlatformSdk.InlineResponse20065();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property endTs (base name: "end_ts")', function() {
-      // uncomment below and update the code to test the property endTs
-      //var instance = new SendbirdPlatformSdk.InlineResponse20065();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property channelUrls (base name: "channel_urls")', function() {
-      // uncomment below and update the code to test the property channelUrls
-      //var instance = new SendbirdPlatformSdk.InlineResponse20065();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property channelCustomTypes (base name: "channel_custom_types")', function() {
-      // uncomment below and update the code to test the property channelCustomTypes
-      //var instance = new SendbirdPlatformSdk.InlineResponse20065();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property senderIds (base name: "sender_ids")', function() {
-      // uncomment below and update the code to test the property senderIds
-      //var instance = new SendbirdPlatformSdk.InlineResponse20065();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property file (base name: "file")', function() {
-      // uncomment below and update the code to test the property file
-      //var instance = new SendbirdPlatformSdk.InlineResponse20065();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property userIds (base name: "user_ids")', function() {
-      // uncomment below and update the code to test the property userIds
+    it('should have the property next (base name: "next")', function() {
+      // uncomment below and update the code to test the property next
       //var instance = new SendbirdPlatformSdk.InlineResponse20065();
       //expect(instance).to.be();
     });

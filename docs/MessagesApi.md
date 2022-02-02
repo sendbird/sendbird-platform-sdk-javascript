@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 ## addExtraDataToMessage
 
-> InlineResponse20055 addExtraDataToMessage(channelType, channelUrl, messageId, opts)
+> InlineResponse20054 addExtraDataToMessage(channelType, channelUrl, messageId, opts)
 
 Add extra data to a message
 
@@ -44,13 +44,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'addExtraDataToMessageData': new SendbirdPlatformSdk.AddExtraDataToMessageData() // AddExtraDataToMessageData | 
 };
-apiInstance.addExtraDataToMessage(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.addExtraDataToMessage(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -66,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20055**](InlineResponse20055.md)
+[**InlineResponse20054**](InlineResponse20054.md)
 
 ### Authorization
 
@@ -80,7 +79,7 @@ No authorization required
 
 ## addReactionToAMessage
 
-> InlineResponse20054 addReactionToAMessage(channelType, channelUrl, messageId, opts)
+> InlineResponse20053 addReactionToAMessage(channelType, channelUrl, messageId, opts)
 
 Add a reaction to a message
 
@@ -99,13 +98,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'addReactionToAMessageData': new SendbirdPlatformSdk.AddReactionToAMessageData() // AddReactionToAMessageData | 
 };
-apiInstance.addReactionToAMessage(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.addReactionToAMessage(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -121,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20054**](InlineResponse20054.md)
+[**InlineResponse20053**](InlineResponse20053.md)
 
 ### Authorization
 
@@ -153,13 +151,12 @@ let messageId = "messageId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteMessageById(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteMessageById(channelType, channelUrl, messageId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -183,12 +180,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## gcMarkAllMessagesAsDelivered
 
-> InlineResponse20051 gcMarkAllMessagesAsDelivered(channelUrl, opts)
+> InlineResponse20050 gcMarkAllMessagesAsDelivered(channelUrl, opts)
 
 Mark all messages as delivered
 
@@ -205,13 +202,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcMarkAllMessagesAsDeliveredData': new SendbirdPlatformSdk.GcMarkAllMessagesAsDeliveredData() // GcMarkAllMessagesAsDeliveredData | 
 };
-apiInstance.gcMarkAllMessagesAsDelivered(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcMarkAllMessagesAsDelivered(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -225,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20051**](InlineResponse20051.md)
+[**InlineResponse20050**](InlineResponse20050.md)
 
 ### Authorization
 
@@ -256,13 +252,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcMarkAllMessagesAsReadData': new SendbirdPlatformSdk.GcMarkAllMessagesAsReadData() // GcMarkAllMessagesAsReadData | 
 };
-apiInstance.gcMarkAllMessagesAsRead(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.gcMarkAllMessagesAsRead(channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -285,12 +280,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## gcViewNumberOfEachMembersUnreadMessages
 
-> InlineResponse20050 gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts)
+> InlineResponse20049 gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts)
 
 View number of each member&#39;s unread messages
 
@@ -307,13 +302,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'userIds': "userIds_example" // String | 
 };
-apiInstance.gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -327,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20050**](InlineResponse20050.md)
+[**InlineResponse20049**](InlineResponse20049.md)
 
 ### Authorization
 
@@ -341,7 +335,7 @@ No authorization required
 
 ## listMessages
 
-> InlineResponse20048 listMessages(channelType, channelUrl, messageTs, messageId, opts)
+> InlineResponse20047 listMessages(channelType, channelUrl, messageTs, messageId, opts)
 
 List messages
 
@@ -376,13 +370,12 @@ let opts = {
   'customType': "customType_example", // String | 
   'withMetaArray': true // Boolean | 
 };
-apiInstance.listMessages(channelType, channelUrl, messageTs, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listMessages(channelType, channelUrl, messageTs, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -414,7 +407,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20048**](InlineResponse20048.md)
+[**InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 
@@ -428,7 +421,7 @@ No authorization required
 
 ## listReactionsOfMessage
 
-> InlineResponse20053 listReactionsOfMessage(channelType, channelUrl, messageId, opts)
+> InlineResponse20052 listReactionsOfMessage(channelType, channelUrl, messageId, opts)
 
 List reactions of a message
 
@@ -447,13 +440,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'listUsers': true // Boolean | 
 };
-apiInstance.listReactionsOfMessage(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listReactionsOfMessage(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -469,7 +461,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20053**](InlineResponse20053.md)
+[**InlineResponse20052**](InlineResponse20052.md)
 
 ### Authorization
 
@@ -502,13 +494,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'keys': ["null"] // [String] | 
 };
-apiInstance.removeExtraDataFromMessage(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.removeExtraDataFromMessage(channelType, channelUrl, messageId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -533,12 +524,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## removeReactionFromAMessage
 
-> InlineResponse20054 removeReactionFromAMessage(channelType, channelUrl, messageId, opts)
+> InlineResponse20053 removeReactionFromAMessage(channelType, channelUrl, messageId, opts)
 
 Remove a reaction from a message
 
@@ -558,13 +549,12 @@ let opts = {
   'userId': "userId_example", // String | 
   'reaction': "reaction_example" // String | 
 };
-apiInstance.removeReactionFromAMessage(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.removeReactionFromAMessage(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -581,7 +571,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20054**](InlineResponse20054.md)
+[**InlineResponse20053**](InlineResponse20053.md)
 
 ### Authorization
 
@@ -613,13 +603,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'sendMessageData': new SendbirdPlatformSdk.SendMessageData() // SendMessageData | 
 };
-apiInstance.sendMessage(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.sendMessage(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -667,13 +656,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -703,7 +691,7 @@ No authorization required
 
 ## updateExtraDataInMessage
 
-> InlineResponse20055 updateExtraDataInMessage(channelType, channelUrl, messageId, opts)
+> InlineResponse20054 updateExtraDataInMessage(channelType, channelUrl, messageId, opts)
 
 Update extra data in a message
 
@@ -722,13 +710,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateExtraDataInMessageData': new SendbirdPlatformSdk.UpdateExtraDataInMessageData() // UpdateExtraDataInMessageData | 
 };
-apiInstance.updateExtraDataInMessage(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateExtraDataInMessage(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -744,7 +731,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20055**](InlineResponse20055.md)
+[**InlineResponse20054**](InlineResponse20054.md)
 
 ### Authorization
 
@@ -777,13 +764,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateMessageByIdData': new SendbirdPlatformSdk.UpdateMessageByIdData() // UpdateMessageByIdData | 
 };
-apiInstance.updateMessageById(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateMessageById(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -833,13 +819,12 @@ let opts = {
   'withSortedMetaArray': true, // Boolean | 
   'withMetaArray': true // Boolean | 
 };
-apiInstance.viewMessageById(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewMessageById(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -870,7 +855,7 @@ No authorization required
 
 ## viewTotalNumberOfMessagesInChannel
 
-> InlineResponse20049 viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts)
+> InlineResponse20048 viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts)
 
 View total number of messages in a channel
 
@@ -887,13 +872,12 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -907,7 +891,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20049**](InlineResponse20049.md)
+[**InlineResponse20048**](InlineResponse20048.md)
 
 ### Authorization
 

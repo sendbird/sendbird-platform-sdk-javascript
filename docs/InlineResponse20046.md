@@ -4,7 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**announcementGroup** | **[String]** |  | [optional] 
-**next** | **String** |  | [optional] 
+**uniqueId** | **String** |  | [optional] 
+**announcementGroup** | **String** |  | [optional] 
+**openCounts** | **[Number]** |  | [optional] 
+**openRates** | **[Number]** |  | [optional] 
+**cumulativeOpenCounts** | **[Number]** |  | [optional] 
+**cumulativeOpenRates** | **[Number]** |  | [optional] 
 
 

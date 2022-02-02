@@ -6,8 +6,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
 **pushType** | **String** |  | [optional] 
-**huaweiAppId** | **String** |  | [optional] 
-**huaweiAppSecret** | **String** |  | [optional] 
+**createdAt** | **Number** |  | [optional] 
+**apnsCerEnvType** | **String** |  | [optional] 
+**apnsExpiration** | **Number** |  | [optional] 
+**apnsName** | **String** |  | [optional] 
+**hasUnreadCountBadge** | **Number** |  | [optional] 
+**contentAvailable** | **Boolean** |  | [optional] 
+**mutableContent** | **Boolean** |  | [optional] 
 **pushSound** | **String** |  | [optional] 
 
 

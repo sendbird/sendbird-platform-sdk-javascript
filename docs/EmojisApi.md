@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## addEmojiCategories
 
-> InlineResponse20058 addEmojiCategories(opts)
+> InlineResponse20057 addEmojiCategories(opts)
 
 Add emoji categories
 
@@ -37,13 +37,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.addEmojiCategories(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.addEmojiCategories(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -56,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20058**](InlineResponse20058.md)
+[**InlineResponse20057**](InlineResponse20057.md)
 
 ### Authorization
 
@@ -70,7 +69,7 @@ No authorization required
 
 ## addEmojis
 
-> InlineResponse20060 addEmojis(opts)
+> InlineResponse20059 addEmojis(opts)
 
 Add emojis
 
@@ -86,13 +85,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'addEmojisData': new SendbirdPlatformSdk.AddEmojisData() // AddEmojisData | 
 };
-apiInstance.addEmojis(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.addEmojis(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -105,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20060**](InlineResponse20060.md)
+[**InlineResponse20059**](InlineResponse20059.md)
 
 ### Authorization
 
@@ -135,13 +133,12 @@ let emojiKey = "emojiKey_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteEmojiByKey(emojiKey, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteEmojiByKey(emojiKey, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -163,7 +160,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## deleteEmojiCategoryById
@@ -184,13 +181,12 @@ let emojiCategoryId = "emojiCategoryId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteEmojiCategoryById(emojiCategoryId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteEmojiCategoryById(emojiCategoryId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -212,12 +208,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## enableReactions
 
-> InlineResponse20052 enableReactions(opts)
+> InlineResponse20051 enableReactions(opts)
 
 Enable reactions
 
@@ -233,13 +229,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'enableReactionsData': new SendbirdPlatformSdk.EnableReactionsData() // EnableReactionsData | 
 };
-apiInstance.enableReactions(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.enableReactions(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -252,7 +247,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20052**](InlineResponse20052.md)
+[**InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -282,13 +277,12 @@ let emojiKey = "emojiKey_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.getEmojiByKey(emojiKey, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getEmojiByKey(emojiKey, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -331,13 +325,12 @@ let emojiCategoryId = "emojiCategoryId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.getEmojiCategoryById(emojiCategoryId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getEmojiCategoryById(emojiCategoryId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -364,7 +357,7 @@ No authorization required
 
 ## listAllEmojisAndEmojiCategories
 
-> InlineResponse20057 listAllEmojisAndEmojiCategories(opts)
+> InlineResponse20056 listAllEmojisAndEmojiCategories(opts)
 
 List all emojis and emoji categories
 
@@ -379,13 +372,12 @@ let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.listAllEmojisAndEmojiCategories(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listAllEmojisAndEmojiCategories(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -397,7 +389,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20057**](InlineResponse20057.md)
+[**InlineResponse20056**](InlineResponse20056.md)
 
 ### Authorization
 
@@ -411,7 +403,7 @@ No authorization required
 
 ## listEmojis
 
-> InlineResponse20059 listEmojis(opts)
+> InlineResponse20058 listEmojis(opts)
 
 List emojis
 
@@ -426,13 +418,12 @@ let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.listEmojis(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listEmojis(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -444,7 +435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20059**](InlineResponse20059.md)
+[**InlineResponse20058**](InlineResponse20058.md)
 
 ### Authorization
 
@@ -475,13 +466,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateEmojiCategoryUrlByIdData': new SendbirdPlatformSdk.UpdateEmojiCategoryUrlByIdData() // UpdateEmojiCategoryUrlByIdData | 
 };
-apiInstance.updateEmojiCategoryUrlById(emojiCategoryId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateEmojiCategoryUrlById(emojiCategoryId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -526,13 +516,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateEmojiUrlByKeyData': new SendbirdPlatformSdk.UpdateEmojiUrlByKeyData() // UpdateEmojiUrlByKeyData | 
 };
-apiInstance.updateEmojiUrlByKey(emojiKey, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateEmojiUrlByKey(emojiKey, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -560,7 +549,7 @@ No authorization required
 
 ## useDefaultEmojis
 
-> InlineResponse20056 useDefaultEmojis(opts)
+> InlineResponse20055 useDefaultEmojis(opts)
 
 Use default emojis
 
@@ -576,13 +565,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'useDefaultEmojisData': new SendbirdPlatformSdk.UseDefaultEmojisData() // UseDefaultEmojisData | 
 };
-apiInstance.useDefaultEmojis(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.useDefaultEmojis(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -595,7 +583,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20056**](InlineResponse20056.md)
+[**InlineResponse20055**](InlineResponse20055.md)
 
 ### Authorization
 

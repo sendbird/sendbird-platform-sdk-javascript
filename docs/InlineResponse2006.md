@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**autoAccept** | **Boolean** |  | [optional] 
+**ipWhitelistAddresses** | **[String]** |  | [optional] 
 
 

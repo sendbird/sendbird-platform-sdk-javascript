@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import SendBirdChannelResponse from './SendBirdChannelResponse';
+import SendBirdUser from './SendBirdUser';
 
 /**
  * The InlineResponse20024 model module.
@@ -48,11 +48,14 @@ class InlineResponse20024 {
         if (data) {
             obj = obj || new InlineResponse20024();
 
-            if (data.hasOwnProperty('muted_channels')) {
-                obj['muted_channels'] = ApiClient.convertToType(data['muted_channels'], [SendBirdChannelResponse]);
+            if (data.hasOwnProperty('tokens')) {
+                obj['tokens'] = ApiClient.convertToType(data['tokens'], ['String']);
             }
-            if (data.hasOwnProperty('next')) {
-                obj['next'] = ApiClient.convertToType(data['next'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            }
+            if (data.hasOwnProperty('user')) {
+                obj['user'] = SendBirdUser.constructFromObject(data['user']);
             }
         }
         return obj;
@@ -62,14 +65,19 @@ class InlineResponse20024 {
 }
 
 /**
- * @member {Array.<module:model/SendBirdChannelResponse>} muted_channels
+ * @member {Array.<String>} tokens
  */
-InlineResponse20024.prototype['muted_channels'] = undefined;
+InlineResponse20024.prototype['tokens'] = undefined;
 
 /**
- * @member {String} next
+ * @member {String} type
  */
-InlineResponse20024.prototype['next'] = undefined;
+InlineResponse20024.prototype['type'] = undefined;
+
+/**
+ * @member {module:model/SendBirdUser} user
+ */
+InlineResponse20024.prototype['user'] = undefined;
 
 
 

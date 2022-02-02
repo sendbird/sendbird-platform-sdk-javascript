@@ -47,11 +47,23 @@ class InlineResponse20062 {
         if (data) {
             obj = obj || new InlineResponse20062();
 
-            if (data.hasOwnProperty('metadata')) {
-                obj['metadata'] = ApiClient.convertToType(data['metadata'], {'String': 'String'});
+            if (data.hasOwnProperty('segments')) {
+                obj['segments'] = ApiClient.convertToType(data['segments'], 'String');
             }
-            if (data.hasOwnProperty('include_ts')) {
-                obj['include_ts'] = ApiClient.convertToType(data['include_ts'], 'Number');
+            if (data.hasOwnProperty('date')) {
+                obj['date'] = ApiClient.convertToType(data['date'], 'String');
+            }
+            if (data.hasOwnProperty('value')) {
+                obj['value'] = ApiClient.convertToType(data['value'], 'Number');
+            }
+            if (data.hasOwnProperty('channel_type')) {
+                obj['channel_type'] = ApiClient.convertToType(data['channel_type'], 'String');
+            }
+            if (data.hasOwnProperty('custom_channel_type')) {
+                obj['custom_channel_type'] = ApiClient.convertToType(data['custom_channel_type'], 'String');
+            }
+            if (data.hasOwnProperty('custom_message_type')) {
+                obj['custom_message_type'] = ApiClient.convertToType(data['custom_message_type'], 'String');
             }
         }
         return obj;
@@ -61,14 +73,34 @@ class InlineResponse20062 {
 }
 
 /**
- * @member {Object.<String, String>} metadata
+ * @member {String} segments
  */
-InlineResponse20062.prototype['metadata'] = undefined;
+InlineResponse20062.prototype['segments'] = undefined;
 
 /**
- * @member {Number} include_ts
+ * @member {String} date
  */
-InlineResponse20062.prototype['include_ts'] = undefined;
+InlineResponse20062.prototype['date'] = undefined;
+
+/**
+ * @member {Number} value
+ */
+InlineResponse20062.prototype['value'] = undefined;
+
+/**
+ * @member {String} channel_type
+ */
+InlineResponse20062.prototype['channel_type'] = undefined;
+
+/**
+ * @member {String} custom_channel_type
+ */
+InlineResponse20062.prototype['custom_channel_type'] = undefined;
+
+/**
+ * @member {String} custom_message_type
+ */
+InlineResponse20062.prototype['custom_message_type'] = undefined;
 
 
 

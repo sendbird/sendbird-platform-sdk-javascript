@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**useDefaultEmoji** | **Boolean** |  | [optional] 
+**emojiHash** | **String** |  | [optional] 
+**emojiCategories** | [**[InlineResponse20056EmojiCategories]**](InlineResponse20056EmojiCategories.md) |  | [optional] 
 
 

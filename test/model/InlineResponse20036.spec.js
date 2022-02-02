@@ -54,32 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20036);
     });
 
-    it('should have the property isMuted (base name: "is_muted")', function() {
-      // uncomment below and update the code to test the property isMuted
+    it('should have the property members (base name: "members")', function() {
+      // uncomment below and update the code to test the property members
       //var instance = new SendbirdPlatformSdk.InlineResponse20036();
       //expect(instance).to.be();
     });
 
-    it('should have the property remainingDuration (base name: "remaining_duration")', function() {
-      // uncomment below and update the code to test the property remainingDuration
-      //var instance = new SendbirdPlatformSdk.InlineResponse20036();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property startAt (base name: "start_at")', function() {
-      // uncomment below and update the code to test the property startAt
-      //var instance = new SendbirdPlatformSdk.InlineResponse20036();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property endAt (base name: "end_at")', function() {
-      // uncomment below and update the code to test the property endAt
-      //var instance = new SendbirdPlatformSdk.InlineResponse20036();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
+    it('should have the property next (base name: "next")', function() {
+      // uncomment below and update the code to test the property next
       //var instance = new SendbirdPlatformSdk.InlineResponse20036();
       //expect(instance).to.be();
     });

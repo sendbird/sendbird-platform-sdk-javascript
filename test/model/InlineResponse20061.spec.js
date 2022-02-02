@@ -60,8 +60,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property upsert (base name: "upsert")', function() {
-      // uncomment below and update the code to test the property upsert
+    it('should have the property includeTs (base name: "include_ts")', function() {
+      // uncomment below and update the code to test the property includeTs
       //var instance = new SendbirdPlatformSdk.InlineResponse20061();
       //expect(instance).to.be();
     });

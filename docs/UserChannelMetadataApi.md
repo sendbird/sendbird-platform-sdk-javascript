@@ -48,13 +48,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'createChannelMetacounterData': new SendbirdPlatformSdk.CreateChannelMetacounterData() // CreateChannelMetacounterData | 
 };
-apiInstance.createChannelMetacounter(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createChannelMetacounter(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -83,7 +82,7 @@ No authorization required
 
 ## createChannelMetadata
 
-> InlineResponse20062 createChannelMetadata(channelType, channelUrl, opts)
+> InlineResponse20061 createChannelMetadata(channelType, channelUrl, opts)
 
 Create a channel metadata
 
@@ -101,13 +100,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'createChannelMetadataData': new SendbirdPlatformSdk.CreateChannelMetadataData() // CreateChannelMetadataData | 
 };
-apiInstance.createChannelMetadata(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createChannelMetadata(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -122,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20062**](InlineResponse20062.md)
+[**InlineResponse20061**](InlineResponse20061.md)
 
 ### Authorization
 
@@ -136,7 +134,7 @@ No authorization required
 
 ## createUserMetadata
 
-> InlineResponse20048UserMetadata createUserMetadata(userId, opts)
+> InlineResponse20047UserMetadata createUserMetadata(userId, opts)
 
 Create a user metadata
 
@@ -153,13 +151,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'createUserMetadataData': new SendbirdPlatformSdk.CreateUserMetadataData() // CreateUserMetadataData | 
 };
-apiInstance.createUserMetadata(userId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createUserMetadata(userId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -173,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20048UserMetadata**](InlineResponse20048UserMetadata.md)
+[**InlineResponse20047UserMetadata**](InlineResponse20047UserMetadata.md)
 
 ### Authorization
 
@@ -204,13 +201,12 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteChannelMetacounter(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteChannelMetacounter(channelType, channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -233,7 +229,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## deleteChannelMetacounterByKey
@@ -256,13 +252,12 @@ let key = "key_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteChannelMetacounterByKey(channelType, channelUrl, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteChannelMetacounterByKey(channelType, channelUrl, key, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -286,7 +281,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## deleteChannelMetadata
@@ -309,13 +304,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'key': "key_example" // String | 
 };
-apiInstance.deleteChannelMetadata(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteChannelMetadata(channelType, channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -339,7 +333,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## deleteChannelMetadataByKey
@@ -362,13 +356,12 @@ let key = "key_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteChannelMetadataByKey(channelType, channelUrl, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteChannelMetadataByKey(channelType, channelUrl, key, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -392,7 +385,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## deleteUserMetadata
@@ -414,13 +407,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'key': "key_example" // String | 
 };
-apiInstance.deleteUserMetadata(userId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteUserMetadata(userId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -443,7 +435,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## deleteUserMetadataByKey
@@ -465,13 +457,12 @@ let key = "key_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteUserMetadataByKey(userId, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteUserMetadataByKey(userId, key, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -494,7 +485,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## updateChannelMetacounter
@@ -517,13 +508,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateChannelMetacounterData': new SendbirdPlatformSdk.UpdateChannelMetacounterData() // UpdateChannelMetacounterData | 
 };
-apiInstance.updateChannelMetacounter(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateChannelMetacounter(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -571,13 +561,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.updateChannelMetacounterByKey(channelType, channelUrl, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateChannelMetacounterByKey(channelType, channelUrl, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -625,13 +614,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateChannelMetadataData': new SendbirdPlatformSdk.UpdateChannelMetadataData() // UpdateChannelMetadataData | 
 };
-apiInstance.updateChannelMetadata(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateChannelMetadata(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -679,13 +667,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.updateChannelMetadataByKey(channelType, channelUrl, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateChannelMetadataByKey(channelType, channelUrl, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -715,7 +702,7 @@ No authorization required
 
 ## updateUserMetadata
 
-> InlineResponse20061 updateUserMetadata(userId, opts)
+> InlineResponse20060 updateUserMetadata(userId, opts)
 
 Update a user metadata - When updating existing items of a user metadata by their keys or adding new items to the metadata
 
@@ -732,13 +719,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateUserMetadataData': new SendbirdPlatformSdk.UpdateUserMetadataData() // UpdateUserMetadataData | 
 };
-apiInstance.updateUserMetadata(userId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateUserMetadata(userId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -752,7 +738,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20061**](InlineResponse20061.md)
+[**InlineResponse20060**](InlineResponse20060.md)
 
 ### Authorization
 
@@ -784,13 +770,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.updateUserMetadataByKey(userId, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateUserMetadataByKey(userId, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -838,13 +823,12 @@ let opts = {
   'key': "key_example", // String | 
   'keys': ["null"] // [String] | 
 };
-apiInstance.viewChannelMetacounter(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewChannelMetacounter(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -892,13 +876,12 @@ let key = "key_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewChannelMetacounterByKey(channelType, channelUrl, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewChannelMetacounterByKey(channelType, channelUrl, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -946,13 +929,12 @@ let opts = {
   'key': "key_example", // String | 
   'keys': ["null"] // [String] | 
 };
-apiInstance.viewChannelMetadata(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewChannelMetadata(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1000,13 +982,12 @@ let key = "key_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewChannelMetadataByKey(channelType, channelUrl, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewChannelMetadataByKey(channelType, channelUrl, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1035,7 +1016,7 @@ No authorization required
 
 ## viewUserMetadata
 
-> InlineResponse20048UserMetadata viewUserMetadata(userId, opts)
+> InlineResponse20047UserMetadata viewUserMetadata(userId, opts)
 
 View a user metadata - When retrieving all items of a user metadata
 
@@ -1053,13 +1034,12 @@ let opts = {
   'key': "key_example", // String | 
   'keys': ["null"] // [String] | 
 };
-apiInstance.viewUserMetadata(userId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewUserMetadata(userId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1074,7 +1054,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20048UserMetadata**](InlineResponse20048UserMetadata.md)
+[**InlineResponse20047UserMetadata**](InlineResponse20047UserMetadata.md)
 
 ### Authorization
 
@@ -1105,13 +1085,12 @@ let key = "key_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewUserMetadataByKey(userId, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewUserMetadataByKey(userId, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

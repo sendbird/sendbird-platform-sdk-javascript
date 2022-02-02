@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | [optional] 
+**channels** | [**[SendBirdOpenChannel]**](SendBirdOpenChannel.md) |  | [optional] 
+**next** | **String** |  | [optional] 
 
 

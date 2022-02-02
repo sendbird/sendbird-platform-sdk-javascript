@@ -54,14 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20018);
     });
 
-    it('should have the property channels (base name: "channels")', function() {
-      // uncomment below and update the code to test the property channels
-      //var instance = new SendbirdPlatformSdk.InlineResponse20018();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property next (base name: "next")', function() {
-      // uncomment below and update the code to test the property next
+    it('should have the property unreadCount (base name: "unread_count")', function() {
+      // uncomment below and update the code to test the property unreadCount
       //var instance = new SendbirdPlatformSdk.InlineResponse20018();
       //expect(instance).to.be();
     });

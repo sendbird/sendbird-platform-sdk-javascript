@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import InlineResponse2007 from './InlineResponse2007';
 
 /**
  * The InlineResponse2008 model module.
@@ -47,11 +48,8 @@ class InlineResponse2008 {
         if (data) {
             obj = obj || new InlineResponse2008();
 
-            if (data.hasOwnProperty('token')) {
-                obj['token'] = ApiClient.convertToType(data['token'], 'String');
-            }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Number');
+            if (data.hasOwnProperty('api_tokens')) {
+                obj['api_tokens'] = ApiClient.convertToType(data['api_tokens'], [InlineResponse2007]);
             }
         }
         return obj;
@@ -61,14 +59,9 @@ class InlineResponse2008 {
 }
 
 /**
- * @member {String} token
+ * @member {Array.<module:model/InlineResponse2007>} api_tokens
  */
-InlineResponse2008.prototype['token'] = undefined;
-
-/**
- * @member {Number} created_at
- */
-InlineResponse2008.prototype['created_at'] = undefined;
+InlineResponse2008.prototype['api_tokens'] = undefined;
 
 
 

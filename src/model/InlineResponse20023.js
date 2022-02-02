@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20023BannedChannels from './InlineResponse20023BannedChannels';
+import SendBirdChannelResponse from './SendBirdChannelResponse';
 
 /**
  * The InlineResponse20023 model module.
@@ -48,8 +48,8 @@ class InlineResponse20023 {
         if (data) {
             obj = obj || new InlineResponse20023();
 
-            if (data.hasOwnProperty('banned_channels')) {
-                obj['banned_channels'] = ApiClient.convertToType(data['banned_channels'], [InlineResponse20023BannedChannels]);
+            if (data.hasOwnProperty('muted_channels')) {
+                obj['muted_channels'] = ApiClient.convertToType(data['muted_channels'], [SendBirdChannelResponse]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -62,9 +62,9 @@ class InlineResponse20023 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse20023BannedChannels>} banned_channels
+ * @member {Array.<module:model/SendBirdChannelResponse>} muted_channels
  */
-InlineResponse20023.prototype['banned_channels'] = undefined;
+InlineResponse20023.prototype['muted_channels'] = undefined;
 
 /**
  * @member {String} next

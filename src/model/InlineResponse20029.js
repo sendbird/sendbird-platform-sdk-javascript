@@ -47,38 +47,8 @@ class InlineResponse20029 {
         if (data) {
             obj = obj || new InlineResponse20029();
 
-            if (data.hasOwnProperty('push_trigger_option')) {
-                obj['push_trigger_option'] = ApiClient.convertToType(data['push_trigger_option'], 'String');
-            }
-            if (data.hasOwnProperty('do_not_disturb')) {
-                obj['do_not_disturb'] = ApiClient.convertToType(data['do_not_disturb'], 'Boolean');
-            }
-            if (data.hasOwnProperty('start_hour')) {
-                obj['start_hour'] = ApiClient.convertToType(data['start_hour'], 'Number');
-            }
-            if (data.hasOwnProperty('start_min')) {
-                obj['start_min'] = ApiClient.convertToType(data['start_min'], 'Number');
-            }
-            if (data.hasOwnProperty('end_hour')) {
-                obj['end_hour'] = ApiClient.convertToType(data['end_hour'], 'Number');
-            }
-            if (data.hasOwnProperty('end_min')) {
-                obj['end_min'] = ApiClient.convertToType(data['end_min'], 'Number');
-            }
-            if (data.hasOwnProperty('snooze_enabled')) {
-                obj['snooze_enabled'] = ApiClient.convertToType(data['snooze_enabled'], 'Boolean');
-            }
-            if (data.hasOwnProperty('snooze_start_ts')) {
-                obj['snooze_start_ts'] = ApiClient.convertToType(data['snooze_start_ts'], 'Number');
-            }
-            if (data.hasOwnProperty('snooze_end_ts')) {
-                obj['snooze_end_ts'] = ApiClient.convertToType(data['snooze_end_ts'], 'Number');
-            }
-            if (data.hasOwnProperty('timezone')) {
-                obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
-            }
-            if (data.hasOwnProperty('push_sound')) {
-                obj['push_sound'] = ApiClient.convertToType(data['push_sound'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
         }
         return obj;
@@ -88,59 +58,9 @@ class InlineResponse20029 {
 }
 
 /**
- * @member {String} push_trigger_option
+ * @member {String} name
  */
-InlineResponse20029.prototype['push_trigger_option'] = undefined;
-
-/**
- * @member {Boolean} do_not_disturb
- */
-InlineResponse20029.prototype['do_not_disturb'] = undefined;
-
-/**
- * @member {Number} start_hour
- */
-InlineResponse20029.prototype['start_hour'] = undefined;
-
-/**
- * @member {Number} start_min
- */
-InlineResponse20029.prototype['start_min'] = undefined;
-
-/**
- * @member {Number} end_hour
- */
-InlineResponse20029.prototype['end_hour'] = undefined;
-
-/**
- * @member {Number} end_min
- */
-InlineResponse20029.prototype['end_min'] = undefined;
-
-/**
- * @member {Boolean} snooze_enabled
- */
-InlineResponse20029.prototype['snooze_enabled'] = undefined;
-
-/**
- * @member {Number} snooze_start_ts
- */
-InlineResponse20029.prototype['snooze_start_ts'] = undefined;
-
-/**
- * @member {Number} snooze_end_ts
- */
-InlineResponse20029.prototype['snooze_end_ts'] = undefined;
-
-/**
- * @member {String} timezone
- */
-InlineResponse20029.prototype['timezone'] = undefined;
-
-/**
- * @member {String} push_sound
- */
-InlineResponse20029.prototype['push_sound'] = undefined;
+InlineResponse20029.prototype['name'] = undefined;
 
 
 

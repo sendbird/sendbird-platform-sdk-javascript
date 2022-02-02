@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import SendBirdOpenChannel from './SendBirdOpenChannel';
+import SendBirdUser from './SendBirdUser';
 
 /**
  * The InlineResponse20031 model module.
@@ -48,8 +48,11 @@ class InlineResponse20031 {
         if (data) {
             obj = obj || new InlineResponse20031();
 
-            if (data.hasOwnProperty('channels')) {
-                obj['channels'] = ApiClient.convertToType(data['channels'], [SendBirdOpenChannel]);
+            if (data.hasOwnProperty('muted_list')) {
+                obj['muted_list'] = ApiClient.convertToType(data['muted_list'], [SendBirdUser]);
+            }
+            if (data.hasOwnProperty('total_mute_count')) {
+                obj['total_mute_count'] = ApiClient.convertToType(data['total_mute_count'], 'Number');
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -62,9 +65,14 @@ class InlineResponse20031 {
 }
 
 /**
- * @member {Array.<module:model/SendBirdOpenChannel>} channels
+ * @member {Array.<module:model/SendBirdUser>} muted_list
  */
-InlineResponse20031.prototype['channels'] = undefined;
+InlineResponse20031.prototype['muted_list'] = undefined;
+
+/**
+ * @member {Number} total_mute_count
+ */
+InlineResponse20031.prototype['total_mute_count'] = undefined;
 
 /**
  * @member {String} next

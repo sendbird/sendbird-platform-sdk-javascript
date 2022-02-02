@@ -59,9 +59,6 @@ class InlineResponse20067Webhook {
             if (data.hasOwnProperty('enabled_events')) {
                 obj['enabled_events'] = ApiClient.convertToType(data['enabled_events'], ['String']);
             }
-            if (data.hasOwnProperty('all_webhook_categories')) {
-                obj['all_webhook_categories'] = ApiClient.convertToType(data['all_webhook_categories'], ['String']);
-            }
         }
         return obj;
     }
@@ -88,11 +85,6 @@ InlineResponse20067Webhook.prototype['include_members'] = undefined;
  * @member {Array.<String>} enabled_events
  */
 InlineResponse20067Webhook.prototype['enabled_events'] = undefined;
-
-/**
- * @member {Array.<String>} all_webhook_categories
- */
-InlineResponse20067Webhook.prototype['all_webhook_categories'] = undefined;
 
 
 

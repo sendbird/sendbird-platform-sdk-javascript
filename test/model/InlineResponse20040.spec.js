@@ -54,14 +54,110 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20040);
     });
 
-    it('should have the property announcements (base name: "announcements")', function() {
-      // uncomment below and update the code to test the property announcements
+    it('should have the property uniqueId (base name: "unique_id")', function() {
+      // uncomment below and update the code to test the property uniqueId
       //var instance = new SendbirdPlatformSdk.InlineResponse20040();
       //expect(instance).to.be();
     });
 
-    it('should have the property next (base name: "next")', function() {
-      // uncomment below and update the code to test the property next
+    it('should have the property announcementGroup (base name: "announcement_group")', function() {
+      // uncomment below and update the code to test the property announcementGroup
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property message (base name: "message")', function() {
+      // uncomment below and update the code to test the property message
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property enablePush (base name: "enable_push")', function() {
+      // uncomment below and update the code to test the property enablePush
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property targetAt (base name: "target_at")', function() {
+      // uncomment below and update the code to test the property targetAt
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property targetUserCount (base name: "target_user_count")', function() {
+      // uncomment below and update the code to test the property targetUserCount
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property targetChannelCount (base name: "target_channel_count")', function() {
+      // uncomment below and update the code to test the property targetChannelCount
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property targetChannelType (base name: "target_channel_type")', function() {
+      // uncomment below and update the code to test the property targetChannelType
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createChannelOptions (base name: "create_channel_options")', function() {
+      // uncomment below and update the code to test the property createChannelOptions
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property scheduledAt (base name: "scheduled_at")', function() {
+      // uncomment below and update the code to test the property scheduledAt
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property ceaseAt (base name: "cease_at")', function() {
+      // uncomment below and update the code to test the property ceaseAt
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property resumeAt (base name: "resume_at")', function() {
+      // uncomment below and update the code to test the property resumeAt
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property completedAt (base name: "completed_at")', function() {
+      // uncomment below and update the code to test the property completedAt
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sentUserCount (base name: "sent_user_count")', function() {
+      // uncomment below and update the code to test the property sentUserCount
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sentChannelCount (base name: "sent_channel_count")', function() {
+      // uncomment below and update the code to test the property sentChannelCount
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property openCount (base name: "open_count")', function() {
+      // uncomment below and update the code to test the property openCount
+      //var instance = new SendbirdPlatformSdk.InlineResponse20040();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property openRate (base name: "open_rate")', function() {
+      // uncomment below and update the code to test the property openRate
       //var instance = new SendbirdPlatformSdk.InlineResponse20040();
       //expect(instance).to.be();
     });

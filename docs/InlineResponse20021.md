@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**groupChannelCount** | **Number** |  | [optional] 
+**countPreference** | **String** |  | [optional] 
 
 

@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **metadata** | **{String: String}** |  | [optional] 
-**upsert** | **Boolean** |  | [optional] 
+**includeTs** | **Number** |  | [optional] 
 
 

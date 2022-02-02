@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20021);
     });
 
-    it('should have the property groupChannelCount (base name: "group_channel_count")', function() {
-      // uncomment below and update the code to test the property groupChannelCount
+    it('should have the property countPreference (base name: "count_preference")', function() {
+      // uncomment below and update the code to test the property countPreference
       //var instance = new SendbirdPlatformSdk.InlineResponse20021();
       //expect(instance).to.be();
     });

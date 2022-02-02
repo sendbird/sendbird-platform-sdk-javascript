@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**unread** | [**InlineResponse20050Unread**](InlineResponse20050Unread.md) |  | [optional] 
+**ts** | **Number** |  | [optional] 
 
 

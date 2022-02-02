@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20017);
     });
 
-    it('should have the property users (base name: "users")', function() {
-      // uncomment below and update the code to test the property users
+    it('should have the property channels (base name: "channels")', function() {
+      // uncomment below and update the code to test the property channels
       //var instance = new SendbirdPlatformSdk.InlineResponse20017();
       //expect(instance).to.be();
     });

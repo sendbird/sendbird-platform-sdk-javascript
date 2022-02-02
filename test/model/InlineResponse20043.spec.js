@@ -54,32 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20043);
     });
 
-    it('should have the property uniqueId (base name: "unique_id")', function() {
-      // uncomment below and update the code to test the property uniqueId
+    it('should have the property openStatus (base name: "open_status")', function() {
+      // uncomment below and update the code to test the property openStatus
       //var instance = new SendbirdPlatformSdk.InlineResponse20043();
       //expect(instance).to.be();
     });
 
-    it('should have the property openCounts (base name: "open_counts")', function() {
-      // uncomment below and update the code to test the property openCounts
-      //var instance = new SendbirdPlatformSdk.InlineResponse20043();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property openRates (base name: "open_rates")', function() {
-      // uncomment below and update the code to test the property openRates
-      //var instance = new SendbirdPlatformSdk.InlineResponse20043();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property cumulativeOpenCounts (base name: "cumulative_open_counts")', function() {
-      // uncomment below and update the code to test the property cumulativeOpenCounts
-      //var instance = new SendbirdPlatformSdk.InlineResponse20043();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property cumulativeOpenRates (base name: "cumulative_open_rates")', function() {
-      // uncomment below and update the code to test the property cumulativeOpenRates
+    it('should have the property next (base name: "next")', function() {
+      // uncomment below and update the code to test the property next
       //var instance = new SendbirdPlatformSdk.InlineResponse20043();
       //expect(instance).to.be();
     });

@@ -54,8 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse2007);
     });
 
-    it('should have the property ipWhitelistAddresses (base name: "ip_whitelist_addresses")', function() {
-      // uncomment below and update the code to test the property ipWhitelistAddresses
+    it('should have the property token (base name: "token")', function() {
+      // uncomment below and update the code to test the property token
+      //var instance = new SendbirdPlatformSdk.InlineResponse2007();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
       //var instance = new SendbirdPlatformSdk.InlineResponse2007();
       //expect(instance).to.be();
     });

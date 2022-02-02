@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20055);
     });
 
-    it('should have the property sortedMetaarray (base name: "sorted_metaarray")', function() {
-      // uncomment below and update the code to test the property sortedMetaarray
+    it('should have the property useDefaultEmoji (base name: "use_default_emoji")', function() {
+      // uncomment below and update the code to test the property useDefaultEmoji
       //var instance = new SendbirdPlatformSdk.InlineResponse20055();
       //expect(instance).to.be();
     });

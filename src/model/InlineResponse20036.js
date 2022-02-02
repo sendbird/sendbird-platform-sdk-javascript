@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import SendBirdUser from './SendBirdUser';
 
 /**
  * The InlineResponse20036 model module.
@@ -47,20 +48,11 @@ class InlineResponse20036 {
         if (data) {
             obj = obj || new InlineResponse20036();
 
-            if (data.hasOwnProperty('is_muted')) {
-                obj['is_muted'] = ApiClient.convertToType(data['is_muted'], 'Boolean');
+            if (data.hasOwnProperty('members')) {
+                obj['members'] = ApiClient.convertToType(data['members'], [SendBirdUser]);
             }
-            if (data.hasOwnProperty('remaining_duration')) {
-                obj['remaining_duration'] = ApiClient.convertToType(data['remaining_duration'], 'Number');
-            }
-            if (data.hasOwnProperty('start_at')) {
-                obj['start_at'] = ApiClient.convertToType(data['start_at'], 'Number');
-            }
-            if (data.hasOwnProperty('end_at')) {
-                obj['end_at'] = ApiClient.convertToType(data['end_at'], 'Number');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            if (data.hasOwnProperty('next')) {
+                obj['next'] = ApiClient.convertToType(data['next'], 'String');
             }
         }
         return obj;
@@ -70,29 +62,14 @@ class InlineResponse20036 {
 }
 
 /**
- * @member {Boolean} is_muted
+ * @member {Array.<module:model/SendBirdUser>} members
  */
-InlineResponse20036.prototype['is_muted'] = undefined;
+InlineResponse20036.prototype['members'] = undefined;
 
 /**
- * @member {Number} remaining_duration
+ * @member {String} next
  */
-InlineResponse20036.prototype['remaining_duration'] = undefined;
-
-/**
- * @member {Number} start_at
- */
-InlineResponse20036.prototype['start_at'] = undefined;
-
-/**
- * @member {Number} end_at
- */
-InlineResponse20036.prototype['end_at'] = undefined;
-
-/**
- * @member {String} description
- */
-InlineResponse20036.prototype['description'] = undefined;
+InlineResponse20036.prototype['next'] = undefined;
 
 
 

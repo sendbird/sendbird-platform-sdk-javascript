@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20045);
     });
 
-    it('should have the property statistics (base name: "statistics")', function() {
-      // uncomment below and update the code to test the property statistics
+    it('should have the property announcementGroup (base name: "announcement_group")', function() {
+      // uncomment below and update the code to test the property announcementGroup
       //var instance = new SendbirdPlatformSdk.InlineResponse20045();
       //expect(instance).to.be();
     });
 
-    it('should have the property week (base name: "week")', function() {
-      // uncomment below and update the code to test the property week
+    it('should have the property next (base name: "next")', function() {
+      // uncomment below and update the code to test the property next
       //var instance = new SendbirdPlatformSdk.InlineResponse20045();
       //expect(instance).to.be();
     });

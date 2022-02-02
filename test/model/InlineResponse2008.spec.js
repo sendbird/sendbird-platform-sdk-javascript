@@ -54,14 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse2008);
     });
 
-    it('should have the property token (base name: "token")', function() {
-      // uncomment below and update the code to test the property token
-      //var instance = new SendbirdPlatformSdk.InlineResponse2008();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
+    it('should have the property apiTokens (base name: "api_tokens")', function() {
+      // uncomment below and update the code to test the property apiTokens
       //var instance = new SendbirdPlatformSdk.InlineResponse2008();
       //expect(instance).to.be();
     });

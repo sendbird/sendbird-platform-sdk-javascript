@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## createBot
 
-> InlineResponse20066Bots createBot(opts)
+> InlineResponse20065Bots createBot(opts)
 
 Create a bot
 
@@ -34,13 +34,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'createBotData': new SendbirdPlatformSdk.CreateBotData() // CreateBotData | 
 };
-apiInstance.createBot(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createBot(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -53,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20066Bots**](InlineResponse20066Bots.md)
+[**InlineResponse20065Bots**](InlineResponse20065Bots.md)
 
 ### Authorization
 
@@ -83,13 +82,12 @@ let botUserid = "botUserid_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteBotById(botUserid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteBotById(botUserid, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -111,7 +109,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## joinChannels
@@ -133,13 +131,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'joinChannelsData': new SendbirdPlatformSdk.JoinChannelsData() // JoinChannelsData | 
 };
-apiInstance.joinChannels(botUserid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.joinChannels(botUserid, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -184,13 +181,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'channelUrl': "channelUrl_example" // String | 
 };
-apiInstance.leaveChannels(botUserid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.leaveChannels(botUserid, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -213,7 +209,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## leaveChannelsByUrl
@@ -235,13 +231,12 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.leaveChannelsByUrl(botUserid, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.leaveChannelsByUrl(botUserid, channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -264,12 +259,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## listBots
 
-> InlineResponse20066 listBots(opts)
+> InlineResponse20065 listBots(opts)
 
 List bots
 
@@ -286,13 +281,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listBots(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listBots(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -306,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20066**](InlineResponse20066.md)
+[**InlineResponse20065**](InlineResponse20065.md)
 
 ### Authorization
 
@@ -337,13 +331,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'sendBotSMessageData': new SendbirdPlatformSdk.SendBotSMessageData() // SendBotSMessageData | 
 };
-apiInstance.sendBotsMessage(botUserid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.sendBotsMessage(botUserid, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -371,7 +364,7 @@ No authorization required
 
 ## updateBotById
 
-> InlineResponse20066Bots updateBotById(botUserid, opts)
+> InlineResponse20065Bots updateBotById(botUserid, opts)
 
 Update a bot
 
@@ -388,13 +381,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateBotByIdData': new SendbirdPlatformSdk.UpdateBotByIdData() // UpdateBotByIdData | 
 };
-apiInstance.updateBotById(botUserid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateBotById(botUserid, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -408,7 +400,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20066Bots**](InlineResponse20066Bots.md)
+[**InlineResponse20065Bots**](InlineResponse20065Bots.md)
 
 ### Authorization
 
@@ -422,7 +414,7 @@ No authorization required
 
 ## viewBotById
 
-> InlineResponse20066Bots viewBotById(botUserid, opts)
+> InlineResponse20065Bots viewBotById(botUserid, opts)
 
 View a bot
 
@@ -438,13 +430,12 @@ let botUserid = "botUserid_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewBotById(botUserid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewBotById(botUserid, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -457,7 +448,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20066Bots**](InlineResponse20066Bots.md)
+[**InlineResponse20065Bots**](InlineResponse20065Bots.md)
 
 ### Authorization
 

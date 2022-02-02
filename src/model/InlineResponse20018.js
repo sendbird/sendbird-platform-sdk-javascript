@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import SendBirdGroupChannel from './SendBirdGroupChannel';
 
 /**
  * The InlineResponse20018 model module.
@@ -48,11 +47,8 @@ class InlineResponse20018 {
         if (data) {
             obj = obj || new InlineResponse20018();
 
-            if (data.hasOwnProperty('channels')) {
-                obj['channels'] = ApiClient.convertToType(data['channels'], [SendBirdGroupChannel]);
-            }
-            if (data.hasOwnProperty('next')) {
-                obj['next'] = ApiClient.convertToType(data['next'], 'String');
+            if (data.hasOwnProperty('unread_count')) {
+                obj['unread_count'] = ApiClient.convertToType(data['unread_count'], 'Number');
             }
         }
         return obj;
@@ -62,14 +58,9 @@ class InlineResponse20018 {
 }
 
 /**
- * @member {Array.<module:model/SendBirdGroupChannel>} channels
+ * @member {Number} unread_count
  */
-InlineResponse20018.prototype['channels'] = undefined;
-
-/**
- * @member {String} next
- */
-InlineResponse20018.prototype['next'] = undefined;
+InlineResponse20018.prototype['unread_count'] = undefined;
 
 
 

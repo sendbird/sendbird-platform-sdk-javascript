@@ -152,8 +152,8 @@ class SendBirdGroupChannel {
             if (data.hasOwnProperty('unread_message_count')) {
                 obj['unread_message_count'] = ApiClient.convertToType(data['unread_message_count'], 'Number');
             }
-            if (data.hasOwnProperty('url')) {
-                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            if (data.hasOwnProperty('channel_url')) {
+                obj['channel_url'] = ApiClient.convertToType(data['channel_url'], 'String');
             }
         }
         return obj;
@@ -333,9 +333,9 @@ SendBirdGroupChannel.prototype['unread_mention_count'] = undefined;
 SendBirdGroupChannel.prototype['unread_message_count'] = undefined;
 
 /**
- * @member {String} url
+ * @member {String} channel_url
  */
-SendBirdGroupChannel.prototype['url'] = undefined;
+SendBirdGroupChannel.prototype['channel_url'] = undefined;
 
 
 

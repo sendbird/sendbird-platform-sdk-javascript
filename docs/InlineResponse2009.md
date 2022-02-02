@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**apiTokens** | [**[InlineResponse2008]**](InlineResponse2008.md) |  | [optional] 
+**peakConnections** | [**[InlineResponse2009PeakConnections]**](InlineResponse2009PeakConnections.md) |  | [optional] 
 
 

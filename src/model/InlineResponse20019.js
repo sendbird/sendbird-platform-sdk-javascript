@@ -47,8 +47,32 @@ class InlineResponse20019 {
         if (data) {
             obj = obj || new InlineResponse20019();
 
-            if (data.hasOwnProperty('unread_count')) {
-                obj['unread_count'] = ApiClient.convertToType(data['unread_count'], 'Number');
+            if (data.hasOwnProperty('non_super_group_channel_unread_message_count')) {
+                obj['non_super_group_channel_unread_message_count'] = ApiClient.convertToType(data['non_super_group_channel_unread_message_count'], 'Number');
+            }
+            if (data.hasOwnProperty('super_group_channel_unread_message_count')) {
+                obj['super_group_channel_unread_message_count'] = ApiClient.convertToType(data['super_group_channel_unread_message_count'], 'Number');
+            }
+            if (data.hasOwnProperty('group_channel_unread_message_count')) {
+                obj['group_channel_unread_message_count'] = ApiClient.convertToType(data['group_channel_unread_message_count'], 'Number');
+            }
+            if (data.hasOwnProperty('super_group_channel_invitation_count')) {
+                obj['super_group_channel_invitation_count'] = ApiClient.convertToType(data['super_group_channel_invitation_count'], 'Number');
+            }
+            if (data.hasOwnProperty('group_channel_invitation_count')) {
+                obj['group_channel_invitation_count'] = ApiClient.convertToType(data['group_channel_invitation_count'], 'Number');
+            }
+            if (data.hasOwnProperty('super_group_channel_unread_mention_count')) {
+                obj['super_group_channel_unread_mention_count'] = ApiClient.convertToType(data['super_group_channel_unread_mention_count'], 'Number');
+            }
+            if (data.hasOwnProperty('group_channel_unread_mention_count')) {
+                obj['group_channel_unread_mention_count'] = ApiClient.convertToType(data['group_channel_unread_mention_count'], 'Number');
+            }
+            if (data.hasOwnProperty('non_super_group_channel_unread_mention_count')) {
+                obj['non_super_group_channel_unread_mention_count'] = ApiClient.convertToType(data['non_super_group_channel_unread_mention_count'], 'Number');
+            }
+            if (data.hasOwnProperty('non_super_group_channel_invitation_count')) {
+                obj['non_super_group_channel_invitation_count'] = ApiClient.convertToType(data['non_super_group_channel_invitation_count'], 'Number');
             }
         }
         return obj;
@@ -58,9 +82,49 @@ class InlineResponse20019 {
 }
 
 /**
- * @member {Number} unread_count
+ * @member {Number} non_super_group_channel_unread_message_count
  */
-InlineResponse20019.prototype['unread_count'] = undefined;
+InlineResponse20019.prototype['non_super_group_channel_unread_message_count'] = undefined;
+
+/**
+ * @member {Number} super_group_channel_unread_message_count
+ */
+InlineResponse20019.prototype['super_group_channel_unread_message_count'] = undefined;
+
+/**
+ * @member {Number} group_channel_unread_message_count
+ */
+InlineResponse20019.prototype['group_channel_unread_message_count'] = undefined;
+
+/**
+ * @member {Number} super_group_channel_invitation_count
+ */
+InlineResponse20019.prototype['super_group_channel_invitation_count'] = undefined;
+
+/**
+ * @member {Number} group_channel_invitation_count
+ */
+InlineResponse20019.prototype['group_channel_invitation_count'] = undefined;
+
+/**
+ * @member {Number} super_group_channel_unread_mention_count
+ */
+InlineResponse20019.prototype['super_group_channel_unread_mention_count'] = undefined;
+
+/**
+ * @member {Number} group_channel_unread_mention_count
+ */
+InlineResponse20019.prototype['group_channel_unread_mention_count'] = undefined;
+
+/**
+ * @member {Number} non_super_group_channel_unread_mention_count
+ */
+InlineResponse20019.prototype['non_super_group_channel_unread_mention_count'] = undefined;
+
+/**
+ * @member {Number} non_super_group_channel_invitation_count
+ */
+InlineResponse20019.prototype['non_super_group_channel_invitation_count'] = undefined;
 
 
 

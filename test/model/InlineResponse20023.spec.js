@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20023);
     });
 
-    it('should have the property bannedChannels (base name: "banned_channels")', function() {
-      // uncomment below and update the code to test the property bannedChannels
+    it('should have the property mutedChannels (base name: "muted_channels")', function() {
+      // uncomment below and update the code to test the property mutedChannels
       //var instance = new SendbirdPlatformSdk.InlineResponse20023();
       //expect(instance).to.be();
     });

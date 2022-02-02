@@ -56,6 +56,9 @@ class InlineResponse20071ReportLogs {
             if (data.hasOwnProperty('report_category')) {
                 obj['report_category'] = ApiClient.convertToType(data['report_category'], 'String');
             }
+            if (data.hasOwnProperty('reporting_user')) {
+                obj['reporting_user'] = SendBirdUser.constructFromObject(data['reporting_user']);
+            }
             if (data.hasOwnProperty('offending_user')) {
                 obj['offending_user'] = SendBirdUser.constructFromObject(data['offending_user']);
             }
@@ -87,6 +90,11 @@ InlineResponse20071ReportLogs.prototype['report_type'] = undefined;
  * @member {String} report_category
  */
 InlineResponse20071ReportLogs.prototype['report_category'] = undefined;
+
+/**
+ * @member {module:model/SendBirdUser} reporting_user
+ */
+InlineResponse20071ReportLogs.prototype['reporting_user'] = undefined;
 
 /**
  * @member {module:model/SendBirdUser} offending_user

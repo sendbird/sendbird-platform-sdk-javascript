@@ -47,8 +47,20 @@ class InlineResponse20053 {
         if (data) {
             obj = obj || new InlineResponse20053();
 
-            if (data.hasOwnProperty('key')) {
-                obj['key'] = ApiClient.convertToType(data['key'], ['String']);
+            if (data.hasOwnProperty('user_id')) {
+                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
+            }
+            if (data.hasOwnProperty('operation')) {
+                obj['operation'] = ApiClient.convertToType(data['operation'], 'String');
+            }
+            if (data.hasOwnProperty('success')) {
+                obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
+            }
+            if (data.hasOwnProperty('reaction')) {
+                obj['reaction'] = ApiClient.convertToType(data['reaction'], 'String');
+            }
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Number');
             }
         }
         return obj;
@@ -58,9 +70,29 @@ class InlineResponse20053 {
 }
 
 /**
- * @member {Array.<String>} key
+ * @member {String} user_id
  */
-InlineResponse20053.prototype['key'] = undefined;
+InlineResponse20053.prototype['user_id'] = undefined;
+
+/**
+ * @member {String} operation
+ */
+InlineResponse20053.prototype['operation'] = undefined;
+
+/**
+ * @member {Boolean} success
+ */
+InlineResponse20053.prototype['success'] = undefined;
+
+/**
+ * @member {String} reaction
+ */
+InlineResponse20053.prototype['reaction'] = undefined;
+
+/**
+ * @member {Number} updated_at
+ */
+InlineResponse20053.prototype['updated_at'] = undefined;
 
 
 

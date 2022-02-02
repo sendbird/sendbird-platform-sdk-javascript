@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **operators** | [**[SendBirdUser]**](SendBirdUser.md) |  | [optional] 
 **participantCount** | **Number** |  | [optional] 
-**url** | **String** |  | [optional] 
+**channelUrl** | **String** |  | [optional] 
 
 

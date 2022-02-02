@@ -16,9 +16,9 @@ import ApiClient from "../ApiClient";
 import CreateChannelMetacounterData from '../model/CreateChannelMetacounterData';
 import CreateChannelMetadataData from '../model/CreateChannelMetadataData';
 import CreateUserMetadataData from '../model/CreateUserMetadataData';
-import InlineResponse20048UserMetadata from '../model/InlineResponse20048UserMetadata';
+import InlineResponse20047UserMetadata from '../model/InlineResponse20047UserMetadata';
+import InlineResponse20060 from '../model/InlineResponse20060';
 import InlineResponse20061 from '../model/InlineResponse20061';
-import InlineResponse20062 from '../model/InlineResponse20062';
 import SendBirdAdditionalProperties from '../model/SendBirdAdditionalProperties';
 import UpdateChannelMetacounterData from '../model/UpdateChannelMetacounterData';
 import UpdateChannelMetadataData from '../model/UpdateChannelMetadataData';
@@ -43,13 +43,6 @@ export default class UserChannelMetadataApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the createChannelMetacounter operation.
-     * @callback module:api/UserChannelMetadataApi~createChannelMetacounterCallback
-     * @param {String} error Error message, if any.
-     * @param {Object.<String, module:model/{String: SendBirdAdditionalProperties}>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Create a channel metacounter
@@ -59,10 +52,9 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/CreateChannelMetacounterData} opts.createChannelMetacounterData 
-     * @param {module:api/UserChannelMetadataApi~createChannelMetacounterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>} and HTTP response
      */
-    createChannelMetacounter(channelType, channelUrl, opts, callback) {
+    createChannelMetacounterWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['createChannelMetacounterData'];
       // verify the required parameter 'channelType' is set
@@ -93,17 +85,27 @@ export default class UserChannelMetadataApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the createChannelMetadata operation.
-     * @callback module:api/UserChannelMetadataApi~createChannelMetadataCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20062} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create a channel metacounter
+     * ## Create a channel metacounter  Creates a channel metacounter's items to store in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-create-a-channel-metacounter ----------------------------
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/CreateChannelMetacounterData} opts.createChannelMetacounterData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
      */
+    createChannelMetacounter(channelType, channelUrl, opts) {
+      return this.createChannelMetacounterWithHttpInfo(channelType, channelUrl, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create a channel metadata
@@ -113,10 +115,9 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/CreateChannelMetadataData} opts.createChannelMetadataData 
-     * @param {module:api/UserChannelMetadataApi~createChannelMetadataCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20062}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20061} and HTTP response
      */
-    createChannelMetadata(channelType, channelUrl, opts, callback) {
+    createChannelMetadataWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['createChannelMetadataData'];
       // verify the required parameter 'channelType' is set
@@ -143,21 +144,31 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20062;
+      let returnType = InlineResponse20061;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metadata', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the createUserMetadata operation.
-     * @callback module:api/UserChannelMetadataApi~createUserMetadataCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20048UserMetadata} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create a channel metadata
+     * ## Create a channel metadata  Creates a channel metadata's items to store in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-create-a-channel-metadata ----------------------------
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/CreateChannelMetadataData} opts.createChannelMetadataData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20061}
      */
+    createChannelMetadata(channelType, channelUrl, opts) {
+      return this.createChannelMetadataWithHttpInfo(channelType, channelUrl, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create a user metadata
@@ -166,10 +177,9 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/CreateUserMetadataData} opts.createUserMetadataData 
-     * @param {module:api/UserChannelMetadataApi~createUserMetadataCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20048UserMetadata}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20047UserMetadata} and HTTP response
      */
-    createUserMetadata(userId, opts, callback) {
+    createUserMetadataWithHttpInfo(userId, opts) {
       opts = opts || {};
       let postBody = opts['createUserMetadataData'];
       // verify the required parameter 'userId' is set
@@ -191,21 +201,30 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20048UserMetadata;
+      let returnType = InlineResponse20047UserMetadata;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteChannelMetacounter operation.
-     * @callback module:api/UserChannelMetadataApi~deleteChannelMetacounterCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Create a user metadata
+     * ## Create a user metadata  Creates a user metadata's items to store in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-create-a-user-metadata ----------------------------
+     * @param {String} userId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/CreateUserMetadataData} opts.createUserMetadataData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20047UserMetadata}
      */
+    createUserMetadata(userId, opts) {
+      return this.createUserMetadataWithHttpInfo(userId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete a channel metacounter - When deleting all items of a channel metacounter
@@ -214,9 +233,9 @@ export default class UserChannelMetadataApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/UserChannelMetadataApi~deleteChannelMetacounterCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteChannelMetacounter(channelType, channelUrl, opts, callback) {
+    deleteChannelMetacounterWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -242,22 +261,31 @@ export default class UserChannelMetadataApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['application/json'];
+      let accepts = [];
       let returnType = null;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteChannelMetacounterByKey operation.
-     * @callback module:api/UserChannelMetadataApi~deleteChannelMetacounterByKeyCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete a channel metacounter - When deleting all items of a channel metacounter
+     * ## Delete a channel metacounter  Deletes a channel metacounter's item that is stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel which has the metacounter to delete.
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteChannelMetacounter(channelType, channelUrl, opts) {
+      return this.deleteChannelMetacounterWithHttpInfo(channelType, channelUrl, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete a channel metacounter - When deleting a specific item of a channel metacounter by its key
@@ -267,9 +295,9 @@ export default class UserChannelMetadataApi {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/UserChannelMetadataApi~deleteChannelMetacounterByKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteChannelMetacounterByKey(channelType, channelUrl, key, opts, callback) {
+    deleteChannelMetacounterByKeyWithHttpInfo(channelType, channelUrl, key, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -300,22 +328,32 @@ export default class UserChannelMetadataApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['application/json'];
+      let accepts = [];
       let returnType = null;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter/{key}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteChannelMetadata operation.
-     * @callback module:api/UserChannelMetadataApi~deleteChannelMetadataCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete a channel metacounter - When deleting a specific item of a channel metacounter by its key
+     * ## Delete a channel metacounter  Deletes a channel metacounter's item that is stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel which has the metacounter to delete.
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteChannelMetacounterByKey(channelType, channelUrl, key, opts) {
+      return this.deleteChannelMetacounterByKeyWithHttpInfo(channelType, channelUrl, key, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete a channel metadata - When deleting all items of a channel metadata
@@ -325,9 +363,9 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.key 
-     * @param {module:api/UserChannelMetadataApi~deleteChannelMetadataCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteChannelMetadata(channelType, channelUrl, opts, callback) {
+    deleteChannelMetadataWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -354,22 +392,32 @@ export default class UserChannelMetadataApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['application/json'];
+      let accepts = [];
       let returnType = null;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metadata', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteChannelMetadataByKey operation.
-     * @callback module:api/UserChannelMetadataApi~deleteChannelMetadataByKeyCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete a channel metadata - When deleting all items of a channel metadata
+     * ## Delete a channel metadata  Deletes a channel metadata's one or all items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel which has the metadata to delete.
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {String} opts.key 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteChannelMetadata(channelType, channelUrl, opts) {
+      return this.deleteChannelMetadataWithHttpInfo(channelType, channelUrl, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete a channel metadata - When deleting a specific item of a channel metadata by its key
@@ -379,9 +427,9 @@ export default class UserChannelMetadataApi {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/UserChannelMetadataApi~deleteChannelMetadataByKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteChannelMetadataByKey(channelType, channelUrl, key, opts, callback) {
+    deleteChannelMetadataByKeyWithHttpInfo(channelType, channelUrl, key, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -412,22 +460,32 @@ export default class UserChannelMetadataApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['application/json'];
+      let accepts = [];
       let returnType = null;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metadata/{key}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteUserMetadata operation.
-     * @callback module:api/UserChannelMetadataApi~deleteUserMetadataCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete a channel metadata - When deleting a specific item of a channel metadata by its key
+     * ## Delete a channel metadata  Deletes a channel metadata's one or all items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel which has the metadata to delete.
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteChannelMetadataByKey(channelType, channelUrl, key, opts) {
+      return this.deleteChannelMetadataByKeyWithHttpInfo(channelType, channelUrl, key, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete a user metadata - When deleting all items of a user metadata
@@ -436,9 +494,9 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.key 
-     * @param {module:api/UserChannelMetadataApi~deleteUserMetadataCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteUserMetadata(userId, opts, callback) {
+    deleteUserMetadataWithHttpInfo(userId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -460,22 +518,31 @@ export default class UserChannelMetadataApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['application/json'];
+      let accepts = [];
       let returnType = null;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteUserMetadataByKey operation.
-     * @callback module:api/UserChannelMetadataApi~deleteUserMetadataByKeyCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete a user metadata - When deleting all items of a user metadata
+     * ## Delete a user metadata  Deletes a user metadata's one or all items that are stored in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user who has the metadata to delete.
+     * @param {String} userId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {String} opts.key 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteUserMetadata(userId, opts) {
+      return this.deleteUserMetadataWithHttpInfo(userId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete a user metadata - When deleting a specific item of a user metadata by its key
@@ -484,9 +551,9 @@ export default class UserChannelMetadataApi {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/UserChannelMetadataApi~deleteUserMetadataByKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteUserMetadataByKey(userId, key, opts, callback) {
+    deleteUserMetadataByKeyWithHttpInfo(userId, key, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -512,22 +579,31 @@ export default class UserChannelMetadataApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['application/json'];
+      let accepts = [];
       let returnType = null;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata/{key}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateChannelMetacounter operation.
-     * @callback module:api/UserChannelMetadataApi~updateChannelMetacounterCallback
-     * @param {String} error Error message, if any.
-     * @param {Object.<String, module:model/{String: SendBirdAdditionalProperties}>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete a user metadata - When deleting a specific item of a user metadata by its key
+     * ## Delete a user metadata  Deletes a user metadata's one or all items that are stored in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user who has the metadata to delete.
+     * @param {String} userId 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteUserMetadataByKey(userId, key, opts) {
+      return this.deleteUserMetadataByKeyWithHttpInfo(userId, key, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update a channel metacounter - When updating existing items of a channel metacounter by their keys or adding new items to the metacounter
@@ -537,10 +613,9 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateChannelMetacounterData} opts.updateChannelMetacounterData 
-     * @param {module:api/UserChannelMetadataApi~updateChannelMetacounterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>} and HTTP response
      */
-    updateChannelMetacounter(channelType, channelUrl, opts, callback) {
+    updateChannelMetacounterWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['updateChannelMetacounterData'];
       // verify the required parameter 'channelType' is set
@@ -571,17 +646,27 @@ export default class UserChannelMetadataApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateChannelMetacounterByKey operation.
-     * @callback module:api/UserChannelMetadataApi~updateChannelMetacounterByKeyCallback
-     * @param {String} error Error message, if any.
-     * @param {Object.<String, {String: String}>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update a channel metacounter - When updating existing items of a channel metacounter by their keys or adding new items to the metacounter
+     * ## Update a channel metacounter  Updates existing items of a channel metacounter by their keys, or adds new items to the metacounter.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateChannelMetacounterData} opts.updateChannelMetacounterData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
      */
+    updateChannelMetacounter(channelType, channelUrl, opts) {
+      return this.updateChannelMetacounterWithHttpInfo(channelType, channelUrl, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update a channel metacounter - When updating a specific item of a channel metacounter by its key
@@ -592,10 +677,9 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
-     * @param {module:api/UserChannelMetadataApi~updateChannelMetacounterByKeyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, {String: String}>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
-    updateChannelMetacounterByKey(channelType, channelUrl, key, opts, callback) {
+    updateChannelMetacounterByKeyWithHttpInfo(channelType, channelUrl, key, opts) {
       opts = opts || {};
       let postBody = opts['body'];
       // verify the required parameter 'channelType' is set
@@ -631,17 +715,28 @@ export default class UserChannelMetadataApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter/{key}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateChannelMetadata operation.
-     * @callback module:api/UserChannelMetadataApi~updateChannelMetadataCallback
-     * @param {String} error Error message, if any.
-     * @param {Object.<String, {String: String}>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update a channel metacounter - When updating a specific item of a channel metacounter by its key
+     * ## Update a channel metacounter  Updates existing items of a channel metacounter by their keys, or adds new items to the metacounter.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {Object.<String, Object>} opts.body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
+    updateChannelMetacounterByKey(channelType, channelUrl, key, opts) {
+      return this.updateChannelMetacounterByKeyWithHttpInfo(channelType, channelUrl, key, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update a channel metadata - When updating existing items of a channel metadata by their keys or adding new items to the metadata
@@ -651,10 +746,9 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateChannelMetadataData} opts.updateChannelMetadataData 
-     * @param {module:api/UserChannelMetadataApi~updateChannelMetadataCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, {String: String}>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
-    updateChannelMetadata(channelType, channelUrl, opts, callback) {
+    updateChannelMetadataWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['updateChannelMetadataData'];
       // verify the required parameter 'channelType' is set
@@ -685,17 +779,27 @@ export default class UserChannelMetadataApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metadata', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateChannelMetadataByKey operation.
-     * @callback module:api/UserChannelMetadataApi~updateChannelMetadataByKeyCallback
-     * @param {String} error Error message, if any.
-     * @param {Object.<String, {String: String}>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update a channel metadata - When updating existing items of a channel metadata by their keys or adding new items to the metadata
+     * ## Update a channel metadata  Updates existing items of a channel metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateChannelMetadataData} opts.updateChannelMetadataData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
+    updateChannelMetadata(channelType, channelUrl, opts) {
+      return this.updateChannelMetadataWithHttpInfo(channelType, channelUrl, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update a channel metadata - When updating a specific item of a channel metadata by its key
@@ -706,10 +810,9 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
-     * @param {module:api/UserChannelMetadataApi~updateChannelMetadataByKeyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, {String: String}>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
-    updateChannelMetadataByKey(channelType, channelUrl, key, opts, callback) {
+    updateChannelMetadataByKeyWithHttpInfo(channelType, channelUrl, key, opts) {
       opts = opts || {};
       let postBody = opts['body'];
       // verify the required parameter 'channelType' is set
@@ -745,17 +848,28 @@ export default class UserChannelMetadataApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metadata/{key}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateUserMetadata operation.
-     * @callback module:api/UserChannelMetadataApi~updateUserMetadataCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20061} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update a channel metadata - When updating a specific item of a channel metadata by its key
+     * ## Update a channel metadata  Updates existing items of a channel metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {Object.<String, Object>} opts.body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
+    updateChannelMetadataByKey(channelType, channelUrl, key, opts) {
+      return this.updateChannelMetadataByKeyWithHttpInfo(channelType, channelUrl, key, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update a user metadata - When updating existing items of a user metadata by their keys or adding new items to the metadata
@@ -764,10 +878,9 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateUserMetadataData} opts.updateUserMetadataData 
-     * @param {module:api/UserChannelMetadataApi~updateUserMetadataCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20061}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20060} and HTTP response
      */
-    updateUserMetadata(userId, opts, callback) {
+    updateUserMetadataWithHttpInfo(userId, opts) {
       opts = opts || {};
       let postBody = opts['updateUserMetadataData'];
       // verify the required parameter 'userId' is set
@@ -789,21 +902,30 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20061;
+      let returnType = InlineResponse20060;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateUserMetadataByKey operation.
-     * @callback module:api/UserChannelMetadataApi~updateUserMetadataByKeyCallback
-     * @param {String} error Error message, if any.
-     * @param {Object.<String, {String: String}>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update a user metadata - When updating existing items of a user metadata by their keys or adding new items to the metadata
+     * ## Update a user metadata  Updates existing items of a user metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user to update the metadata in.
+     * @param {String} userId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateUserMetadataData} opts.updateUserMetadataData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20060}
      */
+    updateUserMetadata(userId, opts) {
+      return this.updateUserMetadataWithHttpInfo(userId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update a user metadata - When updating a specific item of a user metadata by its key
@@ -813,10 +935,9 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
-     * @param {module:api/UserChannelMetadataApi~updateUserMetadataByKeyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, {String: String}>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
-    updateUserMetadataByKey(userId, key, opts, callback) {
+    updateUserMetadataByKeyWithHttpInfo(userId, key, opts) {
       opts = opts || {};
       let postBody = opts['body'];
       // verify the required parameter 'userId' is set
@@ -847,17 +968,27 @@ export default class UserChannelMetadataApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata/{key}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewChannelMetacounter operation.
-     * @callback module:api/UserChannelMetadataApi~viewChannelMetacounterCallback
-     * @param {String} error Error message, if any.
-     * @param {Object.<String, module:model/{String: SendBirdAdditionalProperties}>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update a user metadata - When updating a specific item of a user metadata by its key
+     * ## Update a user metadata  Updates existing items of a user metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user to update the metadata in.
+     * @param {String} userId 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {Object.<String, Object>} opts.body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
+    updateUserMetadataByKey(userId, key, opts) {
+      return this.updateUserMetadataByKeyWithHttpInfo(userId, key, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View a channel metacounter - When retrieving all items of a channel metacounter
@@ -868,10 +999,9 @@ export default class UserChannelMetadataApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
-     * @param {module:api/UserChannelMetadataApi~viewChannelMetacounterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>} and HTTP response
      */
-    viewChannelMetacounter(channelType, channelUrl, opts, callback) {
+    viewChannelMetacounterWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -904,17 +1034,28 @@ export default class UserChannelMetadataApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewChannelMetacounterByKey operation.
-     * @callback module:api/UserChannelMetadataApi~viewChannelMetacounterByKeyCallback
-     * @param {String} error Error message, if any.
-     * @param {Object.<String, module:model/{String: SendBirdAdditionalProperties}>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * View a channel metacounter - When retrieving all items of a channel metacounter
+     * ## View a channel metacounter  Retrieves channel metacounter's one or more items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {String} opts.key 
+     * @param {Array.<String>} opts.keys 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
      */
+    viewChannelMetacounter(channelType, channelUrl, opts) {
+      return this.viewChannelMetacounterWithHttpInfo(channelType, channelUrl, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View a channel metacounter - When retrieving a specific item of a channel metacounter by its key
@@ -924,10 +1065,9 @@ export default class UserChannelMetadataApi {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/UserChannelMetadataApi~viewChannelMetacounterByKeyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>} and HTTP response
      */
-    viewChannelMetacounterByKey(channelType, channelUrl, key, opts, callback) {
+    viewChannelMetacounterByKeyWithHttpInfo(channelType, channelUrl, key, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -963,17 +1103,27 @@ export default class UserChannelMetadataApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metacounter/{key}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewChannelMetadata operation.
-     * @callback module:api/UserChannelMetadataApi~viewChannelMetadataCallback
-     * @param {String} error Error message, if any.
-     * @param {Object.<String, {String: String}>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * View a channel metacounter - When retrieving a specific item of a channel metacounter by its key
+     * ## View a channel metacounter  Retrieves channel metacounter's one or more items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
      */
+    viewChannelMetacounterByKey(channelType, channelUrl, key, opts) {
+      return this.viewChannelMetacounterByKeyWithHttpInfo(channelType, channelUrl, key, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View a channel metadata - When retrieving all items of a channel metadata
@@ -984,10 +1134,9 @@ export default class UserChannelMetadataApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
-     * @param {module:api/UserChannelMetadataApi~viewChannelMetadataCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, {String: String}>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
-    viewChannelMetadata(channelType, channelUrl, opts, callback) {
+    viewChannelMetadataWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -1020,17 +1169,28 @@ export default class UserChannelMetadataApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metadata', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewChannelMetadataByKey operation.
-     * @callback module:api/UserChannelMetadataApi~viewChannelMetadataByKeyCallback
-     * @param {String} error Error message, if any.
-     * @param {Object.<String, {String: String}>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * View a channel metadata - When retrieving all items of a channel metadata
+     * ## View a channel metadata  Retrieves a channel metadata's one or more items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {String} opts.key 
+     * @param {Array.<String>} opts.keys 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
+    viewChannelMetadata(channelType, channelUrl, opts) {
+      return this.viewChannelMetadataWithHttpInfo(channelType, channelUrl, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View a channel metadata - When retrieving a specific item of a channel metadata by its key
@@ -1040,10 +1200,9 @@ export default class UserChannelMetadataApi {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/UserChannelMetadataApi~viewChannelMetadataByKeyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, {String: String}>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
-    viewChannelMetadataByKey(channelType, channelUrl, key, opts, callback) {
+    viewChannelMetadataByKeyWithHttpInfo(channelType, channelUrl, key, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -1079,17 +1238,27 @@ export default class UserChannelMetadataApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metadata/{key}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewUserMetadata operation.
-     * @callback module:api/UserChannelMetadataApi~viewUserMetadataCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20048UserMetadata} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * View a channel metadata - When retrieving a specific item of a channel metadata by its key
+     * ## View a channel metadata  Retrieves a channel metadata's one or more items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
+    viewChannelMetadataByKey(channelType, channelUrl, key, opts) {
+      return this.viewChannelMetadataByKeyWithHttpInfo(channelType, channelUrl, key, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View a user metadata - When retrieving all items of a user metadata
@@ -1099,10 +1268,9 @@ export default class UserChannelMetadataApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
-     * @param {module:api/UserChannelMetadataApi~viewUserMetadataCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20048UserMetadata}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20047UserMetadata} and HTTP response
      */
-    viewUserMetadata(userId, opts, callback) {
+    viewUserMetadataWithHttpInfo(userId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -1126,21 +1294,31 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20048UserMetadata;
+      let returnType = InlineResponse20047UserMetadata;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewUserMetadataByKey operation.
-     * @callback module:api/UserChannelMetadataApi~viewUserMetadataByKeyCallback
-     * @param {String} error Error message, if any.
-     * @param {Object.<String, {String: String}>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * View a user metadata - When retrieving all items of a user metadata
+     * ## View a user metadata  Retrieves a user metadata's one or more items that are stored in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user to retrieve the metadata in.
+     * @param {String} userId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {String} opts.key 
+     * @param {Array.<String>} opts.keys 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20047UserMetadata}
      */
+    viewUserMetadata(userId, opts) {
+      return this.viewUserMetadataWithHttpInfo(userId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View a user metadata - When retrieving a specific item of a user metadata by its key
@@ -1149,10 +1327,9 @@ export default class UserChannelMetadataApi {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/UserChannelMetadataApi~viewUserMetadataByKeyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, {String: String}>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
-    viewUserMetadataByKey(userId, key, opts, callback) {
+    viewUserMetadataByKeyWithHttpInfo(userId, key, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -1183,8 +1360,24 @@ export default class UserChannelMetadataApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata/{key}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * View a user metadata - When retrieving a specific item of a user metadata by its key
+     * ## View a user metadata  Retrieves a user metadata's one or more items that are stored in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user to retrieve the metadata in.
+     * @param {String} userId 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
+     */
+    viewUserMetadataByKey(userId, key, opts) {
+      return this.viewUserMetadataByKeyWithHttpInfo(userId, key, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

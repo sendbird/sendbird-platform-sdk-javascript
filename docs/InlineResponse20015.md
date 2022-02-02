@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pushConfigurations** | **String** |  | [optional] 
+**pushMessageTemplates** | [**[InlineResponse20015PushMessageTemplates]**](InlineResponse20015PushMessageTemplates.md) |  | [optional] 
 
 

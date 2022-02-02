@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20016PushMessageTemplates from './InlineResponse20016PushMessageTemplates';
+import SendBirdUser from './SendBirdUser';
 
 /**
  * The InlineResponse20016 model module.
@@ -48,8 +48,11 @@ class InlineResponse20016 {
         if (data) {
             obj = obj || new InlineResponse20016();
 
-            if (data.hasOwnProperty('push_message_templates')) {
-                obj['push_message_templates'] = ApiClient.convertToType(data['push_message_templates'], [InlineResponse20016PushMessageTemplates]);
+            if (data.hasOwnProperty('users')) {
+                obj['users'] = ApiClient.convertToType(data['users'], [SendBirdUser]);
+            }
+            if (data.hasOwnProperty('next')) {
+                obj['next'] = ApiClient.convertToType(data['next'], 'String');
             }
         }
         return obj;
@@ -59,9 +62,14 @@ class InlineResponse20016 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse20016PushMessageTemplates>} push_message_templates
+ * @member {Array.<module:model/SendBirdUser>} users
  */
-InlineResponse20016.prototype['push_message_templates'] = undefined;
+InlineResponse20016.prototype['users'] = undefined;
+
+/**
+ * @member {String} next
+ */
+InlineResponse20016.prototype['next'] = undefined;
 
 
 

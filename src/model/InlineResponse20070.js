@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import InlineResponse20070ReportLogs from './InlineResponse20070ReportLogs';
 
 /**
  * The InlineResponse20070 model module.
@@ -47,26 +48,11 @@ class InlineResponse20070 {
         if (data) {
             obj = obj || new InlineResponse20070();
 
-            if (data.hasOwnProperty('request_id')) {
-                obj['request_id'] = ApiClient.convertToType(data['request_id'], 'String');
+            if (data.hasOwnProperty('report_logs')) {
+                obj['report_logs'] = ApiClient.convertToType(data['report_logs'], [InlineResponse20070ReportLogs]);
             }
-            if (data.hasOwnProperty('action')) {
-                obj['action'] = ApiClient.convertToType(data['action'], 'String');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
-            }
-            if (data.hasOwnProperty('user_id')) {
-                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
-            }
-            if (data.hasOwnProperty('user_ids')) {
-                obj['user_ids'] = ApiClient.convertToType(data['user_ids'], ['String']);
-            }
-            if (data.hasOwnProperty('channel_delete_option')) {
-                obj['channel_delete_option'] = ApiClient.convertToType(data['channel_delete_option'], 'String');
-            }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Number');
+            if (data.hasOwnProperty('next')) {
+                obj['next'] = ApiClient.convertToType(data['next'], 'String');
             }
         }
         return obj;
@@ -76,39 +62,14 @@ class InlineResponse20070 {
 }
 
 /**
- * @member {String} request_id
+ * @member {Array.<module:model/InlineResponse20070ReportLogs>} report_logs
  */
-InlineResponse20070.prototype['request_id'] = undefined;
+InlineResponse20070.prototype['report_logs'] = undefined;
 
 /**
- * @member {String} action
+ * @member {String} next
  */
-InlineResponse20070.prototype['action'] = undefined;
-
-/**
- * @member {String} status
- */
-InlineResponse20070.prototype['status'] = undefined;
-
-/**
- * @member {String} user_id
- */
-InlineResponse20070.prototype['user_id'] = undefined;
-
-/**
- * @member {Array.<String>} user_ids
- */
-InlineResponse20070.prototype['user_ids'] = undefined;
-
-/**
- * @member {String} channel_delete_option
- */
-InlineResponse20070.prototype['channel_delete_option'] = undefined;
-
-/**
- * @member {Number} created_at
- */
-InlineResponse20070.prototype['created_at'] = undefined;
+InlineResponse20070.prototype['next'] = undefined;
 
 
 

@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import InlineResponse20012PushConfigurations from './InlineResponse20012PushConfigurations';
 
 /**
  * The InlineResponse20012 model module.
@@ -47,8 +48,8 @@ class InlineResponse20012 {
         if (data) {
             obj = obj || new InlineResponse20012();
 
-            if (data.hasOwnProperty('dau')) {
-                obj['dau'] = ApiClient.convertToType(data['dau'], 'Number');
+            if (data.hasOwnProperty('push_configurations')) {
+                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], [InlineResponse20012PushConfigurations]);
             }
         }
         return obj;
@@ -58,9 +59,9 @@ class InlineResponse20012 {
 }
 
 /**
- * @member {Number} dau
+ * @member {Array.<module:model/InlineResponse20012PushConfigurations>} push_configurations
  */
-InlineResponse20012.prototype['dau'] = undefined;
+InlineResponse20012.prototype['push_configurations'] = undefined;
 
 
 

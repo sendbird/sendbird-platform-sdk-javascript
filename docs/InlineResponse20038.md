@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**isMember** | **Boolean** |  | [optional] 
+**operatorIds** | **[String]** |  | [optional] 
 
 

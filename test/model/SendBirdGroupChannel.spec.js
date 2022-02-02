@@ -258,8 +258,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property url (base name: "url")', function() {
-      // uncomment below and update the code to test the property url
+    it('should have the property channelUrl (base name: "channel_url")', function() {
+      // uncomment below and update the code to test the property channelUrl
       //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
       //expect(instance).to.be();
     });

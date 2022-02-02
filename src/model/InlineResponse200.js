@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse200Results from './InlineResponse200Results';
 
 /**
  * The InlineResponse200 model module.
@@ -48,17 +47,8 @@ class InlineResponse200 {
         if (data) {
             obj = obj || new InlineResponse200();
 
-            if (data.hasOwnProperty('count')) {
-                obj['count'] = ApiClient.convertToType(data['count'], 'Number');
-            }
-            if (data.hasOwnProperty('previous')) {
-                obj['previous'] = ApiClient.convertToType(data['previous'], 'String');
-            }
-            if (data.hasOwnProperty('next')) {
-                obj['next'] = ApiClient.convertToType(data['next'], 'String');
-            }
-            if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [InlineResponse200Results]);
+            if (data.hasOwnProperty('ccu')) {
+                obj['ccu'] = ApiClient.convertToType(data['ccu'], 'Number');
             }
         }
         return obj;
@@ -68,24 +58,9 @@ class InlineResponse200 {
 }
 
 /**
- * @member {Number} count
+ * @member {Number} ccu
  */
-InlineResponse200.prototype['count'] = undefined;
-
-/**
- * @member {String} previous
- */
-InlineResponse200.prototype['previous'] = undefined;
-
-/**
- * @member {String} next
- */
-InlineResponse200.prototype['next'] = undefined;
-
-/**
- * @member {Array.<module:model/InlineResponse200Results>} results
- */
-InlineResponse200.prototype['results'] = undefined;
+InlineResponse200.prototype['ccu'] = undefined;
 
 
 

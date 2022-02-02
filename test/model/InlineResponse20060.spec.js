@@ -54,8 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20060);
     });
 
-    it('should have the property emojis (base name: "emojis")', function() {
-      // uncomment below and update the code to test the property emojis
+    it('should have the property metadata (base name: "metadata")', function() {
+      // uncomment below and update the code to test the property metadata
+      //var instance = new SendbirdPlatformSdk.InlineResponse20060();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property upsert (base name: "upsert")', function() {
+      // uncomment below and update the code to test the property upsert
       //var instance = new SendbirdPlatformSdk.InlineResponse20060();
       //expect(instance).to.be();
     });

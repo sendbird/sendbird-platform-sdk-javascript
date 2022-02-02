@@ -66,14 +66,44 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property huaweiAppId (base name: "huawei_app_id")', function() {
-      // uncomment below and update the code to test the property huaweiAppId
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
       //var instance = new SendbirdPlatformSdk.InlineResponse2003PushConfigurations();
       //expect(instance).to.be();
     });
 
-    it('should have the property huaweiAppSecret (base name: "huawei_app_secret")', function() {
-      // uncomment below and update the code to test the property huaweiAppSecret
+    it('should have the property apnsCerEnvType (base name: "apns_cer_env_type")', function() {
+      // uncomment below and update the code to test the property apnsCerEnvType
+      //var instance = new SendbirdPlatformSdk.InlineResponse2003PushConfigurations();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property apnsExpiration (base name: "apns_expiration")', function() {
+      // uncomment below and update the code to test the property apnsExpiration
+      //var instance = new SendbirdPlatformSdk.InlineResponse2003PushConfigurations();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property apnsName (base name: "apns_name")', function() {
+      // uncomment below and update the code to test the property apnsName
+      //var instance = new SendbirdPlatformSdk.InlineResponse2003PushConfigurations();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property hasUnreadCountBadge (base name: "has_unread_count_badge")', function() {
+      // uncomment below and update the code to test the property hasUnreadCountBadge
+      //var instance = new SendbirdPlatformSdk.InlineResponse2003PushConfigurations();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property contentAvailable (base name: "content_available")', function() {
+      // uncomment below and update the code to test the property contentAvailable
+      //var instance = new SendbirdPlatformSdk.InlineResponse2003PushConfigurations();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property mutableContent (base name: "mutable_content")', function() {
+      // uncomment below and update the code to test the property mutableContent
       //var instance = new SendbirdPlatformSdk.InlineResponse2003PushConfigurations();
       //expect(instance).to.be();
     });

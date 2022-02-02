@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse2006);
     });
 
-    it('should have the property autoAccept (base name: "auto_accept")', function() {
-      // uncomment below and update the code to test the property autoAccept
+    it('should have the property ipWhitelistAddresses (base name: "ip_whitelist_addresses")', function() {
+      // uncomment below and update the code to test the property ipWhitelistAddresses
       //var instance = new SendbirdPlatformSdk.InlineResponse2006();
       //expect(instance).to.be();
     });

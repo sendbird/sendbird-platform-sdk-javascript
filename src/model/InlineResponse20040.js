@@ -12,7 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20040Announcements from './InlineResponse20040Announcements';
+import InlineResponse20039Message from './InlineResponse20039Message';
+import InlineResponse20040CreateChannelOptions from './InlineResponse20040CreateChannelOptions';
 
 /**
  * The InlineResponse20040 model module.
@@ -48,11 +49,59 @@ class InlineResponse20040 {
         if (data) {
             obj = obj || new InlineResponse20040();
 
-            if (data.hasOwnProperty('announcements')) {
-                obj['announcements'] = ApiClient.convertToType(data['announcements'], [InlineResponse20040Announcements]);
+            if (data.hasOwnProperty('unique_id')) {
+                obj['unique_id'] = ApiClient.convertToType(data['unique_id'], 'String');
             }
-            if (data.hasOwnProperty('next')) {
-                obj['next'] = ApiClient.convertToType(data['next'], 'String');
+            if (data.hasOwnProperty('announcement_group')) {
+                obj['announcement_group'] = ApiClient.convertToType(data['announcement_group'], 'String');
+            }
+            if (data.hasOwnProperty('message')) {
+                obj['message'] = InlineResponse20039Message.constructFromObject(data['message']);
+            }
+            if (data.hasOwnProperty('enable_push')) {
+                obj['enable_push'] = ApiClient.convertToType(data['enable_push'], 'Boolean');
+            }
+            if (data.hasOwnProperty('target_at')) {
+                obj['target_at'] = ApiClient.convertToType(data['target_at'], 'String');
+            }
+            if (data.hasOwnProperty('target_user_count')) {
+                obj['target_user_count'] = ApiClient.convertToType(data['target_user_count'], 'Number');
+            }
+            if (data.hasOwnProperty('target_channel_count')) {
+                obj['target_channel_count'] = ApiClient.convertToType(data['target_channel_count'], 'Number');
+            }
+            if (data.hasOwnProperty('target_channel_type')) {
+                obj['target_channel_type'] = ApiClient.convertToType(data['target_channel_type'], 'String');
+            }
+            if (data.hasOwnProperty('create_channel_options')) {
+                obj['create_channel_options'] = InlineResponse20040CreateChannelOptions.constructFromObject(data['create_channel_options']);
+            }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
+            if (data.hasOwnProperty('scheduled_at')) {
+                obj['scheduled_at'] = ApiClient.convertToType(data['scheduled_at'], 'Number');
+            }
+            if (data.hasOwnProperty('cease_at')) {
+                obj['cease_at'] = ApiClient.convertToType(data['cease_at'], 'String');
+            }
+            if (data.hasOwnProperty('resume_at')) {
+                obj['resume_at'] = ApiClient.convertToType(data['resume_at'], 'String');
+            }
+            if (data.hasOwnProperty('completed_at')) {
+                obj['completed_at'] = ApiClient.convertToType(data['completed_at'], 'Number');
+            }
+            if (data.hasOwnProperty('sent_user_count')) {
+                obj['sent_user_count'] = ApiClient.convertToType(data['sent_user_count'], 'Number');
+            }
+            if (data.hasOwnProperty('sent_channel_count')) {
+                obj['sent_channel_count'] = ApiClient.convertToType(data['sent_channel_count'], 'Number');
+            }
+            if (data.hasOwnProperty('open_count')) {
+                obj['open_count'] = ApiClient.convertToType(data['open_count'], 'Number');
+            }
+            if (data.hasOwnProperty('open_rate')) {
+                obj['open_rate'] = ApiClient.convertToType(data['open_rate'], 'Number');
             }
         }
         return obj;
@@ -62,14 +111,94 @@ class InlineResponse20040 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse20040Announcements>} announcements
+ * @member {String} unique_id
  */
-InlineResponse20040.prototype['announcements'] = undefined;
+InlineResponse20040.prototype['unique_id'] = undefined;
 
 /**
- * @member {String} next
+ * @member {String} announcement_group
  */
-InlineResponse20040.prototype['next'] = undefined;
+InlineResponse20040.prototype['announcement_group'] = undefined;
+
+/**
+ * @member {module:model/InlineResponse20039Message} message
+ */
+InlineResponse20040.prototype['message'] = undefined;
+
+/**
+ * @member {Boolean} enable_push
+ */
+InlineResponse20040.prototype['enable_push'] = undefined;
+
+/**
+ * @member {String} target_at
+ */
+InlineResponse20040.prototype['target_at'] = undefined;
+
+/**
+ * @member {Number} target_user_count
+ */
+InlineResponse20040.prototype['target_user_count'] = undefined;
+
+/**
+ * @member {Number} target_channel_count
+ */
+InlineResponse20040.prototype['target_channel_count'] = undefined;
+
+/**
+ * @member {String} target_channel_type
+ */
+InlineResponse20040.prototype['target_channel_type'] = undefined;
+
+/**
+ * @member {module:model/InlineResponse20040CreateChannelOptions} create_channel_options
+ */
+InlineResponse20040.prototype['create_channel_options'] = undefined;
+
+/**
+ * @member {String} status
+ */
+InlineResponse20040.prototype['status'] = undefined;
+
+/**
+ * @member {Number} scheduled_at
+ */
+InlineResponse20040.prototype['scheduled_at'] = undefined;
+
+/**
+ * @member {String} cease_at
+ */
+InlineResponse20040.prototype['cease_at'] = undefined;
+
+/**
+ * @member {String} resume_at
+ */
+InlineResponse20040.prototype['resume_at'] = undefined;
+
+/**
+ * @member {Number} completed_at
+ */
+InlineResponse20040.prototype['completed_at'] = undefined;
+
+/**
+ * @member {Number} sent_user_count
+ */
+InlineResponse20040.prototype['sent_user_count'] = undefined;
+
+/**
+ * @member {Number} sent_channel_count
+ */
+InlineResponse20040.prototype['sent_channel_count'] = undefined;
+
+/**
+ * @member {Number} open_count
+ */
+InlineResponse20040.prototype['open_count'] = undefined;
+
+/**
+ * @member {Number} open_rate
+ */
+InlineResponse20040.prototype['open_rate'] = undefined;
 
 
 

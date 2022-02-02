@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sortedMetaarray** | [**[InlineResponse20048SortedMetaarray]**](InlineResponse20048SortedMetaarray.md) |  | [optional] 
+**useDefaultEmoji** | **Boolean** |  | [optional] 
 
 

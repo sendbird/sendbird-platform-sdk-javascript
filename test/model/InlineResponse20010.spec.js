@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20010);
     });
 
-    it('should have the property peakConnections (base name: "peak_connections")', function() {
-      // uncomment below and update the code to test the property peakConnections
+    it('should have the property mau (base name: "mau")', function() {
+      // uncomment below and update the code to test the property mau
       //var instance = new SendbirdPlatformSdk.InlineResponse20010();
       //expect(instance).to.be();
     });

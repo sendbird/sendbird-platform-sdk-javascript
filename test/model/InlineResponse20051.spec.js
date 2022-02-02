@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20051);
     });
 
-    it('should have the property ts (base name: "ts")', function() {
-      // uncomment below and update the code to test the property ts
+    it('should have the property reactions (base name: "reactions")', function() {
+      // uncomment below and update the code to test the property reactions
       //var instance = new SendbirdPlatformSdk.InlineResponse20051();
       //expect(instance).to.be();
     });

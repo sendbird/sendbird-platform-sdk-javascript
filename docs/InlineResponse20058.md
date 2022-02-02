@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**emojiCategories** | [**[InlineResponse20058EmojiCategories]**](InlineResponse20058EmojiCategories.md) |  | [optional] 
+**emojis** | [**[SendBirdEmoji]**](SendBirdEmoji.md) |  | [optional] 
 
 

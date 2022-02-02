@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**statistics** | [**[InlineResponse20045Statistics]**](InlineResponse20045Statistics.md) |  | [optional] 
-**week** | **Number** |  | [optional] 
+**announcementGroup** | **[String]** |  | [optional] 
+**next** | **String** |  | [optional] 
 
 

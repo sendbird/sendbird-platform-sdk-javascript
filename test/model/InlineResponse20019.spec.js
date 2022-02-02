@@ -54,8 +54,56 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20019);
     });
 
-    it('should have the property unreadCount (base name: "unread_count")', function() {
-      // uncomment below and update the code to test the property unreadCount
+    it('should have the property nonSuperGroupChannelUnreadMessageCount (base name: "non_super_group_channel_unread_message_count")', function() {
+      // uncomment below and update the code to test the property nonSuperGroupChannelUnreadMessageCount
+      //var instance = new SendbirdPlatformSdk.InlineResponse20019();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property superGroupChannelUnreadMessageCount (base name: "super_group_channel_unread_message_count")', function() {
+      // uncomment below and update the code to test the property superGroupChannelUnreadMessageCount
+      //var instance = new SendbirdPlatformSdk.InlineResponse20019();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property groupChannelUnreadMessageCount (base name: "group_channel_unread_message_count")', function() {
+      // uncomment below and update the code to test the property groupChannelUnreadMessageCount
+      //var instance = new SendbirdPlatformSdk.InlineResponse20019();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property superGroupChannelInvitationCount (base name: "super_group_channel_invitation_count")', function() {
+      // uncomment below and update the code to test the property superGroupChannelInvitationCount
+      //var instance = new SendbirdPlatformSdk.InlineResponse20019();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property groupChannelInvitationCount (base name: "group_channel_invitation_count")', function() {
+      // uncomment below and update the code to test the property groupChannelInvitationCount
+      //var instance = new SendbirdPlatformSdk.InlineResponse20019();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property superGroupChannelUnreadMentionCount (base name: "super_group_channel_unread_mention_count")', function() {
+      // uncomment below and update the code to test the property superGroupChannelUnreadMentionCount
+      //var instance = new SendbirdPlatformSdk.InlineResponse20019();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property groupChannelUnreadMentionCount (base name: "group_channel_unread_mention_count")', function() {
+      // uncomment below and update the code to test the property groupChannelUnreadMentionCount
+      //var instance = new SendbirdPlatformSdk.InlineResponse20019();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nonSuperGroupChannelUnreadMentionCount (base name: "non_super_group_channel_unread_mention_count")', function() {
+      // uncomment below and update the code to test the property nonSuperGroupChannelUnreadMentionCount
+      //var instance = new SendbirdPlatformSdk.InlineResponse20019();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nonSuperGroupChannelInvitationCount (base name: "non_super_group_channel_invitation_count")', function() {
+      // uncomment below and update the code to test the property nonSuperGroupChannelInvitationCount
       //var instance = new SendbirdPlatformSdk.InlineResponse20019();
       //expect(instance).to.be();
     });

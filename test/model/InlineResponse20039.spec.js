@@ -54,8 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20039);
     });
 
-    it('should have the property operatorIds (base name: "operator_ids")', function() {
-      // uncomment below and update the code to test the property operatorIds
+    it('should have the property announcements (base name: "announcements")', function() {
+      // uncomment below and update the code to test the property announcements
+      //var instance = new SendbirdPlatformSdk.InlineResponse20039();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property next (base name: "next")', function() {
+      // uncomment below and update the code to test the property next
       //var instance = new SendbirdPlatformSdk.InlineResponse20039();
       //expect(instance).to.be();
     });

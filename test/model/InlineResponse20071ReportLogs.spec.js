@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property reportingUser (base name: "reporting_user")', function() {
+      // uncomment below and update the code to test the property reportingUser
+      //var instance = new SendbirdPlatformSdk.InlineResponse20071ReportLogs();
+      //expect(instance).to.be();
+    });
+
     it('should have the property offendingUser (base name: "offending_user")', function() {
       // uncomment below and update the code to test the property offendingUser
       //var instance = new SendbirdPlatformSdk.InlineResponse20071ReportLogs();

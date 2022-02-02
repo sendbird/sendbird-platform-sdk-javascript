@@ -54,14 +54,20 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20024);
     });
 
-    it('should have the property mutedChannels (base name: "muted_channels")', function() {
-      // uncomment below and update the code to test the property mutedChannels
+    it('should have the property tokens (base name: "tokens")', function() {
+      // uncomment below and update the code to test the property tokens
       //var instance = new SendbirdPlatformSdk.InlineResponse20024();
       //expect(instance).to.be();
     });
 
-    it('should have the property next (base name: "next")', function() {
-      // uncomment below and update the code to test the property next
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instance = new SendbirdPlatformSdk.InlineResponse20024();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property user (base name: "user")', function() {
+      // uncomment below and update the code to test the property user
       //var instance = new SendbirdPlatformSdk.InlineResponse20024();
       //expect(instance).to.be();
     });

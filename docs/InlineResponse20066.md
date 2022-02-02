@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bots** | [**[InlineResponse20066Bots]**](InlineResponse20066Bots.md) |  | [optional] 
-**next** | **String** |  | [optional] 
+**webhook** | [**InlineResponse20066Webhook**](InlineResponse20066Webhook.md) |  | [optional] 
 
 

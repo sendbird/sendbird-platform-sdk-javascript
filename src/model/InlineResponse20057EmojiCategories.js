@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20057Emojis from './InlineResponse20057Emojis';
 
 /**
  * The InlineResponse20057EmojiCategories model module.
@@ -57,9 +56,6 @@ class InlineResponse20057EmojiCategories {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
-            if (data.hasOwnProperty('emojis')) {
-                obj['emojis'] = ApiClient.convertToType(data['emojis'], [InlineResponse20057Emojis]);
-            }
         }
         return obj;
     }
@@ -81,11 +77,6 @@ InlineResponse20057EmojiCategories.prototype['name'] = undefined;
  * @member {String} url
  */
 InlineResponse20057EmojiCategories.prototype['url'] = undefined;
-
-/**
- * @member {Array.<module:model/InlineResponse20057Emojis>} emojis
- */
-InlineResponse20057EmojiCategories.prototype['emojis'] = undefined;
 
 
 

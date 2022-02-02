@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## listReports
 
-> InlineResponse20071 listReports(opts)
+> InlineResponse20070 listReports(opts)
 
 List reports
 
@@ -36,13 +36,12 @@ let opts = {
   'startTs': 56, // Number | 
   'endTs': 56 // Number | 
 };
-apiInstance.listReports(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listReports(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -58,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20071**](InlineResponse20071.md)
+[**InlineResponse20070**](InlineResponse20070.md)
 
 ### Authorization
 
@@ -72,7 +71,7 @@ No authorization required
 
 ## listReportsOnChannelByUrl
 
-> InlineResponse20072 listReportsOnChannelByUrl(channelType, channelUrl, opts)
+> InlineResponse20071 listReportsOnChannelByUrl(channelType, channelUrl, opts)
 
 List reports on a channel
 
@@ -91,13 +90,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listReportsOnChannelByUrl(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listReportsOnChannelByUrl(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -113,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20072**](InlineResponse20072.md)
+[**InlineResponse20071**](InlineResponse20071.md)
 
 ### Authorization
 
@@ -127,7 +125,7 @@ No authorization required
 
 ## listReportsOnMessageById
 
-> InlineResponse20072 listReportsOnMessageById(channelType, channelUrl, messageId, opts)
+> InlineResponse20071 listReportsOnMessageById(channelType, channelUrl, messageId, opts)
 
 List reports on a message
 
@@ -147,13 +145,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listReportsOnMessageById(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listReportsOnMessageById(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -170,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20072**](InlineResponse20072.md)
+[**InlineResponse20071**](InlineResponse20071.md)
 
 ### Authorization
 
@@ -184,7 +181,7 @@ No authorization required
 
 ## listReportsOnUserById
 
-> InlineResponse20072 listReportsOnUserById(offendingUserId, opts)
+> InlineResponse20071 listReportsOnUserById(offendingUserId, opts)
 
 List reports on a user
 
@@ -202,13 +199,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listReportsOnUserById(offendingUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listReportsOnUserById(offendingUserId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -223,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20072**](InlineResponse20072.md)
+[**InlineResponse20071**](InlineResponse20071.md)
 
 ### Authorization
 
@@ -237,7 +233,7 @@ No authorization required
 
 ## reportChannelByUrl
 
-> InlineResponse20072ReportLogs reportChannelByUrl(channelType, channelUrl, opts)
+> InlineResponse20071ReportLogs reportChannelByUrl(channelType, channelUrl, opts)
 
 Report a channel
 
@@ -255,13 +251,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'reportChannelByUrlData': new SendbirdPlatformSdk.ReportChannelByUrlData() // ReportChannelByUrlData | 
 };
-apiInstance.reportChannelByUrl(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.reportChannelByUrl(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -276,7 +271,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20072ReportLogs**](InlineResponse20072ReportLogs.md)
+[**InlineResponse20071ReportLogs**](InlineResponse20071ReportLogs.md)
 
 ### Authorization
 
@@ -290,7 +285,7 @@ No authorization required
 
 ## reportMessageById
 
-> InlineResponse20072ReportLogs reportMessageById(channelType, channelUrl, messageId, opts)
+> InlineResponse20071ReportLogs reportMessageById(channelType, channelUrl, messageId, opts)
 
 Report a message
 
@@ -309,13 +304,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'reportMessageByIdData': new SendbirdPlatformSdk.ReportMessageByIdData() // ReportMessageByIdData | 
 };
-apiInstance.reportMessageById(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.reportMessageById(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -331,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20072ReportLogs**](InlineResponse20072ReportLogs.md)
+[**InlineResponse20071ReportLogs**](InlineResponse20071ReportLogs.md)
 
 ### Authorization
 
@@ -345,7 +339,7 @@ No authorization required
 
 ## reportUserById
 
-> InlineResponse20072ReportLogs reportUserById(offendingUserId, opts)
+> InlineResponse20071ReportLogs reportUserById(offendingUserId, opts)
 
 Report a user
 
@@ -362,13 +356,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'reportUserByIdData': new SendbirdPlatformSdk.ReportUserByIdData() // ReportUserByIdData | 
 };
-apiInstance.reportUserById(offendingUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.reportUserById(offendingUserId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -382,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20072ReportLogs**](InlineResponse20072ReportLogs.md)
+[**InlineResponse20071ReportLogs**](InlineResponse20071ReportLogs.md)
 
 ### Authorization
 
@@ -414,13 +407,12 @@ let messageId = "messageId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewModeratedMessageById(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewModeratedMessageById(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

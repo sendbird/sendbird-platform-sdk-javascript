@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**users** | [**[SendBirdUser]**](SendBirdUser.md) |  | [optional] 
+**channels** | [**[SendBirdGroupChannel]**](SendBirdGroupChannel.md) |  | [optional] 
 **next** | **String** |  | [optional] 
 
 

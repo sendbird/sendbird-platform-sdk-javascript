@@ -48,7 +48,7 @@ class InlineResponse20014 {
             obj = obj || new InlineResponse20014();
 
             if (data.hasOwnProperty('push_configurations')) {
-                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], ['String']);
+                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], 'String');
             }
         }
         return obj;
@@ -58,7 +58,7 @@ class InlineResponse20014 {
 }
 
 /**
- * @member {Array.<String>} push_configurations
+ * @member {String} push_configurations
  */
 InlineResponse20014.prototype['push_configurations'] = undefined;
 

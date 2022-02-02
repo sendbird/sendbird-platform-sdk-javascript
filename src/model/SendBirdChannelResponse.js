@@ -158,8 +158,8 @@ class SendBirdChannelResponse {
             if (data.hasOwnProperty('unread_message_count')) {
                 obj['unread_message_count'] = ApiClient.convertToType(data['unread_message_count'], 'Number');
             }
-            if (data.hasOwnProperty('url')) {
-                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            if (data.hasOwnProperty('channel_url')) {
+                obj['channel_url'] = ApiClient.convertToType(data['channel_url'], 'String');
             }
             if (data.hasOwnProperty('operators')) {
                 obj['operators'] = ApiClient.convertToType(data['operators'], [SendBirdUser]);
@@ -345,9 +345,9 @@ SendBirdChannelResponse.prototype['unread_mention_count'] = undefined;
 SendBirdChannelResponse.prototype['unread_message_count'] = undefined;
 
 /**
- * @member {String} url
+ * @member {String} channel_url
  */
-SendBirdChannelResponse.prototype['url'] = undefined;
+SendBirdChannelResponse.prototype['channel_url'] = undefined;
 
 /**
  * @member {Array.<module:model/SendBirdUser>} operators
@@ -498,9 +498,9 @@ SendBirdGroupChannel.prototype['unread_mention_count'] = undefined;
  */
 SendBirdGroupChannel.prototype['unread_message_count'] = undefined;
 /**
- * @member {String} url
+ * @member {String} channel_url
  */
-SendBirdGroupChannel.prototype['url'] = undefined;
+SendBirdGroupChannel.prototype['channel_url'] = undefined;
 // Implement SendBirdOpenChannel interface:
 /**
  * @member {String} cover_url
@@ -543,9 +543,9 @@ SendBirdOpenChannel.prototype['operators'] = undefined;
  */
 SendBirdOpenChannel.prototype['participant_count'] = undefined;
 /**
- * @member {String} url
+ * @member {String} channel_url
  */
-SendBirdOpenChannel.prototype['url'] = undefined;
+SendBirdOpenChannel.prototype['channel_url'] = undefined;
 
 
 

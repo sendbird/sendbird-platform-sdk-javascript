@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20045Statistics from './InlineResponse20045Statistics';
 
 /**
  * The InlineResponse20045 model module.
@@ -48,11 +47,11 @@ class InlineResponse20045 {
         if (data) {
             obj = obj || new InlineResponse20045();
 
-            if (data.hasOwnProperty('statistics')) {
-                obj['statistics'] = ApiClient.convertToType(data['statistics'], [InlineResponse20045Statistics]);
+            if (data.hasOwnProperty('announcement_group')) {
+                obj['announcement_group'] = ApiClient.convertToType(data['announcement_group'], ['String']);
             }
-            if (data.hasOwnProperty('week')) {
-                obj['week'] = ApiClient.convertToType(data['week'], 'Number');
+            if (data.hasOwnProperty('next')) {
+                obj['next'] = ApiClient.convertToType(data['next'], 'String');
             }
         }
         return obj;
@@ -62,14 +61,14 @@ class InlineResponse20045 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse20045Statistics>} statistics
+ * @member {Array.<String>} announcement_group
  */
-InlineResponse20045.prototype['statistics'] = undefined;
+InlineResponse20045.prototype['announcement_group'] = undefined;
 
 /**
- * @member {Number} week
+ * @member {String} next
  */
-InlineResponse20045.prototype['week'] = undefined;
+InlineResponse20045.prototype['next'] = undefined;
 
 
 

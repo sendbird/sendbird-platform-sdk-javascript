@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20012);
     });
 
-    it('should have the property dau (base name: "dau")', function() {
-      // uncomment below and update the code to test the property dau
+    it('should have the property pushConfigurations (base name: "push_configurations")', function() {
+      // uncomment below and update the code to test the property pushConfigurations
       //var instance = new SendbirdPlatformSdk.InlineResponse20012();
       //expect(instance).to.be();
     });

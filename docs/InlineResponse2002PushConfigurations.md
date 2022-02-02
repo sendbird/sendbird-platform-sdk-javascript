@@ -6,7 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
 **pushType** | **String** |  | [optional] 
-**apiKey** | **String** |  | [optional] 
+**huaweiAppId** | **String** |  | [optional] 
+**huaweiAppSecret** | **String** |  | [optional] 
 **pushSound** | **String** |  | [optional] 
 
 

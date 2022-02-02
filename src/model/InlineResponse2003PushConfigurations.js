@@ -53,11 +53,26 @@ class InlineResponse2003PushConfigurations {
             if (data.hasOwnProperty('push_type')) {
                 obj['push_type'] = ApiClient.convertToType(data['push_type'], 'String');
             }
-            if (data.hasOwnProperty('huawei_app_id')) {
-                obj['huawei_app_id'] = ApiClient.convertToType(data['huawei_app_id'], 'String');
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Number');
             }
-            if (data.hasOwnProperty('huawei_app_secret')) {
-                obj['huawei_app_secret'] = ApiClient.convertToType(data['huawei_app_secret'], 'String');
+            if (data.hasOwnProperty('apns_cer_env_type')) {
+                obj['apns_cer_env_type'] = ApiClient.convertToType(data['apns_cer_env_type'], 'String');
+            }
+            if (data.hasOwnProperty('apns_expiration')) {
+                obj['apns_expiration'] = ApiClient.convertToType(data['apns_expiration'], 'Number');
+            }
+            if (data.hasOwnProperty('apns_name')) {
+                obj['apns_name'] = ApiClient.convertToType(data['apns_name'], 'String');
+            }
+            if (data.hasOwnProperty('has_unread_count_badge')) {
+                obj['has_unread_count_badge'] = ApiClient.convertToType(data['has_unread_count_badge'], 'Number');
+            }
+            if (data.hasOwnProperty('content_available')) {
+                obj['content_available'] = ApiClient.convertToType(data['content_available'], 'Boolean');
+            }
+            if (data.hasOwnProperty('mutable_content')) {
+                obj['mutable_content'] = ApiClient.convertToType(data['mutable_content'], 'Boolean');
             }
             if (data.hasOwnProperty('push_sound')) {
                 obj['push_sound'] = ApiClient.convertToType(data['push_sound'], 'String');
@@ -80,14 +95,39 @@ InlineResponse2003PushConfigurations.prototype['id'] = undefined;
 InlineResponse2003PushConfigurations.prototype['push_type'] = undefined;
 
 /**
- * @member {String} huawei_app_id
+ * @member {Number} created_at
  */
-InlineResponse2003PushConfigurations.prototype['huawei_app_id'] = undefined;
+InlineResponse2003PushConfigurations.prototype['created_at'] = undefined;
 
 /**
- * @member {String} huawei_app_secret
+ * @member {String} apns_cer_env_type
  */
-InlineResponse2003PushConfigurations.prototype['huawei_app_secret'] = undefined;
+InlineResponse2003PushConfigurations.prototype['apns_cer_env_type'] = undefined;
+
+/**
+ * @member {Number} apns_expiration
+ */
+InlineResponse2003PushConfigurations.prototype['apns_expiration'] = undefined;
+
+/**
+ * @member {String} apns_name
+ */
+InlineResponse2003PushConfigurations.prototype['apns_name'] = undefined;
+
+/**
+ * @member {Number} has_unread_count_badge
+ */
+InlineResponse2003PushConfigurations.prototype['has_unread_count_badge'] = undefined;
+
+/**
+ * @member {Boolean} content_available
+ */
+InlineResponse2003PushConfigurations.prototype['content_available'] = undefined;
+
+/**
+ * @member {Boolean} mutable_content
+ */
+InlineResponse2003PushConfigurations.prototype['mutable_content'] = undefined;
 
 /**
  * @member {String} push_sound

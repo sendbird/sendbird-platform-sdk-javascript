@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20057);
     });
 
-    it('should have the property emojiHash (base name: "emoji_hash")', function() {
-      // uncomment below and update the code to test the property emojiHash
-      //var instance = new SendbirdPlatformSdk.InlineResponse20057();
-      //expect(instance).to.be();
-    });
-
     it('should have the property emojiCategories (base name: "emoji_categories")', function() {
       // uncomment below and update the code to test the property emojiCategories
       //var instance = new SendbirdPlatformSdk.InlineResponse20057();

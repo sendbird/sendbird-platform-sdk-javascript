@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dau** | **Number** |  | [optional] 
+**pushConfigurations** | [**[InlineResponse20012PushConfigurations]**](InlineResponse20012PushConfigurations.md) |  | [optional] 
 
 

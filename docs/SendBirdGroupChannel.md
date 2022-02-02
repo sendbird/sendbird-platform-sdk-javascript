@@ -38,7 +38,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **unreadMentionCount** | **Number** |  | [optional] 
 **unreadMessageCount** | **Number** |  | [optional] 
-**url** | **String** |  | [optional] 
+**channelUrl** | **String** |  | [optional] 
 
 
 

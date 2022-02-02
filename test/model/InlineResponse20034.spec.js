@@ -54,14 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20034);
     });
 
-    it('should have the property bannedList (base name: "banned_list")', function() {
-      // uncomment below and update the code to test the property bannedList
-      //var instance = new SendbirdPlatformSdk.InlineResponse20034();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property totalBanCount (base name: "total_ban_count")', function() {
-      // uncomment below and update the code to test the property totalBanCount
+    it('should have the property operators (base name: "operators")', function() {
+      // uncomment below and update the code to test the property operators
       //var instance = new SendbirdPlatformSdk.InlineResponse20034();
       //expect(instance).to.be();
     });

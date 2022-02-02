@@ -54,14 +54,44 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20069);
     });
 
-    it('should have the property requests (base name: "requests")', function() {
-      // uncomment below and update the code to test the property requests
+    it('should have the property requestId (base name: "request_id")', function() {
+      // uncomment below and update the code to test the property requestId
       //var instance = new SendbirdPlatformSdk.InlineResponse20069();
       //expect(instance).to.be();
     });
 
-    it('should have the property next (base name: "next")', function() {
-      // uncomment below and update the code to test the property next
+    it('should have the property action (base name: "action")', function() {
+      // uncomment below and update the code to test the property action
+      //var instance = new SendbirdPlatformSdk.InlineResponse20069();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instance = new SendbirdPlatformSdk.InlineResponse20069();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property userId (base name: "user_id")', function() {
+      // uncomment below and update the code to test the property userId
+      //var instance = new SendbirdPlatformSdk.InlineResponse20069();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property userIds (base name: "user_ids")', function() {
+      // uncomment below and update the code to test the property userIds
+      //var instance = new SendbirdPlatformSdk.InlineResponse20069();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property channelDeleteOption (base name: "channel_delete_option")', function() {
+      // uncomment below and update the code to test the property channelDeleteOption
+      //var instance = new SendbirdPlatformSdk.InlineResponse20069();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
       //var instance = new SendbirdPlatformSdk.InlineResponse20069();
       //expect(instance).to.be();
     });

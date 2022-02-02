@@ -47,8 +47,8 @@ class InlineResponse20052 {
         if (data) {
             obj = obj || new InlineResponse20052();
 
-            if (data.hasOwnProperty('reactions')) {
-                obj['reactions'] = ApiClient.convertToType(data['reactions'], 'Boolean');
+            if (data.hasOwnProperty('key')) {
+                obj['key'] = ApiClient.convertToType(data['key'], ['String']);
             }
         }
         return obj;
@@ -58,9 +58,9 @@ class InlineResponse20052 {
 }
 
 /**
- * @member {Boolean} reactions
+ * @member {Array.<String>} key
  */
-InlineResponse20052.prototype['reactions'] = undefined;
+InlineResponse20052.prototype['key'] = undefined;
 
 
 

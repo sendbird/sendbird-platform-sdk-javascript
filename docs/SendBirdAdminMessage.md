@@ -34,7 +34,11 @@ Name | Type | Description | Notes
 ## Enum: MessageTypeEnum
 
 
-* `admin` (value: `"admin"`)
+* `MESG` (value: `"MESG"`)
+
+* `ADMM` (value: `"ADMM"`)
+
+* `FILE` (value: `"FILE"`)
 
 
 

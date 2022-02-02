@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20044OpenStatus from './InlineResponse20044OpenStatus';
+import InlineResponse20044Statistics from './InlineResponse20044Statistics';
 
 /**
  * The InlineResponse20044 model module.
@@ -48,11 +48,11 @@ class InlineResponse20044 {
         if (data) {
             obj = obj || new InlineResponse20044();
 
-            if (data.hasOwnProperty('open_status')) {
-                obj['open_status'] = ApiClient.convertToType(data['open_status'], [InlineResponse20044OpenStatus]);
+            if (data.hasOwnProperty('statistics')) {
+                obj['statistics'] = ApiClient.convertToType(data['statistics'], [InlineResponse20044Statistics]);
             }
-            if (data.hasOwnProperty('next')) {
-                obj['next'] = ApiClient.convertToType(data['next'], 'String');
+            if (data.hasOwnProperty('week')) {
+                obj['week'] = ApiClient.convertToType(data['week'], 'Number');
             }
         }
         return obj;
@@ -62,14 +62,14 @@ class InlineResponse20044 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse20044OpenStatus>} open_status
+ * @member {Array.<module:model/InlineResponse20044Statistics>} statistics
  */
-InlineResponse20044.prototype['open_status'] = undefined;
+InlineResponse20044.prototype['statistics'] = undefined;
 
 /**
- * @member {String} next
+ * @member {Number} week
  */
-InlineResponse20044.prototype['next'] = undefined;
+InlineResponse20044.prototype['week'] = undefined;
 
 
 

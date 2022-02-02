@@ -54,14 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20032);
     });
 
-    it('should have the property mutedList (base name: "muted_list")', function() {
-      // uncomment below and update the code to test the property mutedList
-      //var instance = new SendbirdPlatformSdk.InlineResponse20032();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property totalMuteCount (base name: "total_mute_count")', function() {
-      // uncomment below and update the code to test the property totalMuteCount
+    it('should have the property participants (base name: "participants")', function() {
+      // uncomment below and update the code to test the property participants
       //var instance = new SendbirdPlatformSdk.InlineResponse20032();
       //expect(instance).to.be();
     });

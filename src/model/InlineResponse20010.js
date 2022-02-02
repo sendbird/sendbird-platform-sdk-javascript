@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20010PeakConnections from './InlineResponse20010PeakConnections';
 
 /**
  * The InlineResponse20010 model module.
@@ -48,8 +47,8 @@ class InlineResponse20010 {
         if (data) {
             obj = obj || new InlineResponse20010();
 
-            if (data.hasOwnProperty('peak_connections')) {
-                obj['peak_connections'] = ApiClient.convertToType(data['peak_connections'], [InlineResponse20010PeakConnections]);
+            if (data.hasOwnProperty('mau')) {
+                obj['mau'] = ApiClient.convertToType(data['mau'], 'Number');
             }
         }
         return obj;
@@ -59,9 +58,9 @@ class InlineResponse20010 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse20010PeakConnections>} peak_connections
+ * @member {Number} mau
  */
-InlineResponse20010.prototype['peak_connections'] = undefined;
+InlineResponse20010.prototype['mau'] = undefined;
 
 
 

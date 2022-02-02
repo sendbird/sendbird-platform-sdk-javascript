@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mutedChannels** | [**[SendBirdChannelResponse]**](SendBirdChannelResponse.md) |  | [optional] 
-**next** | **String** |  | [optional] 
+**tokens** | **[String]** |  | [optional] 
+**type** | **String** |  | [optional] 
+**user** | [**SendBirdUser**](SendBirdUser.md) |  | [optional] 
 
 

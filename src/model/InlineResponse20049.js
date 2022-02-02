@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import InlineResponse20049Unread from './InlineResponse20049Unread';
 
 /**
  * The InlineResponse20049 model module.
@@ -47,8 +48,8 @@ class InlineResponse20049 {
         if (data) {
             obj = obj || new InlineResponse20049();
 
-            if (data.hasOwnProperty('total')) {
-                obj['total'] = ApiClient.convertToType(data['total'], 'Number');
+            if (data.hasOwnProperty('unread')) {
+                obj['unread'] = InlineResponse20049Unread.constructFromObject(data['unread']);
             }
         }
         return obj;
@@ -58,9 +59,9 @@ class InlineResponse20049 {
 }
 
 /**
- * @member {Number} total
+ * @member {module:model/InlineResponse20049Unread} unread
  */
-InlineResponse20049.prototype['total'] = undefined;
+InlineResponse20049.prototype['unread'] = undefined;
 
 
 

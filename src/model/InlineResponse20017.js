@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import SendBirdUser from './SendBirdUser';
+import SendBirdGroupChannel from './SendBirdGroupChannel';
 
 /**
  * The InlineResponse20017 model module.
@@ -48,8 +48,8 @@ class InlineResponse20017 {
         if (data) {
             obj = obj || new InlineResponse20017();
 
-            if (data.hasOwnProperty('users')) {
-                obj['users'] = ApiClient.convertToType(data['users'], [SendBirdUser]);
+            if (data.hasOwnProperty('channels')) {
+                obj['channels'] = ApiClient.convertToType(data['channels'], [SendBirdGroupChannel]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -62,9 +62,9 @@ class InlineResponse20017 {
 }
 
 /**
- * @member {Array.<module:model/SendBirdUser>} users
+ * @member {Array.<module:model/SendBirdGroupChannel>} channels
  */
-InlineResponse20017.prototype['users'] = undefined;
+InlineResponse20017.prototype['channels'] = undefined;
 
 /**
  * @member {String} next

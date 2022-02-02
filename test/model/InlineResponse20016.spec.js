@@ -54,8 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20016);
     });
 
-    it('should have the property pushMessageTemplates (base name: "push_message_templates")', function() {
-      // uncomment below and update the code to test the property pushMessageTemplates
+    it('should have the property users (base name: "users")', function() {
+      // uncomment below and update the code to test the property users
+      //var instance = new SendbirdPlatformSdk.InlineResponse20016();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property next (base name: "next")', function() {
+      // uncomment below and update the code to test the property next
       //var instance = new SendbirdPlatformSdk.InlineResponse20016();
       //expect(instance).to.be();
     });

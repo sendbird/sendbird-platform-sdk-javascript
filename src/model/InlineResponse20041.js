@@ -12,8 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20040Message from './InlineResponse20040Message';
-import InlineResponse20041CreateChannelOptions from './InlineResponse20041CreateChannelOptions';
+import InlineResponse20041Message from './InlineResponse20041Message';
 
 /**
  * The InlineResponse20041 model module.
@@ -56,52 +55,7 @@ class InlineResponse20041 {
                 obj['announcement_group'] = ApiClient.convertToType(data['announcement_group'], 'String');
             }
             if (data.hasOwnProperty('message')) {
-                obj['message'] = InlineResponse20040Message.constructFromObject(data['message']);
-            }
-            if (data.hasOwnProperty('enable_push')) {
-                obj['enable_push'] = ApiClient.convertToType(data['enable_push'], 'Boolean');
-            }
-            if (data.hasOwnProperty('target_at')) {
-                obj['target_at'] = ApiClient.convertToType(data['target_at'], 'String');
-            }
-            if (data.hasOwnProperty('target_user_count')) {
-                obj['target_user_count'] = ApiClient.convertToType(data['target_user_count'], 'Number');
-            }
-            if (data.hasOwnProperty('target_channel_count')) {
-                obj['target_channel_count'] = ApiClient.convertToType(data['target_channel_count'], 'Number');
-            }
-            if (data.hasOwnProperty('target_channel_type')) {
-                obj['target_channel_type'] = ApiClient.convertToType(data['target_channel_type'], 'String');
-            }
-            if (data.hasOwnProperty('create_channel_options')) {
-                obj['create_channel_options'] = InlineResponse20041CreateChannelOptions.constructFromObject(data['create_channel_options']);
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
-            }
-            if (data.hasOwnProperty('scheduled_at')) {
-                obj['scheduled_at'] = ApiClient.convertToType(data['scheduled_at'], 'Number');
-            }
-            if (data.hasOwnProperty('cease_at')) {
-                obj['cease_at'] = ApiClient.convertToType(data['cease_at'], 'String');
-            }
-            if (data.hasOwnProperty('resume_at')) {
-                obj['resume_at'] = ApiClient.convertToType(data['resume_at'], 'String');
-            }
-            if (data.hasOwnProperty('completed_at')) {
-                obj['completed_at'] = ApiClient.convertToType(data['completed_at'], 'Number');
-            }
-            if (data.hasOwnProperty('sent_user_count')) {
-                obj['sent_user_count'] = ApiClient.convertToType(data['sent_user_count'], 'Number');
-            }
-            if (data.hasOwnProperty('sent_channel_count')) {
-                obj['sent_channel_count'] = ApiClient.convertToType(data['sent_channel_count'], 'Number');
-            }
-            if (data.hasOwnProperty('open_count')) {
-                obj['open_count'] = ApiClient.convertToType(data['open_count'], 'Number');
-            }
-            if (data.hasOwnProperty('open_rate')) {
-                obj['open_rate'] = ApiClient.convertToType(data['open_rate'], 'Number');
+                obj['message'] = InlineResponse20041Message.constructFromObject(data['message']);
             }
         }
         return obj;
@@ -121,84 +75,9 @@ InlineResponse20041.prototype['unique_id'] = undefined;
 InlineResponse20041.prototype['announcement_group'] = undefined;
 
 /**
- * @member {module:model/InlineResponse20040Message} message
+ * @member {module:model/InlineResponse20041Message} message
  */
 InlineResponse20041.prototype['message'] = undefined;
-
-/**
- * @member {Boolean} enable_push
- */
-InlineResponse20041.prototype['enable_push'] = undefined;
-
-/**
- * @member {String} target_at
- */
-InlineResponse20041.prototype['target_at'] = undefined;
-
-/**
- * @member {Number} target_user_count
- */
-InlineResponse20041.prototype['target_user_count'] = undefined;
-
-/**
- * @member {Number} target_channel_count
- */
-InlineResponse20041.prototype['target_channel_count'] = undefined;
-
-/**
- * @member {String} target_channel_type
- */
-InlineResponse20041.prototype['target_channel_type'] = undefined;
-
-/**
- * @member {module:model/InlineResponse20041CreateChannelOptions} create_channel_options
- */
-InlineResponse20041.prototype['create_channel_options'] = undefined;
-
-/**
- * @member {String} status
- */
-InlineResponse20041.prototype['status'] = undefined;
-
-/**
- * @member {Number} scheduled_at
- */
-InlineResponse20041.prototype['scheduled_at'] = undefined;
-
-/**
- * @member {String} cease_at
- */
-InlineResponse20041.prototype['cease_at'] = undefined;
-
-/**
- * @member {String} resume_at
- */
-InlineResponse20041.prototype['resume_at'] = undefined;
-
-/**
- * @member {Number} completed_at
- */
-InlineResponse20041.prototype['completed_at'] = undefined;
-
-/**
- * @member {Number} sent_user_count
- */
-InlineResponse20041.prototype['sent_user_count'] = undefined;
-
-/**
- * @member {Number} sent_channel_count
- */
-InlineResponse20041.prototype['sent_channel_count'] = undefined;
-
-/**
- * @member {Number} open_count
- */
-InlineResponse20041.prototype['open_count'] = undefined;
-
-/**
- * @member {Number} open_rate
- */
-InlineResponse20041.prototype['open_rate'] = undefined;
 
 
 

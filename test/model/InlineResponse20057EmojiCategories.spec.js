@@ -72,12 +72,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property emojis (base name: "emojis")', function() {
-      // uncomment below and update the code to test the property emojis
-      //var instance = new SendbirdPlatformSdk.InlineResponse20057EmojiCategories();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

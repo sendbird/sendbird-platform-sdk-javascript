@@ -5,7 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uniqueId** | **String** |  | [optional] 
-**announcementGroup** | **String** |  | [optional] 
-**message** | [**InlineResponse20042Message**](InlineResponse20042Message.md) |  | [optional] 
+**openCounts** | **[Number]** |  | [optional] 
+**openRates** | **[Number]** |  | [optional] 
+**cumulativeOpenCounts** | **[Number]** |  | [optional] 
+**cumulativeOpenRates** | **[Number]** |  | [optional] 
 
 

@@ -54,32 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20054);
     });
 
-    it('should have the property userId (base name: "user_id")', function() {
-      // uncomment below and update the code to test the property userId
-      //var instance = new SendbirdPlatformSdk.InlineResponse20054();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property operation (base name: "operation")', function() {
-      // uncomment below and update the code to test the property operation
-      //var instance = new SendbirdPlatformSdk.InlineResponse20054();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property success (base name: "success")', function() {
-      // uncomment below and update the code to test the property success
-      //var instance = new SendbirdPlatformSdk.InlineResponse20054();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property reaction (base name: "reaction")', function() {
-      // uncomment below and update the code to test the property reaction
-      //var instance = new SendbirdPlatformSdk.InlineResponse20054();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedAt (base name: "updated_at")', function() {
-      // uncomment below and update the code to test the property updatedAt
+    it('should have the property sortedMetaarray (base name: "sorted_metaarray")', function() {
+      // uncomment below and update the code to test the property sortedMetaarray
       //var instance = new SendbirdPlatformSdk.InlineResponse20054();
       //expect(instance).to.be();
     });

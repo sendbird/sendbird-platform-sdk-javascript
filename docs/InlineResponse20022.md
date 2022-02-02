@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**countPreference** | **String** |  | [optional] 
+**bannedChannels** | [**[InlineResponse20022BannedChannels]**](InlineResponse20022BannedChannels.md) |  | [optional] 
+**next** | **String** |  | [optional] 
 
 

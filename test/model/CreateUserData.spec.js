@@ -84,18 +84,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property issueSessionToken (base name: "issue_session_token")', function() {
-      // uncomment below and update the code to test the property issueSessionToken
-      //var instance = new SendbirdPlatformSdk.CreateUserData();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property sessionTokenExpiresAt (base name: "session_token_expires_at")', function() {
-      // uncomment below and update the code to test the property sessionTokenExpiresAt
-      //var instance = new SendbirdPlatformSdk.CreateUserData();
-      //expect(instance).to.be();
-    });
-
     it('should have the property discoveryKeys (base name: "discovery_keys")', function() {
       // uncomment below and update the code to test the property discoveryKeys
       //var instance = new SendbirdPlatformSdk.CreateUserData();

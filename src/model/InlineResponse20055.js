@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20048SortedMetaarray from './InlineResponse20048SortedMetaarray';
 
 /**
  * The InlineResponse20055 model module.
@@ -48,8 +47,8 @@ class InlineResponse20055 {
         if (data) {
             obj = obj || new InlineResponse20055();
 
-            if (data.hasOwnProperty('sorted_metaarray')) {
-                obj['sorted_metaarray'] = ApiClient.convertToType(data['sorted_metaarray'], [InlineResponse20048SortedMetaarray]);
+            if (data.hasOwnProperty('use_default_emoji')) {
+                obj['use_default_emoji'] = ApiClient.convertToType(data['use_default_emoji'], 'Boolean');
             }
         }
         return obj;
@@ -59,9 +58,9 @@ class InlineResponse20055 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse20048SortedMetaarray>} sorted_metaarray
+ * @member {Boolean} use_default_emoji
  */
-InlineResponse20055.prototype['sorted_metaarray'] = undefined;
+InlineResponse20055.prototype['use_default_emoji'] = undefined;
 
 
 

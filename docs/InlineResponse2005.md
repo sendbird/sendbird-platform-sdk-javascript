@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pushMessageTemplates** | [**[InlineResponse2005PushMessageTemplates]**](InlineResponse2005PushMessageTemplates.md) |  | [optional] 
+**autoAccept** | **Boolean** |  | [optional] 
 
 

@@ -58,11 +58,11 @@ npm run build
 
 #### git
 
-If the library is hosted at a git repository, e.g.https://github.com/GIT_USER_ID/GIT_REPO_ID
+If the library is hosted at a git repository, e.g.https://github.com/sendbird/sendbird-platform-sdk-javascript
 then install it via:
 
 ```shell
-    npm install GIT_USER_ID/GIT_REPO_ID --save
+    npm install sendbird/sendbird-platform-sdk-javascript --save
 ```
 
 ### For browser
@@ -107,14 +107,12 @@ var api = new SendbirdPlatformSdk.AdvancedAnalyticsApi()
 var opts = {
   'apiToken': {{API_TOKEN}} // {String} 
 };
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.retrieveAdvancedAnalyticsMetrics(opts, callback);
+api.retrieveAdvancedAnalyticsMetrics(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
 
 ```
 
@@ -254,10 +252,6 @@ Class | Method | HTTP request | Description
 *SendbirdPlatformSdk.OpenChannelApi* | [**ocViewBanById**](docs/OpenChannelApi.md#ocViewBanById) | **GET** /v3/open_channels/{channel_url}/ban/{banned_user_id} | View a ban
 *SendbirdPlatformSdk.OpenChannelApi* | [**ocViewChannelByUrl**](docs/OpenChannelApi.md#ocViewChannelByUrl) | **GET** /v3/open_channels/{channel_url} | View a channel
 *SendbirdPlatformSdk.OpenChannelApi* | [**ocViewMuteById**](docs/OpenChannelApi.md#ocViewMuteById) | **GET** /v3/open_channels/{channel_url}/mute/{muted_user_id} | View a mute
-*SendbirdPlatformSdk.OrganizationAPIApi* | [**createApplication**](docs/OrganizationAPIApi.md#createApplication) | **POST** /api/v2/applications | Create an application
-*SendbirdPlatformSdk.OrganizationAPIApi* | [**deleteApplicationById**](docs/OrganizationAPIApi.md#deleteApplicationById) | **DELETE** /api/v2/applications/{app_id} | Delete an application
-*SendbirdPlatformSdk.OrganizationAPIApi* | [**listApplications**](docs/OrganizationAPIApi.md#listApplications) | **GET** /api/v2/applications | List applications
-*SendbirdPlatformSdk.OrganizationAPIApi* | [**viewApplicationById**](docs/OrganizationAPIApi.md#viewApplicationById) | **GET** /api/v2/applications/{app_id} | View an application
 *SendbirdPlatformSdk.ReportContentSubjectApi* | [**listReports**](docs/ReportContentSubjectApi.md#listReports) | **GET** /v3/report | List reports
 *SendbirdPlatformSdk.ReportContentSubjectApi* | [**listReportsOnChannelByUrl**](docs/ReportContentSubjectApi.md#listReportsOnChannelByUrl) | **GET** /v3/report/{channel_type}/{channel_url} | List reports on a channel
 *SendbirdPlatformSdk.ReportContentSubjectApi* | [**listReportsOnMessageById**](docs/ReportContentSubjectApi.md#listReportsOnMessageById) | **GET** /v3/report/{channel_type}/{channel_url}/messages/{message_id} | List reports on a message
@@ -369,24 +363,24 @@ Class | Method | HTTP request | Description
  - [SendbirdPlatformSdk.InlineResponse200](docs/InlineResponse200.md)
  - [SendbirdPlatformSdk.InlineResponse2001](docs/InlineResponse2001.md)
  - [SendbirdPlatformSdk.InlineResponse20010](docs/InlineResponse20010.md)
- - [SendbirdPlatformSdk.InlineResponse20010PeakConnections](docs/InlineResponse20010PeakConnections.md)
  - [SendbirdPlatformSdk.InlineResponse20011](docs/InlineResponse20011.md)
  - [SendbirdPlatformSdk.InlineResponse20012](docs/InlineResponse20012.md)
+ - [SendbirdPlatformSdk.InlineResponse20012PushConfigurations](docs/InlineResponse20012PushConfigurations.md)
  - [SendbirdPlatformSdk.InlineResponse20013](docs/InlineResponse20013.md)
- - [SendbirdPlatformSdk.InlineResponse20013PushConfigurations](docs/InlineResponse20013PushConfigurations.md)
  - [SendbirdPlatformSdk.InlineResponse20014](docs/InlineResponse20014.md)
  - [SendbirdPlatformSdk.InlineResponse20015](docs/InlineResponse20015.md)
+ - [SendbirdPlatformSdk.InlineResponse20015PushMessageTemplates](docs/InlineResponse20015PushMessageTemplates.md)
  - [SendbirdPlatformSdk.InlineResponse20016](docs/InlineResponse20016.md)
- - [SendbirdPlatformSdk.InlineResponse20016PushMessageTemplates](docs/InlineResponse20016PushMessageTemplates.md)
  - [SendbirdPlatformSdk.InlineResponse20017](docs/InlineResponse20017.md)
  - [SendbirdPlatformSdk.InlineResponse20018](docs/InlineResponse20018.md)
  - [SendbirdPlatformSdk.InlineResponse20019](docs/InlineResponse20019.md)
+ - [SendbirdPlatformSdk.InlineResponse2001PushConfigurations](docs/InlineResponse2001PushConfigurations.md)
  - [SendbirdPlatformSdk.InlineResponse2002](docs/InlineResponse2002.md)
  - [SendbirdPlatformSdk.InlineResponse20020](docs/InlineResponse20020.md)
  - [SendbirdPlatformSdk.InlineResponse20021](docs/InlineResponse20021.md)
  - [SendbirdPlatformSdk.InlineResponse20022](docs/InlineResponse20022.md)
+ - [SendbirdPlatformSdk.InlineResponse20022BannedChannels](docs/InlineResponse20022BannedChannels.md)
  - [SendbirdPlatformSdk.InlineResponse20023](docs/InlineResponse20023.md)
- - [SendbirdPlatformSdk.InlineResponse20023BannedChannels](docs/InlineResponse20023BannedChannels.md)
  - [SendbirdPlatformSdk.InlineResponse20024](docs/InlineResponse20024.md)
  - [SendbirdPlatformSdk.InlineResponse20025](docs/InlineResponse20025.md)
  - [SendbirdPlatformSdk.InlineResponse20026](docs/InlineResponse20026.md)
@@ -399,83 +393,80 @@ Class | Method | HTTP request | Description
  - [SendbirdPlatformSdk.InlineResponse20031](docs/InlineResponse20031.md)
  - [SendbirdPlatformSdk.InlineResponse20032](docs/InlineResponse20032.md)
  - [SendbirdPlatformSdk.InlineResponse20033](docs/InlineResponse20033.md)
+ - [SendbirdPlatformSdk.InlineResponse20033BannedList](docs/InlineResponse20033BannedList.md)
  - [SendbirdPlatformSdk.InlineResponse20034](docs/InlineResponse20034.md)
- - [SendbirdPlatformSdk.InlineResponse20034BannedList](docs/InlineResponse20034BannedList.md)
  - [SendbirdPlatformSdk.InlineResponse20035](docs/InlineResponse20035.md)
  - [SendbirdPlatformSdk.InlineResponse20036](docs/InlineResponse20036.md)
  - [SendbirdPlatformSdk.InlineResponse20037](docs/InlineResponse20037.md)
  - [SendbirdPlatformSdk.InlineResponse20038](docs/InlineResponse20038.md)
  - [SendbirdPlatformSdk.InlineResponse20039](docs/InlineResponse20039.md)
+ - [SendbirdPlatformSdk.InlineResponse20039Announcements](docs/InlineResponse20039Announcements.md)
+ - [SendbirdPlatformSdk.InlineResponse20039Message](docs/InlineResponse20039Message.md)
  - [SendbirdPlatformSdk.InlineResponse2003PushConfigurations](docs/InlineResponse2003PushConfigurations.md)
  - [SendbirdPlatformSdk.InlineResponse2004](docs/InlineResponse2004.md)
  - [SendbirdPlatformSdk.InlineResponse20040](docs/InlineResponse20040.md)
- - [SendbirdPlatformSdk.InlineResponse20040Announcements](docs/InlineResponse20040Announcements.md)
- - [SendbirdPlatformSdk.InlineResponse20040Message](docs/InlineResponse20040Message.md)
+ - [SendbirdPlatformSdk.InlineResponse20040CreateChannelOptions](docs/InlineResponse20040CreateChannelOptions.md)
  - [SendbirdPlatformSdk.InlineResponse20041](docs/InlineResponse20041.md)
- - [SendbirdPlatformSdk.InlineResponse20041CreateChannelOptions](docs/InlineResponse20041CreateChannelOptions.md)
+ - [SendbirdPlatformSdk.InlineResponse20041Message](docs/InlineResponse20041Message.md)
  - [SendbirdPlatformSdk.InlineResponse20042](docs/InlineResponse20042.md)
- - [SendbirdPlatformSdk.InlineResponse20042Message](docs/InlineResponse20042Message.md)
  - [SendbirdPlatformSdk.InlineResponse20043](docs/InlineResponse20043.md)
+ - [SendbirdPlatformSdk.InlineResponse20043OpenStatus](docs/InlineResponse20043OpenStatus.md)
  - [SendbirdPlatformSdk.InlineResponse20044](docs/InlineResponse20044.md)
- - [SendbirdPlatformSdk.InlineResponse20044OpenStatus](docs/InlineResponse20044OpenStatus.md)
+ - [SendbirdPlatformSdk.InlineResponse20044Statistics](docs/InlineResponse20044Statistics.md)
  - [SendbirdPlatformSdk.InlineResponse20045](docs/InlineResponse20045.md)
- - [SendbirdPlatformSdk.InlineResponse20045Statistics](docs/InlineResponse20045Statistics.md)
  - [SendbirdPlatformSdk.InlineResponse20046](docs/InlineResponse20046.md)
  - [SendbirdPlatformSdk.InlineResponse20047](docs/InlineResponse20047.md)
+ - [SendbirdPlatformSdk.InlineResponse20047Messages](docs/InlineResponse20047Messages.md)
+ - [SendbirdPlatformSdk.InlineResponse20047OgTag](docs/InlineResponse20047OgTag.md)
+ - [SendbirdPlatformSdk.InlineResponse20047OgTagOgImage](docs/InlineResponse20047OgTagOgImage.md)
+ - [SendbirdPlatformSdk.InlineResponse20047SortedMetaarray](docs/InlineResponse20047SortedMetaarray.md)
+ - [SendbirdPlatformSdk.InlineResponse20047User](docs/InlineResponse20047User.md)
+ - [SendbirdPlatformSdk.InlineResponse20047UserMetadata](docs/InlineResponse20047UserMetadata.md)
  - [SendbirdPlatformSdk.InlineResponse20048](docs/InlineResponse20048.md)
- - [SendbirdPlatformSdk.InlineResponse20048Messages](docs/InlineResponse20048Messages.md)
- - [SendbirdPlatformSdk.InlineResponse20048OgTag](docs/InlineResponse20048OgTag.md)
- - [SendbirdPlatformSdk.InlineResponse20048OgTagOgImage](docs/InlineResponse20048OgTagOgImage.md)
- - [SendbirdPlatformSdk.InlineResponse20048SortedMetaarray](docs/InlineResponse20048SortedMetaarray.md)
- - [SendbirdPlatformSdk.InlineResponse20048User](docs/InlineResponse20048User.md)
- - [SendbirdPlatformSdk.InlineResponse20048UserMetadata](docs/InlineResponse20048UserMetadata.md)
  - [SendbirdPlatformSdk.InlineResponse20049](docs/InlineResponse20049.md)
- - [SendbirdPlatformSdk.InlineResponse2004PushConfigurations](docs/InlineResponse2004PushConfigurations.md)
+ - [SendbirdPlatformSdk.InlineResponse20049Unread](docs/InlineResponse20049Unread.md)
+ - [SendbirdPlatformSdk.InlineResponse2004PushMessageTemplates](docs/InlineResponse2004PushMessageTemplates.md)
+ - [SendbirdPlatformSdk.InlineResponse2004Template](docs/InlineResponse2004Template.md)
  - [SendbirdPlatformSdk.InlineResponse2005](docs/InlineResponse2005.md)
  - [SendbirdPlatformSdk.InlineResponse20050](docs/InlineResponse20050.md)
- - [SendbirdPlatformSdk.InlineResponse20050Unread](docs/InlineResponse20050Unread.md)
  - [SendbirdPlatformSdk.InlineResponse20051](docs/InlineResponse20051.md)
  - [SendbirdPlatformSdk.InlineResponse20052](docs/InlineResponse20052.md)
  - [SendbirdPlatformSdk.InlineResponse20053](docs/InlineResponse20053.md)
  - [SendbirdPlatformSdk.InlineResponse20054](docs/InlineResponse20054.md)
  - [SendbirdPlatformSdk.InlineResponse20055](docs/InlineResponse20055.md)
  - [SendbirdPlatformSdk.InlineResponse20056](docs/InlineResponse20056.md)
+ - [SendbirdPlatformSdk.InlineResponse20056EmojiCategories](docs/InlineResponse20056EmojiCategories.md)
+ - [SendbirdPlatformSdk.InlineResponse20056Emojis](docs/InlineResponse20056Emojis.md)
  - [SendbirdPlatformSdk.InlineResponse20057](docs/InlineResponse20057.md)
  - [SendbirdPlatformSdk.InlineResponse20057EmojiCategories](docs/InlineResponse20057EmojiCategories.md)
- - [SendbirdPlatformSdk.InlineResponse20057Emojis](docs/InlineResponse20057Emojis.md)
  - [SendbirdPlatformSdk.InlineResponse20058](docs/InlineResponse20058.md)
- - [SendbirdPlatformSdk.InlineResponse20058EmojiCategories](docs/InlineResponse20058EmojiCategories.md)
  - [SendbirdPlatformSdk.InlineResponse20059](docs/InlineResponse20059.md)
- - [SendbirdPlatformSdk.InlineResponse2005PushMessageTemplates](docs/InlineResponse2005PushMessageTemplates.md)
- - [SendbirdPlatformSdk.InlineResponse2005Template](docs/InlineResponse2005Template.md)
  - [SendbirdPlatformSdk.InlineResponse2006](docs/InlineResponse2006.md)
  - [SendbirdPlatformSdk.InlineResponse20060](docs/InlineResponse20060.md)
  - [SendbirdPlatformSdk.InlineResponse20061](docs/InlineResponse20061.md)
  - [SendbirdPlatformSdk.InlineResponse20062](docs/InlineResponse20062.md)
  - [SendbirdPlatformSdk.InlineResponse20063](docs/InlineResponse20063.md)
+ - [SendbirdPlatformSdk.InlineResponse20063ExportedData](docs/InlineResponse20063ExportedData.md)
+ - [SendbirdPlatformSdk.InlineResponse20063File](docs/InlineResponse20063File.md)
  - [SendbirdPlatformSdk.InlineResponse20064](docs/InlineResponse20064.md)
- - [SendbirdPlatformSdk.InlineResponse20064ExportedData](docs/InlineResponse20064ExportedData.md)
- - [SendbirdPlatformSdk.InlineResponse20064File](docs/InlineResponse20064File.md)
  - [SendbirdPlatformSdk.InlineResponse20065](docs/InlineResponse20065.md)
+ - [SendbirdPlatformSdk.InlineResponse20065Bot](docs/InlineResponse20065Bot.md)
+ - [SendbirdPlatformSdk.InlineResponse20065Bots](docs/InlineResponse20065Bots.md)
  - [SendbirdPlatformSdk.InlineResponse20066](docs/InlineResponse20066.md)
- - [SendbirdPlatformSdk.InlineResponse20066Bot](docs/InlineResponse20066Bot.md)
- - [SendbirdPlatformSdk.InlineResponse20066Bots](docs/InlineResponse20066Bots.md)
+ - [SendbirdPlatformSdk.InlineResponse20066Webhook](docs/InlineResponse20066Webhook.md)
  - [SendbirdPlatformSdk.InlineResponse20067](docs/InlineResponse20067.md)
  - [SendbirdPlatformSdk.InlineResponse20067Webhook](docs/InlineResponse20067Webhook.md)
  - [SendbirdPlatformSdk.InlineResponse20068](docs/InlineResponse20068.md)
- - [SendbirdPlatformSdk.InlineResponse20068Webhook](docs/InlineResponse20068Webhook.md)
+ - [SendbirdPlatformSdk.InlineResponse20068Requests](docs/InlineResponse20068Requests.md)
  - [SendbirdPlatformSdk.InlineResponse20069](docs/InlineResponse20069.md)
- - [SendbirdPlatformSdk.InlineResponse20069Requests](docs/InlineResponse20069Requests.md)
  - [SendbirdPlatformSdk.InlineResponse2007](docs/InlineResponse2007.md)
  - [SendbirdPlatformSdk.InlineResponse20070](docs/InlineResponse20070.md)
+ - [SendbirdPlatformSdk.InlineResponse20070ReportLogs](docs/InlineResponse20070ReportLogs.md)
  - [SendbirdPlatformSdk.InlineResponse20071](docs/InlineResponse20071.md)
  - [SendbirdPlatformSdk.InlineResponse20071ReportLogs](docs/InlineResponse20071ReportLogs.md)
- - [SendbirdPlatformSdk.InlineResponse20072](docs/InlineResponse20072.md)
- - [SendbirdPlatformSdk.InlineResponse20072ReportLogs](docs/InlineResponse20072ReportLogs.md)
  - [SendbirdPlatformSdk.InlineResponse2008](docs/InlineResponse2008.md)
  - [SendbirdPlatformSdk.InlineResponse2009](docs/InlineResponse2009.md)
- - [SendbirdPlatformSdk.InlineResponse200Region](docs/InlineResponse200Region.md)
- - [SendbirdPlatformSdk.InlineResponse200Results](docs/InlineResponse200Results.md)
+ - [SendbirdPlatformSdk.InlineResponse2009PeakConnections](docs/InlineResponse2009PeakConnections.md)
  - [SendbirdPlatformSdk.JoinChannelsData](docs/JoinChannelsData.md)
  - [SendbirdPlatformSdk.LeaveMyGroupChannelsData](docs/LeaveMyGroupChannelsData.md)
  - [SendbirdPlatformSdk.MarkAllMessagesAsReadData](docs/MarkAllMessagesAsReadData.md)

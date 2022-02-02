@@ -54,38 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20063);
     });
 
-    it('should have the property segments (base name: "segments")', function() {
-      // uncomment below and update the code to test the property segments
+    it('should have the property exportedData (base name: "exported_data")', function() {
+      // uncomment below and update the code to test the property exportedData
       //var instance = new SendbirdPlatformSdk.InlineResponse20063();
       //expect(instance).to.be();
     });
 
-    it('should have the property date (base name: "date")', function() {
-      // uncomment below and update the code to test the property date
-      //var instance = new SendbirdPlatformSdk.InlineResponse20063();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property value (base name: "value")', function() {
-      // uncomment below and update the code to test the property value
-      //var instance = new SendbirdPlatformSdk.InlineResponse20063();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property channelType (base name: "channel_type")', function() {
-      // uncomment below and update the code to test the property channelType
-      //var instance = new SendbirdPlatformSdk.InlineResponse20063();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property customChannelType (base name: "custom_channel_type")', function() {
-      // uncomment below and update the code to test the property customChannelType
-      //var instance = new SendbirdPlatformSdk.InlineResponse20063();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property customMessageType (base name: "custom_message_type")', function() {
-      // uncomment below and update the code to test the property customMessageType
+    it('should have the property next (base name: "next")', function() {
+      // uncomment below and update the code to test the property next
       //var instance = new SendbirdPlatformSdk.InlineResponse20063();
       //expect(instance).to.be();
     });

@@ -53,24 +53,24 @@ import GenerateSecondaryApiTokenData from './model/GenerateSecondaryApiTokenData
 import InlineResponse200 from './model/InlineResponse200';
 import InlineResponse2001 from './model/InlineResponse2001';
 import InlineResponse20010 from './model/InlineResponse20010';
-import InlineResponse20010PeakConnections from './model/InlineResponse20010PeakConnections';
 import InlineResponse20011 from './model/InlineResponse20011';
 import InlineResponse20012 from './model/InlineResponse20012';
+import InlineResponse20012PushConfigurations from './model/InlineResponse20012PushConfigurations';
 import InlineResponse20013 from './model/InlineResponse20013';
-import InlineResponse20013PushConfigurations from './model/InlineResponse20013PushConfigurations';
 import InlineResponse20014 from './model/InlineResponse20014';
 import InlineResponse20015 from './model/InlineResponse20015';
+import InlineResponse20015PushMessageTemplates from './model/InlineResponse20015PushMessageTemplates';
 import InlineResponse20016 from './model/InlineResponse20016';
-import InlineResponse20016PushMessageTemplates from './model/InlineResponse20016PushMessageTemplates';
 import InlineResponse20017 from './model/InlineResponse20017';
 import InlineResponse20018 from './model/InlineResponse20018';
 import InlineResponse20019 from './model/InlineResponse20019';
+import InlineResponse2001PushConfigurations from './model/InlineResponse2001PushConfigurations';
 import InlineResponse2002 from './model/InlineResponse2002';
 import InlineResponse20020 from './model/InlineResponse20020';
 import InlineResponse20021 from './model/InlineResponse20021';
 import InlineResponse20022 from './model/InlineResponse20022';
+import InlineResponse20022BannedChannels from './model/InlineResponse20022BannedChannels';
 import InlineResponse20023 from './model/InlineResponse20023';
-import InlineResponse20023BannedChannels from './model/InlineResponse20023BannedChannels';
 import InlineResponse20024 from './model/InlineResponse20024';
 import InlineResponse20025 from './model/InlineResponse20025';
 import InlineResponse20026 from './model/InlineResponse20026';
@@ -83,83 +83,80 @@ import InlineResponse20030 from './model/InlineResponse20030';
 import InlineResponse20031 from './model/InlineResponse20031';
 import InlineResponse20032 from './model/InlineResponse20032';
 import InlineResponse20033 from './model/InlineResponse20033';
+import InlineResponse20033BannedList from './model/InlineResponse20033BannedList';
 import InlineResponse20034 from './model/InlineResponse20034';
-import InlineResponse20034BannedList from './model/InlineResponse20034BannedList';
 import InlineResponse20035 from './model/InlineResponse20035';
 import InlineResponse20036 from './model/InlineResponse20036';
 import InlineResponse20037 from './model/InlineResponse20037';
 import InlineResponse20038 from './model/InlineResponse20038';
 import InlineResponse20039 from './model/InlineResponse20039';
+import InlineResponse20039Announcements from './model/InlineResponse20039Announcements';
+import InlineResponse20039Message from './model/InlineResponse20039Message';
 import InlineResponse2003PushConfigurations from './model/InlineResponse2003PushConfigurations';
 import InlineResponse2004 from './model/InlineResponse2004';
 import InlineResponse20040 from './model/InlineResponse20040';
-import InlineResponse20040Announcements from './model/InlineResponse20040Announcements';
-import InlineResponse20040Message from './model/InlineResponse20040Message';
+import InlineResponse20040CreateChannelOptions from './model/InlineResponse20040CreateChannelOptions';
 import InlineResponse20041 from './model/InlineResponse20041';
-import InlineResponse20041CreateChannelOptions from './model/InlineResponse20041CreateChannelOptions';
+import InlineResponse20041Message from './model/InlineResponse20041Message';
 import InlineResponse20042 from './model/InlineResponse20042';
-import InlineResponse20042Message from './model/InlineResponse20042Message';
 import InlineResponse20043 from './model/InlineResponse20043';
+import InlineResponse20043OpenStatus from './model/InlineResponse20043OpenStatus';
 import InlineResponse20044 from './model/InlineResponse20044';
-import InlineResponse20044OpenStatus from './model/InlineResponse20044OpenStatus';
+import InlineResponse20044Statistics from './model/InlineResponse20044Statistics';
 import InlineResponse20045 from './model/InlineResponse20045';
-import InlineResponse20045Statistics from './model/InlineResponse20045Statistics';
 import InlineResponse20046 from './model/InlineResponse20046';
 import InlineResponse20047 from './model/InlineResponse20047';
+import InlineResponse20047Messages from './model/InlineResponse20047Messages';
+import InlineResponse20047OgTag from './model/InlineResponse20047OgTag';
+import InlineResponse20047OgTagOgImage from './model/InlineResponse20047OgTagOgImage';
+import InlineResponse20047SortedMetaarray from './model/InlineResponse20047SortedMetaarray';
+import InlineResponse20047User from './model/InlineResponse20047User';
+import InlineResponse20047UserMetadata from './model/InlineResponse20047UserMetadata';
 import InlineResponse20048 from './model/InlineResponse20048';
-import InlineResponse20048Messages from './model/InlineResponse20048Messages';
-import InlineResponse20048OgTag from './model/InlineResponse20048OgTag';
-import InlineResponse20048OgTagOgImage from './model/InlineResponse20048OgTagOgImage';
-import InlineResponse20048SortedMetaarray from './model/InlineResponse20048SortedMetaarray';
-import InlineResponse20048User from './model/InlineResponse20048User';
-import InlineResponse20048UserMetadata from './model/InlineResponse20048UserMetadata';
 import InlineResponse20049 from './model/InlineResponse20049';
-import InlineResponse2004PushConfigurations from './model/InlineResponse2004PushConfigurations';
+import InlineResponse20049Unread from './model/InlineResponse20049Unread';
+import InlineResponse2004PushMessageTemplates from './model/InlineResponse2004PushMessageTemplates';
+import InlineResponse2004Template from './model/InlineResponse2004Template';
 import InlineResponse2005 from './model/InlineResponse2005';
 import InlineResponse20050 from './model/InlineResponse20050';
-import InlineResponse20050Unread from './model/InlineResponse20050Unread';
 import InlineResponse20051 from './model/InlineResponse20051';
 import InlineResponse20052 from './model/InlineResponse20052';
 import InlineResponse20053 from './model/InlineResponse20053';
 import InlineResponse20054 from './model/InlineResponse20054';
 import InlineResponse20055 from './model/InlineResponse20055';
 import InlineResponse20056 from './model/InlineResponse20056';
+import InlineResponse20056EmojiCategories from './model/InlineResponse20056EmojiCategories';
+import InlineResponse20056Emojis from './model/InlineResponse20056Emojis';
 import InlineResponse20057 from './model/InlineResponse20057';
 import InlineResponse20057EmojiCategories from './model/InlineResponse20057EmojiCategories';
-import InlineResponse20057Emojis from './model/InlineResponse20057Emojis';
 import InlineResponse20058 from './model/InlineResponse20058';
-import InlineResponse20058EmojiCategories from './model/InlineResponse20058EmojiCategories';
 import InlineResponse20059 from './model/InlineResponse20059';
-import InlineResponse2005PushMessageTemplates from './model/InlineResponse2005PushMessageTemplates';
-import InlineResponse2005Template from './model/InlineResponse2005Template';
 import InlineResponse2006 from './model/InlineResponse2006';
 import InlineResponse20060 from './model/InlineResponse20060';
 import InlineResponse20061 from './model/InlineResponse20061';
 import InlineResponse20062 from './model/InlineResponse20062';
 import InlineResponse20063 from './model/InlineResponse20063';
+import InlineResponse20063ExportedData from './model/InlineResponse20063ExportedData';
+import InlineResponse20063File from './model/InlineResponse20063File';
 import InlineResponse20064 from './model/InlineResponse20064';
-import InlineResponse20064ExportedData from './model/InlineResponse20064ExportedData';
-import InlineResponse20064File from './model/InlineResponse20064File';
 import InlineResponse20065 from './model/InlineResponse20065';
+import InlineResponse20065Bot from './model/InlineResponse20065Bot';
+import InlineResponse20065Bots from './model/InlineResponse20065Bots';
 import InlineResponse20066 from './model/InlineResponse20066';
-import InlineResponse20066Bot from './model/InlineResponse20066Bot';
-import InlineResponse20066Bots from './model/InlineResponse20066Bots';
+import InlineResponse20066Webhook from './model/InlineResponse20066Webhook';
 import InlineResponse20067 from './model/InlineResponse20067';
 import InlineResponse20067Webhook from './model/InlineResponse20067Webhook';
 import InlineResponse20068 from './model/InlineResponse20068';
-import InlineResponse20068Webhook from './model/InlineResponse20068Webhook';
+import InlineResponse20068Requests from './model/InlineResponse20068Requests';
 import InlineResponse20069 from './model/InlineResponse20069';
-import InlineResponse20069Requests from './model/InlineResponse20069Requests';
 import InlineResponse2007 from './model/InlineResponse2007';
 import InlineResponse20070 from './model/InlineResponse20070';
+import InlineResponse20070ReportLogs from './model/InlineResponse20070ReportLogs';
 import InlineResponse20071 from './model/InlineResponse20071';
 import InlineResponse20071ReportLogs from './model/InlineResponse20071ReportLogs';
-import InlineResponse20072 from './model/InlineResponse20072';
-import InlineResponse20072ReportLogs from './model/InlineResponse20072ReportLogs';
 import InlineResponse2008 from './model/InlineResponse2008';
 import InlineResponse2009 from './model/InlineResponse2009';
-import InlineResponse200Region from './model/InlineResponse200Region';
-import InlineResponse200Results from './model/InlineResponse200Results';
+import InlineResponse2009PeakConnections from './model/InlineResponse2009PeakConnections';
 import JoinChannelsData from './model/JoinChannelsData';
 import LeaveMyGroupChannelsData from './model/LeaveMyGroupChannelsData';
 import MarkAllMessagesAsReadData from './model/MarkAllMessagesAsReadData';
@@ -242,7 +239,6 @@ import GroupChannelApi from './api/GroupChannelApi';
 import MessagesApi from './api/MessagesApi';
 import MigrationApi from './api/MigrationApi';
 import OpenChannelApi from './api/OpenChannelApi';
-import OrganizationAPIApi from './api/OrganizationAPIApi';
 import ReportContentSubjectApi from './api/ReportContentSubjectApi';
 import UserApi from './api/UserApi';
 import UserChannelMetadataApi from './api/UserChannelMetadataApi';
@@ -528,12 +524,6 @@ export {
     InlineResponse20010,
 
     /**
-     * The InlineResponse20010PeakConnections model constructor.
-     * @property {module:model/InlineResponse20010PeakConnections}
-     */
-    InlineResponse20010PeakConnections,
-
-    /**
      * The InlineResponse20011 model constructor.
      * @property {module:model/InlineResponse20011}
      */
@@ -546,16 +536,16 @@ export {
     InlineResponse20012,
 
     /**
+     * The InlineResponse20012PushConfigurations model constructor.
+     * @property {module:model/InlineResponse20012PushConfigurations}
+     */
+    InlineResponse20012PushConfigurations,
+
+    /**
      * The InlineResponse20013 model constructor.
      * @property {module:model/InlineResponse20013}
      */
     InlineResponse20013,
-
-    /**
-     * The InlineResponse20013PushConfigurations model constructor.
-     * @property {module:model/InlineResponse20013PushConfigurations}
-     */
-    InlineResponse20013PushConfigurations,
 
     /**
      * The InlineResponse20014 model constructor.
@@ -570,16 +560,16 @@ export {
     InlineResponse20015,
 
     /**
+     * The InlineResponse20015PushMessageTemplates model constructor.
+     * @property {module:model/InlineResponse20015PushMessageTemplates}
+     */
+    InlineResponse20015PushMessageTemplates,
+
+    /**
      * The InlineResponse20016 model constructor.
      * @property {module:model/InlineResponse20016}
      */
     InlineResponse20016,
-
-    /**
-     * The InlineResponse20016PushMessageTemplates model constructor.
-     * @property {module:model/InlineResponse20016PushMessageTemplates}
-     */
-    InlineResponse20016PushMessageTemplates,
 
     /**
      * The InlineResponse20017 model constructor.
@@ -598,6 +588,12 @@ export {
      * @property {module:model/InlineResponse20019}
      */
     InlineResponse20019,
+
+    /**
+     * The InlineResponse2001PushConfigurations model constructor.
+     * @property {module:model/InlineResponse2001PushConfigurations}
+     */
+    InlineResponse2001PushConfigurations,
 
     /**
      * The InlineResponse2002 model constructor.
@@ -624,16 +620,16 @@ export {
     InlineResponse20022,
 
     /**
+     * The InlineResponse20022BannedChannels model constructor.
+     * @property {module:model/InlineResponse20022BannedChannels}
+     */
+    InlineResponse20022BannedChannels,
+
+    /**
      * The InlineResponse20023 model constructor.
      * @property {module:model/InlineResponse20023}
      */
     InlineResponse20023,
-
-    /**
-     * The InlineResponse20023BannedChannels model constructor.
-     * @property {module:model/InlineResponse20023BannedChannels}
-     */
-    InlineResponse20023BannedChannels,
 
     /**
      * The InlineResponse20024 model constructor.
@@ -708,16 +704,16 @@ export {
     InlineResponse20033,
 
     /**
+     * The InlineResponse20033BannedList model constructor.
+     * @property {module:model/InlineResponse20033BannedList}
+     */
+    InlineResponse20033BannedList,
+
+    /**
      * The InlineResponse20034 model constructor.
      * @property {module:model/InlineResponse20034}
      */
     InlineResponse20034,
-
-    /**
-     * The InlineResponse20034BannedList model constructor.
-     * @property {module:model/InlineResponse20034BannedList}
-     */
-    InlineResponse20034BannedList,
 
     /**
      * The InlineResponse20035 model constructor.
@@ -750,6 +746,18 @@ export {
     InlineResponse20039,
 
     /**
+     * The InlineResponse20039Announcements model constructor.
+     * @property {module:model/InlineResponse20039Announcements}
+     */
+    InlineResponse20039Announcements,
+
+    /**
+     * The InlineResponse20039Message model constructor.
+     * @property {module:model/InlineResponse20039Message}
+     */
+    InlineResponse20039Message,
+
+    /**
      * The InlineResponse2003PushConfigurations model constructor.
      * @property {module:model/InlineResponse2003PushConfigurations}
      */
@@ -768,16 +776,10 @@ export {
     InlineResponse20040,
 
     /**
-     * The InlineResponse20040Announcements model constructor.
-     * @property {module:model/InlineResponse20040Announcements}
+     * The InlineResponse20040CreateChannelOptions model constructor.
+     * @property {module:model/InlineResponse20040CreateChannelOptions}
      */
-    InlineResponse20040Announcements,
-
-    /**
-     * The InlineResponse20040Message model constructor.
-     * @property {module:model/InlineResponse20040Message}
-     */
-    InlineResponse20040Message,
+    InlineResponse20040CreateChannelOptions,
 
     /**
      * The InlineResponse20041 model constructor.
@@ -786,10 +788,10 @@ export {
     InlineResponse20041,
 
     /**
-     * The InlineResponse20041CreateChannelOptions model constructor.
-     * @property {module:model/InlineResponse20041CreateChannelOptions}
+     * The InlineResponse20041Message model constructor.
+     * @property {module:model/InlineResponse20041Message}
      */
-    InlineResponse20041CreateChannelOptions,
+    InlineResponse20041Message,
 
     /**
      * The InlineResponse20042 model constructor.
@@ -798,16 +800,16 @@ export {
     InlineResponse20042,
 
     /**
-     * The InlineResponse20042Message model constructor.
-     * @property {module:model/InlineResponse20042Message}
-     */
-    InlineResponse20042Message,
-
-    /**
      * The InlineResponse20043 model constructor.
      * @property {module:model/InlineResponse20043}
      */
     InlineResponse20043,
+
+    /**
+     * The InlineResponse20043OpenStatus model constructor.
+     * @property {module:model/InlineResponse20043OpenStatus}
+     */
+    InlineResponse20043OpenStatus,
 
     /**
      * The InlineResponse20044 model constructor.
@@ -816,22 +818,16 @@ export {
     InlineResponse20044,
 
     /**
-     * The InlineResponse20044OpenStatus model constructor.
-     * @property {module:model/InlineResponse20044OpenStatus}
+     * The InlineResponse20044Statistics model constructor.
+     * @property {module:model/InlineResponse20044Statistics}
      */
-    InlineResponse20044OpenStatus,
+    InlineResponse20044Statistics,
 
     /**
      * The InlineResponse20045 model constructor.
      * @property {module:model/InlineResponse20045}
      */
     InlineResponse20045,
-
-    /**
-     * The InlineResponse20045Statistics model constructor.
-     * @property {module:model/InlineResponse20045Statistics}
-     */
-    InlineResponse20045Statistics,
 
     /**
      * The InlineResponse20046 model constructor.
@@ -846,46 +842,46 @@ export {
     InlineResponse20047,
 
     /**
+     * The InlineResponse20047Messages model constructor.
+     * @property {module:model/InlineResponse20047Messages}
+     */
+    InlineResponse20047Messages,
+
+    /**
+     * The InlineResponse20047OgTag model constructor.
+     * @property {module:model/InlineResponse20047OgTag}
+     */
+    InlineResponse20047OgTag,
+
+    /**
+     * The InlineResponse20047OgTagOgImage model constructor.
+     * @property {module:model/InlineResponse20047OgTagOgImage}
+     */
+    InlineResponse20047OgTagOgImage,
+
+    /**
+     * The InlineResponse20047SortedMetaarray model constructor.
+     * @property {module:model/InlineResponse20047SortedMetaarray}
+     */
+    InlineResponse20047SortedMetaarray,
+
+    /**
+     * The InlineResponse20047User model constructor.
+     * @property {module:model/InlineResponse20047User}
+     */
+    InlineResponse20047User,
+
+    /**
+     * The InlineResponse20047UserMetadata model constructor.
+     * @property {module:model/InlineResponse20047UserMetadata}
+     */
+    InlineResponse20047UserMetadata,
+
+    /**
      * The InlineResponse20048 model constructor.
      * @property {module:model/InlineResponse20048}
      */
     InlineResponse20048,
-
-    /**
-     * The InlineResponse20048Messages model constructor.
-     * @property {module:model/InlineResponse20048Messages}
-     */
-    InlineResponse20048Messages,
-
-    /**
-     * The InlineResponse20048OgTag model constructor.
-     * @property {module:model/InlineResponse20048OgTag}
-     */
-    InlineResponse20048OgTag,
-
-    /**
-     * The InlineResponse20048OgTagOgImage model constructor.
-     * @property {module:model/InlineResponse20048OgTagOgImage}
-     */
-    InlineResponse20048OgTagOgImage,
-
-    /**
-     * The InlineResponse20048SortedMetaarray model constructor.
-     * @property {module:model/InlineResponse20048SortedMetaarray}
-     */
-    InlineResponse20048SortedMetaarray,
-
-    /**
-     * The InlineResponse20048User model constructor.
-     * @property {module:model/InlineResponse20048User}
-     */
-    InlineResponse20048User,
-
-    /**
-     * The InlineResponse20048UserMetadata model constructor.
-     * @property {module:model/InlineResponse20048UserMetadata}
-     */
-    InlineResponse20048UserMetadata,
 
     /**
      * The InlineResponse20049 model constructor.
@@ -894,10 +890,22 @@ export {
     InlineResponse20049,
 
     /**
-     * The InlineResponse2004PushConfigurations model constructor.
-     * @property {module:model/InlineResponse2004PushConfigurations}
+     * The InlineResponse20049Unread model constructor.
+     * @property {module:model/InlineResponse20049Unread}
      */
-    InlineResponse2004PushConfigurations,
+    InlineResponse20049Unread,
+
+    /**
+     * The InlineResponse2004PushMessageTemplates model constructor.
+     * @property {module:model/InlineResponse2004PushMessageTemplates}
+     */
+    InlineResponse2004PushMessageTemplates,
+
+    /**
+     * The InlineResponse2004Template model constructor.
+     * @property {module:model/InlineResponse2004Template}
+     */
+    InlineResponse2004Template,
 
     /**
      * The InlineResponse2005 model constructor.
@@ -910,12 +918,6 @@ export {
      * @property {module:model/InlineResponse20050}
      */
     InlineResponse20050,
-
-    /**
-     * The InlineResponse20050Unread model constructor.
-     * @property {module:model/InlineResponse20050Unread}
-     */
-    InlineResponse20050Unread,
 
     /**
      * The InlineResponse20051 model constructor.
@@ -954,6 +956,18 @@ export {
     InlineResponse20056,
 
     /**
+     * The InlineResponse20056EmojiCategories model constructor.
+     * @property {module:model/InlineResponse20056EmojiCategories}
+     */
+    InlineResponse20056EmojiCategories,
+
+    /**
+     * The InlineResponse20056Emojis model constructor.
+     * @property {module:model/InlineResponse20056Emojis}
+     */
+    InlineResponse20056Emojis,
+
+    /**
      * The InlineResponse20057 model constructor.
      * @property {module:model/InlineResponse20057}
      */
@@ -966,40 +980,16 @@ export {
     InlineResponse20057EmojiCategories,
 
     /**
-     * The InlineResponse20057Emojis model constructor.
-     * @property {module:model/InlineResponse20057Emojis}
-     */
-    InlineResponse20057Emojis,
-
-    /**
      * The InlineResponse20058 model constructor.
      * @property {module:model/InlineResponse20058}
      */
     InlineResponse20058,
 
     /**
-     * The InlineResponse20058EmojiCategories model constructor.
-     * @property {module:model/InlineResponse20058EmojiCategories}
-     */
-    InlineResponse20058EmojiCategories,
-
-    /**
      * The InlineResponse20059 model constructor.
      * @property {module:model/InlineResponse20059}
      */
     InlineResponse20059,
-
-    /**
-     * The InlineResponse2005PushMessageTemplates model constructor.
-     * @property {module:model/InlineResponse2005PushMessageTemplates}
-     */
-    InlineResponse2005PushMessageTemplates,
-
-    /**
-     * The InlineResponse2005Template model constructor.
-     * @property {module:model/InlineResponse2005Template}
-     */
-    InlineResponse2005Template,
 
     /**
      * The InlineResponse2006 model constructor.
@@ -1032,22 +1022,22 @@ export {
     InlineResponse20063,
 
     /**
+     * The InlineResponse20063ExportedData model constructor.
+     * @property {module:model/InlineResponse20063ExportedData}
+     */
+    InlineResponse20063ExportedData,
+
+    /**
+     * The InlineResponse20063File model constructor.
+     * @property {module:model/InlineResponse20063File}
+     */
+    InlineResponse20063File,
+
+    /**
      * The InlineResponse20064 model constructor.
      * @property {module:model/InlineResponse20064}
      */
     InlineResponse20064,
-
-    /**
-     * The InlineResponse20064ExportedData model constructor.
-     * @property {module:model/InlineResponse20064ExportedData}
-     */
-    InlineResponse20064ExportedData,
-
-    /**
-     * The InlineResponse20064File model constructor.
-     * @property {module:model/InlineResponse20064File}
-     */
-    InlineResponse20064File,
 
     /**
      * The InlineResponse20065 model constructor.
@@ -1056,22 +1046,28 @@ export {
     InlineResponse20065,
 
     /**
+     * The InlineResponse20065Bot model constructor.
+     * @property {module:model/InlineResponse20065Bot}
+     */
+    InlineResponse20065Bot,
+
+    /**
+     * The InlineResponse20065Bots model constructor.
+     * @property {module:model/InlineResponse20065Bots}
+     */
+    InlineResponse20065Bots,
+
+    /**
      * The InlineResponse20066 model constructor.
      * @property {module:model/InlineResponse20066}
      */
     InlineResponse20066,
 
     /**
-     * The InlineResponse20066Bot model constructor.
-     * @property {module:model/InlineResponse20066Bot}
+     * The InlineResponse20066Webhook model constructor.
+     * @property {module:model/InlineResponse20066Webhook}
      */
-    InlineResponse20066Bot,
-
-    /**
-     * The InlineResponse20066Bots model constructor.
-     * @property {module:model/InlineResponse20066Bots}
-     */
-    InlineResponse20066Bots,
+    InlineResponse20066Webhook,
 
     /**
      * The InlineResponse20067 model constructor.
@@ -1092,22 +1088,16 @@ export {
     InlineResponse20068,
 
     /**
-     * The InlineResponse20068Webhook model constructor.
-     * @property {module:model/InlineResponse20068Webhook}
+     * The InlineResponse20068Requests model constructor.
+     * @property {module:model/InlineResponse20068Requests}
      */
-    InlineResponse20068Webhook,
+    InlineResponse20068Requests,
 
     /**
      * The InlineResponse20069 model constructor.
      * @property {module:model/InlineResponse20069}
      */
     InlineResponse20069,
-
-    /**
-     * The InlineResponse20069Requests model constructor.
-     * @property {module:model/InlineResponse20069Requests}
-     */
-    InlineResponse20069Requests,
 
     /**
      * The InlineResponse2007 model constructor.
@@ -1122,6 +1112,12 @@ export {
     InlineResponse20070,
 
     /**
+     * The InlineResponse20070ReportLogs model constructor.
+     * @property {module:model/InlineResponse20070ReportLogs}
+     */
+    InlineResponse20070ReportLogs,
+
+    /**
      * The InlineResponse20071 model constructor.
      * @property {module:model/InlineResponse20071}
      */
@@ -1132,18 +1128,6 @@ export {
      * @property {module:model/InlineResponse20071ReportLogs}
      */
     InlineResponse20071ReportLogs,
-
-    /**
-     * The InlineResponse20072 model constructor.
-     * @property {module:model/InlineResponse20072}
-     */
-    InlineResponse20072,
-
-    /**
-     * The InlineResponse20072ReportLogs model constructor.
-     * @property {module:model/InlineResponse20072ReportLogs}
-     */
-    InlineResponse20072ReportLogs,
 
     /**
      * The InlineResponse2008 model constructor.
@@ -1158,16 +1142,10 @@ export {
     InlineResponse2009,
 
     /**
-     * The InlineResponse200Region model constructor.
-     * @property {module:model/InlineResponse200Region}
+     * The InlineResponse2009PeakConnections model constructor.
+     * @property {module:model/InlineResponse2009PeakConnections}
      */
-    InlineResponse200Region,
-
-    /**
-     * The InlineResponse200Results model constructor.
-     * @property {module:model/InlineResponse200Results}
-     */
-    InlineResponse200Results,
+    InlineResponse2009PeakConnections,
 
     /**
      * The JoinChannelsData model constructor.
@@ -1660,12 +1638,6 @@ export {
     * @property {module:api/OpenChannelApi}
     */
     OpenChannelApi,
-
-    /**
-    * The OrganizationAPIApi service constructor.
-    * @property {module:api/OrganizationAPIApi}
-    */
-    OrganizationAPIApi,
 
     /**
     * The ReportContentSubjectApi service constructor.

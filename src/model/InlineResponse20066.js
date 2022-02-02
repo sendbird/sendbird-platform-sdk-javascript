@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20066Bots from './InlineResponse20066Bots';
+import InlineResponse20066Webhook from './InlineResponse20066Webhook';
 
 /**
  * The InlineResponse20066 model module.
@@ -48,11 +48,8 @@ class InlineResponse20066 {
         if (data) {
             obj = obj || new InlineResponse20066();
 
-            if (data.hasOwnProperty('bots')) {
-                obj['bots'] = ApiClient.convertToType(data['bots'], [InlineResponse20066Bots]);
-            }
-            if (data.hasOwnProperty('next')) {
-                obj['next'] = ApiClient.convertToType(data['next'], 'String');
+            if (data.hasOwnProperty('webhook')) {
+                obj['webhook'] = InlineResponse20066Webhook.constructFromObject(data['webhook']);
             }
         }
         return obj;
@@ -62,14 +59,9 @@ class InlineResponse20066 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse20066Bots>} bots
+ * @member {module:model/InlineResponse20066Webhook} webhook
  */
-InlineResponse20066.prototype['bots'] = undefined;
-
-/**
- * @member {String} next
- */
-InlineResponse20066.prototype['next'] = undefined;
+InlineResponse20066.prototype['webhook'] = undefined;
 
 
 

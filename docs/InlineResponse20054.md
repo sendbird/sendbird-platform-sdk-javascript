@@ -4,10 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**userId** | **String** |  | [optional] 
-**operation** | **String** |  | [optional] 
-**success** | **Boolean** |  | [optional] 
-**reaction** | **String** |  | [optional] 
-**updatedAt** | **Number** |  | [optional] 
+**sortedMetaarray** | [**[InlineResponse20047SortedMetaarray]**](InlineResponse20047SortedMetaarray.md) |  | [optional] 
 
 

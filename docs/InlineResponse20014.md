@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pushConfigurations** | **[String]** |  | [optional] 
+**pushConfigurations** | **String** |  | [optional] 
 
 

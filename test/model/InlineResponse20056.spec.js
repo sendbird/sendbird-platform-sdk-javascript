@@ -54,8 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20056);
     });
 
-    it('should have the property useDefaultEmoji (base name: "use_default_emoji")', function() {
-      // uncomment below and update the code to test the property useDefaultEmoji
+    it('should have the property emojiHash (base name: "emoji_hash")', function() {
+      // uncomment below and update the code to test the property emojiHash
+      //var instance = new SendbirdPlatformSdk.InlineResponse20056();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property emojiCategories (base name: "emoji_categories")', function() {
+      // uncomment below and update the code to test the property emojiCategories
       //var instance = new SendbirdPlatformSdk.InlineResponse20056();
       //expect(instance).to.be();
     });

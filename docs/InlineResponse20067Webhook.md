@@ -8,6 +8,5 @@ Name | Type | Description | Notes
 **url** | **String** |  | [optional] 
 **includeMembers** | **Boolean** |  | [optional] 
 **enabledEvents** | **[String]** |  | [optional] 
-**allWebhookCategories** | **[String]** |  | [optional] 
 
 

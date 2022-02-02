@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import InlineResponse20047SortedMetaarray from './InlineResponse20047SortedMetaarray';
 
 /**
  * The InlineResponse20054 model module.
@@ -47,20 +48,8 @@ class InlineResponse20054 {
         if (data) {
             obj = obj || new InlineResponse20054();
 
-            if (data.hasOwnProperty('user_id')) {
-                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
-            }
-            if (data.hasOwnProperty('operation')) {
-                obj['operation'] = ApiClient.convertToType(data['operation'], 'String');
-            }
-            if (data.hasOwnProperty('success')) {
-                obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
-            }
-            if (data.hasOwnProperty('reaction')) {
-                obj['reaction'] = ApiClient.convertToType(data['reaction'], 'String');
-            }
-            if (data.hasOwnProperty('updated_at')) {
-                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Number');
+            if (data.hasOwnProperty('sorted_metaarray')) {
+                obj['sorted_metaarray'] = ApiClient.convertToType(data['sorted_metaarray'], [InlineResponse20047SortedMetaarray]);
             }
         }
         return obj;
@@ -70,29 +59,9 @@ class InlineResponse20054 {
 }
 
 /**
- * @member {String} user_id
+ * @member {Array.<module:model/InlineResponse20047SortedMetaarray>} sorted_metaarray
  */
-InlineResponse20054.prototype['user_id'] = undefined;
-
-/**
- * @member {String} operation
- */
-InlineResponse20054.prototype['operation'] = undefined;
-
-/**
- * @member {Boolean} success
- */
-InlineResponse20054.prototype['success'] = undefined;
-
-/**
- * @member {String} reaction
- */
-InlineResponse20054.prototype['reaction'] = undefined;
-
-/**
- * @member {Number} updated_at
- */
-InlineResponse20054.prototype['updated_at'] = undefined;
+InlineResponse20054.prototype['sorted_metaarray'] = undefined;
 
 
 

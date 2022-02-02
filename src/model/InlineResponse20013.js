@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20013PushConfigurations from './InlineResponse20013PushConfigurations';
 
 /**
  * The InlineResponse20013 model module.
@@ -49,7 +48,7 @@ class InlineResponse20013 {
             obj = obj || new InlineResponse20013();
 
             if (data.hasOwnProperty('push_configurations')) {
-                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], [InlineResponse20013PushConfigurations]);
+                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], ['String']);
             }
         }
         return obj;
@@ -59,7 +58,7 @@ class InlineResponse20013 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse20013PushConfigurations>} push_configurations
+ * @member {Array.<String>} push_configurations
  */
 InlineResponse20013.prototype['push_configurations'] = undefined;
 

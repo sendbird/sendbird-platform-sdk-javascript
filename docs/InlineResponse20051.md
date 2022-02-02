@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ts** | **Number** |  | [optional] 
+**reactions** | **Boolean** |  | [optional] 
 
 

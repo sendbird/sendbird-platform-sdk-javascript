@@ -49,10 +49,7 @@ class InlineResponse20026 {
             obj = obj || new InlineResponse20026();
 
             if (data.hasOwnProperty('token')) {
-                obj['token'] = ApiClient.convertToType(data['token'], 'String');
-            }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['token'] = ApiClient.convertToType(data['token'], ['String']);
             }
             if (data.hasOwnProperty('user')) {
                 obj['user'] = SendBirdUser.constructFromObject(data['user']);
@@ -65,14 +62,9 @@ class InlineResponse20026 {
 }
 
 /**
- * @member {String} token
+ * @member {Array.<String>} token
  */
 InlineResponse20026.prototype['token'] = undefined;
-
-/**
- * @member {String} type
- */
-InlineResponse20026.prototype['type'] = undefined;
 
 /**
  * @member {module:model/SendBirdUser} user

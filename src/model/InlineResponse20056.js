@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import InlineResponse20056EmojiCategories from './InlineResponse20056EmojiCategories';
 
 /**
  * The InlineResponse20056 model module.
@@ -47,8 +48,11 @@ class InlineResponse20056 {
         if (data) {
             obj = obj || new InlineResponse20056();
 
-            if (data.hasOwnProperty('use_default_emoji')) {
-                obj['use_default_emoji'] = ApiClient.convertToType(data['use_default_emoji'], 'Boolean');
+            if (data.hasOwnProperty('emoji_hash')) {
+                obj['emoji_hash'] = ApiClient.convertToType(data['emoji_hash'], 'String');
+            }
+            if (data.hasOwnProperty('emoji_categories')) {
+                obj['emoji_categories'] = ApiClient.convertToType(data['emoji_categories'], [InlineResponse20056EmojiCategories]);
             }
         }
         return obj;
@@ -58,9 +62,14 @@ class InlineResponse20056 {
 }
 
 /**
- * @member {Boolean} use_default_emoji
+ * @member {String} emoji_hash
  */
-InlineResponse20056.prototype['use_default_emoji'] = undefined;
+InlineResponse20056.prototype['emoji_hash'] = undefined;
+
+/**
+ * @member {Array.<module:model/InlineResponse20056EmojiCategories>} emoji_categories
+ */
+InlineResponse20056.prototype['emoji_categories'] = undefined;
 
 
 

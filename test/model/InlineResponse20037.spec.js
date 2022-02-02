@@ -54,14 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20037);
     });
 
-    it('should have the property members (base name: "members")', function() {
-      // uncomment below and update the code to test the property members
-      //var instance = new SendbirdPlatformSdk.InlineResponse20037();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property next (base name: "next")', function() {
-      // uncomment below and update the code to test the property next
+    it('should have the property isMember (base name: "is_member")', function() {
+      // uncomment below and update the code to test the property isMember
       //var instance = new SendbirdPlatformSdk.InlineResponse20037();
       //expect(instance).to.be();
     });

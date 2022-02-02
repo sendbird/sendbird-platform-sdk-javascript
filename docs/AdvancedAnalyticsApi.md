@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## retrieveAdvancedAnalyticsMetrics
 
-> InlineResponse20063 retrieveAdvancedAnalyticsMetrics(opts)
+> InlineResponse20062 retrieveAdvancedAnalyticsMetrics(opts)
 
 Retrieve Advanced analytics metrics
 
@@ -25,13 +25,12 @@ let apiInstance = new SendbirdPlatformSdk.AdvancedAnalyticsApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.retrieveAdvancedAnalyticsMetrics(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.retrieveAdvancedAnalyticsMetrics(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -43,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20063**](InlineResponse20063.md)
+[**InlineResponse20062**](InlineResponse20062.md)
 
 ### Authorization
 

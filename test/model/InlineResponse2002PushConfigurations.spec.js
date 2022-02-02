@@ -66,8 +66,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property apiKey (base name: "api_key")', function() {
-      // uncomment below and update the code to test the property apiKey
+    it('should have the property huaweiAppId (base name: "huawei_app_id")', function() {
+      // uncomment below and update the code to test the property huaweiAppId
+      //var instance = new SendbirdPlatformSdk.InlineResponse2002PushConfigurations();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property huaweiAppSecret (base name: "huawei_app_secret")', function() {
+      // uncomment below and update the code to test the property huaweiAppSecret
       //var instance = new SendbirdPlatformSdk.InlineResponse2002PushConfigurations();
       //expect(instance).to.be();
     });

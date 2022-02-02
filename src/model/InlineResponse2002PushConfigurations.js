@@ -53,8 +53,11 @@ class InlineResponse2002PushConfigurations {
             if (data.hasOwnProperty('push_type')) {
                 obj['push_type'] = ApiClient.convertToType(data['push_type'], 'String');
             }
-            if (data.hasOwnProperty('api_key')) {
-                obj['api_key'] = ApiClient.convertToType(data['api_key'], 'String');
+            if (data.hasOwnProperty('huawei_app_id')) {
+                obj['huawei_app_id'] = ApiClient.convertToType(data['huawei_app_id'], 'String');
+            }
+            if (data.hasOwnProperty('huawei_app_secret')) {
+                obj['huawei_app_secret'] = ApiClient.convertToType(data['huawei_app_secret'], 'String');
             }
             if (data.hasOwnProperty('push_sound')) {
                 obj['push_sound'] = ApiClient.convertToType(data['push_sound'], 'String');
@@ -77,9 +80,14 @@ InlineResponse2002PushConfigurations.prototype['id'] = undefined;
 InlineResponse2002PushConfigurations.prototype['push_type'] = undefined;
 
 /**
- * @member {String} api_key
+ * @member {String} huawei_app_id
  */
-InlineResponse2002PushConfigurations.prototype['api_key'] = undefined;
+InlineResponse2002PushConfigurations.prototype['huawei_app_id'] = undefined;
+
+/**
+ * @member {String} huawei_app_secret
+ */
+InlineResponse2002PushConfigurations.prototype['huawei_app_secret'] = undefined;
 
 /**
  * @member {String} push_sound

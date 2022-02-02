@@ -266,10 +266,22 @@ SendBirdAdminMessage.prototype['updated_at'] = undefined;
 SendBirdAdminMessage['MessageTypeEnum'] = {
 
     /**
-     * value: "admin"
+     * value: "MESG"
      * @const
      */
-    "admin": "admin"
+    "MESG": "MESG",
+
+    /**
+     * value: "ADMM"
+     * @const
+     */
+    "ADMM": "ADMM",
+
+    /**
+     * value: "FILE"
+     * @const
+     */
+    "FILE": "FILE"
 };
 
 

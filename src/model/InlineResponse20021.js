@@ -47,8 +47,8 @@ class InlineResponse20021 {
         if (data) {
             obj = obj || new InlineResponse20021();
 
-            if (data.hasOwnProperty('group_channel_count')) {
-                obj['group_channel_count'] = ApiClient.convertToType(data['group_channel_count'], 'Number');
+            if (data.hasOwnProperty('count_preference')) {
+                obj['count_preference'] = ApiClient.convertToType(data['count_preference'], 'String');
             }
         }
         return obj;
@@ -58,9 +58,9 @@ class InlineResponse20021 {
 }
 
 /**
- * @member {Number} group_channel_count
+ * @member {String} count_preference
  */
-InlineResponse20021.prototype['group_channel_count'] = undefined;
+InlineResponse20021.prototype['count_preference'] = undefined;
 
 
 

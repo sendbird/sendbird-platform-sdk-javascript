@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import SendBirdUser from './SendBirdUser';
 
 /**
  * The InlineResponse20027 model module.
@@ -48,11 +47,8 @@ class InlineResponse20027 {
         if (data) {
             obj = obj || new InlineResponse20027();
 
-            if (data.hasOwnProperty('token')) {
-                obj['token'] = ApiClient.convertToType(data['token'], ['String']);
-            }
-            if (data.hasOwnProperty('user')) {
-                obj['user'] = SendBirdUser.constructFromObject(data['user']);
+            if (data.hasOwnProperty('user_id')) {
+                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
             }
         }
         return obj;
@@ -62,14 +58,9 @@ class InlineResponse20027 {
 }
 
 /**
- * @member {Array.<String>} token
+ * @member {String} user_id
  */
-InlineResponse20027.prototype['token'] = undefined;
-
-/**
- * @member {module:model/SendBirdUser} user
- */
-InlineResponse20027.prototype['user'] = undefined;
+InlineResponse20027.prototype['user_id'] = undefined;
 
 
 

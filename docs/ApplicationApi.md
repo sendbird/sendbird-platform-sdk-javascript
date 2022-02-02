@@ -35,7 +35,7 @@ Method | HTTP request | Description
 
 ## addApnsPushConfiguration
 
-> InlineResponse2004 addApnsPushConfiguration(opts)
+> InlineResponse2003 addApnsPushConfiguration(opts)
 
 Add an APNs push configuration
 
@@ -51,13 +51,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'addApnsPushConfigurationData': new SendbirdPlatformSdk.AddApnsPushConfigurationData() // AddApnsPushConfigurationData | 
 };
-apiInstance.addApnsPushConfiguration(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.addApnsPushConfiguration(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -67,104 +66,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **apiToken** | **String**|  | [optional] 
  **addApnsPushConfigurationData** | [**AddApnsPushConfigurationData**](AddApnsPushConfigurationData.md)|  | [optional] 
-
-### Return type
-
-[**InlineResponse2004**](InlineResponse2004.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## addFcmPushConfiguration
-
-> InlineResponse2002 addFcmPushConfiguration(opts)
-
-Add a FCM push configuration
-
-## Add a FCM push configuration  Registers a FCM (Firebase Cloud Messaging) push configuration for your client app. To send push notifications to Android devices, you should first register the FCM push configuration. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings &gt; Application &gt; Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-a-fcm-push-configuration
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
-  'addFcmPushConfigurationData': new SendbirdPlatformSdk.AddFcmPushConfigurationData() // AddFcmPushConfigurationData | 
-};
-apiInstance.addFcmPushConfiguration(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
- **addFcmPushConfigurationData** | [**AddFcmPushConfigurationData**](AddFcmPushConfigurationData.md)|  | [optional] 
-
-### Return type
-
-[**InlineResponse2002**](InlineResponse2002.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## addHmsPushConfiguration
-
-> InlineResponse2003 addHmsPushConfiguration(opts)
-
-Add an HMS push configuration
-
-## Add an HMS push configuration  Registers an HMS (Huawei Mobile Services) push configuration for your client app. To send push notifications to Android devices for HMS, you should first register the HMS push configuration. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings &gt; Application &gt; Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-an-hms-push-configuration
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
-  'addHmsPushConfigurationData': new SendbirdPlatformSdk.AddHmsPushConfigurationData() // AddHmsPushConfigurationData | 
-};
-apiInstance.addHmsPushConfiguration(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
- **addHmsPushConfigurationData** | [**AddHmsPushConfigurationData**](AddHmsPushConfigurationData.md)|  | [optional] 
 
 ### Return type
 
@@ -180,9 +81,105 @@ No authorization required
 - **Accept**: application/json
 
 
+## addFcmPushConfiguration
+
+> InlineResponse2001 addFcmPushConfiguration(opts)
+
+Add a FCM push configuration
+
+## Add a FCM push configuration  Registers a FCM (Firebase Cloud Messaging) push configuration for your client app. To send push notifications to Android devices, you should first register the FCM push configuration. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings &gt; Application &gt; Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-a-fcm-push-configuration
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let opts = {
+  'apiToken': {{API_TOKEN}}, // String | 
+  'addFcmPushConfigurationData': new SendbirdPlatformSdk.AddFcmPushConfigurationData() // AddFcmPushConfigurationData | 
+};
+apiInstance.addFcmPushConfiguration(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | [optional] 
+ **addFcmPushConfigurationData** | [**AddFcmPushConfigurationData**](AddFcmPushConfigurationData.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse2001**](InlineResponse2001.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## addHmsPushConfiguration
+
+> InlineResponse2002 addHmsPushConfiguration(opts)
+
+Add an HMS push configuration
+
+## Add an HMS push configuration  Registers an HMS (Huawei Mobile Services) push configuration for your client app. To send push notifications to Android devices for HMS, you should first register the HMS push configuration. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings &gt; Application &gt; Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-an-hms-push-configuration
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let opts = {
+  'apiToken': {{API_TOKEN}}, // String | 
+  'addHmsPushConfigurationData': new SendbirdPlatformSdk.AddHmsPushConfigurationData() // AddHmsPushConfigurationData | 
+};
+apiInstance.addHmsPushConfiguration(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | [optional] 
+ **addHmsPushConfigurationData** | [**AddHmsPushConfigurationData**](AddHmsPushConfigurationData.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse2002**](InlineResponse2002.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## addIpToWhitelist
 
-> InlineResponse2007 addIpToWhitelist(opts)
+> InlineResponse2006 addIpToWhitelist(opts)
 
 Add an IP to a whitelist
 
@@ -198,13 +195,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'addIpToWhitelistData': new SendbirdPlatformSdk.AddIpToWhitelistData() // AddIpToWhitelistData | 
 };
-apiInstance.addIpToWhitelist(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.addIpToWhitelist(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -217,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -231,7 +227,7 @@ No authorization required
 
 ## deleteAllowedIpsFromWhitelist
 
-> InlineResponse2007 deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts)
+> InlineResponse2006 deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts)
 
 Delete allowed IPs from a whitelist
 
@@ -247,13 +243,12 @@ let ipWhitelistAddresses = ["null"]; // [String] |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -266,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -280,7 +275,7 @@ No authorization required
 
 ## deleteApnsCertificateById
 
-> InlineResponse20014 deleteApnsCertificateById(providerId, opts)
+> InlineResponse20013 deleteApnsCertificateById(providerId, opts)
 
 Delete an APNs certificate
 
@@ -296,13 +291,12 @@ let providerId = "providerId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteApnsCertificateById(providerId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.deleteApnsCertificateById(providerId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -311,104 +305,6 @@ apiInstance.deleteApnsCertificateById(providerId, opts, (error, data, response) 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **providerId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
-
-### Return type
-
-[**InlineResponse20014**](InlineResponse20014.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## generateSecondaryApiToken
-
-> InlineResponse2008 generateSecondaryApiToken(opts)
-
-Generate a secondary API token
-
-## Generate a secondary API token  Generates a new secondary API token.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-generate-a-secondary-api-token
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
-  'generateSecondaryApiTokenData': new SendbirdPlatformSdk.GenerateSecondaryApiTokenData() // GenerateSecondaryApiTokenData | 
-};
-apiInstance.generateSecondaryApiToken(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
- **generateSecondaryApiTokenData** | [**GenerateSecondaryApiTokenData**](GenerateSecondaryApiTokenData.md)|  | [optional] 
-
-### Return type
-
-[**InlineResponse2008**](InlineResponse2008.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## listPushConfigurations
-
-> InlineResponse20013 listPushConfigurations(pushType, opts)
-
-List push configurations
-
-## List push configurations  Retrieves a list of an application&#39;s registered push configurations.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-push-configurations ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let pushType = "pushType_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.listPushConfigurations(pushType, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pushType** | **String**|  | 
  **apiToken** | **String**|  | [optional] 
 
 ### Return type
@@ -425,9 +321,105 @@ No authorization required
 - **Accept**: application/json
 
 
+## generateSecondaryApiToken
+
+> InlineResponse2007 generateSecondaryApiToken(opts)
+
+Generate a secondary API token
+
+## Generate a secondary API token  Generates a new secondary API token.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-generate-a-secondary-api-token
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let opts = {
+  'apiToken': {{API_TOKEN}}, // String | 
+  'generateSecondaryApiTokenData': new SendbirdPlatformSdk.GenerateSecondaryApiTokenData() // GenerateSecondaryApiTokenData | 
+};
+apiInstance.generateSecondaryApiToken(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | [optional] 
+ **generateSecondaryApiTokenData** | [**GenerateSecondaryApiTokenData**](GenerateSecondaryApiTokenData.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse2007**](InlineResponse2007.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## listPushConfigurations
+
+> InlineResponse20012 listPushConfigurations(pushType, opts)
+
+List push configurations
+
+## List push configurations  Retrieves a list of an application&#39;s registered push configurations.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-push-configurations ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let pushType = "pushType_example"; // String | 
+let opts = {
+  'apiToken': {{API_TOKEN}} // String | 
+};
+apiInstance.listPushConfigurations(pushType, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pushType** | **String**|  | 
+ **apiToken** | **String**|  | [optional] 
+
+### Return type
+
+[**InlineResponse20012**](InlineResponse20012.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## listPushNotificationContentTemplates
 
-> InlineResponse2005 listPushNotificationContentTemplates(opts)
+> InlineResponse2004 listPushNotificationContentTemplates(opts)
 
 List push notification content templates
 
@@ -442,13 +434,496 @@ let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.listPushNotificationContentTemplates(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listPushNotificationContentTemplates(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | [optional] 
+
+### Return type
+
+[**InlineResponse2004**](InlineResponse2004.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listSecondaryApiTokens
+
+> InlineResponse2008 listSecondaryApiTokens(opts)
+
+List secondary API tokens
+
+## List secondary API tokens  Retrieves a list of secondary API tokens.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-secondary-api-tokens
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let opts = {
+  'apiToken': {{API_TOKEN}} // String | 
+};
+apiInstance.listSecondaryApiTokens(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | [optional] 
+
+### Return type
+
+[**InlineResponse2008**](InlineResponse2008.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## removePushConfigurationById
+
+> InlineResponse20013 removePushConfigurationById(pushType, providerId, opts)
+
+Remove a push configuration
+
+## Remove a push configuration  Removes a specific push configuration from an application. The type of a push configuration is either &#x60;fcm&#x60;, &#x60;huawei&#x60;, or &#x60;apns&#x60;.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-remove-a-push-configuration ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let pushType = "pushType_example"; // String | 
+let providerId = "providerId_example"; // String | 
+let opts = {
+  'apiToken': {{API_TOKEN}} // String | 
+};
+apiInstance.removePushConfigurationById(pushType, providerId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pushType** | **String**|  | 
+ **providerId** | **String**|  | 
+ **apiToken** | **String**|  | [optional] 
+
+### Return type
+
+[**InlineResponse20013**](InlineResponse20013.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## retrieveIpWhitelist
+
+> InlineResponse2006 retrieveIpWhitelist(opts)
+
+Retrieve an IP whitelist
+
+## Retrieve an IP whitelist  Retrieves a list of all the IP ranges and addresses that have access to your Sendbird application. This list is called an IP whitelist and its addresses are granted API access when the IP whitelist API enables [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notations.  If you specify which IP addresses or ranges to include in the whitelist, any unlisted foreign IP addresses will be denied access. If you don&#39;t specify any IP address or range to include in the whitelist, all IP addresses will be granted API access. You can configure the IP whitelist under Settings &gt; Security &gt; Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-retrieve-an-ip-whitelist
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let opts = {
+  'apiToken': {{API_TOKEN}} // String | 
+};
+apiInstance.retrieveIpWhitelist(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | [optional] 
+
+### Return type
+
+[**InlineResponse2006**](InlineResponse2006.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## revokeSecondaryApiTokenByToken
+
+> InlineResponse2007 revokeSecondaryApiTokenByToken(apiToken2, opts)
+
+Revoke a secondary API token
+
+## Revoke a secondary API token  Revokes a secondary API token.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-revoke-a-secondary-api-token
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken2 = "apiToken_example"; // String | 
+let opts = {
+  'apiToken': {{API_TOKEN}} // String | 
+};
+apiInstance.revokeSecondaryApiTokenByToken(apiToken2, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken2** | **String**|  | 
+ **apiToken** | **String**|  | [optional] 
+
+### Return type
+
+[**InlineResponse2007**](InlineResponse2007.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## updateApnsPushConfigurationById
+
+> InlineResponse20014 updateApnsPushConfigurationById(providerId, opts)
+
+Update an APNs push configuration
+
+## Update an APNs push configuration  Updates a specific APNs (Apple Push Notification service) push configuration for your client app. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings &gt; Application &gt; Notifications.  &gt; __Note__: If your HTTP request body contains a [.p12](https://sendbird.com/docs/chat/v3/ios/guides/push-notifications#2-step-3-export-a-p12-file-and-upload-to-sendbird-dashboard) certificate file to upload to Sendbird server, you should send a [Multipart request](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api#2-headers-3-multipart-requests) .  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-an-apns-push-configuration ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let providerId = "providerId_example"; // String | 
+let opts = {
+  'apiToken': {{API_TOKEN}}, // String | 
+  'updateApnsPushConfigurationByIdData': new SendbirdPlatformSdk.UpdateApnsPushConfigurationByIdData() // UpdateApnsPushConfigurationByIdData | 
+};
+apiInstance.updateApnsPushConfigurationById(providerId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **providerId** | **String**|  | 
+ **apiToken** | **String**|  | [optional] 
+ **updateApnsPushConfigurationByIdData** | [**UpdateApnsPushConfigurationByIdData**](UpdateApnsPushConfigurationByIdData.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse20014**](InlineResponse20014.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateDefaultChannelInvitationPreference
+
+> InlineResponse2005 updateDefaultChannelInvitationPreference(opts)
+
+Update default channel invitation preference
+
+## Update default channel invitation preference  Updates the default channel invitation preference of an application.  &gt; __Note__: Using the [update channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-channel-invitation-preference) action, you can update the value of a specific user&#39;s channel invitation preference, which can be set individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-default-channel-invitation-preference
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let opts = {
+  'apiToken': {{API_TOKEN}}, // String | 
+  'updateDefaultChannelInvitationPreferenceData': new SendbirdPlatformSdk.UpdateDefaultChannelInvitationPreferenceData() // UpdateDefaultChannelInvitationPreferenceData | 
+};
+apiInstance.updateDefaultChannelInvitationPreference(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | [optional] 
+ **updateDefaultChannelInvitationPreferenceData** | [**UpdateDefaultChannelInvitationPreferenceData**](UpdateDefaultChannelInvitationPreferenceData.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse2005**](InlineResponse2005.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateFcmPushConfigurationById
+
+> InlineResponse20014 updateFcmPushConfigurationById(providerId, opts)
+
+Update a FCM push configuration
+
+## Update a FCM push configuration  Updates a specific FCM (Firebase Cloud Messaging) push configuration for your client app. You can also update the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings &gt; Application &gt; Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-a-fcm-push-configuration ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let providerId = "providerId_example"; // String | 
+let opts = {
+  'apiToken': {{API_TOKEN}}, // String | 
+  'updateFcmPushConfigurationByIdData': new SendbirdPlatformSdk.UpdateFcmPushConfigurationByIdData() // UpdateFcmPushConfigurationByIdData | 
+};
+apiInstance.updateFcmPushConfigurationById(providerId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **providerId** | **String**|  | 
+ **apiToken** | **String**|  | [optional] 
+ **updateFcmPushConfigurationByIdData** | [**UpdateFcmPushConfigurationByIdData**](UpdateFcmPushConfigurationByIdData.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse20014**](InlineResponse20014.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateHmsPushConfigurationById
+
+> InlineResponse20014 updateHmsPushConfigurationById(providerId, opts)
+
+Update an HMS push configuration
+
+## Update an HMS push configuration  Updates a specific HMS (Huawei Mobile Services) push configuration for your client app. You can also update the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings &gt; Application &gt; Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-an-hms-push-configuration ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let providerId = "providerId_example"; // String | 
+let opts = {
+  'apiToken': {{API_TOKEN}}, // String | 
+  'updateHmsPushConfigurationByIdData': new SendbirdPlatformSdk.UpdateHmsPushConfigurationByIdData() // UpdateHmsPushConfigurationByIdData | 
+};
+apiInstance.updateHmsPushConfigurationById(providerId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **providerId** | **String**|  | 
+ **apiToken** | **String**|  | [optional] 
+ **updateHmsPushConfigurationByIdData** | [**UpdateHmsPushConfigurationByIdData**](UpdateHmsPushConfigurationByIdData.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse20014**](InlineResponse20014.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updatePushNotificationContentTemplate
+
+> InlineResponse20015 updatePushNotificationContentTemplate(templateName, opts)
+
+Update a push notification content template
+
+## Update a push notification content template  Updates a specific push notification content template of an application. The name of a content template is either &#x60;default&#x60; or &#x60;alternative&#x60;.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-a-push-notification-content-template ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let templateName = "templateName_example"; // String | 
+let opts = {
+  'apiToken': {{API_TOKEN}}, // String | 
+  'updatePushNotificationContentTemplateData': new SendbirdPlatformSdk.UpdatePushNotificationContentTemplateData() // UpdatePushNotificationContentTemplateData | 
+};
+apiInstance.updatePushNotificationContentTemplate(templateName, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **templateName** | **String**|  | 
+ **apiToken** | **String**|  | [optional] 
+ **updatePushNotificationContentTemplateData** | [**UpdatePushNotificationContentTemplateData**](UpdatePushNotificationContentTemplateData.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse20015**](InlineResponse20015.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## viewDefaultChannelInvitationPreference
+
+> InlineResponse2005 viewDefaultChannelInvitationPreference(opts)
+
+View default channel invitation preference
+
+## View default channel invitation preference  Retrieves the default channel invitation preference of an application.  &gt; __Note__: Using the [view channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-channel-invitation-preference) action, you can retrieve the value of a specific user&#39;s channel invitation preference, which can be set individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-default-channel-invitation-preference
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let opts = {
+  'apiToken': {{API_TOKEN}} // String | 
+};
+apiInstance.viewDefaultChannelInvitationPreference(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -472,503 +947,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## listSecondaryApiTokens
-
-> InlineResponse2009 listSecondaryApiTokens(opts)
-
-List secondary API tokens
-
-## List secondary API tokens  Retrieves a list of secondary API tokens.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-secondary-api-tokens
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.listSecondaryApiTokens(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
-
-### Return type
-
-[**InlineResponse2009**](InlineResponse2009.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## removePushConfigurationById
-
-> InlineResponse20014 removePushConfigurationById(pushType, providerId, opts)
-
-Remove a push configuration
-
-## Remove a push configuration  Removes a specific push configuration from an application. The type of a push configuration is either &#x60;fcm&#x60;, &#x60;huawei&#x60;, or &#x60;apns&#x60;.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-remove-a-push-configuration ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let pushType = "pushType_example"; // String | 
-let providerId = "providerId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.removePushConfigurationById(pushType, providerId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pushType** | **String**|  | 
- **providerId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
-
-### Return type
-
-[**InlineResponse20014**](InlineResponse20014.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## retrieveIpWhitelist
-
-> InlineResponse2007 retrieveIpWhitelist(opts)
-
-Retrieve an IP whitelist
-
-## Retrieve an IP whitelist  Retrieves a list of all the IP ranges and addresses that have access to your Sendbird application. This list is called an IP whitelist and its addresses are granted API access when the IP whitelist API enables [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notations.  If you specify which IP addresses or ranges to include in the whitelist, any unlisted foreign IP addresses will be denied access. If you don&#39;t specify any IP address or range to include in the whitelist, all IP addresses will be granted API access. You can configure the IP whitelist under Settings &gt; Security &gt; Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-retrieve-an-ip-whitelist
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.retrieveIpWhitelist(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
-
-### Return type
-
-[**InlineResponse2007**](InlineResponse2007.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## revokeSecondaryApiTokenByToken
-
-> revokeSecondaryApiTokenByToken(apiToken2, opts)
-
-Revoke a secondary API token
-
-## Revoke a secondary API token  Revokes a secondary API token.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-revoke-a-secondary-api-token
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let apiToken2 = "apiToken_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.revokeSecondaryApiTokenByToken(apiToken2, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken2** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## updateApnsPushConfigurationById
-
-> InlineResponse20015 updateApnsPushConfigurationById(providerId, opts)
-
-Update an APNs push configuration
-
-## Update an APNs push configuration  Updates a specific APNs (Apple Push Notification service) push configuration for your client app. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings &gt; Application &gt; Notifications.  &gt; __Note__: If your HTTP request body contains a [.p12](https://sendbird.com/docs/chat/v3/ios/guides/push-notifications#2-step-3-export-a-p12-file-and-upload-to-sendbird-dashboard) certificate file to upload to Sendbird server, you should send a [Multipart request](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api#2-headers-3-multipart-requests) .  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-an-apns-push-configuration ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let providerId = "providerId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
-  'updateApnsPushConfigurationByIdData': new SendbirdPlatformSdk.UpdateApnsPushConfigurationByIdData() // UpdateApnsPushConfigurationByIdData | 
-};
-apiInstance.updateApnsPushConfigurationById(providerId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **providerId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
- **updateApnsPushConfigurationByIdData** | [**UpdateApnsPushConfigurationByIdData**](UpdateApnsPushConfigurationByIdData.md)|  | [optional] 
-
-### Return type
-
-[**InlineResponse20015**](InlineResponse20015.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## updateDefaultChannelInvitationPreference
-
-> InlineResponse2006 updateDefaultChannelInvitationPreference(opts)
-
-Update default channel invitation preference
-
-## Update default channel invitation preference  Updates the default channel invitation preference of an application.  &gt; __Note__: Using the [update channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-channel-invitation-preference) action, you can update the value of a specific user&#39;s channel invitation preference, which can be set individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-default-channel-invitation-preference
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
-  'updateDefaultChannelInvitationPreferenceData': new SendbirdPlatformSdk.UpdateDefaultChannelInvitationPreferenceData() // UpdateDefaultChannelInvitationPreferenceData | 
-};
-apiInstance.updateDefaultChannelInvitationPreference(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
- **updateDefaultChannelInvitationPreferenceData** | [**UpdateDefaultChannelInvitationPreferenceData**](UpdateDefaultChannelInvitationPreferenceData.md)|  | [optional] 
-
-### Return type
-
-[**InlineResponse2006**](InlineResponse2006.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## updateFcmPushConfigurationById
-
-> InlineResponse20015 updateFcmPushConfigurationById(providerId, opts)
-
-Update a FCM push configuration
-
-## Update a FCM push configuration  Updates a specific FCM (Firebase Cloud Messaging) push configuration for your client app. You can also update the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings &gt; Application &gt; Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-a-fcm-push-configuration ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let providerId = "providerId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
-  'updateFcmPushConfigurationByIdData': new SendbirdPlatformSdk.UpdateFcmPushConfigurationByIdData() // UpdateFcmPushConfigurationByIdData | 
-};
-apiInstance.updateFcmPushConfigurationById(providerId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **providerId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
- **updateFcmPushConfigurationByIdData** | [**UpdateFcmPushConfigurationByIdData**](UpdateFcmPushConfigurationByIdData.md)|  | [optional] 
-
-### Return type
-
-[**InlineResponse20015**](InlineResponse20015.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## updateHmsPushConfigurationById
-
-> InlineResponse20015 updateHmsPushConfigurationById(providerId, opts)
-
-Update an HMS push configuration
-
-## Update an HMS push configuration  Updates a specific HMS (Huawei Mobile Services) push configuration for your client app. You can also update the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings &gt; Application &gt; Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-an-hms-push-configuration ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let providerId = "providerId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
-  'updateHmsPushConfigurationByIdData': new SendbirdPlatformSdk.UpdateHmsPushConfigurationByIdData() // UpdateHmsPushConfigurationByIdData | 
-};
-apiInstance.updateHmsPushConfigurationById(providerId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **providerId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
- **updateHmsPushConfigurationByIdData** | [**UpdateHmsPushConfigurationByIdData**](UpdateHmsPushConfigurationByIdData.md)|  | [optional] 
-
-### Return type
-
-[**InlineResponse20015**](InlineResponse20015.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## updatePushNotificationContentTemplate
-
-> InlineResponse20016 updatePushNotificationContentTemplate(templateName, opts)
-
-Update a push notification content template
-
-## Update a push notification content template  Updates a specific push notification content template of an application. The name of a content template is either &#x60;default&#x60; or &#x60;alternative&#x60;.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-a-push-notification-content-template ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let templateName = "templateName_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
-  'updatePushNotificationContentTemplateData': new SendbirdPlatformSdk.UpdatePushNotificationContentTemplateData() // UpdatePushNotificationContentTemplateData | 
-};
-apiInstance.updatePushNotificationContentTemplate(templateName, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **templateName** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
- **updatePushNotificationContentTemplateData** | [**UpdatePushNotificationContentTemplateData**](UpdatePushNotificationContentTemplateData.md)|  | [optional] 
-
-### Return type
-
-[**InlineResponse20016**](InlineResponse20016.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## viewDefaultChannelInvitationPreference
-
-> InlineResponse2006 viewDefaultChannelInvitationPreference(opts)
-
-View default channel invitation preference
-
-## View default channel invitation preference  Retrieves the default channel invitation preference of an application.  &gt; __Note__: Using the [view channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-channel-invitation-preference) action, you can retrieve the value of a specific user&#39;s channel invitation preference, which can be set individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-default-channel-invitation-preference
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewDefaultChannelInvitationPreference(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
-
-### Return type
-
-[**InlineResponse2006**](InlineResponse2006.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
 ## viewNumberOfConcurrentConnections
 
-> InlineResponse2001 viewNumberOfConcurrentConnections(opts)
+> InlineResponse200 viewNumberOfConcurrentConnections(opts)
 
 View number of concurrent connections
 
@@ -983,13 +964,12 @@ let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewNumberOfConcurrentConnections(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewNumberOfConcurrentConnections(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1001,7 +981,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -1015,7 +995,7 @@ No authorization required
 
 ## viewNumberOfDailyActiveUsers
 
-> InlineResponse20012 viewNumberOfDailyActiveUsers(opts)
+> InlineResponse20011 viewNumberOfDailyActiveUsers(opts)
 
 View number of daily active users
 
@@ -1031,62 +1011,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'date': "date_example" // String | 
 };
-apiInstance.viewNumberOfDailyActiveUsers(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewNumberOfDailyActiveUsers(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
-```
 
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
- **date** | **String**|  | [optional] 
-
-### Return type
-
-[**InlineResponse20012**](InlineResponse20012.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## viewNumberOfMonthlyActiveUsers
-
-> InlineResponse20011 viewNumberOfMonthlyActiveUsers(opts)
-
-View number of monthly active users
-
-## View number of monthly active users  Retrieves the number of monthly active users of the application (MAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-monthly-active-users ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
-  'date': "date_example" // String | 
-};
-apiInstance.viewNumberOfMonthlyActiveUsers(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
 ```
 
 ### Parameters
@@ -1111,9 +1041,57 @@ No authorization required
 - **Accept**: application/json
 
 
+## viewNumberOfMonthlyActiveUsers
+
+> InlineResponse20010 viewNumberOfMonthlyActiveUsers(opts)
+
+View number of monthly active users
+
+## View number of monthly active users  Retrieves the number of monthly active users of the application (MAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-monthly-active-users ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let opts = {
+  'apiToken': {{API_TOKEN}}, // String | 
+  'date': "date_example" // String | 
+};
+apiInstance.viewNumberOfMonthlyActiveUsers(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | [optional] 
+ **date** | **String**|  | [optional] 
+
+### Return type
+
+[**InlineResponse20010**](InlineResponse20010.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## viewNumberOfPeakConnections
 
-> InlineResponse20010 viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts)
+> InlineResponse2009 viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts)
 
 View number of peak connections
 
@@ -1135,13 +1113,12 @@ let opts = {
   'startDay': 56, // Number | 
   'endDay': 56 // Number | 
 };
-apiInstance.viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1160,7 +1137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -1174,7 +1151,7 @@ No authorization required
 
 ## viewPushConfigurationById
 
-> InlineResponse20013 viewPushConfigurationById(pushType, providerId, opts)
+> InlineResponse20012 viewPushConfigurationById(pushType, providerId, opts)
 
 View a push configuration
 
@@ -1191,13 +1168,12 @@ let providerId = "providerId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewPushConfigurationById(pushType, providerId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewPushConfigurationById(pushType, providerId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1211,7 +1187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 
@@ -1225,7 +1201,7 @@ No authorization required
 
 ## viewPushNotificationContentTemplate
 
-> InlineResponse20016 viewPushNotificationContentTemplate(templateName, opts)
+> InlineResponse20015 viewPushNotificationContentTemplate(templateName, opts)
 
 View a push notification content template
 
@@ -1241,13 +1217,12 @@ let templateName = "templateName_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewPushNotificationContentTemplate(templateName, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewPushNotificationContentTemplate(templateName, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1260,7 +1235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -1274,7 +1249,7 @@ No authorization required
 
 ## viewSecondaryApiTokenByToken
 
-> InlineResponse2008 viewSecondaryApiTokenByToken(apiToken2, opts)
+> InlineResponse2007 viewSecondaryApiTokenByToken(apiToken2, opts)
 
 View a secondary API token
 
@@ -1290,13 +1265,12 @@ let apiToken2 = "apiToken_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewSecondaryApiTokenByToken(apiToken2, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewSecondaryApiTokenByToken(apiToken2, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1309,7 +1283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 

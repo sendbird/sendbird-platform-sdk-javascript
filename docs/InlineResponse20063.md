@@ -4,11 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**segments** | **String** |  | [optional] 
-**date** | **String** |  | [optional] 
-**value** | **Number** |  | [optional] 
-**channelType** | **String** |  | [optional] 
-**customChannelType** | **String** |  | [optional] 
-**customMessageType** | **String** |  | [optional] 
+**exportedData** | [**[InlineResponse20063ExportedData]**](InlineResponse20063ExportedData.md) |  | [optional] 
+**next** | **String** |  | [optional] 
 
 

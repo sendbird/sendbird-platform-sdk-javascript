@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**operatorIds** | **[String]** |  | [optional] 
+**announcements** | [**[InlineResponse20039Announcements]**](InlineResponse20039Announcements.md) |  | [optional] 
+**next** | **String** |  | [optional] 
 
 

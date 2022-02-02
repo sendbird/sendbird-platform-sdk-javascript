@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import SendBirdEmoji from './SendBirdEmoji';
+import InlineResponse20056Emojis from './InlineResponse20056Emojis';
 
 /**
  * The InlineResponse20059 model module.
@@ -49,7 +49,7 @@ class InlineResponse20059 {
             obj = obj || new InlineResponse20059();
 
             if (data.hasOwnProperty('emojis')) {
-                obj['emojis'] = ApiClient.convertToType(data['emojis'], [SendBirdEmoji]);
+                obj['emojis'] = ApiClient.convertToType(data['emojis'], [InlineResponse20056Emojis]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class InlineResponse20059 {
 }
 
 /**
- * @member {Array.<module:model/SendBirdEmoji>} emojis
+ * @member {Array.<module:model/InlineResponse20056Emojis>} emojis
  */
 InlineResponse20059.prototype['emojis'] = undefined;
 

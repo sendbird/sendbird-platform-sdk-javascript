@@ -47,8 +47,38 @@ class InlineResponse20028 {
         if (data) {
             obj = obj || new InlineResponse20028();
 
-            if (data.hasOwnProperty('user_id')) {
-                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
+            if (data.hasOwnProperty('push_trigger_option')) {
+                obj['push_trigger_option'] = ApiClient.convertToType(data['push_trigger_option'], 'String');
+            }
+            if (data.hasOwnProperty('do_not_disturb')) {
+                obj['do_not_disturb'] = ApiClient.convertToType(data['do_not_disturb'], 'Boolean');
+            }
+            if (data.hasOwnProperty('start_hour')) {
+                obj['start_hour'] = ApiClient.convertToType(data['start_hour'], 'Number');
+            }
+            if (data.hasOwnProperty('start_min')) {
+                obj['start_min'] = ApiClient.convertToType(data['start_min'], 'Number');
+            }
+            if (data.hasOwnProperty('end_hour')) {
+                obj['end_hour'] = ApiClient.convertToType(data['end_hour'], 'Number');
+            }
+            if (data.hasOwnProperty('end_min')) {
+                obj['end_min'] = ApiClient.convertToType(data['end_min'], 'Number');
+            }
+            if (data.hasOwnProperty('snooze_enabled')) {
+                obj['snooze_enabled'] = ApiClient.convertToType(data['snooze_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('snooze_start_ts')) {
+                obj['snooze_start_ts'] = ApiClient.convertToType(data['snooze_start_ts'], 'Number');
+            }
+            if (data.hasOwnProperty('snooze_end_ts')) {
+                obj['snooze_end_ts'] = ApiClient.convertToType(data['snooze_end_ts'], 'Number');
+            }
+            if (data.hasOwnProperty('timezone')) {
+                obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
+            }
+            if (data.hasOwnProperty('push_sound')) {
+                obj['push_sound'] = ApiClient.convertToType(data['push_sound'], 'String');
             }
         }
         return obj;
@@ -58,9 +88,59 @@ class InlineResponse20028 {
 }
 
 /**
- * @member {String} user_id
+ * @member {String} push_trigger_option
  */
-InlineResponse20028.prototype['user_id'] = undefined;
+InlineResponse20028.prototype['push_trigger_option'] = undefined;
+
+/**
+ * @member {Boolean} do_not_disturb
+ */
+InlineResponse20028.prototype['do_not_disturb'] = undefined;
+
+/**
+ * @member {Number} start_hour
+ */
+InlineResponse20028.prototype['start_hour'] = undefined;
+
+/**
+ * @member {Number} start_min
+ */
+InlineResponse20028.prototype['start_min'] = undefined;
+
+/**
+ * @member {Number} end_hour
+ */
+InlineResponse20028.prototype['end_hour'] = undefined;
+
+/**
+ * @member {Number} end_min
+ */
+InlineResponse20028.prototype['end_min'] = undefined;
+
+/**
+ * @member {Boolean} snooze_enabled
+ */
+InlineResponse20028.prototype['snooze_enabled'] = undefined;
+
+/**
+ * @member {Number} snooze_start_ts
+ */
+InlineResponse20028.prototype['snooze_start_ts'] = undefined;
+
+/**
+ * @member {Number} snooze_end_ts
+ */
+InlineResponse20028.prototype['snooze_end_ts'] = undefined;
+
+/**
+ * @member {String} timezone
+ */
+InlineResponse20028.prototype['timezone'] = undefined;
+
+/**
+ * @member {String} push_sound
+ */
+InlineResponse20028.prototype['push_sound'] = undefined;
 
 
 

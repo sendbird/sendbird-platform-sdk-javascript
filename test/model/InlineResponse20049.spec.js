@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20049);
     });
 
-    it('should have the property total (base name: "total")', function() {
-      // uncomment below and update the code to test the property total
+    it('should have the property unread (base name: "unread")', function() {
+      // uncomment below and update the code to test the property unread
       //var instance = new SendbirdPlatformSdk.InlineResponse20049();
       //expect(instance).to.be();
     });

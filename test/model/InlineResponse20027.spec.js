@@ -54,14 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20027);
     });
 
-    it('should have the property token (base name: "token")', function() {
-      // uncomment below and update the code to test the property token
-      //var instance = new SendbirdPlatformSdk.InlineResponse20027();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property user (base name: "user")', function() {
-      // uncomment below and update the code to test the property user
+    it('should have the property userId (base name: "user_id")', function() {
+      // uncomment below and update the code to test the property userId
       //var instance = new SendbirdPlatformSdk.InlineResponse20027();
       //expect(instance).to.be();
     });

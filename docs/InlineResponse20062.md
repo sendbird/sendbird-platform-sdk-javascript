@@ -4,7 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metadata** | **{String: String}** |  | [optional] 
-**includeTs** | **Number** |  | [optional] 
+**segments** | **String** |  | [optional] 
+**date** | **String** |  | [optional] 
+**value** | **Number** |  | [optional] 
+**channelType** | **String** |  | [optional] 
+**customChannelType** | **String** |  | [optional] 
+**customMessageType** | **String** |  | [optional] 
 
 

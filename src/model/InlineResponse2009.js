@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse2008 from './InlineResponse2008';
+import InlineResponse2009PeakConnections from './InlineResponse2009PeakConnections';
 
 /**
  * The InlineResponse2009 model module.
@@ -48,8 +48,8 @@ class InlineResponse2009 {
         if (data) {
             obj = obj || new InlineResponse2009();
 
-            if (data.hasOwnProperty('api_tokens')) {
-                obj['api_tokens'] = ApiClient.convertToType(data['api_tokens'], [InlineResponse2008]);
+            if (data.hasOwnProperty('peak_connections')) {
+                obj['peak_connections'] = ApiClient.convertToType(data['peak_connections'], [InlineResponse2009PeakConnections]);
             }
         }
         return obj;
@@ -59,9 +59,9 @@ class InlineResponse2009 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse2008>} api_tokens
+ * @member {Array.<module:model/InlineResponse2009PeakConnections>} peak_connections
  */
-InlineResponse2009.prototype['api_tokens'] = undefined;
+InlineResponse2009.prototype['peak_connections'] = undefined;
 
 
 

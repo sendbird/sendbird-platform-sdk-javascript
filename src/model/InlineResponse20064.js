@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20064ExportedData from './InlineResponse20064ExportedData';
+import InlineResponse20063File from './InlineResponse20063File';
 
 /**
  * The InlineResponse20064 model module.
@@ -48,11 +48,47 @@ class InlineResponse20064 {
         if (data) {
             obj = obj || new InlineResponse20064();
 
-            if (data.hasOwnProperty('exported_data')) {
-                obj['exported_data'] = ApiClient.convertToType(data['exported_data'], [InlineResponse20064ExportedData]);
+            if (data.hasOwnProperty('request_id')) {
+                obj['request_id'] = ApiClient.convertToType(data['request_id'], 'String');
             }
-            if (data.hasOwnProperty('next')) {
-                obj['next'] = ApiClient.convertToType(data['next'], 'String');
+            if (data.hasOwnProperty('data_type')) {
+                obj['data_type'] = ApiClient.convertToType(data['data_type'], 'String');
+            }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
+            if (data.hasOwnProperty('format')) {
+                obj['format'] = ApiClient.convertToType(data['format'], 'String');
+            }
+            if (data.hasOwnProperty('csv_delimiter')) {
+                obj['csv_delimiter'] = ApiClient.convertToType(data['csv_delimiter'], 'String');
+            }
+            if (data.hasOwnProperty('timezone')) {
+                obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Number');
+            }
+            if (data.hasOwnProperty('start_ts')) {
+                obj['start_ts'] = ApiClient.convertToType(data['start_ts'], 'Number');
+            }
+            if (data.hasOwnProperty('end_ts')) {
+                obj['end_ts'] = ApiClient.convertToType(data['end_ts'], 'Number');
+            }
+            if (data.hasOwnProperty('channel_urls')) {
+                obj['channel_urls'] = ApiClient.convertToType(data['channel_urls'], ['String']);
+            }
+            if (data.hasOwnProperty('channel_custom_types')) {
+                obj['channel_custom_types'] = ApiClient.convertToType(data['channel_custom_types'], ['String']);
+            }
+            if (data.hasOwnProperty('sender_ids')) {
+                obj['sender_ids'] = ApiClient.convertToType(data['sender_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('file')) {
+                obj['file'] = InlineResponse20063File.constructFromObject(data['file']);
+            }
+            if (data.hasOwnProperty('user_ids')) {
+                obj['user_ids'] = ApiClient.convertToType(data['user_ids'], ['Number']);
             }
         }
         return obj;
@@ -62,14 +98,74 @@ class InlineResponse20064 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse20064ExportedData>} exported_data
+ * @member {String} request_id
  */
-InlineResponse20064.prototype['exported_data'] = undefined;
+InlineResponse20064.prototype['request_id'] = undefined;
 
 /**
- * @member {String} next
+ * @member {String} data_type
  */
-InlineResponse20064.prototype['next'] = undefined;
+InlineResponse20064.prototype['data_type'] = undefined;
+
+/**
+ * @member {String} status
+ */
+InlineResponse20064.prototype['status'] = undefined;
+
+/**
+ * @member {String} format
+ */
+InlineResponse20064.prototype['format'] = undefined;
+
+/**
+ * @member {String} csv_delimiter
+ */
+InlineResponse20064.prototype['csv_delimiter'] = undefined;
+
+/**
+ * @member {String} timezone
+ */
+InlineResponse20064.prototype['timezone'] = undefined;
+
+/**
+ * @member {Number} created_at
+ */
+InlineResponse20064.prototype['created_at'] = undefined;
+
+/**
+ * @member {Number} start_ts
+ */
+InlineResponse20064.prototype['start_ts'] = undefined;
+
+/**
+ * @member {Number} end_ts
+ */
+InlineResponse20064.prototype['end_ts'] = undefined;
+
+/**
+ * @member {Array.<String>} channel_urls
+ */
+InlineResponse20064.prototype['channel_urls'] = undefined;
+
+/**
+ * @member {Array.<String>} channel_custom_types
+ */
+InlineResponse20064.prototype['channel_custom_types'] = undefined;
+
+/**
+ * @member {Array.<String>} sender_ids
+ */
+InlineResponse20064.prototype['sender_ids'] = undefined;
+
+/**
+ * @member {module:model/InlineResponse20063File} file
+ */
+InlineResponse20064.prototype['file'] = undefined;
+
+/**
+ * @member {Array.<Number>} user_ids
+ */
+InlineResponse20064.prototype['user_ids'] = undefined;
 
 
 

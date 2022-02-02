@@ -54,13 +54,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcAcceptInvitationData': new SendbirdPlatformSdk.GcAcceptInvitationData() // GcAcceptInvitationData | 
 };
-apiInstance.gcAcceptInvitation(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcAcceptInvitation(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -88,7 +87,7 @@ No authorization required
 
 ## gcBanUser
 
-> InlineResponse20034BannedList gcBanUser(channelUrl, opts)
+> InlineResponse20033BannedList gcBanUser(channelUrl, opts)
 
 Ban a user
 
@@ -105,13 +104,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcBanUserData': new SendbirdPlatformSdk.GcBanUserData() // GcBanUserData | 
 };
-apiInstance.gcBanUser(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcBanUser(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -125,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20034BannedList**](InlineResponse20034BannedList.md)
+[**InlineResponse20033BannedList**](InlineResponse20033BannedList.md)
 
 ### Authorization
 
@@ -157,13 +155,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'deleteAll': true // Boolean | 
 };
-apiInstance.gcCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.gcCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -187,12 +184,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## gcCheckIfMemberById
 
-> InlineResponse20038 gcCheckIfMemberById(channelUrl, userId, opts)
+> InlineResponse20037 gcCheckIfMemberById(channelUrl, userId, opts)
 
 Check if member
 
@@ -209,13 +206,12 @@ let userId = "userId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.gcCheckIfMemberById(channelUrl, userId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcCheckIfMemberById(channelUrl, userId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -229,7 +225,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20038**](InlineResponse20038.md)
+[**InlineResponse20037**](InlineResponse20037.md)
 
 ### Authorization
 
@@ -259,13 +255,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcCreateChannelData': new SendbirdPlatformSdk.GcCreateChannelData() // GcCreateChannelData | 
 };
-apiInstance.gcCreateChannel(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcCreateChannel(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -309,13 +304,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcDeclineInvitationData': new SendbirdPlatformSdk.GcDeclineInvitationData() // GcDeclineInvitationData | 
 };
-apiInstance.gcDeclineInvitation(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.gcDeclineInvitation(channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -338,7 +332,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## gcDeleteChannelByUrl
@@ -359,13 +353,12 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.gcDeleteChannelByUrl(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.gcDeleteChannelByUrl(channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -387,7 +380,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## gcFreezeChannel
@@ -409,13 +402,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcFreezeChannelData': new SendbirdPlatformSdk.GcFreezeChannelData() // GcFreezeChannelData | 
 };
-apiInstance.gcFreezeChannel(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcFreezeChannel(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -460,13 +452,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcHideOrArchiveChannelData': new SendbirdPlatformSdk.GcHideOrArchiveChannelData() // GcHideOrArchiveChannelData | 
 };
-apiInstance.gcHideOrArchiveChannel(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.gcHideOrArchiveChannel(channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -489,7 +480,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## gcInviteAsMembers
@@ -511,13 +502,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcInviteAsMembersData': new SendbirdPlatformSdk.GcInviteAsMembersData() // GcInviteAsMembersData | 
 };
-apiInstance.gcInviteAsMembers(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcInviteAsMembers(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -562,13 +552,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcJoinChannelData': new SendbirdPlatformSdk.GcJoinChannelData() // GcJoinChannelData | 
 };
-apiInstance.gcJoinChannel(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.gcJoinChannel(channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -591,7 +580,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## gcLeaveChannel
@@ -613,13 +602,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcLeaveChannelData': new SendbirdPlatformSdk.GcLeaveChannelData() // GcLeaveChannelData | 
 };
-apiInstance.gcLeaveChannel(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.gcLeaveChannel(channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -642,12 +630,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## gcListBannedUsers
 
-> InlineResponse20034 gcListBannedUsers(channelUrl, opts)
+> InlineResponse20033 gcListBannedUsers(channelUrl, opts)
 
 List banned users
 
@@ -665,13 +653,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.gcListBannedUsers(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcListBannedUsers(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -686,7 +673,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20034**](InlineResponse20034.md)
+[**InlineResponse20033**](InlineResponse20033.md)
 
 ### Authorization
 
@@ -700,7 +687,7 @@ No authorization required
 
 ## gcListChannels
 
-> InlineResponse20018 gcListChannels(opts)
+> InlineResponse20017 gcListChannels(opts)
 
 List channels
 
@@ -757,13 +744,12 @@ let opts = {
   'membersIn': "membersIn_example", // String | 
   'userId': "userId_example" // String | 
 };
-apiInstance.gcListChannels(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcListChannels(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -817,7 +803,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**InlineResponse20017**](InlineResponse20017.md)
 
 ### Authorization
 
@@ -831,7 +817,7 @@ No authorization required
 
 ## gcListMembers
 
-> InlineResponse20037 gcListMembers(channelUrl, opts)
+> InlineResponse20036 gcListMembers(channelUrl, opts)
 
 List members
 
@@ -856,13 +842,12 @@ let opts = {
   'mutedMemberFilter': "mutedMemberFilter_example", // String | 
   'nicknameStartswith': "nicknameStartswith_example" // String | 
 };
-apiInstance.gcListMembers(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcListMembers(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -884,7 +869,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20036**](InlineResponse20036.md)
 
 ### Authorization
 
@@ -898,7 +883,7 @@ No authorization required
 
 ## gcListMutedUsers
 
-> InlineResponse20032 gcListMutedUsers(channelUrl, opts)
+> InlineResponse20031 gcListMutedUsers(channelUrl, opts)
 
 List muted users
 
@@ -916,13 +901,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.gcListMutedUsers(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcListMutedUsers(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -937,7 +921,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20032**](InlineResponse20032.md)
+[**InlineResponse20031**](InlineResponse20031.md)
 
 ### Authorization
 
@@ -951,7 +935,7 @@ No authorization required
 
 ## gcListOperators
 
-> InlineResponse20035 gcListOperators(channelUrl, opts)
+> InlineResponse20034 gcListOperators(channelUrl, opts)
 
 List operators
 
@@ -969,13 +953,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.gcListOperators(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcListOperators(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -990,7 +973,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20035**](InlineResponse20035.md)
+[**InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -1021,13 +1004,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcMuteUserData': new SendbirdPlatformSdk.GcMuteUserData() // GcMuteUserData | 
 };
-apiInstance.gcMuteUser(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcMuteUser(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1055,7 +1037,7 @@ No authorization required
 
 ## gcRegisterOperators
 
-> InlineResponse20039 gcRegisterOperators(channelUrl, opts)
+> InlineResponse20038 gcRegisterOperators(channelUrl, opts)
 
 Register operators
 
@@ -1072,13 +1054,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcRegisterOperatorsData': new SendbirdPlatformSdk.GcRegisterOperatorsData() // GcRegisterOperatorsData | 
 };
-apiInstance.gcRegisterOperators(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcRegisterOperators(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1092,7 +1073,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -1123,13 +1104,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcResetChatHistoryData': new SendbirdPlatformSdk.GcResetChatHistoryData() // GcResetChatHistoryData | 
 };
-apiInstance.gcResetChatHistory(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.gcResetChatHistory(channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1152,7 +1132,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## gcUnbanUserById
@@ -1174,13 +1154,12 @@ let bannedUserId = "bannedUserId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.gcUnbanUserById(channelUrl, bannedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.gcUnbanUserById(channelUrl, bannedUserId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1203,7 +1182,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## gcUnhideOrUnarchiveChannel
@@ -1226,13 +1205,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'shouldUnhideAll': true // Boolean | 
 };
-apiInstance.gcUnhideOrUnarchiveChannel(channelUrl, userId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.gcUnhideOrUnarchiveChannel(channelUrl, userId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1256,7 +1234,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## gcUnmuteUserById
@@ -1278,13 +1256,12 @@ let mutedUserId = "mutedUserId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.gcUnmuteUserById(channelUrl, mutedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.gcUnmuteUserById(channelUrl, mutedUserId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1307,7 +1284,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## gcUpdateBanById
@@ -1330,13 +1307,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcUpdateBanByIdData': new SendbirdPlatformSdk.GcUpdateBanByIdData() // GcUpdateBanByIdData | 
 };
-apiInstance.gcUpdateBanById(channelUrl, bannedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcUpdateBanById(channelUrl, bannedUserId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1382,13 +1358,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcUpdateChannelByUrlData': new SendbirdPlatformSdk.GcUpdateChannelByUrlData() // GcUpdateChannelByUrlData | 
 };
-apiInstance.gcUpdateChannelByUrl(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcUpdateChannelByUrl(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1433,13 +1408,12 @@ let bannedUserId = "bannedUserId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.gcViewBanById(channelUrl, bannedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcViewBanById(channelUrl, bannedUserId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1488,13 +1462,12 @@ let opts = {
   'readReceipt': true, // Boolean | 
   'member': true // Boolean | 
 };
-apiInstance.gcViewChannelByUrl(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcViewChannelByUrl(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1526,7 +1499,7 @@ No authorization required
 
 ## gcViewMuteById
 
-> InlineResponse20036 gcViewMuteById(channelUrl, mutedUserId, opts)
+> InlineResponse20035 gcViewMuteById(channelUrl, mutedUserId, opts)
 
 View a mute
 
@@ -1543,13 +1516,12 @@ let mutedUserId = "mutedUserId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.gcViewMuteById(channelUrl, mutedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcViewMuteById(channelUrl, mutedUserId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1563,7 +1535,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20036**](InlineResponse20036.md)
+[**InlineResponse20035**](InlineResponse20035.md)
 
 ### Authorization
 

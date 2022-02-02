@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pushConfigurations** | [**[InlineResponse2004PushConfigurations]**](InlineResponse2004PushConfigurations.md) |  | [optional] 
+**pushMessageTemplates** | [**[InlineResponse2004PushMessageTemplates]**](InlineResponse2004PushMessageTemplates.md) |  | [optional] 
 
 

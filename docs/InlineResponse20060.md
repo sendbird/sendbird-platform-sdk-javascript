@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**emojis** | [**[InlineResponse20057Emojis]**](InlineResponse20057Emojis.md) |  | [optional] 
+**metadata** | **{String: String}** |  | [optional] 
+**upsert** | **Boolean** |  | [optional] 
 
 

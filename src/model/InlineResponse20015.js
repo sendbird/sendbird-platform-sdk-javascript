@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import InlineResponse20015PushMessageTemplates from './InlineResponse20015PushMessageTemplates';
 
 /**
  * The InlineResponse20015 model module.
@@ -47,8 +48,8 @@ class InlineResponse20015 {
         if (data) {
             obj = obj || new InlineResponse20015();
 
-            if (data.hasOwnProperty('push_configurations')) {
-                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], 'String');
+            if (data.hasOwnProperty('push_message_templates')) {
+                obj['push_message_templates'] = ApiClient.convertToType(data['push_message_templates'], [InlineResponse20015PushMessageTemplates]);
             }
         }
         return obj;
@@ -58,9 +59,9 @@ class InlineResponse20015 {
 }
 
 /**
- * @member {String} push_configurations
+ * @member {Array.<module:model/InlineResponse20015PushMessageTemplates>} push_message_templates
  */
-InlineResponse20015.prototype['push_configurations'] = undefined;
+InlineResponse20015.prototype['push_message_templates'] = undefined;
 
 
 

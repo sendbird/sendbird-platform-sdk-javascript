@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**webhook** | [**InlineResponse20068Webhook**](InlineResponse20068Webhook.md) |  | [optional] 
+**requests** | [**[InlineResponse20068Requests]**](InlineResponse20068Requests.md) |  | [optional] 
+**next** | **String** |  | [optional] 
 
 

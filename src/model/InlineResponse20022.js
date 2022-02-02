@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import InlineResponse20022BannedChannels from './InlineResponse20022BannedChannels';
 
 /**
  * The InlineResponse20022 model module.
@@ -47,8 +48,11 @@ class InlineResponse20022 {
         if (data) {
             obj = obj || new InlineResponse20022();
 
-            if (data.hasOwnProperty('count_preference')) {
-                obj['count_preference'] = ApiClient.convertToType(data['count_preference'], 'String');
+            if (data.hasOwnProperty('banned_channels')) {
+                obj['banned_channels'] = ApiClient.convertToType(data['banned_channels'], [InlineResponse20022BannedChannels]);
+            }
+            if (data.hasOwnProperty('next')) {
+                obj['next'] = ApiClient.convertToType(data['next'], 'String');
             }
         }
         return obj;
@@ -58,9 +62,14 @@ class InlineResponse20022 {
 }
 
 /**
- * @member {String} count_preference
+ * @member {Array.<module:model/InlineResponse20022BannedChannels>} banned_channels
  */
-InlineResponse20022.prototype['count_preference'] = undefined;
+InlineResponse20022.prototype['banned_channels'] = undefined;
+
+/**
+ * @member {String} next
+ */
+InlineResponse20022.prototype['next'] = undefined;
 
 
 

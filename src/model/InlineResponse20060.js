@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20057Emojis from './InlineResponse20057Emojis';
 
 /**
  * The InlineResponse20060 model module.
@@ -48,8 +47,11 @@ class InlineResponse20060 {
         if (data) {
             obj = obj || new InlineResponse20060();
 
-            if (data.hasOwnProperty('emojis')) {
-                obj['emojis'] = ApiClient.convertToType(data['emojis'], [InlineResponse20057Emojis]);
+            if (data.hasOwnProperty('metadata')) {
+                obj['metadata'] = ApiClient.convertToType(data['metadata'], {'String': 'String'});
+            }
+            if (data.hasOwnProperty('upsert')) {
+                obj['upsert'] = ApiClient.convertToType(data['upsert'], 'Boolean');
             }
         }
         return obj;
@@ -59,9 +61,14 @@ class InlineResponse20060 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse20057Emojis>} emojis
+ * @member {Object.<String, String>} metadata
  */
-InlineResponse20060.prototype['emojis'] = undefined;
+InlineResponse20060.prototype['metadata'] = undefined;
+
+/**
+ * @member {Boolean} upsert
+ */
+InlineResponse20060.prototype['upsert'] = undefined;
 
 
 

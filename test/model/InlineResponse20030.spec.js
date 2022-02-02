@@ -54,8 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20030);
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
+    it('should have the property channels (base name: "channels")', function() {
+      // uncomment below and update the code to test the property channels
+      //var instance = new SendbirdPlatformSdk.InlineResponse20030();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property next (base name: "next")', function() {
+      // uncomment below and update the code to test the property next
       //var instance = new SendbirdPlatformSdk.InlineResponse20030();
       //expect(instance).to.be();
     });

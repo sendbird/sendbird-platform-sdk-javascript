@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **String** |  | [optional] 
-**createdAt** | **Number** |  | [optional] 
+**apiTokens** | [**[InlineResponse2007]**](InlineResponse2007.md) |  | [optional] 
 
 

@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20048Messages from './InlineResponse20048Messages';
 
 /**
  * The InlineResponse20048 model module.
@@ -48,8 +47,8 @@ class InlineResponse20048 {
         if (data) {
             obj = obj || new InlineResponse20048();
 
-            if (data.hasOwnProperty('messages')) {
-                obj['messages'] = ApiClient.convertToType(data['messages'], [InlineResponse20048Messages]);
+            if (data.hasOwnProperty('total')) {
+                obj['total'] = ApiClient.convertToType(data['total'], 'Number');
             }
         }
         return obj;
@@ -59,9 +58,9 @@ class InlineResponse20048 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse20048Messages>} messages
+ * @member {Number} total
  */
-InlineResponse20048.prototype['messages'] = undefined;
+InlineResponse20048.prototype['total'] = undefined;
 
 
 

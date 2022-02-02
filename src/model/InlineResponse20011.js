@@ -47,8 +47,8 @@ class InlineResponse20011 {
         if (data) {
             obj = obj || new InlineResponse20011();
 
-            if (data.hasOwnProperty('mau')) {
-                obj['mau'] = ApiClient.convertToType(data['mau'], 'Number');
+            if (data.hasOwnProperty('dau')) {
+                obj['dau'] = ApiClient.convertToType(data['dau'], 'Number');
             }
         }
         return obj;
@@ -58,9 +58,9 @@ class InlineResponse20011 {
 }
 
 /**
- * @member {Number} mau
+ * @member {Number} dau
  */
-InlineResponse20011.prototype['mau'] = undefined;
+InlineResponse20011.prototype['dau'] = undefined;
 
 
 

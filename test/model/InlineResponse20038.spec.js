@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20038);
     });
 
-    it('should have the property isMember (base name: "is_member")', function() {
-      // uncomment below and update the code to test the property isMember
+    it('should have the property operatorIds (base name: "operator_ids")', function() {
+      // uncomment below and update the code to test the property operatorIds
       //var instance = new SendbirdPlatformSdk.InlineResponse20038();
       //expect(instance).to.be();
     });

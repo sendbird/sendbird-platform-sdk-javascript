@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20044);
     });
 
-    it('should have the property openStatus (base name: "open_status")', function() {
-      // uncomment below and update the code to test the property openStatus
+    it('should have the property statistics (base name: "statistics")', function() {
+      // uncomment below and update the code to test the property statistics
       //var instance = new SendbirdPlatformSdk.InlineResponse20044();
       //expect(instance).to.be();
     });
 
-    it('should have the property next (base name: "next")', function() {
-      // uncomment below and update the code to test the property next
+    it('should have the property week (base name: "week")', function() {
+      // uncomment below and update the code to test the property week
       //var instance = new SendbirdPlatformSdk.InlineResponse20044();
       //expect(instance).to.be();
     });

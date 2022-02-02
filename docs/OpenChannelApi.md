@@ -28,7 +28,7 @@ Method | HTTP request | Description
 
 ## ocBanUser
 
-> InlineResponse20034BannedList ocBanUser(channelUrl, opts)
+> InlineResponse20033BannedList ocBanUser(channelUrl, opts)
 
 Ban a user
 
@@ -45,13 +45,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'ocBanUserData': new SendbirdPlatformSdk.OcBanUserData() // OcBanUserData | 
 };
-apiInstance.ocBanUser(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocBanUser(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -65,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20034BannedList**](InlineResponse20034BannedList.md)
+[**InlineResponse20033BannedList**](InlineResponse20033BannedList.md)
 
 ### Authorization
 
@@ -97,13 +96,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'deleteAll': true // Boolean | 
 };
-apiInstance.ocCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.ocCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -127,7 +125,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## ocCreateChannel
@@ -148,13 +146,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'ocCreateChannelData': new SendbirdPlatformSdk.OcCreateChannelData() // OcCreateChannelData | 
 };
-apiInstance.ocCreateChannel(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocCreateChannel(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -197,13 +194,12 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.ocDeleteChannelByUrl(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.ocDeleteChannelByUrl(channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -225,7 +221,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## ocFreezeChannel
@@ -247,13 +243,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'ocFreezeChannelData': new SendbirdPlatformSdk.OcFreezeChannelData() // OcFreezeChannelData | 
 };
-apiInstance.ocFreezeChannel(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocFreezeChannel(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -281,7 +276,7 @@ No authorization required
 
 ## ocListBannedUsers
 
-> InlineResponse20034 ocListBannedUsers(channelUrl, opts)
+> InlineResponse20033 ocListBannedUsers(channelUrl, opts)
 
 List banned users
 
@@ -299,13 +294,178 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.ocListBannedUsers(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocListBannedUsers(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **channelUrl** | **String**|  | 
+ **apiToken** | **String**|  | [optional] 
+ **token** | **String**|  | [optional] 
+ **limit** | **Number**|  | [optional] 
+
+### Return type
+
+[**InlineResponse20033**](InlineResponse20033.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ocListChannels
+
+> InlineResponse20030 ocListChannels(opts)
+
+List channels
+
+## List channels  Retrieves a list of open channels. You can query the list using various parameters.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-channels ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let opts = {
+  'apiToken': {{API_TOKEN}}, // String | 
+  'token': "token_example", // String | 
+  'limit': 56, // Number | 
+  'customTypes': "customTypes_example", // String | 
+  'nameContains': "nameContains_example", // String | 
+  'urlContains': "urlContains_example", // String | 
+  'showFrozen': true, // Boolean | 
+  'showMetadata': true, // Boolean | 
+  'customType': "customType_example" // String | 
+};
+apiInstance.ocListChannels(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | [optional] 
+ **token** | **String**|  | [optional] 
+ **limit** | **Number**|  | [optional] 
+ **customTypes** | **String**|  | [optional] 
+ **nameContains** | **String**|  | [optional] 
+ **urlContains** | **String**|  | [optional] 
+ **showFrozen** | **Boolean**|  | [optional] 
+ **showMetadata** | **Boolean**|  | [optional] 
+ **customType** | **String**|  | [optional] 
+
+### Return type
+
+[**InlineResponse20030**](InlineResponse20030.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ocListMutedUsers
+
+> InlineResponse20031 ocListMutedUsers(channelUrl, opts)
+
+List muted users
+
+## List muted users  Retrieves a list of muted users in the channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-muted-users ----------------------------   &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the channel to retrieve a list of muted users.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let channelUrl = "channelUrl_example"; // String | 
+let opts = {
+  'apiToken': {{API_TOKEN}}, // String | 
+  'token': "token_example", // String | 
+  'limit': 56 // Number | 
+};
+apiInstance.ocListMutedUsers(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **channelUrl** | **String**|  | 
+ **apiToken** | **String**|  | [optional] 
+ **token** | **String**|  | [optional] 
+ **limit** | **Number**|  | [optional] 
+
+### Return type
+
+[**InlineResponse20031**](InlineResponse20031.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## ocListOperators
+
+> InlineResponse20034 ocListOperators(channelUrl, opts)
+
+List operators
+
+## List operators  Retrieves a list of operators of an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-operators ----------------------------   &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the channel to retrieve a list of operators.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+
+let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let channelUrl = "channelUrl_example"; // String | 
+let opts = {
+  'apiToken': {{API_TOKEN}}, // String | 
+  'token': "token_example", // String | 
+  'limit': 56 // Number | 
+};
+apiInstance.ocListOperators(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -332,178 +492,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## ocListChannels
-
-> InlineResponse20031 ocListChannels(opts)
-
-List channels
-
-## List channels  Retrieves a list of open channels. You can query the list using various parameters.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-channels ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
-let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
-  'token': "token_example", // String | 
-  'limit': 56, // Number | 
-  'customTypes': "customTypes_example", // String | 
-  'nameContains': "nameContains_example", // String | 
-  'urlContains': "urlContains_example", // String | 
-  'showFrozen': true, // Boolean | 
-  'showMetadata': true, // Boolean | 
-  'customType': "customType_example" // String | 
-};
-apiInstance.ocListChannels(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
- **token** | **String**|  | [optional] 
- **limit** | **Number**|  | [optional] 
- **customTypes** | **String**|  | [optional] 
- **nameContains** | **String**|  | [optional] 
- **urlContains** | **String**|  | [optional] 
- **showFrozen** | **Boolean**|  | [optional] 
- **showMetadata** | **Boolean**|  | [optional] 
- **customType** | **String**|  | [optional] 
-
-### Return type
-
-[**InlineResponse20031**](InlineResponse20031.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## ocListMutedUsers
-
-> InlineResponse20032 ocListMutedUsers(channelUrl, opts)
-
-List muted users
-
-## List muted users  Retrieves a list of muted users in the channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-muted-users ----------------------------   &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the channel to retrieve a list of muted users.
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
-let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
-  'token': "token_example", // String | 
-  'limit': 56 // Number | 
-};
-apiInstance.ocListMutedUsers(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
- **token** | **String**|  | [optional] 
- **limit** | **Number**|  | [optional] 
-
-### Return type
-
-[**InlineResponse20032**](InlineResponse20032.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## ocListOperators
-
-> InlineResponse20035 ocListOperators(channelUrl, opts)
-
-List operators
-
-## List operators  Retrieves a list of operators of an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-operators ----------------------------   &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the channel to retrieve a list of operators.
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
-
-let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
-let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
-  'token': "token_example", // String | 
-  'limit': 56 // Number | 
-};
-apiInstance.ocListOperators(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
- **token** | **String**|  | [optional] 
- **limit** | **Number**|  | [optional] 
-
-### Return type
-
-[**InlineResponse20035**](InlineResponse20035.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
 ## ocListParticipants
 
-> InlineResponse20033 ocListParticipants(channelUrl, opts)
+> InlineResponse20032 ocListParticipants(channelUrl, opts)
 
 List participants
 
@@ -521,13 +512,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.ocListParticipants(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocListParticipants(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -542,7 +532,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 
@@ -573,13 +563,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'ocMuteUserData': new SendbirdPlatformSdk.OcMuteUserData() // OcMuteUserData | 
 };
-apiInstance.ocMuteUser(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocMuteUser(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -624,13 +613,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'ocRegisterOperatorsData': new SendbirdPlatformSdk.OcRegisterOperatorsData() // OcRegisterOperatorsData | 
 };
-apiInstance.ocRegisterOperators(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.ocRegisterOperators(channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -653,7 +641,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## ocUnbanUserById
@@ -675,13 +663,12 @@ let bannedUserId = "bannedUserId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.ocUnbanUserById(channelUrl, bannedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.ocUnbanUserById(channelUrl, bannedUserId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -704,7 +691,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## ocUnmuteUserById
@@ -726,13 +713,12 @@ let mutedUserId = "mutedUserId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.ocUnmuteUserById(channelUrl, mutedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.ocUnmuteUserById(channelUrl, mutedUserId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -755,7 +741,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## ocUpdateBanById
@@ -778,13 +764,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'ocUpdateBanByIdData': new SendbirdPlatformSdk.OcUpdateBanByIdData() // OcUpdateBanByIdData | 
 };
-apiInstance.ocUpdateBanById(channelUrl, bannedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocUpdateBanById(channelUrl, bannedUserId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -830,13 +815,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'ocUpdateChannelByUrlData': new SendbirdPlatformSdk.OcUpdateChannelByUrlData() // OcUpdateChannelByUrlData | 
 };
-apiInstance.ocUpdateChannelByUrl(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocUpdateChannelByUrl(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -881,13 +865,12 @@ let bannedUserId = "bannedUserId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.ocViewBanById(channelUrl, bannedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocViewBanById(channelUrl, bannedUserId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -931,13 +914,12 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.ocViewChannelByUrl(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocViewChannelByUrl(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -964,7 +946,7 @@ No authorization required
 
 ## ocViewMuteById
 
-> InlineResponse20036 ocViewMuteById(channelUrl, mutedUserId, opts)
+> InlineResponse20035 ocViewMuteById(channelUrl, mutedUserId, opts)
 
 View a mute
 
@@ -981,13 +963,12 @@ let mutedUserId = "mutedUserId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.ocViewMuteById(channelUrl, mutedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocViewMuteById(channelUrl, mutedUserId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1001,7 +982,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20036**](InlineResponse20036.md)
+[**InlineResponse20035**](InlineResponse20035.md)
 
 ### Authorization
 

@@ -48,8 +48,8 @@ class InlineResponse20025 {
         if (data) {
             obj = obj || new InlineResponse20025();
 
-            if (data.hasOwnProperty('tokens')) {
-                obj['tokens'] = ApiClient.convertToType(data['tokens'], ['String']);
+            if (data.hasOwnProperty('token')) {
+                obj['token'] = ApiClient.convertToType(data['token'], 'String');
             }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -65,9 +65,9 @@ class InlineResponse20025 {
 }
 
 /**
- * @member {Array.<String>} tokens
+ * @member {String} token
  */
-InlineResponse20025.prototype['tokens'] = undefined;
+InlineResponse20025.prototype['token'] = undefined;
 
 /**
  * @member {String} type

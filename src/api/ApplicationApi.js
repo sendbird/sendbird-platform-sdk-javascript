@@ -18,6 +18,7 @@ import AddFcmPushConfigurationData from '../model/AddFcmPushConfigurationData';
 import AddHmsPushConfigurationData from '../model/AddHmsPushConfigurationData';
 import AddIpToWhitelistData from '../model/AddIpToWhitelistData';
 import GenerateSecondaryApiTokenData from '../model/GenerateSecondaryApiTokenData';
+import InlineResponse200 from '../model/InlineResponse200';
 import InlineResponse2001 from '../model/InlineResponse2001';
 import InlineResponse20010 from '../model/InlineResponse20010';
 import InlineResponse20011 from '../model/InlineResponse20011';
@@ -25,7 +26,6 @@ import InlineResponse20012 from '../model/InlineResponse20012';
 import InlineResponse20013 from '../model/InlineResponse20013';
 import InlineResponse20014 from '../model/InlineResponse20014';
 import InlineResponse20015 from '../model/InlineResponse20015';
-import InlineResponse20016 from '../model/InlineResponse20016';
 import InlineResponse2002 from '../model/InlineResponse2002';
 import InlineResponse2003 from '../model/InlineResponse2003';
 import InlineResponse2004 from '../model/InlineResponse2004';
@@ -59,13 +59,6 @@ export default class ApplicationApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the addApnsPushConfiguration operation.
-     * @callback module:api/ApplicationApi~addApnsPushConfigurationCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2004} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Add an APNs push configuration
@@ -73,10 +66,9 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddApnsPushConfigurationData} opts.addApnsPushConfigurationData 
-     * @param {module:api/ApplicationApi~addApnsPushConfigurationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2004}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2003} and HTTP response
      */
-    addApnsPushConfiguration(opts, callback) {
+    addApnsPushConfigurationWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['addApnsPushConfigurationData'];
 
@@ -93,21 +85,29 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2004;
+      let returnType = InlineResponse2003;
       return this.apiClient.callApi(
         '/v3/applications/push/apns', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the addFcmPushConfiguration operation.
-     * @callback module:api/ApplicationApi~addFcmPushConfigurationCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2002} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Add an APNs push configuration
+     * ## Add an APNs push configuration  Registers an APNs (Apple Push Notification service) push configuration for your client app. To send push notifications to iOS devices, your should first register the APNs push configuration. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  > __Note__: To upload a [.p12](https://sendbird.com/docs/chat/v3/ios/guides/push-notifications#2-step-3-export-a-p12-file-and-upload-to-sendbird-dashboard) certificate file to Sendbird server, you should send a [Multipart request](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api#2-headers-3-multipart-requests).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-an-apns-push-configuration
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/AddApnsPushConfigurationData} opts.addApnsPushConfigurationData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2003}
      */
+    addApnsPushConfiguration(opts) {
+      return this.addApnsPushConfigurationWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Add a FCM push configuration
@@ -115,10 +115,9 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddFcmPushConfigurationData} opts.addFcmPushConfigurationData 
-     * @param {module:api/ApplicationApi~addFcmPushConfigurationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2002}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
      */
-    addFcmPushConfiguration(opts, callback) {
+    addFcmPushConfigurationWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['addFcmPushConfigurationData'];
 
@@ -135,21 +134,29 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2002;
+      let returnType = InlineResponse2001;
       return this.apiClient.callApi(
         '/v3/applications/push/fcm', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the addHmsPushConfiguration operation.
-     * @callback module:api/ApplicationApi~addHmsPushConfigurationCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2003} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Add a FCM push configuration
+     * ## Add a FCM push configuration  Registers a FCM (Firebase Cloud Messaging) push configuration for your client app. To send push notifications to Android devices, you should first register the FCM push configuration. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-a-fcm-push-configuration
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/AddFcmPushConfigurationData} opts.addFcmPushConfigurationData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
      */
+    addFcmPushConfiguration(opts) {
+      return this.addFcmPushConfigurationWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Add an HMS push configuration
@@ -157,10 +164,9 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddHmsPushConfigurationData} opts.addHmsPushConfigurationData 
-     * @param {module:api/ApplicationApi~addHmsPushConfigurationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2003}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
      */
-    addHmsPushConfiguration(opts, callback) {
+    addHmsPushConfigurationWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['addHmsPushConfigurationData'];
 
@@ -177,21 +183,29 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2003;
+      let returnType = InlineResponse2002;
       return this.apiClient.callApi(
         '/v3/applications/push/hms', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the addIpToWhitelist operation.
-     * @callback module:api/ApplicationApi~addIpToWhitelistCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2007} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Add an HMS push configuration
+     * ## Add an HMS push configuration  Registers an HMS (Huawei Mobile Services) push configuration for your client app. To send push notifications to Android devices for HMS, you should first register the HMS push configuration. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-an-hms-push-configuration
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/AddHmsPushConfigurationData} opts.addHmsPushConfigurationData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
      */
+    addHmsPushConfiguration(opts) {
+      return this.addHmsPushConfigurationWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Add an IP to a whitelist
@@ -199,10 +213,9 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddIpToWhitelistData} opts.addIpToWhitelistData 
-     * @param {module:api/ApplicationApi~addIpToWhitelistCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2007}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2006} and HTTP response
      */
-    addIpToWhitelist(opts, callback) {
+    addIpToWhitelistWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['addIpToWhitelistData'];
 
@@ -219,21 +232,29 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2007;
+      let returnType = InlineResponse2006;
       return this.apiClient.callApi(
         '/v3/applications/settings/ip_whitelist', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteAllowedIpsFromWhitelist operation.
-     * @callback module:api/ApplicationApi~deleteAllowedIpsFromWhitelistCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2007} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Add an IP to a whitelist
+     * ## Add an IP to a whitelist  Adds IP addresses and ranges to your Sendbird application settings. Both currently added and any previously added IPs are granted API access. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-an-ip-to-a-whitelist
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/AddIpToWhitelistData} opts.addIpToWhitelistData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2006}
      */
+    addIpToWhitelist(opts) {
+      return this.addIpToWhitelistWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete allowed IPs from a whitelist
@@ -241,10 +262,9 @@ export default class ApplicationApi {
      * @param {Array.<String>} ipWhitelistAddresses 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/ApplicationApi~deleteAllowedIpsFromWhitelistCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2007}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2006} and HTTP response
      */
-    deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts, callback) {
+    deleteAllowedIpsFromWhitelistWithHttpInfo(ipWhitelistAddresses, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'ipWhitelistAddresses' is set
@@ -266,21 +286,29 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2007;
+      let returnType = InlineResponse2006;
       return this.apiClient.callApi(
         '/v3/applications/settings/ip_whitelist', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteApnsCertificateById operation.
-     * @callback module:api/ApplicationApi~deleteApnsCertificateByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20014} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete allowed IPs from a whitelist
+     * ## Delete allowed IPs from a whitelist  Deletes allowed IPs from the whitelist by specifying their IP addresses or ranges. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-delete-allowed-ips-from-a-whitelist
+     * @param {Array.<String>} ipWhitelistAddresses 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2006}
      */
+    deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts) {
+      return this.deleteAllowedIpsFromWhitelistWithHttpInfo(ipWhitelistAddresses, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete an APNs certificate
@@ -288,10 +316,9 @@ export default class ApplicationApi {
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/ApplicationApi~deleteApnsCertificateByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20014}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20013} and HTTP response
      */
-    deleteApnsCertificateById(providerId, opts, callback) {
+    deleteApnsCertificateByIdWithHttpInfo(providerId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'providerId' is set
@@ -313,21 +340,29 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20014;
+      let returnType = InlineResponse20013;
       return this.apiClient.callApi(
         '/v3/applications/push/apns/cert/{provider_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the generateSecondaryApiToken operation.
-     * @callback module:api/ApplicationApi~generateSecondaryApiTokenCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2008} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete an APNs certificate
+     * ## Delete an APNs certificate  Deletes a specific APNs certificate.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-delete-an-apns-certificate ----------------------------
+     * @param {String} providerId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20013}
      */
+    deleteApnsCertificateById(providerId, opts) {
+      return this.deleteApnsCertificateByIdWithHttpInfo(providerId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Generate a secondary API token
@@ -335,10 +370,9 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/GenerateSecondaryApiTokenData} opts.generateSecondaryApiTokenData 
-     * @param {module:api/ApplicationApi~generateSecondaryApiTokenCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2008}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2007} and HTTP response
      */
-    generateSecondaryApiToken(opts, callback) {
+    generateSecondaryApiTokenWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['generateSecondaryApiTokenData'];
 
@@ -355,21 +389,29 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2008;
+      let returnType = InlineResponse2007;
       return this.apiClient.callApi(
         '/v3/applications/api_tokens', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the listPushConfigurations operation.
-     * @callback module:api/ApplicationApi~listPushConfigurationsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20013} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Generate a secondary API token
+     * ## Generate a secondary API token  Generates a new secondary API token.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-generate-a-secondary-api-token
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/GenerateSecondaryApiTokenData} opts.generateSecondaryApiTokenData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2007}
      */
+    generateSecondaryApiToken(opts) {
+      return this.generateSecondaryApiTokenWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * List push configurations
@@ -377,10 +419,9 @@ export default class ApplicationApi {
      * @param {String} pushType 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/ApplicationApi~listPushConfigurationsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20013}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20012} and HTTP response
      */
-    listPushConfigurations(pushType, opts, callback) {
+    listPushConfigurationsWithHttpInfo(pushType, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'pushType' is set
@@ -402,31 +443,38 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20013;
+      let returnType = InlineResponse20012;
       return this.apiClient.callApi(
         '/v3/applications/push/{push_type}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the listPushNotificationContentTemplates operation.
-     * @callback module:api/ApplicationApi~listPushNotificationContentTemplatesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2005} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * List push configurations
+     * ## List push configurations  Retrieves a list of an application's registered push configurations.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-push-configurations ----------------------------
+     * @param {String} pushType 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20012}
      */
+    listPushConfigurations(pushType, opts) {
+      return this.listPushConfigurationsWithHttpInfo(pushType, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * List push notification content templates
      * ## List push notification content templates  Retrieves a list of push notification content templates of an application.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-push-notification-content-templates
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/ApplicationApi~listPushNotificationContentTemplatesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2005}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2004} and HTTP response
      */
-    listPushNotificationContentTemplates(opts, callback) {
+    listPushNotificationContentTemplatesWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -443,31 +491,37 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2005;
+      let returnType = InlineResponse2004;
       return this.apiClient.callApi(
         '/v3/applications/push/message_templates', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the listSecondaryApiTokens operation.
-     * @callback module:api/ApplicationApi~listSecondaryApiTokensCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2009} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * List push notification content templates
+     * ## List push notification content templates  Retrieves a list of push notification content templates of an application.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-push-notification-content-templates
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2004}
      */
+    listPushNotificationContentTemplates(opts) {
+      return this.listPushNotificationContentTemplatesWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * List secondary API tokens
      * ## List secondary API tokens  Retrieves a list of secondary API tokens.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-secondary-api-tokens
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/ApplicationApi~listSecondaryApiTokensCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2009}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2008} and HTTP response
      */
-    listSecondaryApiTokens(opts, callback) {
+    listSecondaryApiTokensWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -484,21 +538,28 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2009;
+      let returnType = InlineResponse2008;
       return this.apiClient.callApi(
         '/v3/applications/api_tokens', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the removePushConfigurationById operation.
-     * @callback module:api/ApplicationApi~removePushConfigurationByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20014} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * List secondary API tokens
+     * ## List secondary API tokens  Retrieves a list of secondary API tokens.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-secondary-api-tokens
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2008}
      */
+    listSecondaryApiTokens(opts) {
+      return this.listSecondaryApiTokensWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Remove a push configuration
@@ -507,10 +568,9 @@ export default class ApplicationApi {
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/ApplicationApi~removePushConfigurationByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20014}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20013} and HTTP response
      */
-    removePushConfigurationById(pushType, providerId, opts, callback) {
+    removePushConfigurationByIdWithHttpInfo(pushType, providerId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'pushType' is set
@@ -537,31 +597,39 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20014;
+      let returnType = InlineResponse20013;
       return this.apiClient.callApi(
         '/v3/applications/push/{push_type}/{provider_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the retrieveIpWhitelist operation.
-     * @callback module:api/ApplicationApi~retrieveIpWhitelistCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2007} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Remove a push configuration
+     * ## Remove a push configuration  Removes a specific push configuration from an application. The type of a push configuration is either `fcm`, `huawei`, or `apns`.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-remove-a-push-configuration ----------------------------
+     * @param {String} pushType 
+     * @param {String} providerId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20013}
      */
+    removePushConfigurationById(pushType, providerId, opts) {
+      return this.removePushConfigurationByIdWithHttpInfo(pushType, providerId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Retrieve an IP whitelist
      * ## Retrieve an IP whitelist  Retrieves a list of all the IP ranges and addresses that have access to your Sendbird application. This list is called an IP whitelist and its addresses are granted API access when the IP whitelist API enables [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notations.  If you specify which IP addresses or ranges to include in the whitelist, any unlisted foreign IP addresses will be denied access. If you don't specify any IP address or range to include in the whitelist, all IP addresses will be granted API access. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-retrieve-an-ip-whitelist
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/ApplicationApi~retrieveIpWhitelistCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2007}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2006} and HTTP response
      */
-    retrieveIpWhitelist(opts, callback) {
+    retrieveIpWhitelistWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -578,21 +646,28 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2007;
+      let returnType = InlineResponse2006;
       return this.apiClient.callApi(
         '/v3/applications/settings/ip_whitelist', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the revokeSecondaryApiTokenByToken operation.
-     * @callback module:api/ApplicationApi~revokeSecondaryApiTokenByTokenCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Retrieve an IP whitelist
+     * ## Retrieve an IP whitelist  Retrieves a list of all the IP ranges and addresses that have access to your Sendbird application. This list is called an IP whitelist and its addresses are granted API access when the IP whitelist API enables [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notations.  If you specify which IP addresses or ranges to include in the whitelist, any unlisted foreign IP addresses will be denied access. If you don't specify any IP address or range to include in the whitelist, all IP addresses will be granted API access. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-retrieve-an-ip-whitelist
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2006}
      */
+    retrieveIpWhitelist(opts) {
+      return this.retrieveIpWhitelistWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Revoke a secondary API token
@@ -600,9 +675,9 @@ export default class ApplicationApi {
      * @param {String} apiToken2 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/ApplicationApi~revokeSecondaryApiTokenByTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2007} and HTTP response
      */
-    revokeSecondaryApiTokenByToken(apiToken2, opts, callback) {
+    revokeSecondaryApiTokenByTokenWithHttpInfo(apiToken2, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'apiToken2' is set
@@ -624,21 +699,29 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = InlineResponse2007;
       return this.apiClient.callApi(
         '/v3/applications/api_tokens/{api_token}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateApnsPushConfigurationById operation.
-     * @callback module:api/ApplicationApi~updateApnsPushConfigurationByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20015} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Revoke a secondary API token
+     * ## Revoke a secondary API token  Revokes a secondary API token.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-revoke-a-secondary-api-token
+     * @param {String} apiToken2 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2007}
      */
+    revokeSecondaryApiTokenByToken(apiToken2, opts) {
+      return this.revokeSecondaryApiTokenByTokenWithHttpInfo(apiToken2, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update an APNs push configuration
@@ -647,10 +730,9 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateApnsPushConfigurationByIdData} opts.updateApnsPushConfigurationByIdData 
-     * @param {module:api/ApplicationApi~updateApnsPushConfigurationByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20015}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20014} and HTTP response
      */
-    updateApnsPushConfigurationById(providerId, opts, callback) {
+    updateApnsPushConfigurationByIdWithHttpInfo(providerId, opts) {
       opts = opts || {};
       let postBody = opts['updateApnsPushConfigurationByIdData'];
       // verify the required parameter 'providerId' is set
@@ -672,21 +754,30 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20015;
+      let returnType = InlineResponse20014;
       return this.apiClient.callApi(
         '/v3/applications/push/apns/{provider_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateDefaultChannelInvitationPreference operation.
-     * @callback module:api/ApplicationApi~updateDefaultChannelInvitationPreferenceCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2006} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update an APNs push configuration
+     * ## Update an APNs push configuration  Updates a specific APNs (Apple Push Notification service) push configuration for your client app. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  > __Note__: If your HTTP request body contains a [.p12](https://sendbird.com/docs/chat/v3/ios/guides/push-notifications#2-step-3-export-a-p12-file-and-upload-to-sendbird-dashboard) certificate file to upload to Sendbird server, you should send a [Multipart request](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api#2-headers-3-multipart-requests) .  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-an-apns-push-configuration ----------------------------
+     * @param {String} providerId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateApnsPushConfigurationByIdData} opts.updateApnsPushConfigurationByIdData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20014}
      */
+    updateApnsPushConfigurationById(providerId, opts) {
+      return this.updateApnsPushConfigurationByIdWithHttpInfo(providerId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update default channel invitation preference
@@ -694,10 +785,9 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateDefaultChannelInvitationPreferenceData} opts.updateDefaultChannelInvitationPreferenceData 
-     * @param {module:api/ApplicationApi~updateDefaultChannelInvitationPreferenceCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2006}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2005} and HTTP response
      */
-    updateDefaultChannelInvitationPreference(opts, callback) {
+    updateDefaultChannelInvitationPreferenceWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['updateDefaultChannelInvitationPreferenceData'];
 
@@ -714,21 +804,29 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2006;
+      let returnType = InlineResponse2005;
       return this.apiClient.callApi(
         '/v3/applications/default_channel_invitation_preference', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateFcmPushConfigurationById operation.
-     * @callback module:api/ApplicationApi~updateFcmPushConfigurationByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20015} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update default channel invitation preference
+     * ## Update default channel invitation preference  Updates the default channel invitation preference of an application.  > __Note__: Using the [update channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-channel-invitation-preference) action, you can update the value of a specific user's channel invitation preference, which can be set individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-default-channel-invitation-preference
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateDefaultChannelInvitationPreferenceData} opts.updateDefaultChannelInvitationPreferenceData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2005}
      */
+    updateDefaultChannelInvitationPreference(opts) {
+      return this.updateDefaultChannelInvitationPreferenceWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update a FCM push configuration
@@ -737,10 +835,9 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateFcmPushConfigurationByIdData} opts.updateFcmPushConfigurationByIdData 
-     * @param {module:api/ApplicationApi~updateFcmPushConfigurationByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20015}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20014} and HTTP response
      */
-    updateFcmPushConfigurationById(providerId, opts, callback) {
+    updateFcmPushConfigurationByIdWithHttpInfo(providerId, opts) {
       opts = opts || {};
       let postBody = opts['updateFcmPushConfigurationByIdData'];
       // verify the required parameter 'providerId' is set
@@ -762,21 +859,30 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20015;
+      let returnType = InlineResponse20014;
       return this.apiClient.callApi(
         '/v3/applications/push/fcm/{provider_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateHmsPushConfigurationById operation.
-     * @callback module:api/ApplicationApi~updateHmsPushConfigurationByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20015} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update a FCM push configuration
+     * ## Update a FCM push configuration  Updates a specific FCM (Firebase Cloud Messaging) push configuration for your client app. You can also update the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-a-fcm-push-configuration ----------------------------
+     * @param {String} providerId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateFcmPushConfigurationByIdData} opts.updateFcmPushConfigurationByIdData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20014}
      */
+    updateFcmPushConfigurationById(providerId, opts) {
+      return this.updateFcmPushConfigurationByIdWithHttpInfo(providerId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update an HMS push configuration
@@ -785,10 +891,9 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateHmsPushConfigurationByIdData} opts.updateHmsPushConfigurationByIdData 
-     * @param {module:api/ApplicationApi~updateHmsPushConfigurationByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20015}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20014} and HTTP response
      */
-    updateHmsPushConfigurationById(providerId, opts, callback) {
+    updateHmsPushConfigurationByIdWithHttpInfo(providerId, opts) {
       opts = opts || {};
       let postBody = opts['updateHmsPushConfigurationByIdData'];
       // verify the required parameter 'providerId' is set
@@ -810,21 +915,30 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20015;
+      let returnType = InlineResponse20014;
       return this.apiClient.callApi(
         '/v3/applications/push/hms/{provider_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updatePushNotificationContentTemplate operation.
-     * @callback module:api/ApplicationApi~updatePushNotificationContentTemplateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20016} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update an HMS push configuration
+     * ## Update an HMS push configuration  Updates a specific HMS (Huawei Mobile Services) push configuration for your client app. You can also update the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-an-hms-push-configuration ----------------------------
+     * @param {String} providerId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateHmsPushConfigurationByIdData} opts.updateHmsPushConfigurationByIdData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20014}
      */
+    updateHmsPushConfigurationById(providerId, opts) {
+      return this.updateHmsPushConfigurationByIdWithHttpInfo(providerId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update a push notification content template
@@ -833,10 +947,9 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdatePushNotificationContentTemplateData} opts.updatePushNotificationContentTemplateData 
-     * @param {module:api/ApplicationApi~updatePushNotificationContentTemplateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20016}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20015} and HTTP response
      */
-    updatePushNotificationContentTemplate(templateName, opts, callback) {
+    updatePushNotificationContentTemplateWithHttpInfo(templateName, opts) {
       opts = opts || {};
       let postBody = opts['updatePushNotificationContentTemplateData'];
       // verify the required parameter 'templateName' is set
@@ -858,31 +971,39 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20016;
+      let returnType = InlineResponse20015;
       return this.apiClient.callApi(
         '/v3/applications/push/message_templates/{template_name}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewDefaultChannelInvitationPreference operation.
-     * @callback module:api/ApplicationApi~viewDefaultChannelInvitationPreferenceCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2006} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update a push notification content template
+     * ## Update a push notification content template  Updates a specific push notification content template of an application. The name of a content template is either `default` or `alternative`.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-a-push-notification-content-template ----------------------------
+     * @param {String} templateName 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdatePushNotificationContentTemplateData} opts.updatePushNotificationContentTemplateData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20015}
      */
+    updatePushNotificationContentTemplate(templateName, opts) {
+      return this.updatePushNotificationContentTemplateWithHttpInfo(templateName, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View default channel invitation preference
      * ## View default channel invitation preference  Retrieves the default channel invitation preference of an application.  > __Note__: Using the [view channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-channel-invitation-preference) action, you can retrieve the value of a specific user's channel invitation preference, which can be set individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-default-channel-invitation-preference
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/ApplicationApi~viewDefaultChannelInvitationPreferenceCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2006}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2005} and HTTP response
      */
-    viewDefaultChannelInvitationPreference(opts, callback) {
+    viewDefaultChannelInvitationPreferenceWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -899,31 +1020,37 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2006;
+      let returnType = InlineResponse2005;
       return this.apiClient.callApi(
         '/v3/applications/default_channel_invitation_preference', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewNumberOfConcurrentConnections operation.
-     * @callback module:api/ApplicationApi~viewNumberOfConcurrentConnectionsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * View default channel invitation preference
+     * ## View default channel invitation preference  Retrieves the default channel invitation preference of an application.  > __Note__: Using the [view channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-channel-invitation-preference) action, you can retrieve the value of a specific user's channel invitation preference, which can be set individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-default-channel-invitation-preference
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2005}
      */
+    viewDefaultChannelInvitationPreference(opts) {
+      return this.viewDefaultChannelInvitationPreferenceWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View number of concurrent connections
      * ## View number of concurrent connections  Retrieves the number of devices and opened browser tabs which are currently connected to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-concurrent-connections
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/ApplicationApi~viewNumberOfConcurrentConnectionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
-    viewNumberOfConcurrentConnections(opts, callback) {
+    viewNumberOfConcurrentConnectionsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -940,21 +1067,28 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = InlineResponse200;
       return this.apiClient.callApi(
         '/v3/applications/ccu', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewNumberOfDailyActiveUsers operation.
-     * @callback module:api/ApplicationApi~viewNumberOfDailyActiveUsersCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20012} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * View number of concurrent connections
+     * ## View number of concurrent connections  Retrieves the number of devices and opened browser tabs which are currently connected to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-concurrent-connections
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
+    viewNumberOfConcurrentConnections(opts) {
+      return this.viewNumberOfConcurrentConnectionsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View number of daily active users
@@ -962,53 +1096,9 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.date 
-     * @param {module:api/ApplicationApi~viewNumberOfDailyActiveUsersCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20012}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20011} and HTTP response
      */
-    viewNumberOfDailyActiveUsers(opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'date': opts['date']
-      };
-      let headerParams = {
-        'Api-Token': opts['apiToken']
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = InlineResponse20012;
-      return this.apiClient.callApi(
-        '/v3/applications/dau', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the viewNumberOfMonthlyActiveUsers operation.
-     * @callback module:api/ApplicationApi~viewNumberOfMonthlyActiveUsersCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20011} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * View number of monthly active users
-     * ## View number of monthly active users  Retrieves the number of monthly active users of the application (MAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-monthly-active-users ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.date 
-     * @param {module:api/ApplicationApi~viewNumberOfMonthlyActiveUsersCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20011}
-     */
-    viewNumberOfMonthlyActiveUsers(opts, callback) {
+    viewNumberOfDailyActiveUsersWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -1028,19 +1118,77 @@ export default class ApplicationApi {
       let accepts = ['application/json'];
       let returnType = InlineResponse20011;
       return this.apiClient.callApi(
-        '/v3/applications/mau', 'GET',
+        '/v3/applications/dau', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewNumberOfPeakConnections operation.
-     * @callback module:api/ApplicationApi~viewNumberOfPeakConnectionsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20010} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * View number of daily active users
+     * ## View number of daily active users  Retrieves the number of daily active users of the application (DAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-daily-active-users ----------------------------
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {String} opts.date 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20011}
      */
+    viewNumberOfDailyActiveUsers(opts) {
+      return this.viewNumberOfDailyActiveUsersWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * View number of monthly active users
+     * ## View number of monthly active users  Retrieves the number of monthly active users of the application (MAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-monthly-active-users ----------------------------
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {String} opts.date 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20010} and HTTP response
+     */
+    viewNumberOfMonthlyActiveUsersWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'date': opts['date']
+      };
+      let headerParams = {
+        'Api-Token': opts['apiToken']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = InlineResponse20010;
+      return this.apiClient.callApi(
+        '/v3/applications/mau', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * View number of monthly active users
+     * ## View number of monthly active users  Retrieves the number of monthly active users of the application (MAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-monthly-active-users ----------------------------
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {String} opts.date 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20010}
+     */
+    viewNumberOfMonthlyActiveUsers(opts) {
+      return this.viewNumberOfMonthlyActiveUsersWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View number of peak connections
@@ -1054,10 +1202,9 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {Number} opts.startDay 
      * @param {Number} opts.endDay 
-     * @param {module:api/ApplicationApi~viewNumberOfPeakConnectionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20010}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2009} and HTTP response
      */
-    viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts, callback) {
+    viewNumberOfPeakConnectionsWithHttpInfo(timeDimension, startYear, startMonth, endYear, endMonth, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'timeDimension' is set
@@ -1101,21 +1248,35 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20010;
+      let returnType = InlineResponse2009;
       return this.apiClient.callApi(
         '/v3/applications/peak_connections', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewPushConfigurationById operation.
-     * @callback module:api/ApplicationApi~viewPushConfigurationByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20013} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * View number of peak connections
+     * ## View number of peak connections  Retrieves the number of concurrently connected devices to Sendbird server during the requested time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-peak-connections ----------------------------
+     * @param {String} timeDimension 
+     * @param {Number} startYear 
+     * @param {Number} startMonth 
+     * @param {Number} endYear 
+     * @param {Number} endMonth 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {Number} opts.startDay 
+     * @param {Number} opts.endDay 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2009}
      */
+    viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts) {
+      return this.viewNumberOfPeakConnectionsWithHttpInfo(timeDimension, startYear, startMonth, endYear, endMonth, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View a push configuration
@@ -1124,10 +1285,9 @@ export default class ApplicationApi {
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/ApplicationApi~viewPushConfigurationByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20013}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20012} and HTTP response
      */
-    viewPushConfigurationById(pushType, providerId, opts, callback) {
+    viewPushConfigurationByIdWithHttpInfo(pushType, providerId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'pushType' is set
@@ -1154,21 +1314,30 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20013;
+      let returnType = InlineResponse20012;
       return this.apiClient.callApi(
         '/v3/applications/push/{push_type}/{provider_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewPushNotificationContentTemplate operation.
-     * @callback module:api/ApplicationApi~viewPushNotificationContentTemplateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20016} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * View a push configuration
+     * ## View a push configuration  Retrieves a specific push configuration of an application. The type of a push configuration is either `fcm`, `huawei`, or `apns`.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-a-push-configuration ----------------------------
+     * @param {String} pushType 
+     * @param {String} providerId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20012}
      */
+    viewPushConfigurationById(pushType, providerId, opts) {
+      return this.viewPushConfigurationByIdWithHttpInfo(pushType, providerId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View a push notification content template
@@ -1176,10 +1345,9 @@ export default class ApplicationApi {
      * @param {String} templateName 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/ApplicationApi~viewPushNotificationContentTemplateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20016}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20015} and HTTP response
      */
-    viewPushNotificationContentTemplate(templateName, opts, callback) {
+    viewPushNotificationContentTemplateWithHttpInfo(templateName, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'templateName' is set
@@ -1201,21 +1369,29 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20016;
+      let returnType = InlineResponse20015;
       return this.apiClient.callApi(
         '/v3/applications/push/message_templates/{template_name}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewSecondaryApiTokenByToken operation.
-     * @callback module:api/ApplicationApi~viewSecondaryApiTokenByTokenCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2008} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * View a push notification content template
+     * ## View a push notification content template  Retrieves information on a specific push notification content templates of an application. The name of a content template is either `default` or `alternative`.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-a-push-notification-content-template ----------------------------
+     * @param {String} templateName 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20015}
      */
+    viewPushNotificationContentTemplate(templateName, opts) {
+      return this.viewPushNotificationContentTemplateWithHttpInfo(templateName, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View a secondary API token
@@ -1223,10 +1399,9 @@ export default class ApplicationApi {
      * @param {String} apiToken2 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/ApplicationApi~viewSecondaryApiTokenByTokenCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2008}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2007} and HTTP response
      */
-    viewSecondaryApiTokenByToken(apiToken2, opts, callback) {
+    viewSecondaryApiTokenByTokenWithHttpInfo(apiToken2, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'apiToken2' is set
@@ -1248,12 +1423,27 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2008;
+      let returnType = InlineResponse2007;
       return this.apiClient.callApi(
         '/v3/applications/api_tokens/{api_token}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * View a secondary API token
+     * ## View a secondary API token  Retrieves the information on a secondary API token.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-a-secondary-api-token
+     * @param {String} apiToken2 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2007}
+     */
+    viewSecondaryApiTokenByToken(apiToken2, opts) {
+      return this.viewSecondaryApiTokenByTokenWithHttpInfo(apiToken2, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

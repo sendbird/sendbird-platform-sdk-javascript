@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20011);
     });
 
-    it('should have the property mau (base name: "mau")', function() {
-      // uncomment below and update the code to test the property mau
+    it('should have the property dau (base name: "dau")', function() {
+      // uncomment below and update the code to test the property dau
       //var instance = new SendbirdPlatformSdk.InlineResponse20011();
       //expect(instance).to.be();
     });

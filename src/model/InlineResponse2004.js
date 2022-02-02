@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse2004PushConfigurations from './InlineResponse2004PushConfigurations';
+import InlineResponse2004PushMessageTemplates from './InlineResponse2004PushMessageTemplates';
 
 /**
  * The InlineResponse2004 model module.
@@ -48,8 +48,8 @@ class InlineResponse2004 {
         if (data) {
             obj = obj || new InlineResponse2004();
 
-            if (data.hasOwnProperty('push_configurations')) {
-                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], [InlineResponse2004PushConfigurations]);
+            if (data.hasOwnProperty('push_message_templates')) {
+                obj['push_message_templates'] = ApiClient.convertToType(data['push_message_templates'], [InlineResponse2004PushMessageTemplates]);
             }
         }
         return obj;
@@ -59,9 +59,9 @@ class InlineResponse2004 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse2004PushConfigurations>} push_configurations
+ * @member {Array.<module:model/InlineResponse2004PushMessageTemplates>} push_message_templates
  */
-InlineResponse2004.prototype['push_configurations'] = undefined;
+InlineResponse2004.prototype['push_message_templates'] = undefined;
 
 
 

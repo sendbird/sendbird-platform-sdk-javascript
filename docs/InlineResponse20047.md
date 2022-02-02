@@ -4,11 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uniqueId** | **String** |  | [optional] 
-**announcementGroup** | **String** |  | [optional] 
-**openCounts** | **[Number]** |  | [optional] 
-**openRates** | **[Number]** |  | [optional] 
-**cumulativeOpenCounts** | **[Number]** |  | [optional] 
-**cumulativeOpenRates** | **[Number]** |  | [optional] 
+**messages** | [**[InlineResponse20047Messages]**](InlineResponse20047Messages.md) |  | [optional] 
 
 

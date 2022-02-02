@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20050);
     });
 
-    it('should have the property unread (base name: "unread")', function() {
-      // uncomment below and update the code to test the property unread
+    it('should have the property ts (base name: "ts")', function() {
+      // uncomment below and update the code to test the property ts
       //var instance = new SendbirdPlatformSdk.InlineResponse20050();
       //expect(instance).to.be();
     });

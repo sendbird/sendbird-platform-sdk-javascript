@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse2001);
     });
 
-    it('should have the property ccu (base name: "ccu")', function() {
-      // uncomment below and update the code to test the property ccu
+    it('should have the property pushConfigurations (base name: "push_configurations")', function() {
+      // uncomment below and update the code to test the property pushConfigurations
       //var instance = new SendbirdPlatformSdk.InlineResponse2001();
       //expect(instance).to.be();
     });

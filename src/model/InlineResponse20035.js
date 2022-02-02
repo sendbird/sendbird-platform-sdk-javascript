@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import SendBirdUser from './SendBirdUser';
 
 /**
  * The InlineResponse20035 model module.
@@ -48,11 +47,20 @@ class InlineResponse20035 {
         if (data) {
             obj = obj || new InlineResponse20035();
 
-            if (data.hasOwnProperty('operators')) {
-                obj['operators'] = ApiClient.convertToType(data['operators'], [SendBirdUser]);
+            if (data.hasOwnProperty('is_muted')) {
+                obj['is_muted'] = ApiClient.convertToType(data['is_muted'], 'Boolean');
             }
-            if (data.hasOwnProperty('next')) {
-                obj['next'] = ApiClient.convertToType(data['next'], 'String');
+            if (data.hasOwnProperty('remaining_duration')) {
+                obj['remaining_duration'] = ApiClient.convertToType(data['remaining_duration'], 'Number');
+            }
+            if (data.hasOwnProperty('start_at')) {
+                obj['start_at'] = ApiClient.convertToType(data['start_at'], 'Number');
+            }
+            if (data.hasOwnProperty('end_at')) {
+                obj['end_at'] = ApiClient.convertToType(data['end_at'], 'Number');
+            }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
         }
         return obj;
@@ -62,14 +70,29 @@ class InlineResponse20035 {
 }
 
 /**
- * @member {Array.<module:model/SendBirdUser>} operators
+ * @member {Boolean} is_muted
  */
-InlineResponse20035.prototype['operators'] = undefined;
+InlineResponse20035.prototype['is_muted'] = undefined;
 
 /**
- * @member {String} next
+ * @member {Number} remaining_duration
  */
-InlineResponse20035.prototype['next'] = undefined;
+InlineResponse20035.prototype['remaining_duration'] = undefined;
+
+/**
+ * @member {Number} start_at
+ */
+InlineResponse20035.prototype['start_at'] = undefined;
+
+/**
+ * @member {Number} end_at
+ */
+InlineResponse20035.prototype['end_at'] = undefined;
+
+/**
+ * @member {String} description
+ */
+InlineResponse20035.prototype['description'] = undefined;
 
 
 

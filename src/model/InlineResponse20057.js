@@ -48,9 +48,6 @@ class InlineResponse20057 {
         if (data) {
             obj = obj || new InlineResponse20057();
 
-            if (data.hasOwnProperty('emoji_hash')) {
-                obj['emoji_hash'] = ApiClient.convertToType(data['emoji_hash'], 'String');
-            }
             if (data.hasOwnProperty('emoji_categories')) {
                 obj['emoji_categories'] = ApiClient.convertToType(data['emoji_categories'], [InlineResponse20057EmojiCategories]);
             }
@@ -60,11 +57,6 @@ class InlineResponse20057 {
 
 
 }
-
-/**
- * @member {String} emoji_hash
- */
-InlineResponse20057.prototype['emoji_hash'] = undefined;
 
 /**
  * @member {Array.<module:model/InlineResponse20057EmojiCategories>} emoji_categories

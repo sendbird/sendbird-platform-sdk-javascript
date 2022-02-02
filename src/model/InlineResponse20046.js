@@ -47,11 +47,23 @@ class InlineResponse20046 {
         if (data) {
             obj = obj || new InlineResponse20046();
 
-            if (data.hasOwnProperty('announcement_group')) {
-                obj['announcement_group'] = ApiClient.convertToType(data['announcement_group'], ['String']);
+            if (data.hasOwnProperty('unique_id')) {
+                obj['unique_id'] = ApiClient.convertToType(data['unique_id'], 'String');
             }
-            if (data.hasOwnProperty('next')) {
-                obj['next'] = ApiClient.convertToType(data['next'], 'String');
+            if (data.hasOwnProperty('announcement_group')) {
+                obj['announcement_group'] = ApiClient.convertToType(data['announcement_group'], 'String');
+            }
+            if (data.hasOwnProperty('open_counts')) {
+                obj['open_counts'] = ApiClient.convertToType(data['open_counts'], ['Number']);
+            }
+            if (data.hasOwnProperty('open_rates')) {
+                obj['open_rates'] = ApiClient.convertToType(data['open_rates'], ['Number']);
+            }
+            if (data.hasOwnProperty('cumulative_open_counts')) {
+                obj['cumulative_open_counts'] = ApiClient.convertToType(data['cumulative_open_counts'], ['Number']);
+            }
+            if (data.hasOwnProperty('cumulative_open_rates')) {
+                obj['cumulative_open_rates'] = ApiClient.convertToType(data['cumulative_open_rates'], ['Number']);
             }
         }
         return obj;
@@ -61,14 +73,34 @@ class InlineResponse20046 {
 }
 
 /**
- * @member {Array.<String>} announcement_group
+ * @member {String} unique_id
+ */
+InlineResponse20046.prototype['unique_id'] = undefined;
+
+/**
+ * @member {String} announcement_group
  */
 InlineResponse20046.prototype['announcement_group'] = undefined;
 
 /**
- * @member {String} next
+ * @member {Array.<Number>} open_counts
  */
-InlineResponse20046.prototype['next'] = undefined;
+InlineResponse20046.prototype['open_counts'] = undefined;
+
+/**
+ * @member {Array.<Number>} open_rates
+ */
+InlineResponse20046.prototype['open_rates'] = undefined;
+
+/**
+ * @member {Array.<Number>} cumulative_open_counts
+ */
+InlineResponse20046.prototype['cumulative_open_counts'] = undefined;
+
+/**
+ * @member {Array.<Number>} cumulative_open_rates
+ */
+InlineResponse20046.prototype['cumulative_open_rates'] = undefined;
 
 
 

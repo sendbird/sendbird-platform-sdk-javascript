@@ -60,14 +60,26 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property announcementGroup (base name: "announcement_group")', function() {
-      // uncomment below and update the code to test the property announcementGroup
+    it('should have the property openCounts (base name: "open_counts")', function() {
+      // uncomment below and update the code to test the property openCounts
       //var instance = new SendbirdPlatformSdk.InlineResponse20042();
       //expect(instance).to.be();
     });
 
-    it('should have the property message (base name: "message")', function() {
-      // uncomment below and update the code to test the property message
+    it('should have the property openRates (base name: "open_rates")', function() {
+      // uncomment below and update the code to test the property openRates
+      //var instance = new SendbirdPlatformSdk.InlineResponse20042();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property cumulativeOpenCounts (base name: "cumulative_open_counts")', function() {
+      // uncomment below and update the code to test the property cumulativeOpenCounts
+      //var instance = new SendbirdPlatformSdk.InlineResponse20042();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property cumulativeOpenRates (base name: "cumulative_open_rates")', function() {
+      // uncomment below and update the code to test the property cumulativeOpenRates
       //var instance = new SendbirdPlatformSdk.InlineResponse20042();
       //expect(instance).to.be();
     });

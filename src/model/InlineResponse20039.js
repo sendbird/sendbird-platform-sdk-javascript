@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import InlineResponse20039Announcements from './InlineResponse20039Announcements';
 
 /**
  * The InlineResponse20039 model module.
@@ -47,8 +48,11 @@ class InlineResponse20039 {
         if (data) {
             obj = obj || new InlineResponse20039();
 
-            if (data.hasOwnProperty('operator_ids')) {
-                obj['operator_ids'] = ApiClient.convertToType(data['operator_ids'], ['String']);
+            if (data.hasOwnProperty('announcements')) {
+                obj['announcements'] = ApiClient.convertToType(data['announcements'], [InlineResponse20039Announcements]);
+            }
+            if (data.hasOwnProperty('next')) {
+                obj['next'] = ApiClient.convertToType(data['next'], 'String');
             }
         }
         return obj;
@@ -58,9 +62,14 @@ class InlineResponse20039 {
 }
 
 /**
- * @member {Array.<String>} operator_ids
+ * @member {Array.<module:model/InlineResponse20039Announcements>} announcements
  */
-InlineResponse20039.prototype['operator_ids'] = undefined;
+InlineResponse20039.prototype['announcements'] = undefined;
+
+/**
+ * @member {String} next
+ */
+InlineResponse20039.prototype['next'] = undefined;
 
 
 

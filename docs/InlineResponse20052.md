@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reactions** | **Boolean** |  | [optional] 
+**key** | **[String]** |  | [optional] 
 
 

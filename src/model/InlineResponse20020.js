@@ -47,32 +47,8 @@ class InlineResponse20020 {
         if (data) {
             obj = obj || new InlineResponse20020();
 
-            if (data.hasOwnProperty('non_super_group_channel_unread_message_count')) {
-                obj['non_super_group_channel_unread_message_count'] = ApiClient.convertToType(data['non_super_group_channel_unread_message_count'], 'Number');
-            }
-            if (data.hasOwnProperty('super_group_channel_unread_message_count')) {
-                obj['super_group_channel_unread_message_count'] = ApiClient.convertToType(data['super_group_channel_unread_message_count'], 'Number');
-            }
-            if (data.hasOwnProperty('group_channel_unread_message_count')) {
-                obj['group_channel_unread_message_count'] = ApiClient.convertToType(data['group_channel_unread_message_count'], 'Number');
-            }
-            if (data.hasOwnProperty('super_group_channel_invitation_count')) {
-                obj['super_group_channel_invitation_count'] = ApiClient.convertToType(data['super_group_channel_invitation_count'], 'Number');
-            }
-            if (data.hasOwnProperty('group_channel_invitation_count')) {
-                obj['group_channel_invitation_count'] = ApiClient.convertToType(data['group_channel_invitation_count'], 'Number');
-            }
-            if (data.hasOwnProperty('super_group_channel_unread_mention_count')) {
-                obj['super_group_channel_unread_mention_count'] = ApiClient.convertToType(data['super_group_channel_unread_mention_count'], 'Number');
-            }
-            if (data.hasOwnProperty('group_channel_unread_mention_count')) {
-                obj['group_channel_unread_mention_count'] = ApiClient.convertToType(data['group_channel_unread_mention_count'], 'Number');
-            }
-            if (data.hasOwnProperty('non_super_group_channel_unread_mention_count')) {
-                obj['non_super_group_channel_unread_mention_count'] = ApiClient.convertToType(data['non_super_group_channel_unread_mention_count'], 'Number');
-            }
-            if (data.hasOwnProperty('non_super_group_channel_invitation_count')) {
-                obj['non_super_group_channel_invitation_count'] = ApiClient.convertToType(data['non_super_group_channel_invitation_count'], 'Number');
+            if (data.hasOwnProperty('group_channel_count')) {
+                obj['group_channel_count'] = ApiClient.convertToType(data['group_channel_count'], 'Number');
             }
         }
         return obj;
@@ -82,49 +58,9 @@ class InlineResponse20020 {
 }
 
 /**
- * @member {Number} non_super_group_channel_unread_message_count
+ * @member {Number} group_channel_count
  */
-InlineResponse20020.prototype['non_super_group_channel_unread_message_count'] = undefined;
-
-/**
- * @member {Number} super_group_channel_unread_message_count
- */
-InlineResponse20020.prototype['super_group_channel_unread_message_count'] = undefined;
-
-/**
- * @member {Number} group_channel_unread_message_count
- */
-InlineResponse20020.prototype['group_channel_unread_message_count'] = undefined;
-
-/**
- * @member {Number} super_group_channel_invitation_count
- */
-InlineResponse20020.prototype['super_group_channel_invitation_count'] = undefined;
-
-/**
- * @member {Number} group_channel_invitation_count
- */
-InlineResponse20020.prototype['group_channel_invitation_count'] = undefined;
-
-/**
- * @member {Number} super_group_channel_unread_mention_count
- */
-InlineResponse20020.prototype['super_group_channel_unread_mention_count'] = undefined;
-
-/**
- * @member {Number} group_channel_unread_mention_count
- */
-InlineResponse20020.prototype['group_channel_unread_mention_count'] = undefined;
-
-/**
- * @member {Number} non_super_group_channel_unread_mention_count
- */
-InlineResponse20020.prototype['non_super_group_channel_unread_mention_count'] = undefined;
-
-/**
- * @member {Number} non_super_group_channel_invitation_count
- */
-InlineResponse20020.prototype['non_super_group_channel_invitation_count'] = undefined;
+InlineResponse20020.prototype['group_channel_count'] = undefined;
 
 
 

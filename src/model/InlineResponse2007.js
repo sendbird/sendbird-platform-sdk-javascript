@@ -47,8 +47,11 @@ class InlineResponse2007 {
         if (data) {
             obj = obj || new InlineResponse2007();
 
-            if (data.hasOwnProperty('ip_whitelist_addresses')) {
-                obj['ip_whitelist_addresses'] = ApiClient.convertToType(data['ip_whitelist_addresses'], ['String']);
+            if (data.hasOwnProperty('token')) {
+                obj['token'] = ApiClient.convertToType(data['token'], 'String');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Number');
             }
         }
         return obj;
@@ -58,9 +61,14 @@ class InlineResponse2007 {
 }
 
 /**
- * @member {Array.<String>} ip_whitelist_addresses
+ * @member {String} token
  */
-InlineResponse2007.prototype['ip_whitelist_addresses'] = undefined;
+InlineResponse2007.prototype['token'] = undefined;
+
+/**
+ * @member {Number} created_at
+ */
+InlineResponse2007.prototype['created_at'] = undefined;
 
 
 

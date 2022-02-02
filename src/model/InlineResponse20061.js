@@ -50,8 +50,8 @@ class InlineResponse20061 {
             if (data.hasOwnProperty('metadata')) {
                 obj['metadata'] = ApiClient.convertToType(data['metadata'], {'String': 'String'});
             }
-            if (data.hasOwnProperty('upsert')) {
-                obj['upsert'] = ApiClient.convertToType(data['upsert'], 'Boolean');
+            if (data.hasOwnProperty('include_ts')) {
+                obj['include_ts'] = ApiClient.convertToType(data['include_ts'], 'Number');
             }
         }
         return obj;
@@ -66,9 +66,9 @@ class InlineResponse20061 {
 InlineResponse20061.prototype['metadata'] = undefined;
 
 /**
- * @member {Boolean} upsert
+ * @member {Number} include_ts
  */
-InlineResponse20061.prototype['upsert'] = undefined;
+InlineResponse20061.prototype['include_ts'] = undefined;
 
 
 

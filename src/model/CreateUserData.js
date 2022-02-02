@@ -25,16 +25,10 @@ class CreateUserData {
      * @param userId {String} Specifies a user's unique ID, which is used to sign into the Sendbird service. The length is limited to 80 characters.<br /><br /> Do not use PII (Personally Identifiable Information) of your service, such as user email address, legal name or phone number.
      * @param nickname {String} Specifies a nickname for a new user. The length is limited to 80 characters.
      * @param profileUrl {String} Specifies the URL of the user's profile image. If left empty, no profile image is set for the user. The length is limited to 2,048 characters.<br /><br /> The [domain filter](/docs/chat/v3/platform-api/guides/filter-and-moderation#2-domain-filter) filters out the request if the value of this property matches the filter's domain set.
-     * @param profileFile {File} Uploads the file of the user's profile image. An acceptable image is limited to `JPG` (.jpg), `JPEG` (.jpeg), or `PNG` (.png) file of up to 25 MB.
-     * @param issueAccessToken {Boolean} Determines whether to create an access token for the user. If true, an opaque string token is issued and provided upon creation, which should be passed whenever the user logs in. If false, an access token is not required when the user logs in. (Default: false)
-     * @param issueSessionToken {Boolean} Determines whether to create a session token for the user. If true, an opaque string token is issued and provided upon creation, which should be passed whenever the user logs in. If false, a session token is not required when the user logs in. (Default: false)
-     * @param sessionTokenExpiresAt {Number} Specifies the time for the issued session token to expire in [Unix milliseconds](/docs/chat/v3/platform-api/guides/miscellaneous#2-timestamps) format. The length should be 13. If not specified and the issue_session_token property above is true, the value of this property is set to the sum of the current timestamp and 604800000 by default, which indicates that the token will be valid for the next 7 days starting from the current timestamp.
-     * @param discoveryKeys {Array.<String>} Specifies an array of unique keys of the user which is provided to Sendbird server for discovering friends. By using the keys, the server can identify and match the user with other users.
-     * @param metadata {String} Specifies a `JSON` object to store key-value items for additional user information such as phone number, email or a long description of the user. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
      */
-    constructor(userId, nickname, profileUrl, profileFile, issueAccessToken, issueSessionToken, sessionTokenExpiresAt, discoveryKeys, metadata) { 
+    constructor(userId, nickname, profileUrl) { 
         
-        CreateUserData.initialize(this, userId, nickname, profileUrl, profileFile, issueAccessToken, issueSessionToken, sessionTokenExpiresAt, discoveryKeys, metadata);
+        CreateUserData.initialize(this, userId, nickname, profileUrl);
     }
 
     /**
@@ -42,16 +36,10 @@ class CreateUserData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, userId, nickname, profileUrl, profileFile, issueAccessToken, issueSessionToken, sessionTokenExpiresAt, discoveryKeys, metadata) { 
+    static initialize(obj, userId, nickname, profileUrl) { 
         obj['user_id'] = userId;
         obj['nickname'] = nickname;
         obj['profile_url'] = profileUrl;
-        obj['profile_file'] = profileFile;
-        obj['issue_access_token'] = issueAccessToken;
-        obj['issue_session_token'] = issueSessionToken;
-        obj['session_token_expires_at'] = sessionTokenExpiresAt;
-        obj['discovery_keys'] = discoveryKeys;
-        obj['metadata'] = metadata;
     }
 
     /**
@@ -79,12 +67,6 @@ class CreateUserData {
             }
             if (data.hasOwnProperty('issue_access_token')) {
                 obj['issue_access_token'] = ApiClient.convertToType(data['issue_access_token'], 'Boolean');
-            }
-            if (data.hasOwnProperty('issue_session_token')) {
-                obj['issue_session_token'] = ApiClient.convertToType(data['issue_session_token'], 'Boolean');
-            }
-            if (data.hasOwnProperty('session_token_expires_at')) {
-                obj['session_token_expires_at'] = ApiClient.convertToType(data['session_token_expires_at'], 'Number');
             }
             if (data.hasOwnProperty('discovery_keys')) {
                 obj['discovery_keys'] = ApiClient.convertToType(data['discovery_keys'], ['String']);
@@ -128,18 +110,6 @@ CreateUserData.prototype['profile_file'] = undefined;
  * @member {Boolean} issue_access_token
  */
 CreateUserData.prototype['issue_access_token'] = undefined;
-
-/**
- * Determines whether to create a session token for the user. If true, an opaque string token is issued and provided upon creation, which should be passed whenever the user logs in. If false, a session token is not required when the user logs in. (Default: false)
- * @member {Boolean} issue_session_token
- */
-CreateUserData.prototype['issue_session_token'] = undefined;
-
-/**
- * Specifies the time for the issued session token to expire in [Unix milliseconds](/docs/chat/v3/platform-api/guides/miscellaneous#2-timestamps) format. The length should be 13. If not specified and the issue_session_token property above is true, the value of this property is set to the sum of the current timestamp and 604800000 by default, which indicates that the token will be valid for the next 7 days starting from the current timestamp.
- * @member {Number} session_token_expires_at
- */
-CreateUserData.prototype['session_token_expires_at'] = undefined;
 
 /**
  * Specifies an array of unique keys of the user which is provided to Sendbird server for discovering friends. By using the keys, the server can identify and match the user with other users.

@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pushMessageTemplates** | [**[InlineResponse20016PushMessageTemplates]**](InlineResponse20016PushMessageTemplates.md) |  | [optional] 
+**users** | [**[SendBirdUser]**](SendBirdUser.md) |  | [optional] 
+**next** | **String** |  | [optional] 
 
 

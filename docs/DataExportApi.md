@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## listDataExportsByMessageChannelOrUser
 
-> InlineResponse20064 listDataExportsByMessageChannelOrUser(dataType, opts)
+> InlineResponse20063 listDataExportsByMessageChannelOrUser(dataType, opts)
 
 List data exports by message, channel, or user
 
@@ -30,13 +30,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listDataExportsByMessageChannelOrUser(dataType, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listDataExportsByMessageChannelOrUser(dataType, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -51,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20064**](InlineResponse20064.md)
+[**InlineResponse20063**](InlineResponse20063.md)
 
 ### Authorization
 
@@ -65,7 +64,7 @@ No authorization required
 
 ## registerAndScheduleDataExport
 
-> InlineResponse20064ExportedData registerAndScheduleDataExport(dataType, opts)
+> InlineResponse20063ExportedData registerAndScheduleDataExport(dataType, opts)
 
 Register and schedule a data export
 
@@ -82,13 +81,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'registerAndScheduleDataExportData': new SendbirdPlatformSdk.RegisterAndScheduleDataExportData() // RegisterAndScheduleDataExportData | 
 };
-apiInstance.registerAndScheduleDataExport(dataType, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.registerAndScheduleDataExport(dataType, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -102,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20064ExportedData**](InlineResponse20064ExportedData.md)
+[**InlineResponse20063ExportedData**](InlineResponse20063ExportedData.md)
 
 ### Authorization
 
@@ -116,7 +114,7 @@ No authorization required
 
 ## viewDataExportById
 
-> InlineResponse20065 viewDataExportById(dataType, requestId, opts)
+> InlineResponse20064 viewDataExportById(dataType, requestId, opts)
 
 View a data export
 
@@ -133,13 +131,12 @@ let requestId = "requestId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewDataExportById(dataType, requestId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewDataExportById(dataType, requestId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -153,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20065**](InlineResponse20065.md)
+[**InlineResponse20064**](InlineResponse20064.md)
 
 ### Authorization
 

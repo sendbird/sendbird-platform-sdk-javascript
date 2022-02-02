@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20050Unread from './InlineResponse20050Unread';
 
 /**
  * The InlineResponse20050 model module.
@@ -48,8 +47,8 @@ class InlineResponse20050 {
         if (data) {
             obj = obj || new InlineResponse20050();
 
-            if (data.hasOwnProperty('unread')) {
-                obj['unread'] = InlineResponse20050Unread.constructFromObject(data['unread']);
+            if (data.hasOwnProperty('ts')) {
+                obj['ts'] = ApiClient.convertToType(data['ts'], 'Number');
             }
         }
         return obj;
@@ -59,9 +58,9 @@ class InlineResponse20050 {
 }
 
 /**
- * @member {module:model/InlineResponse20050Unread} unread
+ * @member {Number} ts
  */
-InlineResponse20050.prototype['unread'] = undefined;
+InlineResponse20050.prototype['ts'] = undefined;
 
 
 

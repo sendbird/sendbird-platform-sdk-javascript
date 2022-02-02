@@ -4,12 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**requestId** | **String** |  | [optional] 
-**action** | **String** |  | [optional] 
-**status** | **String** |  | [optional] 
-**userId** | **String** |  | [optional] 
-**userIds** | **[String]** |  | [optional] 
-**channelDeleteOption** | **String** |  | [optional] 
-**createdAt** | **Number** |  | [optional] 
+**reportLogs** | [**[InlineResponse20070ReportLogs]**](InlineResponse20070ReportLogs.md) |  | [optional] 
+**next** | **String** |  | [optional] 
 
 

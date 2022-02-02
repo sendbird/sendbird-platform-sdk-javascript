@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 ## getDetailedOpenRateOfAnnouncementById
 
-> InlineResponse20043 getDetailedOpenRateOfAnnouncementById(uniqueId, opts)
+> InlineResponse20042 getDetailedOpenRateOfAnnouncementById(uniqueId, opts)
 
 Get detailed open rate of an announcement
 
@@ -36,13 +36,12 @@ let uniqueId = "uniqueId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.getDetailedOpenRateOfAnnouncementById(uniqueId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getDetailedOpenRateOfAnnouncementById(uniqueId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -55,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20043**](InlineResponse20043.md)
+[**InlineResponse20042**](InlineResponse20042.md)
 
 ### Authorization
 
@@ -69,7 +68,7 @@ No authorization required
 
 ## getDetailedOpenRateOfAnnouncementGroup
 
-> InlineResponse20047 getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts)
+> InlineResponse20046 getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts)
 
 Get detailed open rate of an announcement group
 
@@ -85,13 +84,12 @@ let announcementGroup = "announcementGroup_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -104,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20047**](InlineResponse20047.md)
+[**InlineResponse20046**](InlineResponse20046.md)
 
 ### Authorization
 
@@ -118,7 +116,7 @@ No authorization required
 
 ## getDetailedOpenStatusOfAnnouncementById
 
-> InlineResponse20044 getDetailedOpenStatusOfAnnouncementById(uniqueId, opts)
+> InlineResponse20043 getDetailedOpenStatusOfAnnouncementById(uniqueId, opts)
 
 Get detailed open status of an announcement
 
@@ -139,13 +137,12 @@ let opts = {
   'channelUrls': ["null"], // [String] | 
   'hasOpened': true // Boolean | 
 };
-apiInstance.getDetailedOpenStatusOfAnnouncementById(uniqueId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getDetailedOpenStatusOfAnnouncementById(uniqueId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -163,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20044**](InlineResponse20044.md)
+[**InlineResponse20043**](InlineResponse20043.md)
 
 ### Authorization
 
@@ -177,7 +174,7 @@ No authorization required
 
 ## getStatistics
 
-> InlineResponse20045 getStatistics(opts)
+> InlineResponse20044 getStatistics(opts)
 
 Get statistics - weekly
 
@@ -192,13 +189,12 @@ let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.getStatistics(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getStatistics(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -210,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20045**](InlineResponse20045.md)
+[**InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 
@@ -224,7 +220,7 @@ No authorization required
 
 ## getStatisticsDaily
 
-> InlineResponse20045 getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts)
+> InlineResponse20044 getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts)
 
 Get statistics - daily
 
@@ -246,13 +242,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'announcementGroup': "announcementGroup_example" // String | 
 };
-apiInstance.getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -271,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20045**](InlineResponse20045.md)
+[**InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 
@@ -285,7 +280,7 @@ No authorization required
 
 ## getStatisticsMonthly
 
-> InlineResponse20045 getStatisticsMonthly(opts)
+> InlineResponse20044 getStatisticsMonthly(opts)
 
 Get statistics - monthly
 
@@ -300,13 +295,12 @@ let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.getStatisticsMonthly(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getStatisticsMonthly(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -318,7 +312,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20045**](InlineResponse20045.md)
+[**InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 
@@ -332,7 +326,7 @@ No authorization required
 
 ## listAnnouncementGroups
 
-> InlineResponse20046 listAnnouncementGroups(opts)
+> InlineResponse20045 listAnnouncementGroups(opts)
 
 List announcement groups
 
@@ -349,13 +343,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listAnnouncementGroups(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listAnnouncementGroups(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -369,7 +362,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20046**](InlineResponse20046.md)
+[**InlineResponse20045**](InlineResponse20045.md)
 
 ### Authorization
 
@@ -383,7 +376,7 @@ No authorization required
 
 ## listAnnouncements
 
-> InlineResponse20040 listAnnouncements(opts)
+> InlineResponse20039 listAnnouncements(opts)
 
 List announcements
 
@@ -403,13 +396,12 @@ let opts = {
   'status': "status_example", // String | 
   'announcementGroup': "announcementGroup_example" // String | 
 };
-apiInstance.listAnnouncements(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listAnnouncements(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -426,7 +418,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20040**](InlineResponse20040.md)
+[**InlineResponse20039**](InlineResponse20039.md)
 
 ### Authorization
 
@@ -440,7 +432,7 @@ No authorization required
 
 ## scheduleAnnouncement
 
-> InlineResponse20041 scheduleAnnouncement(opts)
+> InlineResponse20040 scheduleAnnouncement(opts)
 
 Schedule an announcement
 
@@ -456,13 +448,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'scheduleAnnouncementData': new SendbirdPlatformSdk.ScheduleAnnouncementData() // ScheduleAnnouncementData | 
 };
-apiInstance.scheduleAnnouncement(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.scheduleAnnouncement(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -475,7 +466,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20041**](InlineResponse20041.md)
+[**InlineResponse20040**](InlineResponse20040.md)
 
 ### Authorization
 
@@ -489,7 +480,7 @@ No authorization required
 
 ## updateAnnouncementById
 
-> InlineResponse20042 updateAnnouncementById(uniqueId, opts)
+> InlineResponse20041 updateAnnouncementById(uniqueId, opts)
 
 Update an announcement
 
@@ -506,13 +497,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateAnnouncementByIdData': new SendbirdPlatformSdk.UpdateAnnouncementByIdData() // UpdateAnnouncementByIdData | 
 };
-apiInstance.updateAnnouncementById(uniqueId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateAnnouncementById(uniqueId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -526,7 +516,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20042**](InlineResponse20042.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -540,7 +530,7 @@ No authorization required
 
 ## viewAnnouncementById
 
-> InlineResponse20040Announcements viewAnnouncementById(uniqueId, opts)
+> InlineResponse20039Announcements viewAnnouncementById(uniqueId, opts)
 
 View an announcement
 
@@ -556,13 +546,12 @@ let uniqueId = "uniqueId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewAnnouncementById(uniqueId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewAnnouncementById(uniqueId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -575,7 +564,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20040Announcements**](InlineResponse20040Announcements.md)
+[**InlineResponse20039Announcements**](InlineResponse20039Announcements.md)
 
 ### Authorization
 

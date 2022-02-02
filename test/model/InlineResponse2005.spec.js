@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse2005);
     });
 
-    it('should have the property pushMessageTemplates (base name: "push_message_templates")', function() {
-      // uncomment below and update the code to test the property pushMessageTemplates
+    it('should have the property autoAccept (base name: "auto_accept")', function() {
+      // uncomment below and update the code to test the property autoAccept
       //var instance = new SendbirdPlatformSdk.InlineResponse2005();
       //expect(instance).to.be();
     });

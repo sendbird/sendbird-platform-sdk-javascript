@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import InlineResponse20063ExportedData from './InlineResponse20063ExportedData';
 
 /**
  * The InlineResponse20063 model module.
@@ -47,23 +48,11 @@ class InlineResponse20063 {
         if (data) {
             obj = obj || new InlineResponse20063();
 
-            if (data.hasOwnProperty('segments')) {
-                obj['segments'] = ApiClient.convertToType(data['segments'], 'String');
+            if (data.hasOwnProperty('exported_data')) {
+                obj['exported_data'] = ApiClient.convertToType(data['exported_data'], [InlineResponse20063ExportedData]);
             }
-            if (data.hasOwnProperty('date')) {
-                obj['date'] = ApiClient.convertToType(data['date'], 'String');
-            }
-            if (data.hasOwnProperty('value')) {
-                obj['value'] = ApiClient.convertToType(data['value'], 'Number');
-            }
-            if (data.hasOwnProperty('channel_type')) {
-                obj['channel_type'] = ApiClient.convertToType(data['channel_type'], 'String');
-            }
-            if (data.hasOwnProperty('custom_channel_type')) {
-                obj['custom_channel_type'] = ApiClient.convertToType(data['custom_channel_type'], 'String');
-            }
-            if (data.hasOwnProperty('custom_message_type')) {
-                obj['custom_message_type'] = ApiClient.convertToType(data['custom_message_type'], 'String');
+            if (data.hasOwnProperty('next')) {
+                obj['next'] = ApiClient.convertToType(data['next'], 'String');
             }
         }
         return obj;
@@ -73,34 +62,14 @@ class InlineResponse20063 {
 }
 
 /**
- * @member {String} segments
+ * @member {Array.<module:model/InlineResponse20063ExportedData>} exported_data
  */
-InlineResponse20063.prototype['segments'] = undefined;
+InlineResponse20063.prototype['exported_data'] = undefined;
 
 /**
- * @member {String} date
+ * @member {String} next
  */
-InlineResponse20063.prototype['date'] = undefined;
-
-/**
- * @member {Number} value
- */
-InlineResponse20063.prototype['value'] = undefined;
-
-/**
- * @member {String} channel_type
- */
-InlineResponse20063.prototype['channel_type'] = undefined;
-
-/**
- * @member {String} custom_channel_type
- */
-InlineResponse20063.prototype['custom_channel_type'] = undefined;
-
-/**
- * @member {String} custom_message_type
- */
-InlineResponse20063.prototype['custom_message_type'] = undefined;
+InlineResponse20063.prototype['next'] = undefined;
 
 
 

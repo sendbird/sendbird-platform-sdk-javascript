@@ -4,7 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**requests** | [**[InlineResponse20069Requests]**](InlineResponse20069Requests.md) |  | [optional] 
-**next** | **String** |  | [optional] 
+**requestId** | **String** |  | [optional] 
+**action** | **String** |  | [optional] 
+**status** | **String** |  | [optional] 
+**userId** | **String** |  | [optional] 
+**userIds** | **[String]** |  | [optional] 
+**channelDeleteOption** | **String** |  | [optional] 
+**createdAt** | **Number** |  | [optional] 
 
 

@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse2009);
     });
 
-    it('should have the property apiTokens (base name: "api_tokens")', function() {
-      // uncomment below and update the code to test the property apiTokens
+    it('should have the property peakConnections (base name: "peak_connections")', function() {
+      // uncomment below and update the code to test the property peakConnections
       //var instance = new SendbirdPlatformSdk.InlineResponse2009();
       //expect(instance).to.be();
     });

@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import SendBirdOpenChannel from './SendBirdOpenChannel';
 
 /**
  * The InlineResponse20030 model module.
@@ -47,8 +48,11 @@ class InlineResponse20030 {
         if (data) {
             obj = obj || new InlineResponse20030();
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('channels')) {
+                obj['channels'] = ApiClient.convertToType(data['channels'], [SendBirdOpenChannel]);
+            }
+            if (data.hasOwnProperty('next')) {
+                obj['next'] = ApiClient.convertToType(data['next'], 'String');
             }
         }
         return obj;
@@ -58,9 +62,14 @@ class InlineResponse20030 {
 }
 
 /**
- * @member {String} name
+ * @member {Array.<module:model/SendBirdOpenChannel>} channels
  */
-InlineResponse20030.prototype['name'] = undefined;
+InlineResponse20030.prototype['channels'] = undefined;
+
+/**
+ * @member {String} next
+ */
+InlineResponse20030.prototype['next'] = undefined;
 
 
 

@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse2005PushMessageTemplates from './InlineResponse2005PushMessageTemplates';
 
 /**
  * The InlineResponse2005 model module.
@@ -48,8 +47,8 @@ class InlineResponse2005 {
         if (data) {
             obj = obj || new InlineResponse2005();
 
-            if (data.hasOwnProperty('push_message_templates')) {
-                obj['push_message_templates'] = ApiClient.convertToType(data['push_message_templates'], [InlineResponse2005PushMessageTemplates]);
+            if (data.hasOwnProperty('auto_accept')) {
+                obj['auto_accept'] = ApiClient.convertToType(data['auto_accept'], 'Boolean');
             }
         }
         return obj;
@@ -59,9 +58,9 @@ class InlineResponse2005 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse2005PushMessageTemplates>} push_message_templates
+ * @member {Boolean} auto_accept
  */
-InlineResponse2005.prototype['push_message_templates'] = undefined;
+InlineResponse2005.prototype['auto_accept'] = undefined;
 
 
 

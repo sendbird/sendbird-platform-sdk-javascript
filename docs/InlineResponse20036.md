@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**isMuted** | **Boolean** |  | [optional] 
-**remainingDuration** | **Number** |  | [optional] 
-**startAt** | **Number** |  | [optional] 
-**endAt** | **Number** |  | [optional] 
-**description** | **String** |  | [optional] 
+**members** | [**[SendBirdUser]**](SendBirdUser.md) |  | [optional] 
+**next** | **String** |  | [optional] 
 
 

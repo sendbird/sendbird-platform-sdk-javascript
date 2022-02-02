@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ccu** | **Number** |  | [optional] 
+**pushConfigurations** | [**[InlineResponse2001PushConfigurations]**](InlineResponse2001PushConfigurations.md) |  | [optional] 
 
 

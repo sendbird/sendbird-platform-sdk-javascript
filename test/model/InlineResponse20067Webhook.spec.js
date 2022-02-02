@@ -78,12 +78,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property allWebhookCategories (base name: "all_webhook_categories")', function() {
-      // uncomment below and update the code to test the property allWebhookCategories
-      //var instance = new SendbirdPlatformSdk.InlineResponse20067Webhook();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

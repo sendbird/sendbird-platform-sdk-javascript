@@ -54,38 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20047);
     });
 
-    it('should have the property uniqueId (base name: "unique_id")', function() {
-      // uncomment below and update the code to test the property uniqueId
-      //var instance = new SendbirdPlatformSdk.InlineResponse20047();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property announcementGroup (base name: "announcement_group")', function() {
-      // uncomment below and update the code to test the property announcementGroup
-      //var instance = new SendbirdPlatformSdk.InlineResponse20047();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property openCounts (base name: "open_counts")', function() {
-      // uncomment below and update the code to test the property openCounts
-      //var instance = new SendbirdPlatformSdk.InlineResponse20047();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property openRates (base name: "open_rates")', function() {
-      // uncomment below and update the code to test the property openRates
-      //var instance = new SendbirdPlatformSdk.InlineResponse20047();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property cumulativeOpenCounts (base name: "cumulative_open_counts")', function() {
-      // uncomment below and update the code to test the property cumulativeOpenCounts
-      //var instance = new SendbirdPlatformSdk.InlineResponse20047();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property cumulativeOpenRates (base name: "cumulative_open_rates")', function() {
-      // uncomment below and update the code to test the property cumulativeOpenRates
+    it('should have the property messages (base name: "messages")', function() {
+      // uncomment below and update the code to test the property messages
       //var instance = new SendbirdPlatformSdk.InlineResponse20047();
       //expect(instance).to.be();
     });

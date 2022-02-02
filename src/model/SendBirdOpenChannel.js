@@ -78,8 +78,8 @@ class SendBirdOpenChannel {
             if (data.hasOwnProperty('participant_count')) {
                 obj['participant_count'] = ApiClient.convertToType(data['participant_count'], 'Number');
             }
-            if (data.hasOwnProperty('url')) {
-                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            if (data.hasOwnProperty('channel_url')) {
+                obj['channel_url'] = ApiClient.convertToType(data['channel_url'], 'String');
             }
         }
         return obj;
@@ -139,9 +139,9 @@ SendBirdOpenChannel.prototype['operators'] = undefined;
 SendBirdOpenChannel.prototype['participant_count'] = undefined;
 
 /**
- * @member {String} url
+ * @member {String} channel_url
  */
-SendBirdOpenChannel.prototype['url'] = undefined;
+SendBirdOpenChannel.prototype['channel_url'] = undefined;
 
 
 

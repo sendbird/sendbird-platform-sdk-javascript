@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bannedList** | [**[InlineResponse20034BannedList]**](InlineResponse20034BannedList.md) |  | [optional] 
-**totalBanCount** | **Number** |  | [optional] 
+**operators** | [**[SendBirdUser]**](SendBirdUser.md) |  | [optional] 
 **next** | **String** |  | [optional] 
 
 

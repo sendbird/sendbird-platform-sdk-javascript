@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20034BannedList from './InlineResponse20034BannedList';
+import SendBirdUser from './SendBirdUser';
 
 /**
  * The InlineResponse20034 model module.
@@ -48,11 +48,8 @@ class InlineResponse20034 {
         if (data) {
             obj = obj || new InlineResponse20034();
 
-            if (data.hasOwnProperty('banned_list')) {
-                obj['banned_list'] = ApiClient.convertToType(data['banned_list'], [InlineResponse20034BannedList]);
-            }
-            if (data.hasOwnProperty('total_ban_count')) {
-                obj['total_ban_count'] = ApiClient.convertToType(data['total_ban_count'], 'Number');
+            if (data.hasOwnProperty('operators')) {
+                obj['operators'] = ApiClient.convertToType(data['operators'], [SendBirdUser]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -65,14 +62,9 @@ class InlineResponse20034 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse20034BannedList>} banned_list
+ * @member {Array.<module:model/SendBirdUser>} operators
  */
-InlineResponse20034.prototype['banned_list'] = undefined;
-
-/**
- * @member {Number} total_ban_count
- */
-InlineResponse20034.prototype['total_ban_count'] = undefined;
+InlineResponse20034.prototype['operators'] = undefined;
 
 /**
  * @member {String} next

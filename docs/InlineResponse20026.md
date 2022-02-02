@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **String** |  | [optional] 
-**type** | **String** |  | [optional] 
+**token** | **[String]** |  | [optional] 
 **user** | [**SendBirdUser**](SendBirdUser.md) |  | [optional] 
 
 

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mau** | **Number** |  | [optional] 
+**dau** | **Number** |  | [optional] 
 
 

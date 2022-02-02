@@ -54,14 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse20066);
     });
 
-    it('should have the property bots (base name: "bots")', function() {
-      // uncomment below and update the code to test the property bots
-      //var instance = new SendbirdPlatformSdk.InlineResponse20066();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property next (base name: "next")', function() {
-      // uncomment below and update the code to test the property next
+    it('should have the property webhook (base name: "webhook")', function() {
+      // uncomment below and update the code to test the property webhook
       //var instance = new SendbirdPlatformSdk.InlineResponse20066();
       //expect(instance).to.be();
     });
