@@ -17,7 +17,7 @@ const name="bob";
 const profileUrl="https://picsum.photos/200";
 
 const opts = {
-    'apiToken': this.apiToken,
+    'apiToken': 'YOUR_MASTER_API_KEY',
     'createUserData': new SendbirdPlatformSdk.CreateUserData(userId, name, profileUrl,
 };
 
@@ -31,7 +31,7 @@ createUser();
 ```
 
 # ⚠️ Warnings
- 1. This package is not currently in NPM. Please see  the Local development section for installation instructions. 
+ 1. This package is not currently in npm. Please see  the Local development section for installation instructions. 
 
 
  2. This library is intended for server to server requests. **Do not use in a browser environment**. This SDK uses the Master API Token, which should never be exposed to the outside world like in a webpage or app.
