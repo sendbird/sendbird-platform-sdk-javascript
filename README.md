@@ -3,8 +3,8 @@
 # [Sendbird JavaScript Platform SDK](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)
 
 
-[![enter image description here](https://img.shields.io/badge/SDK-docs-green)](https://sendbird.com/docs/chat/v3/platform-api)
-![enter image description here](https://img.shields.io/github/issues-raw/sendbird/sendbird-discord-javascript-sample)
+[![link to docs](https://img.shields.io/badge/SDK-docs-green)](/docs)
+
 This is a Node.js package that makes talking to the [Sendbird Platform API](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api) easier. With this library you can extend your Sendbird integration to include advanced features like channel automation and user management.
 
 # 🔥 Quick start
@@ -12,18 +12,24 @@ This is a Node.js package that makes talking to the [Sendbird Platform API](http
 ```javascript  
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
-const userId="1234";
-const name="bob";
-const profileUrl="https://picsum.photos/200";
+const userId = "1234";
+const name = "bob";
+const profileUrl = "https://picsum.photos/200";
 
 const opts = {
     'apiToken': 'YOUR_MASTER_API_KEY',
-    'createUserData': new SendbirdPlatformSdk.CreateUserData(userId, name, profileUrl,
+    'createUserData': new SendbirdPlatformSdk.CreateUserData(userId, name, profileUrl),
 };
 
-async function createUser(){
-    const data = await this.userApiInstance.createUser(opts);
-    return data;
+async function createUser() {
+    const userApiInstance = new SendbirdPlatformSdk.UserApi();
+    userApiInstance.apiClient.basePath = `https://api-${"YOUR_APP_ID"}.sendbird.com`;
+    try {
+        const data = await userApiInstance.createUser(opts);
+        console.log(data);
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 createUser();
