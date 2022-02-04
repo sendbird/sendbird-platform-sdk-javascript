@@ -1,4 +1,4 @@
-![enter image description here](http://ww1.prweb.com/prfiles/2021/09/14/18371217/Sendbird_Logo_RGB_lg.png)
+![Sendbird banner image](http://ww1.prweb.com/prfiles/2021/09/14/18371217/Sendbird_Logo_RGB_lg.png)
 
 # [Sendbird JavaScript Platform SDK](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)
 
@@ -39,7 +39,7 @@ createUser();
 # ⚒️ Prerequisite
 In order to make requests with this SDK you will need you master API token. This can be found through the [Sendbird dashboard](https://dashboard.sendbird.com/).  Each app you create in Sendbird has its own master api token. These tokens can be found in Settings > Application > General.
 
-![api key highlighted on app settings screen](https://i.ibb.co/NL1wjBW/sendbird-api-token-dashboard.png)
+![npm link walkthrough](https://i.imgur.com/KMCSJlB.png)
 
 # 💻 Requirements 
 You will need [Node.js](https://nodejs.org/en/download/) installed. This has been developed and tested with NodeJS 17+.
