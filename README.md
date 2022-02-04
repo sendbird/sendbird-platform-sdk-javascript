@@ -66,7 +66,7 @@ Please follow these steps:
 
 The linking step is demonstrated visually here.
 
-![npm link walkthrough](https://i.ibb.co/MGWsBWF/npm-link-raw-fast.gif)
+![npm link walkthrough](https://i.imgur.com/897SxfC.gif)
 
 
 # 🗃️ Documentation 
