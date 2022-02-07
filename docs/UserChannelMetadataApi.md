@@ -48,13 +48,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'createChannelMetacounterData': new SendbirdPlatformSdk.CreateChannelMetacounterData() // CreateChannelMetacounterData | 
 };
-apiInstance.createChannelMetacounter(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createChannelMetacounter(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -101,13 +100,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'createChannelMetadataData': new SendbirdPlatformSdk.CreateChannelMetadataData() // CreateChannelMetadataData | 
 };
-apiInstance.createChannelMetadata(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createChannelMetadata(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -153,13 +151,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'createUserMetadataData': new SendbirdPlatformSdk.CreateUserMetadataData() // CreateUserMetadataData | 
 };
-apiInstance.createUserMetadata(userId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createUserMetadata(userId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -204,13 +201,12 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteChannelMetacounter(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteChannelMetacounter(channelType, channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -256,13 +252,12 @@ let key = "key_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteChannelMetacounterByKey(channelType, channelUrl, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteChannelMetacounterByKey(channelType, channelUrl, key, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -309,13 +304,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'key': "key_example" // String | 
 };
-apiInstance.deleteChannelMetadata(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteChannelMetadata(channelType, channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -362,13 +356,12 @@ let key = "key_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteChannelMetadataByKey(channelType, channelUrl, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteChannelMetadataByKey(channelType, channelUrl, key, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -414,13 +407,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'key': "key_example" // String | 
 };
-apiInstance.deleteUserMetadata(userId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteUserMetadata(userId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -465,13 +457,12 @@ let key = "key_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteUserMetadataByKey(userId, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteUserMetadataByKey(userId, key, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -517,13 +508,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateChannelMetacounterData': new SendbirdPlatformSdk.UpdateChannelMetacounterData() // UpdateChannelMetacounterData | 
 };
-apiInstance.updateChannelMetacounter(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateChannelMetacounter(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -571,13 +561,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.updateChannelMetacounterByKey(channelType, channelUrl, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateChannelMetacounterByKey(channelType, channelUrl, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -625,13 +614,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateChannelMetadataData': new SendbirdPlatformSdk.UpdateChannelMetadataData() // UpdateChannelMetadataData | 
 };
-apiInstance.updateChannelMetadata(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateChannelMetadata(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -679,13 +667,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.updateChannelMetadataByKey(channelType, channelUrl, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateChannelMetadataByKey(channelType, channelUrl, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -732,13 +719,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateUserMetadataData': new SendbirdPlatformSdk.UpdateUserMetadataData() // UpdateUserMetadataData | 
 };
-apiInstance.updateUserMetadata(userId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateUserMetadata(userId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -784,13 +770,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.updateUserMetadataByKey(userId, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateUserMetadataByKey(userId, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -838,13 +823,12 @@ let opts = {
   'key': "key_example", // String | 
   'keys': ["null"] // [String] | 
 };
-apiInstance.viewChannelMetacounter(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewChannelMetacounter(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -892,13 +876,12 @@ let key = "key_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewChannelMetacounterByKey(channelType, channelUrl, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewChannelMetacounterByKey(channelType, channelUrl, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -946,13 +929,12 @@ let opts = {
   'key': "key_example", // String | 
   'keys': ["null"] // [String] | 
 };
-apiInstance.viewChannelMetadata(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewChannelMetadata(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1000,13 +982,12 @@ let key = "key_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewChannelMetadataByKey(channelType, channelUrl, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewChannelMetadataByKey(channelType, channelUrl, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1053,13 +1034,12 @@ let opts = {
   'key': "key_example", // String | 
   'keys': ["null"] // [String] | 
 };
-apiInstance.viewUserMetadata(userId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewUserMetadata(userId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1105,13 +1085,12 @@ let key = "key_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewUserMetadataByKey(userId, key, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewUserMetadataByKey(userId, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

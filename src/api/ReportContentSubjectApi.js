@@ -39,13 +39,6 @@ export default class ReportContentSubjectApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the listReports operation.
-     * @callback module:api/ReportContentSubjectApi~listReportsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20070} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * List reports
@@ -56,10 +49,9 @@ export default class ReportContentSubjectApi {
      * @param {Number} opts.limit 
      * @param {Number} opts.startTs 
      * @param {Number} opts.endTs 
-     * @param {module:api/ReportContentSubjectApi~listReportsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20070}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20070} and HTTP response
      */
-    listReports(opts, callback) {
+    listReportsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -84,17 +76,28 @@ export default class ReportContentSubjectApi {
       return this.apiClient.callApi(
         '/v3/report', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the listReportsOnChannelByUrl operation.
-     * @callback module:api/ReportContentSubjectApi~listReportsOnChannelByUrlCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20071} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * List reports
+     * ## List reports  Retrieves a list of reports within an application regardless of object types.  https://sendbird.com/docs/chat/v3/platform-api/guides/report-content-and-subject#2-list-reports ----------------------------
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {String} opts.token 
+     * @param {Number} opts.limit 
+     * @param {Number} opts.startTs 
+     * @param {Number} opts.endTs 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20070}
      */
+    listReports(opts) {
+      return this.listReportsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * List reports on a channel
@@ -105,10 +108,9 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @param {module:api/ReportContentSubjectApi~listReportsOnChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20071}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20071} and HTTP response
      */
-    listReportsOnChannelByUrl(channelType, channelUrl, opts, callback) {
+    listReportsOnChannelByUrlWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -141,17 +143,28 @@ export default class ReportContentSubjectApi {
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the listReportsOnMessageById operation.
-     * @callback module:api/ReportContentSubjectApi~listReportsOnMessageByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20071} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * List reports on a channel
+     * ## List reports on a channel  Retrieves a list of reports on a channel that has offensive messages or abusive activities.  https://sendbird.com/docs/chat/v3/platform-api/guides/report-content-and-subject#2-list-reports-on-a-channel ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel which is reported for offensive messages or inappropriate activities.
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {String} opts.token 
+     * @param {Number} opts.limit 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20071}
      */
+    listReportsOnChannelByUrl(channelType, channelUrl, opts) {
+      return this.listReportsOnChannelByUrlWithHttpInfo(channelType, channelUrl, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * List reports on a message
@@ -163,10 +176,9 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @param {module:api/ReportContentSubjectApi~listReportsOnMessageByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20071}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20071} and HTTP response
      */
-    listReportsOnMessageById(channelType, channelUrl, messageId, opts, callback) {
+    listReportsOnMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -204,17 +216,29 @@ export default class ReportContentSubjectApi {
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}/messages/{message_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the listReportsOnUserById operation.
-     * @callback module:api/ReportContentSubjectApi~listReportsOnUserByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20071} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * List reports on a message
+     * ## List reports on a message  Retrieves a list of reports on a message which contains suspicious, harassing, or inappropriate content.  https://sendbird.com/docs/chat/v3/platform-api/guides/report-content-and-subject#2-list-reports-on-a-message ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel where the reported message is in.  `message_id`      Type: string      Description: Specifies the unique ID of the reported message.
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {String} messageId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {String} opts.token 
+     * @param {Number} opts.limit 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20071}
      */
+    listReportsOnMessageById(channelType, channelUrl, messageId, opts) {
+      return this.listReportsOnMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * List reports on a user
@@ -224,10 +248,9 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @param {module:api/ReportContentSubjectApi~listReportsOnUserByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20071}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20071} and HTTP response
      */
-    listReportsOnUserById(offendingUserId, opts, callback) {
+    listReportsOnUserByIdWithHttpInfo(offendingUserId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'offendingUserId' is set
@@ -255,17 +278,27 @@ export default class ReportContentSubjectApi {
       return this.apiClient.callApi(
         '/v3/report/users/{offending_user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the reportChannelByUrl operation.
-     * @callback module:api/ReportContentSubjectApi~reportChannelByUrlCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20071ReportLogs} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * List reports on a user
+     * ## List reports on a user  Retrieves a list of reports on a user who sends an offensive message.  https://sendbird.com/docs/chat/v3/platform-api/guides/report-content-and-subject#2-list-reports-on-a-user ----------------------------   `offending_user_id`      Type: string      Description: Specifies the unique ID of the user who has sent the message to report.
+     * @param {String} offendingUserId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {String} opts.token 
+     * @param {Number} opts.limit 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20071}
      */
+    listReportsOnUserById(offendingUserId, opts) {
+      return this.listReportsOnUserByIdWithHttpInfo(offendingUserId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Report a channel
@@ -275,10 +308,9 @@ export default class ReportContentSubjectApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ReportChannelByUrlData} opts.reportChannelByUrlData 
-     * @param {module:api/ReportContentSubjectApi~reportChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20071ReportLogs}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20071ReportLogs} and HTTP response
      */
-    reportChannelByUrl(channelType, channelUrl, opts, callback) {
+    reportChannelByUrlWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['reportChannelByUrlData'];
       // verify the required parameter 'channelType' is set
@@ -309,17 +341,27 @@ export default class ReportContentSubjectApi {
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the reportMessageById operation.
-     * @callback module:api/ReportContentSubjectApi~reportMessageByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20071ReportLogs} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Report a channel
+     * ## Report a channel  Reports a channel that has offensive messages or abusive activities.  https://sendbird.com/docs/chat/v3/platform-api/guides/report-content-and-subject#2-report-a-channel ----------------------------
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/ReportChannelByUrlData} opts.reportChannelByUrlData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20071ReportLogs}
      */
+    reportChannelByUrl(channelType, channelUrl, opts) {
+      return this.reportChannelByUrlWithHttpInfo(channelType, channelUrl, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Report a message
@@ -330,10 +372,9 @@ export default class ReportContentSubjectApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ReportMessageByIdData} opts.reportMessageByIdData 
-     * @param {module:api/ReportContentSubjectApi~reportMessageByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20071ReportLogs}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20071ReportLogs} and HTTP response
      */
-    reportMessageById(channelType, channelUrl, messageId, opts, callback) {
+    reportMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
       let postBody = opts['reportMessageByIdData'];
       // verify the required parameter 'channelType' is set
@@ -369,17 +410,28 @@ export default class ReportContentSubjectApi {
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}/messages/{message_id}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the reportUserById operation.
-     * @callback module:api/ReportContentSubjectApi~reportUserByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20071ReportLogs} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Report a message
+     * ## Report a message  Reports a message which contains suspicious, harassing, or inappropriate content.  https://sendbird.com/docs/chat/v3/platform-api/guides/report-content-and-subject#2-report-a-message ----------------------------
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {String} messageId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/ReportMessageByIdData} opts.reportMessageByIdData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20071ReportLogs}
      */
+    reportMessageById(channelType, channelUrl, messageId, opts) {
+      return this.reportMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Report a user
@@ -388,10 +440,9 @@ export default class ReportContentSubjectApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ReportUserByIdData} opts.reportUserByIdData 
-     * @param {module:api/ReportContentSubjectApi~reportUserByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20071ReportLogs}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20071ReportLogs} and HTTP response
      */
-    reportUserById(offendingUserId, opts, callback) {
+    reportUserByIdWithHttpInfo(offendingUserId, opts) {
       opts = opts || {};
       let postBody = opts['reportUserByIdData'];
       // verify the required parameter 'offendingUserId' is set
@@ -417,17 +468,26 @@ export default class ReportContentSubjectApi {
       return this.apiClient.callApi(
         '/v3/report/users/{offending_user_id}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewModeratedMessageById operation.
-     * @callback module:api/ReportContentSubjectApi~viewModeratedMessageByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Object.<String, {String: String}>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Report a user
+     * ## Report a user  Reports a user who sends an offensive message in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/report-content-and-subject#2-report-a-user ----------------------------
+     * @param {String} offendingUserId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/ReportUserByIdData} opts.reportUserByIdData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20071ReportLogs}
      */
+    reportUserById(offendingUserId, opts) {
+      return this.reportUserByIdWithHttpInfo(offendingUserId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View a moderated message
@@ -437,10 +497,9 @@ export default class ReportContentSubjectApi {
      * @param {String} messageId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/ReportContentSubjectApi~viewModeratedMessageByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object.<String, {String: String}>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
-    viewModeratedMessageById(channelType, channelUrl, messageId, opts, callback) {
+    viewModeratedMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -476,8 +535,25 @@ export default class ReportContentSubjectApi {
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}/profanity_messages/{message_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * View a moderated message
+     * ## View a moderated message  Retrieves information on a message that has been moderated by the [profanity filter](https://sendbird.com/docs/chat/v3/platform-api/guides/filter-and-moderation#2-profanity-filter).  https://sendbird.com/docs/chat/v3/platform-api/guides/report-content-and-subject#2-view-a-moderated-message ----------------------------
+     * @param {String} channelType 
+     * @param {String} channelUrl 
+     * @param {String} messageId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
+     */
+    viewModeratedMessageById(channelType, channelUrl, messageId, opts) {
+      return this.viewModeratedMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

@@ -25,13 +25,12 @@ let apiInstance = new SendbirdPlatformSdk.AdvancedAnalyticsApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.retrieveAdvancedAnalyticsMetrics(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.retrieveAdvancedAnalyticsMetrics(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

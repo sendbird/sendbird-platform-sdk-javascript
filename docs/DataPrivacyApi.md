@@ -29,13 +29,12 @@ let requestId = "requestId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.cancelTheRegistrationOfGdprRequestById(requestId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.cancelTheRegistrationOfGdprRequestById(requestId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -79,13 +78,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listGdprRequests(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listGdprRequests(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -129,13 +127,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'registerGdprRequestData': new SendbirdPlatformSdk.RegisterGdprRequestData() // RegisterGdprRequestData | 
 };
-apiInstance.registerGdprRequest(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.registerGdprRequest(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -178,13 +175,12 @@ let requestId = "requestId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewGdprRequestById(requestId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewGdprRequestById(requestId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

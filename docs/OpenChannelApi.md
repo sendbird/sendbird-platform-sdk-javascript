@@ -45,13 +45,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'ocBanUserData': new SendbirdPlatformSdk.OcBanUserData() // OcBanUserData | 
 };
-apiInstance.ocBanUser(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocBanUser(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -97,13 +96,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'deleteAll': true // Boolean | 
 };
-apiInstance.ocCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.ocCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -148,13 +146,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'ocCreateChannelData': new SendbirdPlatformSdk.OcCreateChannelData() // OcCreateChannelData | 
 };
-apiInstance.ocCreateChannel(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocCreateChannel(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -197,13 +194,12 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.ocDeleteChannelByUrl(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.ocDeleteChannelByUrl(channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -247,13 +243,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'ocFreezeChannelData': new SendbirdPlatformSdk.OcFreezeChannelData() // OcFreezeChannelData | 
 };
-apiInstance.ocFreezeChannel(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocFreezeChannel(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -299,13 +294,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.ocListBannedUsers(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocListBannedUsers(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -357,13 +351,12 @@ let opts = {
   'showMetadata': true, // Boolean | 
   'customType': "customType_example" // String | 
 };
-apiInstance.ocListChannels(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocListChannels(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -415,13 +408,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.ocListMutedUsers(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocListMutedUsers(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -468,13 +460,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.ocListOperators(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocListOperators(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -521,13 +512,12 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.ocListParticipants(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocListParticipants(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -573,13 +563,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'ocMuteUserData': new SendbirdPlatformSdk.OcMuteUserData() // OcMuteUserData | 
 };
-apiInstance.ocMuteUser(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocMuteUser(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -624,13 +613,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'ocRegisterOperatorsData': new SendbirdPlatformSdk.OcRegisterOperatorsData() // OcRegisterOperatorsData | 
 };
-apiInstance.ocRegisterOperators(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.ocRegisterOperators(channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -675,13 +663,12 @@ let bannedUserId = "bannedUserId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.ocUnbanUserById(channelUrl, bannedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.ocUnbanUserById(channelUrl, bannedUserId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -726,13 +713,12 @@ let mutedUserId = "mutedUserId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.ocUnmuteUserById(channelUrl, mutedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.ocUnmuteUserById(channelUrl, mutedUserId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -778,13 +764,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'ocUpdateBanByIdData': new SendbirdPlatformSdk.OcUpdateBanByIdData() // OcUpdateBanByIdData | 
 };
-apiInstance.ocUpdateBanById(channelUrl, bannedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocUpdateBanById(channelUrl, bannedUserId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -830,13 +815,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'ocUpdateChannelByUrlData': new SendbirdPlatformSdk.OcUpdateChannelByUrlData() // OcUpdateChannelByUrlData | 
 };
-apiInstance.ocUpdateChannelByUrl(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocUpdateChannelByUrl(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -881,13 +865,12 @@ let bannedUserId = "bannedUserId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.ocViewBanById(channelUrl, bannedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocViewBanById(channelUrl, bannedUserId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -931,13 +914,12 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.ocViewChannelByUrl(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocViewChannelByUrl(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -981,13 +963,12 @@ let mutedUserId = "mutedUserId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.ocViewMuteById(channelUrl, mutedUserId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.ocViewMuteById(channelUrl, mutedUserId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

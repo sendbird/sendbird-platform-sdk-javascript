@@ -44,13 +44,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'addExtraDataToMessageData': new SendbirdPlatformSdk.AddExtraDataToMessageData() // AddExtraDataToMessageData | 
 };
-apiInstance.addExtraDataToMessage(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.addExtraDataToMessage(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -99,13 +98,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'addReactionToAMessageData': new SendbirdPlatformSdk.AddReactionToAMessageData() // AddReactionToAMessageData | 
 };
-apiInstance.addReactionToAMessage(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.addReactionToAMessage(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -153,13 +151,12 @@ let messageId = "messageId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteMessageById(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteMessageById(channelType, channelUrl, messageId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -205,13 +202,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcMarkAllMessagesAsDeliveredData': new SendbirdPlatformSdk.GcMarkAllMessagesAsDeliveredData() // GcMarkAllMessagesAsDeliveredData | 
 };
-apiInstance.gcMarkAllMessagesAsDelivered(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcMarkAllMessagesAsDelivered(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -256,13 +252,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'gcMarkAllMessagesAsReadData': new SendbirdPlatformSdk.GcMarkAllMessagesAsReadData() // GcMarkAllMessagesAsReadData | 
 };
-apiInstance.gcMarkAllMessagesAsRead(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.gcMarkAllMessagesAsRead(channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -307,13 +302,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'userIds': "userIds_example" // String | 
 };
-apiInstance.gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -376,13 +370,12 @@ let opts = {
   'customType': "customType_example", // String | 
   'withMetaArray': true // Boolean | 
 };
-apiInstance.listMessages(channelType, channelUrl, messageTs, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listMessages(channelType, channelUrl, messageTs, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -447,13 +440,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'listUsers': true // Boolean | 
 };
-apiInstance.listReactionsOfMessage(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listReactionsOfMessage(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -502,13 +494,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'keys': ["null"] // [String] | 
 };
-apiInstance.removeExtraDataFromMessage(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.removeExtraDataFromMessage(channelType, channelUrl, messageId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -558,13 +549,12 @@ let opts = {
   'userId': "userId_example", // String | 
   'reaction': "reaction_example" // String | 
 };
-apiInstance.removeReactionFromAMessage(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.removeReactionFromAMessage(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -613,13 +603,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'sendMessageData': new SendbirdPlatformSdk.SendMessageData() // SendMessageData | 
 };
-apiInstance.sendMessage(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.sendMessage(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -667,13 +656,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -722,13 +710,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateExtraDataInMessageData': new SendbirdPlatformSdk.UpdateExtraDataInMessageData() // UpdateExtraDataInMessageData | 
 };
-apiInstance.updateExtraDataInMessage(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateExtraDataInMessage(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -777,13 +764,12 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateMessageByIdData': new SendbirdPlatformSdk.UpdateMessageByIdData() // UpdateMessageByIdData | 
 };
-apiInstance.updateMessageById(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.updateMessageById(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -833,13 +819,12 @@ let opts = {
   'withSortedMetaArray': true, // Boolean | 
   'withMetaArray': true // Boolean | 
 };
-apiInstance.viewMessageById(channelType, channelUrl, messageId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewMessageById(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -887,13 +872,12 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

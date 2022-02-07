@@ -37,13 +37,6 @@ export default class DataPrivacyApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the cancelTheRegistrationOfGdprRequestById operation.
-     * @callback module:api/DataPrivacyApi~cancelTheRegistrationOfGdprRequestByIdCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Cancel the registration of a GDPR request
@@ -51,9 +44,9 @@ export default class DataPrivacyApi {
      * @param {String} requestId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/DataPrivacyApi~cancelTheRegistrationOfGdprRequestByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    cancelTheRegistrationOfGdprRequestById(requestId, opts, callback) {
+    cancelTheRegistrationOfGdprRequestByIdWithHttpInfo(requestId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'requestId' is set
@@ -79,17 +72,25 @@ export default class DataPrivacyApi {
       return this.apiClient.callApi(
         '/v3/privacy/gdpr/{request_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the listGdprRequests operation.
-     * @callback module:api/DataPrivacyApi~listGdprRequestsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20068} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Cancel the registration of a GDPR request
+     * ## Cancel the registration of a GDPR request  Cancels the registration of a specific GDPR request.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-privacy#2-cancel-the-registration-of-a-gdpr-request ----------------------------
+     * @param {String} requestId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    cancelTheRegistrationOfGdprRequestById(requestId, opts) {
+      return this.cancelTheRegistrationOfGdprRequestByIdWithHttpInfo(requestId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * List GDPR requests
@@ -98,10 +99,9 @@ export default class DataPrivacyApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @param {module:api/DataPrivacyApi~listGdprRequestsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20068}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20068} and HTTP response
      */
-    listGdprRequests(opts, callback) {
+    listGdprRequestsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -124,17 +124,26 @@ export default class DataPrivacyApi {
       return this.apiClient.callApi(
         '/v3/privacy/gdpr', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the registerGdprRequest operation.
-     * @callback module:api/DataPrivacyApi~registerGdprRequestCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20069} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * List GDPR requests
+     * ## List GDPR requests  Retrieves a list of GDPR requests of all types.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-privacy#2-list-gdpr-requests ----------------------------
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {String} opts.token 
+     * @param {Number} opts.limit 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20068}
      */
+    listGdprRequests(opts) {
+      return this.listGdprRequestsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Register a GDPR request
@@ -142,10 +151,9 @@ export default class DataPrivacyApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/RegisterGdprRequestData} opts.registerGdprRequestData 
-     * @param {module:api/DataPrivacyApi~registerGdprRequestCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20069}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20069} and HTTP response
      */
-    registerGdprRequest(opts, callback) {
+    registerGdprRequestWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['registerGdprRequestData'];
 
@@ -166,17 +174,25 @@ export default class DataPrivacyApi {
       return this.apiClient.callApi(
         '/v3/privacy/gdpr', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the viewGdprRequestById operation.
-     * @callback module:api/DataPrivacyApi~viewGdprRequestByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20068Requests} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Register a GDPR request
+     * ## Register a GDPR request  Registers a specific type of GDPR request to meet the GDPR's requirements.  > __Note__: Currently, only delete and access of the user data are supported. The features for the [right to restriction of processing](https://gdpr-info.eu/art-18-gdpr/) and [right to object](https://gdpr-info.eu/art-21-gdpr/) will be available soon.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-privacy#2-register-a-gdpr-request
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/RegisterGdprRequestData} opts.registerGdprRequestData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20069}
      */
+    registerGdprRequest(opts) {
+      return this.registerGdprRequestWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * View a GDPR request
@@ -184,10 +200,9 @@ export default class DataPrivacyApi {
      * @param {String} requestId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {module:api/DataPrivacyApi~viewGdprRequestByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20068Requests}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20068Requests} and HTTP response
      */
-    viewGdprRequestById(requestId, opts, callback) {
+    viewGdprRequestByIdWithHttpInfo(requestId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'requestId' is set
@@ -213,8 +228,23 @@ export default class DataPrivacyApi {
       return this.apiClient.callApi(
         '/v3/privacy/gdpr/{request_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * View a GDPR request
+     * ## View a GDPR request  Retrieves a specific GDPR request.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-privacy#2-view-a-gdpr-request ----------------------------
+     * @param {String} requestId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20068Requests}
+     */
+    viewGdprRequestById(requestId, opts) {
+      return this.viewGdprRequestByIdWithHttpInfo(requestId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 
