@@ -23,15 +23,11 @@ class ReportUserByIdData {
      * Constructs a new <code>ReportUserByIdData</code>.
      * @alias module:model/ReportUserByIdData
      * @param offendingUserId {String} Specifies the unique ID of the user to report for using offensive or abusive language such as sending explicit messages or inappropriate comments.
-     * @param channelType {String} Specifies the type of the channel. Either open_channels or group_channels.
-     * @param channelUrl {String} Specifies the URL of the channel where the user to report is in.
      * @param reportCategory {String} Specifies the category which indicates the reason for reporting. Acceptable values are suspicious, harassing, inappropriate, and spam.
-     * @param reportingUserId {String} Specifies the unique ID of the user who reports the offending user.
-     * @param reportDescription {String} Specifies additional information to be included in the report.
      */
-    constructor(offendingUserId, channelType, channelUrl, reportCategory, reportingUserId, reportDescription) { 
+    constructor(offendingUserId, reportCategory) { 
         
-        ReportUserByIdData.initialize(this, offendingUserId, channelType, channelUrl, reportCategory, reportingUserId, reportDescription);
+        ReportUserByIdData.initialize(this, offendingUserId, reportCategory);
     }
 
     /**
@@ -39,13 +35,9 @@ class ReportUserByIdData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, offendingUserId, channelType, channelUrl, reportCategory, reportingUserId, reportDescription) { 
+    static initialize(obj, offendingUserId, reportCategory) { 
         obj['offending_user_id'] = offendingUserId;
-        obj['channel_type'] = channelType;
-        obj['channel_url'] = channelUrl;
         obj['report_category'] = reportCategory;
-        obj['reporting_user_id'] = reportingUserId;
-        obj['report_description'] = reportDescription;
     }
 
     /**

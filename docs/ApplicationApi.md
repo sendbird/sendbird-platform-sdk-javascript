@@ -51,12 +51,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'addApnsPushConfigurationData': new SendbirdPlatformSdk.AddApnsPushConfigurationData() // AddApnsPushConfigurationData | 
 };
-apiInstance.addApnsPushConfiguration(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.addApnsPushConfiguration(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -99,12 +100,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'addFcmPushConfigurationData': new SendbirdPlatformSdk.AddFcmPushConfigurationData() // AddFcmPushConfigurationData | 
 };
-apiInstance.addFcmPushConfiguration(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.addFcmPushConfiguration(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -147,12 +149,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'addHmsPushConfigurationData': new SendbirdPlatformSdk.AddHmsPushConfigurationData() // AddHmsPushConfigurationData | 
 };
-apiInstance.addHmsPushConfiguration(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.addHmsPushConfiguration(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -195,12 +198,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'addIpToWhitelistData': new SendbirdPlatformSdk.AddIpToWhitelistData() // AddIpToWhitelistData | 
 };
-apiInstance.addIpToWhitelist(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.addIpToWhitelist(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -243,12 +247,13 @@ let ipWhitelistAddresses = ["null"]; // [String] |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -291,12 +296,13 @@ let providerId = "providerId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteApnsCertificateById(providerId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.deleteApnsCertificateById(providerId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -339,12 +345,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'generateSecondaryApiTokenData': new SendbirdPlatformSdk.GenerateSecondaryApiTokenData() // GenerateSecondaryApiTokenData | 
 };
-apiInstance.generateSecondaryApiToken(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.generateSecondaryApiToken(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -387,12 +394,13 @@ let pushType = "pushType_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.listPushConfigurations(pushType, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.listPushConfigurations(pushType, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -434,12 +442,13 @@ let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.listPushNotificationContentTemplates(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.listPushNotificationContentTemplates(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -480,12 +489,13 @@ let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.listSecondaryApiTokens(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.listSecondaryApiTokens(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -528,12 +538,13 @@ let providerId = "providerId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.removePushConfigurationById(pushType, providerId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.removePushConfigurationById(pushType, providerId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -576,12 +587,13 @@ let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.retrieveIpWhitelist(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.retrieveIpWhitelist(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -623,12 +635,13 @@ let apiToken2 = "apiToken_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.revokeSecondaryApiTokenByToken(apiToken2, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.revokeSecondaryApiTokenByToken(apiToken2, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -672,12 +685,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateApnsPushConfigurationByIdData': new SendbirdPlatformSdk.UpdateApnsPushConfigurationByIdData() // UpdateApnsPushConfigurationByIdData | 
 };
-apiInstance.updateApnsPushConfigurationById(providerId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.updateApnsPushConfigurationById(providerId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -721,12 +735,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateDefaultChannelInvitationPreferenceData': new SendbirdPlatformSdk.UpdateDefaultChannelInvitationPreferenceData() // UpdateDefaultChannelInvitationPreferenceData | 
 };
-apiInstance.updateDefaultChannelInvitationPreference(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.updateDefaultChannelInvitationPreference(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -770,12 +785,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateFcmPushConfigurationByIdData': new SendbirdPlatformSdk.UpdateFcmPushConfigurationByIdData() // UpdateFcmPushConfigurationByIdData | 
 };
-apiInstance.updateFcmPushConfigurationById(providerId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.updateFcmPushConfigurationById(providerId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -820,12 +836,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateHmsPushConfigurationByIdData': new SendbirdPlatformSdk.UpdateHmsPushConfigurationByIdData() // UpdateHmsPushConfigurationByIdData | 
 };
-apiInstance.updateHmsPushConfigurationById(providerId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.updateHmsPushConfigurationById(providerId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -870,12 +887,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updatePushNotificationContentTemplateData': new SendbirdPlatformSdk.UpdatePushNotificationContentTemplateData() // UpdatePushNotificationContentTemplateData | 
 };
-apiInstance.updatePushNotificationContentTemplate(templateName, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.updatePushNotificationContentTemplate(templateName, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -918,12 +936,13 @@ let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewDefaultChannelInvitationPreference(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.viewDefaultChannelInvitationPreference(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -964,12 +983,13 @@ let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewNumberOfConcurrentConnections(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.viewNumberOfConcurrentConnections(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -1011,12 +1031,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'date': "date_example" // String | 
 };
-apiInstance.viewNumberOfDailyActiveUsers(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.viewNumberOfDailyActiveUsers(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -1059,12 +1080,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'date': "date_example" // String | 
 };
-apiInstance.viewNumberOfMonthlyActiveUsers(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.viewNumberOfMonthlyActiveUsers(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -1113,12 +1135,13 @@ let opts = {
   'startDay': 56, // Number | 
   'endDay': 56 // Number | 
 };
-apiInstance.viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -1168,12 +1191,13 @@ let providerId = "providerId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewPushConfigurationById(pushType, providerId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.viewPushConfigurationById(pushType, providerId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -1217,12 +1241,13 @@ let templateName = "templateName_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewPushNotificationContentTemplate(templateName, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.viewPushNotificationContentTemplate(templateName, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -1265,12 +1290,13 @@ let apiToken2 = "apiToken_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewSecondaryApiTokenByToken(apiToken2, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.viewSecondaryApiTokenByToken(apiToken2, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters

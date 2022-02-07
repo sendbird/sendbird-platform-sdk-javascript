@@ -30,12 +30,13 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listDataExportsByMessageChannelOrUser(dataType, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.listDataExportsByMessageChannelOrUser(dataType, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -81,12 +82,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'registerAndScheduleDataExportData': new SendbirdPlatformSdk.RegisterAndScheduleDataExportData() // RegisterAndScheduleDataExportData | 
 };
-apiInstance.registerAndScheduleDataExport(dataType, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.registerAndScheduleDataExport(dataType, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -131,12 +133,13 @@ let requestId = "requestId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewDataExportById(dataType, requestId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.viewDataExportById(dataType, requestId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters

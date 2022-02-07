@@ -27,12 +27,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'chooseWhichEventsToSubscribeToData': new SendbirdPlatformSdk.ChooseWhichEventsToSubscribeToData() // ChooseWhichEventsToSubscribeToData | 
 };
-apiInstance.chooseWhichEventsToSubscribeTo(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.chooseWhichEventsToSubscribeTo(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -75,12 +76,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'displayAllWebhookCategories': true // Boolean | 
 };
-apiInstance.retrieveListOfSubscribedEvents(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.retrieveListOfSubscribedEvents(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters

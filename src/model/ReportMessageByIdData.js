@@ -22,17 +22,12 @@ class ReportMessageByIdData {
     /**
      * Constructs a new <code>ReportMessageByIdData</code>.
      * @alias module:model/ReportMessageByIdData
-     * @param channelType {String} Specifies the type of the channel. Either open_channels or group_channels.
-     * @param channelUrl {String} Specifies the URL of the channel where the message to report is in.
-     * @param messageId {String} Specifies the unique ID of the message to report.
      * @param reportCategory {String} Specifies the category which indicates the reason for reporting. Acceptable values are suspicious, harassing, inappropriate, and spam.
      * @param offendingUserId {String} Specifies the unique ID of the user who has sent the message to report.
-     * @param reportingUserId {String} Specifies the unique ID of the user who reports the message.
-     * @param reportDescription {String} Specifies additional information to be included in the report.
      */
-    constructor(channelType, channelUrl, messageId, reportCategory, offendingUserId, reportingUserId, reportDescription) { 
+    constructor(reportCategory, offendingUserId) { 
         
-        ReportMessageByIdData.initialize(this, channelType, channelUrl, messageId, reportCategory, offendingUserId, reportingUserId, reportDescription);
+        ReportMessageByIdData.initialize(this, reportCategory, offendingUserId);
     }
 
     /**
@@ -40,14 +35,9 @@ class ReportMessageByIdData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, channelType, channelUrl, messageId, reportCategory, offendingUserId, reportingUserId, reportDescription) { 
-        obj['channel_type'] = channelType;
-        obj['channel_url'] = channelUrl;
-        obj['message_id'] = messageId;
+    static initialize(obj, reportCategory, offendingUserId) { 
         obj['report_category'] = reportCategory;
         obj['offending_user_id'] = offendingUserId;
-        obj['reporting_user_id'] = reportingUserId;
-        obj['report_description'] = reportDescription;
     }
 
     /**

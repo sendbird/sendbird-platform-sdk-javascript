@@ -25,11 +25,10 @@ class CreateChannelMetadataData {
      * @param channelType {String} Specifies the type of the channel. Either open_channels or group_channels.
      * @param channelUrl {String} Specifies the URL of the channel to store the metadata in.
      * @param metadata {String} Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
-     * @param includeTs {Boolean} Determines whether to include the timestamp of when a metadata has been created in the response. (Default: false)
      */
-    constructor(channelType, channelUrl, metadata, includeTs) { 
+    constructor(channelType, channelUrl, metadata) { 
         
-        CreateChannelMetadataData.initialize(this, channelType, channelUrl, metadata, includeTs);
+        CreateChannelMetadataData.initialize(this, channelType, channelUrl, metadata);
     }
 
     /**
@@ -37,11 +36,10 @@ class CreateChannelMetadataData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, channelType, channelUrl, metadata, includeTs) { 
+    static initialize(obj, channelType, channelUrl, metadata) { 
         obj['channel_type'] = channelType;
         obj['channel_url'] = channelUrl;
         obj['metadata'] = metadata;
-        obj['include_ts'] = includeTs;
     }
 
     /**

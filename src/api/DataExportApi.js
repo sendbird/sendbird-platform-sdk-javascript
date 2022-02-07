@@ -37,6 +37,13 @@ export default class DataExportApi {
     }
 
 
+    /**
+     * Callback function to receive the result of the listDataExportsByMessageChannelOrUser operation.
+     * @callback module:api/DataExportApi~listDataExportsByMessageChannelOrUserCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20063} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
 
     /**
      * List data exports by message, channel, or user
@@ -46,9 +53,10 @@ export default class DataExportApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20063} and HTTP response
+     * @param {module:api/DataExportApi~listDataExportsByMessageChannelOrUserCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20063}
      */
-    listDataExportsByMessageChannelOrUserWithHttpInfo(dataType, opts) {
+    listDataExportsByMessageChannelOrUser(dataType, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'dataType' is set
@@ -76,27 +84,17 @@ export default class DataExportApi {
       return this.apiClient.callApi(
         '/v3/export/{data_type}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * List data exports by message, channel, or user
-     * ## List data exports by message, channel, or user  Retrieves a list of message, channel or user data exports  https://sendbird.com/docs/chat/v3/platform-api/guides/data-export#2-list-data-exports-by-message,-channel,-or-user ----------------------------   `data_type`      Type: string      Description: Specifies the type of a data export to retrieve. Acceptable values are messages, channels, users, and failed_webhooks.
-     * @param {String} dataType 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20063}
+     * Callback function to receive the result of the registerAndScheduleDataExport operation.
+     * @callback module:api/DataExportApi~registerAndScheduleDataExportCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20063ExportedData} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    listDataExportsByMessageChannelOrUser(dataType, opts) {
-      return this.listDataExportsByMessageChannelOrUserWithHttpInfo(dataType, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Register and schedule a data export
@@ -105,9 +103,10 @@ export default class DataExportApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/RegisterAndScheduleDataExportData} opts.registerAndScheduleDataExportData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20063ExportedData} and HTTP response
+     * @param {module:api/DataExportApi~registerAndScheduleDataExportCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20063ExportedData}
      */
-    registerAndScheduleDataExportWithHttpInfo(dataType, opts) {
+    registerAndScheduleDataExport(dataType, opts, callback) {
       opts = opts || {};
       let postBody = opts['registerAndScheduleDataExportData'];
       // verify the required parameter 'dataType' is set
@@ -133,26 +132,17 @@ export default class DataExportApi {
       return this.apiClient.callApi(
         '/v3/export/{data_type}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Register and schedule a data export
-     * ## Register and schedule a data export  Registers and schedules a message, channel, or user data export.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-export#2-register-and-schedule-a-data-export ----------------------------
-     * @param {String} dataType 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/RegisterAndScheduleDataExportData} opts.registerAndScheduleDataExportData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20063ExportedData}
+     * Callback function to receive the result of the viewDataExportById operation.
+     * @callback module:api/DataExportApi~viewDataExportByIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20064} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    registerAndScheduleDataExport(dataType, opts) {
-      return this.registerAndScheduleDataExportWithHttpInfo(dataType, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View a data export
@@ -161,9 +151,10 @@ export default class DataExportApi {
      * @param {String} requestId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20064} and HTTP response
+     * @param {module:api/DataExportApi~viewDataExportByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20064}
      */
-    viewDataExportByIdWithHttpInfo(dataType, requestId, opts) {
+    viewDataExportById(dataType, requestId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'dataType' is set
@@ -194,24 +185,8 @@ export default class DataExportApi {
       return this.apiClient.callApi(
         '/v3/export/{data_type}/{request_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
-    }
-
-    /**
-     * View a data export
-     * ## View a data export  Retrieves information on a message, channel or user data export.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-export#2-view-a-data-export ----------------------------   `data_type`      Type: string      Description: Specifies the type of a targeted data export. Acceptable values are messages, channels,  users, and failed_webhooks.  `request_id`      Type: string      Description: Specifies the unique ID of a data export to retrieve.
-     * @param {String} dataType 
-     * @param {String} requestId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20064}
-     */
-    viewDataExportById(dataType, requestId, opts) {
-      return this.viewDataExportByIdWithHttpInfo(dataType, requestId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
     }
 
 

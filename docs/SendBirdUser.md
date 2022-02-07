@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **friendDiscoveryKey** | **String** |  | [optional] 
 **friendName** | **String** |  | [optional] 
 **isActive** | **Boolean** |  | [optional] 
-**lastSeenAt** | **String** |  | [optional] 
+**lastSeenAt** | **Number** |  | [optional] 
 **metaData** | [**ModelObject**](ModelObject.md) |  | [optional] 
 **nickname** | **String** |  | [optional] 
 **plainProfileUrl** | **String** |  | [optional] 

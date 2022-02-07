@@ -26,11 +26,10 @@ class AddExtraDataToMessageData {
      * @param channelUrl {String} Specifies the URL of the target channel.
      * @param messageId {Number} Specifies the unique ID of the message to add key-values items for additional information.
      * @param sortedMetaarray {String} Specifies a `JSON` object of one or more key-values items which store additional message information. Each item consists of a key and the values in an array. Items are saved and will be returned in the exact order they've been specified.
-     * @param metaarray {String} (Deprecated) Specifies a `JSON` object of one or more key-values items which store additional message information. The item consists of a key and the values in an array.
      */
-    constructor(channelType, channelUrl, messageId, sortedMetaarray, metaarray) { 
+    constructor(channelType, channelUrl, messageId, sortedMetaarray) { 
         
-        AddExtraDataToMessageData.initialize(this, channelType, channelUrl, messageId, sortedMetaarray, metaarray);
+        AddExtraDataToMessageData.initialize(this, channelType, channelUrl, messageId, sortedMetaarray);
     }
 
     /**
@@ -38,12 +37,11 @@ class AddExtraDataToMessageData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, channelType, channelUrl, messageId, sortedMetaarray, metaarray) { 
+    static initialize(obj, channelType, channelUrl, messageId, sortedMetaarray) { 
         obj['channel_type'] = channelType;
         obj['channel_url'] = channelUrl;
         obj['message_id'] = messageId;
         obj['sorted_metaarray'] = sortedMetaarray;
-        obj['metaarray'] = metaarray;
     }
 
     /**
@@ -68,9 +66,6 @@ class AddExtraDataToMessageData {
             }
             if (data.hasOwnProperty('sorted_metaarray')) {
                 obj['sorted_metaarray'] = ApiClient.convertToType(data['sorted_metaarray'], 'String');
-            }
-            if (data.hasOwnProperty('metaarray')) {
-                obj['metaarray'] = ApiClient.convertToType(data['metaarray'], 'String');
             }
         }
         return obj;
@@ -102,12 +97,6 @@ AddExtraDataToMessageData.prototype['message_id'] = undefined;
  * @member {String} sorted_metaarray
  */
 AddExtraDataToMessageData.prototype['sorted_metaarray'] = undefined;
-
-/**
- * (Deprecated) Specifies a `JSON` object of one or more key-values items which store additional message information. The item consists of a key and the values in an array.
- * @member {String} metaarray
- */
-AddExtraDataToMessageData.prototype['metaarray'] = undefined;
 
 
 

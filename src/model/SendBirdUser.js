@@ -62,7 +62,7 @@ class SendBirdUser {
                 obj['is_active'] = ApiClient.convertToType(data['is_active'], 'Boolean');
             }
             if (data.hasOwnProperty('last_seen_at')) {
-                obj['last_seen_at'] = ApiClient.convertToType(data['last_seen_at'], 'String');
+                obj['last_seen_at'] = ApiClient.convertToType(data['last_seen_at'], 'Number');
             }
             if (data.hasOwnProperty('meta_data')) {
                 obj['meta_data'] = ModelObject.constructFromObject(data['meta_data']);
@@ -113,7 +113,7 @@ SendBirdUser.prototype['friend_name'] = undefined;
 SendBirdUser.prototype['is_active'] = undefined;
 
 /**
- * @member {String} last_seen_at
+ * @member {Number} last_seen_at
  */
 SendBirdUser.prototype['last_seen_at'] = undefined;
 

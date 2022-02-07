@@ -36,12 +36,13 @@ let uniqueId = "uniqueId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.getDetailedOpenRateOfAnnouncementById(uniqueId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.getDetailedOpenRateOfAnnouncementById(uniqueId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -84,12 +85,13 @@ let announcementGroup = "announcementGroup_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -137,12 +139,13 @@ let opts = {
   'channelUrls': ["null"], // [String] | 
   'hasOpened': true // Boolean | 
 };
-apiInstance.getDetailedOpenStatusOfAnnouncementById(uniqueId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.getDetailedOpenStatusOfAnnouncementById(uniqueId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -189,12 +192,13 @@ let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.getStatistics(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.getStatistics(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -242,12 +246,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'announcementGroup': "announcementGroup_example" // String | 
 };
-apiInstance.getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -295,12 +300,13 @@ let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.getStatisticsMonthly(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.getStatisticsMonthly(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -343,12 +349,13 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listAnnouncementGroups(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.listAnnouncementGroups(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -396,12 +403,13 @@ let opts = {
   'status': "status_example", // String | 
   'announcementGroup': "announcementGroup_example" // String | 
 };
-apiInstance.listAnnouncements(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.listAnnouncements(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -448,12 +456,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'scheduleAnnouncementData': new SendbirdPlatformSdk.ScheduleAnnouncementData() // ScheduleAnnouncementData | 
 };
-apiInstance.scheduleAnnouncement(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.scheduleAnnouncement(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -497,12 +506,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateAnnouncementByIdData': new SendbirdPlatformSdk.UpdateAnnouncementByIdData() // UpdateAnnouncementByIdData | 
 };
-apiInstance.updateAnnouncementById(uniqueId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.updateAnnouncementById(uniqueId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -546,12 +556,13 @@ let uniqueId = "uniqueId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewAnnouncementById(uniqueId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.viewAnnouncementById(uniqueId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters

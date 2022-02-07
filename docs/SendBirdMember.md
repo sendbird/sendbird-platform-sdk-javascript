@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **isBlockedByMe** | **Boolean** |  | [optional] 
 **isBlockingMe** | **Boolean** |  | [optional] 
 **isMuted** | **Boolean** |  | [optional] 
-**lastSeenAt** | **String** |  | [optional] 
+**lastSeenAt** | **Number** |  | [optional] 
 **metaData** | [**ModelObject**](ModelObject.md) |  | [optional] 
 **nickname** | **String** |  | [optional] 
 **plainProfileUrl** | **String** |  | [optional] 

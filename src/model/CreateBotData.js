@@ -28,13 +28,10 @@ class CreateBotData {
      * @param botType {String} Specifies the type of the bot that you can specify for categorization. The length is limited to 128 characters.
      * @param botCallbackUrl {String} Specifies the server URL where bot is located to receive all events, requests, and data forwarded from an application. For security reasons, it is highly recommended that you use an SSL server. The length is limited to 1,024 characters.
      * @param isPrivacyMode {Boolean} In the channels of where the bot is a member, determines whether to only forward the messages with the specific conditions to the bot or forword all messages to the bot, for privacy concerns. If set to true, only messages that start with a '/' or mention the bot_userid are forwarded to the bot. If set to false, all messages are forwarded.
-     * @param enableMarkAsRead {Boolean} Determines whether to mark the bot's message as read upon sending it. (Default: true)
-     * @param showMember {Boolean} Determines whether to include information about the members of each channel in a callback response. (Default: false)
-     * @param channelInvitationPreference {Number} 
      */
-    constructor(botUserid, botNickname, botProfileUrl, botType, botCallbackUrl, isPrivacyMode, enableMarkAsRead, showMember, channelInvitationPreference) { 
+    constructor(botUserid, botNickname, botProfileUrl, botType, botCallbackUrl, isPrivacyMode) { 
         
-        CreateBotData.initialize(this, botUserid, botNickname, botProfileUrl, botType, botCallbackUrl, isPrivacyMode, enableMarkAsRead, showMember, channelInvitationPreference);
+        CreateBotData.initialize(this, botUserid, botNickname, botProfileUrl, botType, botCallbackUrl, isPrivacyMode);
     }
 
     /**
@@ -42,16 +39,13 @@ class CreateBotData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, botUserid, botNickname, botProfileUrl, botType, botCallbackUrl, isPrivacyMode, enableMarkAsRead, showMember, channelInvitationPreference) { 
+    static initialize(obj, botUserid, botNickname, botProfileUrl, botType, botCallbackUrl, isPrivacyMode) { 
         obj['bot_userid'] = botUserid;
         obj['bot_nickname'] = botNickname;
         obj['bot_profile_url'] = botProfileUrl;
         obj['bot_type'] = botType;
         obj['bot_callback_url'] = botCallbackUrl;
         obj['is_privacy_mode'] = isPrivacyMode;
-        obj['enable_mark_as_read'] = enableMarkAsRead;
-        obj['show_member'] = showMember;
-        obj['channel_invitation_preference'] = channelInvitationPreference;
     }
 
     /**

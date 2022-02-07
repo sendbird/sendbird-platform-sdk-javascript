@@ -64,7 +64,7 @@ class SendBirdSender {
                 obj['is_blocked_by_me'] = ApiClient.convertToType(data['is_blocked_by_me'], 'Boolean');
             }
             if (data.hasOwnProperty('last_seen_at')) {
-                obj['last_seen_at'] = ApiClient.convertToType(data['last_seen_at'], 'String');
+                obj['last_seen_at'] = ApiClient.convertToType(data['last_seen_at'], 'Number');
             }
             if (data.hasOwnProperty('meta_data')) {
                 obj['meta_data'] = ModelObject.constructFromObject(data['meta_data']);
@@ -120,7 +120,7 @@ SendBirdSender.prototype['is_active'] = undefined;
 SendBirdSender.prototype['is_blocked_by_me'] = undefined;
 
 /**
- * @member {String} last_seen_at
+ * @member {Number} last_seen_at
  */
 SendBirdSender.prototype['last_seen_at'] = undefined;
 

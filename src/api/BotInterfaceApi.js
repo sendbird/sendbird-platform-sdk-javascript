@@ -41,6 +41,13 @@ export default class BotInterfaceApi {
     }
 
 
+    /**
+     * Callback function to receive the result of the createBot operation.
+     * @callback module:api/BotInterfaceApi~createBotCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20065Bots} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
 
     /**
      * Create a bot
@@ -48,9 +55,10 @@ export default class BotInterfaceApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/CreateBotData} opts.createBotData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20065Bots} and HTTP response
+     * @param {module:api/BotInterfaceApi~createBotCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20065Bots}
      */
-    createBotWithHttpInfo(opts) {
+    createBot(opts, callback) {
       opts = opts || {};
       let postBody = opts['createBotData'];
 
@@ -71,25 +79,17 @@ export default class BotInterfaceApi {
       return this.apiClient.callApi(
         '/v3/bots', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Create a bot
-     * ## Create a bot  Creates a new bot within the application. Creating a bot is similar to creating a normal user, except that a callback URL is specified in order for the bot to receive events.  > __Note__: The bot must [join](#2-join-channels) a group channel first to interact with users. In group channels, you can invite a bot through the [invite as members](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-invite-as-members) action instead.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-create-a-bot
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/CreateBotData} opts.createBotData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20065Bots}
+     * Callback function to receive the result of the deleteBotById operation.
+     * @callback module:api/BotInterfaceApi~deleteBotByIdCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    createBot(opts) {
-      return this.createBotWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Delete a bot
@@ -97,9 +97,9 @@ export default class BotInterfaceApi {
      * @param {String} botUserid 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/BotInterfaceApi~deleteBotByIdCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteBotByIdWithHttpInfo(botUserid, opts) {
+    deleteBotById(botUserid, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'botUserid' is set
@@ -125,25 +125,17 @@ export default class BotInterfaceApi {
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Delete a bot
-     * ## Delete a bot  Deletes a bot from an application.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-delete-a-bot ----------------------------
-     * @param {String} botUserid 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the joinChannels operation.
+     * @callback module:api/BotInterfaceApi~joinChannelsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SendBirdGroupChannelCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    deleteBotById(botUserid, opts) {
-      return this.deleteBotByIdWithHttpInfo(botUserid, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Join channels
@@ -152,9 +144,10 @@ export default class BotInterfaceApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/JoinChannelsData} opts.joinChannelsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdGroupChannelCollection} and HTTP response
+     * @param {module:api/BotInterfaceApi~joinChannelsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdGroupChannelCollection}
      */
-    joinChannelsWithHttpInfo(botUserid, opts) {
+    joinChannels(botUserid, opts, callback) {
       opts = opts || {};
       let postBody = opts['joinChannelsData'];
       // verify the required parameter 'botUserid' is set
@@ -180,26 +173,17 @@ export default class BotInterfaceApi {
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}/channels', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Join channels
-     * ## Join channels  Makes a bot join one or more channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-join-channels ----------------------------
-     * @param {String} botUserid 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/JoinChannelsData} opts.joinChannelsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdGroupChannelCollection}
+     * Callback function to receive the result of the leaveChannels operation.
+     * @callback module:api/BotInterfaceApi~leaveChannelsCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    joinChannels(botUserid, opts) {
-      return this.joinChannelsWithHttpInfo(botUserid, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Leave channels - When leaving all channels
@@ -208,9 +192,9 @@ export default class BotInterfaceApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/BotInterfaceApi~leaveChannelsCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    leaveChannelsWithHttpInfo(botUserid, opts) {
+    leaveChannels(botUserid, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'botUserid' is set
@@ -237,26 +221,17 @@ export default class BotInterfaceApi {
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}/channels', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Leave channels - When leaving all channels
-     * ## Leave channels  Makes a bot leave one or more group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-leave-channels ----------------------------
-     * @param {String} botUserid 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the leaveChannelsByUrl operation.
+     * @callback module:api/BotInterfaceApi~leaveChannelsByUrlCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    leaveChannels(botUserid, opts) {
-      return this.leaveChannelsWithHttpInfo(botUserid, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Leave channels - When leaving a channel by its channel URL
@@ -265,9 +240,9 @@ export default class BotInterfaceApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/BotInterfaceApi~leaveChannelsByUrlCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    leaveChannelsByUrlWithHttpInfo(botUserid, channelUrl, opts) {
+    leaveChannelsByUrl(botUserid, channelUrl, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'botUserid' is set
@@ -298,26 +273,17 @@ export default class BotInterfaceApi {
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}/channels/{channel_url}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Leave channels - When leaving a channel by its channel URL
-     * ## Leave channels  Makes a bot leave one or more group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-leave-channels ----------------------------
-     * @param {String} botUserid 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the listBots operation.
+     * @callback module:api/BotInterfaceApi~listBotsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20065} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    leaveChannelsByUrl(botUserid, channelUrl, opts) {
-      return this.leaveChannelsByUrlWithHttpInfo(botUserid, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * List bots
@@ -326,9 +292,10 @@ export default class BotInterfaceApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20065} and HTTP response
+     * @param {module:api/BotInterfaceApi~listBotsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20065}
      */
-    listBotsWithHttpInfo(opts) {
+    listBots(opts, callback) {
       opts = opts || {};
       let postBody = null;
 
@@ -351,26 +318,17 @@ export default class BotInterfaceApi {
       return this.apiClient.callApi(
         '/v3/bots', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * List bots
-     * ## List bots  Retrieves a list of all bots within an application.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-list-bots ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20065}
+     * Callback function to receive the result of the sendBotsMessage operation.
+     * @callback module:api/BotInterfaceApi~sendBotsMessageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SendBirdMessageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    listBots(opts) {
-      return this.listBotsWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Send a bot's message
@@ -379,9 +337,10 @@ export default class BotInterfaceApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/SendBotSMessageData} opts.sendBotSMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdMessageResponse} and HTTP response
+     * @param {module:api/BotInterfaceApi~sendBotsMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdMessageResponse}
      */
-    sendBotsMessageWithHttpInfo(botUserid, opts) {
+    sendBotsMessage(botUserid, opts, callback) {
       opts = opts || {};
       let postBody = opts['sendBotSMessageData'];
       // verify the required parameter 'botUserid' is set
@@ -407,26 +366,17 @@ export default class BotInterfaceApi {
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}/send', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Send a bot's message
-     * ## Send a bot's message  Sends a bot's message to a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-send-a-bot-s-message ----------------------------   `bot_userid`      Type: string      Description: Specifies the ID of the bot to send a message.
-     * @param {String} botUserid 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/SendBotSMessageData} opts.sendBotSMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdMessageResponse}
+     * Callback function to receive the result of the updateBotById operation.
+     * @callback module:api/BotInterfaceApi~updateBotByIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20065Bots} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    sendBotsMessage(botUserid, opts) {
-      return this.sendBotsMessageWithHttpInfo(botUserid, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Update a bot
@@ -435,9 +385,10 @@ export default class BotInterfaceApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateBotByIdData} opts.updateBotByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20065Bots} and HTTP response
+     * @param {module:api/BotInterfaceApi~updateBotByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20065Bots}
      */
-    updateBotByIdWithHttpInfo(botUserid, opts) {
+    updateBotById(botUserid, opts, callback) {
       opts = opts || {};
       let postBody = opts['updateBotByIdData'];
       // verify the required parameter 'botUserid' is set
@@ -463,26 +414,17 @@ export default class BotInterfaceApi {
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Update a bot
-     * ## Update a bot  Updates information on a bot.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-update-a-bot ----------------------------
-     * @param {String} botUserid 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/UpdateBotByIdData} opts.updateBotByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20065Bots}
+     * Callback function to receive the result of the viewBotById operation.
+     * @callback module:api/BotInterfaceApi~viewBotByIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20065Bots} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    updateBotById(botUserid, opts) {
-      return this.updateBotByIdWithHttpInfo(botUserid, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View a bot
@@ -490,9 +432,10 @@ export default class BotInterfaceApi {
      * @param {String} botUserid 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20065Bots} and HTTP response
+     * @param {module:api/BotInterfaceApi~viewBotByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20065Bots}
      */
-    viewBotByIdWithHttpInfo(botUserid, opts) {
+    viewBotById(botUserid, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'botUserid' is set
@@ -518,23 +461,8 @@ export default class BotInterfaceApi {
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
-    }
-
-    /**
-     * View a bot
-     * ## View a bot  Retrieves information on a bot.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-view-a-bot ----------------------------
-     * @param {String} botUserid 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20065Bots}
-     */
-    viewBotById(botUserid, opts) {
-      return this.viewBotByIdWithHttpInfo(botUserid, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
     }
 
 

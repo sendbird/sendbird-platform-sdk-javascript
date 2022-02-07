@@ -27,12 +27,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.migrateMessagesByUrl(targetChannelUrl, opts).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
+apiInstance.migrateMessagesByUrl(targetChannelUrl, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
 });
-
 ```
 
 ### Parameters

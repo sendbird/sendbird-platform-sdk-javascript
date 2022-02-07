@@ -36,6 +36,13 @@ export default class WebhooksApi {
     }
 
 
+    /**
+     * Callback function to receive the result of the chooseWhichEventsToSubscribeTo operation.
+     * @callback module:api/WebhooksApi~chooseWhichEventsToSubscribeToCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20067} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
 
     /**
      * Choose which events to subscribe to
@@ -43,9 +50,10 @@ export default class WebhooksApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ChooseWhichEventsToSubscribeToData} opts.chooseWhichEventsToSubscribeToData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20067} and HTTP response
+     * @param {module:api/WebhooksApi~chooseWhichEventsToSubscribeToCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20067}
      */
-    chooseWhichEventsToSubscribeToWithHttpInfo(opts) {
+    chooseWhichEventsToSubscribeTo(opts, callback) {
       opts = opts || {};
       let postBody = opts['chooseWhichEventsToSubscribeToData'];
 
@@ -66,25 +74,17 @@ export default class WebhooksApi {
       return this.apiClient.callApi(
         '/v3/applications/settings/webhook', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Choose which events to subscribe to
-     * ## Choose which events to subscribe to  Chooses which events for your webhook server to receive payloads for. By subscribing to specific events based on your own needs, you can control the number of HTTP requests to your webhook server.  https://sendbird.com/docs/chat/v3/platform-api/guides/webhooks#2-choose-which-events-to-subscribe-to
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/ChooseWhichEventsToSubscribeToData} opts.chooseWhichEventsToSubscribeToData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20067}
+     * Callback function to receive the result of the retrieveListOfSubscribedEvents operation.
+     * @callback module:api/WebhooksApi~retrieveListOfSubscribedEventsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20066} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    chooseWhichEventsToSubscribeTo(opts) {
-      return this.chooseWhichEventsToSubscribeToWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Retrieve a list of subscribed events
@@ -92,9 +92,10 @@ export default class WebhooksApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Boolean} opts.displayAllWebhookCategories 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20066} and HTTP response
+     * @param {module:api/WebhooksApi~retrieveListOfSubscribedEventsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20066}
      */
-    retrieveListOfSubscribedEventsWithHttpInfo(opts) {
+    retrieveListOfSubscribedEvents(opts, callback) {
       opts = opts || {};
       let postBody = null;
 
@@ -116,23 +117,8 @@ export default class WebhooksApi {
       return this.apiClient.callApi(
         '/v3/applications/settings/webhook', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
-    }
-
-    /**
-     * Retrieve a list of subscribed events
-     * ## Retrieve a list of subscribed events  Retrieves a list of events for your webhook server to receive payloads for.  https://sendbird.com/docs/chat/v3/platform-api/guides/webhooks#2-retrieve-a-list-of-subscribed-events ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {Boolean} opts.displayAllWebhookCategories 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20066}
-     */
-    retrieveListOfSubscribedEvents(opts) {
-      return this.retrieveListOfSubscribedEventsWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
     }
 
 

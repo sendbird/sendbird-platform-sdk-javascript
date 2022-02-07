@@ -28,11 +28,10 @@ class UpdateExtraDataInMessageData {
      * @param sortedMetaarray {String} Specifies a `JSON` object of one or more key-values items which store additional message information. Each item consists of a key and the values in an array. Items are saved and will be returned in the exact order they've been specified.
      * @param mode {String} Determines whether to add the specified values in the items or remove the specified values from the existing items. Acceptable values are limited to add and remove. If set to add, the specified values are added only when they are different from the existing values. If set to remove, the specified values are removed only when they have the corresponding ones in the existing values.
      * @param upsert {Boolean} Determines whether to add new items in addition to updating existing items. If true, new key-values items are added when there are no items with the keys. The existing items are updated with new values when there are already items with the keys. If false, only the items of which keys match the ones you specify are updated with new values. (Default: false)
-     * @param metaarray {String} (Deprecated) Specifies a `JSON` object of one or more key-values items which store additional message information. The item consists of a key and the values in an array.
      */
-    constructor(channelType, channelUrl, messageId, sortedMetaarray, mode, upsert, metaarray) { 
+    constructor(channelType, channelUrl, messageId, sortedMetaarray, mode, upsert) { 
         
-        UpdateExtraDataInMessageData.initialize(this, channelType, channelUrl, messageId, sortedMetaarray, mode, upsert, metaarray);
+        UpdateExtraDataInMessageData.initialize(this, channelType, channelUrl, messageId, sortedMetaarray, mode, upsert);
     }
 
     /**
@@ -40,14 +39,13 @@ class UpdateExtraDataInMessageData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, channelType, channelUrl, messageId, sortedMetaarray, mode, upsert, metaarray) { 
+    static initialize(obj, channelType, channelUrl, messageId, sortedMetaarray, mode, upsert) { 
         obj['channel_type'] = channelType;
         obj['channel_url'] = channelUrl;
         obj['message_id'] = messageId;
         obj['sorted_metaarray'] = sortedMetaarray;
         obj['mode'] = mode;
         obj['upsert'] = upsert;
-        obj['metaarray'] = metaarray;
     }
 
     /**
@@ -78,9 +76,6 @@ class UpdateExtraDataInMessageData {
             }
             if (data.hasOwnProperty('upsert')) {
                 obj['upsert'] = ApiClient.convertToType(data['upsert'], 'Boolean');
-            }
-            if (data.hasOwnProperty('metaarray')) {
-                obj['metaarray'] = ApiClient.convertToType(data['metaarray'], 'String');
             }
         }
         return obj;
@@ -124,12 +119,6 @@ UpdateExtraDataInMessageData.prototype['mode'] = undefined;
  * @member {Boolean} upsert
  */
 UpdateExtraDataInMessageData.prototype['upsert'] = undefined;
-
-/**
- * (Deprecated) Specifies a `JSON` object of one or more key-values items which store additional message information. The item consists of a key and the values in an array.
- * @member {String} metaarray
- */
-UpdateExtraDataInMessageData.prototype['metaarray'] = undefined;
 
 
 

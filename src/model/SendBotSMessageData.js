@@ -24,17 +24,10 @@ class SendBotSMessageData {
      * @alias module:model/SendBotSMessageData
      * @param message {String} Specifies the content of the message sent by the bot.
      * @param channelUrl {String} Specifies the URL of the channel where the message is sent to.
-     * @param customType {String} Specifies a custom message type which is used for message grouping. The length is limited to 128 characters.
-     * @param data {String} Specifies additional message information such as custom font size, font type or `JSON` formatted string.
-     * @param sendPush {Boolean} Determines whether to send a push notification for the message to the members of the channel (Default: true)
-     * @param mentioned {Array.<Number>} Specifies an array of one or more IDs of the users who get a notification for the message.
-     * @param markAsRead {Boolean} Determines whether to mark the message as read for the bot. If set to false, the bot's unread_count and read_receipt remain unchanged after the message is sent. (Default: true)
-     * @param dedupId {String} Specifies the unique ID for the message to prevent the same message data from getting sent to the channel.
-     * @param createdAt {Number} Specifies the time that the message was sent, in [Unix milliseconds](/docs/chat/v3/platform-api/guides/miscellaneous#2-timestamps) format.
      */
-    constructor(message, channelUrl, customType, data, sendPush, mentioned, markAsRead, dedupId, createdAt) { 
+    constructor(message, channelUrl) { 
         
-        SendBotSMessageData.initialize(this, message, channelUrl, customType, data, sendPush, mentioned, markAsRead, dedupId, createdAt);
+        SendBotSMessageData.initialize(this, message, channelUrl);
     }
 
     /**
@@ -42,16 +35,9 @@ class SendBotSMessageData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, message, channelUrl, customType, data, sendPush, mentioned, markAsRead, dedupId, createdAt) { 
+    static initialize(obj, message, channelUrl) { 
         obj['message'] = message;
         obj['channel_url'] = channelUrl;
-        obj['custom_type'] = customType;
-        obj['data'] = data;
-        obj['send_push'] = sendPush;
-        obj['mentioned'] = mentioned;
-        obj['mark_as_read'] = markAsRead;
-        obj['dedup_id'] = dedupId;
-        obj['created_at'] = createdAt;
     }
 
     /**

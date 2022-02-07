@@ -22,15 +22,11 @@ class ReportChannelByUrlData {
     /**
      * Constructs a new <code>ReportChannelByUrlData</code>.
      * @alias module:model/ReportChannelByUrlData
-     * @param channelType {String} Specifies the type of the channel. Either open_channels or group_channels.
-     * @param channelUrl {String} Specifies the URL of the channel to report for offensive messages or inappropriate activities.
      * @param reportCategory {String} Specifies the category which indicates the reason for reporting. Acceptable values are suspicious, harassing, inappropriate, and spam.
-     * @param reportingUserId {String} Specifies the unique ID of the user who reports the channel.
-     * @param reportDescription {String} Specifies additional information to be included in the report.
      */
-    constructor(channelType, channelUrl, reportCategory, reportingUserId, reportDescription) { 
+    constructor(reportCategory) { 
         
-        ReportChannelByUrlData.initialize(this, channelType, channelUrl, reportCategory, reportingUserId, reportDescription);
+        ReportChannelByUrlData.initialize(this, reportCategory);
     }
 
     /**
@@ -38,12 +34,8 @@ class ReportChannelByUrlData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, channelType, channelUrl, reportCategory, reportingUserId, reportDescription) { 
-        obj['channel_type'] = channelType;
-        obj['channel_url'] = channelUrl;
+    static initialize(obj, reportCategory) { 
         obj['report_category'] = reportCategory;
-        obj['reporting_user_id'] = reportingUserId;
-        obj['report_description'] = reportDescription;
     }
 
     /**

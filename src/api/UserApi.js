@@ -62,6 +62,13 @@ export default class UserApi {
     }
 
 
+    /**
+     * Callback function to receive the result of the addRegistrationOrDeviceToken operation.
+     * @callback module:api/UserApi~addRegistrationOrDeviceTokenCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20025} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
 
     /**
      * Add a registration or device token
@@ -71,9 +78,10 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddRegistrationOrDeviceTokenData} opts.addRegistrationOrDeviceTokenData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20025} and HTTP response
+     * @param {module:api/UserApi~addRegistrationOrDeviceTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20025}
      */
-    addRegistrationOrDeviceTokenWithHttpInfo(userId, tokenType, opts) {
+    addRegistrationOrDeviceToken(userId, tokenType, opts, callback) {
       opts = opts || {};
       let postBody = opts['addRegistrationOrDeviceTokenData'];
       // verify the required parameter 'userId' is set
@@ -104,27 +112,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/{token_type}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Add a registration or device token
-     * ## Add a registration or device token  > __Note__: A user can have up to 20 FCM registration tokens, 20 HMS device tokens, and 20 APNs device tokens each. The oldest token will be deleted before a new token is added for a user who already has 20 registration or device tokens. Only the 20 newest tokens will be maintained for users who already have more than 20 of each token type.  To send notification requests to push notification services on behalf of your server, adds a specific user's FCM registration token, HMS device token, or APNs device token to Sendbird server. Depending on which push service you are using, you can pass one of two values in `token_type`: `gcm`, `huawei`, or `apns`.  A FCM registration token and an APNs device token allow identification of each client app instance on each device, and are generated and registered by Android and iOS apps through the corresponding SDKs. Use this method if you need to register a token via your own server.  > __Note__: For more information on the registration token and device token, visit the Google's [FCM](https://firebase.google.com/docs/auth/admin/verify-id-tokens) page, Huawei's [Push kit](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/service-introduction-0000001050040060) and Apple's [APNs](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) page.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-add-a-registration-or-device-token ----------------------------
-     * @param {String} userId 
-     * @param {String} tokenType 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/AddRegistrationOrDeviceTokenData} opts.addRegistrationOrDeviceTokenData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20025}
+     * Callback function to receive the result of the banFromChannelsWithCustomChannelTypes operation.
+     * @callback module:api/UserApi~banFromChannelsWithCustomChannelTypesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    addRegistrationOrDeviceToken(userId, tokenType, opts) {
-      return this.addRegistrationOrDeviceTokenWithHttpInfo(userId, tokenType, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Ban from channels with custom channel types
@@ -133,9 +131,9 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/BanFromChannelsWithCustomChannelTypesData} opts.banFromChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/UserApi~banFromChannelsWithCustomChannelTypesCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    banFromChannelsWithCustomChannelTypesWithHttpInfo(userId, opts) {
+    banFromChannelsWithCustomChannelTypes(userId, opts, callback) {
       opts = opts || {};
       let postBody = opts['banFromChannelsWithCustomChannelTypesData'];
       // verify the required parameter 'userId' is set
@@ -161,26 +159,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/banned_channel_custom_types', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Ban from channels with custom channel types
-     * ## Ban from channels with custom channel types  Bans a user from channels with particular custom channel types.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-ban-from-channels-with-custom-channel-types ----------------------------
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/BanFromChannelsWithCustomChannelTypesData} opts.banFromChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the blockUser operation.
+     * @callback module:api/UserApi~blockUserCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SendBirdUser} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    banFromChannelsWithCustomChannelTypes(userId, opts) {
-      return this.banFromChannelsWithCustomChannelTypesWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Block a user
@@ -189,9 +178,10 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/BlockUserData} opts.blockUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
+     * @param {module:api/UserApi~blockUserCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdUser}
      */
-    blockUserWithHttpInfo(userId, opts) {
+    blockUser(userId, opts, callback) {
       opts = opts || {};
       let postBody = opts['blockUserData'];
       // verify the required parameter 'userId' is set
@@ -217,26 +207,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/block', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Block a user
-     * ## Block a user  Allows a user to block another user. A user doesn't receive messages from someone they have blocked anymore. Also, blocking someone doesn't alert them that they have been blocked. Blocked users still can send messages as normal in the channel: however, they can't receive any messages from the users who have blocked them.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-block-a-user ----------------------------
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/BlockUserData} opts.blockUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
+     * Callback function to receive the result of the choosePushNotificationContentTemplate operation.
+     * @callback module:api/UserApi~choosePushNotificationContentTemplateCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20029} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    blockUser(userId, opts) {
-      return this.blockUserWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Choose a push notification content template
@@ -245,9 +226,10 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20029} and HTTP response
+     * @param {module:api/UserApi~choosePushNotificationContentTemplateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20029}
      */
-    choosePushNotificationContentTemplateWithHttpInfo(userId, opts) {
+    choosePushNotificationContentTemplate(userId, opts, callback) {
       opts = opts || {};
       let postBody = opts['body'];
       // verify the required parameter 'userId' is set
@@ -273,26 +255,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/template', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Choose a push notification content template
-     * ## Choose a push notification content template  Chooses a push notification content template of a user's own. The push notifications feature is only available for group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-choose-a-push-notification-content-template ----------------------------
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20029}
+     * Callback function to receive the result of the createUser operation.
+     * @callback module:api/UserApi~createUserCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SendBirdUser} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    choosePushNotificationContentTemplate(userId, opts) {
-      return this.choosePushNotificationContentTemplateWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Create a user
@@ -300,9 +273,10 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/CreateUserData} opts.createUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
+     * @param {module:api/UserApi~createUserCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdUser}
      */
-    createUserWithHttpInfo(opts) {
+    createUser(opts, callback) {
       opts = opts || {};
       let postBody = opts['createUserData'];
 
@@ -323,25 +297,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Create a user
-     * ## Create a user  Creates a new user in the application. A user is identified by its unique user ID, and additionally have a changeable nickname, profile image, and so on.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-create-a-user
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/CreateUserData} opts.createUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
+     * Callback function to receive the result of the deleteUserById operation.
+     * @callback module:api/UserApi~deleteUserByIdCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    createUser(opts) {
-      return this.createUserWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Delete a user
@@ -349,9 +315,9 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/UserApi~deleteUserByIdCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteUserByIdWithHttpInfo(userId, opts) {
+    deleteUserById(userId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -377,25 +343,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Delete a user
-     * ## Delete a user  Deletes a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-delete-a-user ----------------------------
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the leaveMyGroupChannels operation.
+     * @callback module:api/UserApi~leaveMyGroupChannelsCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    deleteUserById(userId, opts) {
-      return this.deleteUserByIdWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Leave my group channels
@@ -404,9 +362,9 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/LeaveMyGroupChannelsData} opts.leaveMyGroupChannelsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/UserApi~leaveMyGroupChannelsCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    leaveMyGroupChannelsWithHttpInfo(userId, opts) {
+    leaveMyGroupChannels(userId, opts, callback) {
       opts = opts || {};
       let postBody = opts['leaveMyGroupChannelsData'];
       // verify the required parameter 'userId' is set
@@ -432,26 +390,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/my_group_channels/leave', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Leave my group channels
-     * ## Leave my group channels  Makes a user leave all joined group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-leave-my-group-channels ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the user to leave all joined group channels.
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/LeaveMyGroupChannelsData} opts.leaveMyGroupChannelsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the listBannedChannels operation.
+     * @callback module:api/UserApi~listBannedChannelsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20022} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    leaveMyGroupChannels(userId, opts) {
-      return this.leaveMyGroupChannelsWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * List banned channels
@@ -461,9 +410,10 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20022} and HTTP response
+     * @param {module:api/UserApi~listBannedChannelsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20022}
      */
-    listBannedChannelsWithHttpInfo(userId, opts) {
+    listBannedChannels(userId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -491,27 +441,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/ban', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * List banned channels
-     * ## List banned channels  Retrieves a list of open and group channels with additional information where a user is banned.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-banned-channels ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the target user.
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20022}
+     * Callback function to receive the result of the listBlockedUsers operation.
+     * @callback module:api/UserApi~listBlockedUsersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20016} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    listBannedChannels(userId, opts) {
-      return this.listBannedChannelsWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * List blocked users
@@ -524,9 +464,10 @@ export default class UserApi {
      * @param {String} opts.userIds 
      * @param {String} opts.metadatakey 
      * @param {String} opts.metadatavaluesIn 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20016} and HTTP response
+     * @param {module:api/UserApi~listBlockedUsersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20016}
      */
-    listBlockedUsersWithHttpInfo(userId, opts) {
+    listBlockedUsers(userId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -557,30 +498,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/block', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * List blocked users
-     * ## List blocked users  Retrieves a list of other users that a user has blocked.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-blocked-users ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the target user.
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @param {String} opts.userIds 
-     * @param {String} opts.metadatakey 
-     * @param {String} opts.metadatavaluesIn 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20016}
+     * Callback function to receive the result of the listMutedChannels operation.
+     * @callback module:api/UserApi~listMutedChannelsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20023} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    listBlockedUsers(userId, opts) {
-      return this.listBlockedUsersWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * List muted channels
@@ -590,9 +518,10 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20023} and HTTP response
+     * @param {module:api/UserApi~listMutedChannelsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20023}
      */
-    listMutedChannelsWithHttpInfo(userId, opts) {
+    listMutedChannels(userId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -620,27 +549,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/mute', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * List muted channels
-     * ## List muted channels  Retrieves a list of open and group channels with additional information where a user is muted.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-muted-channels ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the target user.
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20023}
+     * Callback function to receive the result of the listMyGroupChannels operation.
+     * @callback module:api/UserApi~listMyGroupChannelsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20017} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    listMutedChannels(userId, opts) {
-      return this.listMutedChannelsWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * List my group channels
@@ -688,9 +607,10 @@ export default class UserApi {
      * @param {String} opts.metacounterValueLt 
      * @param {String} opts.metacounterValueLte 
      * @param {String} opts.customType 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20017} and HTTP response
+     * @param {module:api/UserApi~listMyGroupChannelsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20017}
      */
-    listMyGroupChannelsWithHttpInfo(userId, opts) {
+    listMyGroupChannels(userId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -756,65 +676,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/my_group_channels', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * List my group channels
-     * ## List my group channels  Retrieves all group channels that the user has joined. You can create a request based on various query parameters.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-my-group-channels ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the target user.
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @param {String} opts.distinctMode 
-     * @param {String} opts.publicMode 
-     * @param {String} opts.superMode 
-     * @param {String} opts.hiddenMode 
-     * @param {String} opts.memberStateFilter 
-     * @param {String} opts.unreadFilter 
-     * @param {Number} opts.createdAfter 
-     * @param {Number} opts.createdBefore 
-     * @param {Boolean} opts.showEmpty 
-     * @param {Boolean} opts.showFrozen 
-     * @param {Boolean} opts.showMember 
-     * @param {Boolean} opts.showDeliveryReceipt 
-     * @param {Boolean} opts.showReadReceipt 
-     * @param {String} opts.order 
-     * @param {String} opts.metadataOrderKey 
-     * @param {String} opts.customTypes 
-     * @param {String} opts.customTypeStartswith 
-     * @param {String} opts.channelUrls 
-     * @param {String} opts.name 
-     * @param {String} opts.nameContains 
-     * @param {String} opts.nameStartswith 
-     * @param {String} opts.membersExactlyIn 
-     * @param {String} opts.membersIncludeIn 
-     * @param {String} opts.queryType 
-     * @param {String} opts.membersNickname 
-     * @param {String} opts.membersNicknameContains 
-     * @param {String} opts.searchQuery 
-     * @param {String} opts.searchFields 
-     * @param {String} opts.metadataKey 
-     * @param {String} opts.metadataValues 
-     * @param {String} opts.metadataValueStartswith 
-     * @param {String} opts.metacounterKey 
-     * @param {String} opts.metacounterValues 
-     * @param {String} opts.metacounterValueGt 
-     * @param {String} opts.metacounterValueGte 
-     * @param {String} opts.metacounterValueLt 
-     * @param {String} opts.metacounterValueLte 
-     * @param {String} opts.customType 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20017}
+     * Callback function to receive the result of the listRegistrationOrDeviceTokens operation.
+     * @callback module:api/UserApi~listRegistrationOrDeviceTokensCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20024} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    listMyGroupChannels(userId, opts) {
-      return this.listMyGroupChannelsWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * List registration or device tokens
@@ -823,9 +695,10 @@ export default class UserApi {
      * @param {String} tokenType 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20024} and HTTP response
+     * @param {module:api/UserApi~listRegistrationOrDeviceTokensCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20024}
      */
-    listRegistrationOrDeviceTokensWithHttpInfo(userId, tokenType, opts) {
+    listRegistrationOrDeviceTokens(userId, tokenType, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -856,26 +729,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/{token_type}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * List registration or device tokens
-     * ## List registration or device tokens  Retrieves a list of a specific user's FCM registration tokens, HMS device tokens, or APNs device tokens. You can specify either `gcm`, `huawei`, or `apns` in the `token_type` parameter, depending on which push notification service you are using.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-registration-or-device-tokens ----------------------------
-     * @param {String} userId 
-     * @param {String} tokenType 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20024}
+     * Callback function to receive the result of the listUsers operation.
+     * @callback module:api/UserApi~listUsersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20016} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    listRegistrationOrDeviceTokens(userId, tokenType, opts) {
-      return this.listRegistrationOrDeviceTokensWithHttpInfo(userId, tokenType, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * List users
@@ -891,9 +755,10 @@ export default class UserApi {
      * @param {String} opts.nicknameStartswith 
      * @param {String} opts.metadatakey 
      * @param {String} opts.metadatavaluesIn 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20016} and HTTP response
+     * @param {module:api/UserApi~listUsersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20016}
      */
-    listUsersWithHttpInfo(opts) {
+    listUsers(opts, callback) {
       opts = opts || {};
       let postBody = null;
 
@@ -923,33 +788,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * List users
-     * ## List users  Retrieves a list of users in your application. You can query the list using various parameters.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-users ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @param {String} opts.activeMode 
-     * @param {Boolean} opts.showBot 
-     * @param {String} opts.userIds 
-     * @param {String} opts.nickname 
-     * @param {String} opts.nicknameStartswith 
-     * @param {String} opts.metadatakey 
-     * @param {String} opts.metadatavaluesIn 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20016}
+     * Callback function to receive the result of the markAllMessagesAsRead operation.
+     * @callback module:api/UserApi~markAllMessagesAsReadCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    listUsers(opts) {
-      return this.listUsersWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Mark all messages as read
@@ -958,9 +807,9 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/MarkAllMessagesAsReadData} opts.markAllMessagesAsReadData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/UserApi~markAllMessagesAsReadCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    markAllMessagesAsReadWithHttpInfo(userId, opts) {
+    markAllMessagesAsRead(userId, opts, callback) {
       opts = opts || {};
       let postBody = opts['markAllMessagesAsReadData'];
       // verify the required parameter 'userId' is set
@@ -986,26 +835,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/mark_as_read_all', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Mark all messages as read
-     * ## Mark all messages as read  Marks all of a user's unread messages as read in the joined group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-mark-all-messages-as-read ----------------------------
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/MarkAllMessagesAsReadData} opts.markAllMessagesAsReadData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the muteInChannelsWithCustomChannelTypes operation.
+     * @callback module:api/UserApi~muteInChannelsWithCustomChannelTypesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    markAllMessagesAsRead(userId, opts) {
-      return this.markAllMessagesAsReadWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Mute in channels with custom channel types
@@ -1014,9 +854,9 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/MuteInChannelsWithCustomChannelTypesData} opts.muteInChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/UserApi~muteInChannelsWithCustomChannelTypesCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    muteInChannelsWithCustomChannelTypesWithHttpInfo(userId, opts) {
+    muteInChannelsWithCustomChannelTypes(userId, opts, callback) {
       opts = opts || {};
       let postBody = opts['muteInChannelsWithCustomChannelTypesData'];
       // verify the required parameter 'userId' is set
@@ -1042,26 +882,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/muted_channel_custom_types', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Mute in channels with custom channel types
-     * ## Mute in channels with custom channel types  Mutes a user in channels with particular custom channel types.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-mute-in-channels-with-custom-channel-types ----------------------------
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/MuteInChannelsWithCustomChannelTypesData} opts.muteInChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the registerAsOperatorToChannelsWithCustomChannelTypes operation.
+     * @callback module:api/UserApi~registerAsOperatorToChannelsWithCustomChannelTypesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    muteInChannelsWithCustomChannelTypes(userId, opts) {
-      return this.muteInChannelsWithCustomChannelTypesWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Register as an operator to channels with custom channel types
@@ -1070,9 +901,9 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/RegisterAsOperatorToChannelsWithCustomChannelTypesData} opts.registerAsOperatorToChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/UserApi~registerAsOperatorToChannelsWithCustomChannelTypesCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    registerAsOperatorToChannelsWithCustomChannelTypesWithHttpInfo(userId, opts) {
+    registerAsOperatorToChannelsWithCustomChannelTypes(userId, opts, callback) {
       opts = opts || {};
       let postBody = opts['registerAsOperatorToChannelsWithCustomChannelTypesData'];
       // verify the required parameter 'userId' is set
@@ -1098,26 +929,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/operating_channel_custom_types', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Register as an operator to channels with custom channel types
-     * ## Register as an operator to channels with custom channel types  Registers a user as an operator to channels with particular custom channel types.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-register-as-an-operator-to-channels-with-custom-channel-types ----------------------------
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/RegisterAsOperatorToChannelsWithCustomChannelTypesData} opts.registerAsOperatorToChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the removeRegistrationOrDeviceToken operation.
+     * @callback module:api/UserApi~removeRegistrationOrDeviceTokenCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20026} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    registerAsOperatorToChannelsWithCustomChannelTypes(userId, opts) {
-      return this.registerAsOperatorToChannelsWithCustomChannelTypesWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Remove a registration or device token - When unregistering all device tokens
@@ -1125,9 +947,10 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20026} and HTTP response
+     * @param {module:api/UserApi~removeRegistrationOrDeviceTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20026}
      */
-    removeRegistrationOrDeviceTokenWithHttpInfo(userId, opts) {
+    removeRegistrationOrDeviceToken(userId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -1153,25 +976,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Remove a registration or device token - When unregistering all device tokens
-     * ## Remove a registration or device token  Removes a specific user's one or more FCM registration tokens, HMS device tokens, or APNs device tokens.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-remove-a-registration-or-device-token ----------------------------
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20026}
+     * Callback function to receive the result of the removeRegistrationOrDeviceTokenByToken operation.
+     * @callback module:api/UserApi~removeRegistrationOrDeviceTokenByTokenCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20026} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    removeRegistrationOrDeviceToken(userId, opts) {
-      return this.removeRegistrationOrDeviceTokenWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Remove a registration or device token - When unregistering a specific token
@@ -1181,9 +996,10 @@ export default class UserApi {
      * @param {String} token 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20026} and HTTP response
+     * @param {module:api/UserApi~removeRegistrationOrDeviceTokenByTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20026}
      */
-    removeRegistrationOrDeviceTokenByTokenWithHttpInfo(userId, tokenType, token, opts) {
+    removeRegistrationOrDeviceTokenByToken(userId, tokenType, token, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -1219,27 +1035,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/{token_type}/{token}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Remove a registration or device token - When unregistering a specific token
-     * ## Remove a registration or device token  Removes a specific user's one or more FCM registration tokens, HMS device tokens, or APNs device tokens.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-remove-a-registration-or-device-token ----------------------------
-     * @param {String} userId 
-     * @param {String} tokenType 
-     * @param {String} token 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20026}
+     * Callback function to receive the result of the removeRegistrationOrDeviceTokenFromOwnerByToken operation.
+     * @callback module:api/UserApi~removeRegistrationOrDeviceTokenFromOwnerByTokenCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20027} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    removeRegistrationOrDeviceTokenByToken(userId, tokenType, token, opts) {
-      return this.removeRegistrationOrDeviceTokenByTokenWithHttpInfo(userId, tokenType, token, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Remove a registration or device token from an owner
@@ -1248,9 +1054,10 @@ export default class UserApi {
      * @param {String} token 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20027} and HTTP response
+     * @param {module:api/UserApi~removeRegistrationOrDeviceTokenFromOwnerByTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20027}
      */
-    removeRegistrationOrDeviceTokenFromOwnerByTokenWithHttpInfo(tokenType, token, opts) {
+    removeRegistrationOrDeviceTokenFromOwnerByToken(tokenType, token, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'tokenType' is set
@@ -1281,26 +1088,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/push/device_tokens/{token_type}/{token}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Remove a registration or device token from an owner
-     * ## Remove a registration or device token from an owner  Removes a registration or device token from a user who owns it. You can pass one of two values in `token_type`: `gcm`, `huawei`, or `apns`, depending on which push service you are using.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-remove-a-registration-or-device-token-from-an-owner ----------------------------
-     * @param {String} tokenType 
-     * @param {String} token 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20027}
+     * Callback function to receive the result of the resetPushPreferences operation.
+     * @callback module:api/UserApi~resetPushPreferencesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    removeRegistrationOrDeviceTokenFromOwnerByToken(tokenType, token, opts) {
-      return this.removeRegistrationOrDeviceTokenFromOwnerByTokenWithHttpInfo(tokenType, token, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Reset push preferences
@@ -1308,9 +1106,9 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/UserApi~resetPushPreferencesCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    resetPushPreferencesWithHttpInfo(userId, opts) {
+    resetPushPreferences(userId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -1336,25 +1134,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Reset push preferences
-     * ## Reset push preferences  Resets a user's push preferences. After performing this action,   `do_not_disturb` and `snooze_enabled` are set to false.  The values of the parameters associated with the time frame are all set to 0.  `timezone` is reset to `UTC`.  `push_sound` is reset to `default`.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-reset-push-preferences ----------------------------
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the unblockUserById operation.
+     * @callback module:api/UserApi~unblockUserByIdCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    resetPushPreferences(userId, opts) {
-      return this.resetPushPreferencesWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Unblock a user
@@ -1363,9 +1153,9 @@ export default class UserApi {
      * @param {String} targetId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/UserApi~unblockUserByIdCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    unblockUserByIdWithHttpInfo(userId, targetId, opts) {
+    unblockUserById(userId, targetId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -1396,26 +1186,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/block/{target_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Unblock a user
-     * ## Unblock a user  Unblocks the user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-unblock-a-user ----------------------------
-     * @param {String} userId 
-     * @param {String} targetId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the updateChannelInvitationPreference operation.
+     * @callback module:api/UserApi~updateChannelInvitationPreferenceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2005} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    unblockUserById(userId, targetId, opts) {
-      return this.unblockUserByIdWithHttpInfo(userId, targetId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Update channel invitation preference
@@ -1424,9 +1205,10 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateChannelInvitationPreferenceData} opts.updateChannelInvitationPreferenceData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2005} and HTTP response
+     * @param {module:api/UserApi~updateChannelInvitationPreferenceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2005}
      */
-    updateChannelInvitationPreferenceWithHttpInfo(userId, opts) {
+    updateChannelInvitationPreference(userId, opts, callback) {
       opts = opts || {};
       let postBody = opts['updateChannelInvitationPreferenceData'];
       // verify the required parameter 'userId' is set
@@ -1452,26 +1234,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/channel_invitation_preference', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Update channel invitation preference
-     * ## Update channel invitation preference  Updates the channel invitation preference for a user's [private](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#-3-private-vs-public) group channels.  > __Note__: Using the [update default channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-default-channel-invitation-preference) action, you can update the value of channel invitation preference which is globally applied to all users within the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-channel-invitation-preference
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/UpdateChannelInvitationPreferenceData} opts.updateChannelInvitationPreferenceData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2005}
+     * Callback function to receive the result of the updateCountPreferenceOfChannelByUrl operation.
+     * @callback module:api/UserApi~updateCountPreferenceOfChannelByUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20021} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    updateChannelInvitationPreference(userId, opts) {
-      return this.updateChannelInvitationPreferenceWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Update count preference of a channel
@@ -1481,9 +1254,10 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateCountPreferenceOfChannelByUrlData} opts.updateCountPreferenceOfChannelByUrlData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20021} and HTTP response
+     * @param {module:api/UserApi~updateCountPreferenceOfChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20021}
      */
-    updateCountPreferenceOfChannelByUrlWithHttpInfo(userId, channelUrl, opts) {
+    updateCountPreferenceOfChannelByUrl(userId, channelUrl, opts, callback) {
       opts = opts || {};
       let postBody = opts['updateCountPreferenceOfChannelByUrlData'];
       // verify the required parameter 'userId' is set
@@ -1514,27 +1288,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/count_preference/{channel_url}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Update count preference of a channel
-     * ## Update count preference of a channel  Updates count preference of a specific group channel of a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-count-preference-of-a-channel ----------------------------
-     * @param {String} userId 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/UpdateCountPreferenceOfChannelByUrlData} opts.updateCountPreferenceOfChannelByUrlData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20021}
+     * Callback function to receive the result of the updatePushPreferences operation.
+     * @callback module:api/UserApi~updatePushPreferencesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20028} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    updateCountPreferenceOfChannelByUrl(userId, channelUrl, opts) {
-      return this.updateCountPreferenceOfChannelByUrlWithHttpInfo(userId, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Update push preferences
@@ -1543,9 +1307,10 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdatePushPreferencesData} opts.updatePushPreferencesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20028} and HTTP response
+     * @param {module:api/UserApi~updatePushPreferencesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20028}
      */
-    updatePushPreferencesWithHttpInfo(userId, opts) {
+    updatePushPreferences(userId, opts, callback) {
       opts = opts || {};
       let postBody = opts['updatePushPreferencesData'];
       // verify the required parameter 'userId' is set
@@ -1571,26 +1336,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Update push preferences
-     * ## Update push preferences  Updates a user's push preferences. Through this action, you can set `do_not_disturb` for a user, and update the time frame in which the setting applies.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-push-preferences ----------------------------
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/UpdatePushPreferencesData} opts.updatePushPreferencesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20028}
+     * Callback function to receive the result of the updatePushPreferencesForChannelByUrl operation.
+     * @callback module:api/UserApi~updatePushPreferencesForChannelByUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20028} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    updatePushPreferences(userId, opts) {
-      return this.updatePushPreferencesWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Update push preferences for a channel
@@ -1600,9 +1356,10 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdatePushPreferencesForChannelByUrlData} opts.updatePushPreferencesForChannelByUrlData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20028} and HTTP response
+     * @param {module:api/UserApi~updatePushPreferencesForChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20028}
      */
-    updatePushPreferencesForChannelByUrlWithHttpInfo(userId, channelUrl, opts) {
+    updatePushPreferencesForChannelByUrl(userId, channelUrl, opts, callback) {
       opts = opts || {};
       let postBody = opts['updatePushPreferencesForChannelByUrlData'];
       // verify the required parameter 'userId' is set
@@ -1633,27 +1390,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference/{channel_url}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Update push preferences for a channel
-     * ## Update push preferences for a channel  Updates push preferences for a user's specific group channel. The push notifications feature is only available for group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-push-preferences-for-a-channel ----------------------------
-     * @param {String} userId 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/UpdatePushPreferencesForChannelByUrlData} opts.updatePushPreferencesForChannelByUrlData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20028}
+     * Callback function to receive the result of the updateUserById operation.
+     * @callback module:api/UserApi~updateUserByIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SendBirdUser} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    updatePushPreferencesForChannelByUrl(userId, channelUrl, opts) {
-      return this.updatePushPreferencesForChannelByUrlWithHttpInfo(userId, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Update a user
@@ -1662,9 +1409,10 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateUserByIdData} opts.updateUserByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
+     * @param {module:api/UserApi~updateUserByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdUser}
      */
-    updateUserByIdWithHttpInfo(userId, opts) {
+    updateUserById(userId, opts, callback) {
       opts = opts || {};
       let postBody = opts['updateUserByIdData'];
       // verify the required parameter 'userId' is set
@@ -1690,26 +1438,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Update a user
-     * ## Update a user  Updates information on a user. In addition to changing a user's nickname or profile image, you can issue a new access token for the user. The new access token replaces the previous one as the necessary token for authentication.  You can also deactivate or reactivate a user. If the `leave_all_when_deactivated` is true (which it is by default), a user leaves all joined group channels when deactivated.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-a-user ----------------------------
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/UpdateUserByIdData} opts.updateUserByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
+     * Callback function to receive the result of the viewChannelInvitationPreference operation.
+     * @callback module:api/UserApi~viewChannelInvitationPreferenceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2005} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    updateUserById(userId, opts) {
-      return this.updateUserByIdWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View channel invitation preference
@@ -1717,9 +1456,10 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2005} and HTTP response
+     * @param {module:api/UserApi~viewChannelInvitationPreferenceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2005}
      */
-    viewChannelInvitationPreferenceWithHttpInfo(userId, opts) {
+    viewChannelInvitationPreference(userId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -1745,25 +1485,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/channel_invitation_preference', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * View channel invitation preference
-     * ## View channel invitation preference  Retrieves channel invitation preference for a user's [private](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#-3-private-vs-public) group channels.  > __Note__: Using the [view default channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-default-channel-invitation-preference) action, you can retrieve the value of channel invitation preference which is globally applied to all users within the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-channel-invitation-preference
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2005}
+     * Callback function to receive the result of the viewCountPreferenceOfChannelByUrl operation.
+     * @callback module:api/UserApi~viewCountPreferenceOfChannelByUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20021} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    viewChannelInvitationPreference(userId, opts) {
-      return this.viewChannelInvitationPreferenceWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View count preference of a channel
@@ -1772,9 +1504,10 @@ export default class UserApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20021} and HTTP response
+     * @param {module:api/UserApi~viewCountPreferenceOfChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20021}
      */
-    viewCountPreferenceOfChannelByUrlWithHttpInfo(userId, channelUrl, opts) {
+    viewCountPreferenceOfChannelByUrl(userId, channelUrl, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -1805,26 +1538,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/count_preference/{channel_url}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * View count preference of a channel
-     * ## View count preference of a channel  Retrieves count preference of a specific group channel of a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-count-preference-of-a-channel ----------------------------
-     * @param {String} userId 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20021}
+     * Callback function to receive the result of the viewNumberOfChannelsByJoinStatus operation.
+     * @callback module:api/UserApi~viewNumberOfChannelsByJoinStatusCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20020} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    viewCountPreferenceOfChannelByUrl(userId, channelUrl, opts) {
-      return this.viewCountPreferenceOfChannelByUrlWithHttpInfo(userId, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View number of channels by join status
@@ -1833,9 +1557,10 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.state 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20020} and HTTP response
+     * @param {module:api/UserApi~viewNumberOfChannelsByJoinStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20020}
      */
-    viewNumberOfChannelsByJoinStatusWithHttpInfo(userId, opts) {
+    viewNumberOfChannelsByJoinStatus(userId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -1862,26 +1587,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/group_channel_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * View number of channels by join status
-     * ## View number of channels by join status  Retrieves the number of a user's group channels by their join status.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-channels-by-join-status ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the user to retrieve the number.
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.state 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20020}
+     * Callback function to receive the result of the viewNumberOfChannelsWithUnreadMessages operation.
+     * @callback module:api/UserApi~viewNumberOfChannelsWithUnreadMessagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20018} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    viewNumberOfChannelsByJoinStatus(userId, opts) {
-      return this.viewNumberOfChannelsByJoinStatusWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View number of channels with unread messages
@@ -1891,9 +1607,10 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {Array.<String>} opts.customTypes 
      * @param {String} opts.superMode 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20018} and HTTP response
+     * @param {module:api/UserApi~viewNumberOfChannelsWithUnreadMessagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20018}
      */
-    viewNumberOfChannelsWithUnreadMessagesWithHttpInfo(userId, opts) {
+    viewNumberOfChannelsWithUnreadMessages(userId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -1921,27 +1638,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/unread_channel_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * View number of channels with unread messages
-     * ## View number of channels with unread messages  Retrieves the total number of a user's group channels with unread messages.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-channels-with-unread-messages ----------------------------
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {Array.<String>} opts.customTypes 
-     * @param {String} opts.superMode 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20018}
+     * Callback function to receive the result of the viewNumberOfUnreadItems operation.
+     * @callback module:api/UserApi~viewNumberOfUnreadItemsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20019} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    viewNumberOfChannelsWithUnreadMessages(userId, opts) {
-      return this.viewNumberOfChannelsWithUnreadMessagesWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View number of unread items
@@ -1951,9 +1658,10 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.customType 
      * @param {String} opts.itemKeys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20019} and HTTP response
+     * @param {module:api/UserApi~viewNumberOfUnreadItemsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20019}
      */
-    viewNumberOfUnreadItemsWithHttpInfo(userId, opts) {
+    viewNumberOfUnreadItems(userId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -1981,27 +1689,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/unread_item_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * View number of unread items
-     * ## View number of unread items  Retrieves a set of total numbers of a user's unread messages, unread mentioned messages, or received invitations in either super or non-super group channels. This action is only available for the group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-unread-items ----------------------------
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.customType 
-     * @param {String} opts.itemKeys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20019}
+     * Callback function to receive the result of the viewNumberOfUnreadMessages operation.
+     * @callback module:api/UserApi~viewNumberOfUnreadMessagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20018} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    viewNumberOfUnreadItems(userId, opts) {
-      return this.viewNumberOfUnreadItemsWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View number of unread messages
@@ -2011,9 +1709,10 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.customTypes 
      * @param {String} opts.superMode 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20018} and HTTP response
+     * @param {module:api/UserApi~viewNumberOfUnreadMessagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20018}
      */
-    viewNumberOfUnreadMessagesWithHttpInfo(userId, opts) {
+    viewNumberOfUnreadMessages(userId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -2041,27 +1740,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/unread_message_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * View number of unread messages
-     * ## View number of unread messages  Retrieves the total number of a user's currently unread messages in the group channels. The unread counts feature is only available for the group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-unread-messages ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the user to retrieve the number.
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.customTypes 
-     * @param {String} opts.superMode 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20018}
+     * Callback function to receive the result of the viewPushPreferences operation.
+     * @callback module:api/UserApi~viewPushPreferencesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20028} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    viewNumberOfUnreadMessages(userId, opts) {
-      return this.viewNumberOfUnreadMessagesWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View push preferences
@@ -2069,9 +1758,10 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20028} and HTTP response
+     * @param {module:api/UserApi~viewPushPreferencesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20028}
      */
-    viewPushPreferencesWithHttpInfo(userId, opts) {
+    viewPushPreferences(userId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -2097,25 +1787,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * View push preferences
-     * ## View push preferences  Retrieves a user's push preferences about whether the user has set `do_not_disturb` to pause notifications for a certain period of time, and the time frame in which the user has applied the setting.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-push-preferences ----------------------------
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20028}
+     * Callback function to receive the result of the viewPushPreferencesForChannelByUrl operation.
+     * @callback module:api/UserApi~viewPushPreferencesForChannelByUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20028} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    viewPushPreferences(userId, opts) {
-      return this.viewPushPreferencesWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View push preferences for a channel
@@ -2124,9 +1806,10 @@ export default class UserApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20028} and HTTP response
+     * @param {module:api/UserApi~viewPushPreferencesForChannelByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20028}
      */
-    viewPushPreferencesForChannelByUrlWithHttpInfo(userId, channelUrl, opts) {
+    viewPushPreferencesForChannelByUrl(userId, channelUrl, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -2157,26 +1840,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference/{channel_url}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * View push preferences for a channel
-     * ## View push preferences for a channel  Retrieves whether a user has turned on notification messages for a specific channel. The push notifications feature is only available for group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-push-preferences-for-a-channel ----------------------------
-     * @param {String} userId 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20028}
+     * Callback function to receive the result of the viewUserById operation.
+     * @callback module:api/UserApi~viewUserByIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SendBirdUser} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    viewPushPreferencesForChannelByUrl(userId, channelUrl, opts) {
-      return this.viewPushPreferencesForChannelByUrlWithHttpInfo(userId, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View a user
@@ -2187,9 +1861,10 @@ export default class UserApi {
      * @param {Boolean} opts.includeUnreadCount 
      * @param {String} opts.customTypes 
      * @param {String} opts.superMode 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
+     * @param {module:api/UserApi~viewUserByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdUser}
      */
-    viewUserByIdWithHttpInfo(userId, opts) {
+    viewUserById(userId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'userId' is set
@@ -2218,28 +1893,17 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/users/{user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * View a user
-     * ## View a user  Retrieves information on a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-a-user ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the user to retrieve.
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {Boolean} opts.includeUnreadCount 
-     * @param {String} opts.customTypes 
-     * @param {String} opts.superMode 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
+     * Callback function to receive the result of the viewWhoOwnsRegistrationOrDeviceTokenByToken operation.
+     * @callback module:api/UserApi~viewWhoOwnsRegistrationOrDeviceTokenByTokenCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20027} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    viewUserById(userId, opts) {
-      return this.viewUserByIdWithHttpInfo(userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View who owns a registration or device token
@@ -2248,9 +1912,10 @@ export default class UserApi {
      * @param {String} token 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20027} and HTTP response
+     * @param {module:api/UserApi~viewWhoOwnsRegistrationOrDeviceTokenByTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20027}
      */
-    viewWhoOwnsRegistrationOrDeviceTokenByTokenWithHttpInfo(tokenType, token, opts) {
+    viewWhoOwnsRegistrationOrDeviceTokenByToken(tokenType, token, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'tokenType' is set
@@ -2281,24 +1946,8 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v3/push/device_tokens/{token_type}/{token}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
-    }
-
-    /**
-     * View who owns a registration or device token
-     * ## View who owns a registration or device token  Retrieves a user who owns a FCM registration token, HMS device token, or APNs device token. You can pass one of two values in `token_type`: `gcm`, `huawei`, or `apns`, depending on which push service you are using.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-who-owns-a-registration-or-device-token ----------------------------
-     * @param {String} tokenType 
-     * @param {String} token 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20027}
-     */
-    viewWhoOwnsRegistrationOrDeviceTokenByToken(tokenType, token, opts) {
-      return this.viewWhoOwnsRegistrationOrDeviceTokenByTokenWithHttpInfo(tokenType, token, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
     }
 
 

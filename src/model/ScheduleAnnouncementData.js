@@ -29,27 +29,10 @@ class ScheduleAnnouncementData {
      * @param targetAt {String} Specifies the target channels to send the announcement to. Acceptable values are the following: <br/> - sender_all_channels (Default): sends the announcement to all of the sender's group channels.<br />- target_channels: sends the announcement to all target group channels. When the `message.type` of the announcement is ADMM, this is the only valid option. <br /> - target_users_included_channels: sends the announcement to group channels consisting of the sender, target users, and other members. <br/> - target_users_only_channels: sends the announcement to group channels consisting of the sender and target users only.
      * @param targetList {Array.<String>} Specifies an array of one or more target user IDs or target channel URLs to send the announcement to when the target_at is  target_channels, target_users_only_channels, or target_users_included_channels.<br /><br />  When the target_at value is sender_all_channels, this property is not effective.
      * @param targetChannelType {String} Determines which type of group channel to send the announcement to, based on the target_at and target_list. This property is effective only when the target_at is either target_users_only_channels or target_users_included_channels and the target_list is specified. Acceptable values are limited to the following:<br/>- all: send the announcement to all channels that have all target users and the sender in them, regardless of channel type.<br/>- distinct (default): sends this announcement to the distinct channels. Distinct channels continue to use the same existing channels whenever someone attempts to create a new channel with the same members.<br/>- non-distinct: sends this announcement to the non-distinct channels. Non-distinct channels always create a new channel even if there is an existing channel with the same members.<br/><br/> The distinct and non-distinct channels are a subtype of group channels, determined by the [is_distinct](/docs/chat/v3/platform-api/guides/group-channel#2-types-of-a-channel-3-resource-representation) property.
-     * @param uniqueId {String} Specifies the unique ID of the new announcement. The unique_id will be automatically created unless specified.
-     * @param messageCustomType {String} Specifies the custom message type of the message of the new announcement.
-     * @param messageData {String} Specifies additional message information such as custom font size, font type or `JSON` formatted string.
-     * @param createChannel {Boolean} Determines whether to create a new channel if there is no existing channel that matches with the target options including target_at and target_list. By specifying the create_channel_options, you can configure the properties of newly created channels. (Default: false)
-     * @param announcementGroup {String} Specifies the announcement group that the new announcement belongs to.<br/> <br/> This property is effective only when the target_at is either target_users_only_channels or target_users_included_channels.
-     * @param createChannelOptions {String} A newly created channel configuration.
-     * @param createChannelOptionsName {String} Specifies the name of channels to be created. (Default: Group Channel)
-     * @param createChannelOptionsCoverUrl {String} Specifies the URL of the cover image for the new channels.
-     * @param createChannelOptionsCustomType {String} Specifies the custom channel type of the new channels.
-     * @param createChannelOptionsData {String} Specifies additional channel information such as a long description of the channel or `JSON` formatted string.
-     * @param createChannelOptionsDistinct {String} Determines whether to create a [distinct](/docs/chat/v3/platform-api/guides/channel-types#2-group-channel) channel. (Default: true)
-     * @param scheduledAt {Number} Specifies the time to start the announcement, in [Unix milliseconds](/docs/chat/v3/platform-api/guides/miscellaneous#2-timestamps) format. If not specified, the default is the timestamp of when the request was delivered to Sendbird server. (Default: current timestamp)
-     * @param ceaseAt {String} Specifies the time to temporarily put the announcement on hold in UTC. The string is represented in HHMM format. This should be specified in conjunction with the resume_at property.<br/><br/> If both the cease_at and resume_at are not specified, Sendbird server starts to send the announcement at the time of the scheduled_at above.
-     * @param resumeAt {String} Specifies the time to automatically resume the on-hold announcement in UTC. The string is represented in HHMM format. This should be specified in conjunction with the cease_at property above.<br/><br/> If both the cease_at and resume_at are not specified, Sendbird server starts to send the announcement at the time of the scheduled_at above.
-     * @param endAt {Number} Specifies the time to permanently end the announcement, in [Unix milliseconds](/docs/chat/v3/platform-api/guides/miscellaneous##2-timestamps) format. If this property is specified, the announcement ends even when the announcement is not sent to all its targets. <br/><br/> For the announcement to run safely, the end_at time should be set at least 10 minutes later than the scheduled_at time.
-     * @param enablePush {Boolean} Determines whether to turn on push notification for the announcement. If set to true, push notifications will be sent for the announcement. (Default: true)
-     * @param assignSenderAsChannelInviter {Boolean} Determines whether to assign an announcement sender as an inviter of the newly created channels. (Default: false)
      */
-    constructor(message, messageType, messageUserId, messageContent, targetAt, targetList, targetChannelType, uniqueId, messageCustomType, messageData, createChannel, announcementGroup, createChannelOptions, createChannelOptionsName, createChannelOptionsCoverUrl, createChannelOptionsCustomType, createChannelOptionsData, createChannelOptionsDistinct, scheduledAt, ceaseAt, resumeAt, endAt, enablePush, assignSenderAsChannelInviter) { 
+    constructor(message, messageType, messageUserId, messageContent, targetAt, targetList, targetChannelType) { 
         
-        ScheduleAnnouncementData.initialize(this, message, messageType, messageUserId, messageContent, targetAt, targetList, targetChannelType, uniqueId, messageCustomType, messageData, createChannel, announcementGroup, createChannelOptions, createChannelOptionsName, createChannelOptionsCoverUrl, createChannelOptionsCustomType, createChannelOptionsData, createChannelOptionsDistinct, scheduledAt, ceaseAt, resumeAt, endAt, enablePush, assignSenderAsChannelInviter);
+        ScheduleAnnouncementData.initialize(this, message, messageType, messageUserId, messageContent, targetAt, targetList, targetChannelType);
     }
 
     /**
@@ -57,7 +40,7 @@ class ScheduleAnnouncementData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, message, messageType, messageUserId, messageContent, targetAt, targetList, targetChannelType, uniqueId, messageCustomType, messageData, createChannel, announcementGroup, createChannelOptions, createChannelOptionsName, createChannelOptionsCoverUrl, createChannelOptionsCustomType, createChannelOptionsData, createChannelOptionsDistinct, scheduledAt, ceaseAt, resumeAt, endAt, enablePush, assignSenderAsChannelInviter) { 
+    static initialize(obj, message, messageType, messageUserId, messageContent, targetAt, targetList, targetChannelType) { 
         obj['message'] = message;
         obj['message.type'] = messageType;
         obj['message.user_id'] = messageUserId;
@@ -65,23 +48,6 @@ class ScheduleAnnouncementData {
         obj['target_at'] = targetAt;
         obj['target_list'] = targetList;
         obj['target_channel_type'] = targetChannelType;
-        obj['unique_id'] = uniqueId;
-        obj['message.custom_type'] = messageCustomType;
-        obj['message.data'] = messageData;
-        obj['create_channel'] = createChannel;
-        obj['announcement_group'] = announcementGroup;
-        obj['create_channel_options'] = createChannelOptions;
-        obj['create_channel_options.name'] = createChannelOptionsName;
-        obj['create_channel_options.cover_url'] = createChannelOptionsCoverUrl;
-        obj['create_channel_options.custom_type'] = createChannelOptionsCustomType;
-        obj['create_channel_options.data'] = createChannelOptionsData;
-        obj['create_channel_options.distinct'] = createChannelOptionsDistinct;
-        obj['scheduled_at'] = scheduledAt;
-        obj['cease_at'] = ceaseAt;
-        obj['resume_at'] = resumeAt;
-        obj['end_at'] = endAt;
-        obj['enable_push'] = enablePush;
-        obj['assign_sender_as_channel_inviter'] = assignSenderAsChannelInviter;
     }
 
     /**

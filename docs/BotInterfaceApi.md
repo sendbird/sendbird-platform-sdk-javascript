@@ -34,12 +34,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'createBotData': new SendbirdPlatformSdk.CreateBotData() // CreateBotData | 
 };
-apiInstance.createBot(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.createBot(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -82,12 +83,13 @@ let botUserid = "botUserid_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.deleteBotById(botUserid, opts).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
+apiInstance.deleteBotById(botUserid, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
 });
-
 ```
 
 ### Parameters
@@ -131,12 +133,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'joinChannelsData': new SendbirdPlatformSdk.JoinChannelsData() // JoinChannelsData | 
 };
-apiInstance.joinChannels(botUserid, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.joinChannels(botUserid, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -181,12 +184,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'channelUrl': "channelUrl_example" // String | 
 };
-apiInstance.leaveChannels(botUserid, opts).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
+apiInstance.leaveChannels(botUserid, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
 });
-
 ```
 
 ### Parameters
@@ -231,12 +235,13 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.leaveChannelsByUrl(botUserid, channelUrl, opts).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
+apiInstance.leaveChannelsByUrl(botUserid, channelUrl, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
 });
-
 ```
 
 ### Parameters
@@ -281,12 +286,13 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listBots(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.listBots(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -331,12 +337,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'sendBotSMessageData': new SendbirdPlatformSdk.SendBotSMessageData() // SendBotSMessageData | 
 };
-apiInstance.sendBotsMessage(botUserid, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.sendBotsMessage(botUserid, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -381,12 +388,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'updateBotByIdData': new SendbirdPlatformSdk.UpdateBotByIdData() // UpdateBotByIdData | 
 };
-apiInstance.updateBotById(botUserid, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.updateBotById(botUserid, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -430,12 +438,13 @@ let botUserid = "botUserid_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewBotById(botUserid, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.viewBotById(botUserid, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters

@@ -48,6 +48,13 @@ export default class MessagesApi {
     }
 
 
+    /**
+     * Callback function to receive the result of the addExtraDataToMessage operation.
+     * @callback module:api/MessagesApi~addExtraDataToMessageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20054} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
 
     /**
      * Add extra data to a message
@@ -58,9 +65,10 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddExtraDataToMessageData} opts.addExtraDataToMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20054} and HTTP response
+     * @param {module:api/MessagesApi~addExtraDataToMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20054}
      */
-    addExtraDataToMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
+    addExtraDataToMessage(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
       let postBody = opts['addExtraDataToMessageData'];
       // verify the required parameter 'channelType' is set
@@ -96,28 +104,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Add extra data to a message
-     * ## Add extra data to a message  Adds one or more key-values items which store additional information for a message.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-add-extra-data-to-a-message ----------------------------
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/AddExtraDataToMessageData} opts.addExtraDataToMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20054}
+     * Callback function to receive the result of the addReactionToAMessage operation.
+     * @callback module:api/MessagesApi~addReactionToAMessageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20053} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    addExtraDataToMessage(channelType, channelUrl, messageId, opts) {
-      return this.addExtraDataToMessageWithHttpInfo(channelType, channelUrl, messageId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Add a reaction to a message
@@ -128,9 +125,10 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddReactionToAMessageData} opts.addReactionToAMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20053} and HTTP response
+     * @param {module:api/MessagesApi~addReactionToAMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20053}
      */
-    addReactionToAMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
+    addReactionToAMessage(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
       let postBody = opts['addReactionToAMessageData'];
       // verify the required parameter 'channelType' is set
@@ -166,28 +164,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/reactions', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Add a reaction to a message
-     * ## Add a reaction to a message  Adds a specific reaction to a message.  > __Note__: Currently, this action is only available in group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-add-a-reaction-to-a-message ----------------------------
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/AddReactionToAMessageData} opts.addReactionToAMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20053}
+     * Callback function to receive the result of the deleteMessageById operation.
+     * @callback module:api/MessagesApi~deleteMessageByIdCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    addReactionToAMessage(channelType, channelUrl, messageId, opts) {
-      return this.addReactionToAMessageWithHttpInfo(channelType, channelUrl, messageId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Delete a message
@@ -197,9 +184,9 @@ export default class MessagesApi {
      * @param {String} messageId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/MessagesApi~deleteMessageByIdCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts) {
+    deleteMessageById(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -235,27 +222,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Delete a message
-     * ## Delete a message  Deletes a message from a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-delete-a-message ----------------------------
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the gcMarkAllMessagesAsDelivered operation.
+     * @callback module:api/MessagesApi~gcMarkAllMessagesAsDeliveredCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20050} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    deleteMessageById(channelType, channelUrl, messageId, opts) {
-      return this.deleteMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Mark all messages as delivered
@@ -264,9 +241,10 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/GcMarkAllMessagesAsDeliveredData} opts.gcMarkAllMessagesAsDeliveredData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20050} and HTTP response
+     * @param {module:api/MessagesApi~gcMarkAllMessagesAsDeliveredCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20050}
      */
-    gcMarkAllMessagesAsDeliveredWithHttpInfo(channelUrl, opts) {
+    gcMarkAllMessagesAsDelivered(channelUrl, opts, callback) {
       opts = opts || {};
       let postBody = opts['gcMarkAllMessagesAsDeliveredData'];
       // verify the required parameter 'channelUrl' is set
@@ -292,26 +270,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/messages/mark_as_delivered', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Mark all messages as delivered
-     * ## Mark all messages as delivered  Marks all messages in a group channel as delivered for a given user. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-mark-all-messages-as-delivered ----------------------------
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/GcMarkAllMessagesAsDeliveredData} opts.gcMarkAllMessagesAsDeliveredData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20050}
+     * Callback function to receive the result of the gcMarkAllMessagesAsRead operation.
+     * @callback module:api/MessagesApi~gcMarkAllMessagesAsReadCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    gcMarkAllMessagesAsDelivered(channelUrl, opts) {
-      return this.gcMarkAllMessagesAsDeliveredWithHttpInfo(channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Mark all messages as read
@@ -320,9 +289,9 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/GcMarkAllMessagesAsReadData} opts.gcMarkAllMessagesAsReadData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/MessagesApi~gcMarkAllMessagesAsReadCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    gcMarkAllMessagesAsReadWithHttpInfo(channelUrl, opts) {
+    gcMarkAllMessagesAsRead(channelUrl, opts, callback) {
       opts = opts || {};
       let postBody = opts['gcMarkAllMessagesAsReadData'];
       // verify the required parameter 'channelUrl' is set
@@ -348,26 +317,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/messages/mark_as_read', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Mark all messages as read
-     * ## Mark all messages as read  Marks all messages in a group channel as read for a given user. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-mark-all-messages-as-read ----------------------------
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/GcMarkAllMessagesAsReadData} opts.gcMarkAllMessagesAsReadData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the gcViewNumberOfEachMembersUnreadMessages operation.
+     * @callback module:api/MessagesApi~gcViewNumberOfEachMembersUnreadMessagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20049} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    gcMarkAllMessagesAsRead(channelUrl, opts) {
-      return this.gcMarkAllMessagesAsReadWithHttpInfo(channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View number of each member's unread messages
@@ -376,9 +336,10 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.userIds 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20049} and HTTP response
+     * @param {module:api/MessagesApi~gcViewNumberOfEachMembersUnreadMessagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20049}
      */
-    gcViewNumberOfEachMembersUnreadMessagesWithHttpInfo(channelUrl, opts) {
+    gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelUrl' is set
@@ -405,26 +366,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/messages/unread_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * View number of each member's unread messages
-     * ## View number of each member's unread messages  Retrieves the total number of each member's unread messages in a group channel. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-view-number-of-each-member-s-unread-messages ----------------------------
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.userIds 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20049}
+     * Callback function to receive the result of the listMessages operation.
+     * @callback module:api/MessagesApi~listMessagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20047} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts) {
-      return this.gcViewNumberOfEachMembersUnreadMessagesWithHttpInfo(channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * List messages
@@ -451,9 +403,10 @@ export default class MessagesApi {
      * @param {String} opts.userId 
      * @param {String} opts.customType 
      * @param {Boolean} opts.withMetaArray 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20047} and HTTP response
+     * @param {module:api/MessagesApi~listMessagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20047}
      */
-    listMessagesWithHttpInfo(channelType, channelUrl, messageTs, messageId, opts) {
+    listMessages(channelType, channelUrl, messageTs, messageId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -510,44 +463,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * List messages
-     * ## List messages  Retrieves a list of past messages of a channel.  > This message retrieval is one of Sendbird's [premium features](https://sendbird.com/docs/chat/v3/platform-api/guides/application#-3-sendbird-s-premium-features). Contact our [sales team](https://get.sendbird.com/talk-to-sales.html) for further assistance.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-list-messages ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of past messages.
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {Number} messageTs 
-     * @param {Number} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {Number} opts.prevLimit 
-     * @param {Number} opts.nextLimit 
-     * @param {Boolean} opts.include 
-     * @param {Boolean} opts.reverse 
-     * @param {String} opts.senderId 
-     * @param {String} opts.senderIds 
-     * @param {String} opts.operatorFilter 
-     * @param {String} opts.customTypes 
-     * @param {String} opts.messageType 
-     * @param {Boolean} opts.includingRemoved 
-     * @param {Boolean} opts.includeReactions 
-     * @param {Boolean} opts.withSortedMetaArray 
-     * @param {Boolean} opts.showSubchannelMessagesOnly 
-     * @param {String} opts.userId 
-     * @param {String} opts.customType 
-     * @param {Boolean} opts.withMetaArray 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20047}
+     * Callback function to receive the result of the listReactionsOfMessage operation.
+     * @callback module:api/MessagesApi~listReactionsOfMessageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20052} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    listMessages(channelType, channelUrl, messageTs, messageId, opts) {
-      return this.listMessagesWithHttpInfo(channelType, channelUrl, messageTs, messageId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * List reactions of a message
@@ -558,9 +484,10 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Boolean} opts.listUsers 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20052} and HTTP response
+     * @param {module:api/MessagesApi~listReactionsOfMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20052}
      */
-    listReactionsOfMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
+    listReactionsOfMessage(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -597,28 +524,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/reactions', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * List reactions of a message
-     * ## List reactions of a message  Retrieves a list of reactions made to a message.  > __Note__: Currently, this action is only available in group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-list-reactions-of-a-message ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.  `message_id`      Type: long      Description: Specifies the unique ID of the message to add a reaction to.
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {Boolean} opts.listUsers 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20052}
+     * Callback function to receive the result of the removeExtraDataFromMessage operation.
+     * @callback module:api/MessagesApi~removeExtraDataFromMessageCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
      */
-    listReactionsOfMessage(channelType, channelUrl, messageId, opts) {
-      return this.listReactionsOfMessageWithHttpInfo(channelType, channelUrl, messageId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Remove extra data from a message
@@ -629,9 +545,9 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Array.<String>} opts.keys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {module:api/MessagesApi~removeExtraDataFromMessageCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    removeExtraDataFromMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
+    removeExtraDataFromMessage(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -668,28 +584,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Remove extra data from a message
-     * ## Remove extra data from a message  Removes specific items from a message by their keys.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-remove-extra-data-from-a-message ----------------------------
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {Array.<String>} opts.keys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * Callback function to receive the result of the removeReactionFromAMessage operation.
+     * @callback module:api/MessagesApi~removeReactionFromAMessageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20053} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    removeExtraDataFromMessage(channelType, channelUrl, messageId, opts) {
-      return this.removeExtraDataFromMessageWithHttpInfo(channelType, channelUrl, messageId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Remove a reaction from a message
@@ -701,9 +606,10 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.userId 
      * @param {String} opts.reaction 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20053} and HTTP response
+     * @param {module:api/MessagesApi~removeReactionFromAMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20053}
      */
-    removeReactionFromAMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
+    removeReactionFromAMessage(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -741,29 +647,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/reactions', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Remove a reaction from a message
-     * ## Remove a reaction from a message  Removes a specific reaction from a message.  > __Note__: Currently, this action is only available in group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-remove-a-reaction-from-a-message ----------------------------
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.userId 
-     * @param {String} opts.reaction 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20053}
+     * Callback function to receive the result of the sendMessage operation.
+     * @callback module:api/MessagesApi~sendMessageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SendBirdMessageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    removeReactionFromAMessage(channelType, channelUrl, messageId, opts) {
-      return this.removeReactionFromAMessageWithHttpInfo(channelType, channelUrl, messageId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Send a message
@@ -773,9 +667,10 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/SendMessageData} opts.sendMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdMessageResponse} and HTTP response
+     * @param {module:api/MessagesApi~sendMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdMessageResponse}
      */
-    sendMessageWithHttpInfo(channelType, channelUrl, opts) {
+    sendMessage(channelType, channelUrl, opts, callback) {
       opts = opts || {};
       let postBody = opts['sendMessageData'];
       // verify the required parameter 'channelType' is set
@@ -806,27 +701,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Send a message
-     * ## Send a message  Sends a message to a channel. You can send a text message, a file message, and an admin message.  >__Note__: With Sendbird Chat SDKs and the platform API, any type of files in messages can be uploaded to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-send-a-message ----------------------------
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/SendMessageData} opts.sendMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdMessageResponse}
+     * Callback function to receive the result of the translateMessageIntoOtherLanguages operation.
+     * @callback module:api/MessagesApi~translateMessageIntoOtherLanguagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SendBirdMessageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    sendMessage(channelType, channelUrl, opts) {
-      return this.sendMessageWithHttpInfo(channelType, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Translate a message into other languages
@@ -837,9 +722,10 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdMessageResponse} and HTTP response
+     * @param {module:api/MessagesApi~translateMessageIntoOtherLanguagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdMessageResponse}
      */
-    translateMessageIntoOtherLanguagesWithHttpInfo(channelType, channelUrl, messageId, opts) {
+    translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
       let postBody = opts['body'];
       // verify the required parameter 'channelType' is set
@@ -875,28 +761,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/translation', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Translate a message into other languages
-     * ## Translate a message into other languages  Translates a message into specific languages. Only text messages of which type is MESG can be translated into other languages.  > __Note__: Message translation is powered by [Google Cloud Translation API recognition engine](https://cloud.google.com/translate/). Find language codes supported by the engine in the [Miscellaneous](https://sendbird.com/docs/chat/v3/platform-api/guides/Miscellaneous) page or visit the [Language Support](https://cloud.google.com/translate/docs/languages) for Google Cloud Translation.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-translate-a-message-into-other-languages ----------------------------
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdMessageResponse}
+     * Callback function to receive the result of the updateExtraDataInMessage operation.
+     * @callback module:api/MessagesApi~updateExtraDataInMessageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20054} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts) {
-      return this.translateMessageIntoOtherLanguagesWithHttpInfo(channelType, channelUrl, messageId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Update extra data in a message
@@ -907,9 +782,10 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateExtraDataInMessageData} opts.updateExtraDataInMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20054} and HTTP response
+     * @param {module:api/MessagesApi~updateExtraDataInMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20054}
      */
-    updateExtraDataInMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
+    updateExtraDataInMessage(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
       let postBody = opts['updateExtraDataInMessageData'];
       // verify the required parameter 'channelType' is set
@@ -945,28 +821,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Update extra data in a message
-     * ## Update extra data in a message  Updates the values of specific items by their keys.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-update-extra-data-in-a-message ----------------------------
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/UpdateExtraDataInMessageData} opts.updateExtraDataInMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20054}
+     * Callback function to receive the result of the updateMessageById operation.
+     * @callback module:api/MessagesApi~updateMessageByIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SendBirdMessageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    updateExtraDataInMessage(channelType, channelUrl, messageId, opts) {
-      return this.updateExtraDataInMessageWithHttpInfo(channelType, channelUrl, messageId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Update a message
@@ -977,9 +842,10 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateMessageByIdData} opts.updateMessageByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdMessageResponse} and HTTP response
+     * @param {module:api/MessagesApi~updateMessageByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdMessageResponse}
      */
-    updateMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts) {
+    updateMessageById(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
       let postBody = opts['updateMessageByIdData'];
       // verify the required parameter 'channelType' is set
@@ -1015,28 +881,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Update a message
-     * ## Update a message  Updates information on a message in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-update-a-message ----------------------------
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/UpdateMessageByIdData} opts.updateMessageByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdMessageResponse}
+     * Callback function to receive the result of the viewMessageById operation.
+     * @callback module:api/MessagesApi~viewMessageByIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SendBirdMessageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    updateMessageById(channelType, channelUrl, messageId, opts) {
-      return this.updateMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View a message
@@ -1048,9 +903,10 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {Boolean} opts.withSortedMetaArray 
      * @param {Boolean} opts.withMetaArray 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdMessageResponse} and HTTP response
+     * @param {module:api/MessagesApi~viewMessageByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SendBirdMessageResponse}
      */
-    viewMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts) {
+    viewMessageById(channelType, channelUrl, messageId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -1088,29 +944,17 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * View a message
-     * ## View a message  Retrieves information on a message.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-view-a-message ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.  `message_id`      Type: long      Description: Specifies the unique ID of the message to retrieve.
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {Boolean} opts.withSortedMetaArray 
-     * @param {Boolean} opts.withMetaArray 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdMessageResponse}
+     * Callback function to receive the result of the viewTotalNumberOfMessagesInChannel operation.
+     * @callback module:api/MessagesApi~viewTotalNumberOfMessagesInChannelCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20048} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    viewMessageById(channelType, channelUrl, messageId, opts) {
-      return this.viewMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View total number of messages in a channel
@@ -1119,9 +963,10 @@ export default class MessagesApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20048} and HTTP response
+     * @param {module:api/MessagesApi~viewTotalNumberOfMessagesInChannelCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20048}
      */
-    viewTotalNumberOfMessagesInChannelWithHttpInfo(channelType, channelUrl, opts) {
+    viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'channelType' is set
@@ -1152,24 +997,8 @@ export default class MessagesApi {
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/total_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
-    }
-
-    /**
-     * View total number of messages in a channel
-     * ## View total number of messages in a channel  Retrieves the total number of messages in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-view-total-number-of-messages-in-a-channel ----------------------------
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20048}
-     */
-    viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts) {
-      return this.viewTotalNumberOfMessagesInChannelWithHttpInfo(channelType, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
     }
 
 

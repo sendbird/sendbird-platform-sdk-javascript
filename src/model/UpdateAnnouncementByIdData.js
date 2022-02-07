@@ -23,26 +23,10 @@ class UpdateAnnouncementByIdData {
      * Constructs a new <code>UpdateAnnouncementByIdData</code>.
      * @alias module:model/UpdateAnnouncementByIdData
      * @param uniqueId {String} Specifies the unique ID of the announcement to update.
-     * @param action {String} Specifies an action to take on the announcement. If this property is updated, other specified properties in the request are not effective. Acceptable values are limited to remove, pause, resume, and cancel. The [Announcement actions](#2-update-an-announcement-3-how-to-change-announcement-status) table explains each action in detail.
-     * @param announcementGroup {String} Specifies the name of an announcement group to retrieve. If not specified, all announcements are returned, regardless of their group.
-     * @param createChannel {Boolean} Determines whether to create a new channel if there is no existing channel that matches with the target options including target_at and target_list.
-     * @param createChannelOptionsName {String} Specifies the name of the channel. (Default: Group Channel)
-     * @param createChannelOptionsCoverUrl {String} Specifies the URL of the cover image.
-     * @param createChannelOptionsCustomType {String} Specifies the custom channel type.
-     * @param createChannelOptionsData {String} Specifies additional channel information such as a long description of the channel or `JSON` formatted string.
-     * @param createChannelOptionsDistinct {String} Determines whether to create a [distinct](/docs/chat/v3/platform-api/guides/channel-types#2-group-channel) channel. (Default: true)
-     * @param messageUserId {String} Specifies the unique ID of the announcement sender.
-     * @param messageContent {String} Specifies the content of the message.
-     * @param messageData {String} Specifies additional message information such as custom font size, font type or `JSON` formatted string.
-     * @param enablePush {Boolean} Determines whether to turn on push notification for the announcement. If set to true, push notifications will be sent for announcements.
-     * @param scheduledAt {Number} Specifies the time to start the announcement, in [Unix milliseconds](/docs/chat/v3/platform-api/guides/miscellaneous#2-timestamps) format. (Default: current timestamp)
-     * @param endAt {Number} Specifies the time to permanently end the announcement, in [Unix milliseconds](/docs/chat/v3/platform-api/guides/miscellaneous#2-timestamps) format, even if the announcement is not sent to all its targets.
-     * @param ceaseAt {String} Specifies the time to temporarily put the announcement on hold in UTC. The string is represented in HHMM format. This property should be specified in conjunction with the resume_at below.
-     * @param resumeAt {String} Specifies the time to automatically resume the on-hold announcement in UTC. The string is represented in HHMM format. This property should be specified in conjunction with the cease_at above.
      */
-    constructor(uniqueId, action, announcementGroup, createChannel, createChannelOptionsName, createChannelOptionsCoverUrl, createChannelOptionsCustomType, createChannelOptionsData, createChannelOptionsDistinct, messageUserId, messageContent, messageData, enablePush, scheduledAt, endAt, ceaseAt, resumeAt) { 
+    constructor(uniqueId) { 
         
-        UpdateAnnouncementByIdData.initialize(this, uniqueId, action, announcementGroup, createChannel, createChannelOptionsName, createChannelOptionsCoverUrl, createChannelOptionsCustomType, createChannelOptionsData, createChannelOptionsDistinct, messageUserId, messageContent, messageData, enablePush, scheduledAt, endAt, ceaseAt, resumeAt);
+        UpdateAnnouncementByIdData.initialize(this, uniqueId);
     }
 
     /**
@@ -50,24 +34,8 @@ class UpdateAnnouncementByIdData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, uniqueId, action, announcementGroup, createChannel, createChannelOptionsName, createChannelOptionsCoverUrl, createChannelOptionsCustomType, createChannelOptionsData, createChannelOptionsDistinct, messageUserId, messageContent, messageData, enablePush, scheduledAt, endAt, ceaseAt, resumeAt) { 
+    static initialize(obj, uniqueId) { 
         obj['unique_id'] = uniqueId;
-        obj['action'] = action;
-        obj['announcement_group'] = announcementGroup;
-        obj['create_channel'] = createChannel;
-        obj['create_channel_options.name'] = createChannelOptionsName;
-        obj['create_channel_options.cover_url'] = createChannelOptionsCoverUrl;
-        obj['create_channel_options.custom_type'] = createChannelOptionsCustomType;
-        obj['create_channel_options.data'] = createChannelOptionsData;
-        obj['create_channel_options.distinct'] = createChannelOptionsDistinct;
-        obj['message.user_id'] = messageUserId;
-        obj['message.content'] = messageContent;
-        obj['message.data'] = messageData;
-        obj['enable_push'] = enablePush;
-        obj['scheduled_at'] = scheduledAt;
-        obj['end_at'] = endAt;
-        obj['cease_at'] = ceaseAt;
-        obj['resume_at'] = resumeAt;
     }
 
     /**

@@ -36,12 +36,13 @@ let opts = {
   'startTs': 56, // Number | 
   'endTs': 56 // Number | 
 };
-apiInstance.listReports(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.listReports(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -90,12 +91,13 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listReportsOnChannelByUrl(channelType, channelUrl, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.listReportsOnChannelByUrl(channelType, channelUrl, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -145,12 +147,13 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listReportsOnMessageById(channelType, channelUrl, messageId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.listReportsOnMessageById(channelType, channelUrl, messageId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -199,12 +202,13 @@ let opts = {
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listReportsOnUserById(offendingUserId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.listReportsOnUserById(offendingUserId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -251,12 +255,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'reportChannelByUrlData': new SendbirdPlatformSdk.ReportChannelByUrlData() // ReportChannelByUrlData | 
 };
-apiInstance.reportChannelByUrl(channelType, channelUrl, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.reportChannelByUrl(channelType, channelUrl, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -304,12 +309,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'reportMessageByIdData': new SendbirdPlatformSdk.ReportMessageByIdData() // ReportMessageByIdData | 
 };
-apiInstance.reportMessageById(channelType, channelUrl, messageId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.reportMessageById(channelType, channelUrl, messageId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -356,12 +362,13 @@ let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
   'reportUserByIdData': new SendbirdPlatformSdk.ReportUserByIdData() // ReportUserByIdData | 
 };
-apiInstance.reportUserById(offendingUserId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.reportUserById(offendingUserId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -407,12 +414,13 @@ let messageId = "messageId_example"; // String |
 let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.viewModeratedMessageById(channelType, channelUrl, messageId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+apiInstance.viewModeratedMessageById(channelType, channelUrl, messageId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters

@@ -34,15 +34,23 @@ export default class AdvancedAnalyticsApi {
     }
 
 
+    /**
+     * Callback function to receive the result of the retrieveAdvancedAnalyticsMetrics operation.
+     * @callback module:api/AdvancedAnalyticsApi~retrieveAdvancedAnalyticsMetricsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20062} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
 
     /**
      * Retrieve Advanced analytics metrics
      * ## Retrieve Advanced analytics metrics  Retrieves Advanced analytics metrics based on the specified parameters. You can retrieve either daily or monthly metrics using the time_dimension parameter.  >__Note__: Daily metrics are calculated and updated every three hours, starting at 1 a.m. in UTC. Meanwhile, monthly metrics are calculated after the last day of the month.  https://sendbird.com/docs/chat/v3/platform-api/guides/advanced-analytics#2-retrieve-advanced-analytics-metrics ----------------------------
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20062} and HTTP response
+     * @param {module:api/AdvancedAnalyticsApi~retrieveAdvancedAnalyticsMetricsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20062}
      */
-    retrieveAdvancedAnalyticsMetricsWithHttpInfo(opts) {
+    retrieveAdvancedAnalyticsMetrics(opts, callback) {
       opts = opts || {};
       let postBody = null;
 
@@ -63,22 +71,8 @@ export default class AdvancedAnalyticsApi {
       return this.apiClient.callApi(
         '/v3/statistics/metric', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
-    }
-
-    /**
-     * Retrieve Advanced analytics metrics
-     * ## Retrieve Advanced analytics metrics  Retrieves Advanced analytics metrics based on the specified parameters. You can retrieve either daily or monthly metrics using the time_dimension parameter.  >__Note__: Daily metrics are calculated and updated every three hours, starting at 1 a.m. in UTC. Meanwhile, monthly metrics are calculated after the last day of the month.  https://sendbird.com/docs/chat/v3/platform-api/guides/advanced-analytics#2-retrieve-advanced-analytics-metrics ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20062}
-     */
-    retrieveAdvancedAnalyticsMetrics(opts) {
-      return this.retrieveAdvancedAnalyticsMetricsWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
     }
 
 

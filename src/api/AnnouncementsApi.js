@@ -44,6 +44,13 @@ export default class AnnouncementsApi {
     }
 
 
+    /**
+     * Callback function to receive the result of the getDetailedOpenRateOfAnnouncementById operation.
+     * @callback module:api/AnnouncementsApi~getDetailedOpenRateOfAnnouncementByIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20042} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
 
     /**
      * Get detailed open rate of an announcement
@@ -51,9 +58,10 @@ export default class AnnouncementsApi {
      * @param {String} uniqueId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20042} and HTTP response
+     * @param {module:api/AnnouncementsApi~getDetailedOpenRateOfAnnouncementByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20042}
      */
-    getDetailedOpenRateOfAnnouncementByIdWithHttpInfo(uniqueId, opts) {
+    getDetailedOpenRateOfAnnouncementById(uniqueId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'uniqueId' is set
@@ -79,25 +87,17 @@ export default class AnnouncementsApi {
       return this.apiClient.callApi(
         '/v3/announcement_open_rate/{unique_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Get detailed open rate of an announcement
-     * ## Get detailed open rate of an announcement  Retrieves the detailed open rate information of an announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-rate-of-an-announcement ----------------------------   `unique_id`      Type: string      Description: Specifies the unique ID of the announcement to get its open rate.
-     * @param {String} uniqueId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20042}
+     * Callback function to receive the result of the getDetailedOpenRateOfAnnouncementGroup operation.
+     * @callback module:api/AnnouncementsApi~getDetailedOpenRateOfAnnouncementGroupCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20046} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    getDetailedOpenRateOfAnnouncementById(uniqueId, opts) {
-      return this.getDetailedOpenRateOfAnnouncementByIdWithHttpInfo(uniqueId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Get detailed open rate of an announcement group
@@ -105,9 +105,10 @@ export default class AnnouncementsApi {
      * @param {String} announcementGroup 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20046} and HTTP response
+     * @param {module:api/AnnouncementsApi~getDetailedOpenRateOfAnnouncementGroupCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20046}
      */
-    getDetailedOpenRateOfAnnouncementGroupWithHttpInfo(announcementGroup, opts) {
+    getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'announcementGroup' is set
@@ -133,25 +134,17 @@ export default class AnnouncementsApi {
       return this.apiClient.callApi(
         '/v3/announcement_open_rate_by_group/{announcement_group}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Get detailed open rate of an announcement group
-     * ## Get detailed open rate of an announcement group  Retrieves the detailed open rate information of an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-rate-of-an-announcement-group ----------------------------
-     * @param {String} announcementGroup 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20046}
+     * Callback function to receive the result of the getDetailedOpenStatusOfAnnouncementById operation.
+     * @callback module:api/AnnouncementsApi~getDetailedOpenStatusOfAnnouncementByIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20043} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts) {
-      return this.getDetailedOpenRateOfAnnouncementGroupWithHttpInfo(announcementGroup, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Get detailed open status of an announcement
@@ -164,9 +157,10 @@ export default class AnnouncementsApi {
      * @param {Array.<String>} opts.uniqueIds 
      * @param {Array.<String>} opts.channelUrls 
      * @param {Boolean} opts.hasOpened 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20043} and HTTP response
+     * @param {module:api/AnnouncementsApi~getDetailedOpenStatusOfAnnouncementByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20043}
      */
-    getDetailedOpenStatusOfAnnouncementByIdWithHttpInfo(uniqueId, opts) {
+    getDetailedOpenStatusOfAnnouncementById(uniqueId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'uniqueId' is set
@@ -197,39 +191,27 @@ export default class AnnouncementsApi {
       return this.apiClient.callApi(
         '/v3/announcement_open_status/{unique_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Get detailed open status of an announcement
-     * ## Get detailed open status of an announcement  Retrieves the detailed open status information of a specific announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-status-of-an-announcement ----------------------------
-     * @param {String} uniqueId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {Number} opts.limit 
-     * @param {String} opts.next 
-     * @param {Array.<String>} opts.uniqueIds 
-     * @param {Array.<String>} opts.channelUrls 
-     * @param {Boolean} opts.hasOpened 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20043}
+     * Callback function to receive the result of the getStatistics operation.
+     * @callback module:api/AnnouncementsApi~getStatisticsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20044} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    getDetailedOpenStatusOfAnnouncementById(uniqueId, opts) {
-      return this.getDetailedOpenStatusOfAnnouncementByIdWithHttpInfo(uniqueId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Get statistics - weekly
      * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20044} and HTTP response
+     * @param {module:api/AnnouncementsApi~getStatisticsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20044}
      */
-    getStatisticsWithHttpInfo(opts) {
+    getStatistics(opts, callback) {
       opts = opts || {};
       let postBody = null;
 
@@ -250,24 +232,17 @@ export default class AnnouncementsApi {
       return this.apiClient.callApi(
         '/v3/announcement_stats/weekly', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Get statistics - weekly
-     * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20044}
+     * Callback function to receive the result of the getStatisticsDaily operation.
+     * @callback module:api/AnnouncementsApi~getStatisticsDailyCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20044} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    getStatistics(opts) {
-      return this.getStatisticsWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Get statistics - daily
@@ -281,9 +256,10 @@ export default class AnnouncementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.announcementGroup 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20044} and HTTP response
+     * @param {module:api/AnnouncementsApi~getStatisticsDailyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20044}
      */
-    getStatisticsDailyWithHttpInfo(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts) {
+    getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'startDate' is set
@@ -335,40 +311,27 @@ export default class AnnouncementsApi {
       return this.apiClient.callApi(
         '/v3/announcement_stats/daily', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Get statistics - daily
-     * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
-     * @param {String} startDate 
-     * @param {String} endDate 
-     * @param {String} startWeek 
-     * @param {String} endWeek 
-     * @param {String} startMonth 
-     * @param {String} endMonth 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.announcementGroup 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20044}
+     * Callback function to receive the result of the getStatisticsMonthly operation.
+     * @callback module:api/AnnouncementsApi~getStatisticsMonthlyCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20044} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts) {
-      return this.getStatisticsDailyWithHttpInfo(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Get statistics - monthly
      * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20044} and HTTP response
+     * @param {module:api/AnnouncementsApi~getStatisticsMonthlyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20044}
      */
-    getStatisticsMonthlyWithHttpInfo(opts) {
+    getStatisticsMonthly(opts, callback) {
       opts = opts || {};
       let postBody = null;
 
@@ -389,24 +352,17 @@ export default class AnnouncementsApi {
       return this.apiClient.callApi(
         '/v3/announcement_stats/monthly', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Get statistics - monthly
-     * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20044}
+     * Callback function to receive the result of the listAnnouncementGroups operation.
+     * @callback module:api/AnnouncementsApi~listAnnouncementGroupsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20045} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    getStatisticsMonthly(opts) {
-      return this.getStatisticsMonthlyWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * List announcement groups
@@ -415,9 +371,10 @@ export default class AnnouncementsApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20045} and HTTP response
+     * @param {module:api/AnnouncementsApi~listAnnouncementGroupsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20045}
      */
-    listAnnouncementGroupsWithHttpInfo(opts) {
+    listAnnouncementGroups(opts, callback) {
       opts = opts || {};
       let postBody = null;
 
@@ -440,26 +397,17 @@ export default class AnnouncementsApi {
       return this.apiClient.callApi(
         '/v3/announcement_group', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * List announcement groups
-     * ## List announcement groups  Retrieves a list of announcement groups.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-list-announcement-groups ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20045}
+     * Callback function to receive the result of the listAnnouncements operation.
+     * @callback module:api/AnnouncementsApi~listAnnouncementsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20039} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    listAnnouncementGroups(opts) {
-      return this.listAnnouncementGroupsWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * List announcements
@@ -471,9 +419,10 @@ export default class AnnouncementsApi {
      * @param {String} opts.order 
      * @param {String} opts.status 
      * @param {String} opts.announcementGroup 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20039} and HTTP response
+     * @param {module:api/AnnouncementsApi~listAnnouncementsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20039}
      */
-    listAnnouncementsWithHttpInfo(opts) {
+    listAnnouncements(opts, callback) {
       opts = opts || {};
       let postBody = null;
 
@@ -499,29 +448,17 @@ export default class AnnouncementsApi {
       return this.apiClient.callApi(
         '/v3/announcements', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * List announcements
-     * ## List announcements  Retrieves a list of announcements.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-list-announcements ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @param {String} opts.order 
-     * @param {String} opts.status 
-     * @param {String} opts.announcementGroup 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20039}
+     * Callback function to receive the result of the scheduleAnnouncement operation.
+     * @callback module:api/AnnouncementsApi~scheduleAnnouncementCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20040} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    listAnnouncements(opts) {
-      return this.listAnnouncementsWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Schedule an announcement
@@ -529,9 +466,10 @@ export default class AnnouncementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ScheduleAnnouncementData} opts.scheduleAnnouncementData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20040} and HTTP response
+     * @param {module:api/AnnouncementsApi~scheduleAnnouncementCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20040}
      */
-    scheduleAnnouncementWithHttpInfo(opts) {
+    scheduleAnnouncement(opts, callback) {
       opts = opts || {};
       let postBody = opts['scheduleAnnouncementData'];
 
@@ -552,25 +490,17 @@ export default class AnnouncementsApi {
       return this.apiClient.callApi(
         '/v3/announcements', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Schedule an announcement
-     * ## Schedule an announcement  Schedules a new announcement. You can also schedule an announcement in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-schedule-an-announcement
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/ScheduleAnnouncementData} opts.scheduleAnnouncementData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20040}
+     * Callback function to receive the result of the updateAnnouncementById operation.
+     * @callback module:api/AnnouncementsApi~updateAnnouncementByIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20041} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    scheduleAnnouncement(opts) {
-      return this.scheduleAnnouncementWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * Update an announcement
@@ -579,9 +509,10 @@ export default class AnnouncementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateAnnouncementByIdData} opts.updateAnnouncementByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20041} and HTTP response
+     * @param {module:api/AnnouncementsApi~updateAnnouncementByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20041}
      */
-    updateAnnouncementByIdWithHttpInfo(uniqueId, opts) {
+    updateAnnouncementById(uniqueId, opts, callback) {
       opts = opts || {};
       let postBody = opts['updateAnnouncementByIdData'];
       // verify the required parameter 'uniqueId' is set
@@ -607,26 +538,17 @@ export default class AnnouncementsApi {
       return this.apiClient.callApi(
         '/v3/announcements/{unique_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Update an announcement
-     * ## Update an announcement  Updates information of a specific announcement before it starts or changes the status of a specific announcement after it starts. For the 2 different applications, refer to the request body below.  >__Note__: Updating information of an announcement is possible only when the announcement status is scheduled, indicating it hasn't started yet.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-update-an-announcement ----------------------------
-     * @param {String} uniqueId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {module:model/UpdateAnnouncementByIdData} opts.updateAnnouncementByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20041}
+     * Callback function to receive the result of the viewAnnouncementById operation.
+     * @callback module:api/AnnouncementsApi~viewAnnouncementByIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20039Announcements} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
      */
-    updateAnnouncementById(uniqueId, opts) {
-      return this.updateAnnouncementByIdWithHttpInfo(uniqueId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
 
     /**
      * View an announcement
@@ -634,9 +556,10 @@ export default class AnnouncementsApi {
      * @param {String} uniqueId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20039Announcements} and HTTP response
+     * @param {module:api/AnnouncementsApi~viewAnnouncementByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20039Announcements}
      */
-    viewAnnouncementByIdWithHttpInfo(uniqueId, opts) {
+    viewAnnouncementById(uniqueId, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'uniqueId' is set
@@ -662,23 +585,8 @@ export default class AnnouncementsApi {
       return this.apiClient.callApi(
         '/v3/announcements/{unique_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, null, callback
       );
-    }
-
-    /**
-     * View an announcement
-     * ## View an announcement  Retrieves information on a specific announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-view-an-announcement ----------------------------
-     * @param {String} uniqueId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20039Announcements}
-     */
-    viewAnnouncementById(uniqueId, opts) {
-      return this.viewAnnouncementByIdWithHttpInfo(uniqueId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
     }
 
 

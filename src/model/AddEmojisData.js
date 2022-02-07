@@ -24,12 +24,10 @@ class AddEmojisData {
      * @alias module:model/AddEmojisData
      * @param emojiCategoryId {Number} Specifies the unique ID of the emoji category that a list of new emojis belong to.
      * @param emojis {Array.<String>} Specifies a list of one or more new emojis to register.
-     * @param emojiKey {String} Specifies the string key of each new emoji.
-     * @param emojiUrl {String} Specifies the image URL of each new emoji.
      */
-    constructor(emojiCategoryId, emojis, emojiKey, emojiUrl) { 
+    constructor(emojiCategoryId, emojis) { 
         
-        AddEmojisData.initialize(this, emojiCategoryId, emojis, emojiKey, emojiUrl);
+        AddEmojisData.initialize(this, emojiCategoryId, emojis);
     }
 
     /**
@@ -37,11 +35,9 @@ class AddEmojisData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, emojiCategoryId, emojis, emojiKey, emojiUrl) { 
+    static initialize(obj, emojiCategoryId, emojis) { 
         obj['emoji_category_id'] = emojiCategoryId;
         obj['emojis'] = emojis;
-        obj['(emoji).key'] = emojiKey;
-        obj['(emoji).url'] = emojiUrl;
     }
 
     /**
@@ -61,12 +57,6 @@ class AddEmojisData {
             if (data.hasOwnProperty('emojis')) {
                 obj['emojis'] = ApiClient.convertToType(data['emojis'], ['String']);
             }
-            if (data.hasOwnProperty('(emoji).key')) {
-                obj['(emoji).key'] = ApiClient.convertToType(data['(emoji).key'], 'String');
-            }
-            if (data.hasOwnProperty('(emoji).url')) {
-                obj['(emoji).url'] = ApiClient.convertToType(data['(emoji).url'], 'String');
-            }
         }
         return obj;
     }
@@ -85,18 +75,6 @@ AddEmojisData.prototype['emoji_category_id'] = undefined;
  * @member {Array.<String>} emojis
  */
 AddEmojisData.prototype['emojis'] = undefined;
-
-/**
- * Specifies the string key of each new emoji.
- * @member {String} (emoji).key
- */
-AddEmojisData.prototype['(emoji).key'] = undefined;
-
-/**
- * Specifies the image URL of each new emoji.
- * @member {String} (emoji).url
- */
-AddEmojisData.prototype['(emoji).url'] = undefined;
 
 
 

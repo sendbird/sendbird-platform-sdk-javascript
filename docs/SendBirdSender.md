@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **friendName** | **String** |  | [optional] 
 **isActive** | **Boolean** |  | [optional] 
 **isBlockedByMe** | **Boolean** |  | [optional] 
-**lastSeenAt** | **String** |  | [optional] 
+**lastSeenAt** | **Number** |  | [optional] 
 **metaData** | [**ModelObject**](ModelObject.md) |  | [optional] 
 **nickname** | **String** |  | [optional] 
 **plainProfileUrl** | **String** |  | [optional] 
