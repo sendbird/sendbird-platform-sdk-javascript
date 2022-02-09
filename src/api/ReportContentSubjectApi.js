@@ -13,12 +13,16 @@
 
 
 import ApiClient from "../ApiClient";
-import InlineResponse20070 from '../model/InlineResponse20070';
-import InlineResponse20071 from '../model/InlineResponse20071';
-import InlineResponse20071ReportLogs from '../model/InlineResponse20071ReportLogs';
+import ListReportsOnChannelByUrlResponse from '../model/ListReportsOnChannelByUrlResponse';
+import ListReportsOnMessageByIdResponse from '../model/ListReportsOnMessageByIdResponse';
+import ListReportsOnUserByIdResponse from '../model/ListReportsOnUserByIdResponse';
+import ListReportsResponse from '../model/ListReportsResponse';
 import ReportChannelByUrlData from '../model/ReportChannelByUrlData';
+import ReportChannelByUrlResponse from '../model/ReportChannelByUrlResponse';
 import ReportMessageByIdData from '../model/ReportMessageByIdData';
+import ReportMessageByIdResponse from '../model/ReportMessageByIdResponse';
 import ReportUserByIdData from '../model/ReportUserByIdData';
+import ReportUserByIdResponse from '../model/ReportUserByIdResponse';
 
 /**
 * ReportContentSubject service.
@@ -49,7 +53,7 @@ export default class ReportContentSubjectApi {
      * @param {Number} opts.limit 
      * @param {Number} opts.startTs 
      * @param {Number} opts.endTs 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20070} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListReportsResponse} and HTTP response
      */
     listReportsWithHttpInfo(opts) {
       opts = opts || {};
@@ -72,7 +76,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20070;
+      let returnType = ListReportsResponse;
       return this.apiClient.callApi(
         '/v3/report', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -89,7 +93,7 @@ export default class ReportContentSubjectApi {
      * @param {Number} opts.limit 
      * @param {Number} opts.startTs 
      * @param {Number} opts.endTs 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20070}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListReportsResponse}
      */
     listReports(opts) {
       return this.listReportsWithHttpInfo(opts)
@@ -108,7 +112,7 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20071} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListReportsOnChannelByUrlResponse} and HTTP response
      */
     listReportsOnChannelByUrlWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
@@ -139,7 +143,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20071;
+      let returnType = ListReportsOnChannelByUrlResponse;
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -156,7 +160,7 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20071}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListReportsOnChannelByUrlResponse}
      */
     listReportsOnChannelByUrl(channelType, channelUrl, opts) {
       return this.listReportsOnChannelByUrlWithHttpInfo(channelType, channelUrl, opts)
@@ -176,7 +180,7 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20071} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListReportsOnMessageByIdResponse} and HTTP response
      */
     listReportsOnMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
@@ -212,7 +216,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20071;
+      let returnType = ListReportsOnMessageByIdResponse;
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}/messages/{message_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -230,7 +234,7 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20071}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListReportsOnMessageByIdResponse}
      */
     listReportsOnMessageById(channelType, channelUrl, messageId, opts) {
       return this.listReportsOnMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts)
@@ -248,7 +252,7 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20071} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListReportsOnUserByIdResponse} and HTTP response
      */
     listReportsOnUserByIdWithHttpInfo(offendingUserId, opts) {
       opts = opts || {};
@@ -274,7 +278,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20071;
+      let returnType = ListReportsOnUserByIdResponse;
       return this.apiClient.callApi(
         '/v3/report/users/{offending_user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -290,7 +294,7 @@ export default class ReportContentSubjectApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20071}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListReportsOnUserByIdResponse}
      */
     listReportsOnUserById(offendingUserId, opts) {
       return this.listReportsOnUserByIdWithHttpInfo(offendingUserId, opts)
@@ -308,7 +312,7 @@ export default class ReportContentSubjectApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ReportChannelByUrlData} opts.reportChannelByUrlData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20071ReportLogs} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ReportChannelByUrlResponse} and HTTP response
      */
     reportChannelByUrlWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
@@ -337,7 +341,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20071ReportLogs;
+      let returnType = ReportChannelByUrlResponse;
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -353,7 +357,7 @@ export default class ReportContentSubjectApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ReportChannelByUrlData} opts.reportChannelByUrlData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20071ReportLogs}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ReportChannelByUrlResponse}
      */
     reportChannelByUrl(channelType, channelUrl, opts) {
       return this.reportChannelByUrlWithHttpInfo(channelType, channelUrl, opts)
@@ -372,7 +376,7 @@ export default class ReportContentSubjectApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ReportMessageByIdData} opts.reportMessageByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20071ReportLogs} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ReportMessageByIdResponse} and HTTP response
      */
     reportMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
@@ -406,7 +410,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20071ReportLogs;
+      let returnType = ReportMessageByIdResponse;
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}/messages/{message_id}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -423,7 +427,7 @@ export default class ReportContentSubjectApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ReportMessageByIdData} opts.reportMessageByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20071ReportLogs}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ReportMessageByIdResponse}
      */
     reportMessageById(channelType, channelUrl, messageId, opts) {
       return this.reportMessageByIdWithHttpInfo(channelType, channelUrl, messageId, opts)
@@ -440,7 +444,7 @@ export default class ReportContentSubjectApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ReportUserByIdData} opts.reportUserByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20071ReportLogs} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ReportUserByIdResponse} and HTTP response
      */
     reportUserByIdWithHttpInfo(offendingUserId, opts) {
       opts = opts || {};
@@ -464,7 +468,7 @@ export default class ReportContentSubjectApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20071ReportLogs;
+      let returnType = ReportUserByIdResponse;
       return this.apiClient.callApi(
         '/v3/report/users/{offending_user_id}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -479,7 +483,7 @@ export default class ReportContentSubjectApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ReportUserByIdData} opts.reportUserByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20071ReportLogs}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ReportUserByIdResponse}
      */
     reportUserById(offendingUserId, opts) {
       return this.reportUserByIdWithHttpInfo(offendingUserId, opts)

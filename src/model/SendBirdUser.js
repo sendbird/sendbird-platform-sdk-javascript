@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ModelObject from './ModelObject';
+import SBObject from './SBObject';
 
 /**
  * The SendBirdUser model module.
@@ -65,7 +65,7 @@ class SendBirdUser {
                 obj['last_seen_at'] = ApiClient.convertToType(data['last_seen_at'], 'Number');
             }
             if (data.hasOwnProperty('meta_data')) {
-                obj['meta_data'] = ModelObject.constructFromObject(data['meta_data']);
+                obj['meta_data'] = SBObject.constructFromObject(data['meta_data']);
             }
             if (data.hasOwnProperty('nickname')) {
                 obj['nickname'] = ApiClient.convertToType(data['nickname'], 'String');
@@ -118,7 +118,7 @@ SendBirdUser.prototype['is_active'] = undefined;
 SendBirdUser.prototype['last_seen_at'] = undefined;
 
 /**
- * @member {module:model/ModelObject} meta_data
+ * @member {module:model/SBObject} meta_data
  */
 SendBirdUser.prototype['meta_data'] = undefined;
 

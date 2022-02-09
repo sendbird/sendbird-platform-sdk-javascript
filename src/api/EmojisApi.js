@@ -13,19 +13,19 @@
 
 
 import ApiClient from "../ApiClient";
+import AddEmojiCategoriesResponse from '../model/AddEmojiCategoriesResponse';
 import AddEmojisData from '../model/AddEmojisData';
+import AddEmojisResponse from '../model/AddEmojisResponse';
 import EnableReactionsData from '../model/EnableReactionsData';
-import InlineResponse20051 from '../model/InlineResponse20051';
-import InlineResponse20055 from '../model/InlineResponse20055';
-import InlineResponse20056 from '../model/InlineResponse20056';
-import InlineResponse20057 from '../model/InlineResponse20057';
-import InlineResponse20058 from '../model/InlineResponse20058';
-import InlineResponse20059 from '../model/InlineResponse20059';
+import EnableReactionsResponse from '../model/EnableReactionsResponse';
+import ListAllEmojisAndEmojiCategoriesResponse from '../model/ListAllEmojisAndEmojiCategoriesResponse';
+import ListEmojisResponse from '../model/ListEmojisResponse';
 import SendBirdEmoji from '../model/SendBirdEmoji';
 import SendBirdEmojiCategory from '../model/SendBirdEmojiCategory';
 import UpdateEmojiCategoryUrlByIdData from '../model/UpdateEmojiCategoryUrlByIdData';
 import UpdateEmojiUrlByKeyData from '../model/UpdateEmojiUrlByKeyData';
 import UseDefaultEmojisData from '../model/UseDefaultEmojisData';
+import UseDefaultEmojisResponse from '../model/UseDefaultEmojisResponse';
 
 /**
 * Emojis service.
@@ -53,7 +53,7 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20057} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddEmojiCategoriesResponse} and HTTP response
      */
     addEmojiCategoriesWithHttpInfo(opts) {
       opts = opts || {};
@@ -72,7 +72,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20057;
+      let returnType = AddEmojiCategoriesResponse;
       return this.apiClient.callApi(
         '/v3/emoji_categories', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -86,7 +86,7 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20057}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddEmojiCategoriesResponse}
      */
     addEmojiCategories(opts) {
       return this.addEmojiCategoriesWithHttpInfo(opts)
@@ -102,7 +102,7 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddEmojisData} opts.addEmojisData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20059} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddEmojisResponse} and HTTP response
      */
     addEmojisWithHttpInfo(opts) {
       opts = opts || {};
@@ -121,7 +121,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20059;
+      let returnType = AddEmojisResponse;
       return this.apiClient.callApi(
         '/v3/emojis', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -135,7 +135,7 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddEmojisData} opts.addEmojisData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20059}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddEmojisResponse}
      */
     addEmojis(opts) {
       return this.addEmojisWithHttpInfo(opts)
@@ -259,7 +259,7 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/EnableReactionsData} opts.enableReactionsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20051} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EnableReactionsResponse} and HTTP response
      */
     enableReactionsWithHttpInfo(opts) {
       opts = opts || {};
@@ -278,7 +278,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20051;
+      let returnType = EnableReactionsResponse;
       return this.apiClient.callApi(
         '/v3/applications/settings/reactions', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -292,7 +292,7 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/EnableReactionsData} opts.enableReactionsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20051}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EnableReactionsResponse}
      */
     enableReactions(opts) {
       return this.enableReactionsWithHttpInfo(opts)
@@ -415,7 +415,7 @@ export default class EmojisApi {
      * ## List all emojis and emoji categories  Retrieves a list of all emoji categories registered to the application, including their emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-all-emojis-and-emoji-categories
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20056} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListAllEmojisAndEmojiCategoriesResponse} and HTTP response
      */
     listAllEmojisAndEmojiCategoriesWithHttpInfo(opts) {
       opts = opts || {};
@@ -434,7 +434,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20056;
+      let returnType = ListAllEmojisAndEmojiCategoriesResponse;
       return this.apiClient.callApi(
         '/v3/emoji_categories', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -447,7 +447,7 @@ export default class EmojisApi {
      * ## List all emojis and emoji categories  Retrieves a list of all emoji categories registered to the application, including their emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-all-emojis-and-emoji-categories
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20056}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListAllEmojisAndEmojiCategoriesResponse}
      */
     listAllEmojisAndEmojiCategories(opts) {
       return this.listAllEmojisAndEmojiCategoriesWithHttpInfo(opts)
@@ -462,7 +462,7 @@ export default class EmojisApi {
      * ## List emojis  Retrieves a list of all emojis registered to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-emojis
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20058} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListEmojisResponse} and HTTP response
      */
     listEmojisWithHttpInfo(opts) {
       opts = opts || {};
@@ -481,7 +481,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20058;
+      let returnType = ListEmojisResponse;
       return this.apiClient.callApi(
         '/v3/emojis', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -494,7 +494,7 @@ export default class EmojisApi {
      * ## List emojis  Retrieves a list of all emojis registered to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-emojis
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20058}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListEmojisResponse}
      */
     listEmojis(opts) {
       return this.listEmojisWithHttpInfo(opts)
@@ -622,7 +622,7 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UseDefaultEmojisData} opts.useDefaultEmojisData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20055} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UseDefaultEmojisResponse} and HTTP response
      */
     useDefaultEmojisWithHttpInfo(opts) {
       opts = opts || {};
@@ -641,7 +641,7 @@ export default class EmojisApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20055;
+      let returnType = UseDefaultEmojisResponse;
       return this.apiClient.callApi(
         '/v3/applications/settings/use_default_emoji', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -655,7 +655,7 @@ export default class EmojisApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UseDefaultEmojisData} opts.useDefaultEmojisData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20055}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UseDefaultEmojisResponse}
      */
     useDefaultEmojis(opts) {
       return this.useDefaultEmojisWithHttpInfo(opts)

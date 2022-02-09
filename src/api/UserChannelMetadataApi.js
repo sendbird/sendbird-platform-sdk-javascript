@@ -15,14 +15,15 @@
 import ApiClient from "../ApiClient";
 import CreateChannelMetacounterData from '../model/CreateChannelMetacounterData';
 import CreateChannelMetadataData from '../model/CreateChannelMetadataData';
+import CreateChannelMetadataResponse from '../model/CreateChannelMetadataResponse';
 import CreateUserMetadataData from '../model/CreateUserMetadataData';
-import InlineResponse20047UserMetadata from '../model/InlineResponse20047UserMetadata';
-import InlineResponse20060 from '../model/InlineResponse20060';
-import InlineResponse20061 from '../model/InlineResponse20061';
+import CreateUserMetadataResponse from '../model/CreateUserMetadataResponse';
 import SendBirdAdditionalProperties from '../model/SendBirdAdditionalProperties';
 import UpdateChannelMetacounterData from '../model/UpdateChannelMetacounterData';
 import UpdateChannelMetadataData from '../model/UpdateChannelMetadataData';
 import UpdateUserMetadataData from '../model/UpdateUserMetadataData';
+import UpdateUserMetadataResponse from '../model/UpdateUserMetadataResponse';
+import ViewUserMetadataResponse from '../model/ViewUserMetadataResponse';
 
 /**
 * UserChannelMetadata service.
@@ -115,7 +116,7 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/CreateChannelMetadataData} opts.createChannelMetadataData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20061} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateChannelMetadataResponse} and HTTP response
      */
     createChannelMetadataWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
@@ -144,7 +145,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20061;
+      let returnType = CreateChannelMetadataResponse;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/metadata', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -160,7 +161,7 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/CreateChannelMetadataData} opts.createChannelMetadataData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20061}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateChannelMetadataResponse}
      */
     createChannelMetadata(channelType, channelUrl, opts) {
       return this.createChannelMetadataWithHttpInfo(channelType, channelUrl, opts)
@@ -177,7 +178,7 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/CreateUserMetadataData} opts.createUserMetadataData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20047UserMetadata} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateUserMetadataResponse} and HTTP response
      */
     createUserMetadataWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -201,7 +202,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20047UserMetadata;
+      let returnType = CreateUserMetadataResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -216,7 +217,7 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/CreateUserMetadataData} opts.createUserMetadataData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20047UserMetadata}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateUserMetadataResponse}
      */
     createUserMetadata(userId, opts) {
       return this.createUserMetadataWithHttpInfo(userId, opts)
@@ -878,7 +879,7 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateUserMetadataData} opts.updateUserMetadataData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20060} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateUserMetadataResponse} and HTTP response
      */
     updateUserMetadataWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -902,7 +903,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20060;
+      let returnType = UpdateUserMetadataResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -917,7 +918,7 @@ export default class UserChannelMetadataApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateUserMetadataData} opts.updateUserMetadataData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20060}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateUserMetadataResponse}
      */
     updateUserMetadata(userId, opts) {
       return this.updateUserMetadataWithHttpInfo(userId, opts)
@@ -1268,7 +1269,7 @@ export default class UserChannelMetadataApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20047UserMetadata} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewUserMetadataResponse} and HTTP response
      */
     viewUserMetadataWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -1294,7 +1295,7 @@ export default class UserChannelMetadataApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20047UserMetadata;
+      let returnType = ViewUserMetadataResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/metadata', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1310,7 +1311,7 @@ export default class UserChannelMetadataApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20047UserMetadata}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewUserMetadataResponse}
      */
     viewUserMetadata(userId, opts) {
       return this.viewUserMetadataWithHttpInfo(userId, opts)

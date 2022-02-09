@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## retrieveAdvancedAnalyticsMetrics
 
-> InlineResponse20062 retrieveAdvancedAnalyticsMetrics(opts)
+> RetrieveAdvancedAnalyticsMetricsResponse retrieveAdvancedAnalyticsMetrics(opts)
 
 Retrieve Advanced analytics metrics
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20062**](InlineResponse20062.md)
+[**RetrieveAdvancedAnalyticsMetricsResponse**](RetrieveAdvancedAnalyticsMetricsResponse.md)
 
 ### Authorization
 

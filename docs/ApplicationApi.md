@@ -35,7 +35,7 @@ Method | HTTP request | Description
 
 ## addApnsPushConfiguration
 
-> InlineResponse2003 addApnsPushConfiguration(opts)
+> AddApnsPushConfigurationResponse addApnsPushConfiguration(opts)
 
 Add an APNs push configuration
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**AddApnsPushConfigurationResponse**](AddApnsPushConfigurationResponse.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ No authorization required
 
 ## addFcmPushConfiguration
 
-> InlineResponse2001 addFcmPushConfiguration(opts)
+> AddFcmPushConfigurationResponse addFcmPushConfiguration(opts)
 
 Add a FCM push configuration
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**AddFcmPushConfigurationResponse**](AddFcmPushConfigurationResponse.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ No authorization required
 
 ## addHmsPushConfiguration
 
-> InlineResponse2002 addHmsPushConfiguration(opts)
+> AddHmsPushConfigurationResponse addHmsPushConfiguration(opts)
 
 Add an HMS push configuration
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**AddHmsPushConfigurationResponse**](AddHmsPushConfigurationResponse.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ No authorization required
 
 ## addIpToWhitelist
 
-> InlineResponse2006 addIpToWhitelist(opts)
+> AddIpToWhitelistResponse addIpToWhitelist(opts)
 
 Add an IP to a whitelist
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**AddIpToWhitelistResponse**](AddIpToWhitelistResponse.md)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ No authorization required
 
 ## deleteAllowedIpsFromWhitelist
 
-> InlineResponse2006 deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts)
+> DeleteAllowedIpsFromWhitelistResponse deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts)
 
 Delete allowed IPs from a whitelist
 
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**DeleteAllowedIpsFromWhitelistResponse**](DeleteAllowedIpsFromWhitelistResponse.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ No authorization required
 
 ## deleteApnsCertificateById
 
-> InlineResponse20013 deleteApnsCertificateById(providerId, opts)
+> DeleteApnsCertificateByIdResponse deleteApnsCertificateById(providerId, opts)
 
 Delete an APNs certificate
 
@@ -309,7 +309,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**DeleteApnsCertificateByIdResponse**](DeleteApnsCertificateByIdResponse.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ No authorization required
 
 ## generateSecondaryApiToken
 
-> InlineResponse2007 generateSecondaryApiToken(opts)
+> GenerateSecondaryApiTokenResponse generateSecondaryApiToken(opts)
 
 Generate a secondary API token
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**GenerateSecondaryApiTokenResponse**](GenerateSecondaryApiTokenResponse.md)
 
 ### Authorization
 
@@ -371,7 +371,7 @@ No authorization required
 
 ## listPushConfigurations
 
-> InlineResponse20012 listPushConfigurations(pushType, opts)
+> ListPushConfigurationsResponse listPushConfigurations(pushType, opts)
 
 List push configurations
 
@@ -405,7 +405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**ListPushConfigurationsResponse**](ListPushConfigurationsResponse.md)
 
 ### Authorization
 
@@ -419,7 +419,7 @@ No authorization required
 
 ## listPushNotificationContentTemplates
 
-> InlineResponse2004 listPushNotificationContentTemplates(opts)
+> ListPushNotificationContentTemplatesResponse listPushNotificationContentTemplates(opts)
 
 List push notification content templates
 
@@ -451,7 +451,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**ListPushNotificationContentTemplatesResponse**](ListPushNotificationContentTemplatesResponse.md)
 
 ### Authorization
 
@@ -465,7 +465,7 @@ No authorization required
 
 ## listSecondaryApiTokens
 
-> InlineResponse2008 listSecondaryApiTokens(opts)
+> ListSecondaryApiTokensResponse listSecondaryApiTokens(opts)
 
 List secondary API tokens
 
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**ListSecondaryApiTokensResponse**](ListSecondaryApiTokensResponse.md)
 
 ### Authorization
 
@@ -511,7 +511,7 @@ No authorization required
 
 ## removePushConfigurationById
 
-> InlineResponse20013 removePushConfigurationById(pushType, providerId, opts)
+> RemovePushConfigurationByIdResponse removePushConfigurationById(pushType, providerId, opts)
 
 Remove a push configuration
 
@@ -547,7 +547,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**RemovePushConfigurationByIdResponse**](RemovePushConfigurationByIdResponse.md)
 
 ### Authorization
 
@@ -561,7 +561,7 @@ No authorization required
 
 ## retrieveIpWhitelist
 
-> InlineResponse2006 retrieveIpWhitelist(opts)
+> RetrieveIpWhitelistResponse retrieveIpWhitelist(opts)
 
 Retrieve an IP whitelist
 
@@ -593,7 +593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**RetrieveIpWhitelistResponse**](RetrieveIpWhitelistResponse.md)
 
 ### Authorization
 
@@ -607,7 +607,7 @@ No authorization required
 
 ## revokeSecondaryApiTokenByToken
 
-> InlineResponse2007 revokeSecondaryApiTokenByToken(apiToken2, opts)
+> RevokeSecondaryApiTokenByTokenResponse revokeSecondaryApiTokenByToken(apiToken2, opts)
 
 Revoke a secondary API token
 
@@ -641,7 +641,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**RevokeSecondaryApiTokenByTokenResponse**](RevokeSecondaryApiTokenByTokenResponse.md)
 
 ### Authorization
 
@@ -655,7 +655,7 @@ No authorization required
 
 ## updateApnsPushConfigurationById
 
-> InlineResponse20014 updateApnsPushConfigurationById(providerId, opts)
+> UpdateApnsPushConfigurationByIdResponse updateApnsPushConfigurationById(providerId, opts)
 
 Update an APNs push configuration
 
@@ -691,7 +691,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**UpdateApnsPushConfigurationByIdResponse**](UpdateApnsPushConfigurationByIdResponse.md)
 
 ### Authorization
 
@@ -705,7 +705,7 @@ No authorization required
 
 ## updateDefaultChannelInvitationPreference
 
-> InlineResponse2005 updateDefaultChannelInvitationPreference(opts)
+> UpdateDefaultChannelInvitationPreferenceResponse updateDefaultChannelInvitationPreference(opts)
 
 Update default channel invitation preference
 
@@ -739,7 +739,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**UpdateDefaultChannelInvitationPreferenceResponse**](UpdateDefaultChannelInvitationPreferenceResponse.md)
 
 ### Authorization
 
@@ -753,7 +753,7 @@ No authorization required
 
 ## updateFcmPushConfigurationById
 
-> InlineResponse20014 updateFcmPushConfigurationById(providerId, opts)
+> UpdateFcmPushConfigurationByIdResponse updateFcmPushConfigurationById(providerId, opts)
 
 Update a FCM push configuration
 
@@ -789,7 +789,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**UpdateFcmPushConfigurationByIdResponse**](UpdateFcmPushConfigurationByIdResponse.md)
 
 ### Authorization
 
@@ -803,7 +803,7 @@ No authorization required
 
 ## updateHmsPushConfigurationById
 
-> InlineResponse20014 updateHmsPushConfigurationById(providerId, opts)
+> UpdateHmsPushConfigurationByIdResponse updateHmsPushConfigurationById(providerId, opts)
 
 Update an HMS push configuration
 
@@ -839,7 +839,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**UpdateHmsPushConfigurationByIdResponse**](UpdateHmsPushConfigurationByIdResponse.md)
 
 ### Authorization
 
@@ -853,7 +853,7 @@ No authorization required
 
 ## updatePushNotificationContentTemplate
 
-> InlineResponse20015 updatePushNotificationContentTemplate(templateName, opts)
+> UpdatePushNotificationContentTemplateResponse updatePushNotificationContentTemplate(templateName, opts)
 
 Update a push notification content template
 
@@ -889,7 +889,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**UpdatePushNotificationContentTemplateResponse**](UpdatePushNotificationContentTemplateResponse.md)
 
 ### Authorization
 
@@ -903,7 +903,7 @@ No authorization required
 
 ## viewDefaultChannelInvitationPreference
 
-> InlineResponse2005 viewDefaultChannelInvitationPreference(opts)
+> ViewDefaultChannelInvitationPreferenceResponse viewDefaultChannelInvitationPreference(opts)
 
 View default channel invitation preference
 
@@ -935,7 +935,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**ViewDefaultChannelInvitationPreferenceResponse**](ViewDefaultChannelInvitationPreferenceResponse.md)
 
 ### Authorization
 
@@ -949,7 +949,7 @@ No authorization required
 
 ## viewNumberOfConcurrentConnections
 
-> InlineResponse200 viewNumberOfConcurrentConnections(opts)
+> ViewNumberOfConcurrentConnectionsResponse viewNumberOfConcurrentConnections(opts)
 
 View number of concurrent connections
 
@@ -981,7 +981,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**ViewNumberOfConcurrentConnectionsResponse**](ViewNumberOfConcurrentConnectionsResponse.md)
 
 ### Authorization
 
@@ -995,7 +995,7 @@ No authorization required
 
 ## viewNumberOfDailyActiveUsers
 
-> InlineResponse20011 viewNumberOfDailyActiveUsers(opts)
+> ViewNumberOfDailyActiveUsersResponse viewNumberOfDailyActiveUsers(opts)
 
 View number of daily active users
 
@@ -1029,7 +1029,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**ViewNumberOfDailyActiveUsersResponse**](ViewNumberOfDailyActiveUsersResponse.md)
 
 ### Authorization
 
@@ -1043,7 +1043,7 @@ No authorization required
 
 ## viewNumberOfMonthlyActiveUsers
 
-> InlineResponse20010 viewNumberOfMonthlyActiveUsers(opts)
+> ViewNumberOfMonthlyActiveUsersResponse viewNumberOfMonthlyActiveUsers(opts)
 
 View number of monthly active users
 
@@ -1077,7 +1077,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**ViewNumberOfMonthlyActiveUsersResponse**](ViewNumberOfMonthlyActiveUsersResponse.md)
 
 ### Authorization
 
@@ -1091,7 +1091,7 @@ No authorization required
 
 ## viewNumberOfPeakConnections
 
-> InlineResponse2009 viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts)
+> ViewNumberOfPeakConnectionsResponse viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts)
 
 View number of peak connections
 
@@ -1137,7 +1137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**ViewNumberOfPeakConnectionsResponse**](ViewNumberOfPeakConnectionsResponse.md)
 
 ### Authorization
 
@@ -1151,7 +1151,7 @@ No authorization required
 
 ## viewPushConfigurationById
 
-> InlineResponse20012 viewPushConfigurationById(pushType, providerId, opts)
+> ViewPushConfigurationByIdResponse viewPushConfigurationById(pushType, providerId, opts)
 
 View a push configuration
 
@@ -1187,7 +1187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**ViewPushConfigurationByIdResponse**](ViewPushConfigurationByIdResponse.md)
 
 ### Authorization
 
@@ -1201,7 +1201,7 @@ No authorization required
 
 ## viewPushNotificationContentTemplate
 
-> InlineResponse20015 viewPushNotificationContentTemplate(templateName, opts)
+> ViewPushNotificationContentTemplateResponse viewPushNotificationContentTemplate(templateName, opts)
 
 View a push notification content template
 
@@ -1235,7 +1235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**ViewPushNotificationContentTemplateResponse**](ViewPushNotificationContentTemplateResponse.md)
 
 ### Authorization
 
@@ -1249,7 +1249,7 @@ No authorization required
 
 ## viewSecondaryApiTokenByToken
 
-> InlineResponse2007 viewSecondaryApiTokenByToken(apiToken2, opts)
+> ViewSecondaryApiTokenByTokenResponse viewSecondaryApiTokenByToken(apiToken2, opts)
 
 View a secondary API token
 
@@ -1283,7 +1283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**ViewSecondaryApiTokenByTokenResponse**](ViewSecondaryApiTokenByTokenResponse.md)
 
 ### Authorization
 

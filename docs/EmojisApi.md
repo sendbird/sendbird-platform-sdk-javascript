@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## addEmojiCategories
 
-> InlineResponse20057 addEmojiCategories(opts)
+> AddEmojiCategoriesResponse addEmojiCategories(opts)
 
 Add emoji categories
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20057**](InlineResponse20057.md)
+[**AddEmojiCategoriesResponse**](AddEmojiCategoriesResponse.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 
 ## addEmojis
 
-> InlineResponse20059 addEmojis(opts)
+> AddEmojisResponse addEmojis(opts)
 
 Add emojis
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20059**](InlineResponse20059.md)
+[**AddEmojisResponse**](AddEmojisResponse.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ No authorization required
 
 ## enableReactions
 
-> InlineResponse20051 enableReactions(opts)
+> EnableReactionsResponse enableReactions(opts)
 
 Enable reactions
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20051**](InlineResponse20051.md)
+[**EnableReactionsResponse**](EnableReactionsResponse.md)
 
 ### Authorization
 
@@ -357,7 +357,7 @@ No authorization required
 
 ## listAllEmojisAndEmojiCategories
 
-> InlineResponse20056 listAllEmojisAndEmojiCategories(opts)
+> ListAllEmojisAndEmojiCategoriesResponse listAllEmojisAndEmojiCategories(opts)
 
 List all emojis and emoji categories
 
@@ -389,7 +389,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20056**](InlineResponse20056.md)
+[**ListAllEmojisAndEmojiCategoriesResponse**](ListAllEmojisAndEmojiCategoriesResponse.md)
 
 ### Authorization
 
@@ -403,7 +403,7 @@ No authorization required
 
 ## listEmojis
 
-> InlineResponse20058 listEmojis(opts)
+> ListEmojisResponse listEmojis(opts)
 
 List emojis
 
@@ -435,7 +435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20058**](InlineResponse20058.md)
+[**ListEmojisResponse**](ListEmojisResponse.md)
 
 ### Authorization
 
@@ -549,7 +549,7 @@ No authorization required
 
 ## useDefaultEmojis
 
-> InlineResponse20055 useDefaultEmojis(opts)
+> UseDefaultEmojisResponse useDefaultEmojis(opts)
 
 Use default emojis
 
@@ -583,7 +583,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20055**](InlineResponse20055.md)
+[**UseDefaultEmojisResponse**](UseDefaultEmojisResponse.md)
 
 ### Authorization
 

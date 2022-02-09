@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## chooseWhichEventsToSubscribeTo
 
-> InlineResponse20067 chooseWhichEventsToSubscribeTo(opts)
+> ChooseWhichEventsToSubscribeToResponse chooseWhichEventsToSubscribeTo(opts)
 
 Choose which events to subscribe to
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20067**](InlineResponse20067.md)
+[**ChooseWhichEventsToSubscribeToResponse**](ChooseWhichEventsToSubscribeToResponse.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 
 ## retrieveListOfSubscribedEvents
 
-> InlineResponse20066 retrieveListOfSubscribedEvents(opts)
+> RetrieveListOfSubscribedEventsResponse retrieveListOfSubscribedEvents(opts)
 
 Retrieve a list of subscribed events
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20066**](InlineResponse20066.md)
+[**RetrieveListOfSubscribedEventsResponse**](RetrieveListOfSubscribedEventsResponse.md)
 
 ### Authorization
 

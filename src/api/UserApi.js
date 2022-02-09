@@ -14,34 +14,43 @@
 
 import ApiClient from "../ApiClient";
 import AddRegistrationOrDeviceTokenData from '../model/AddRegistrationOrDeviceTokenData';
+import AddRegistrationOrDeviceTokenResponse from '../model/AddRegistrationOrDeviceTokenResponse';
 import BanFromChannelsWithCustomChannelTypesData from '../model/BanFromChannelsWithCustomChannelTypesData';
 import BlockUserData from '../model/BlockUserData';
+import ChoosePushNotificationContentTemplateResponse from '../model/ChoosePushNotificationContentTemplateResponse';
 import CreateUserData from '../model/CreateUserData';
-import InlineResponse20016 from '../model/InlineResponse20016';
-import InlineResponse20017 from '../model/InlineResponse20017';
-import InlineResponse20018 from '../model/InlineResponse20018';
-import InlineResponse20019 from '../model/InlineResponse20019';
-import InlineResponse20020 from '../model/InlineResponse20020';
-import InlineResponse20021 from '../model/InlineResponse20021';
-import InlineResponse20022 from '../model/InlineResponse20022';
-import InlineResponse20023 from '../model/InlineResponse20023';
-import InlineResponse20024 from '../model/InlineResponse20024';
-import InlineResponse20025 from '../model/InlineResponse20025';
-import InlineResponse20026 from '../model/InlineResponse20026';
-import InlineResponse20027 from '../model/InlineResponse20027';
-import InlineResponse20028 from '../model/InlineResponse20028';
-import InlineResponse20029 from '../model/InlineResponse20029';
-import InlineResponse2005 from '../model/InlineResponse2005';
 import LeaveMyGroupChannelsData from '../model/LeaveMyGroupChannelsData';
+import ListBannedChannelsResponse from '../model/ListBannedChannelsResponse';
+import ListBlockedUsersResponse from '../model/ListBlockedUsersResponse';
+import ListMutedChannelsResponse from '../model/ListMutedChannelsResponse';
+import ListMyGroupChannelsResponse from '../model/ListMyGroupChannelsResponse';
+import ListRegistrationOrDeviceTokensResponse from '../model/ListRegistrationOrDeviceTokensResponse';
+import ListUsersResponse from '../model/ListUsersResponse';
 import MarkAllMessagesAsReadData from '../model/MarkAllMessagesAsReadData';
 import MuteInChannelsWithCustomChannelTypesData from '../model/MuteInChannelsWithCustomChannelTypesData';
 import RegisterAsOperatorToChannelsWithCustomChannelTypesData from '../model/RegisterAsOperatorToChannelsWithCustomChannelTypesData';
+import RemoveRegistrationOrDeviceTokenByTokenResponse from '../model/RemoveRegistrationOrDeviceTokenByTokenResponse';
+import RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse from '../model/RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse';
+import RemoveRegistrationOrDeviceTokenResponse from '../model/RemoveRegistrationOrDeviceTokenResponse';
 import SendBirdUser from '../model/SendBirdUser';
 import UpdateChannelInvitationPreferenceData from '../model/UpdateChannelInvitationPreferenceData';
+import UpdateChannelInvitationPreferenceResponse from '../model/UpdateChannelInvitationPreferenceResponse';
 import UpdateCountPreferenceOfChannelByUrlData from '../model/UpdateCountPreferenceOfChannelByUrlData';
+import UpdateCountPreferenceOfChannelByUrlResponse from '../model/UpdateCountPreferenceOfChannelByUrlResponse';
 import UpdatePushPreferencesData from '../model/UpdatePushPreferencesData';
 import UpdatePushPreferencesForChannelByUrlData from '../model/UpdatePushPreferencesForChannelByUrlData';
+import UpdatePushPreferencesForChannelByUrlResponse from '../model/UpdatePushPreferencesForChannelByUrlResponse';
+import UpdatePushPreferencesResponse from '../model/UpdatePushPreferencesResponse';
 import UpdateUserByIdData from '../model/UpdateUserByIdData';
+import ViewChannelInvitationPreferenceResponse from '../model/ViewChannelInvitationPreferenceResponse';
+import ViewCountPreferenceOfChannelByUrlResponse from '../model/ViewCountPreferenceOfChannelByUrlResponse';
+import ViewNumberOfChannelsByJoinStatusResponse from '../model/ViewNumberOfChannelsByJoinStatusResponse';
+import ViewNumberOfChannelsWithUnreadMessagesResponse from '../model/ViewNumberOfChannelsWithUnreadMessagesResponse';
+import ViewNumberOfUnreadItemsResponse from '../model/ViewNumberOfUnreadItemsResponse';
+import ViewNumberOfUnreadMessagesResponse from '../model/ViewNumberOfUnreadMessagesResponse';
+import ViewPushPreferencesForChannelByUrlResponse from '../model/ViewPushPreferencesForChannelByUrlResponse';
+import ViewPushPreferencesResponse from '../model/ViewPushPreferencesResponse';
+import ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse from '../model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse';
 
 /**
 * User service.
@@ -71,7 +80,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddRegistrationOrDeviceTokenData} opts.addRegistrationOrDeviceTokenData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20025} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddRegistrationOrDeviceTokenResponse} and HTTP response
      */
     addRegistrationOrDeviceTokenWithHttpInfo(userId, tokenType, opts) {
       opts = opts || {};
@@ -100,7 +109,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20025;
+      let returnType = AddRegistrationOrDeviceTokenResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/{token_type}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -116,7 +125,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddRegistrationOrDeviceTokenData} opts.addRegistrationOrDeviceTokenData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20025}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddRegistrationOrDeviceTokenResponse}
      */
     addRegistrationOrDeviceToken(userId, tokenType, opts) {
       return this.addRegistrationOrDeviceTokenWithHttpInfo(userId, tokenType, opts)
@@ -245,7 +254,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20029} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChoosePushNotificationContentTemplateResponse} and HTTP response
      */
     choosePushNotificationContentTemplateWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -269,7 +278,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20029;
+      let returnType = ChoosePushNotificationContentTemplateResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/template', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -284,7 +293,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20029}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChoosePushNotificationContentTemplateResponse}
      */
     choosePushNotificationContentTemplate(userId, opts) {
       return this.choosePushNotificationContentTemplateWithHttpInfo(userId, opts)
@@ -461,7 +470,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20022} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListBannedChannelsResponse} and HTTP response
      */
     listBannedChannelsWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -487,7 +496,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20022;
+      let returnType = ListBannedChannelsResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/ban', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -503,7 +512,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20022}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListBannedChannelsResponse}
      */
     listBannedChannels(userId, opts) {
       return this.listBannedChannelsWithHttpInfo(userId, opts)
@@ -524,7 +533,7 @@ export default class UserApi {
      * @param {String} opts.userIds 
      * @param {String} opts.metadatakey 
      * @param {String} opts.metadatavaluesIn 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20016} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListBlockedUsersResponse} and HTTP response
      */
     listBlockedUsersWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -553,7 +562,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20016;
+      let returnType = ListBlockedUsersResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/block', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -572,7 +581,7 @@ export default class UserApi {
      * @param {String} opts.userIds 
      * @param {String} opts.metadatakey 
      * @param {String} opts.metadatavaluesIn 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20016}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListBlockedUsersResponse}
      */
     listBlockedUsers(userId, opts) {
       return this.listBlockedUsersWithHttpInfo(userId, opts)
@@ -590,7 +599,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20023} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListMutedChannelsResponse} and HTTP response
      */
     listMutedChannelsWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -616,7 +625,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20023;
+      let returnType = ListMutedChannelsResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/mute', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -632,7 +641,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20023}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListMutedChannelsResponse}
      */
     listMutedChannels(userId, opts) {
       return this.listMutedChannelsWithHttpInfo(userId, opts)
@@ -688,7 +697,7 @@ export default class UserApi {
      * @param {String} opts.metacounterValueLt 
      * @param {String} opts.metacounterValueLte 
      * @param {String} opts.customType 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20017} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListMyGroupChannelsResponse} and HTTP response
      */
     listMyGroupChannelsWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -752,7 +761,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20017;
+      let returnType = ListMyGroupChannelsResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/my_group_channels', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -806,7 +815,7 @@ export default class UserApi {
      * @param {String} opts.metacounterValueLt 
      * @param {String} opts.metacounterValueLte 
      * @param {String} opts.customType 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20017}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListMyGroupChannelsResponse}
      */
     listMyGroupChannels(userId, opts) {
       return this.listMyGroupChannelsWithHttpInfo(userId, opts)
@@ -823,7 +832,7 @@ export default class UserApi {
      * @param {String} tokenType 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20024} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListRegistrationOrDeviceTokensResponse} and HTTP response
      */
     listRegistrationOrDeviceTokensWithHttpInfo(userId, tokenType, opts) {
       opts = opts || {};
@@ -852,7 +861,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20024;
+      let returnType = ListRegistrationOrDeviceTokensResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/{token_type}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -867,7 +876,7 @@ export default class UserApi {
      * @param {String} tokenType 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20024}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListRegistrationOrDeviceTokensResponse}
      */
     listRegistrationOrDeviceTokens(userId, tokenType, opts) {
       return this.listRegistrationOrDeviceTokensWithHttpInfo(userId, tokenType, opts)
@@ -891,7 +900,7 @@ export default class UserApi {
      * @param {String} opts.nicknameStartswith 
      * @param {String} opts.metadatakey 
      * @param {String} opts.metadatavaluesIn 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20016} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListUsersResponse} and HTTP response
      */
     listUsersWithHttpInfo(opts) {
       opts = opts || {};
@@ -919,7 +928,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20016;
+      let returnType = ListUsersResponse;
       return this.apiClient.callApi(
         '/v3/users', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -941,7 +950,7 @@ export default class UserApi {
      * @param {String} opts.nicknameStartswith 
      * @param {String} opts.metadatakey 
      * @param {String} opts.metadatavaluesIn 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20016}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListUsersResponse}
      */
     listUsers(opts) {
       return this.listUsersWithHttpInfo(opts)
@@ -1125,7 +1134,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20026} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemoveRegistrationOrDeviceTokenResponse} and HTTP response
      */
     removeRegistrationOrDeviceTokenWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -1149,7 +1158,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20026;
+      let returnType = RemoveRegistrationOrDeviceTokenResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1163,7 +1172,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20026}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemoveRegistrationOrDeviceTokenResponse}
      */
     removeRegistrationOrDeviceToken(userId, opts) {
       return this.removeRegistrationOrDeviceTokenWithHttpInfo(userId, opts)
@@ -1181,7 +1190,7 @@ export default class UserApi {
      * @param {String} token 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20026} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemoveRegistrationOrDeviceTokenByTokenResponse} and HTTP response
      */
     removeRegistrationOrDeviceTokenByTokenWithHttpInfo(userId, tokenType, token, opts) {
       opts = opts || {};
@@ -1215,7 +1224,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20026;
+      let returnType = RemoveRegistrationOrDeviceTokenByTokenResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/{token_type}/{token}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1231,7 +1240,7 @@ export default class UserApi {
      * @param {String} token 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20026}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemoveRegistrationOrDeviceTokenByTokenResponse}
      */
     removeRegistrationOrDeviceTokenByToken(userId, tokenType, token, opts) {
       return this.removeRegistrationOrDeviceTokenByTokenWithHttpInfo(userId, tokenType, token, opts)
@@ -1248,7 +1257,7 @@ export default class UserApi {
      * @param {String} token 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20027} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse} and HTTP response
      */
     removeRegistrationOrDeviceTokenFromOwnerByTokenWithHttpInfo(tokenType, token, opts) {
       opts = opts || {};
@@ -1277,7 +1286,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20027;
+      let returnType = RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse;
       return this.apiClient.callApi(
         '/v3/push/device_tokens/{token_type}/{token}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1292,7 +1301,7 @@ export default class UserApi {
      * @param {String} token 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20027}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse}
      */
     removeRegistrationOrDeviceTokenFromOwnerByToken(tokenType, token, opts) {
       return this.removeRegistrationOrDeviceTokenFromOwnerByTokenWithHttpInfo(tokenType, token, opts)
@@ -1424,7 +1433,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateChannelInvitationPreferenceData} opts.updateChannelInvitationPreferenceData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2005} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateChannelInvitationPreferenceResponse} and HTTP response
      */
     updateChannelInvitationPreferenceWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -1448,7 +1457,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2005;
+      let returnType = UpdateChannelInvitationPreferenceResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/channel_invitation_preference', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1463,7 +1472,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateChannelInvitationPreferenceData} opts.updateChannelInvitationPreferenceData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2005}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateChannelInvitationPreferenceResponse}
      */
     updateChannelInvitationPreference(userId, opts) {
       return this.updateChannelInvitationPreferenceWithHttpInfo(userId, opts)
@@ -1481,7 +1490,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateCountPreferenceOfChannelByUrlData} opts.updateCountPreferenceOfChannelByUrlData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20021} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateCountPreferenceOfChannelByUrlResponse} and HTTP response
      */
     updateCountPreferenceOfChannelByUrlWithHttpInfo(userId, channelUrl, opts) {
       opts = opts || {};
@@ -1510,7 +1519,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20021;
+      let returnType = UpdateCountPreferenceOfChannelByUrlResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/count_preference/{channel_url}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1526,7 +1535,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateCountPreferenceOfChannelByUrlData} opts.updateCountPreferenceOfChannelByUrlData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20021}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateCountPreferenceOfChannelByUrlResponse}
      */
     updateCountPreferenceOfChannelByUrl(userId, channelUrl, opts) {
       return this.updateCountPreferenceOfChannelByUrlWithHttpInfo(userId, channelUrl, opts)
@@ -1543,7 +1552,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdatePushPreferencesData} opts.updatePushPreferencesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20028} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdatePushPreferencesResponse} and HTTP response
      */
     updatePushPreferencesWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -1567,7 +1576,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20028;
+      let returnType = UpdatePushPreferencesResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1582,7 +1591,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdatePushPreferencesData} opts.updatePushPreferencesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20028}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdatePushPreferencesResponse}
      */
     updatePushPreferences(userId, opts) {
       return this.updatePushPreferencesWithHttpInfo(userId, opts)
@@ -1600,7 +1609,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdatePushPreferencesForChannelByUrlData} opts.updatePushPreferencesForChannelByUrlData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20028} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdatePushPreferencesForChannelByUrlResponse} and HTTP response
      */
     updatePushPreferencesForChannelByUrlWithHttpInfo(userId, channelUrl, opts) {
       opts = opts || {};
@@ -1629,7 +1638,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20028;
+      let returnType = UpdatePushPreferencesForChannelByUrlResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference/{channel_url}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1645,7 +1654,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdatePushPreferencesForChannelByUrlData} opts.updatePushPreferencesForChannelByUrlData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20028}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdatePushPreferencesForChannelByUrlResponse}
      */
     updatePushPreferencesForChannelByUrl(userId, channelUrl, opts) {
       return this.updatePushPreferencesForChannelByUrlWithHttpInfo(userId, channelUrl, opts)
@@ -1717,7 +1726,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2005} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewChannelInvitationPreferenceResponse} and HTTP response
      */
     viewChannelInvitationPreferenceWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -1741,7 +1750,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2005;
+      let returnType = ViewChannelInvitationPreferenceResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/channel_invitation_preference', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1755,7 +1764,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2005}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewChannelInvitationPreferenceResponse}
      */
     viewChannelInvitationPreference(userId, opts) {
       return this.viewChannelInvitationPreferenceWithHttpInfo(userId, opts)
@@ -1772,7 +1781,7 @@ export default class UserApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20021} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewCountPreferenceOfChannelByUrlResponse} and HTTP response
      */
     viewCountPreferenceOfChannelByUrlWithHttpInfo(userId, channelUrl, opts) {
       opts = opts || {};
@@ -1801,7 +1810,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20021;
+      let returnType = ViewCountPreferenceOfChannelByUrlResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/count_preference/{channel_url}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1816,7 +1825,7 @@ export default class UserApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20021}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewCountPreferenceOfChannelByUrlResponse}
      */
     viewCountPreferenceOfChannelByUrl(userId, channelUrl, opts) {
       return this.viewCountPreferenceOfChannelByUrlWithHttpInfo(userId, channelUrl, opts)
@@ -1833,7 +1842,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.state 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20020} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfChannelsByJoinStatusResponse} and HTTP response
      */
     viewNumberOfChannelsByJoinStatusWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -1858,7 +1867,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20020;
+      let returnType = ViewNumberOfChannelsByJoinStatusResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/group_channel_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1873,7 +1882,7 @@ export default class UserApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.state 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20020}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfChannelsByJoinStatusResponse}
      */
     viewNumberOfChannelsByJoinStatus(userId, opts) {
       return this.viewNumberOfChannelsByJoinStatusWithHttpInfo(userId, opts)
@@ -1891,7 +1900,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {Array.<String>} opts.customTypes 
      * @param {String} opts.superMode 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20018} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfChannelsWithUnreadMessagesResponse} and HTTP response
      */
     viewNumberOfChannelsWithUnreadMessagesWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -1917,7 +1926,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20018;
+      let returnType = ViewNumberOfChannelsWithUnreadMessagesResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/unread_channel_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1933,7 +1942,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {Array.<String>} opts.customTypes 
      * @param {String} opts.superMode 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20018}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfChannelsWithUnreadMessagesResponse}
      */
     viewNumberOfChannelsWithUnreadMessages(userId, opts) {
       return this.viewNumberOfChannelsWithUnreadMessagesWithHttpInfo(userId, opts)
@@ -1951,7 +1960,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.customType 
      * @param {String} opts.itemKeys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20019} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfUnreadItemsResponse} and HTTP response
      */
     viewNumberOfUnreadItemsWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -1977,7 +1986,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20019;
+      let returnType = ViewNumberOfUnreadItemsResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/unread_item_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1993,7 +2002,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.customType 
      * @param {String} opts.itemKeys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20019}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfUnreadItemsResponse}
      */
     viewNumberOfUnreadItems(userId, opts) {
       return this.viewNumberOfUnreadItemsWithHttpInfo(userId, opts)
@@ -2011,7 +2020,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.customTypes 
      * @param {String} opts.superMode 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20018} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfUnreadMessagesResponse} and HTTP response
      */
     viewNumberOfUnreadMessagesWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -2037,7 +2046,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20018;
+      let returnType = ViewNumberOfUnreadMessagesResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/unread_message_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -2053,7 +2062,7 @@ export default class UserApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.customTypes 
      * @param {String} opts.superMode 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20018}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfUnreadMessagesResponse}
      */
     viewNumberOfUnreadMessages(userId, opts) {
       return this.viewNumberOfUnreadMessagesWithHttpInfo(userId, opts)
@@ -2069,7 +2078,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20028} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewPushPreferencesResponse} and HTTP response
      */
     viewPushPreferencesWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -2093,7 +2102,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20028;
+      let returnType = ViewPushPreferencesResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -2107,7 +2116,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20028}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewPushPreferencesResponse}
      */
     viewPushPreferences(userId, opts) {
       return this.viewPushPreferencesWithHttpInfo(userId, opts)
@@ -2124,7 +2133,7 @@ export default class UserApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20028} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewPushPreferencesForChannelByUrlResponse} and HTTP response
      */
     viewPushPreferencesForChannelByUrlWithHttpInfo(userId, channelUrl, opts) {
       opts = opts || {};
@@ -2153,7 +2162,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20028;
+      let returnType = ViewPushPreferencesForChannelByUrlResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference/{channel_url}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -2168,7 +2177,7 @@ export default class UserApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20028}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewPushPreferencesForChannelByUrlResponse}
      */
     viewPushPreferencesForChannelByUrl(userId, channelUrl, opts) {
       return this.viewPushPreferencesForChannelByUrlWithHttpInfo(userId, channelUrl, opts)
@@ -2248,7 +2257,7 @@ export default class UserApi {
      * @param {String} token 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20027} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse} and HTTP response
      */
     viewWhoOwnsRegistrationOrDeviceTokenByTokenWithHttpInfo(tokenType, token, opts) {
       opts = opts || {};
@@ -2277,7 +2286,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20027;
+      let returnType = ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse;
       return this.apiClient.callApi(
         '/v3/push/device_tokens/{token_type}/{token}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -2292,7 +2301,7 @@ export default class UserApi {
      * @param {String} token 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20027}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse}
      */
     viewWhoOwnsRegistrationOrDeviceTokenByToken(tokenType, token, opts) {
       return this.viewWhoOwnsRegistrationOrDeviceTokenByTokenWithHttpInfo(tokenType, token, opts)

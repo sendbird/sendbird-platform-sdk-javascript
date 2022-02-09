@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **mentionedUsers** | [**[SendBirdUser]**](SendBirdUser.md) |  | [optional] 
 **messageId** | **Number** |  | [optional] 
 **messageType** | **String** |  | [optional] 
-**metaArray** | [**ModelObject**](ModelObject.md) |  | [optional] 
+**metaArray** | [**SBObject**](SBObject.md) |  | [optional] 
 **metaArrays** | [**[SendBirdMessageMetaArray]**](SendBirdMessageMetaArray.md) |  | [optional] 
 **ogMetaData** | [**SendBirdOGMetaData**](SendBirdOGMetaData.md) |  | [optional] 
 **parentMessage** | [**SendBirdMessageResponse**](SendBirdMessageResponse.md) |  | [optional] 

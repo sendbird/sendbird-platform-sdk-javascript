@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **friendName** | **String** |  | [optional] 
 **isActive** | **Boolean** |  | [optional] 
 **lastSeenAt** | **Number** |  | [optional] 
-**metaData** | [**ModelObject**](ModelObject.md) |  | [optional] 
+**metaData** | [**SBObject**](SBObject.md) |  | [optional] 
 **nickname** | **String** |  | [optional] 
 **plainProfileUrl** | **String** |  | [optional] 
 **preferredLanguages** | **[String]** |  | [optional] 

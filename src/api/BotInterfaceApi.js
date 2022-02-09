@@ -14,13 +14,15 @@
 
 import ApiClient from "../ApiClient";
 import CreateBotData from '../model/CreateBotData';
-import InlineResponse20065 from '../model/InlineResponse20065';
-import InlineResponse20065Bots from '../model/InlineResponse20065Bots';
+import CreateBotResponse from '../model/CreateBotResponse';
 import JoinChannelsData from '../model/JoinChannelsData';
+import ListBotsResponse from '../model/ListBotsResponse';
 import SendBirdGroupChannelCollection from '../model/SendBirdGroupChannelCollection';
 import SendBirdMessageResponse from '../model/SendBirdMessageResponse';
 import SendBotSMessageData from '../model/SendBotSMessageData';
 import UpdateBotByIdData from '../model/UpdateBotByIdData';
+import UpdateBotByIdResponse from '../model/UpdateBotByIdResponse';
+import ViewBotByIdResponse from '../model/ViewBotByIdResponse';
 
 /**
 * BotInterface service.
@@ -48,7 +50,7 @@ export default class BotInterfaceApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/CreateBotData} opts.createBotData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20065Bots} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateBotResponse} and HTTP response
      */
     createBotWithHttpInfo(opts) {
       opts = opts || {};
@@ -67,7 +69,7 @@ export default class BotInterfaceApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20065Bots;
+      let returnType = CreateBotResponse;
       return this.apiClient.callApi(
         '/v3/bots', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -81,7 +83,7 @@ export default class BotInterfaceApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/CreateBotData} opts.createBotData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20065Bots}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateBotResponse}
      */
     createBot(opts) {
       return this.createBotWithHttpInfo(opts)
@@ -326,7 +328,7 @@ export default class BotInterfaceApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20065} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListBotsResponse} and HTTP response
      */
     listBotsWithHttpInfo(opts) {
       opts = opts || {};
@@ -347,7 +349,7 @@ export default class BotInterfaceApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20065;
+      let returnType = ListBotsResponse;
       return this.apiClient.callApi(
         '/v3/bots', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -362,7 +364,7 @@ export default class BotInterfaceApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20065}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListBotsResponse}
      */
     listBots(opts) {
       return this.listBotsWithHttpInfo(opts)
@@ -435,7 +437,7 @@ export default class BotInterfaceApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateBotByIdData} opts.updateBotByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20065Bots} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateBotByIdResponse} and HTTP response
      */
     updateBotByIdWithHttpInfo(botUserid, opts) {
       opts = opts || {};
@@ -459,7 +461,7 @@ export default class BotInterfaceApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20065Bots;
+      let returnType = UpdateBotByIdResponse;
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -474,7 +476,7 @@ export default class BotInterfaceApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateBotByIdData} opts.updateBotByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20065Bots}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateBotByIdResponse}
      */
     updateBotById(botUserid, opts) {
       return this.updateBotByIdWithHttpInfo(botUserid, opts)
@@ -490,7 +492,7 @@ export default class BotInterfaceApi {
      * @param {String} botUserid 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20065Bots} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewBotByIdResponse} and HTTP response
      */
     viewBotByIdWithHttpInfo(botUserid, opts) {
       opts = opts || {};
@@ -514,7 +516,7 @@ export default class BotInterfaceApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20065Bots;
+      let returnType = ViewBotByIdResponse;
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -528,7 +530,7 @@ export default class BotInterfaceApi {
      * @param {String} botUserid 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20065Bots}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewBotByIdResponse}
      */
     viewBotById(botUserid, opts) {
       return this.viewBotByIdWithHttpInfo(botUserid, opts)

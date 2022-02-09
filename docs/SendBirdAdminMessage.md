@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **message** | **String** |  | [optional] 
 **messageId** | **Number** |  | [optional] 
 **messageType** | **String** |  | [optional] 
-**metaArray** | [**ModelObject**](ModelObject.md) |  | [optional] 
+**metaArray** | [**SBObject**](SBObject.md) |  | [optional] 
 **metaArrays** | [**[SendBirdMessageMetaArray]**](SendBirdMessageMetaArray.md) |  | [optional] 
 **ogMetaData** | [**SendBirdOGMetaData**](SendBirdOGMetaData.md) |  | [optional] 
 **parentMessage** | [**SendBirdMessageResponse**](SendBirdMessageResponse.md) |  | [optional] 
@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **sendingStatus** | **String** |  | [optional] 
 **silent** | **Boolean** |  | [optional] 
 **threadInfo** | [**SendBirdThreadInfo**](SendBirdThreadInfo.md) |  | [optional] 
-**translations** | [**ModelObject**](ModelObject.md) |  | [optional] 
+**translations** | [**SBObject**](SBObject.md) |  | [optional] 
 **updatedAt** | **Number** |  | [optional] 
 
 

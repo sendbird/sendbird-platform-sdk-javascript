@@ -13,17 +13,19 @@
 
 
 import ApiClient from "../ApiClient";
-import InlineResponse20039 from '../model/InlineResponse20039';
-import InlineResponse20039Announcements from '../model/InlineResponse20039Announcements';
-import InlineResponse20040 from '../model/InlineResponse20040';
-import InlineResponse20041 from '../model/InlineResponse20041';
-import InlineResponse20042 from '../model/InlineResponse20042';
-import InlineResponse20043 from '../model/InlineResponse20043';
-import InlineResponse20044 from '../model/InlineResponse20044';
-import InlineResponse20045 from '../model/InlineResponse20045';
-import InlineResponse20046 from '../model/InlineResponse20046';
+import GetDetailedOpenRateOfAnnouncementByIdResponse from '../model/GetDetailedOpenRateOfAnnouncementByIdResponse';
+import GetDetailedOpenRateOfAnnouncementGroupResponse from '../model/GetDetailedOpenRateOfAnnouncementGroupResponse';
+import GetDetailedOpenStatusOfAnnouncementByIdResponse from '../model/GetDetailedOpenStatusOfAnnouncementByIdResponse';
+import GetStatisticsDailyResponse from '../model/GetStatisticsDailyResponse';
+import GetStatisticsMonthlyResponse from '../model/GetStatisticsMonthlyResponse';
+import GetStatisticsResponse from '../model/GetStatisticsResponse';
+import ListAnnouncementGroupsResponse from '../model/ListAnnouncementGroupsResponse';
+import ListAnnouncementsResponse from '../model/ListAnnouncementsResponse';
 import ScheduleAnnouncementData from '../model/ScheduleAnnouncementData';
+import ScheduleAnnouncementResponse from '../model/ScheduleAnnouncementResponse';
 import UpdateAnnouncementByIdData from '../model/UpdateAnnouncementByIdData';
+import UpdateAnnouncementByIdResponse from '../model/UpdateAnnouncementByIdResponse';
+import ViewAnnouncementByIdResponse from '../model/ViewAnnouncementByIdResponse';
 
 /**
 * Announcements service.
@@ -51,7 +53,7 @@ export default class AnnouncementsApi {
      * @param {String} uniqueId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20042} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetDetailedOpenRateOfAnnouncementByIdResponse} and HTTP response
      */
     getDetailedOpenRateOfAnnouncementByIdWithHttpInfo(uniqueId, opts) {
       opts = opts || {};
@@ -75,7 +77,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20042;
+      let returnType = GetDetailedOpenRateOfAnnouncementByIdResponse;
       return this.apiClient.callApi(
         '/v3/announcement_open_rate/{unique_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -89,7 +91,7 @@ export default class AnnouncementsApi {
      * @param {String} uniqueId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20042}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetDetailedOpenRateOfAnnouncementByIdResponse}
      */
     getDetailedOpenRateOfAnnouncementById(uniqueId, opts) {
       return this.getDetailedOpenRateOfAnnouncementByIdWithHttpInfo(uniqueId, opts)
@@ -105,7 +107,7 @@ export default class AnnouncementsApi {
      * @param {String} announcementGroup 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20046} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetDetailedOpenRateOfAnnouncementGroupResponse} and HTTP response
      */
     getDetailedOpenRateOfAnnouncementGroupWithHttpInfo(announcementGroup, opts) {
       opts = opts || {};
@@ -129,7 +131,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20046;
+      let returnType = GetDetailedOpenRateOfAnnouncementGroupResponse;
       return this.apiClient.callApi(
         '/v3/announcement_open_rate_by_group/{announcement_group}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -143,7 +145,7 @@ export default class AnnouncementsApi {
      * @param {String} announcementGroup 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20046}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetDetailedOpenRateOfAnnouncementGroupResponse}
      */
     getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts) {
       return this.getDetailedOpenRateOfAnnouncementGroupWithHttpInfo(announcementGroup, opts)
@@ -164,7 +166,7 @@ export default class AnnouncementsApi {
      * @param {Array.<String>} opts.uniqueIds 
      * @param {Array.<String>} opts.channelUrls 
      * @param {Boolean} opts.hasOpened 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20043} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetDetailedOpenStatusOfAnnouncementByIdResponse} and HTTP response
      */
     getDetailedOpenStatusOfAnnouncementByIdWithHttpInfo(uniqueId, opts) {
       opts = opts || {};
@@ -193,7 +195,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20043;
+      let returnType = GetDetailedOpenStatusOfAnnouncementByIdResponse;
       return this.apiClient.callApi(
         '/v3/announcement_open_status/{unique_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -212,7 +214,7 @@ export default class AnnouncementsApi {
      * @param {Array.<String>} opts.uniqueIds 
      * @param {Array.<String>} opts.channelUrls 
      * @param {Boolean} opts.hasOpened 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20043}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetDetailedOpenStatusOfAnnouncementByIdResponse}
      */
     getDetailedOpenStatusOfAnnouncementById(uniqueId, opts) {
       return this.getDetailedOpenStatusOfAnnouncementByIdWithHttpInfo(uniqueId, opts)
@@ -227,7 +229,7 @@ export default class AnnouncementsApi {
      * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20044} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetStatisticsResponse} and HTTP response
      */
     getStatisticsWithHttpInfo(opts) {
       opts = opts || {};
@@ -246,7 +248,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20044;
+      let returnType = GetStatisticsResponse;
       return this.apiClient.callApi(
         '/v3/announcement_stats/weekly', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -259,7 +261,7 @@ export default class AnnouncementsApi {
      * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20044}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetStatisticsResponse}
      */
     getStatistics(opts) {
       return this.getStatisticsWithHttpInfo(opts)
@@ -281,7 +283,7 @@ export default class AnnouncementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.announcementGroup 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20044} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetStatisticsDailyResponse} and HTTP response
      */
     getStatisticsDailyWithHttpInfo(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts) {
       opts = opts || {};
@@ -331,7 +333,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20044;
+      let returnType = GetStatisticsDailyResponse;
       return this.apiClient.callApi(
         '/v3/announcement_stats/daily', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -351,7 +353,7 @@ export default class AnnouncementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.announcementGroup 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20044}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetStatisticsDailyResponse}
      */
     getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts) {
       return this.getStatisticsDailyWithHttpInfo(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts)
@@ -366,7 +368,7 @@ export default class AnnouncementsApi {
      * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20044} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetStatisticsMonthlyResponse} and HTTP response
      */
     getStatisticsMonthlyWithHttpInfo(opts) {
       opts = opts || {};
@@ -385,7 +387,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20044;
+      let returnType = GetStatisticsMonthlyResponse;
       return this.apiClient.callApi(
         '/v3/announcement_stats/monthly', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -398,7 +400,7 @@ export default class AnnouncementsApi {
      * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20044}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetStatisticsMonthlyResponse}
      */
     getStatisticsMonthly(opts) {
       return this.getStatisticsMonthlyWithHttpInfo(opts)
@@ -415,7 +417,7 @@ export default class AnnouncementsApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20045} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListAnnouncementGroupsResponse} and HTTP response
      */
     listAnnouncementGroupsWithHttpInfo(opts) {
       opts = opts || {};
@@ -436,7 +438,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20045;
+      let returnType = ListAnnouncementGroupsResponse;
       return this.apiClient.callApi(
         '/v3/announcement_group', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -451,7 +453,7 @@ export default class AnnouncementsApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20045}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListAnnouncementGroupsResponse}
      */
     listAnnouncementGroups(opts) {
       return this.listAnnouncementGroupsWithHttpInfo(opts)
@@ -471,7 +473,7 @@ export default class AnnouncementsApi {
      * @param {String} opts.order 
      * @param {String} opts.status 
      * @param {String} opts.announcementGroup 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20039} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListAnnouncementsResponse} and HTTP response
      */
     listAnnouncementsWithHttpInfo(opts) {
       opts = opts || {};
@@ -495,7 +497,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20039;
+      let returnType = ListAnnouncementsResponse;
       return this.apiClient.callApi(
         '/v3/announcements', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -513,7 +515,7 @@ export default class AnnouncementsApi {
      * @param {String} opts.order 
      * @param {String} opts.status 
      * @param {String} opts.announcementGroup 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20039}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListAnnouncementsResponse}
      */
     listAnnouncements(opts) {
       return this.listAnnouncementsWithHttpInfo(opts)
@@ -529,7 +531,7 @@ export default class AnnouncementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ScheduleAnnouncementData} opts.scheduleAnnouncementData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20040} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ScheduleAnnouncementResponse} and HTTP response
      */
     scheduleAnnouncementWithHttpInfo(opts) {
       opts = opts || {};
@@ -548,7 +550,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20040;
+      let returnType = ScheduleAnnouncementResponse;
       return this.apiClient.callApi(
         '/v3/announcements', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -562,7 +564,7 @@ export default class AnnouncementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ScheduleAnnouncementData} opts.scheduleAnnouncementData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20040}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ScheduleAnnouncementResponse}
      */
     scheduleAnnouncement(opts) {
       return this.scheduleAnnouncementWithHttpInfo(opts)
@@ -579,7 +581,7 @@ export default class AnnouncementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateAnnouncementByIdData} opts.updateAnnouncementByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20041} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateAnnouncementByIdResponse} and HTTP response
      */
     updateAnnouncementByIdWithHttpInfo(uniqueId, opts) {
       opts = opts || {};
@@ -603,7 +605,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20041;
+      let returnType = UpdateAnnouncementByIdResponse;
       return this.apiClient.callApi(
         '/v3/announcements/{unique_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -618,7 +620,7 @@ export default class AnnouncementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateAnnouncementByIdData} opts.updateAnnouncementByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20041}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateAnnouncementByIdResponse}
      */
     updateAnnouncementById(uniqueId, opts) {
       return this.updateAnnouncementByIdWithHttpInfo(uniqueId, opts)
@@ -634,7 +636,7 @@ export default class AnnouncementsApi {
      * @param {String} uniqueId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20039Announcements} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewAnnouncementByIdResponse} and HTTP response
      */
     viewAnnouncementByIdWithHttpInfo(uniqueId, opts) {
       opts = opts || {};
@@ -658,7 +660,7 @@ export default class AnnouncementsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20039Announcements;
+      let returnType = ViewAnnouncementByIdResponse;
       return this.apiClient.callApi(
         '/v3/announcements/{unique_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -672,7 +674,7 @@ export default class AnnouncementsApi {
      * @param {String} uniqueId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20039Announcements}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewAnnouncementByIdResponse}
      */
     viewAnnouncementById(uniqueId, opts) {
       return this.viewAnnouncementByIdWithHttpInfo(uniqueId, opts)

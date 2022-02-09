@@ -45,7 +45,7 @@ Method | HTTP request | Description
 
 ## addRegistrationOrDeviceToken
 
-> InlineResponse20025 addRegistrationOrDeviceToken(userId, tokenType, opts)
+> AddRegistrationOrDeviceTokenResponse addRegistrationOrDeviceToken(userId, tokenType, opts)
 
 Add a registration or device token
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**AddRegistrationOrDeviceTokenResponse**](AddRegistrationOrDeviceTokenResponse.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ No authorization required
 
 ## choosePushNotificationContentTemplate
 
-> InlineResponse20029 choosePushNotificationContentTemplate(userId, opts)
+> ChoosePushNotificationContentTemplateResponse choosePushNotificationContentTemplate(userId, opts)
 
 Choose a push notification content template
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20029**](InlineResponse20029.md)
+[**ChoosePushNotificationContentTemplateResponse**](ChoosePushNotificationContentTemplateResponse.md)
 
 ### Authorization
 
@@ -393,7 +393,7 @@ No authorization required
 
 ## listBannedChannels
 
-> InlineResponse20022 listBannedChannels(userId, opts)
+> ListBannedChannelsResponse listBannedChannels(userId, opts)
 
 List banned channels
 
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20022**](InlineResponse20022.md)
+[**ListBannedChannelsResponse**](ListBannedChannelsResponse.md)
 
 ### Authorization
 
@@ -445,7 +445,7 @@ No authorization required
 
 ## listBlockedUsers
 
-> InlineResponse20016 listBlockedUsers(userId, opts)
+> ListBlockedUsersResponse listBlockedUsers(userId, opts)
 
 List blocked users
 
@@ -489,7 +489,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**ListBlockedUsersResponse**](ListBlockedUsersResponse.md)
 
 ### Authorization
 
@@ -503,7 +503,7 @@ No authorization required
 
 ## listMutedChannels
 
-> InlineResponse20023 listMutedChannels(userId, opts)
+> ListMutedChannelsResponse listMutedChannels(userId, opts)
 
 List muted channels
 
@@ -541,7 +541,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20023**](InlineResponse20023.md)
+[**ListMutedChannelsResponse**](ListMutedChannelsResponse.md)
 
 ### Authorization
 
@@ -555,7 +555,7 @@ No authorization required
 
 ## listMyGroupChannels
 
-> InlineResponse20017 listMyGroupChannels(userId, opts)
+> ListMyGroupChannelsResponse listMyGroupChannels(userId, opts)
 
 List my group channels
 
@@ -669,7 +669,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**ListMyGroupChannelsResponse**](ListMyGroupChannelsResponse.md)
 
 ### Authorization
 
@@ -683,7 +683,7 @@ No authorization required
 
 ## listRegistrationOrDeviceTokens
 
-> InlineResponse20024 listRegistrationOrDeviceTokens(userId, tokenType, opts)
+> ListRegistrationOrDeviceTokensResponse listRegistrationOrDeviceTokens(userId, tokenType, opts)
 
 List registration or device tokens
 
@@ -719,7 +719,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**ListRegistrationOrDeviceTokensResponse**](ListRegistrationOrDeviceTokensResponse.md)
 
 ### Authorization
 
@@ -733,7 +733,7 @@ No authorization required
 
 ## listUsers
 
-> InlineResponse20016 listUsers(opts)
+> ListUsersResponse listUsers(opts)
 
 List users
 
@@ -783,7 +783,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**ListUsersResponse**](ListUsersResponse.md)
 
 ### Authorization
 
@@ -947,7 +947,7 @@ No authorization required
 
 ## removeRegistrationOrDeviceToken
 
-> InlineResponse20026 removeRegistrationOrDeviceToken(userId, opts)
+> RemoveRegistrationOrDeviceTokenResponse removeRegistrationOrDeviceToken(userId, opts)
 
 Remove a registration or device token - When unregistering all device tokens
 
@@ -981,7 +981,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**RemoveRegistrationOrDeviceTokenResponse**](RemoveRegistrationOrDeviceTokenResponse.md)
 
 ### Authorization
 
@@ -995,7 +995,7 @@ No authorization required
 
 ## removeRegistrationOrDeviceTokenByToken
 
-> InlineResponse20026 removeRegistrationOrDeviceTokenByToken(userId, tokenType, token, opts)
+> RemoveRegistrationOrDeviceTokenByTokenResponse removeRegistrationOrDeviceTokenByToken(userId, tokenType, token, opts)
 
 Remove a registration or device token - When unregistering a specific token
 
@@ -1033,7 +1033,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**RemoveRegistrationOrDeviceTokenByTokenResponse**](RemoveRegistrationOrDeviceTokenByTokenResponse.md)
 
 ### Authorization
 
@@ -1047,7 +1047,7 @@ No authorization required
 
 ## removeRegistrationOrDeviceTokenFromOwnerByToken
 
-> InlineResponse20027 removeRegistrationOrDeviceTokenFromOwnerByToken(tokenType, token, opts)
+> RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse removeRegistrationOrDeviceTokenFromOwnerByToken(tokenType, token, opts)
 
 Remove a registration or device token from an owner
 
@@ -1083,7 +1083,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse**](RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse.md)
 
 ### Authorization
 
@@ -1195,7 +1195,7 @@ No authorization required
 
 ## updateChannelInvitationPreference
 
-> InlineResponse2005 updateChannelInvitationPreference(userId, opts)
+> UpdateChannelInvitationPreferenceResponse updateChannelInvitationPreference(userId, opts)
 
 Update channel invitation preference
 
@@ -1231,7 +1231,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**UpdateChannelInvitationPreferenceResponse**](UpdateChannelInvitationPreferenceResponse.md)
 
 ### Authorization
 
@@ -1245,7 +1245,7 @@ No authorization required
 
 ## updateCountPreferenceOfChannelByUrl
 
-> InlineResponse20021 updateCountPreferenceOfChannelByUrl(userId, channelUrl, opts)
+> UpdateCountPreferenceOfChannelByUrlResponse updateCountPreferenceOfChannelByUrl(userId, channelUrl, opts)
 
 Update count preference of a channel
 
@@ -1283,7 +1283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20021**](InlineResponse20021.md)
+[**UpdateCountPreferenceOfChannelByUrlResponse**](UpdateCountPreferenceOfChannelByUrlResponse.md)
 
 ### Authorization
 
@@ -1297,7 +1297,7 @@ No authorization required
 
 ## updatePushPreferences
 
-> InlineResponse20028 updatePushPreferences(userId, opts)
+> UpdatePushPreferencesResponse updatePushPreferences(userId, opts)
 
 Update push preferences
 
@@ -1333,7 +1333,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**UpdatePushPreferencesResponse**](UpdatePushPreferencesResponse.md)
 
 ### Authorization
 
@@ -1347,7 +1347,7 @@ No authorization required
 
 ## updatePushPreferencesForChannelByUrl
 
-> InlineResponse20028 updatePushPreferencesForChannelByUrl(userId, channelUrl, opts)
+> UpdatePushPreferencesForChannelByUrlResponse updatePushPreferencesForChannelByUrl(userId, channelUrl, opts)
 
 Update push preferences for a channel
 
@@ -1385,7 +1385,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**UpdatePushPreferencesForChannelByUrlResponse**](UpdatePushPreferencesForChannelByUrlResponse.md)
 
 ### Authorization
 
@@ -1449,7 +1449,7 @@ No authorization required
 
 ## viewChannelInvitationPreference
 
-> InlineResponse2005 viewChannelInvitationPreference(userId, opts)
+> ViewChannelInvitationPreferenceResponse viewChannelInvitationPreference(userId, opts)
 
 View channel invitation preference
 
@@ -1483,7 +1483,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**ViewChannelInvitationPreferenceResponse**](ViewChannelInvitationPreferenceResponse.md)
 
 ### Authorization
 
@@ -1497,7 +1497,7 @@ No authorization required
 
 ## viewCountPreferenceOfChannelByUrl
 
-> InlineResponse20021 viewCountPreferenceOfChannelByUrl(userId, channelUrl, opts)
+> ViewCountPreferenceOfChannelByUrlResponse viewCountPreferenceOfChannelByUrl(userId, channelUrl, opts)
 
 View count preference of a channel
 
@@ -1533,7 +1533,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20021**](InlineResponse20021.md)
+[**ViewCountPreferenceOfChannelByUrlResponse**](ViewCountPreferenceOfChannelByUrlResponse.md)
 
 ### Authorization
 
@@ -1547,7 +1547,7 @@ No authorization required
 
 ## viewNumberOfChannelsByJoinStatus
 
-> InlineResponse20020 viewNumberOfChannelsByJoinStatus(userId, opts)
+> ViewNumberOfChannelsByJoinStatusResponse viewNumberOfChannelsByJoinStatus(userId, opts)
 
 View number of channels by join status
 
@@ -1583,7 +1583,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**ViewNumberOfChannelsByJoinStatusResponse**](ViewNumberOfChannelsByJoinStatusResponse.md)
 
 ### Authorization
 
@@ -1597,7 +1597,7 @@ No authorization required
 
 ## viewNumberOfChannelsWithUnreadMessages
 
-> InlineResponse20018 viewNumberOfChannelsWithUnreadMessages(userId, opts)
+> ViewNumberOfChannelsWithUnreadMessagesResponse viewNumberOfChannelsWithUnreadMessages(userId, opts)
 
 View number of channels with unread messages
 
@@ -1635,7 +1635,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**ViewNumberOfChannelsWithUnreadMessagesResponse**](ViewNumberOfChannelsWithUnreadMessagesResponse.md)
 
 ### Authorization
 
@@ -1649,7 +1649,7 @@ No authorization required
 
 ## viewNumberOfUnreadItems
 
-> InlineResponse20019 viewNumberOfUnreadItems(userId, opts)
+> ViewNumberOfUnreadItemsResponse viewNumberOfUnreadItems(userId, opts)
 
 View number of unread items
 
@@ -1687,7 +1687,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20019**](InlineResponse20019.md)
+[**ViewNumberOfUnreadItemsResponse**](ViewNumberOfUnreadItemsResponse.md)
 
 ### Authorization
 
@@ -1701,7 +1701,7 @@ No authorization required
 
 ## viewNumberOfUnreadMessages
 
-> InlineResponse20018 viewNumberOfUnreadMessages(userId, opts)
+> ViewNumberOfUnreadMessagesResponse viewNumberOfUnreadMessages(userId, opts)
 
 View number of unread messages
 
@@ -1739,7 +1739,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**ViewNumberOfUnreadMessagesResponse**](ViewNumberOfUnreadMessagesResponse.md)
 
 ### Authorization
 
@@ -1753,7 +1753,7 @@ No authorization required
 
 ## viewPushPreferences
 
-> InlineResponse20028 viewPushPreferences(userId, opts)
+> ViewPushPreferencesResponse viewPushPreferences(userId, opts)
 
 View push preferences
 
@@ -1787,7 +1787,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**ViewPushPreferencesResponse**](ViewPushPreferencesResponse.md)
 
 ### Authorization
 
@@ -1801,7 +1801,7 @@ No authorization required
 
 ## viewPushPreferencesForChannelByUrl
 
-> InlineResponse20028 viewPushPreferencesForChannelByUrl(userId, channelUrl, opts)
+> ViewPushPreferencesForChannelByUrlResponse viewPushPreferencesForChannelByUrl(userId, channelUrl, opts)
 
 View push preferences for a channel
 
@@ -1837,7 +1837,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**ViewPushPreferencesForChannelByUrlResponse**](ViewPushPreferencesForChannelByUrlResponse.md)
 
 ### Authorization
 
@@ -1905,7 +1905,7 @@ No authorization required
 
 ## viewWhoOwnsRegistrationOrDeviceTokenByToken
 
-> InlineResponse20027 viewWhoOwnsRegistrationOrDeviceTokenByToken(tokenType, token, opts)
+> ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse viewWhoOwnsRegistrationOrDeviceTokenByToken(tokenType, token, opts)
 
 View who owns a registration or device token
 
@@ -1941,7 +1941,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse**](ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse.md)
 
 ### Authorization
 

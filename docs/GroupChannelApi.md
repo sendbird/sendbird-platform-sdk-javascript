@@ -87,7 +87,7 @@ No authorization required
 
 ## gcBanUser
 
-> InlineResponse20033BannedList gcBanUser(channelUrl, opts)
+> GcBanUserResponse gcBanUser(channelUrl, opts)
 
 Ban a user
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033BannedList**](InlineResponse20033BannedList.md)
+[**GcBanUserResponse**](GcBanUserResponse.md)
 
 ### Authorization
 
@@ -189,7 +189,7 @@ No authorization required
 
 ## gcCheckIfMemberById
 
-> InlineResponse20037 gcCheckIfMemberById(channelUrl, userId, opts)
+> GcCheckIfMemberByIdResponse gcCheckIfMemberById(channelUrl, userId, opts)
 
 Check if member
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**GcCheckIfMemberByIdResponse**](GcCheckIfMemberByIdResponse.md)
 
 ### Authorization
 
@@ -635,7 +635,7 @@ No authorization required
 
 ## gcListBannedUsers
 
-> InlineResponse20033 gcListBannedUsers(channelUrl, opts)
+> GcListBannedUsersResponse gcListBannedUsers(channelUrl, opts)
 
 List banned users
 
@@ -673,7 +673,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**GcListBannedUsersResponse**](GcListBannedUsersResponse.md)
 
 ### Authorization
 
@@ -687,7 +687,7 @@ No authorization required
 
 ## gcListChannels
 
-> InlineResponse20017 gcListChannels(opts)
+> GcListChannelsResponse gcListChannels(opts)
 
 List channels
 
@@ -803,7 +803,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**GcListChannelsResponse**](GcListChannelsResponse.md)
 
 ### Authorization
 
@@ -817,7 +817,7 @@ No authorization required
 
 ## gcListMembers
 
-> InlineResponse20036 gcListMembers(channelUrl, opts)
+> GcListMembersResponse gcListMembers(channelUrl, opts)
 
 List members
 
@@ -869,7 +869,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20036**](InlineResponse20036.md)
+[**GcListMembersResponse**](GcListMembersResponse.md)
 
 ### Authorization
 
@@ -883,7 +883,7 @@ No authorization required
 
 ## gcListMutedUsers
 
-> InlineResponse20031 gcListMutedUsers(channelUrl, opts)
+> GcListMutedUsersResponse gcListMutedUsers(channelUrl, opts)
 
 List muted users
 
@@ -921,7 +921,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20031**](InlineResponse20031.md)
+[**GcListMutedUsersResponse**](GcListMutedUsersResponse.md)
 
 ### Authorization
 
@@ -935,7 +935,7 @@ No authorization required
 
 ## gcListOperators
 
-> InlineResponse20034 gcListOperators(channelUrl, opts)
+> GcListOperatorsResponse gcListOperators(channelUrl, opts)
 
 List operators
 
@@ -973,7 +973,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20034**](InlineResponse20034.md)
+[**GcListOperatorsResponse**](GcListOperatorsResponse.md)
 
 ### Authorization
 
@@ -1037,7 +1037,7 @@ No authorization required
 
 ## gcRegisterOperators
 
-> InlineResponse20038 gcRegisterOperators(channelUrl, opts)
+> GcRegisterOperatorsResponse gcRegisterOperators(channelUrl, opts)
 
 Register operators
 
@@ -1073,7 +1073,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20038**](InlineResponse20038.md)
+[**GcRegisterOperatorsResponse**](GcRegisterOperatorsResponse.md)
 
 ### Authorization
 
@@ -1499,7 +1499,7 @@ No authorization required
 
 ## gcViewMuteById
 
-> InlineResponse20035 gcViewMuteById(channelUrl, mutedUserId, opts)
+> GcViewMuteByIdResponse gcViewMuteById(channelUrl, mutedUserId, opts)
 
 View a mute
 
@@ -1535,7 +1535,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20035**](InlineResponse20035.md)
+[**GcViewMuteByIdResponse**](GcViewMuteByIdResponse.md)
 
 ### Authorization
 

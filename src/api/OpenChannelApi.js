@@ -13,20 +13,20 @@
 
 
 import ApiClient from "../ApiClient";
-import InlineResponse20030 from '../model/InlineResponse20030';
-import InlineResponse20031 from '../model/InlineResponse20031';
-import InlineResponse20032 from '../model/InlineResponse20032';
-import InlineResponse20033 from '../model/InlineResponse20033';
-import InlineResponse20033BannedList from '../model/InlineResponse20033BannedList';
-import InlineResponse20034 from '../model/InlineResponse20034';
-import InlineResponse20035 from '../model/InlineResponse20035';
 import OcBanUserData from '../model/OcBanUserData';
+import OcBanUserResponse from '../model/OcBanUserResponse';
 import OcCreateChannelData from '../model/OcCreateChannelData';
 import OcFreezeChannelData from '../model/OcFreezeChannelData';
+import OcListBannedUsersResponse from '../model/OcListBannedUsersResponse';
+import OcListChannelsResponse from '../model/OcListChannelsResponse';
+import OcListMutedUsersResponse from '../model/OcListMutedUsersResponse';
+import OcListOperatorsResponse from '../model/OcListOperatorsResponse';
+import OcListParticipantsResponse from '../model/OcListParticipantsResponse';
 import OcMuteUserData from '../model/OcMuteUserData';
 import OcRegisterOperatorsData from '../model/OcRegisterOperatorsData';
 import OcUpdateBanByIdData from '../model/OcUpdateBanByIdData';
 import OcUpdateChannelByUrlData from '../model/OcUpdateChannelByUrlData';
+import OcViewMuteByIdResponse from '../model/OcViewMuteByIdResponse';
 import SendBirdOpenChannel from '../model/SendBirdOpenChannel';
 import SendBirdUser from '../model/SendBirdUser';
 
@@ -57,7 +57,7 @@ export default class OpenChannelApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/OcBanUserData} opts.ocBanUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20033BannedList} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcBanUserResponse} and HTTP response
      */
     ocBanUserWithHttpInfo(channelUrl, opts) {
       opts = opts || {};
@@ -81,7 +81,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20033BannedList;
+      let returnType = OcBanUserResponse;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/ban', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -96,7 +96,7 @@ export default class OpenChannelApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/OcBanUserData} opts.ocBanUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20033BannedList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcBanUserResponse}
      */
     ocBanUser(channelUrl, opts) {
       return this.ocBanUserWithHttpInfo(channelUrl, opts)
@@ -337,7 +337,7 @@ export default class OpenChannelApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20033} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcListBannedUsersResponse} and HTTP response
      */
     ocListBannedUsersWithHttpInfo(channelUrl, opts) {
       opts = opts || {};
@@ -363,7 +363,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20033;
+      let returnType = OcListBannedUsersResponse;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/ban', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -379,7 +379,7 @@ export default class OpenChannelApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20033}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcListBannedUsersResponse}
      */
     ocListBannedUsers(channelUrl, opts) {
       return this.ocListBannedUsersWithHttpInfo(channelUrl, opts)
@@ -402,7 +402,7 @@ export default class OpenChannelApi {
      * @param {Boolean} opts.showFrozen 
      * @param {Boolean} opts.showMetadata 
      * @param {String} opts.customType 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20030} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcListChannelsResponse} and HTTP response
      */
     ocListChannelsWithHttpInfo(opts) {
       opts = opts || {};
@@ -429,7 +429,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20030;
+      let returnType = OcListChannelsResponse;
       return this.apiClient.callApi(
         '/v3/open_channels', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -450,7 +450,7 @@ export default class OpenChannelApi {
      * @param {Boolean} opts.showFrozen 
      * @param {Boolean} opts.showMetadata 
      * @param {String} opts.customType 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20030}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcListChannelsResponse}
      */
     ocListChannels(opts) {
       return this.ocListChannelsWithHttpInfo(opts)
@@ -468,7 +468,7 @@ export default class OpenChannelApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20031} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcListMutedUsersResponse} and HTTP response
      */
     ocListMutedUsersWithHttpInfo(channelUrl, opts) {
       opts = opts || {};
@@ -494,7 +494,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20031;
+      let returnType = OcListMutedUsersResponse;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/mute', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -510,7 +510,7 @@ export default class OpenChannelApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20031}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcListMutedUsersResponse}
      */
     ocListMutedUsers(channelUrl, opts) {
       return this.ocListMutedUsersWithHttpInfo(channelUrl, opts)
@@ -528,7 +528,7 @@ export default class OpenChannelApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20034} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcListOperatorsResponse} and HTTP response
      */
     ocListOperatorsWithHttpInfo(channelUrl, opts) {
       opts = opts || {};
@@ -554,7 +554,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20034;
+      let returnType = OcListOperatorsResponse;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/operators', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -570,7 +570,7 @@ export default class OpenChannelApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20034}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcListOperatorsResponse}
      */
     ocListOperators(channelUrl, opts) {
       return this.ocListOperatorsWithHttpInfo(channelUrl, opts)
@@ -588,7 +588,7 @@ export default class OpenChannelApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20032} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcListParticipantsResponse} and HTTP response
      */
     ocListParticipantsWithHttpInfo(channelUrl, opts) {
       opts = opts || {};
@@ -614,7 +614,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20032;
+      let returnType = OcListParticipantsResponse;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/participants', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -630,7 +630,7 @@ export default class OpenChannelApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20032}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcListParticipantsResponse}
      */
     ocListParticipants(channelUrl, opts) {
       return this.ocListParticipantsWithHttpInfo(channelUrl, opts)
@@ -1115,7 +1115,7 @@ export default class OpenChannelApi {
      * @param {String} mutedUserId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20035} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcViewMuteByIdResponse} and HTTP response
      */
     ocViewMuteByIdWithHttpInfo(channelUrl, mutedUserId, opts) {
       opts = opts || {};
@@ -1144,7 +1144,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20035;
+      let returnType = OcViewMuteByIdResponse;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/mute/{muted_user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1159,7 +1159,7 @@ export default class OpenChannelApi {
      * @param {String} mutedUserId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20035}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcViewMuteByIdResponse}
      */
     ocViewMuteById(channelUrl, mutedUserId, opts) {
       return this.ocViewMuteByIdWithHttpInfo(channelUrl, mutedUserId, opts)

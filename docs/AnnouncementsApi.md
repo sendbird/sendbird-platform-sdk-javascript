@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 ## getDetailedOpenRateOfAnnouncementById
 
-> InlineResponse20042 getDetailedOpenRateOfAnnouncementById(uniqueId, opts)
+> GetDetailedOpenRateOfAnnouncementByIdResponse getDetailedOpenRateOfAnnouncementById(uniqueId, opts)
 
 Get detailed open rate of an announcement
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20042**](InlineResponse20042.md)
+[**GetDetailedOpenRateOfAnnouncementByIdResponse**](GetDetailedOpenRateOfAnnouncementByIdResponse.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 
 ## getDetailedOpenRateOfAnnouncementGroup
 
-> InlineResponse20046 getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts)
+> GetDetailedOpenRateOfAnnouncementGroupResponse getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts)
 
 Get detailed open rate of an announcement group
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20046**](InlineResponse20046.md)
+[**GetDetailedOpenRateOfAnnouncementGroupResponse**](GetDetailedOpenRateOfAnnouncementGroupResponse.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ No authorization required
 
 ## getDetailedOpenStatusOfAnnouncementById
 
-> InlineResponse20043 getDetailedOpenStatusOfAnnouncementById(uniqueId, opts)
+> GetDetailedOpenStatusOfAnnouncementByIdResponse getDetailedOpenStatusOfAnnouncementById(uniqueId, opts)
 
 Get detailed open status of an announcement
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20043**](InlineResponse20043.md)
+[**GetDetailedOpenStatusOfAnnouncementByIdResponse**](GetDetailedOpenStatusOfAnnouncementByIdResponse.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ No authorization required
 
 ## getStatistics
 
-> InlineResponse20044 getStatistics(opts)
+> GetStatisticsResponse getStatistics(opts)
 
 Get statistics - weekly
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20044**](InlineResponse20044.md)
+[**GetStatisticsResponse**](GetStatisticsResponse.md)
 
 ### Authorization
 
@@ -220,7 +220,7 @@ No authorization required
 
 ## getStatisticsDaily
 
-> InlineResponse20044 getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts)
+> GetStatisticsDailyResponse getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts)
 
 Get statistics - daily
 
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20044**](InlineResponse20044.md)
+[**GetStatisticsDailyResponse**](GetStatisticsDailyResponse.md)
 
 ### Authorization
 
@@ -280,7 +280,7 @@ No authorization required
 
 ## getStatisticsMonthly
 
-> InlineResponse20044 getStatisticsMonthly(opts)
+> GetStatisticsMonthlyResponse getStatisticsMonthly(opts)
 
 Get statistics - monthly
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20044**](InlineResponse20044.md)
+[**GetStatisticsMonthlyResponse**](GetStatisticsMonthlyResponse.md)
 
 ### Authorization
 
@@ -326,7 +326,7 @@ No authorization required
 
 ## listAnnouncementGroups
 
-> InlineResponse20045 listAnnouncementGroups(opts)
+> ListAnnouncementGroupsResponse listAnnouncementGroups(opts)
 
 List announcement groups
 
@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20045**](InlineResponse20045.md)
+[**ListAnnouncementGroupsResponse**](ListAnnouncementGroupsResponse.md)
 
 ### Authorization
 
@@ -376,7 +376,7 @@ No authorization required
 
 ## listAnnouncements
 
-> InlineResponse20039 listAnnouncements(opts)
+> ListAnnouncementsResponse listAnnouncements(opts)
 
 List announcements
 
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**ListAnnouncementsResponse**](ListAnnouncementsResponse.md)
 
 ### Authorization
 
@@ -432,7 +432,7 @@ No authorization required
 
 ## scheduleAnnouncement
 
-> InlineResponse20040 scheduleAnnouncement(opts)
+> ScheduleAnnouncementResponse scheduleAnnouncement(opts)
 
 Schedule an announcement
 
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20040**](InlineResponse20040.md)
+[**ScheduleAnnouncementResponse**](ScheduleAnnouncementResponse.md)
 
 ### Authorization
 
@@ -480,7 +480,7 @@ No authorization required
 
 ## updateAnnouncementById
 
-> InlineResponse20041 updateAnnouncementById(uniqueId, opts)
+> UpdateAnnouncementByIdResponse updateAnnouncementById(uniqueId, opts)
 
 Update an announcement
 
@@ -516,7 +516,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20041**](InlineResponse20041.md)
+[**UpdateAnnouncementByIdResponse**](UpdateAnnouncementByIdResponse.md)
 
 ### Authorization
 
@@ -530,7 +530,7 @@ No authorization required
 
 ## viewAnnouncementById
 
-> InlineResponse20039Announcements viewAnnouncementById(uniqueId, opts)
+> ViewAnnouncementByIdResponse viewAnnouncementById(uniqueId, opts)
 
 View an announcement
 
@@ -564,7 +564,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20039Announcements**](InlineResponse20039Announcements.md)
+[**ViewAnnouncementByIdResponse**](ViewAnnouncementByIdResponse.md)
 
 ### Authorization
 

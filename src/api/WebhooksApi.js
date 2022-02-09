@@ -14,8 +14,8 @@
 
 import ApiClient from "../ApiClient";
 import ChooseWhichEventsToSubscribeToData from '../model/ChooseWhichEventsToSubscribeToData';
-import InlineResponse20066 from '../model/InlineResponse20066';
-import InlineResponse20067 from '../model/InlineResponse20067';
+import ChooseWhichEventsToSubscribeToResponse from '../model/ChooseWhichEventsToSubscribeToResponse';
+import RetrieveListOfSubscribedEventsResponse from '../model/RetrieveListOfSubscribedEventsResponse';
 
 /**
 * Webhooks service.
@@ -43,7 +43,7 @@ export default class WebhooksApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ChooseWhichEventsToSubscribeToData} opts.chooseWhichEventsToSubscribeToData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20067} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChooseWhichEventsToSubscribeToResponse} and HTTP response
      */
     chooseWhichEventsToSubscribeToWithHttpInfo(opts) {
       opts = opts || {};
@@ -62,7 +62,7 @@ export default class WebhooksApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20067;
+      let returnType = ChooseWhichEventsToSubscribeToResponse;
       return this.apiClient.callApi(
         '/v3/applications/settings/webhook', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -76,7 +76,7 @@ export default class WebhooksApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/ChooseWhichEventsToSubscribeToData} opts.chooseWhichEventsToSubscribeToData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20067}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChooseWhichEventsToSubscribeToResponse}
      */
     chooseWhichEventsToSubscribeTo(opts) {
       return this.chooseWhichEventsToSubscribeToWithHttpInfo(opts)
@@ -92,7 +92,7 @@ export default class WebhooksApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Boolean} opts.displayAllWebhookCategories 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20066} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RetrieveListOfSubscribedEventsResponse} and HTTP response
      */
     retrieveListOfSubscribedEventsWithHttpInfo(opts) {
       opts = opts || {};
@@ -112,7 +112,7 @@ export default class WebhooksApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20066;
+      let returnType = RetrieveListOfSubscribedEventsResponse;
       return this.apiClient.callApi(
         '/v3/applications/settings/webhook', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -126,7 +126,7 @@ export default class WebhooksApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Boolean} opts.displayAllWebhookCategories 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20066}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RetrieveListOfSubscribedEventsResponse}
      */
     retrieveListOfSubscribedEvents(opts) {
       return this.retrieveListOfSubscribedEventsWithHttpInfo(opts)

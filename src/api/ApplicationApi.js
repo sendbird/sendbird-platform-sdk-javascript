@@ -14,31 +14,41 @@
 
 import ApiClient from "../ApiClient";
 import AddApnsPushConfigurationData from '../model/AddApnsPushConfigurationData';
+import AddApnsPushConfigurationResponse from '../model/AddApnsPushConfigurationResponse';
 import AddFcmPushConfigurationData from '../model/AddFcmPushConfigurationData';
+import AddFcmPushConfigurationResponse from '../model/AddFcmPushConfigurationResponse';
 import AddHmsPushConfigurationData from '../model/AddHmsPushConfigurationData';
+import AddHmsPushConfigurationResponse from '../model/AddHmsPushConfigurationResponse';
 import AddIpToWhitelistData from '../model/AddIpToWhitelistData';
+import AddIpToWhitelistResponse from '../model/AddIpToWhitelistResponse';
+import DeleteAllowedIpsFromWhitelistResponse from '../model/DeleteAllowedIpsFromWhitelistResponse';
+import DeleteApnsCertificateByIdResponse from '../model/DeleteApnsCertificateByIdResponse';
 import GenerateSecondaryApiTokenData from '../model/GenerateSecondaryApiTokenData';
-import InlineResponse200 from '../model/InlineResponse200';
-import InlineResponse2001 from '../model/InlineResponse2001';
-import InlineResponse20010 from '../model/InlineResponse20010';
-import InlineResponse20011 from '../model/InlineResponse20011';
-import InlineResponse20012 from '../model/InlineResponse20012';
-import InlineResponse20013 from '../model/InlineResponse20013';
-import InlineResponse20014 from '../model/InlineResponse20014';
-import InlineResponse20015 from '../model/InlineResponse20015';
-import InlineResponse2002 from '../model/InlineResponse2002';
-import InlineResponse2003 from '../model/InlineResponse2003';
-import InlineResponse2004 from '../model/InlineResponse2004';
-import InlineResponse2005 from '../model/InlineResponse2005';
-import InlineResponse2006 from '../model/InlineResponse2006';
-import InlineResponse2007 from '../model/InlineResponse2007';
-import InlineResponse2008 from '../model/InlineResponse2008';
-import InlineResponse2009 from '../model/InlineResponse2009';
+import GenerateSecondaryApiTokenResponse from '../model/GenerateSecondaryApiTokenResponse';
+import ListPushConfigurationsResponse from '../model/ListPushConfigurationsResponse';
+import ListPushNotificationContentTemplatesResponse from '../model/ListPushNotificationContentTemplatesResponse';
+import ListSecondaryApiTokensResponse from '../model/ListSecondaryApiTokensResponse';
+import RemovePushConfigurationByIdResponse from '../model/RemovePushConfigurationByIdResponse';
+import RetrieveIpWhitelistResponse from '../model/RetrieveIpWhitelistResponse';
+import RevokeSecondaryApiTokenByTokenResponse from '../model/RevokeSecondaryApiTokenByTokenResponse';
 import UpdateApnsPushConfigurationByIdData from '../model/UpdateApnsPushConfigurationByIdData';
+import UpdateApnsPushConfigurationByIdResponse from '../model/UpdateApnsPushConfigurationByIdResponse';
 import UpdateDefaultChannelInvitationPreferenceData from '../model/UpdateDefaultChannelInvitationPreferenceData';
+import UpdateDefaultChannelInvitationPreferenceResponse from '../model/UpdateDefaultChannelInvitationPreferenceResponse';
 import UpdateFcmPushConfigurationByIdData from '../model/UpdateFcmPushConfigurationByIdData';
+import UpdateFcmPushConfigurationByIdResponse from '../model/UpdateFcmPushConfigurationByIdResponse';
 import UpdateHmsPushConfigurationByIdData from '../model/UpdateHmsPushConfigurationByIdData';
+import UpdateHmsPushConfigurationByIdResponse from '../model/UpdateHmsPushConfigurationByIdResponse';
 import UpdatePushNotificationContentTemplateData from '../model/UpdatePushNotificationContentTemplateData';
+import UpdatePushNotificationContentTemplateResponse from '../model/UpdatePushNotificationContentTemplateResponse';
+import ViewDefaultChannelInvitationPreferenceResponse from '../model/ViewDefaultChannelInvitationPreferenceResponse';
+import ViewNumberOfConcurrentConnectionsResponse from '../model/ViewNumberOfConcurrentConnectionsResponse';
+import ViewNumberOfDailyActiveUsersResponse from '../model/ViewNumberOfDailyActiveUsersResponse';
+import ViewNumberOfMonthlyActiveUsersResponse from '../model/ViewNumberOfMonthlyActiveUsersResponse';
+import ViewNumberOfPeakConnectionsResponse from '../model/ViewNumberOfPeakConnectionsResponse';
+import ViewPushConfigurationByIdResponse from '../model/ViewPushConfigurationByIdResponse';
+import ViewPushNotificationContentTemplateResponse from '../model/ViewPushNotificationContentTemplateResponse';
+import ViewSecondaryApiTokenByTokenResponse from '../model/ViewSecondaryApiTokenByTokenResponse';
 
 /**
 * Application service.
@@ -66,7 +76,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddApnsPushConfigurationData} opts.addApnsPushConfigurationData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2003} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddApnsPushConfigurationResponse} and HTTP response
      */
     addApnsPushConfigurationWithHttpInfo(opts) {
       opts = opts || {};
@@ -85,7 +95,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2003;
+      let returnType = AddApnsPushConfigurationResponse;
       return this.apiClient.callApi(
         '/v3/applications/push/apns', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -99,7 +109,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddApnsPushConfigurationData} opts.addApnsPushConfigurationData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2003}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddApnsPushConfigurationResponse}
      */
     addApnsPushConfiguration(opts) {
       return this.addApnsPushConfigurationWithHttpInfo(opts)
@@ -115,7 +125,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddFcmPushConfigurationData} opts.addFcmPushConfigurationData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddFcmPushConfigurationResponse} and HTTP response
      */
     addFcmPushConfigurationWithHttpInfo(opts) {
       opts = opts || {};
@@ -134,7 +144,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = AddFcmPushConfigurationResponse;
       return this.apiClient.callApi(
         '/v3/applications/push/fcm', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -148,7 +158,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddFcmPushConfigurationData} opts.addFcmPushConfigurationData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddFcmPushConfigurationResponse}
      */
     addFcmPushConfiguration(opts) {
       return this.addFcmPushConfigurationWithHttpInfo(opts)
@@ -164,7 +174,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddHmsPushConfigurationData} opts.addHmsPushConfigurationData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddHmsPushConfigurationResponse} and HTTP response
      */
     addHmsPushConfigurationWithHttpInfo(opts) {
       opts = opts || {};
@@ -183,7 +193,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2002;
+      let returnType = AddHmsPushConfigurationResponse;
       return this.apiClient.callApi(
         '/v3/applications/push/hms', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -197,7 +207,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddHmsPushConfigurationData} opts.addHmsPushConfigurationData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddHmsPushConfigurationResponse}
      */
     addHmsPushConfiguration(opts) {
       return this.addHmsPushConfigurationWithHttpInfo(opts)
@@ -213,7 +223,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddIpToWhitelistData} opts.addIpToWhitelistData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2006} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddIpToWhitelistResponse} and HTTP response
      */
     addIpToWhitelistWithHttpInfo(opts) {
       opts = opts || {};
@@ -232,7 +242,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2006;
+      let returnType = AddIpToWhitelistResponse;
       return this.apiClient.callApi(
         '/v3/applications/settings/ip_whitelist', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -246,7 +256,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddIpToWhitelistData} opts.addIpToWhitelistData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2006}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddIpToWhitelistResponse}
      */
     addIpToWhitelist(opts) {
       return this.addIpToWhitelistWithHttpInfo(opts)
@@ -262,7 +272,7 @@ export default class ApplicationApi {
      * @param {Array.<String>} ipWhitelistAddresses 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2006} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DeleteAllowedIpsFromWhitelistResponse} and HTTP response
      */
     deleteAllowedIpsFromWhitelistWithHttpInfo(ipWhitelistAddresses, opts) {
       opts = opts || {};
@@ -286,7 +296,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2006;
+      let returnType = DeleteAllowedIpsFromWhitelistResponse;
       return this.apiClient.callApi(
         '/v3/applications/settings/ip_whitelist', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -300,7 +310,7 @@ export default class ApplicationApi {
      * @param {Array.<String>} ipWhitelistAddresses 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2006}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DeleteAllowedIpsFromWhitelistResponse}
      */
     deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts) {
       return this.deleteAllowedIpsFromWhitelistWithHttpInfo(ipWhitelistAddresses, opts)
@@ -316,7 +326,7 @@ export default class ApplicationApi {
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20013} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DeleteApnsCertificateByIdResponse} and HTTP response
      */
     deleteApnsCertificateByIdWithHttpInfo(providerId, opts) {
       opts = opts || {};
@@ -340,7 +350,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20013;
+      let returnType = DeleteApnsCertificateByIdResponse;
       return this.apiClient.callApi(
         '/v3/applications/push/apns/cert/{provider_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -354,7 +364,7 @@ export default class ApplicationApi {
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20013}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DeleteApnsCertificateByIdResponse}
      */
     deleteApnsCertificateById(providerId, opts) {
       return this.deleteApnsCertificateByIdWithHttpInfo(providerId, opts)
@@ -370,7 +380,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/GenerateSecondaryApiTokenData} opts.generateSecondaryApiTokenData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2007} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenerateSecondaryApiTokenResponse} and HTTP response
      */
     generateSecondaryApiTokenWithHttpInfo(opts) {
       opts = opts || {};
@@ -389,7 +399,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2007;
+      let returnType = GenerateSecondaryApiTokenResponse;
       return this.apiClient.callApi(
         '/v3/applications/api_tokens', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -403,7 +413,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/GenerateSecondaryApiTokenData} opts.generateSecondaryApiTokenData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2007}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenerateSecondaryApiTokenResponse}
      */
     generateSecondaryApiToken(opts) {
       return this.generateSecondaryApiTokenWithHttpInfo(opts)
@@ -419,7 +429,7 @@ export default class ApplicationApi {
      * @param {String} pushType 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20012} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListPushConfigurationsResponse} and HTTP response
      */
     listPushConfigurationsWithHttpInfo(pushType, opts) {
       opts = opts || {};
@@ -443,7 +453,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20012;
+      let returnType = ListPushConfigurationsResponse;
       return this.apiClient.callApi(
         '/v3/applications/push/{push_type}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -457,7 +467,7 @@ export default class ApplicationApi {
      * @param {String} pushType 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20012}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListPushConfigurationsResponse}
      */
     listPushConfigurations(pushType, opts) {
       return this.listPushConfigurationsWithHttpInfo(pushType, opts)
@@ -472,7 +482,7 @@ export default class ApplicationApi {
      * ## List push notification content templates  Retrieves a list of push notification content templates of an application.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-push-notification-content-templates
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2004} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListPushNotificationContentTemplatesResponse} and HTTP response
      */
     listPushNotificationContentTemplatesWithHttpInfo(opts) {
       opts = opts || {};
@@ -491,7 +501,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2004;
+      let returnType = ListPushNotificationContentTemplatesResponse;
       return this.apiClient.callApi(
         '/v3/applications/push/message_templates', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -504,7 +514,7 @@ export default class ApplicationApi {
      * ## List push notification content templates  Retrieves a list of push notification content templates of an application.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-push-notification-content-templates
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2004}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListPushNotificationContentTemplatesResponse}
      */
     listPushNotificationContentTemplates(opts) {
       return this.listPushNotificationContentTemplatesWithHttpInfo(opts)
@@ -519,7 +529,7 @@ export default class ApplicationApi {
      * ## List secondary API tokens  Retrieves a list of secondary API tokens.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-secondary-api-tokens
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2008} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListSecondaryApiTokensResponse} and HTTP response
      */
     listSecondaryApiTokensWithHttpInfo(opts) {
       opts = opts || {};
@@ -538,7 +548,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2008;
+      let returnType = ListSecondaryApiTokensResponse;
       return this.apiClient.callApi(
         '/v3/applications/api_tokens', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -551,7 +561,7 @@ export default class ApplicationApi {
      * ## List secondary API tokens  Retrieves a list of secondary API tokens.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-secondary-api-tokens
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2008}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListSecondaryApiTokensResponse}
      */
     listSecondaryApiTokens(opts) {
       return this.listSecondaryApiTokensWithHttpInfo(opts)
@@ -568,7 +578,7 @@ export default class ApplicationApi {
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20013} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemovePushConfigurationByIdResponse} and HTTP response
      */
     removePushConfigurationByIdWithHttpInfo(pushType, providerId, opts) {
       opts = opts || {};
@@ -597,7 +607,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20013;
+      let returnType = RemovePushConfigurationByIdResponse;
       return this.apiClient.callApi(
         '/v3/applications/push/{push_type}/{provider_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -612,7 +622,7 @@ export default class ApplicationApi {
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20013}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemovePushConfigurationByIdResponse}
      */
     removePushConfigurationById(pushType, providerId, opts) {
       return this.removePushConfigurationByIdWithHttpInfo(pushType, providerId, opts)
@@ -627,7 +637,7 @@ export default class ApplicationApi {
      * ## Retrieve an IP whitelist  Retrieves a list of all the IP ranges and addresses that have access to your Sendbird application. This list is called an IP whitelist and its addresses are granted API access when the IP whitelist API enables [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notations.  If you specify which IP addresses or ranges to include in the whitelist, any unlisted foreign IP addresses will be denied access. If you don't specify any IP address or range to include in the whitelist, all IP addresses will be granted API access. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-retrieve-an-ip-whitelist
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2006} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RetrieveIpWhitelistResponse} and HTTP response
      */
     retrieveIpWhitelistWithHttpInfo(opts) {
       opts = opts || {};
@@ -646,7 +656,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2006;
+      let returnType = RetrieveIpWhitelistResponse;
       return this.apiClient.callApi(
         '/v3/applications/settings/ip_whitelist', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -659,7 +669,7 @@ export default class ApplicationApi {
      * ## Retrieve an IP whitelist  Retrieves a list of all the IP ranges and addresses that have access to your Sendbird application. This list is called an IP whitelist and its addresses are granted API access when the IP whitelist API enables [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notations.  If you specify which IP addresses or ranges to include in the whitelist, any unlisted foreign IP addresses will be denied access. If you don't specify any IP address or range to include in the whitelist, all IP addresses will be granted API access. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-retrieve-an-ip-whitelist
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2006}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RetrieveIpWhitelistResponse}
      */
     retrieveIpWhitelist(opts) {
       return this.retrieveIpWhitelistWithHttpInfo(opts)
@@ -675,7 +685,7 @@ export default class ApplicationApi {
      * @param {String} apiToken2 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2007} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RevokeSecondaryApiTokenByTokenResponse} and HTTP response
      */
     revokeSecondaryApiTokenByTokenWithHttpInfo(apiToken2, opts) {
       opts = opts || {};
@@ -699,7 +709,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2007;
+      let returnType = RevokeSecondaryApiTokenByTokenResponse;
       return this.apiClient.callApi(
         '/v3/applications/api_tokens/{api_token}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -713,7 +723,7 @@ export default class ApplicationApi {
      * @param {String} apiToken2 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2007}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RevokeSecondaryApiTokenByTokenResponse}
      */
     revokeSecondaryApiTokenByToken(apiToken2, opts) {
       return this.revokeSecondaryApiTokenByTokenWithHttpInfo(apiToken2, opts)
@@ -730,7 +740,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateApnsPushConfigurationByIdData} opts.updateApnsPushConfigurationByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20014} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateApnsPushConfigurationByIdResponse} and HTTP response
      */
     updateApnsPushConfigurationByIdWithHttpInfo(providerId, opts) {
       opts = opts || {};
@@ -754,7 +764,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20014;
+      let returnType = UpdateApnsPushConfigurationByIdResponse;
       return this.apiClient.callApi(
         '/v3/applications/push/apns/{provider_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -769,7 +779,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateApnsPushConfigurationByIdData} opts.updateApnsPushConfigurationByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20014}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateApnsPushConfigurationByIdResponse}
      */
     updateApnsPushConfigurationById(providerId, opts) {
       return this.updateApnsPushConfigurationByIdWithHttpInfo(providerId, opts)
@@ -785,7 +795,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateDefaultChannelInvitationPreferenceData} opts.updateDefaultChannelInvitationPreferenceData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2005} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateDefaultChannelInvitationPreferenceResponse} and HTTP response
      */
     updateDefaultChannelInvitationPreferenceWithHttpInfo(opts) {
       opts = opts || {};
@@ -804,7 +814,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2005;
+      let returnType = UpdateDefaultChannelInvitationPreferenceResponse;
       return this.apiClient.callApi(
         '/v3/applications/default_channel_invitation_preference', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -818,7 +828,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateDefaultChannelInvitationPreferenceData} opts.updateDefaultChannelInvitationPreferenceData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2005}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateDefaultChannelInvitationPreferenceResponse}
      */
     updateDefaultChannelInvitationPreference(opts) {
       return this.updateDefaultChannelInvitationPreferenceWithHttpInfo(opts)
@@ -835,7 +845,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateFcmPushConfigurationByIdData} opts.updateFcmPushConfigurationByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20014} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateFcmPushConfigurationByIdResponse} and HTTP response
      */
     updateFcmPushConfigurationByIdWithHttpInfo(providerId, opts) {
       opts = opts || {};
@@ -859,7 +869,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20014;
+      let returnType = UpdateFcmPushConfigurationByIdResponse;
       return this.apiClient.callApi(
         '/v3/applications/push/fcm/{provider_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -874,7 +884,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateFcmPushConfigurationByIdData} opts.updateFcmPushConfigurationByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20014}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateFcmPushConfigurationByIdResponse}
      */
     updateFcmPushConfigurationById(providerId, opts) {
       return this.updateFcmPushConfigurationByIdWithHttpInfo(providerId, opts)
@@ -891,7 +901,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateHmsPushConfigurationByIdData} opts.updateHmsPushConfigurationByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20014} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateHmsPushConfigurationByIdResponse} and HTTP response
      */
     updateHmsPushConfigurationByIdWithHttpInfo(providerId, opts) {
       opts = opts || {};
@@ -915,7 +925,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20014;
+      let returnType = UpdateHmsPushConfigurationByIdResponse;
       return this.apiClient.callApi(
         '/v3/applications/push/hms/{provider_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -930,7 +940,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateHmsPushConfigurationByIdData} opts.updateHmsPushConfigurationByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20014}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateHmsPushConfigurationByIdResponse}
      */
     updateHmsPushConfigurationById(providerId, opts) {
       return this.updateHmsPushConfigurationByIdWithHttpInfo(providerId, opts)
@@ -947,7 +957,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdatePushNotificationContentTemplateData} opts.updatePushNotificationContentTemplateData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20015} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdatePushNotificationContentTemplateResponse} and HTTP response
      */
     updatePushNotificationContentTemplateWithHttpInfo(templateName, opts) {
       opts = opts || {};
@@ -971,7 +981,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20015;
+      let returnType = UpdatePushNotificationContentTemplateResponse;
       return this.apiClient.callApi(
         '/v3/applications/push/message_templates/{template_name}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -986,7 +996,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdatePushNotificationContentTemplateData} opts.updatePushNotificationContentTemplateData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20015}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdatePushNotificationContentTemplateResponse}
      */
     updatePushNotificationContentTemplate(templateName, opts) {
       return this.updatePushNotificationContentTemplateWithHttpInfo(templateName, opts)
@@ -1001,7 +1011,7 @@ export default class ApplicationApi {
      * ## View default channel invitation preference  Retrieves the default channel invitation preference of an application.  > __Note__: Using the [view channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-channel-invitation-preference) action, you can retrieve the value of a specific user's channel invitation preference, which can be set individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-default-channel-invitation-preference
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2005} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewDefaultChannelInvitationPreferenceResponse} and HTTP response
      */
     viewDefaultChannelInvitationPreferenceWithHttpInfo(opts) {
       opts = opts || {};
@@ -1020,7 +1030,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2005;
+      let returnType = ViewDefaultChannelInvitationPreferenceResponse;
       return this.apiClient.callApi(
         '/v3/applications/default_channel_invitation_preference', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1033,7 +1043,7 @@ export default class ApplicationApi {
      * ## View default channel invitation preference  Retrieves the default channel invitation preference of an application.  > __Note__: Using the [view channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-channel-invitation-preference) action, you can retrieve the value of a specific user's channel invitation preference, which can be set individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-default-channel-invitation-preference
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2005}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewDefaultChannelInvitationPreferenceResponse}
      */
     viewDefaultChannelInvitationPreference(opts) {
       return this.viewDefaultChannelInvitationPreferenceWithHttpInfo(opts)
@@ -1048,7 +1058,7 @@ export default class ApplicationApi {
      * ## View number of concurrent connections  Retrieves the number of devices and opened browser tabs which are currently connected to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-concurrent-connections
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfConcurrentConnectionsResponse} and HTTP response
      */
     viewNumberOfConcurrentConnectionsWithHttpInfo(opts) {
       opts = opts || {};
@@ -1067,7 +1077,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse200;
+      let returnType = ViewNumberOfConcurrentConnectionsResponse;
       return this.apiClient.callApi(
         '/v3/applications/ccu', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1080,7 +1090,7 @@ export default class ApplicationApi {
      * ## View number of concurrent connections  Retrieves the number of devices and opened browser tabs which are currently connected to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-concurrent-connections
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfConcurrentConnectionsResponse}
      */
     viewNumberOfConcurrentConnections(opts) {
       return this.viewNumberOfConcurrentConnectionsWithHttpInfo(opts)
@@ -1096,7 +1106,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20011} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfDailyActiveUsersResponse} and HTTP response
      */
     viewNumberOfDailyActiveUsersWithHttpInfo(opts) {
       opts = opts || {};
@@ -1116,7 +1126,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20011;
+      let returnType = ViewNumberOfDailyActiveUsersResponse;
       return this.apiClient.callApi(
         '/v3/applications/dau', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1130,7 +1140,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20011}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfDailyActiveUsersResponse}
      */
     viewNumberOfDailyActiveUsers(opts) {
       return this.viewNumberOfDailyActiveUsersWithHttpInfo(opts)
@@ -1146,7 +1156,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20010} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfMonthlyActiveUsersResponse} and HTTP response
      */
     viewNumberOfMonthlyActiveUsersWithHttpInfo(opts) {
       opts = opts || {};
@@ -1166,7 +1176,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20010;
+      let returnType = ViewNumberOfMonthlyActiveUsersResponse;
       return this.apiClient.callApi(
         '/v3/applications/mau', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1180,7 +1190,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20010}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfMonthlyActiveUsersResponse}
      */
     viewNumberOfMonthlyActiveUsers(opts) {
       return this.viewNumberOfMonthlyActiveUsersWithHttpInfo(opts)
@@ -1202,7 +1212,7 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {Number} opts.startDay 
      * @param {Number} opts.endDay 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2009} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfPeakConnectionsResponse} and HTTP response
      */
     viewNumberOfPeakConnectionsWithHttpInfo(timeDimension, startYear, startMonth, endYear, endMonth, opts) {
       opts = opts || {};
@@ -1248,7 +1258,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2009;
+      let returnType = ViewNumberOfPeakConnectionsResponse;
       return this.apiClient.callApi(
         '/v3/applications/peak_connections', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1268,7 +1278,7 @@ export default class ApplicationApi {
      * @param {String} opts.apiToken 
      * @param {Number} opts.startDay 
      * @param {Number} opts.endDay 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2009}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfPeakConnectionsResponse}
      */
     viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts) {
       return this.viewNumberOfPeakConnectionsWithHttpInfo(timeDimension, startYear, startMonth, endYear, endMonth, opts)
@@ -1285,7 +1295,7 @@ export default class ApplicationApi {
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20012} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewPushConfigurationByIdResponse} and HTTP response
      */
     viewPushConfigurationByIdWithHttpInfo(pushType, providerId, opts) {
       opts = opts || {};
@@ -1314,7 +1324,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20012;
+      let returnType = ViewPushConfigurationByIdResponse;
       return this.apiClient.callApi(
         '/v3/applications/push/{push_type}/{provider_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1329,7 +1339,7 @@ export default class ApplicationApi {
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20012}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewPushConfigurationByIdResponse}
      */
     viewPushConfigurationById(pushType, providerId, opts) {
       return this.viewPushConfigurationByIdWithHttpInfo(pushType, providerId, opts)
@@ -1345,7 +1355,7 @@ export default class ApplicationApi {
      * @param {String} templateName 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20015} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewPushNotificationContentTemplateResponse} and HTTP response
      */
     viewPushNotificationContentTemplateWithHttpInfo(templateName, opts) {
       opts = opts || {};
@@ -1369,7 +1379,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20015;
+      let returnType = ViewPushNotificationContentTemplateResponse;
       return this.apiClient.callApi(
         '/v3/applications/push/message_templates/{template_name}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1383,7 +1393,7 @@ export default class ApplicationApi {
      * @param {String} templateName 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20015}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewPushNotificationContentTemplateResponse}
      */
     viewPushNotificationContentTemplate(templateName, opts) {
       return this.viewPushNotificationContentTemplateWithHttpInfo(templateName, opts)
@@ -1399,7 +1409,7 @@ export default class ApplicationApi {
      * @param {String} apiToken2 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2007} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewSecondaryApiTokenByTokenResponse} and HTTP response
      */
     viewSecondaryApiTokenByTokenWithHttpInfo(apiToken2, opts) {
       opts = opts || {};
@@ -1423,7 +1433,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2007;
+      let returnType = ViewSecondaryApiTokenByTokenResponse;
       return this.apiClient.callApi(
         '/v3/applications/api_tokens/{api_token}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1437,7 +1447,7 @@ export default class ApplicationApi {
      * @param {String} apiToken2 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2007}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewSecondaryApiTokenByTokenResponse}
      */
     viewSecondaryApiTokenByToken(apiToken2, opts) {
       return this.viewSecondaryApiTokenByTokenWithHttpInfo(apiToken2, opts)

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## listReports
 
-> InlineResponse20070 listReports(opts)
+> ListReportsResponse listReports(opts)
 
 List reports
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20070**](InlineResponse20070.md)
+[**ListReportsResponse**](ListReportsResponse.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 
 ## listReportsOnChannelByUrl
 
-> InlineResponse20071 listReportsOnChannelByUrl(channelType, channelUrl, opts)
+> ListReportsOnChannelByUrlResponse listReportsOnChannelByUrl(channelType, channelUrl, opts)
 
 List reports on a channel
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20071**](InlineResponse20071.md)
+[**ListReportsOnChannelByUrlResponse**](ListReportsOnChannelByUrlResponse.md)
 
 ### Authorization
 
@@ -125,7 +125,7 @@ No authorization required
 
 ## listReportsOnMessageById
 
-> InlineResponse20071 listReportsOnMessageById(channelType, channelUrl, messageId, opts)
+> ListReportsOnMessageByIdResponse listReportsOnMessageById(channelType, channelUrl, messageId, opts)
 
 List reports on a message
 
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20071**](InlineResponse20071.md)
+[**ListReportsOnMessageByIdResponse**](ListReportsOnMessageByIdResponse.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ No authorization required
 
 ## listReportsOnUserById
 
-> InlineResponse20071 listReportsOnUserById(offendingUserId, opts)
+> ListReportsOnUserByIdResponse listReportsOnUserById(offendingUserId, opts)
 
 List reports on a user
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20071**](InlineResponse20071.md)
+[**ListReportsOnUserByIdResponse**](ListReportsOnUserByIdResponse.md)
 
 ### Authorization
 
@@ -233,7 +233,7 @@ No authorization required
 
 ## reportChannelByUrl
 
-> InlineResponse20071ReportLogs reportChannelByUrl(channelType, channelUrl, opts)
+> ReportChannelByUrlResponse reportChannelByUrl(channelType, channelUrl, opts)
 
 Report a channel
 
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20071ReportLogs**](InlineResponse20071ReportLogs.md)
+[**ReportChannelByUrlResponse**](ReportChannelByUrlResponse.md)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ No authorization required
 
 ## reportMessageById
 
-> InlineResponse20071ReportLogs reportMessageById(channelType, channelUrl, messageId, opts)
+> ReportMessageByIdResponse reportMessageById(channelType, channelUrl, messageId, opts)
 
 Report a message
 
@@ -325,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20071ReportLogs**](InlineResponse20071ReportLogs.md)
+[**ReportMessageByIdResponse**](ReportMessageByIdResponse.md)
 
 ### Authorization
 
@@ -339,7 +339,7 @@ No authorization required
 
 ## reportUserById
 
-> InlineResponse20071ReportLogs reportUserById(offendingUserId, opts)
+> ReportUserByIdResponse reportUserById(offendingUserId, opts)
 
 Report a user
 
@@ -375,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20071ReportLogs**](InlineResponse20071ReportLogs.md)
+[**ReportUserByIdResponse**](ReportUserByIdResponse.md)
 
 ### Authorization
 

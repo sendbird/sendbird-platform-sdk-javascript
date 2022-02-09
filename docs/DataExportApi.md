@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## listDataExportsByMessageChannelOrUser
 
-> InlineResponse20063 listDataExportsByMessageChannelOrUser(dataType, opts)
+> ListDataExportsByMessageChannelOrUserResponse listDataExportsByMessageChannelOrUser(dataType, opts)
 
 List data exports by message, channel, or user
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20063**](InlineResponse20063.md)
+[**ListDataExportsByMessageChannelOrUserResponse**](ListDataExportsByMessageChannelOrUserResponse.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
 
 ## registerAndScheduleDataExport
 
-> InlineResponse20063ExportedData registerAndScheduleDataExport(dataType, opts)
+> RegisterAndScheduleDataExportResponse registerAndScheduleDataExport(dataType, opts)
 
 Register and schedule a data export
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20063ExportedData**](InlineResponse20063ExportedData.md)
+[**RegisterAndScheduleDataExportResponse**](RegisterAndScheduleDataExportResponse.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ No authorization required
 
 ## viewDataExportById
 
-> InlineResponse20064 viewDataExportById(dataType, requestId, opts)
+> ViewDataExportByIdResponse viewDataExportById(dataType, requestId, opts)
 
 View a data export
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20064**](InlineResponse20064.md)
+[**ViewDataExportByIdResponse**](ViewDataExportByIdResponse.md)
 
 ### Authorization
 

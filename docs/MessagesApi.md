@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 ## addExtraDataToMessage
 
-> InlineResponse20054 addExtraDataToMessage(channelType, channelUrl, messageId, opts)
+> AddExtraDataToMessageResponse addExtraDataToMessage(channelType, channelUrl, messageId, opts)
 
 Add extra data to a message
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20054**](InlineResponse20054.md)
+[**AddExtraDataToMessageResponse**](AddExtraDataToMessageResponse.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ No authorization required
 
 ## addReactionToAMessage
 
-> InlineResponse20053 addReactionToAMessage(channelType, channelUrl, messageId, opts)
+> AddReactionToAMessageResponse addReactionToAMessage(channelType, channelUrl, messageId, opts)
 
 Add a reaction to a message
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20053**](InlineResponse20053.md)
+[**AddReactionToAMessageResponse**](AddReactionToAMessageResponse.md)
 
 ### Authorization
 
@@ -185,7 +185,7 @@ No authorization required
 
 ## gcMarkAllMessagesAsDelivered
 
-> InlineResponse20050 gcMarkAllMessagesAsDelivered(channelUrl, opts)
+> GcMarkAllMessagesAsDeliveredResponse gcMarkAllMessagesAsDelivered(channelUrl, opts)
 
 Mark all messages as delivered
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20050**](InlineResponse20050.md)
+[**GcMarkAllMessagesAsDeliveredResponse**](GcMarkAllMessagesAsDeliveredResponse.md)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ No authorization required
 
 ## gcViewNumberOfEachMembersUnreadMessages
 
-> InlineResponse20049 gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts)
+> GcViewNumberOfEachMembersUnreadMessagesResponse gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts)
 
 View number of each member&#39;s unread messages
 
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20049**](InlineResponse20049.md)
+[**GcViewNumberOfEachMembersUnreadMessagesResponse**](GcViewNumberOfEachMembersUnreadMessagesResponse.md)
 
 ### Authorization
 
@@ -335,7 +335,7 @@ No authorization required
 
 ## listMessages
 
-> InlineResponse20047 listMessages(channelType, channelUrl, messageTs, messageId, opts)
+> ListMessagesResponse listMessages(channelType, channelUrl, messageTs, messageId, opts)
 
 List messages
 
@@ -407,7 +407,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20047**](InlineResponse20047.md)
+[**ListMessagesResponse**](ListMessagesResponse.md)
 
 ### Authorization
 
@@ -421,7 +421,7 @@ No authorization required
 
 ## listReactionsOfMessage
 
-> InlineResponse20052 listReactionsOfMessage(channelType, channelUrl, messageId, opts)
+> ListReactionsOfMessageResponse listReactionsOfMessage(channelType, channelUrl, messageId, opts)
 
 List reactions of a message
 
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20052**](InlineResponse20052.md)
+[**ListReactionsOfMessageResponse**](ListReactionsOfMessageResponse.md)
 
 ### Authorization
 
@@ -529,7 +529,7 @@ No authorization required
 
 ## removeReactionFromAMessage
 
-> InlineResponse20053 removeReactionFromAMessage(channelType, channelUrl, messageId, opts)
+> RemoveReactionFromAMessageResponse removeReactionFromAMessage(channelType, channelUrl, messageId, opts)
 
 Remove a reaction from a message
 
@@ -571,7 +571,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20053**](InlineResponse20053.md)
+[**RemoveReactionFromAMessageResponse**](RemoveReactionFromAMessageResponse.md)
 
 ### Authorization
 
@@ -691,7 +691,7 @@ No authorization required
 
 ## updateExtraDataInMessage
 
-> InlineResponse20054 updateExtraDataInMessage(channelType, channelUrl, messageId, opts)
+> UpdateExtraDataInMessageResponse updateExtraDataInMessage(channelType, channelUrl, messageId, opts)
 
 Update extra data in a message
 
@@ -731,7 +731,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20054**](InlineResponse20054.md)
+[**UpdateExtraDataInMessageResponse**](UpdateExtraDataInMessageResponse.md)
 
 ### Authorization
 
@@ -855,7 +855,7 @@ No authorization required
 
 ## viewTotalNumberOfMessagesInChannel
 
-> InlineResponse20048 viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts)
+> ViewTotalNumberOfMessagesInChannelResponse viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts)
 
 View total number of messages in a channel
 
@@ -891,7 +891,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20048**](InlineResponse20048.md)
+[**ViewTotalNumberOfMessagesInChannelResponse**](ViewTotalNumberOfMessagesInChannelResponse.md)
 
 ### Authorization
 

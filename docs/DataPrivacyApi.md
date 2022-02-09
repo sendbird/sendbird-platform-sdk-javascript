@@ -61,7 +61,7 @@ No authorization required
 
 ## listGdprRequests
 
-> InlineResponse20068 listGdprRequests(opts)
+> ListGdprRequestsResponse listGdprRequests(opts)
 
 List GDPR requests
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**ListGdprRequestsResponse**](ListGdprRequestsResponse.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ No authorization required
 
 ## registerGdprRequest
 
-> InlineResponse20069 registerGdprRequest(opts)
+> RegisterGdprRequestResponse registerGdprRequest(opts)
 
 Register a GDPR request
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20069**](InlineResponse20069.md)
+[**RegisterGdprRequestResponse**](RegisterGdprRequestResponse.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ No authorization required
 
 ## viewGdprRequestById
 
-> InlineResponse20068Requests viewGdprRequestById(requestId, opts)
+> ViewGdprRequestByIdResponse viewGdprRequestById(requestId, opts)
 
 View a GDPR request
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20068Requests**](InlineResponse20068Requests.md)
+[**ViewGdprRequestByIdResponse**](ViewGdprRequestByIdResponse.md)
 
 ### Authorization
 

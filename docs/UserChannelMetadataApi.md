@@ -82,7 +82,7 @@ No authorization required
 
 ## createChannelMetadata
 
-> InlineResponse20061 createChannelMetadata(channelType, channelUrl, opts)
+> CreateChannelMetadataResponse createChannelMetadata(channelType, channelUrl, opts)
 
 Create a channel metadata
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20061**](InlineResponse20061.md)
+[**CreateChannelMetadataResponse**](CreateChannelMetadataResponse.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ No authorization required
 
 ## createUserMetadata
 
-> InlineResponse20047UserMetadata createUserMetadata(userId, opts)
+> CreateUserMetadataResponse createUserMetadata(userId, opts)
 
 Create a user metadata
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20047UserMetadata**](InlineResponse20047UserMetadata.md)
+[**CreateUserMetadataResponse**](CreateUserMetadataResponse.md)
 
 ### Authorization
 
@@ -702,7 +702,7 @@ No authorization required
 
 ## updateUserMetadata
 
-> InlineResponse20060 updateUserMetadata(userId, opts)
+> UpdateUserMetadataResponse updateUserMetadata(userId, opts)
 
 Update a user metadata - When updating existing items of a user metadata by their keys or adding new items to the metadata
 
@@ -738,7 +738,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20060**](InlineResponse20060.md)
+[**UpdateUserMetadataResponse**](UpdateUserMetadataResponse.md)
 
 ### Authorization
 
@@ -1016,7 +1016,7 @@ No authorization required
 
 ## viewUserMetadata
 
-> InlineResponse20047UserMetadata viewUserMetadata(userId, opts)
+> ViewUserMetadataResponse viewUserMetadata(userId, opts)
 
 View a user metadata - When retrieving all items of a user metadata
 
@@ -1054,7 +1054,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20047UserMetadata**](InlineResponse20047UserMetadata.md)
+[**ViewUserMetadataResponse**](ViewUserMetadataResponse.md)
 
 ### Authorization
 

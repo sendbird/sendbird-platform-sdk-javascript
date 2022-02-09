@@ -28,7 +28,7 @@ Method | HTTP request | Description
 
 ## ocBanUser
 
-> InlineResponse20033BannedList ocBanUser(channelUrl, opts)
+> OcBanUserResponse ocBanUser(channelUrl, opts)
 
 Ban a user
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033BannedList**](InlineResponse20033BannedList.md)
+[**OcBanUserResponse**](OcBanUserResponse.md)
 
 ### Authorization
 
@@ -276,7 +276,7 @@ No authorization required
 
 ## ocListBannedUsers
 
-> InlineResponse20033 ocListBannedUsers(channelUrl, opts)
+> OcListBannedUsersResponse ocListBannedUsers(channelUrl, opts)
 
 List banned users
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**OcListBannedUsersResponse**](OcListBannedUsersResponse.md)
 
 ### Authorization
 
@@ -328,7 +328,7 @@ No authorization required
 
 ## ocListChannels
 
-> InlineResponse20030 ocListChannels(opts)
+> OcListChannelsResponse ocListChannels(opts)
 
 List channels
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20030**](InlineResponse20030.md)
+[**OcListChannelsResponse**](OcListChannelsResponse.md)
 
 ### Authorization
 
@@ -390,7 +390,7 @@ No authorization required
 
 ## ocListMutedUsers
 
-> InlineResponse20031 ocListMutedUsers(channelUrl, opts)
+> OcListMutedUsersResponse ocListMutedUsers(channelUrl, opts)
 
 List muted users
 
@@ -428,7 +428,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20031**](InlineResponse20031.md)
+[**OcListMutedUsersResponse**](OcListMutedUsersResponse.md)
 
 ### Authorization
 
@@ -442,7 +442,7 @@ No authorization required
 
 ## ocListOperators
 
-> InlineResponse20034 ocListOperators(channelUrl, opts)
+> OcListOperatorsResponse ocListOperators(channelUrl, opts)
 
 List operators
 
@@ -480,7 +480,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20034**](InlineResponse20034.md)
+[**OcListOperatorsResponse**](OcListOperatorsResponse.md)
 
 ### Authorization
 
@@ -494,7 +494,7 @@ No authorization required
 
 ## ocListParticipants
 
-> InlineResponse20032 ocListParticipants(channelUrl, opts)
+> OcListParticipantsResponse ocListParticipants(channelUrl, opts)
 
 List participants
 
@@ -532,7 +532,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20032**](InlineResponse20032.md)
+[**OcListParticipantsResponse**](OcListParticipantsResponse.md)
 
 ### Authorization
 
@@ -946,7 +946,7 @@ No authorization required
 
 ## ocViewMuteById
 
-> InlineResponse20035 ocViewMuteById(channelUrl, mutedUserId, opts)
+> OcViewMuteByIdResponse ocViewMuteById(channelUrl, mutedUserId, opts)
 
 View a mute
 
@@ -982,7 +982,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20035**](InlineResponse20035.md)
+[**OcViewMuteByIdResponse**](OcViewMuteByIdResponse.md)
 
 ### Authorization
 

@@ -14,20 +14,22 @@
 
 import ApiClient from "../ApiClient";
 import AddExtraDataToMessageData from '../model/AddExtraDataToMessageData';
+import AddExtraDataToMessageResponse from '../model/AddExtraDataToMessageResponse';
 import AddReactionToAMessageData from '../model/AddReactionToAMessageData';
+import AddReactionToAMessageResponse from '../model/AddReactionToAMessageResponse';
 import GcMarkAllMessagesAsDeliveredData from '../model/GcMarkAllMessagesAsDeliveredData';
+import GcMarkAllMessagesAsDeliveredResponse from '../model/GcMarkAllMessagesAsDeliveredResponse';
 import GcMarkAllMessagesAsReadData from '../model/GcMarkAllMessagesAsReadData';
-import InlineResponse20047 from '../model/InlineResponse20047';
-import InlineResponse20048 from '../model/InlineResponse20048';
-import InlineResponse20049 from '../model/InlineResponse20049';
-import InlineResponse20050 from '../model/InlineResponse20050';
-import InlineResponse20052 from '../model/InlineResponse20052';
-import InlineResponse20053 from '../model/InlineResponse20053';
-import InlineResponse20054 from '../model/InlineResponse20054';
+import GcViewNumberOfEachMembersUnreadMessagesResponse from '../model/GcViewNumberOfEachMembersUnreadMessagesResponse';
+import ListMessagesResponse from '../model/ListMessagesResponse';
+import ListReactionsOfMessageResponse from '../model/ListReactionsOfMessageResponse';
+import RemoveReactionFromAMessageResponse from '../model/RemoveReactionFromAMessageResponse';
 import SendBirdMessageResponse from '../model/SendBirdMessageResponse';
 import SendMessageData from '../model/SendMessageData';
 import UpdateExtraDataInMessageData from '../model/UpdateExtraDataInMessageData';
+import UpdateExtraDataInMessageResponse from '../model/UpdateExtraDataInMessageResponse';
 import UpdateMessageByIdData from '../model/UpdateMessageByIdData';
+import ViewTotalNumberOfMessagesInChannelResponse from '../model/ViewTotalNumberOfMessagesInChannelResponse';
 
 /**
 * Messages service.
@@ -58,7 +60,7 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddExtraDataToMessageData} opts.addExtraDataToMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20054} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddExtraDataToMessageResponse} and HTTP response
      */
     addExtraDataToMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
@@ -92,7 +94,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20054;
+      let returnType = AddExtraDataToMessageResponse;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -109,7 +111,7 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddExtraDataToMessageData} opts.addExtraDataToMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20054}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddExtraDataToMessageResponse}
      */
     addExtraDataToMessage(channelType, channelUrl, messageId, opts) {
       return this.addExtraDataToMessageWithHttpInfo(channelType, channelUrl, messageId, opts)
@@ -128,7 +130,7 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddReactionToAMessageData} opts.addReactionToAMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20053} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddReactionToAMessageResponse} and HTTP response
      */
     addReactionToAMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
@@ -162,7 +164,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20053;
+      let returnType = AddReactionToAMessageResponse;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/reactions', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -179,7 +181,7 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/AddReactionToAMessageData} opts.addReactionToAMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20053}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddReactionToAMessageResponse}
      */
     addReactionToAMessage(channelType, channelUrl, messageId, opts) {
       return this.addReactionToAMessageWithHttpInfo(channelType, channelUrl, messageId, opts)
@@ -264,7 +266,7 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/GcMarkAllMessagesAsDeliveredData} opts.gcMarkAllMessagesAsDeliveredData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20050} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcMarkAllMessagesAsDeliveredResponse} and HTTP response
      */
     gcMarkAllMessagesAsDeliveredWithHttpInfo(channelUrl, opts) {
       opts = opts || {};
@@ -288,7 +290,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20050;
+      let returnType = GcMarkAllMessagesAsDeliveredResponse;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/messages/mark_as_delivered', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -303,7 +305,7 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/GcMarkAllMessagesAsDeliveredData} opts.gcMarkAllMessagesAsDeliveredData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20050}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcMarkAllMessagesAsDeliveredResponse}
      */
     gcMarkAllMessagesAsDelivered(channelUrl, opts) {
       return this.gcMarkAllMessagesAsDeliveredWithHttpInfo(channelUrl, opts)
@@ -376,7 +378,7 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.userIds 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20049} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcViewNumberOfEachMembersUnreadMessagesResponse} and HTTP response
      */
     gcViewNumberOfEachMembersUnreadMessagesWithHttpInfo(channelUrl, opts) {
       opts = opts || {};
@@ -401,7 +403,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20049;
+      let returnType = GcViewNumberOfEachMembersUnreadMessagesResponse;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/messages/unread_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -416,7 +418,7 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {String} opts.userIds 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20049}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcViewNumberOfEachMembersUnreadMessagesResponse}
      */
     gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts) {
       return this.gcViewNumberOfEachMembersUnreadMessagesWithHttpInfo(channelUrl, opts)
@@ -451,7 +453,7 @@ export default class MessagesApi {
      * @param {String} opts.userId 
      * @param {String} opts.customType 
      * @param {Boolean} opts.withMetaArray 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20047} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListMessagesResponse} and HTTP response
      */
     listMessagesWithHttpInfo(channelType, channelUrl, messageTs, messageId, opts) {
       opts = opts || {};
@@ -506,7 +508,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20047;
+      let returnType = ListMessagesResponse;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -539,7 +541,7 @@ export default class MessagesApi {
      * @param {String} opts.userId 
      * @param {String} opts.customType 
      * @param {Boolean} opts.withMetaArray 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20047}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListMessagesResponse}
      */
     listMessages(channelType, channelUrl, messageTs, messageId, opts) {
       return this.listMessagesWithHttpInfo(channelType, channelUrl, messageTs, messageId, opts)
@@ -558,7 +560,7 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Boolean} opts.listUsers 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20052} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListReactionsOfMessageResponse} and HTTP response
      */
     listReactionsOfMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
@@ -593,7 +595,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20052;
+      let returnType = ListReactionsOfMessageResponse;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/reactions', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -610,7 +612,7 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {Boolean} opts.listUsers 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20052}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListReactionsOfMessageResponse}
      */
     listReactionsOfMessage(channelType, channelUrl, messageId, opts) {
       return this.listReactionsOfMessageWithHttpInfo(channelType, channelUrl, messageId, opts)
@@ -701,7 +703,7 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.userId 
      * @param {String} opts.reaction 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20053} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemoveReactionFromAMessageResponse} and HTTP response
      */
     removeReactionFromAMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
@@ -737,7 +739,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20053;
+      let returnType = RemoveReactionFromAMessageResponse;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/reactions', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -755,7 +757,7 @@ export default class MessagesApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.userId 
      * @param {String} opts.reaction 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20053}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemoveReactionFromAMessageResponse}
      */
     removeReactionFromAMessage(channelType, channelUrl, messageId, opts) {
       return this.removeReactionFromAMessageWithHttpInfo(channelType, channelUrl, messageId, opts)
@@ -907,7 +909,7 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateExtraDataInMessageData} opts.updateExtraDataInMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20054} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateExtraDataInMessageResponse} and HTTP response
      */
     updateExtraDataInMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
@@ -941,7 +943,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20054;
+      let returnType = UpdateExtraDataInMessageResponse;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -958,7 +960,7 @@ export default class MessagesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/UpdateExtraDataInMessageData} opts.updateExtraDataInMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20054}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateExtraDataInMessageResponse}
      */
     updateExtraDataInMessage(channelType, channelUrl, messageId, opts) {
       return this.updateExtraDataInMessageWithHttpInfo(channelType, channelUrl, messageId, opts)
@@ -1119,7 +1121,7 @@ export default class MessagesApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20048} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewTotalNumberOfMessagesInChannelResponse} and HTTP response
      */
     viewTotalNumberOfMessagesInChannelWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
@@ -1148,7 +1150,7 @@ export default class MessagesApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20048;
+      let returnType = ViewTotalNumberOfMessagesInChannelResponse;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/total_count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1163,7 +1165,7 @@ export default class MessagesApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20048}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewTotalNumberOfMessagesInChannelResponse}
      */
     viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts) {
       return this.viewTotalNumberOfMessagesInChannelWithHttpInfo(channelType, channelUrl, opts)

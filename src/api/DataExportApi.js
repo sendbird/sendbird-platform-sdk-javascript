@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
-import InlineResponse20063 from '../model/InlineResponse20063';
-import InlineResponse20063ExportedData from '../model/InlineResponse20063ExportedData';
-import InlineResponse20064 from '../model/InlineResponse20064';
+import ListDataExportsByMessageChannelOrUserResponse from '../model/ListDataExportsByMessageChannelOrUserResponse';
 import RegisterAndScheduleDataExportData from '../model/RegisterAndScheduleDataExportData';
+import RegisterAndScheduleDataExportResponse from '../model/RegisterAndScheduleDataExportResponse';
+import ViewDataExportByIdResponse from '../model/ViewDataExportByIdResponse';
 
 /**
 * DataExport service.
@@ -46,7 +46,7 @@ export default class DataExportApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20063} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListDataExportsByMessageChannelOrUserResponse} and HTTP response
      */
     listDataExportsByMessageChannelOrUserWithHttpInfo(dataType, opts) {
       opts = opts || {};
@@ -72,7 +72,7 @@ export default class DataExportApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20063;
+      let returnType = ListDataExportsByMessageChannelOrUserResponse;
       return this.apiClient.callApi(
         '/v3/export/{data_type}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -88,7 +88,7 @@ export default class DataExportApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20063}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListDataExportsByMessageChannelOrUserResponse}
      */
     listDataExportsByMessageChannelOrUser(dataType, opts) {
       return this.listDataExportsByMessageChannelOrUserWithHttpInfo(dataType, opts)
@@ -105,7 +105,7 @@ export default class DataExportApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/RegisterAndScheduleDataExportData} opts.registerAndScheduleDataExportData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20063ExportedData} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RegisterAndScheduleDataExportResponse} and HTTP response
      */
     registerAndScheduleDataExportWithHttpInfo(dataType, opts) {
       opts = opts || {};
@@ -129,7 +129,7 @@ export default class DataExportApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20063ExportedData;
+      let returnType = RegisterAndScheduleDataExportResponse;
       return this.apiClient.callApi(
         '/v3/export/{data_type}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -144,7 +144,7 @@ export default class DataExportApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/RegisterAndScheduleDataExportData} opts.registerAndScheduleDataExportData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20063ExportedData}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RegisterAndScheduleDataExportResponse}
      */
     registerAndScheduleDataExport(dataType, opts) {
       return this.registerAndScheduleDataExportWithHttpInfo(dataType, opts)
@@ -161,7 +161,7 @@ export default class DataExportApi {
      * @param {String} requestId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20064} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewDataExportByIdResponse} and HTTP response
      */
     viewDataExportByIdWithHttpInfo(dataType, requestId, opts) {
       opts = opts || {};
@@ -190,7 +190,7 @@ export default class DataExportApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20064;
+      let returnType = ViewDataExportByIdResponse;
       return this.apiClient.callApi(
         '/v3/export/{data_type}/{request_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -205,7 +205,7 @@ export default class DataExportApi {
      * @param {String} requestId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20064}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewDataExportByIdResponse}
      */
     viewDataExportById(dataType, requestId, opts) {
       return this.viewDataExportByIdWithHttpInfo(dataType, requestId, opts)

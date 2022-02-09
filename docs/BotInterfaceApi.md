@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## createBot
 
-> InlineResponse20065Bots createBot(opts)
+> CreateBotResponse createBot(opts)
 
 Create a bot
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20065Bots**](InlineResponse20065Bots.md)
+[**CreateBotResponse**](CreateBotResponse.md)
 
 ### Authorization
 
@@ -264,7 +264,7 @@ No authorization required
 
 ## listBots
 
-> InlineResponse20065 listBots(opts)
+> ListBotsResponse listBots(opts)
 
 List bots
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20065**](InlineResponse20065.md)
+[**ListBotsResponse**](ListBotsResponse.md)
 
 ### Authorization
 
@@ -364,7 +364,7 @@ No authorization required
 
 ## updateBotById
 
-> InlineResponse20065Bots updateBotById(botUserid, opts)
+> UpdateBotByIdResponse updateBotById(botUserid, opts)
 
 Update a bot
 
@@ -400,7 +400,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20065Bots**](InlineResponse20065Bots.md)
+[**UpdateBotByIdResponse**](UpdateBotByIdResponse.md)
 
 ### Authorization
 
@@ -414,7 +414,7 @@ No authorization required
 
 ## viewBotById
 
-> InlineResponse20065Bots viewBotById(botUserid, opts)
+> ViewBotByIdResponse viewBotById(botUserid, opts)
 
 View a bot
 
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20065Bots**](InlineResponse20065Bots.md)
+[**ViewBotByIdResponse**](ViewBotByIdResponse.md)
 
 ### Authorization
 

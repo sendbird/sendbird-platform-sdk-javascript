@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ModelObject from './ModelObject';
+import SBObject from './SBObject';
 import SendBirdAppleCriticalAlertOptions from './SendBirdAppleCriticalAlertOptions';
 import SendBirdMessageMetaArray from './SendBirdMessageMetaArray';
 import SendBirdMessageResponse from './SendBirdMessageResponse';
@@ -92,7 +92,7 @@ class SendBirdAdminMessage {
                 obj['message_type'] = ApiClient.convertToType(data['message_type'], 'String');
             }
             if (data.hasOwnProperty('meta_array')) {
-                obj['meta_array'] = ModelObject.constructFromObject(data['meta_array']);
+                obj['meta_array'] = SBObject.constructFromObject(data['meta_array']);
             }
             if (data.hasOwnProperty('meta_arrays')) {
                 obj['meta_arrays'] = ApiClient.convertToType(data['meta_arrays'], [SendBirdMessageMetaArray]);
@@ -122,7 +122,7 @@ class SendBirdAdminMessage {
                 obj['thread_info'] = SendBirdThreadInfo.constructFromObject(data['thread_info']);
             }
             if (data.hasOwnProperty('translations')) {
-                obj['translations'] = ModelObject.constructFromObject(data['translations']);
+                obj['translations'] = SBObject.constructFromObject(data['translations']);
             }
             if (data.hasOwnProperty('updated_at')) {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Number');
@@ -195,7 +195,7 @@ SendBirdAdminMessage.prototype['message_id'] = undefined;
 SendBirdAdminMessage.prototype['message_type'] = undefined;
 
 /**
- * @member {module:model/ModelObject} meta_array
+ * @member {module:model/SBObject} meta_array
  */
 SendBirdAdminMessage.prototype['meta_array'] = undefined;
 
@@ -245,7 +245,7 @@ SendBirdAdminMessage.prototype['silent'] = undefined;
 SendBirdAdminMessage.prototype['thread_info'] = undefined;
 
 /**
- * @member {module:model/ModelObject} translations
+ * @member {module:model/SBObject} translations
  */
 SendBirdAdminMessage.prototype['translations'] = undefined;
 

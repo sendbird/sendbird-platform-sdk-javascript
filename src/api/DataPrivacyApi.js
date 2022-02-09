@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
-import InlineResponse20068 from '../model/InlineResponse20068';
-import InlineResponse20068Requests from '../model/InlineResponse20068Requests';
-import InlineResponse20069 from '../model/InlineResponse20069';
+import ListGdprRequestsResponse from '../model/ListGdprRequestsResponse';
 import RegisterGdprRequestData from '../model/RegisterGdprRequestData';
+import RegisterGdprRequestResponse from '../model/RegisterGdprRequestResponse';
+import ViewGdprRequestByIdResponse from '../model/ViewGdprRequestByIdResponse';
 
 /**
 * DataPrivacy service.
@@ -99,7 +99,7 @@ export default class DataPrivacyApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20068} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListGdprRequestsResponse} and HTTP response
      */
     listGdprRequestsWithHttpInfo(opts) {
       opts = opts || {};
@@ -120,7 +120,7 @@ export default class DataPrivacyApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20068;
+      let returnType = ListGdprRequestsResponse;
       return this.apiClient.callApi(
         '/v3/privacy/gdpr', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -135,7 +135,7 @@ export default class DataPrivacyApi {
      * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20068}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListGdprRequestsResponse}
      */
     listGdprRequests(opts) {
       return this.listGdprRequestsWithHttpInfo(opts)
@@ -151,7 +151,7 @@ export default class DataPrivacyApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/RegisterGdprRequestData} opts.registerGdprRequestData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20069} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RegisterGdprRequestResponse} and HTTP response
      */
     registerGdprRequestWithHttpInfo(opts) {
       opts = opts || {};
@@ -170,7 +170,7 @@ export default class DataPrivacyApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20069;
+      let returnType = RegisterGdprRequestResponse;
       return this.apiClient.callApi(
         '/v3/privacy/gdpr', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -184,7 +184,7 @@ export default class DataPrivacyApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
      * @param {module:model/RegisterGdprRequestData} opts.registerGdprRequestData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20069}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RegisterGdprRequestResponse}
      */
     registerGdprRequest(opts) {
       return this.registerGdprRequestWithHttpInfo(opts)
@@ -200,7 +200,7 @@ export default class DataPrivacyApi {
      * @param {String} requestId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20068Requests} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewGdprRequestByIdResponse} and HTTP response
      */
     viewGdprRequestByIdWithHttpInfo(requestId, opts) {
       opts = opts || {};
@@ -224,7 +224,7 @@ export default class DataPrivacyApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20068Requests;
+      let returnType = ViewGdprRequestByIdResponse;
       return this.apiClient.callApi(
         '/v3/privacy/gdpr/{request_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -238,7 +238,7 @@ export default class DataPrivacyApi {
      * @param {String} requestId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20068Requests}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewGdprRequestByIdResponse}
      */
     viewGdprRequestById(requestId, opts) {
       return this.viewGdprRequestByIdWithHttpInfo(requestId, opts)

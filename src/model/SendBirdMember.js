@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ModelObject from './ModelObject';
+import SBObject from './SBObject';
 import SendBirdRestrictionInfo from './SendBirdRestrictionInfo';
 
 /**
@@ -74,7 +74,7 @@ class SendBirdMember {
                 obj['last_seen_at'] = ApiClient.convertToType(data['last_seen_at'], 'Number');
             }
             if (data.hasOwnProperty('meta_data')) {
-                obj['meta_data'] = ModelObject.constructFromObject(data['meta_data']);
+                obj['meta_data'] = SBObject.constructFromObject(data['meta_data']);
             }
             if (data.hasOwnProperty('nickname')) {
                 obj['nickname'] = ApiClient.convertToType(data['nickname'], 'String');
@@ -151,7 +151,7 @@ SendBirdMember.prototype['is_muted'] = undefined;
 SendBirdMember.prototype['last_seen_at'] = undefined;
 
 /**
- * @member {module:model/ModelObject} meta_data
+ * @member {module:model/SBObject} meta_data
  */
 SendBirdMember.prototype['meta_data'] = undefined;
 
