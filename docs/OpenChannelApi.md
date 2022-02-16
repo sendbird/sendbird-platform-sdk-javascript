@@ -28,7 +28,7 @@ Method | HTTP request | Description
 
 ## ocBanUser
 
-> OcBanUserResponse ocBanUser(channelUrl, opts)
+> OcBanUserResponse ocBanUser(apiToken, channelUrl, opts)
 
 Ban a user
 
@@ -40,12 +40,12 @@ Ban a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'ocBanUserData': new SendbirdPlatformSdk.OcBanUserData() // OcBanUserData | 
 };
-apiInstance.ocBanUser(channelUrl, opts).then((data) => {
+apiInstance.ocBanUser(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -58,8 +58,8 @@ apiInstance.ocBanUser(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **ocBanUserData** | [**OcBanUserData**](OcBanUserData.md)|  | [optional] 
 
 ### Return type
@@ -78,7 +78,7 @@ No authorization required
 
 ## ocCancelTheRegistrationOfOperators
 
-> ocCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts)
+> ocCancelTheRegistrationOfOperators(apiToken, channelUrl, operatorIds, opts)
 
 Cancel the registration of operators
 
@@ -90,13 +90,13 @@ Cancel the registration of operators
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let operatorIds = ["null"]; // [String] | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'deleteAll': true // Boolean | 
 };
-apiInstance.ocCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts).then(() => {
+apiInstance.ocCancelTheRegistrationOfOperators(apiToken, channelUrl, operatorIds, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -109,9 +109,9 @@ apiInstance.ocCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts).th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
  **operatorIds** | [**[String]**](String.md)|  | 
- **apiToken** | **String**|  | [optional] 
  **deleteAll** | **Boolean**|  | [optional] 
 
 ### Return type
@@ -130,7 +130,7 @@ No authorization required
 
 ## ocCreateChannel
 
-> SendBirdOpenChannel ocCreateChannel(opts)
+> SendBirdOpenChannel ocCreateChannel(apiToken, opts)
 
 Create a channel
 
@@ -142,11 +142,11 @@ Create a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'ocCreateChannelData': new SendbirdPlatformSdk.OcCreateChannelData() // OcCreateChannelData | 
 };
-apiInstance.ocCreateChannel(opts).then((data) => {
+apiInstance.ocCreateChannel(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -159,7 +159,7 @@ apiInstance.ocCreateChannel(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **ocCreateChannelData** | [**OcCreateChannelData**](OcCreateChannelData.md)|  | [optional] 
 
 ### Return type
@@ -178,7 +178,7 @@ No authorization required
 
 ## ocDeleteChannelByUrl
 
-> ocDeleteChannelByUrl(channelUrl, opts)
+> ocDeleteChannelByUrl(apiToken, channelUrl)
 
 Delete a channel
 
@@ -190,11 +190,9 @@ Delete a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.ocDeleteChannelByUrl(channelUrl, opts).then(() => {
+apiInstance.ocDeleteChannelByUrl(apiToken, channelUrl).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -207,8 +205,8 @@ apiInstance.ocDeleteChannelByUrl(channelUrl, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -226,7 +224,7 @@ No authorization required
 
 ## ocFreezeChannel
 
-> SendBirdOpenChannel ocFreezeChannel(channelUrl, opts)
+> SendBirdOpenChannel ocFreezeChannel(apiToken, channelUrl, opts)
 
 Freeze a channel
 
@@ -238,12 +236,12 @@ Freeze a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'ocFreezeChannelData': new SendbirdPlatformSdk.OcFreezeChannelData() // OcFreezeChannelData | 
 };
-apiInstance.ocFreezeChannel(channelUrl, opts).then((data) => {
+apiInstance.ocFreezeChannel(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -256,8 +254,8 @@ apiInstance.ocFreezeChannel(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **ocFreezeChannelData** | [**OcFreezeChannelData**](OcFreezeChannelData.md)|  | [optional] 
 
 ### Return type
@@ -276,7 +274,7 @@ No authorization required
 
 ## ocListBannedUsers
 
-> OcListBannedUsersResponse ocListBannedUsers(channelUrl, opts)
+> OcListBannedUsersResponse ocListBannedUsers(apiToken, channelUrl, opts)
 
 List banned users
 
@@ -288,13 +286,13 @@ List banned users
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.ocListBannedUsers(channelUrl, opts).then((data) => {
+apiInstance.ocListBannedUsers(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -307,8 +305,8 @@ apiInstance.ocListBannedUsers(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -328,7 +326,7 @@ No authorization required
 
 ## ocListChannels
 
-> OcListChannelsResponse ocListChannels(opts)
+> OcListChannelsResponse ocListChannels(apiToken, opts)
 
 List channels
 
@@ -340,8 +338,8 @@ List channels
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56, // Number | 
   'customTypes': "customTypes_example", // String | 
@@ -351,7 +349,7 @@ let opts = {
   'showMetadata': true, // Boolean | 
   'customType': "customType_example" // String | 
 };
-apiInstance.ocListChannels(opts).then((data) => {
+apiInstance.ocListChannels(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -364,7 +362,7 @@ apiInstance.ocListChannels(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **customTypes** | **String**|  | [optional] 
@@ -390,7 +388,7 @@ No authorization required
 
 ## ocListMutedUsers
 
-> OcListMutedUsersResponse ocListMutedUsers(channelUrl, opts)
+> OcListMutedUsersResponse ocListMutedUsers(apiToken, channelUrl, opts)
 
 List muted users
 
@@ -402,13 +400,13 @@ List muted users
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.ocListMutedUsers(channelUrl, opts).then((data) => {
+apiInstance.ocListMutedUsers(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -421,8 +419,8 @@ apiInstance.ocListMutedUsers(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -442,7 +440,7 @@ No authorization required
 
 ## ocListOperators
 
-> OcListOperatorsResponse ocListOperators(channelUrl, opts)
+> OcListOperatorsResponse ocListOperators(apiToken, channelUrl, opts)
 
 List operators
 
@@ -454,13 +452,13 @@ List operators
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.ocListOperators(channelUrl, opts).then((data) => {
+apiInstance.ocListOperators(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -473,8 +471,8 @@ apiInstance.ocListOperators(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -494,7 +492,7 @@ No authorization required
 
 ## ocListParticipants
 
-> OcListParticipantsResponse ocListParticipants(channelUrl, opts)
+> OcListParticipantsResponse ocListParticipants(apiToken, channelUrl, opts)
 
 List participants
 
@@ -506,13 +504,13 @@ List participants
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.ocListParticipants(channelUrl, opts).then((data) => {
+apiInstance.ocListParticipants(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -525,8 +523,8 @@ apiInstance.ocListParticipants(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -546,7 +544,7 @@ No authorization required
 
 ## ocMuteUser
 
-> SendBirdOpenChannel ocMuteUser(channelUrl, opts)
+> SendBirdOpenChannel ocMuteUser(apiToken, channelUrl, opts)
 
 Mute a user
 
@@ -558,12 +556,12 @@ Mute a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'ocMuteUserData': new SendbirdPlatformSdk.OcMuteUserData() // OcMuteUserData | 
 };
-apiInstance.ocMuteUser(channelUrl, opts).then((data) => {
+apiInstance.ocMuteUser(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -576,8 +574,8 @@ apiInstance.ocMuteUser(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **ocMuteUserData** | [**OcMuteUserData**](OcMuteUserData.md)|  | [optional] 
 
 ### Return type
@@ -596,7 +594,7 @@ No authorization required
 
 ## ocRegisterOperators
 
-> ocRegisterOperators(channelUrl, opts)
+> ocRegisterOperators(apiToken, channelUrl, opts)
 
 Register operators
 
@@ -608,12 +606,12 @@ Register operators
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'ocRegisterOperatorsData': new SendbirdPlatformSdk.OcRegisterOperatorsData() // OcRegisterOperatorsData | 
 };
-apiInstance.ocRegisterOperators(channelUrl, opts).then(() => {
+apiInstance.ocRegisterOperators(apiToken, channelUrl, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -626,8 +624,8 @@ apiInstance.ocRegisterOperators(channelUrl, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **ocRegisterOperatorsData** | [**OcRegisterOperatorsData**](OcRegisterOperatorsData.md)|  | [optional] 
 
 ### Return type
@@ -646,7 +644,7 @@ No authorization required
 
 ## ocUnbanUserById
 
-> ocUnbanUserById(channelUrl, bannedUserId, opts)
+> ocUnbanUserById(apiToken, channelUrl, bannedUserId)
 
 Unban a user
 
@@ -658,12 +656,10 @@ Unban a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let bannedUserId = "bannedUserId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.ocUnbanUserById(channelUrl, bannedUserId, opts).then(() => {
+apiInstance.ocUnbanUserById(apiToken, channelUrl, bannedUserId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -676,9 +672,9 @@ apiInstance.ocUnbanUserById(channelUrl, bannedUserId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
  **bannedUserId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -696,7 +692,7 @@ No authorization required
 
 ## ocUnmuteUserById
 
-> ocUnmuteUserById(channelUrl, mutedUserId, opts)
+> ocUnmuteUserById(apiToken, channelUrl, mutedUserId)
 
 Unmute a user
 
@@ -708,12 +704,10 @@ Unmute a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let mutedUserId = "mutedUserId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.ocUnmuteUserById(channelUrl, mutedUserId, opts).then(() => {
+apiInstance.ocUnmuteUserById(apiToken, channelUrl, mutedUserId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -726,9 +720,9 @@ apiInstance.ocUnmuteUserById(channelUrl, mutedUserId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
  **mutedUserId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -746,7 +740,7 @@ No authorization required
 
 ## ocUpdateBanById
 
-> SendBirdUser ocUpdateBanById(channelUrl, bannedUserId, opts)
+> SendBirdUser ocUpdateBanById(apiToken, channelUrl, bannedUserId, opts)
 
 Update a ban
 
@@ -758,13 +752,13 @@ Update a ban
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let bannedUserId = "bannedUserId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'ocUpdateBanByIdData': new SendbirdPlatformSdk.OcUpdateBanByIdData() // OcUpdateBanByIdData | 
 };
-apiInstance.ocUpdateBanById(channelUrl, bannedUserId, opts).then((data) => {
+apiInstance.ocUpdateBanById(apiToken, channelUrl, bannedUserId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -777,9 +771,9 @@ apiInstance.ocUpdateBanById(channelUrl, bannedUserId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
  **bannedUserId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **ocUpdateBanByIdData** | [**OcUpdateBanByIdData**](OcUpdateBanByIdData.md)|  | [optional] 
 
 ### Return type
@@ -798,7 +792,7 @@ No authorization required
 
 ## ocUpdateChannelByUrl
 
-> SendBirdOpenChannel ocUpdateChannelByUrl(channelUrl, opts)
+> SendBirdOpenChannel ocUpdateChannelByUrl(apiToken, channelUrl, opts)
 
 Update a channel
 
@@ -810,12 +804,12 @@ Update a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'ocUpdateChannelByUrlData': new SendbirdPlatformSdk.OcUpdateChannelByUrlData() // OcUpdateChannelByUrlData | 
 };
-apiInstance.ocUpdateChannelByUrl(channelUrl, opts).then((data) => {
+apiInstance.ocUpdateChannelByUrl(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -828,8 +822,8 @@ apiInstance.ocUpdateChannelByUrl(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **ocUpdateChannelByUrlData** | [**OcUpdateChannelByUrlData**](OcUpdateChannelByUrlData.md)|  | [optional] 
 
 ### Return type
@@ -848,7 +842,7 @@ No authorization required
 
 ## ocViewBanById
 
-> SendBirdUser ocViewBanById(channelUrl, bannedUserId, opts)
+> SendBirdUser ocViewBanById(apiToken, channelUrl, bannedUserId)
 
 View a ban
 
@@ -860,12 +854,10 @@ View a ban
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let bannedUserId = "bannedUserId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.ocViewBanById(channelUrl, bannedUserId, opts).then((data) => {
+apiInstance.ocViewBanById(apiToken, channelUrl, bannedUserId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -878,9 +870,9 @@ apiInstance.ocViewBanById(channelUrl, bannedUserId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
  **bannedUserId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -898,7 +890,7 @@ No authorization required
 
 ## ocViewChannelByUrl
 
-> SendBirdOpenChannel ocViewChannelByUrl(channelUrl, opts)
+> SendBirdOpenChannel ocViewChannelByUrl(apiToken, channelUrl)
 
 View a channel
 
@@ -910,11 +902,9 @@ View a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.ocViewChannelByUrl(channelUrl, opts).then((data) => {
+apiInstance.ocViewChannelByUrl(apiToken, channelUrl).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -927,8 +917,8 @@ apiInstance.ocViewChannelByUrl(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -946,7 +936,7 @@ No authorization required
 
 ## ocViewMuteById
 
-> OcViewMuteByIdResponse ocViewMuteById(channelUrl, mutedUserId, opts)
+> OcViewMuteByIdResponse ocViewMuteById(apiToken, channelUrl, mutedUserId)
 
 View a mute
 
@@ -958,12 +948,10 @@ View a mute
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let mutedUserId = "mutedUserId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.ocViewMuteById(channelUrl, mutedUserId, opts).then((data) => {
+apiInstance.ocViewMuteById(apiToken, channelUrl, mutedUserId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -976,9 +964,9 @@ apiInstance.ocViewMuteById(channelUrl, mutedUserId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
  **mutedUserId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 

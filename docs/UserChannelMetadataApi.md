@@ -30,7 +30,7 @@ Method | HTTP request | Description
 
 ## createChannelMetacounter
 
-> {String: SendBirdAdditionalProperties} createChannelMetacounter(channelType, channelUrl, opts)
+> {String: SendBirdAdditionalProperties} createChannelMetacounter(apiToken, channelType, channelUrl, opts)
 
 Create a channel metacounter
 
@@ -42,13 +42,13 @@ Create a channel metacounter
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'createChannelMetacounterData': new SendbirdPlatformSdk.CreateChannelMetacounterData() // CreateChannelMetacounterData | 
 };
-apiInstance.createChannelMetacounter(channelType, channelUrl, opts).then((data) => {
+apiInstance.createChannelMetacounter(apiToken, channelType, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -61,9 +61,9 @@ apiInstance.createChannelMetacounter(channelType, channelUrl, opts).then((data) 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **createChannelMetacounterData** | [**CreateChannelMetacounterData**](CreateChannelMetacounterData.md)|  | [optional] 
 
 ### Return type
@@ -82,7 +82,7 @@ No authorization required
 
 ## createChannelMetadata
 
-> CreateChannelMetadataResponse createChannelMetadata(channelType, channelUrl, opts)
+> CreateChannelMetadataResponse createChannelMetadata(apiToken, channelType, channelUrl, opts)
 
 Create a channel metadata
 
@@ -94,13 +94,13 @@ Create a channel metadata
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'createChannelMetadataData': new SendbirdPlatformSdk.CreateChannelMetadataData() // CreateChannelMetadataData | 
 };
-apiInstance.createChannelMetadata(channelType, channelUrl, opts).then((data) => {
+apiInstance.createChannelMetadata(apiToken, channelType, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -113,9 +113,9 @@ apiInstance.createChannelMetadata(channelType, channelUrl, opts).then((data) => 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **createChannelMetadataData** | [**CreateChannelMetadataData**](CreateChannelMetadataData.md)|  | [optional] 
 
 ### Return type
@@ -134,7 +134,7 @@ No authorization required
 
 ## createUserMetadata
 
-> CreateUserMetadataResponse createUserMetadata(userId, opts)
+> CreateUserMetadataResponse createUserMetadata(apiToken, userId, opts)
 
 Create a user metadata
 
@@ -146,12 +146,12 @@ Create a user metadata
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'createUserMetadataData': new SendbirdPlatformSdk.CreateUserMetadataData() // CreateUserMetadataData | 
 };
-apiInstance.createUserMetadata(userId, opts).then((data) => {
+apiInstance.createUserMetadata(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -164,8 +164,8 @@ apiInstance.createUserMetadata(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **createUserMetadataData** | [**CreateUserMetadataData**](CreateUserMetadataData.md)|  | [optional] 
 
 ### Return type
@@ -184,7 +184,7 @@ No authorization required
 
 ## deleteChannelMetacounter
 
-> deleteChannelMetacounter(channelType, channelUrl, opts)
+> deleteChannelMetacounter(apiToken, channelType, channelUrl)
 
 Delete a channel metacounter - When deleting all items of a channel metacounter
 
@@ -196,12 +196,10 @@ Delete a channel metacounter - When deleting all items of a channel metacounter
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.deleteChannelMetacounter(channelType, channelUrl, opts).then(() => {
+apiInstance.deleteChannelMetacounter(apiToken, channelType, channelUrl).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -214,9 +212,9 @@ apiInstance.deleteChannelMetacounter(channelType, channelUrl, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -234,7 +232,7 @@ No authorization required
 
 ## deleteChannelMetacounterByKey
 
-> deleteChannelMetacounterByKey(channelType, channelUrl, key, opts)
+> deleteChannelMetacounterByKey(apiToken, channelType, channelUrl, key)
 
 Delete a channel metacounter - When deleting a specific item of a channel metacounter by its key
 
@@ -246,13 +244,11 @@ Delete a channel metacounter - When deleting a specific item of a channel metaco
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let key = "key_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.deleteChannelMetacounterByKey(channelType, channelUrl, key, opts).then(() => {
+apiInstance.deleteChannelMetacounterByKey(apiToken, channelType, channelUrl, key).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -265,10 +261,10 @@ apiInstance.deleteChannelMetacounterByKey(channelType, channelUrl, key, opts).th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **key** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -286,7 +282,7 @@ No authorization required
 
 ## deleteChannelMetadata
 
-> deleteChannelMetadata(channelType, channelUrl, opts)
+> deleteChannelMetadata(apiToken, channelType, channelUrl, opts)
 
 Delete a channel metadata - When deleting all items of a channel metadata
 
@@ -298,13 +294,13 @@ Delete a channel metadata - When deleting all items of a channel metadata
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'key': "key_example" // String | 
 };
-apiInstance.deleteChannelMetadata(channelType, channelUrl, opts).then(() => {
+apiInstance.deleteChannelMetadata(apiToken, channelType, channelUrl, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -317,9 +313,9 @@ apiInstance.deleteChannelMetadata(channelType, channelUrl, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **key** | **String**|  | [optional] 
 
 ### Return type
@@ -338,7 +334,7 @@ No authorization required
 
 ## deleteChannelMetadataByKey
 
-> deleteChannelMetadataByKey(channelType, channelUrl, key, opts)
+> deleteChannelMetadataByKey(apiToken, channelType, channelUrl, key)
 
 Delete a channel metadata - When deleting a specific item of a channel metadata by its key
 
@@ -350,13 +346,11 @@ Delete a channel metadata - When deleting a specific item of a channel metadata 
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let key = "key_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.deleteChannelMetadataByKey(channelType, channelUrl, key, opts).then(() => {
+apiInstance.deleteChannelMetadataByKey(apiToken, channelType, channelUrl, key).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -369,10 +363,10 @@ apiInstance.deleteChannelMetadataByKey(channelType, channelUrl, key, opts).then(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **key** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -390,7 +384,7 @@ No authorization required
 
 ## deleteUserMetadata
 
-> deleteUserMetadata(userId, opts)
+> deleteUserMetadata(apiToken, userId, opts)
 
 Delete a user metadata - When deleting all items of a user metadata
 
@@ -402,12 +396,12 @@ Delete a user metadata - When deleting all items of a user metadata
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'key': "key_example" // String | 
 };
-apiInstance.deleteUserMetadata(userId, opts).then(() => {
+apiInstance.deleteUserMetadata(apiToken, userId, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -420,8 +414,8 @@ apiInstance.deleteUserMetadata(userId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **key** | **String**|  | [optional] 
 
 ### Return type
@@ -440,7 +434,7 @@ No authorization required
 
 ## deleteUserMetadataByKey
 
-> deleteUserMetadataByKey(userId, key, opts)
+> deleteUserMetadataByKey(apiToken, userId, key)
 
 Delete a user metadata - When deleting a specific item of a user metadata by its key
 
@@ -452,12 +446,10 @@ Delete a user metadata - When deleting a specific item of a user metadata by its
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let key = "key_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.deleteUserMetadataByKey(userId, key, opts).then(() => {
+apiInstance.deleteUserMetadataByKey(apiToken, userId, key).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -470,9 +462,9 @@ apiInstance.deleteUserMetadataByKey(userId, key, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
  **key** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -490,7 +482,7 @@ No authorization required
 
 ## updateChannelMetacounter
 
-> {String: SendBirdAdditionalProperties} updateChannelMetacounter(channelType, channelUrl, opts)
+> {String: SendBirdAdditionalProperties} updateChannelMetacounter(apiToken, channelType, channelUrl, opts)
 
 Update a channel metacounter - When updating existing items of a channel metacounter by their keys or adding new items to the metacounter
 
@@ -502,13 +494,13 @@ Update a channel metacounter - When updating existing items of a channel metacou
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateChannelMetacounterData': new SendbirdPlatformSdk.UpdateChannelMetacounterData() // UpdateChannelMetacounterData | 
 };
-apiInstance.updateChannelMetacounter(channelType, channelUrl, opts).then((data) => {
+apiInstance.updateChannelMetacounter(apiToken, channelType, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -521,9 +513,9 @@ apiInstance.updateChannelMetacounter(channelType, channelUrl, opts).then((data) 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateChannelMetacounterData** | [**UpdateChannelMetacounterData**](UpdateChannelMetacounterData.md)|  | [optional] 
 
 ### Return type
@@ -542,7 +534,7 @@ No authorization required
 
 ## updateChannelMetacounterByKey
 
-> {String: String} updateChannelMetacounterByKey(channelType, channelUrl, key, opts)
+> {String: String} updateChannelMetacounterByKey(apiToken, channelType, channelUrl, key, opts)
 
 Update a channel metacounter - When updating a specific item of a channel metacounter by its key
 
@@ -554,14 +546,14 @@ Update a channel metacounter - When updating a specific item of a channel metaco
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let key = "key_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.updateChannelMetacounterByKey(channelType, channelUrl, key, opts).then((data) => {
+apiInstance.updateChannelMetacounterByKey(apiToken, channelType, channelUrl, key, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -574,10 +566,10 @@ apiInstance.updateChannelMetacounterByKey(channelType, channelUrl, key, opts).th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **key** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **body** | **Object**|  | [optional] 
 
 ### Return type
@@ -596,7 +588,7 @@ No authorization required
 
 ## updateChannelMetadata
 
-> {String: String} updateChannelMetadata(channelType, channelUrl, opts)
+> {String: String} updateChannelMetadata(apiToken, channelType, channelUrl, opts)
 
 Update a channel metadata - When updating existing items of a channel metadata by their keys or adding new items to the metadata
 
@@ -608,13 +600,13 @@ Update a channel metadata - When updating existing items of a channel metadata b
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateChannelMetadataData': new SendbirdPlatformSdk.UpdateChannelMetadataData() // UpdateChannelMetadataData | 
 };
-apiInstance.updateChannelMetadata(channelType, channelUrl, opts).then((data) => {
+apiInstance.updateChannelMetadata(apiToken, channelType, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -627,9 +619,9 @@ apiInstance.updateChannelMetadata(channelType, channelUrl, opts).then((data) => 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateChannelMetadataData** | [**UpdateChannelMetadataData**](UpdateChannelMetadataData.md)|  | [optional] 
 
 ### Return type
@@ -648,7 +640,7 @@ No authorization required
 
 ## updateChannelMetadataByKey
 
-> {String: String} updateChannelMetadataByKey(channelType, channelUrl, key, opts)
+> {String: String} updateChannelMetadataByKey(apiToken, channelType, channelUrl, key, opts)
 
 Update a channel metadata - When updating a specific item of a channel metadata by its key
 
@@ -660,14 +652,14 @@ Update a channel metadata - When updating a specific item of a channel metadata 
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let key = "key_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.updateChannelMetadataByKey(channelType, channelUrl, key, opts).then((data) => {
+apiInstance.updateChannelMetadataByKey(apiToken, channelType, channelUrl, key, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -680,10 +672,10 @@ apiInstance.updateChannelMetadataByKey(channelType, channelUrl, key, opts).then(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **key** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **body** | **Object**|  | [optional] 
 
 ### Return type
@@ -702,7 +694,7 @@ No authorization required
 
 ## updateUserMetadata
 
-> UpdateUserMetadataResponse updateUserMetadata(userId, opts)
+> UpdateUserMetadataResponse updateUserMetadata(apiToken, userId, opts)
 
 Update a user metadata - When updating existing items of a user metadata by their keys or adding new items to the metadata
 
@@ -714,12 +706,12 @@ Update a user metadata - When updating existing items of a user metadata by thei
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateUserMetadataData': new SendbirdPlatformSdk.UpdateUserMetadataData() // UpdateUserMetadataData | 
 };
-apiInstance.updateUserMetadata(userId, opts).then((data) => {
+apiInstance.updateUserMetadata(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -732,8 +724,8 @@ apiInstance.updateUserMetadata(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateUserMetadataData** | [**UpdateUserMetadataData**](UpdateUserMetadataData.md)|  | [optional] 
 
 ### Return type
@@ -752,7 +744,7 @@ No authorization required
 
 ## updateUserMetadataByKey
 
-> {String: String} updateUserMetadataByKey(userId, key, opts)
+> {String: String} updateUserMetadataByKey(apiToken, userId, key, opts)
 
 Update a user metadata - When updating a specific item of a user metadata by its key
 
@@ -764,13 +756,13 @@ Update a user metadata - When updating a specific item of a user metadata by its
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let key = "key_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.updateUserMetadataByKey(userId, key, opts).then((data) => {
+apiInstance.updateUserMetadataByKey(apiToken, userId, key, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -783,9 +775,9 @@ apiInstance.updateUserMetadataByKey(userId, key, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
  **key** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **body** | **Object**|  | [optional] 
 
 ### Return type
@@ -804,7 +796,7 @@ No authorization required
 
 ## viewChannelMetacounter
 
-> {String: SendBirdAdditionalProperties} viewChannelMetacounter(channelType, channelUrl, opts)
+> {String: SendBirdAdditionalProperties} viewChannelMetacounter(apiToken, channelType, channelUrl, opts)
 
 View a channel metacounter - When retrieving all items of a channel metacounter
 
@@ -816,14 +808,14 @@ View a channel metacounter - When retrieving all items of a channel metacounter
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'key': "key_example", // String | 
   'keys': ["null"] // [String] | 
 };
-apiInstance.viewChannelMetacounter(channelType, channelUrl, opts).then((data) => {
+apiInstance.viewChannelMetacounter(apiToken, channelType, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -836,9 +828,9 @@ apiInstance.viewChannelMetacounter(channelType, channelUrl, opts).then((data) =>
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **key** | **String**|  | [optional] 
  **keys** | [**[String]**](String.md)|  | [optional] 
 
@@ -858,7 +850,7 @@ No authorization required
 
 ## viewChannelMetacounterByKey
 
-> {String: SendBirdAdditionalProperties} viewChannelMetacounterByKey(channelType, channelUrl, key, opts)
+> {String: SendBirdAdditionalProperties} viewChannelMetacounterByKey(apiToken, channelType, channelUrl, key)
 
 View a channel metacounter - When retrieving a specific item of a channel metacounter by its key
 
@@ -870,13 +862,11 @@ View a channel metacounter - When retrieving a specific item of a channel metaco
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let key = "key_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewChannelMetacounterByKey(channelType, channelUrl, key, opts).then((data) => {
+apiInstance.viewChannelMetacounterByKey(apiToken, channelType, channelUrl, key).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -889,10 +879,10 @@ apiInstance.viewChannelMetacounterByKey(channelType, channelUrl, key, opts).then
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **key** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -910,7 +900,7 @@ No authorization required
 
 ## viewChannelMetadata
 
-> {String: String} viewChannelMetadata(channelType, channelUrl, opts)
+> {String: String} viewChannelMetadata(apiToken, channelType, channelUrl, opts)
 
 View a channel metadata - When retrieving all items of a channel metadata
 
@@ -922,14 +912,14 @@ View a channel metadata - When retrieving all items of a channel metadata
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'key': "key_example", // String | 
   'keys': ["null"] // [String] | 
 };
-apiInstance.viewChannelMetadata(channelType, channelUrl, opts).then((data) => {
+apiInstance.viewChannelMetadata(apiToken, channelType, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -942,9 +932,9 @@ apiInstance.viewChannelMetadata(channelType, channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **key** | **String**|  | [optional] 
  **keys** | [**[String]**](String.md)|  | [optional] 
 
@@ -964,7 +954,7 @@ No authorization required
 
 ## viewChannelMetadataByKey
 
-> {String: String} viewChannelMetadataByKey(channelType, channelUrl, key, opts)
+> {String: String} viewChannelMetadataByKey(apiToken, channelType, channelUrl, key)
 
 View a channel metadata - When retrieving a specific item of a channel metadata by its key
 
@@ -976,13 +966,11 @@ View a channel metadata - When retrieving a specific item of a channel metadata 
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let key = "key_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewChannelMetadataByKey(channelType, channelUrl, key, opts).then((data) => {
+apiInstance.viewChannelMetadataByKey(apiToken, channelType, channelUrl, key).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -995,10 +983,10 @@ apiInstance.viewChannelMetadataByKey(channelType, channelUrl, key, opts).then((d
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **key** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1016,7 +1004,7 @@ No authorization required
 
 ## viewUserMetadata
 
-> ViewUserMetadataResponse viewUserMetadata(userId, opts)
+> ViewUserMetadataResponse viewUserMetadata(apiToken, userId, opts)
 
 View a user metadata - When retrieving all items of a user metadata
 
@@ -1028,13 +1016,13 @@ View a user metadata - When retrieving all items of a user metadata
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'key': "key_example", // String | 
   'keys': ["null"] // [String] | 
 };
-apiInstance.viewUserMetadata(userId, opts).then((data) => {
+apiInstance.viewUserMetadata(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1047,8 +1035,8 @@ apiInstance.viewUserMetadata(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **key** | **String**|  | [optional] 
  **keys** | [**[String]**](String.md)|  | [optional] 
 
@@ -1068,7 +1056,7 @@ No authorization required
 
 ## viewUserMetadataByKey
 
-> {String: String} viewUserMetadataByKey(userId, key, opts)
+> {String: String} viewUserMetadataByKey(apiToken, userId, key)
 
 View a user metadata - When retrieving a specific item of a user metadata by its key
 
@@ -1080,12 +1068,10 @@ View a user metadata - When retrieving a specific item of a user metadata by its
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let key = "key_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewUserMetadataByKey(userId, key, opts).then((data) => {
+apiInstance.viewUserMetadataByKey(apiToken, userId, key).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1098,9 +1084,9 @@ apiInstance.viewUserMetadataByKey(userId, key, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
  **key** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 

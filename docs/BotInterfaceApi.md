@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## createBot
 
-> CreateBotResponse createBot(opts)
+> CreateBotResponse createBot(apiToken, opts)
 
 Create a bot
 
@@ -30,11 +30,11 @@ Create a bot
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'createBotData': new SendbirdPlatformSdk.CreateBotData() // CreateBotData | 
 };
-apiInstance.createBot(opts).then((data) => {
+apiInstance.createBot(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -47,7 +47,7 @@ apiInstance.createBot(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **createBotData** | [**CreateBotData**](CreateBotData.md)|  | [optional] 
 
 ### Return type
@@ -66,7 +66,7 @@ No authorization required
 
 ## deleteBotById
 
-> deleteBotById(botUserid, opts)
+> deleteBotById(apiToken, botUserid)
 
 Delete a bot
 
@@ -78,11 +78,9 @@ Delete a bot
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let botUserid = "botUserid_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.deleteBotById(botUserid, opts).then(() => {
+apiInstance.deleteBotById(apiToken, botUserid).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -95,8 +93,8 @@ apiInstance.deleteBotById(botUserid, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **botUserid** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -114,7 +112,7 @@ No authorization required
 
 ## joinChannels
 
-> SendBirdGroupChannelCollection joinChannels(botUserid, opts)
+> SendBirdGroupChannelCollection joinChannels(apiToken, botUserid, opts)
 
 Join channels
 
@@ -126,12 +124,12 @@ Join channels
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let botUserid = "botUserid_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'joinChannelsData': new SendbirdPlatformSdk.JoinChannelsData() // JoinChannelsData | 
 };
-apiInstance.joinChannels(botUserid, opts).then((data) => {
+apiInstance.joinChannels(apiToken, botUserid, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -144,8 +142,8 @@ apiInstance.joinChannels(botUserid, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **botUserid** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **joinChannelsData** | [**JoinChannelsData**](JoinChannelsData.md)|  | [optional] 
 
 ### Return type
@@ -164,7 +162,7 @@ No authorization required
 
 ## leaveChannels
 
-> leaveChannels(botUserid, opts)
+> leaveChannels(apiToken, botUserid, opts)
 
 Leave channels - When leaving all channels
 
@@ -176,12 +174,12 @@ Leave channels - When leaving all channels
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let botUserid = "botUserid_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'channelUrl': "channelUrl_example" // String | 
 };
-apiInstance.leaveChannels(botUserid, opts).then(() => {
+apiInstance.leaveChannels(apiToken, botUserid, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -194,8 +192,8 @@ apiInstance.leaveChannels(botUserid, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **botUserid** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **channelUrl** | **String**|  | [optional] 
 
 ### Return type
@@ -214,7 +212,7 @@ No authorization required
 
 ## leaveChannelsByUrl
 
-> leaveChannelsByUrl(botUserid, channelUrl, opts)
+> leaveChannelsByUrl(apiToken, botUserid, channelUrl)
 
 Leave channels - When leaving a channel by its channel URL
 
@@ -226,12 +224,10 @@ Leave channels - When leaving a channel by its channel URL
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let botUserid = "botUserid_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.leaveChannelsByUrl(botUserid, channelUrl, opts).then(() => {
+apiInstance.leaveChannelsByUrl(apiToken, botUserid, channelUrl).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -244,9 +240,9 @@ apiInstance.leaveChannelsByUrl(botUserid, channelUrl, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **botUserid** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -264,7 +260,7 @@ No authorization required
 
 ## listBots
 
-> ListBotsResponse listBots(opts)
+> ListBotsResponse listBots(apiToken, opts)
 
 List bots
 
@@ -276,12 +272,12 @@ List bots
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listBots(opts).then((data) => {
+apiInstance.listBots(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -294,7 +290,7 @@ apiInstance.listBots(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -314,7 +310,7 @@ No authorization required
 
 ## sendBotsMessage
 
-> SendBirdMessageResponse sendBotsMessage(botUserid, opts)
+> SendBirdMessageResponse sendBotsMessage(apiToken, botUserid, opts)
 
 Send a bot&#39;s message
 
@@ -326,12 +322,12 @@ Send a bot&#39;s message
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let botUserid = "botUserid_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'sendBotSMessageData': new SendbirdPlatformSdk.SendBotSMessageData() // SendBotSMessageData | 
 };
-apiInstance.sendBotsMessage(botUserid, opts).then((data) => {
+apiInstance.sendBotsMessage(apiToken, botUserid, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -344,8 +340,8 @@ apiInstance.sendBotsMessage(botUserid, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **botUserid** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **sendBotSMessageData** | [**SendBotSMessageData**](SendBotSMessageData.md)|  | [optional] 
 
 ### Return type
@@ -364,7 +360,7 @@ No authorization required
 
 ## updateBotById
 
-> UpdateBotByIdResponse updateBotById(botUserid, opts)
+> UpdateBotByIdResponse updateBotById(apiToken, botUserid, opts)
 
 Update a bot
 
@@ -376,12 +372,12 @@ Update a bot
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let botUserid = "botUserid_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateBotByIdData': new SendbirdPlatformSdk.UpdateBotByIdData() // UpdateBotByIdData | 
 };
-apiInstance.updateBotById(botUserid, opts).then((data) => {
+apiInstance.updateBotById(apiToken, botUserid, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -394,8 +390,8 @@ apiInstance.updateBotById(botUserid, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **botUserid** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateBotByIdData** | [**UpdateBotByIdData**](UpdateBotByIdData.md)|  | [optional] 
 
 ### Return type
@@ -414,7 +410,7 @@ No authorization required
 
 ## viewBotById
 
-> ViewBotByIdResponse viewBotById(botUserid, opts)
+> ViewBotByIdResponse viewBotById(apiToken, botUserid)
 
 View a bot
 
@@ -426,11 +422,9 @@ View a bot
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let botUserid = "botUserid_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewBotById(botUserid, opts).then((data) => {
+apiInstance.viewBotById(apiToken, botUserid).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -443,8 +437,8 @@ apiInstance.viewBotById(botUserid, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **botUserid** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 

@@ -40,21 +40,25 @@ export default class WebhooksApi {
     /**
      * Choose which events to subscribe to
      * ## Choose which events to subscribe to  Chooses which events for your webhook server to receive payloads for. By subscribing to specific events based on your own needs, you can control the number of HTTP requests to your webhook server.  https://sendbird.com/docs/chat/v3/platform-api/guides/webhooks#2-choose-which-events-to-subscribe-to
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/ChooseWhichEventsToSubscribeToData} opts.chooseWhichEventsToSubscribeToData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChooseWhichEventsToSubscribeToResponse} and HTTP response
      */
-    chooseWhichEventsToSubscribeToWithHttpInfo(opts) {
+    chooseWhichEventsToSubscribeToWithHttpInfo(apiToken, opts) {
       opts = opts || {};
       let postBody = opts['chooseWhichEventsToSubscribeToData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling chooseWhichEventsToSubscribeTo");
+      }
 
       let pathParams = {
       };
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -73,13 +77,13 @@ export default class WebhooksApi {
     /**
      * Choose which events to subscribe to
      * ## Choose which events to subscribe to  Chooses which events for your webhook server to receive payloads for. By subscribing to specific events based on your own needs, you can control the number of HTTP requests to your webhook server.  https://sendbird.com/docs/chat/v3/platform-api/guides/webhooks#2-choose-which-events-to-subscribe-to
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/ChooseWhichEventsToSubscribeToData} opts.chooseWhichEventsToSubscribeToData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChooseWhichEventsToSubscribeToResponse}
      */
-    chooseWhichEventsToSubscribeTo(opts) {
-      return this.chooseWhichEventsToSubscribeToWithHttpInfo(opts)
+    chooseWhichEventsToSubscribeTo(apiToken, opts) {
+      return this.chooseWhichEventsToSubscribeToWithHttpInfo(apiToken, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -89,14 +93,18 @@ export default class WebhooksApi {
     /**
      * Retrieve a list of subscribed events
      * ## Retrieve a list of subscribed events  Retrieves a list of events for your webhook server to receive payloads for.  https://sendbird.com/docs/chat/v3/platform-api/guides/webhooks#2-retrieve-a-list-of-subscribed-events ----------------------------
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Boolean} opts.displayAllWebhookCategories 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RetrieveListOfSubscribedEventsResponse} and HTTP response
      */
-    retrieveListOfSubscribedEventsWithHttpInfo(opts) {
+    retrieveListOfSubscribedEventsWithHttpInfo(apiToken, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling retrieveListOfSubscribedEvents");
+      }
 
       let pathParams = {
       };
@@ -104,7 +112,7 @@ export default class WebhooksApi {
         'display_all_webhook_categories': opts['displayAllWebhookCategories']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -123,13 +131,13 @@ export default class WebhooksApi {
     /**
      * Retrieve a list of subscribed events
      * ## Retrieve a list of subscribed events  Retrieves a list of events for your webhook server to receive payloads for.  https://sendbird.com/docs/chat/v3/platform-api/guides/webhooks#2-retrieve-a-list-of-subscribed-events ----------------------------
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Boolean} opts.displayAllWebhookCategories 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RetrieveListOfSubscribedEventsResponse}
      */
-    retrieveListOfSubscribedEvents(opts) {
-      return this.retrieveListOfSubscribedEventsWithHttpInfo(opts)
+    retrieveListOfSubscribedEvents(apiToken, opts) {
+      return this.retrieveListOfSubscribedEventsWithHttpInfo(apiToken, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

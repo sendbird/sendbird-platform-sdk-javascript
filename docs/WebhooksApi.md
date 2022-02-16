@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## chooseWhichEventsToSubscribeTo
 
-> ChooseWhichEventsToSubscribeToResponse chooseWhichEventsToSubscribeTo(opts)
+> ChooseWhichEventsToSubscribeToResponse chooseWhichEventsToSubscribeTo(apiToken, opts)
 
 Choose which events to subscribe to
 
@@ -23,11 +23,11 @@ Choose which events to subscribe to
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.WebhooksApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'chooseWhichEventsToSubscribeToData': new SendbirdPlatformSdk.ChooseWhichEventsToSubscribeToData() // ChooseWhichEventsToSubscribeToData | 
 };
-apiInstance.chooseWhichEventsToSubscribeTo(opts).then((data) => {
+apiInstance.chooseWhichEventsToSubscribeTo(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -40,7 +40,7 @@ apiInstance.chooseWhichEventsToSubscribeTo(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **chooseWhichEventsToSubscribeToData** | [**ChooseWhichEventsToSubscribeToData**](ChooseWhichEventsToSubscribeToData.md)|  | [optional] 
 
 ### Return type
@@ -59,7 +59,7 @@ No authorization required
 
 ## retrieveListOfSubscribedEvents
 
-> RetrieveListOfSubscribedEventsResponse retrieveListOfSubscribedEvents(opts)
+> RetrieveListOfSubscribedEventsResponse retrieveListOfSubscribedEvents(apiToken, opts)
 
 Retrieve a list of subscribed events
 
@@ -71,11 +71,11 @@ Retrieve a list of subscribed events
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.WebhooksApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'displayAllWebhookCategories': true // Boolean | 
 };
-apiInstance.retrieveListOfSubscribedEvents(opts).then((data) => {
+apiInstance.retrieveListOfSubscribedEvents(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -88,7 +88,7 @@ apiInstance.retrieveListOfSubscribedEvents(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **displayAllWebhookCategories** | **Boolean**|  | [optional] 
 
 ### Return type

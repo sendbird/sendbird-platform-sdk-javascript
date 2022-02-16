@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 ## getDetailedOpenRateOfAnnouncementById
 
-> GetDetailedOpenRateOfAnnouncementByIdResponse getDetailedOpenRateOfAnnouncementById(uniqueId, opts)
+> GetDetailedOpenRateOfAnnouncementByIdResponse getDetailedOpenRateOfAnnouncementById(apiToken, uniqueId)
 
 Get detailed open rate of an announcement
 
@@ -32,11 +32,9 @@ Get detailed open rate of an announcement
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let uniqueId = "uniqueId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.getDetailedOpenRateOfAnnouncementById(uniqueId, opts).then((data) => {
+apiInstance.getDetailedOpenRateOfAnnouncementById(apiToken, uniqueId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -49,8 +47,8 @@ apiInstance.getDetailedOpenRateOfAnnouncementById(uniqueId, opts).then((data) =>
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **uniqueId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -68,7 +66,7 @@ No authorization required
 
 ## getDetailedOpenRateOfAnnouncementGroup
 
-> GetDetailedOpenRateOfAnnouncementGroupResponse getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts)
+> GetDetailedOpenRateOfAnnouncementGroupResponse getDetailedOpenRateOfAnnouncementGroup(apiToken, announcementGroup)
 
 Get detailed open rate of an announcement group
 
@@ -80,11 +78,9 @@ Get detailed open rate of an announcement group
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let announcementGroup = "announcementGroup_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts).then((data) => {
+apiInstance.getDetailedOpenRateOfAnnouncementGroup(apiToken, announcementGroup).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -97,8 +93,8 @@ apiInstance.getDetailedOpenRateOfAnnouncementGroup(announcementGroup, opts).then
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **announcementGroup** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -116,7 +112,7 @@ No authorization required
 
 ## getDetailedOpenStatusOfAnnouncementById
 
-> GetDetailedOpenStatusOfAnnouncementByIdResponse getDetailedOpenStatusOfAnnouncementById(uniqueId, opts)
+> GetDetailedOpenStatusOfAnnouncementByIdResponse getDetailedOpenStatusOfAnnouncementById(apiToken, uniqueId, opts)
 
 Get detailed open status of an announcement
 
@@ -128,16 +124,16 @@ Get detailed open status of an announcement
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let uniqueId = "uniqueId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'limit': 56, // Number | 
   'next': "next_example", // String | 
   'uniqueIds': ["null"], // [String] | 
   'channelUrls': ["null"], // [String] | 
   'hasOpened': true // Boolean | 
 };
-apiInstance.getDetailedOpenStatusOfAnnouncementById(uniqueId, opts).then((data) => {
+apiInstance.getDetailedOpenStatusOfAnnouncementById(apiToken, uniqueId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -150,8 +146,8 @@ apiInstance.getDetailedOpenStatusOfAnnouncementById(uniqueId, opts).then((data) 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **uniqueId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **next** | **String**|  | [optional] 
  **uniqueIds** | [**[String]**](String.md)|  | [optional] 
@@ -174,7 +170,7 @@ No authorization required
 
 ## getStatistics
 
-> GetStatisticsResponse getStatistics(opts)
+> GetStatisticsResponse getStatistics(apiToken)
 
 Get statistics - weekly
 
@@ -186,10 +182,8 @@ Get statistics - weekly
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.getStatistics(opts).then((data) => {
+let apiToken = {{API_TOKEN}}; // String | 
+apiInstance.getStatistics(apiToken).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -202,7 +196,7 @@ apiInstance.getStatistics(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
 
 ### Return type
 
@@ -220,7 +214,7 @@ No authorization required
 
 ## getStatisticsDaily
 
-> GetStatisticsDailyResponse getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts)
+> GetStatisticsDailyResponse getStatisticsDaily(apiToken, startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts)
 
 Get statistics - daily
 
@@ -232,6 +226,7 @@ Get statistics - daily
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let startDate = "startDate_example"; // String | 
 let endDate = "endDate_example"; // String | 
 let startWeek = "startWeek_example"; // String | 
@@ -239,10 +234,9 @@ let endWeek = "endWeek_example"; // String |
 let startMonth = "startMonth_example"; // String | 
 let endMonth = "endMonth_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'announcementGroup': "announcementGroup_example" // String | 
 };
-apiInstance.getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts).then((data) => {
+apiInstance.getStatisticsDaily(apiToken, startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -255,13 +249,13 @@ apiInstance.getStatisticsDaily(startDate, endDate, startWeek, endWeek, startMont
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **startDate** | **String**|  | 
  **endDate** | **String**|  | 
  **startWeek** | **String**|  | 
  **endWeek** | **String**|  | 
  **startMonth** | **String**|  | 
  **endMonth** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **announcementGroup** | **String**|  | [optional] 
 
 ### Return type
@@ -280,7 +274,7 @@ No authorization required
 
 ## getStatisticsMonthly
 
-> GetStatisticsMonthlyResponse getStatisticsMonthly(opts)
+> GetStatisticsMonthlyResponse getStatisticsMonthly(apiToken)
 
 Get statistics - monthly
 
@@ -292,10 +286,8 @@ Get statistics - monthly
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.getStatisticsMonthly(opts).then((data) => {
+let apiToken = {{API_TOKEN}}; // String | 
+apiInstance.getStatisticsMonthly(apiToken).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -308,7 +300,7 @@ apiInstance.getStatisticsMonthly(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
 
 ### Return type
 
@@ -326,7 +318,7 @@ No authorization required
 
 ## listAnnouncementGroups
 
-> ListAnnouncementGroupsResponse listAnnouncementGroups(opts)
+> ListAnnouncementGroupsResponse listAnnouncementGroups(apiToken, opts)
 
 List announcement groups
 
@@ -338,12 +330,12 @@ List announcement groups
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listAnnouncementGroups(opts).then((data) => {
+apiInstance.listAnnouncementGroups(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -356,7 +348,7 @@ apiInstance.listAnnouncementGroups(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -376,7 +368,7 @@ No authorization required
 
 ## listAnnouncements
 
-> ListAnnouncementsResponse listAnnouncements(opts)
+> ListAnnouncementsResponse listAnnouncements(apiToken, opts)
 
 List announcements
 
@@ -388,15 +380,15 @@ List announcements
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56, // Number | 
   'order': "order_example", // String | 
   'status': "status_example", // String | 
   'announcementGroup': "announcementGroup_example" // String | 
 };
-apiInstance.listAnnouncements(opts).then((data) => {
+apiInstance.listAnnouncements(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -409,7 +401,7 @@ apiInstance.listAnnouncements(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **order** | **String**|  | [optional] 
@@ -432,7 +424,7 @@ No authorization required
 
 ## scheduleAnnouncement
 
-> ScheduleAnnouncementResponse scheduleAnnouncement(opts)
+> ScheduleAnnouncementResponse scheduleAnnouncement(apiToken, opts)
 
 Schedule an announcement
 
@@ -444,11 +436,11 @@ Schedule an announcement
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'scheduleAnnouncementData': new SendbirdPlatformSdk.ScheduleAnnouncementData() // ScheduleAnnouncementData | 
 };
-apiInstance.scheduleAnnouncement(opts).then((data) => {
+apiInstance.scheduleAnnouncement(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -461,7 +453,7 @@ apiInstance.scheduleAnnouncement(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **scheduleAnnouncementData** | [**ScheduleAnnouncementData**](ScheduleAnnouncementData.md)|  | [optional] 
 
 ### Return type
@@ -480,7 +472,7 @@ No authorization required
 
 ## updateAnnouncementById
 
-> UpdateAnnouncementByIdResponse updateAnnouncementById(uniqueId, opts)
+> UpdateAnnouncementByIdResponse updateAnnouncementById(apiToken, uniqueId, opts)
 
 Update an announcement
 
@@ -492,12 +484,12 @@ Update an announcement
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let uniqueId = "uniqueId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateAnnouncementByIdData': new SendbirdPlatformSdk.UpdateAnnouncementByIdData() // UpdateAnnouncementByIdData | 
 };
-apiInstance.updateAnnouncementById(uniqueId, opts).then((data) => {
+apiInstance.updateAnnouncementById(apiToken, uniqueId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -510,8 +502,8 @@ apiInstance.updateAnnouncementById(uniqueId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **uniqueId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateAnnouncementByIdData** | [**UpdateAnnouncementByIdData**](UpdateAnnouncementByIdData.md)|  | [optional] 
 
 ### Return type
@@ -530,7 +522,7 @@ No authorization required
 
 ## viewAnnouncementById
 
-> ViewAnnouncementByIdResponse viewAnnouncementById(uniqueId, opts)
+> ViewAnnouncementByIdResponse viewAnnouncementById(apiToken, uniqueId)
 
 View an announcement
 
@@ -542,11 +534,9 @@ View an announcement
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let uniqueId = "uniqueId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewAnnouncementById(uniqueId, opts).then((data) => {
+apiInstance.viewAnnouncementById(apiToken, uniqueId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -559,8 +549,8 @@ apiInstance.viewAnnouncementById(uniqueId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **uniqueId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 

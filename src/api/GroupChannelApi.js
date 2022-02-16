@@ -62,15 +62,19 @@ export default class GroupChannelApi {
     /**
      * Accept an invitation
      * ## Accept an invitation  Accepts an invitation from a [private](#4-private-vs-public) group channel for a user to join. Since a user is allowed to join up to 2,000 group channels, the invitation to a user who already belongs to a maximum number of group channels will be canceled automatically.  > __Note__: This action is effective only when the `auto_accept` property of an application is set to false. You can change the value of the property using the [update default channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-default-channel-invitation-preference) action, or [update a user's channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-channel-invitation-preference) action.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-accept-an-invitation ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcAcceptInvitationData} opts.gcAcceptInvitationData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdGroupChannel} and HTTP response
      */
-    gcAcceptInvitationWithHttpInfo(channelUrl, opts) {
+    gcAcceptInvitationWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['gcAcceptInvitationData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcAcceptInvitation");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcAcceptInvitation");
@@ -82,7 +86,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -101,14 +105,14 @@ export default class GroupChannelApi {
     /**
      * Accept an invitation
      * ## Accept an invitation  Accepts an invitation from a [private](#4-private-vs-public) group channel for a user to join. Since a user is allowed to join up to 2,000 group channels, the invitation to a user who already belongs to a maximum number of group channels will be canceled automatically.  > __Note__: This action is effective only when the `auto_accept` property of an application is set to false. You can change the value of the property using the [update default channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-default-channel-invitation-preference) action, or [update a user's channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-channel-invitation-preference) action.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-accept-an-invitation ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcAcceptInvitationData} opts.gcAcceptInvitationData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdGroupChannel}
      */
-    gcAcceptInvitation(channelUrl, opts) {
-      return this.gcAcceptInvitationWithHttpInfo(channelUrl, opts)
+    gcAcceptInvitation(apiToken, channelUrl, opts) {
+      return this.gcAcceptInvitationWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -118,15 +122,19 @@ export default class GroupChannelApi {
     /**
      * Ban a user
      * ## Ban a user  Bans a user from a group channel. A banned user is immediately expelled from a channel and allowed to join the channel again after a set time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-ban-a-user ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcBanUserData} opts.gcBanUserData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcBanUserResponse} and HTTP response
      */
-    gcBanUserWithHttpInfo(channelUrl, opts) {
+    gcBanUserWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['gcBanUserData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcBanUser");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcBanUser");
@@ -138,7 +146,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -157,14 +165,14 @@ export default class GroupChannelApi {
     /**
      * Ban a user
      * ## Ban a user  Bans a user from a group channel. A banned user is immediately expelled from a channel and allowed to join the channel again after a set time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-ban-a-user ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcBanUserData} opts.gcBanUserData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcBanUserResponse}
      */
-    gcBanUser(channelUrl, opts) {
-      return this.gcBanUserWithHttpInfo(channelUrl, opts)
+    gcBanUser(apiToken, channelUrl, opts) {
+      return this.gcBanUserWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -174,16 +182,20 @@ export default class GroupChannelApi {
     /**
      * Cancel the registration of operators
      * ## Cancel the registration of operators  Cancels the registration of operators from a group channel but leave them as members.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-cancel-the-registration-of-operators ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to cancel the registration of operators.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Array.<String>} operatorIds 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Boolean} opts.deleteAll 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    gcCancelTheRegistrationOfOperatorsWithHttpInfo(channelUrl, operatorIds, opts) {
+    gcCancelTheRegistrationOfOperatorsWithHttpInfo(apiToken, channelUrl, operatorIds, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcCancelTheRegistrationOfOperators");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcCancelTheRegistrationOfOperators");
@@ -201,7 +213,7 @@ export default class GroupChannelApi {
         'delete_all': opts['deleteAll']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -220,15 +232,15 @@ export default class GroupChannelApi {
     /**
      * Cancel the registration of operators
      * ## Cancel the registration of operators  Cancels the registration of operators from a group channel but leave them as members.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-cancel-the-registration-of-operators ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to cancel the registration of operators.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Array.<String>} operatorIds 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Boolean} opts.deleteAll 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    gcCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts) {
-      return this.gcCancelTheRegistrationOfOperatorsWithHttpInfo(channelUrl, operatorIds, opts)
+    gcCancelTheRegistrationOfOperators(apiToken, channelUrl, operatorIds, opts) {
+      return this.gcCancelTheRegistrationOfOperatorsWithHttpInfo(apiToken, channelUrl, operatorIds, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -238,15 +250,17 @@ export default class GroupChannelApi {
     /**
      * Check if member
      * ## Check if member  Checks whether the user is a member of the group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-check-if-member ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcCheckIfMemberByIdResponse} and HTTP response
      */
-    gcCheckIfMemberByIdWithHttpInfo(channelUrl, userId, opts) {
-      opts = opts || {};
+    gcCheckIfMemberByIdWithHttpInfo(apiToken, channelUrl, userId) {
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcCheckIfMemberById");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcCheckIfMemberById");
@@ -263,7 +277,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -282,14 +296,13 @@ export default class GroupChannelApi {
     /**
      * Check if member
      * ## Check if member  Checks whether the user is a member of the group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-check-if-member ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcCheckIfMemberByIdResponse}
      */
-    gcCheckIfMemberById(channelUrl, userId, opts) {
-      return this.gcCheckIfMemberByIdWithHttpInfo(channelUrl, userId, opts)
+    gcCheckIfMemberById(apiToken, channelUrl, userId) {
+      return this.gcCheckIfMemberByIdWithHttpInfo(apiToken, channelUrl, userId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -299,21 +312,25 @@ export default class GroupChannelApi {
     /**
      * Create a channel
      * ## Create a channel  Creates a new group channel.  > If you are creating a 1-on-1 direct messaging channel for a user, it is recommended that you turn on the `distinct` property. If the property is turned off, a user can create a new channel even if they have had the previous chat between them, and therefore can't see previously sent messages or data in the new channel. On the other hand, if the `distinct` property is turned on, every 1-on-1 conversation between the same two users occurs within the same channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-create-a-channel
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcCreateChannelData} opts.gcCreateChannelData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdGroupChannel} and HTTP response
      */
-    gcCreateChannelWithHttpInfo(opts) {
+    gcCreateChannelWithHttpInfo(apiToken, opts) {
       opts = opts || {};
       let postBody = opts['gcCreateChannelData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcCreateChannel");
+      }
 
       let pathParams = {
       };
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -332,13 +349,13 @@ export default class GroupChannelApi {
     /**
      * Create a channel
      * ## Create a channel  Creates a new group channel.  > If you are creating a 1-on-1 direct messaging channel for a user, it is recommended that you turn on the `distinct` property. If the property is turned off, a user can create a new channel even if they have had the previous chat between them, and therefore can't see previously sent messages or data in the new channel. On the other hand, if the `distinct` property is turned on, every 1-on-1 conversation between the same two users occurs within the same channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-create-a-channel
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcCreateChannelData} opts.gcCreateChannelData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdGroupChannel}
      */
-    gcCreateChannel(opts) {
-      return this.gcCreateChannelWithHttpInfo(opts)
+    gcCreateChannel(apiToken, opts) {
+      return this.gcCreateChannelWithHttpInfo(apiToken, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -348,15 +365,19 @@ export default class GroupChannelApi {
     /**
      * Decline an invitation
      * ## Decline an invitation  Declines an invitation for a user to not join a [private](#4-private-vs-public) group channel.  > __Note__: This action is effective only when the `auto_accept` property of an application is set to false. You can change the value of the property using the [update default channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-default-channel-invitation-preference) action, or [update a user's channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-channel-invitation-preference) action.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-decline-an-invitation ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcDeclineInvitationData} opts.gcDeclineInvitationData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    gcDeclineInvitationWithHttpInfo(channelUrl, opts) {
+    gcDeclineInvitationWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['gcDeclineInvitationData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcDeclineInvitation");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcDeclineInvitation");
@@ -368,7 +389,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -387,14 +408,14 @@ export default class GroupChannelApi {
     /**
      * Decline an invitation
      * ## Decline an invitation  Declines an invitation for a user to not join a [private](#4-private-vs-public) group channel.  > __Note__: This action is effective only when the `auto_accept` property of an application is set to false. You can change the value of the property using the [update default channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-default-channel-invitation-preference) action, or [update a user's channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-channel-invitation-preference) action.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-decline-an-invitation ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcDeclineInvitationData} opts.gcDeclineInvitationData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    gcDeclineInvitation(channelUrl, opts) {
-      return this.gcDeclineInvitationWithHttpInfo(channelUrl, opts)
+    gcDeclineInvitation(apiToken, channelUrl, opts) {
+      return this.gcDeclineInvitationWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -404,14 +425,16 @@ export default class GroupChannelApi {
     /**
      * Delete a channel
      * ## Delete a channel  Deletes a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-delete-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    gcDeleteChannelByUrlWithHttpInfo(channelUrl, opts) {
-      opts = opts || {};
+    gcDeleteChannelByUrlWithHttpInfo(apiToken, channelUrl) {
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcDeleteChannelByUrl");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcDeleteChannelByUrl");
@@ -423,7 +446,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -442,13 +465,12 @@ export default class GroupChannelApi {
     /**
      * Delete a channel
      * ## Delete a channel  Deletes a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-delete-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    gcDeleteChannelByUrl(channelUrl, opts) {
-      return this.gcDeleteChannelByUrlWithHttpInfo(channelUrl, opts)
+    gcDeleteChannelByUrl(apiToken, channelUrl) {
+      return this.gcDeleteChannelByUrlWithHttpInfo(apiToken, channelUrl)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -458,15 +480,19 @@ export default class GroupChannelApi {
     /**
      * Freeze a channel
      * ## Freeze a channel  Freezes or unfreezes a group channel.  > __Note__: Only users designated as channel operators are allowed to talk when a channel is frozen.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-freeze-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcFreezeChannelData} opts.gcFreezeChannelData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdGroupChannel} and HTTP response
      */
-    gcFreezeChannelWithHttpInfo(channelUrl, opts) {
+    gcFreezeChannelWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['gcFreezeChannelData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcFreezeChannel");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcFreezeChannel");
@@ -478,7 +504,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -497,14 +523,14 @@ export default class GroupChannelApi {
     /**
      * Freeze a channel
      * ## Freeze a channel  Freezes or unfreezes a group channel.  > __Note__: Only users designated as channel operators are allowed to talk when a channel is frozen.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-freeze-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcFreezeChannelData} opts.gcFreezeChannelData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdGroupChannel}
      */
-    gcFreezeChannel(channelUrl, opts) {
-      return this.gcFreezeChannelWithHttpInfo(channelUrl, opts)
+    gcFreezeChannel(apiToken, channelUrl, opts) {
+      return this.gcFreezeChannelWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -514,15 +540,19 @@ export default class GroupChannelApi {
     /**
      * Hide or archive a channel
      * ## Hide or archive a channel  Hides or archives a channel from the channel list of either a specific user or entire channel members. Normally, a hidden channel comes back and shows up in the channel list when a member in the channel sends a new message. This automatically-triggered behavior is intended for users who want to temporarily remove a channel from their list because [leaving the channel](#2-leave-the-channel) would delete all the past messages and stored data.  You can also leave out a channel from the list and archive the channel. The channel doesn't appear even when receiving a new message from other member.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-hide-or-archive-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcHideOrArchiveChannelData} opts.gcHideOrArchiveChannelData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    gcHideOrArchiveChannelWithHttpInfo(channelUrl, opts) {
+    gcHideOrArchiveChannelWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['gcHideOrArchiveChannelData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcHideOrArchiveChannel");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcHideOrArchiveChannel");
@@ -534,7 +564,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -553,14 +583,14 @@ export default class GroupChannelApi {
     /**
      * Hide or archive a channel
      * ## Hide or archive a channel  Hides or archives a channel from the channel list of either a specific user or entire channel members. Normally, a hidden channel comes back and shows up in the channel list when a member in the channel sends a new message. This automatically-triggered behavior is intended for users who want to temporarily remove a channel from their list because [leaving the channel](#2-leave-the-channel) would delete all the past messages and stored data.  You can also leave out a channel from the list and archive the channel. The channel doesn't appear even when receiving a new message from other member.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-hide-or-archive-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcHideOrArchiveChannelData} opts.gcHideOrArchiveChannelData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    gcHideOrArchiveChannel(channelUrl, opts) {
-      return this.gcHideOrArchiveChannelWithHttpInfo(channelUrl, opts)
+    gcHideOrArchiveChannel(apiToken, channelUrl, opts) {
+      return this.gcHideOrArchiveChannelWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -570,15 +600,19 @@ export default class GroupChannelApi {
     /**
      * Invite as members
      * ## Invite as members  Invites one or more users as members into the group channel.  > __Note__: By default, users in your application automatically join a [private](#4-private-vs-public) group channel promptly from an invitation without having to accept it. If you want to give them the option to decide whether to accept or decline an invitation, you should set the value of channel invitation preference to false through the [update default channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-default-channel-invitation-preference) action. Or using the [update a user's channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-channel-invitation-preference) action, you can also allow the option individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-invite-as-members ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcInviteAsMembersData} opts.gcInviteAsMembersData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdGroupChannel} and HTTP response
      */
-    gcInviteAsMembersWithHttpInfo(channelUrl, opts) {
+    gcInviteAsMembersWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['gcInviteAsMembersData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcInviteAsMembers");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcInviteAsMembers");
@@ -590,7 +624,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -609,14 +643,14 @@ export default class GroupChannelApi {
     /**
      * Invite as members
      * ## Invite as members  Invites one or more users as members into the group channel.  > __Note__: By default, users in your application automatically join a [private](#4-private-vs-public) group channel promptly from an invitation without having to accept it. If you want to give them the option to decide whether to accept or decline an invitation, you should set the value of channel invitation preference to false through the [update default channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-default-channel-invitation-preference) action. Or using the [update a user's channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-channel-invitation-preference) action, you can also allow the option individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-invite-as-members ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcInviteAsMembersData} opts.gcInviteAsMembersData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdGroupChannel}
      */
-    gcInviteAsMembers(channelUrl, opts) {
-      return this.gcInviteAsMembersWithHttpInfo(channelUrl, opts)
+    gcInviteAsMembers(apiToken, channelUrl, opts) {
+      return this.gcInviteAsMembersWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -626,15 +660,19 @@ export default class GroupChannelApi {
     /**
      * Join a channel
      * ## Join a channel  Allows a user to join a [public](#4-private-vs-public) group channel. Since a user is allowed to join up to 2,000 group channels, a user who already belongs to a maximum number of group channels can't join a new channel.  > __Note__: This action is only permitted for public group channels where the `is_public` property is true.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-join-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcJoinChannelData} opts.gcJoinChannelData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    gcJoinChannelWithHttpInfo(channelUrl, opts) {
+    gcJoinChannelWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['gcJoinChannelData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcJoinChannel");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcJoinChannel");
@@ -646,7 +684,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -665,14 +703,14 @@ export default class GroupChannelApi {
     /**
      * Join a channel
      * ## Join a channel  Allows a user to join a [public](#4-private-vs-public) group channel. Since a user is allowed to join up to 2,000 group channels, a user who already belongs to a maximum number of group channels can't join a new channel.  > __Note__: This action is only permitted for public group channels where the `is_public` property is true.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-join-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcJoinChannelData} opts.gcJoinChannelData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    gcJoinChannel(channelUrl, opts) {
-      return this.gcJoinChannelWithHttpInfo(channelUrl, opts)
+    gcJoinChannel(apiToken, channelUrl, opts) {
+      return this.gcJoinChannelWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -682,15 +720,19 @@ export default class GroupChannelApi {
     /**
      * Leave a channel
      * ## Leave a channel  Makes one or more members leave a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-leave-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcLeaveChannelData} opts.gcLeaveChannelData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    gcLeaveChannelWithHttpInfo(channelUrl, opts) {
+    gcLeaveChannelWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['gcLeaveChannelData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcLeaveChannel");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcLeaveChannel");
@@ -702,7 +744,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -721,14 +763,14 @@ export default class GroupChannelApi {
     /**
      * Leave a channel
      * ## Leave a channel  Makes one or more members leave a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-leave-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcLeaveChannelData} opts.gcLeaveChannelData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    gcLeaveChannel(channelUrl, opts) {
-      return this.gcLeaveChannelWithHttpInfo(channelUrl, opts)
+    gcLeaveChannel(apiToken, channelUrl, opts) {
+      return this.gcLeaveChannelWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -738,16 +780,20 @@ export default class GroupChannelApi {
     /**
      * List banned users
      * ## List banned users  Retrieves a list of the banned users from a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-list-banned-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel where to retrieve a list of banned users.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcListBannedUsersResponse} and HTTP response
      */
-    gcListBannedUsersWithHttpInfo(channelUrl, opts) {
+    gcListBannedUsersWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcListBannedUsers");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcListBannedUsers");
@@ -761,7 +807,7 @@ export default class GroupChannelApi {
         'limit': opts['limit']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -780,15 +826,15 @@ export default class GroupChannelApi {
     /**
      * List banned users
      * ## List banned users  Retrieves a list of the banned users from a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-list-banned-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel where to retrieve a list of banned users.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcListBannedUsersResponse}
      */
-    gcListBannedUsers(channelUrl, opts) {
-      return this.gcListBannedUsersWithHttpInfo(channelUrl, opts)
+    gcListBannedUsers(apiToken, channelUrl, opts) {
+      return this.gcListBannedUsersWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -798,8 +844,8 @@ export default class GroupChannelApi {
     /**
      * List channels
      * ## List channels  Retrieves a list of group channels in the application.  > __Note__: If you want to get a list of a specific user's group channels, use the [list my group channels](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-my-group-channels) action instead.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-list-channels ----------------------------
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {String} opts.distinctMode 
@@ -844,9 +890,13 @@ export default class GroupChannelApi {
      * @param {String} opts.userId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcListChannelsResponse} and HTTP response
      */
-    gcListChannelsWithHttpInfo(opts) {
+    gcListChannelsWithHttpInfo(apiToken, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcListChannels");
+      }
 
       let pathParams = {
       };
@@ -895,7 +945,7 @@ export default class GroupChannelApi {
         'user_id': opts['userId']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -914,8 +964,8 @@ export default class GroupChannelApi {
     /**
      * List channels
      * ## List channels  Retrieves a list of group channels in the application.  > __Note__: If you want to get a list of a specific user's group channels, use the [list my group channels](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-my-group-channels) action instead.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-list-channels ----------------------------
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {String} opts.distinctMode 
@@ -960,8 +1010,8 @@ export default class GroupChannelApi {
      * @param {String} opts.userId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcListChannelsResponse}
      */
-    gcListChannels(opts) {
-      return this.gcListChannelsWithHttpInfo(opts)
+    gcListChannels(apiToken, opts) {
+      return this.gcListChannelsWithHttpInfo(apiToken, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -971,9 +1021,9 @@ export default class GroupChannelApi {
     /**
      * List members
      * ## List members  Retrieves a list of members of a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-list-members ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of members of.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {Boolean} opts.showDeliveryReceipt 
@@ -985,9 +1035,13 @@ export default class GroupChannelApi {
      * @param {String} opts.nicknameStartswith 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcListMembersResponse} and HTTP response
      */
-    gcListMembersWithHttpInfo(channelUrl, opts) {
+    gcListMembersWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcListMembers");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcListMembers");
@@ -1008,7 +1062,7 @@ export default class GroupChannelApi {
         'nickname_startswith': opts['nicknameStartswith']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1027,9 +1081,9 @@ export default class GroupChannelApi {
     /**
      * List members
      * ## List members  Retrieves a list of members of a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-list-members ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of members of.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {Boolean} opts.showDeliveryReceipt 
@@ -1041,8 +1095,8 @@ export default class GroupChannelApi {
      * @param {String} opts.nicknameStartswith 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcListMembersResponse}
      */
-    gcListMembers(channelUrl, opts) {
-      return this.gcListMembersWithHttpInfo(channelUrl, opts)
+    gcListMembers(apiToken, channelUrl, opts) {
+      return this.gcListMembersWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1052,16 +1106,20 @@ export default class GroupChannelApi {
     /**
      * List muted users
      * ## List muted users  Retrieves a list of the muted users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-list-muted-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of muted users.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcListMutedUsersResponse} and HTTP response
      */
-    gcListMutedUsersWithHttpInfo(channelUrl, opts) {
+    gcListMutedUsersWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcListMutedUsers");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcListMutedUsers");
@@ -1075,7 +1133,7 @@ export default class GroupChannelApi {
         'limit': opts['limit']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1094,15 +1152,15 @@ export default class GroupChannelApi {
     /**
      * List muted users
      * ## List muted users  Retrieves a list of the muted users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-list-muted-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of muted users.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcListMutedUsersResponse}
      */
-    gcListMutedUsers(channelUrl, opts) {
-      return this.gcListMutedUsersWithHttpInfo(channelUrl, opts)
+    gcListMutedUsers(apiToken, channelUrl, opts) {
+      return this.gcListMutedUsersWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1112,16 +1170,20 @@ export default class GroupChannelApi {
     /**
      * List operators
      * ## List operators  Retrieves a list of operators of a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-list-operators ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of operators.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcListOperatorsResponse} and HTTP response
      */
-    gcListOperatorsWithHttpInfo(channelUrl, opts) {
+    gcListOperatorsWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcListOperators");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcListOperators");
@@ -1135,7 +1197,7 @@ export default class GroupChannelApi {
         'limit': opts['limit']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1154,15 +1216,15 @@ export default class GroupChannelApi {
     /**
      * List operators
      * ## List operators  Retrieves a list of operators of a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-list-operators ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of operators.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcListOperatorsResponse}
      */
-    gcListOperators(channelUrl, opts) {
-      return this.gcListOperatorsWithHttpInfo(channelUrl, opts)
+    gcListOperators(apiToken, channelUrl, opts) {
+      return this.gcListOperatorsWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1172,15 +1234,19 @@ export default class GroupChannelApi {
     /**
      * Mute a user
      * ## Mute a user  Mutes a user in a group channel. A muted user remains in the channel and is allowed to view the messages, but can't send any messages until unmuted.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-mute-a-user ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcMuteUserData} opts.gcMuteUserData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdGroupChannel} and HTTP response
      */
-    gcMuteUserWithHttpInfo(channelUrl, opts) {
+    gcMuteUserWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['gcMuteUserData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcMuteUser");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcMuteUser");
@@ -1192,7 +1258,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1211,14 +1277,14 @@ export default class GroupChannelApi {
     /**
      * Mute a user
      * ## Mute a user  Mutes a user in a group channel. A muted user remains in the channel and is allowed to view the messages, but can't send any messages until unmuted.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-mute-a-user ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcMuteUserData} opts.gcMuteUserData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdGroupChannel}
      */
-    gcMuteUser(channelUrl, opts) {
-      return this.gcMuteUserWithHttpInfo(channelUrl, opts)
+    gcMuteUser(apiToken, channelUrl, opts) {
+      return this.gcMuteUserWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1228,15 +1294,19 @@ export default class GroupChannelApi {
     /**
      * Register operators
      * ## Register operators  Registers one or more operators to a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-register-operators ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcRegisterOperatorsData} opts.gcRegisterOperatorsData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcRegisterOperatorsResponse} and HTTP response
      */
-    gcRegisterOperatorsWithHttpInfo(channelUrl, opts) {
+    gcRegisterOperatorsWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['gcRegisterOperatorsData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcRegisterOperators");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcRegisterOperators");
@@ -1248,7 +1318,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1267,14 +1337,14 @@ export default class GroupChannelApi {
     /**
      * Register operators
      * ## Register operators  Registers one or more operators to a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-register-operators ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcRegisterOperatorsData} opts.gcRegisterOperatorsData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcRegisterOperatorsResponse}
      */
-    gcRegisterOperators(channelUrl, opts) {
-      return this.gcRegisterOperatorsWithHttpInfo(channelUrl, opts)
+    gcRegisterOperators(apiToken, channelUrl, opts) {
+      return this.gcRegisterOperatorsWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1284,15 +1354,19 @@ export default class GroupChannelApi {
     /**
      * Reset chat history
      * ## Reset chat history  Resets the properties related to a user's chat history in a group channel, then clears the existing messages in the channel on the user's side only. A user can no longer see the messages in a group channel once this action is called, but those messages are not deleted from the database of the Sendbird system. All other members in the channel can retrieve and see the messages.  This action simply clears the messages for the user by updating the `last_message` and `read_receipt` properties of the [channel](#2-types-of-a-channel-3-resource-representation) resource in addition to other internally managed data such as the number of the user's unread message.  Using the `reset_all` property, you can also reset the properties related to all users' chat history in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-reset-chat-history ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcResetChatHistoryData} opts.gcResetChatHistoryData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    gcResetChatHistoryWithHttpInfo(channelUrl, opts) {
+    gcResetChatHistoryWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['gcResetChatHistoryData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcResetChatHistory");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcResetChatHistory");
@@ -1304,7 +1378,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1323,14 +1397,14 @@ export default class GroupChannelApi {
     /**
      * Reset chat history
      * ## Reset chat history  Resets the properties related to a user's chat history in a group channel, then clears the existing messages in the channel on the user's side only. A user can no longer see the messages in a group channel once this action is called, but those messages are not deleted from the database of the Sendbird system. All other members in the channel can retrieve and see the messages.  This action simply clears the messages for the user by updating the `last_message` and `read_receipt` properties of the [channel](#2-types-of-a-channel-3-resource-representation) resource in addition to other internally managed data such as the number of the user's unread message.  Using the `reset_all` property, you can also reset the properties related to all users' chat history in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-reset-chat-history ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcResetChatHistoryData} opts.gcResetChatHistoryData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    gcResetChatHistory(channelUrl, opts) {
-      return this.gcResetChatHistoryWithHttpInfo(channelUrl, opts)
+    gcResetChatHistory(apiToken, channelUrl, opts) {
+      return this.gcResetChatHistoryWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1340,15 +1414,17 @@ export default class GroupChannelApi {
     /**
      * Unban a user
      * ## Unban a user  Unbans a user from a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-unban-a-user ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    gcUnbanUserByIdWithHttpInfo(channelUrl, bannedUserId, opts) {
-      opts = opts || {};
+    gcUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId) {
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcUnbanUserById");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcUnbanUserById");
@@ -1365,7 +1441,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1384,14 +1460,13 @@ export default class GroupChannelApi {
     /**
      * Unban a user
      * ## Unban a user  Unbans a user from a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-unban-a-user ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    gcUnbanUserById(channelUrl, bannedUserId, opts) {
-      return this.gcUnbanUserByIdWithHttpInfo(channelUrl, bannedUserId, opts)
+    gcUnbanUserById(apiToken, channelUrl, bannedUserId) {
+      return this.gcUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1401,16 +1476,20 @@ export default class GroupChannelApi {
     /**
      * Unhide or unarchive a channel
      * ## Unhide or unarchive a channel  Makes a hidden or archived channel reappear in the channel list of either a specific user or entire channel members.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-unhide-or-unarchive-a-channel ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to unhide or unarchive.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} userId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Boolean} opts.shouldUnhideAll 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    gcUnhideOrUnarchiveChannelWithHttpInfo(channelUrl, userId, opts) {
+    gcUnhideOrUnarchiveChannelWithHttpInfo(apiToken, channelUrl, userId, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcUnhideOrUnarchiveChannel");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcUnhideOrUnarchiveChannel");
@@ -1428,7 +1507,7 @@ export default class GroupChannelApi {
         'should_unhide_all': opts['shouldUnhideAll']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1447,15 +1526,15 @@ export default class GroupChannelApi {
     /**
      * Unhide or unarchive a channel
      * ## Unhide or unarchive a channel  Makes a hidden or archived channel reappear in the channel list of either a specific user or entire channel members.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-unhide-or-unarchive-a-channel ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to unhide or unarchive.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} userId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Boolean} opts.shouldUnhideAll 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    gcUnhideOrUnarchiveChannel(channelUrl, userId, opts) {
-      return this.gcUnhideOrUnarchiveChannelWithHttpInfo(channelUrl, userId, opts)
+    gcUnhideOrUnarchiveChannel(apiToken, channelUrl, userId, opts) {
+      return this.gcUnhideOrUnarchiveChannelWithHttpInfo(apiToken, channelUrl, userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1465,15 +1544,17 @@ export default class GroupChannelApi {
     /**
      * Unmute a user
      * ## Unmute a user  Unmutes a user within a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-unmute-a-user ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    gcUnmuteUserByIdWithHttpInfo(channelUrl, mutedUserId, opts) {
-      opts = opts || {};
+    gcUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId) {
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcUnmuteUserById");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcUnmuteUserById");
@@ -1490,7 +1571,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1509,14 +1590,13 @@ export default class GroupChannelApi {
     /**
      * Unmute a user
      * ## Unmute a user  Unmutes a user within a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-unmute-a-user ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    gcUnmuteUserById(channelUrl, mutedUserId, opts) {
-      return this.gcUnmuteUserByIdWithHttpInfo(channelUrl, mutedUserId, opts)
+    gcUnmuteUserById(apiToken, channelUrl, mutedUserId) {
+      return this.gcUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1526,16 +1606,20 @@ export default class GroupChannelApi {
     /**
      * Update a ban
      * ## Update a ban  Updates details of a ban imposed on a user. You can change the length of the ban with this action, and also provide an updated description.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-update-a-ban ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcUpdateBanByIdData} opts.gcUpdateBanByIdData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
      */
-    gcUpdateBanByIdWithHttpInfo(channelUrl, bannedUserId, opts) {
+    gcUpdateBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId, opts) {
       opts = opts || {};
       let postBody = opts['gcUpdateBanByIdData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcUpdateBanById");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcUpdateBanById");
@@ -1552,7 +1636,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1571,15 +1655,15 @@ export default class GroupChannelApi {
     /**
      * Update a ban
      * ## Update a ban  Updates details of a ban imposed on a user. You can change the length of the ban with this action, and also provide an updated description.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-update-a-ban ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcUpdateBanByIdData} opts.gcUpdateBanByIdData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
      */
-    gcUpdateBanById(channelUrl, bannedUserId, opts) {
-      return this.gcUpdateBanByIdWithHttpInfo(channelUrl, bannedUserId, opts)
+    gcUpdateBanById(apiToken, channelUrl, bannedUserId, opts) {
+      return this.gcUpdateBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1589,15 +1673,19 @@ export default class GroupChannelApi {
     /**
      * Update a channel
      * ## Update a channel  Updates information on a group channel.  > __Note__: You can't change the members of the channel here. To do so, see [invite as members](#2-invite-as-members) action below.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-update-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcUpdateChannelByUrlData} opts.gcUpdateChannelByUrlData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdGroupChannel} and HTTP response
      */
-    gcUpdateChannelByUrlWithHttpInfo(channelUrl, opts) {
+    gcUpdateChannelByUrlWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['gcUpdateChannelByUrlData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcUpdateChannelByUrl");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcUpdateChannelByUrl");
@@ -1609,7 +1697,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1628,14 +1716,14 @@ export default class GroupChannelApi {
     /**
      * Update a channel
      * ## Update a channel  Updates information on a group channel.  > __Note__: You can't change the members of the channel here. To do so, see [invite as members](#2-invite-as-members) action below.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-update-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GcUpdateChannelByUrlData} opts.gcUpdateChannelByUrlData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdGroupChannel}
      */
-    gcUpdateChannelByUrl(channelUrl, opts) {
-      return this.gcUpdateChannelByUrlWithHttpInfo(channelUrl, opts)
+    gcUpdateChannelByUrl(apiToken, channelUrl, opts) {
+      return this.gcUpdateChannelByUrlWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1645,15 +1733,17 @@ export default class GroupChannelApi {
     /**
      * View a ban
      * ## View a ban  Retrieves details of a ban imposed on a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-view-a-ban ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
      */
-    gcViewBanByIdWithHttpInfo(channelUrl, bannedUserId, opts) {
-      opts = opts || {};
+    gcViewBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId) {
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcViewBanById");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcViewBanById");
@@ -1670,7 +1760,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1689,14 +1779,13 @@ export default class GroupChannelApi {
     /**
      * View a ban
      * ## View a ban  Retrieves details of a ban imposed on a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-view-a-ban ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
      */
-    gcViewBanById(channelUrl, bannedUserId, opts) {
-      return this.gcViewBanByIdWithHttpInfo(channelUrl, bannedUserId, opts)
+    gcViewBanById(apiToken, channelUrl, bannedUserId) {
+      return this.gcViewBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1706,9 +1795,9 @@ export default class GroupChannelApi {
     /**
      * View a channel
      * ## View a channel  Retrieves information on a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-view-a-channel ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Boolean} opts.showDeliveryReceipt 
      * @param {Boolean} opts.showReadReceipt 
      * @param {Boolean} opts.showMember 
@@ -1716,9 +1805,13 @@ export default class GroupChannelApi {
      * @param {Boolean} opts.member 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdGroupChannel} and HTTP response
      */
-    gcViewChannelByUrlWithHttpInfo(channelUrl, opts) {
+    gcViewChannelByUrlWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcViewChannelByUrl");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcViewChannelByUrl");
@@ -1735,7 +1828,7 @@ export default class GroupChannelApi {
         'member': opts['member']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1754,9 +1847,9 @@ export default class GroupChannelApi {
     /**
      * View a channel
      * ## View a channel  Retrieves information on a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-view-a-channel ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Boolean} opts.showDeliveryReceipt 
      * @param {Boolean} opts.showReadReceipt 
      * @param {Boolean} opts.showMember 
@@ -1764,8 +1857,8 @@ export default class GroupChannelApi {
      * @param {Boolean} opts.member 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdGroupChannel}
      */
-    gcViewChannelByUrl(channelUrl, opts) {
-      return this.gcViewChannelByUrlWithHttpInfo(channelUrl, opts)
+    gcViewChannelByUrl(apiToken, channelUrl, opts) {
+      return this.gcViewChannelByUrlWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1775,15 +1868,17 @@ export default class GroupChannelApi {
     /**
      * View a mute
      * ## View a mute  Checks if a user is muted in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-view-a-mute ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcViewMuteByIdResponse} and HTTP response
      */
-    gcViewMuteByIdWithHttpInfo(channelUrl, mutedUserId, opts) {
-      opts = opts || {};
+    gcViewMuteByIdWithHttpInfo(apiToken, channelUrl, mutedUserId) {
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling gcViewMuteById");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling gcViewMuteById");
@@ -1800,7 +1895,7 @@ export default class GroupChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1819,14 +1914,13 @@ export default class GroupChannelApi {
     /**
      * View a mute
      * ## View a mute  Checks if a user is muted in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-view-a-mute ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcViewMuteByIdResponse}
      */
-    gcViewMuteById(channelUrl, mutedUserId, opts) {
-      return this.gcViewMuteByIdWithHttpInfo(channelUrl, mutedUserId, opts)
+    gcViewMuteById(apiToken, channelUrl, mutedUserId) {
+      return this.gcViewMuteByIdWithHttpInfo(apiToken, channelUrl, mutedUserId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

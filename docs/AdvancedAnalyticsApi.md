@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## retrieveAdvancedAnalyticsMetrics
 
-> RetrieveAdvancedAnalyticsMetricsResponse retrieveAdvancedAnalyticsMetrics(opts)
+> RetrieveAdvancedAnalyticsMetricsResponse retrieveAdvancedAnalyticsMetrics(apiToken)
 
 Retrieve Advanced analytics metrics
 
@@ -22,10 +22,8 @@ Retrieve Advanced analytics metrics
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AdvancedAnalyticsApi();
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.retrieveAdvancedAnalyticsMetrics(opts).then((data) => {
+let apiToken = {{API_TOKEN}}; // String | 
+apiInstance.retrieveAdvancedAnalyticsMetrics(apiToken).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -38,7 +36,7 @@ apiInstance.retrieveAdvancedAnalyticsMetrics(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
 
 ### Return type
 

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## cancelTheRegistrationOfGdprRequestById
 
-> cancelTheRegistrationOfGdprRequestById(requestId, opts)
+> cancelTheRegistrationOfGdprRequestById(apiToken, requestId)
 
 Cancel the registration of a GDPR request
 
@@ -25,11 +25,9 @@ Cancel the registration of a GDPR request
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.DataPrivacyApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let requestId = "requestId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.cancelTheRegistrationOfGdprRequestById(requestId, opts).then(() => {
+apiInstance.cancelTheRegistrationOfGdprRequestById(apiToken, requestId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -42,8 +40,8 @@ apiInstance.cancelTheRegistrationOfGdprRequestById(requestId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **requestId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -61,7 +59,7 @@ No authorization required
 
 ## listGdprRequests
 
-> ListGdprRequestsResponse listGdprRequests(opts)
+> ListGdprRequestsResponse listGdprRequests(apiToken, opts)
 
 List GDPR requests
 
@@ -73,12 +71,12 @@ List GDPR requests
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.DataPrivacyApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listGdprRequests(opts).then((data) => {
+apiInstance.listGdprRequests(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -91,7 +89,7 @@ apiInstance.listGdprRequests(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -111,7 +109,7 @@ No authorization required
 
 ## registerGdprRequest
 
-> RegisterGdprRequestResponse registerGdprRequest(opts)
+> RegisterGdprRequestResponse registerGdprRequest(apiToken, opts)
 
 Register a GDPR request
 
@@ -123,11 +121,11 @@ Register a GDPR request
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.DataPrivacyApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'registerGdprRequestData': new SendbirdPlatformSdk.RegisterGdprRequestData() // RegisterGdprRequestData | 
 };
-apiInstance.registerGdprRequest(opts).then((data) => {
+apiInstance.registerGdprRequest(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -140,7 +138,7 @@ apiInstance.registerGdprRequest(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **registerGdprRequestData** | [**RegisterGdprRequestData**](RegisterGdprRequestData.md)|  | [optional] 
 
 ### Return type
@@ -159,7 +157,7 @@ No authorization required
 
 ## viewGdprRequestById
 
-> ViewGdprRequestByIdResponse viewGdprRequestById(requestId, opts)
+> ViewGdprRequestByIdResponse viewGdprRequestById(apiToken, requestId)
 
 View a GDPR request
 
@@ -171,11 +169,9 @@ View a GDPR request
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.DataPrivacyApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let requestId = "requestId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewGdprRequestById(requestId, opts).then((data) => {
+apiInstance.viewGdprRequestById(apiToken, requestId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -188,8 +184,8 @@ apiInstance.viewGdprRequestById(requestId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **requestId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 

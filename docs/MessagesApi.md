@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 ## addExtraDataToMessage
 
-> AddExtraDataToMessageResponse addExtraDataToMessage(channelType, channelUrl, messageId, opts)
+> AddExtraDataToMessageResponse addExtraDataToMessage(apiToken, channelType, channelUrl, messageId, opts)
 
 Add extra data to a message
 
@@ -37,14 +37,14 @@ Add extra data to a message
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'addExtraDataToMessageData': new SendbirdPlatformSdk.AddExtraDataToMessageData() // AddExtraDataToMessageData | 
 };
-apiInstance.addExtraDataToMessage(channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.addExtraDataToMessage(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -57,10 +57,10 @@ apiInstance.addExtraDataToMessage(channelType, channelUrl, messageId, opts).then
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **addExtraDataToMessageData** | [**AddExtraDataToMessageData**](AddExtraDataToMessageData.md)|  | [optional] 
 
 ### Return type
@@ -79,7 +79,7 @@ No authorization required
 
 ## addReactionToAMessage
 
-> AddReactionToAMessageResponse addReactionToAMessage(channelType, channelUrl, messageId, opts)
+> AddReactionToAMessageResponse addReactionToAMessage(apiToken, channelType, channelUrl, messageId, opts)
 
 Add a reaction to a message
 
@@ -91,14 +91,14 @@ Add a reaction to a message
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'addReactionToAMessageData': new SendbirdPlatformSdk.AddReactionToAMessageData() // AddReactionToAMessageData | 
 };
-apiInstance.addReactionToAMessage(channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.addReactionToAMessage(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -111,10 +111,10 @@ apiInstance.addReactionToAMessage(channelType, channelUrl, messageId, opts).then
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **addReactionToAMessageData** | [**AddReactionToAMessageData**](AddReactionToAMessageData.md)|  | [optional] 
 
 ### Return type
@@ -133,7 +133,7 @@ No authorization required
 
 ## deleteMessageById
 
-> deleteMessageById(channelType, channelUrl, messageId, opts)
+> deleteMessageById(apiToken, channelType, channelUrl, messageId)
 
 Delete a message
 
@@ -145,13 +145,11 @@ Delete a message
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.deleteMessageById(channelType, channelUrl, messageId, opts).then(() => {
+apiInstance.deleteMessageById(apiToken, channelType, channelUrl, messageId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -164,10 +162,10 @@ apiInstance.deleteMessageById(channelType, channelUrl, messageId, opts).then(() 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -185,7 +183,7 @@ No authorization required
 
 ## gcMarkAllMessagesAsDelivered
 
-> GcMarkAllMessagesAsDeliveredResponse gcMarkAllMessagesAsDelivered(channelUrl, opts)
+> GcMarkAllMessagesAsDeliveredResponse gcMarkAllMessagesAsDelivered(apiToken, channelUrl, opts)
 
 Mark all messages as delivered
 
@@ -197,12 +195,12 @@ Mark all messages as delivered
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcMarkAllMessagesAsDeliveredData': new SendbirdPlatformSdk.GcMarkAllMessagesAsDeliveredData() // GcMarkAllMessagesAsDeliveredData | 
 };
-apiInstance.gcMarkAllMessagesAsDelivered(channelUrl, opts).then((data) => {
+apiInstance.gcMarkAllMessagesAsDelivered(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -215,8 +213,8 @@ apiInstance.gcMarkAllMessagesAsDelivered(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcMarkAllMessagesAsDeliveredData** | [**GcMarkAllMessagesAsDeliveredData**](GcMarkAllMessagesAsDeliveredData.md)|  | [optional] 
 
 ### Return type
@@ -235,7 +233,7 @@ No authorization required
 
 ## gcMarkAllMessagesAsRead
 
-> gcMarkAllMessagesAsRead(channelUrl, opts)
+> gcMarkAllMessagesAsRead(apiToken, channelUrl, opts)
 
 Mark all messages as read
 
@@ -247,12 +245,12 @@ Mark all messages as read
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcMarkAllMessagesAsReadData': new SendbirdPlatformSdk.GcMarkAllMessagesAsReadData() // GcMarkAllMessagesAsReadData | 
 };
-apiInstance.gcMarkAllMessagesAsRead(channelUrl, opts).then(() => {
+apiInstance.gcMarkAllMessagesAsRead(apiToken, channelUrl, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -265,8 +263,8 @@ apiInstance.gcMarkAllMessagesAsRead(channelUrl, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcMarkAllMessagesAsReadData** | [**GcMarkAllMessagesAsReadData**](GcMarkAllMessagesAsReadData.md)|  | [optional] 
 
 ### Return type
@@ -285,7 +283,7 @@ No authorization required
 
 ## gcViewNumberOfEachMembersUnreadMessages
 
-> GcViewNumberOfEachMembersUnreadMessagesResponse gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts)
+> GcViewNumberOfEachMembersUnreadMessagesResponse gcViewNumberOfEachMembersUnreadMessages(apiToken, channelUrl, opts)
 
 View number of each member&#39;s unread messages
 
@@ -297,12 +295,12 @@ View number of each member&#39;s unread messages
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'userIds': "userIds_example" // String | 
 };
-apiInstance.gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts).then((data) => {
+apiInstance.gcViewNumberOfEachMembersUnreadMessages(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -315,8 +313,8 @@ apiInstance.gcViewNumberOfEachMembersUnreadMessages(channelUrl, opts).then((data
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **userIds** | **String**|  | [optional] 
 
 ### Return type
@@ -335,7 +333,7 @@ No authorization required
 
 ## listMessages
 
-> ListMessagesResponse listMessages(channelType, channelUrl, messageTs, messageId, opts)
+> ListMessagesResponse listMessages(apiToken, channelType, channelUrl, opts)
 
 List messages
 
@@ -347,12 +345,12 @@ List messages
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
-let messageTs = 56; // Number | 
-let messageId = 56; // Number | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
+  'messageTs': 56, // Number | 
+  'messageId': 56, // Number | 
   'prevLimit': 56, // Number | 
   'nextLimit': 56, // Number | 
   'include': true, // Boolean | 
@@ -370,7 +368,7 @@ let opts = {
   'customType': "customType_example", // String | 
   'withMetaArray': true // Boolean | 
 };
-apiInstance.listMessages(channelType, channelUrl, messageTs, messageId, opts).then((data) => {
+apiInstance.listMessages(apiToken, channelType, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -383,11 +381,11 @@ apiInstance.listMessages(channelType, channelUrl, messageTs, messageId, opts).th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
- **messageTs** | **Number**|  | 
- **messageId** | **Number**|  | 
- **apiToken** | **String**|  | [optional] 
+ **messageTs** | **Number**|  | [optional] 
+ **messageId** | **Number**|  | [optional] 
  **prevLimit** | **Number**|  | [optional] 
  **nextLimit** | **Number**|  | [optional] 
  **include** | **Boolean**|  | [optional] 
@@ -421,7 +419,7 @@ No authorization required
 
 ## listReactionsOfMessage
 
-> ListReactionsOfMessageResponse listReactionsOfMessage(channelType, channelUrl, messageId, opts)
+> ListReactionsOfMessageResponse listReactionsOfMessage(apiToken, channelType, channelUrl, messageId, opts)
 
 List reactions of a message
 
@@ -433,14 +431,14 @@ List reactions of a message
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'listUsers': true // Boolean | 
 };
-apiInstance.listReactionsOfMessage(channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.listReactionsOfMessage(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -453,10 +451,10 @@ apiInstance.listReactionsOfMessage(channelType, channelUrl, messageId, opts).the
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **listUsers** | **Boolean**|  | [optional] 
 
 ### Return type
@@ -475,7 +473,7 @@ No authorization required
 
 ## removeExtraDataFromMessage
 
-> removeExtraDataFromMessage(channelType, channelUrl, messageId, opts)
+> removeExtraDataFromMessage(apiToken, channelType, channelUrl, messageId, opts)
 
 Remove extra data from a message
 
@@ -487,14 +485,14 @@ Remove extra data from a message
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'keys': ["null"] // [String] | 
 };
-apiInstance.removeExtraDataFromMessage(channelType, channelUrl, messageId, opts).then(() => {
+apiInstance.removeExtraDataFromMessage(apiToken, channelType, channelUrl, messageId, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -507,10 +505,10 @@ apiInstance.removeExtraDataFromMessage(channelType, channelUrl, messageId, opts)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **keys** | [**[String]**](String.md)|  | [optional] 
 
 ### Return type
@@ -529,7 +527,7 @@ No authorization required
 
 ## removeReactionFromAMessage
 
-> RemoveReactionFromAMessageResponse removeReactionFromAMessage(channelType, channelUrl, messageId, opts)
+> RemoveReactionFromAMessageResponse removeReactionFromAMessage(apiToken, channelType, channelUrl, messageId, opts)
 
 Remove a reaction from a message
 
@@ -541,15 +539,15 @@ Remove a reaction from a message
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'userId': "userId_example", // String | 
   'reaction': "reaction_example" // String | 
 };
-apiInstance.removeReactionFromAMessage(channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.removeReactionFromAMessage(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -562,10 +560,10 @@ apiInstance.removeReactionFromAMessage(channelType, channelUrl, messageId, opts)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **userId** | **String**|  | [optional] 
  **reaction** | **String**|  | [optional] 
 
@@ -585,7 +583,7 @@ No authorization required
 
 ## sendMessage
 
-> SendBirdMessageResponse sendMessage(channelType, channelUrl, opts)
+> SendBirdMessageResponse sendMessage(apiToken, channelType, channelUrl, opts)
 
 Send a message
 
@@ -597,13 +595,13 @@ Send a message
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'sendMessageData': new SendbirdPlatformSdk.SendMessageData() // SendMessageData | 
 };
-apiInstance.sendMessage(channelType, channelUrl, opts).then((data) => {
+apiInstance.sendMessage(apiToken, channelType, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -616,9 +614,9 @@ apiInstance.sendMessage(channelType, channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **sendMessageData** | [**SendMessageData**](SendMessageData.md)|  | [optional] 
 
 ### Return type
@@ -637,7 +635,7 @@ No authorization required
 
 ## translateMessageIntoOtherLanguages
 
-> SendBirdMessageResponse translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts)
+> SendBirdMessageResponse translateMessageIntoOtherLanguages(apiToken, channelType, channelUrl, messageId, opts)
 
 Translate a message into other languages
 
@@ -649,14 +647,14 @@ Translate a message into other languages
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.translateMessageIntoOtherLanguages(channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.translateMessageIntoOtherLanguages(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -669,10 +667,10 @@ apiInstance.translateMessageIntoOtherLanguages(channelType, channelUrl, messageI
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **body** | **Object**|  | [optional] 
 
 ### Return type
@@ -691,7 +689,7 @@ No authorization required
 
 ## updateExtraDataInMessage
 
-> UpdateExtraDataInMessageResponse updateExtraDataInMessage(channelType, channelUrl, messageId, opts)
+> UpdateExtraDataInMessageResponse updateExtraDataInMessage(apiToken, channelType, channelUrl, messageId, opts)
 
 Update extra data in a message
 
@@ -703,14 +701,14 @@ Update extra data in a message
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateExtraDataInMessageData': new SendbirdPlatformSdk.UpdateExtraDataInMessageData() // UpdateExtraDataInMessageData | 
 };
-apiInstance.updateExtraDataInMessage(channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.updateExtraDataInMessage(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -723,10 +721,10 @@ apiInstance.updateExtraDataInMessage(channelType, channelUrl, messageId, opts).t
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateExtraDataInMessageData** | [**UpdateExtraDataInMessageData**](UpdateExtraDataInMessageData.md)|  | [optional] 
 
 ### Return type
@@ -745,7 +743,7 @@ No authorization required
 
 ## updateMessageById
 
-> SendBirdMessageResponse updateMessageById(channelType, channelUrl, messageId, opts)
+> SendBirdMessageResponse updateMessageById(apiToken, channelType, channelUrl, messageId, opts)
 
 Update a message
 
@@ -757,14 +755,14 @@ Update a message
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateMessageByIdData': new SendbirdPlatformSdk.UpdateMessageByIdData() // UpdateMessageByIdData | 
 };
-apiInstance.updateMessageById(channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.updateMessageById(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -777,10 +775,10 @@ apiInstance.updateMessageById(channelType, channelUrl, messageId, opts).then((da
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateMessageByIdData** | [**UpdateMessageByIdData**](UpdateMessageByIdData.md)|  | [optional] 
 
 ### Return type
@@ -799,7 +797,7 @@ No authorization required
 
 ## viewMessageById
 
-> SendBirdMessageResponse viewMessageById(channelType, channelUrl, messageId, opts)
+> SendBirdMessageResponse viewMessageById(apiToken, channelType, channelUrl, messageId, opts)
 
 View a message
 
@@ -811,15 +809,15 @@ View a message
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'withSortedMetaArray': true, // Boolean | 
   'withMetaArray': true // Boolean | 
 };
-apiInstance.viewMessageById(channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.viewMessageById(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -832,10 +830,10 @@ apiInstance.viewMessageById(channelType, channelUrl, messageId, opts).then((data
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **withSortedMetaArray** | **Boolean**|  | [optional] 
  **withMetaArray** | **Boolean**|  | [optional] 
 
@@ -855,7 +853,7 @@ No authorization required
 
 ## viewTotalNumberOfMessagesInChannel
 
-> ViewTotalNumberOfMessagesInChannelResponse viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts)
+> ViewTotalNumberOfMessagesInChannelResponse viewTotalNumberOfMessagesInChannel(apiToken, channelType, channelUrl)
 
 View total number of messages in a channel
 
@@ -867,12 +865,10 @@ View total number of messages in a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts).then((data) => {
+apiInstance.viewTotalNumberOfMessagesInChannel(apiToken, channelType, channelUrl).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -885,9 +881,9 @@ apiInstance.viewTotalNumberOfMessagesInChannel(channelType, channelUrl, opts).th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 

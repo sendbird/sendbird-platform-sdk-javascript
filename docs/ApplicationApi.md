@@ -35,7 +35,7 @@ Method | HTTP request | Description
 
 ## addApnsPushConfiguration
 
-> AddApnsPushConfigurationResponse addApnsPushConfiguration(opts)
+> AddApnsPushConfigurationResponse addApnsPushConfiguration(apiToken, opts)
 
 Add an APNs push configuration
 
@@ -47,11 +47,11 @@ Add an APNs push configuration
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'addApnsPushConfigurationData': new SendbirdPlatformSdk.AddApnsPushConfigurationData() // AddApnsPushConfigurationData | 
 };
-apiInstance.addApnsPushConfiguration(opts).then((data) => {
+apiInstance.addApnsPushConfiguration(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -64,7 +64,7 @@ apiInstance.addApnsPushConfiguration(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **addApnsPushConfigurationData** | [**AddApnsPushConfigurationData**](AddApnsPushConfigurationData.md)|  | [optional] 
 
 ### Return type
@@ -83,7 +83,7 @@ No authorization required
 
 ## addFcmPushConfiguration
 
-> AddFcmPushConfigurationResponse addFcmPushConfiguration(opts)
+> AddFcmPushConfigurationResponse addFcmPushConfiguration(apiToken, opts)
 
 Add a FCM push configuration
 
@@ -95,11 +95,11 @@ Add a FCM push configuration
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'addFcmPushConfigurationData': new SendbirdPlatformSdk.AddFcmPushConfigurationData() // AddFcmPushConfigurationData | 
 };
-apiInstance.addFcmPushConfiguration(opts).then((data) => {
+apiInstance.addFcmPushConfiguration(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -112,7 +112,7 @@ apiInstance.addFcmPushConfiguration(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **addFcmPushConfigurationData** | [**AddFcmPushConfigurationData**](AddFcmPushConfigurationData.md)|  | [optional] 
 
 ### Return type
@@ -131,7 +131,7 @@ No authorization required
 
 ## addHmsPushConfiguration
 
-> AddHmsPushConfigurationResponse addHmsPushConfiguration(opts)
+> AddHmsPushConfigurationResponse addHmsPushConfiguration(apiToken, opts)
 
 Add an HMS push configuration
 
@@ -143,11 +143,11 @@ Add an HMS push configuration
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'addHmsPushConfigurationData': new SendbirdPlatformSdk.AddHmsPushConfigurationData() // AddHmsPushConfigurationData | 
 };
-apiInstance.addHmsPushConfiguration(opts).then((data) => {
+apiInstance.addHmsPushConfiguration(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -160,7 +160,7 @@ apiInstance.addHmsPushConfiguration(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **addHmsPushConfigurationData** | [**AddHmsPushConfigurationData**](AddHmsPushConfigurationData.md)|  | [optional] 
 
 ### Return type
@@ -179,7 +179,7 @@ No authorization required
 
 ## addIpToWhitelist
 
-> AddIpToWhitelistResponse addIpToWhitelist(opts)
+> AddIpToWhitelistResponse addIpToWhitelist(apiToken, opts)
 
 Add an IP to a whitelist
 
@@ -191,11 +191,11 @@ Add an IP to a whitelist
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'addIpToWhitelistData': new SendbirdPlatformSdk.AddIpToWhitelistData() // AddIpToWhitelistData | 
 };
-apiInstance.addIpToWhitelist(opts).then((data) => {
+apiInstance.addIpToWhitelist(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -208,7 +208,7 @@ apiInstance.addIpToWhitelist(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **addIpToWhitelistData** | [**AddIpToWhitelistData**](AddIpToWhitelistData.md)|  | [optional] 
 
 ### Return type
@@ -227,7 +227,7 @@ No authorization required
 
 ## deleteAllowedIpsFromWhitelist
 
-> DeleteAllowedIpsFromWhitelistResponse deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts)
+> DeleteAllowedIpsFromWhitelistResponse deleteAllowedIpsFromWhitelist(apiToken, ipWhitelistAddresses)
 
 Delete allowed IPs from a whitelist
 
@@ -239,11 +239,9 @@ Delete allowed IPs from a whitelist
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let ipWhitelistAddresses = ["null"]; // [String] | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts).then((data) => {
+apiInstance.deleteAllowedIpsFromWhitelist(apiToken, ipWhitelistAddresses).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -256,8 +254,8 @@ apiInstance.deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts).then((data
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **ipWhitelistAddresses** | [**[String]**](String.md)|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -275,7 +273,7 @@ No authorization required
 
 ## deleteApnsCertificateById
 
-> DeleteApnsCertificateByIdResponse deleteApnsCertificateById(providerId, opts)
+> DeleteApnsCertificateByIdResponse deleteApnsCertificateById(apiToken, providerId)
 
 Delete an APNs certificate
 
@@ -287,11 +285,9 @@ Delete an APNs certificate
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let providerId = "providerId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.deleteApnsCertificateById(providerId, opts).then((data) => {
+apiInstance.deleteApnsCertificateById(apiToken, providerId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -304,8 +300,8 @@ apiInstance.deleteApnsCertificateById(providerId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **providerId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -323,7 +319,7 @@ No authorization required
 
 ## generateSecondaryApiToken
 
-> GenerateSecondaryApiTokenResponse generateSecondaryApiToken(opts)
+> GenerateSecondaryApiTokenResponse generateSecondaryApiToken(apiToken, opts)
 
 Generate a secondary API token
 
@@ -335,11 +331,11 @@ Generate a secondary API token
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'generateSecondaryApiTokenData': new SendbirdPlatformSdk.GenerateSecondaryApiTokenData() // GenerateSecondaryApiTokenData | 
 };
-apiInstance.generateSecondaryApiToken(opts).then((data) => {
+apiInstance.generateSecondaryApiToken(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -352,7 +348,7 @@ apiInstance.generateSecondaryApiToken(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **generateSecondaryApiTokenData** | [**GenerateSecondaryApiTokenData**](GenerateSecondaryApiTokenData.md)|  | [optional] 
 
 ### Return type
@@ -371,7 +367,7 @@ No authorization required
 
 ## listPushConfigurations
 
-> ListPushConfigurationsResponse listPushConfigurations(pushType, opts)
+> ListPushConfigurationsResponse listPushConfigurations(apiToken, pushType)
 
 List push configurations
 
@@ -383,11 +379,9 @@ List push configurations
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let pushType = "pushType_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.listPushConfigurations(pushType, opts).then((data) => {
+apiInstance.listPushConfigurations(apiToken, pushType).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -400,8 +394,8 @@ apiInstance.listPushConfigurations(pushType, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **pushType** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -419,7 +413,7 @@ No authorization required
 
 ## listPushNotificationContentTemplates
 
-> ListPushNotificationContentTemplatesResponse listPushNotificationContentTemplates(opts)
+> ListPushNotificationContentTemplatesResponse listPushNotificationContentTemplates(apiToken)
 
 List push notification content templates
 
@@ -431,10 +425,8 @@ List push notification content templates
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.listPushNotificationContentTemplates(opts).then((data) => {
+let apiToken = {{API_TOKEN}}; // String | 
+apiInstance.listPushNotificationContentTemplates(apiToken).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -447,7 +439,7 @@ apiInstance.listPushNotificationContentTemplates(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
 
 ### Return type
 
@@ -465,7 +457,7 @@ No authorization required
 
 ## listSecondaryApiTokens
 
-> ListSecondaryApiTokensResponse listSecondaryApiTokens(opts)
+> ListSecondaryApiTokensResponse listSecondaryApiTokens(apiToken)
 
 List secondary API tokens
 
@@ -477,10 +469,8 @@ List secondary API tokens
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.listSecondaryApiTokens(opts).then((data) => {
+let apiToken = {{API_TOKEN}}; // String | 
+apiInstance.listSecondaryApiTokens(apiToken).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -493,7 +483,7 @@ apiInstance.listSecondaryApiTokens(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
 
 ### Return type
 
@@ -511,7 +501,7 @@ No authorization required
 
 ## removePushConfigurationById
 
-> RemovePushConfigurationByIdResponse removePushConfigurationById(pushType, providerId, opts)
+> RemovePushConfigurationByIdResponse removePushConfigurationById(apiToken, pushType, providerId)
 
 Remove a push configuration
 
@@ -523,12 +513,10 @@ Remove a push configuration
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let pushType = "pushType_example"; // String | 
 let providerId = "providerId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.removePushConfigurationById(pushType, providerId, opts).then((data) => {
+apiInstance.removePushConfigurationById(apiToken, pushType, providerId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -541,9 +529,9 @@ apiInstance.removePushConfigurationById(pushType, providerId, opts).then((data) 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **pushType** | **String**|  | 
  **providerId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -561,7 +549,7 @@ No authorization required
 
 ## retrieveIpWhitelist
 
-> RetrieveIpWhitelistResponse retrieveIpWhitelist(opts)
+> RetrieveIpWhitelistResponse retrieveIpWhitelist(apiToken)
 
 Retrieve an IP whitelist
 
@@ -573,10 +561,8 @@ Retrieve an IP whitelist
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.retrieveIpWhitelist(opts).then((data) => {
+let apiToken = {{API_TOKEN}}; // String | 
+apiInstance.retrieveIpWhitelist(apiToken).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -589,7 +575,7 @@ apiInstance.retrieveIpWhitelist(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
 
 ### Return type
 
@@ -607,7 +593,7 @@ No authorization required
 
 ## revokeSecondaryApiTokenByToken
 
-> RevokeSecondaryApiTokenByTokenResponse revokeSecondaryApiTokenByToken(apiToken2, opts)
+> RevokeSecondaryApiTokenByTokenResponse revokeSecondaryApiTokenByToken(apiToken, apiToken2)
 
 Revoke a secondary API token
 
@@ -619,11 +605,9 @@ Revoke a secondary API token
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let apiToken2 = "apiToken_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.revokeSecondaryApiTokenByToken(apiToken2, opts).then((data) => {
+apiInstance.revokeSecondaryApiTokenByToken(apiToken, apiToken2).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -636,8 +620,8 @@ apiInstance.revokeSecondaryApiTokenByToken(apiToken2, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **apiToken2** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -655,7 +639,7 @@ No authorization required
 
 ## updateApnsPushConfigurationById
 
-> UpdateApnsPushConfigurationByIdResponse updateApnsPushConfigurationById(providerId, opts)
+> UpdateApnsPushConfigurationByIdResponse updateApnsPushConfigurationById(apiToken, providerId, opts)
 
 Update an APNs push configuration
 
@@ -667,12 +651,12 @@ Update an APNs push configuration
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let providerId = "providerId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateApnsPushConfigurationByIdData': new SendbirdPlatformSdk.UpdateApnsPushConfigurationByIdData() // UpdateApnsPushConfigurationByIdData | 
 };
-apiInstance.updateApnsPushConfigurationById(providerId, opts).then((data) => {
+apiInstance.updateApnsPushConfigurationById(apiToken, providerId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -685,8 +669,8 @@ apiInstance.updateApnsPushConfigurationById(providerId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **providerId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateApnsPushConfigurationByIdData** | [**UpdateApnsPushConfigurationByIdData**](UpdateApnsPushConfigurationByIdData.md)|  | [optional] 
 
 ### Return type
@@ -705,7 +689,7 @@ No authorization required
 
 ## updateDefaultChannelInvitationPreference
 
-> UpdateDefaultChannelInvitationPreferenceResponse updateDefaultChannelInvitationPreference(opts)
+> UpdateDefaultChannelInvitationPreferenceResponse updateDefaultChannelInvitationPreference(apiToken, opts)
 
 Update default channel invitation preference
 
@@ -717,11 +701,11 @@ Update default channel invitation preference
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateDefaultChannelInvitationPreferenceData': new SendbirdPlatformSdk.UpdateDefaultChannelInvitationPreferenceData() // UpdateDefaultChannelInvitationPreferenceData | 
 };
-apiInstance.updateDefaultChannelInvitationPreference(opts).then((data) => {
+apiInstance.updateDefaultChannelInvitationPreference(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -734,7 +718,7 @@ apiInstance.updateDefaultChannelInvitationPreference(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **updateDefaultChannelInvitationPreferenceData** | [**UpdateDefaultChannelInvitationPreferenceData**](UpdateDefaultChannelInvitationPreferenceData.md)|  | [optional] 
 
 ### Return type
@@ -753,7 +737,7 @@ No authorization required
 
 ## updateFcmPushConfigurationById
 
-> UpdateFcmPushConfigurationByIdResponse updateFcmPushConfigurationById(providerId, opts)
+> UpdateFcmPushConfigurationByIdResponse updateFcmPushConfigurationById(apiToken, providerId, opts)
 
 Update a FCM push configuration
 
@@ -765,12 +749,12 @@ Update a FCM push configuration
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let providerId = "providerId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateFcmPushConfigurationByIdData': new SendbirdPlatformSdk.UpdateFcmPushConfigurationByIdData() // UpdateFcmPushConfigurationByIdData | 
 };
-apiInstance.updateFcmPushConfigurationById(providerId, opts).then((data) => {
+apiInstance.updateFcmPushConfigurationById(apiToken, providerId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -783,8 +767,8 @@ apiInstance.updateFcmPushConfigurationById(providerId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **providerId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateFcmPushConfigurationByIdData** | [**UpdateFcmPushConfigurationByIdData**](UpdateFcmPushConfigurationByIdData.md)|  | [optional] 
 
 ### Return type
@@ -803,7 +787,7 @@ No authorization required
 
 ## updateHmsPushConfigurationById
 
-> UpdateHmsPushConfigurationByIdResponse updateHmsPushConfigurationById(providerId, opts)
+> UpdateHmsPushConfigurationByIdResponse updateHmsPushConfigurationById(apiToken, providerId, opts)
 
 Update an HMS push configuration
 
@@ -815,12 +799,12 @@ Update an HMS push configuration
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let providerId = "providerId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateHmsPushConfigurationByIdData': new SendbirdPlatformSdk.UpdateHmsPushConfigurationByIdData() // UpdateHmsPushConfigurationByIdData | 
 };
-apiInstance.updateHmsPushConfigurationById(providerId, opts).then((data) => {
+apiInstance.updateHmsPushConfigurationById(apiToken, providerId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -833,8 +817,8 @@ apiInstance.updateHmsPushConfigurationById(providerId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **providerId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateHmsPushConfigurationByIdData** | [**UpdateHmsPushConfigurationByIdData**](UpdateHmsPushConfigurationByIdData.md)|  | [optional] 
 
 ### Return type
@@ -853,7 +837,7 @@ No authorization required
 
 ## updatePushNotificationContentTemplate
 
-> UpdatePushNotificationContentTemplateResponse updatePushNotificationContentTemplate(templateName, opts)
+> UpdatePushNotificationContentTemplateResponse updatePushNotificationContentTemplate(apiToken, templateName, opts)
 
 Update a push notification content template
 
@@ -865,12 +849,12 @@ Update a push notification content template
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let templateName = "templateName_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updatePushNotificationContentTemplateData': new SendbirdPlatformSdk.UpdatePushNotificationContentTemplateData() // UpdatePushNotificationContentTemplateData | 
 };
-apiInstance.updatePushNotificationContentTemplate(templateName, opts).then((data) => {
+apiInstance.updatePushNotificationContentTemplate(apiToken, templateName, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -883,8 +867,8 @@ apiInstance.updatePushNotificationContentTemplate(templateName, opts).then((data
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **templateName** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updatePushNotificationContentTemplateData** | [**UpdatePushNotificationContentTemplateData**](UpdatePushNotificationContentTemplateData.md)|  | [optional] 
 
 ### Return type
@@ -903,7 +887,7 @@ No authorization required
 
 ## viewDefaultChannelInvitationPreference
 
-> ViewDefaultChannelInvitationPreferenceResponse viewDefaultChannelInvitationPreference(opts)
+> ViewDefaultChannelInvitationPreferenceResponse viewDefaultChannelInvitationPreference(apiToken)
 
 View default channel invitation preference
 
@@ -915,10 +899,8 @@ View default channel invitation preference
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewDefaultChannelInvitationPreference(opts).then((data) => {
+let apiToken = {{API_TOKEN}}; // String | 
+apiInstance.viewDefaultChannelInvitationPreference(apiToken).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -931,7 +913,7 @@ apiInstance.viewDefaultChannelInvitationPreference(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
 
 ### Return type
 
@@ -949,7 +931,7 @@ No authorization required
 
 ## viewNumberOfConcurrentConnections
 
-> ViewNumberOfConcurrentConnectionsResponse viewNumberOfConcurrentConnections(opts)
+> ViewNumberOfConcurrentConnectionsResponse viewNumberOfConcurrentConnections(apiToken)
 
 View number of concurrent connections
 
@@ -961,10 +943,8 @@ View number of concurrent connections
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewNumberOfConcurrentConnections(opts).then((data) => {
+let apiToken = {{API_TOKEN}}; // String | 
+apiInstance.viewNumberOfConcurrentConnections(apiToken).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -977,7 +957,7 @@ apiInstance.viewNumberOfConcurrentConnections(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
 
 ### Return type
 
@@ -995,7 +975,7 @@ No authorization required
 
 ## viewNumberOfDailyActiveUsers
 
-> ViewNumberOfDailyActiveUsersResponse viewNumberOfDailyActiveUsers(opts)
+> ViewNumberOfDailyActiveUsersResponse viewNumberOfDailyActiveUsers(apiToken, opts)
 
 View number of daily active users
 
@@ -1007,11 +987,11 @@ View number of daily active users
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'date': "date_example" // String | 
 };
-apiInstance.viewNumberOfDailyActiveUsers(opts).then((data) => {
+apiInstance.viewNumberOfDailyActiveUsers(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1024,7 +1004,7 @@ apiInstance.viewNumberOfDailyActiveUsers(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **date** | **String**|  | [optional] 
 
 ### Return type
@@ -1043,7 +1023,7 @@ No authorization required
 
 ## viewNumberOfMonthlyActiveUsers
 
-> ViewNumberOfMonthlyActiveUsersResponse viewNumberOfMonthlyActiveUsers(opts)
+> ViewNumberOfMonthlyActiveUsersResponse viewNumberOfMonthlyActiveUsers(apiToken, opts)
 
 View number of monthly active users
 
@@ -1055,11 +1035,11 @@ View number of monthly active users
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'date': "date_example" // String | 
 };
-apiInstance.viewNumberOfMonthlyActiveUsers(opts).then((data) => {
+apiInstance.viewNumberOfMonthlyActiveUsers(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1072,7 +1052,7 @@ apiInstance.viewNumberOfMonthlyActiveUsers(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **date** | **String**|  | [optional] 
 
 ### Return type
@@ -1091,7 +1071,7 @@ No authorization required
 
 ## viewNumberOfPeakConnections
 
-> ViewNumberOfPeakConnectionsResponse viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts)
+> ViewNumberOfPeakConnectionsResponse viewNumberOfPeakConnections(apiToken, timeDimension, startYear, startMonth, endYear, endMonth, opts)
 
 View number of peak connections
 
@@ -1103,17 +1083,17 @@ View number of peak connections
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let timeDimension = "timeDimension_example"; // String | 
 let startYear = 56; // Number | 
 let startMonth = 56; // Number | 
 let endYear = 56; // Number | 
 let endMonth = 56; // Number | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'startDay': 56, // Number | 
   'endDay': 56 // Number | 
 };
-apiInstance.viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts).then((data) => {
+apiInstance.viewNumberOfPeakConnections(apiToken, timeDimension, startYear, startMonth, endYear, endMonth, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1126,12 +1106,12 @@ apiInstance.viewNumberOfPeakConnections(timeDimension, startYear, startMonth, en
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **timeDimension** | **String**|  | 
  **startYear** | **Number**|  | 
  **startMonth** | **Number**|  | 
  **endYear** | **Number**|  | 
  **endMonth** | **Number**|  | 
- **apiToken** | **String**|  | [optional] 
  **startDay** | **Number**|  | [optional] 
  **endDay** | **Number**|  | [optional] 
 
@@ -1151,7 +1131,7 @@ No authorization required
 
 ## viewPushConfigurationById
 
-> ViewPushConfigurationByIdResponse viewPushConfigurationById(pushType, providerId, opts)
+> ViewPushConfigurationByIdResponse viewPushConfigurationById(apiToken, pushType, providerId)
 
 View a push configuration
 
@@ -1163,12 +1143,10 @@ View a push configuration
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let pushType = "pushType_example"; // String | 
 let providerId = "providerId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewPushConfigurationById(pushType, providerId, opts).then((data) => {
+apiInstance.viewPushConfigurationById(apiToken, pushType, providerId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1181,9 +1159,9 @@ apiInstance.viewPushConfigurationById(pushType, providerId, opts).then((data) =>
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **pushType** | **String**|  | 
  **providerId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1201,7 +1179,7 @@ No authorization required
 
 ## viewPushNotificationContentTemplate
 
-> ViewPushNotificationContentTemplateResponse viewPushNotificationContentTemplate(templateName, opts)
+> ViewPushNotificationContentTemplateResponse viewPushNotificationContentTemplate(apiToken, templateName)
 
 View a push notification content template
 
@@ -1213,11 +1191,9 @@ View a push notification content template
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let templateName = "templateName_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewPushNotificationContentTemplate(templateName, opts).then((data) => {
+apiInstance.viewPushNotificationContentTemplate(apiToken, templateName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1230,8 +1206,8 @@ apiInstance.viewPushNotificationContentTemplate(templateName, opts).then((data) 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **templateName** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1249,7 +1225,7 @@ No authorization required
 
 ## viewSecondaryApiTokenByToken
 
-> ViewSecondaryApiTokenByTokenResponse viewSecondaryApiTokenByToken(apiToken2, opts)
+> ViewSecondaryApiTokenByTokenResponse viewSecondaryApiTokenByToken(apiToken, apiToken2)
 
 View a secondary API token
 
@@ -1261,11 +1237,9 @@ View a secondary API token
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let apiToken2 = "apiToken_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewSecondaryApiTokenByToken(apiToken2, opts).then((data) => {
+apiInstance.viewSecondaryApiTokenByToken(apiToken, apiToken2).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1278,8 +1252,8 @@ apiInstance.viewSecondaryApiTokenByToken(apiToken2, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **apiToken2** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 

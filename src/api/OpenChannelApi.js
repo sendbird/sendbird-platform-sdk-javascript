@@ -53,15 +53,19 @@ export default class OpenChannelApi {
     /**
      * Ban a user
      * ## Ban a user  Bans a user from an open channel. A banned user is immediately expelled from a channel and allowed to participate in the channel again after a set time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-ban-a-user ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/OcBanUserData} opts.ocBanUserData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcBanUserResponse} and HTTP response
      */
-    ocBanUserWithHttpInfo(channelUrl, opts) {
+    ocBanUserWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['ocBanUserData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocBanUser");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocBanUser");
@@ -73,7 +77,7 @@ export default class OpenChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -92,14 +96,14 @@ export default class OpenChannelApi {
     /**
      * Ban a user
      * ## Ban a user  Bans a user from an open channel. A banned user is immediately expelled from a channel and allowed to participate in the channel again after a set time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-ban-a-user ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/OcBanUserData} opts.ocBanUserData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcBanUserResponse}
      */
-    ocBanUser(channelUrl, opts) {
-      return this.ocBanUserWithHttpInfo(channelUrl, opts)
+    ocBanUser(apiToken, channelUrl, opts) {
+      return this.ocBanUserWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -109,16 +113,20 @@ export default class OpenChannelApi {
     /**
      * Cancel the registration of operators
      * ## Cancel the registration of operators  Cancels the registration of operators from an open channel but leave them as participants.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-cancel-the-registration-of-operators ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to cancel the registration of operators.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Array.<String>} operatorIds 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Boolean} opts.deleteAll 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    ocCancelTheRegistrationOfOperatorsWithHttpInfo(channelUrl, operatorIds, opts) {
+    ocCancelTheRegistrationOfOperatorsWithHttpInfo(apiToken, channelUrl, operatorIds, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocCancelTheRegistrationOfOperators");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocCancelTheRegistrationOfOperators");
@@ -136,7 +144,7 @@ export default class OpenChannelApi {
         'delete_all': opts['deleteAll']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -155,15 +163,15 @@ export default class OpenChannelApi {
     /**
      * Cancel the registration of operators
      * ## Cancel the registration of operators  Cancels the registration of operators from an open channel but leave them as participants.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-cancel-the-registration-of-operators ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to cancel the registration of operators.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Array.<String>} operatorIds 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Boolean} opts.deleteAll 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    ocCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts) {
-      return this.ocCancelTheRegistrationOfOperatorsWithHttpInfo(channelUrl, operatorIds, opts)
+    ocCancelTheRegistrationOfOperators(apiToken, channelUrl, operatorIds, opts) {
+      return this.ocCancelTheRegistrationOfOperatorsWithHttpInfo(apiToken, channelUrl, operatorIds, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -173,21 +181,25 @@ export default class OpenChannelApi {
     /**
      * Create a channel
      * ## Create a channel  Creates an open channel.  >__Note__: Classic open channels created before the deprecation date of March 2021 will maintain their original form and functions. However, new applications created after December 15, 2020, will be able to create dynamic partitioning open channels only.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-create-a-channel
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/OcCreateChannelData} opts.ocCreateChannelData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdOpenChannel} and HTTP response
      */
-    ocCreateChannelWithHttpInfo(opts) {
+    ocCreateChannelWithHttpInfo(apiToken, opts) {
       opts = opts || {};
       let postBody = opts['ocCreateChannelData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocCreateChannel");
+      }
 
       let pathParams = {
       };
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -206,13 +218,13 @@ export default class OpenChannelApi {
     /**
      * Create a channel
      * ## Create a channel  Creates an open channel.  >__Note__: Classic open channels created before the deprecation date of March 2021 will maintain their original form and functions. However, new applications created after December 15, 2020, will be able to create dynamic partitioning open channels only.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-create-a-channel
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/OcCreateChannelData} opts.ocCreateChannelData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdOpenChannel}
      */
-    ocCreateChannel(opts) {
-      return this.ocCreateChannelWithHttpInfo(opts)
+    ocCreateChannel(apiToken, opts) {
+      return this.ocCreateChannelWithHttpInfo(apiToken, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -222,14 +234,16 @@ export default class OpenChannelApi {
     /**
      * Delete a channel
      * ## Delete a channel  Deletes an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-delete-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    ocDeleteChannelByUrlWithHttpInfo(channelUrl, opts) {
-      opts = opts || {};
+    ocDeleteChannelByUrlWithHttpInfo(apiToken, channelUrl) {
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocDeleteChannelByUrl");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocDeleteChannelByUrl");
@@ -241,7 +255,7 @@ export default class OpenChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -260,13 +274,12 @@ export default class OpenChannelApi {
     /**
      * Delete a channel
      * ## Delete a channel  Deletes an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-delete-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    ocDeleteChannelByUrl(channelUrl, opts) {
-      return this.ocDeleteChannelByUrlWithHttpInfo(channelUrl, opts)
+    ocDeleteChannelByUrl(apiToken, channelUrl) {
+      return this.ocDeleteChannelByUrlWithHttpInfo(apiToken, channelUrl)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -276,15 +289,19 @@ export default class OpenChannelApi {
     /**
      * Freeze a channel
      * ## Freeze a channel  Freezes or unfreezes an open channel.  > __Note__: Only users designated as channel operators are allowed to talk when a channel is frozen.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-freeze-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/OcFreezeChannelData} opts.ocFreezeChannelData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdOpenChannel} and HTTP response
      */
-    ocFreezeChannelWithHttpInfo(channelUrl, opts) {
+    ocFreezeChannelWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['ocFreezeChannelData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocFreezeChannel");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocFreezeChannel");
@@ -296,7 +313,7 @@ export default class OpenChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -315,14 +332,14 @@ export default class OpenChannelApi {
     /**
      * Freeze a channel
      * ## Freeze a channel  Freezes or unfreezes an open channel.  > __Note__: Only users designated as channel operators are allowed to talk when a channel is frozen.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-freeze-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/OcFreezeChannelData} opts.ocFreezeChannelData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdOpenChannel}
      */
-    ocFreezeChannel(channelUrl, opts) {
-      return this.ocFreezeChannelWithHttpInfo(channelUrl, opts)
+    ocFreezeChannel(apiToken, channelUrl, opts) {
+      return this.ocFreezeChannelWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -332,16 +349,20 @@ export default class OpenChannelApi {
     /**
      * List banned users
      * ## List banned users  Retrieves a list of banned users from a specific open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-banned-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel where to retrieve a list of banned users.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcListBannedUsersResponse} and HTTP response
      */
-    ocListBannedUsersWithHttpInfo(channelUrl, opts) {
+    ocListBannedUsersWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocListBannedUsers");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocListBannedUsers");
@@ -355,7 +376,7 @@ export default class OpenChannelApi {
         'limit': opts['limit']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -374,15 +395,15 @@ export default class OpenChannelApi {
     /**
      * List banned users
      * ## List banned users  Retrieves a list of banned users from a specific open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-banned-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel where to retrieve a list of banned users.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcListBannedUsersResponse}
      */
-    ocListBannedUsers(channelUrl, opts) {
-      return this.ocListBannedUsersWithHttpInfo(channelUrl, opts)
+    ocListBannedUsers(apiToken, channelUrl, opts) {
+      return this.ocListBannedUsersWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -392,8 +413,8 @@ export default class OpenChannelApi {
     /**
      * List channels
      * ## List channels  Retrieves a list of open channels. You can query the list using various parameters.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-channels ----------------------------
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {String} opts.customTypes 
@@ -404,9 +425,13 @@ export default class OpenChannelApi {
      * @param {String} opts.customType 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcListChannelsResponse} and HTTP response
      */
-    ocListChannelsWithHttpInfo(opts) {
+    ocListChannelsWithHttpInfo(apiToken, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocListChannels");
+      }
 
       let pathParams = {
       };
@@ -421,7 +446,7 @@ export default class OpenChannelApi {
         'custom_type': opts['customType']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -440,8 +465,8 @@ export default class OpenChannelApi {
     /**
      * List channels
      * ## List channels  Retrieves a list of open channels. You can query the list using various parameters.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-channels ----------------------------
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @param {String} opts.customTypes 
@@ -452,8 +477,8 @@ export default class OpenChannelApi {
      * @param {String} opts.customType 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcListChannelsResponse}
      */
-    ocListChannels(opts) {
-      return this.ocListChannelsWithHttpInfo(opts)
+    ocListChannels(apiToken, opts) {
+      return this.ocListChannelsWithHttpInfo(apiToken, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -463,16 +488,20 @@ export default class OpenChannelApi {
     /**
      * List muted users
      * ## List muted users  Retrieves a list of muted users in the channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-muted-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of muted users.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcListMutedUsersResponse} and HTTP response
      */
-    ocListMutedUsersWithHttpInfo(channelUrl, opts) {
+    ocListMutedUsersWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocListMutedUsers");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocListMutedUsers");
@@ -486,7 +515,7 @@ export default class OpenChannelApi {
         'limit': opts['limit']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -505,15 +534,15 @@ export default class OpenChannelApi {
     /**
      * List muted users
      * ## List muted users  Retrieves a list of muted users in the channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-muted-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of muted users.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcListMutedUsersResponse}
      */
-    ocListMutedUsers(channelUrl, opts) {
-      return this.ocListMutedUsersWithHttpInfo(channelUrl, opts)
+    ocListMutedUsers(apiToken, channelUrl, opts) {
+      return this.ocListMutedUsersWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -523,16 +552,20 @@ export default class OpenChannelApi {
     /**
      * List operators
      * ## List operators  Retrieves a list of operators of an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-operators ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of operators.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcListOperatorsResponse} and HTTP response
      */
-    ocListOperatorsWithHttpInfo(channelUrl, opts) {
+    ocListOperatorsWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocListOperators");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocListOperators");
@@ -546,7 +579,7 @@ export default class OpenChannelApi {
         'limit': opts['limit']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -565,15 +598,15 @@ export default class OpenChannelApi {
     /**
      * List operators
      * ## List operators  Retrieves a list of operators of an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-operators ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of operators.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcListOperatorsResponse}
      */
-    ocListOperators(channelUrl, opts) {
-      return this.ocListOperatorsWithHttpInfo(channelUrl, opts)
+    ocListOperators(apiToken, channelUrl, opts) {
+      return this.ocListOperatorsWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -583,16 +616,20 @@ export default class OpenChannelApi {
     /**
      * List participants
      * ## List participants  Retrieves a list of the participants of an open channel. A participant refers to a user who has entered the open channel and is currently online.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-participants ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of participants in.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcListParticipantsResponse} and HTTP response
      */
-    ocListParticipantsWithHttpInfo(channelUrl, opts) {
+    ocListParticipantsWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocListParticipants");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocListParticipants");
@@ -606,7 +643,7 @@ export default class OpenChannelApi {
         'limit': opts['limit']
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -625,15 +662,15 @@ export default class OpenChannelApi {
     /**
      * List participants
      * ## List participants  Retrieves a list of the participants of an open channel. A participant refers to a user who has entered the open channel and is currently online.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-participants ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of participants in.
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcListParticipantsResponse}
      */
-    ocListParticipants(channelUrl, opts) {
-      return this.ocListParticipantsWithHttpInfo(channelUrl, opts)
+    ocListParticipants(apiToken, channelUrl, opts) {
+      return this.ocListParticipantsWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -643,15 +680,19 @@ export default class OpenChannelApi {
     /**
      * Mute a user
      * ## Mute a user  Mutes a user in the channel. A muted user remains in the channel and is allowed to view the messages, but can't send any messages until unmuted.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-mute-a-user
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/OcMuteUserData} opts.ocMuteUserData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdOpenChannel} and HTTP response
      */
-    ocMuteUserWithHttpInfo(channelUrl, opts) {
+    ocMuteUserWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['ocMuteUserData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocMuteUser");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocMuteUser");
@@ -663,7 +704,7 @@ export default class OpenChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -682,14 +723,14 @@ export default class OpenChannelApi {
     /**
      * Mute a user
      * ## Mute a user  Mutes a user in the channel. A muted user remains in the channel and is allowed to view the messages, but can't send any messages until unmuted.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-mute-a-user
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/OcMuteUserData} opts.ocMuteUserData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdOpenChannel}
      */
-    ocMuteUser(channelUrl, opts) {
-      return this.ocMuteUserWithHttpInfo(channelUrl, opts)
+    ocMuteUser(apiToken, channelUrl, opts) {
+      return this.ocMuteUserWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -699,15 +740,19 @@ export default class OpenChannelApi {
     /**
      * Register operators
      * ## Register operators  Registers one or more operators to an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-register-operators ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/OcRegisterOperatorsData} opts.ocRegisterOperatorsData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    ocRegisterOperatorsWithHttpInfo(channelUrl, opts) {
+    ocRegisterOperatorsWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['ocRegisterOperatorsData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocRegisterOperators");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocRegisterOperators");
@@ -719,7 +764,7 @@ export default class OpenChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -738,14 +783,14 @@ export default class OpenChannelApi {
     /**
      * Register operators
      * ## Register operators  Registers one or more operators to an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-register-operators ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/OcRegisterOperatorsData} opts.ocRegisterOperatorsData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    ocRegisterOperators(channelUrl, opts) {
-      return this.ocRegisterOperatorsWithHttpInfo(channelUrl, opts)
+    ocRegisterOperators(apiToken, channelUrl, opts) {
+      return this.ocRegisterOperatorsWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -755,15 +800,17 @@ export default class OpenChannelApi {
     /**
      * Unban a user
      * ## Unban a user  Unbans a user from an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-unban-a-user ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    ocUnbanUserByIdWithHttpInfo(channelUrl, bannedUserId, opts) {
-      opts = opts || {};
+    ocUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId) {
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocUnbanUserById");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocUnbanUserById");
@@ -780,7 +827,7 @@ export default class OpenChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -799,14 +846,13 @@ export default class OpenChannelApi {
     /**
      * Unban a user
      * ## Unban a user  Unbans a user from an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-unban-a-user ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    ocUnbanUserById(channelUrl, bannedUserId, opts) {
-      return this.ocUnbanUserByIdWithHttpInfo(channelUrl, bannedUserId, opts)
+    ocUnbanUserById(apiToken, channelUrl, bannedUserId) {
+      return this.ocUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -816,15 +862,17 @@ export default class OpenChannelApi {
     /**
      * Unmute a user
      * ## Unmute a user  Unmutes a user from an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-unmute-a-user ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    ocUnmuteUserByIdWithHttpInfo(channelUrl, mutedUserId, opts) {
-      opts = opts || {};
+    ocUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId) {
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocUnmuteUserById");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocUnmuteUserById");
@@ -841,7 +889,7 @@ export default class OpenChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -860,14 +908,13 @@ export default class OpenChannelApi {
     /**
      * Unmute a user
      * ## Unmute a user  Unmutes a user from an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-unmute-a-user ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    ocUnmuteUserById(channelUrl, mutedUserId, opts) {
-      return this.ocUnmuteUserByIdWithHttpInfo(channelUrl, mutedUserId, opts)
+    ocUnmuteUserById(apiToken, channelUrl, mutedUserId) {
+      return this.ocUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -877,16 +924,20 @@ export default class OpenChannelApi {
     /**
      * Update a ban
      * ## Update a ban  Updates details of a ban imposed on a user. You can change the length of a ban with this action, and also provide an updated description.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-update-a-ban ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/OcUpdateBanByIdData} opts.ocUpdateBanByIdData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
      */
-    ocUpdateBanByIdWithHttpInfo(channelUrl, bannedUserId, opts) {
+    ocUpdateBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId, opts) {
       opts = opts || {};
       let postBody = opts['ocUpdateBanByIdData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocUpdateBanById");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocUpdateBanById");
@@ -903,7 +954,7 @@ export default class OpenChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -922,15 +973,15 @@ export default class OpenChannelApi {
     /**
      * Update a ban
      * ## Update a ban  Updates details of a ban imposed on a user. You can change the length of a ban with this action, and also provide an updated description.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-update-a-ban ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/OcUpdateBanByIdData} opts.ocUpdateBanByIdData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
      */
-    ocUpdateBanById(channelUrl, bannedUserId, opts) {
-      return this.ocUpdateBanByIdWithHttpInfo(channelUrl, bannedUserId, opts)
+    ocUpdateBanById(apiToken, channelUrl, bannedUserId, opts) {
+      return this.ocUpdateBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -940,15 +991,19 @@ export default class OpenChannelApi {
     /**
      * Update a channel
      * ## Update a channel  Updates information on an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-update-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/OcUpdateChannelByUrlData} opts.ocUpdateChannelByUrlData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdOpenChannel} and HTTP response
      */
-    ocUpdateChannelByUrlWithHttpInfo(channelUrl, opts) {
+    ocUpdateChannelByUrlWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
       let postBody = opts['ocUpdateChannelByUrlData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocUpdateChannelByUrl");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocUpdateChannelByUrl");
@@ -960,7 +1015,7 @@ export default class OpenChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -979,14 +1034,14 @@ export default class OpenChannelApi {
     /**
      * Update a channel
      * ## Update a channel  Updates information on an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-update-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/OcUpdateChannelByUrlData} opts.ocUpdateChannelByUrlData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdOpenChannel}
      */
-    ocUpdateChannelByUrl(channelUrl, opts) {
-      return this.ocUpdateChannelByUrlWithHttpInfo(channelUrl, opts)
+    ocUpdateChannelByUrl(apiToken, channelUrl, opts) {
+      return this.ocUpdateChannelByUrlWithHttpInfo(apiToken, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -996,15 +1051,17 @@ export default class OpenChannelApi {
     /**
      * View a ban
      * ## View a ban  Retrieves details of a ban imposed on a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-view-a-ban ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
      */
-    ocViewBanByIdWithHttpInfo(channelUrl, bannedUserId, opts) {
-      opts = opts || {};
+    ocViewBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId) {
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocViewBanById");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocViewBanById");
@@ -1021,7 +1078,7 @@ export default class OpenChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1040,14 +1097,13 @@ export default class OpenChannelApi {
     /**
      * View a ban
      * ## View a ban  Retrieves details of a ban imposed on a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-view-a-ban ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
      */
-    ocViewBanById(channelUrl, bannedUserId, opts) {
-      return this.ocViewBanByIdWithHttpInfo(channelUrl, bannedUserId, opts)
+    ocViewBanById(apiToken, channelUrl, bannedUserId) {
+      return this.ocViewBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1057,14 +1113,16 @@ export default class OpenChannelApi {
     /**
      * View a channel
      * ## View a channel  Retrieves information on a specific open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-view-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdOpenChannel} and HTTP response
      */
-    ocViewChannelByUrlWithHttpInfo(channelUrl, opts) {
-      opts = opts || {};
+    ocViewChannelByUrlWithHttpInfo(apiToken, channelUrl) {
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocViewChannelByUrl");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocViewChannelByUrl");
@@ -1076,7 +1134,7 @@ export default class OpenChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1095,13 +1153,12 @@ export default class OpenChannelApi {
     /**
      * View a channel
      * ## View a channel  Retrieves information on a specific open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-view-a-channel ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdOpenChannel}
      */
-    ocViewChannelByUrl(channelUrl, opts) {
-      return this.ocViewChannelByUrlWithHttpInfo(channelUrl, opts)
+    ocViewChannelByUrl(apiToken, channelUrl) {
+      return this.ocViewChannelByUrlWithHttpInfo(apiToken, channelUrl)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1111,15 +1168,17 @@ export default class OpenChannelApi {
     /**
      * View a mute
      * ## View a mute  Checks if a user is muted in an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-view-a-mute ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcViewMuteByIdResponse} and HTTP response
      */
-    ocViewMuteByIdWithHttpInfo(channelUrl, mutedUserId, opts) {
-      opts = opts || {};
+    ocViewMuteByIdWithHttpInfo(apiToken, channelUrl, mutedUserId) {
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling ocViewMuteById");
+      }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling ocViewMuteById");
@@ -1136,7 +1195,7 @@ export default class OpenChannelApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -1155,14 +1214,13 @@ export default class OpenChannelApi {
     /**
      * View a mute
      * ## View a mute  Checks if a user is muted in an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-view-a-mute ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcViewMuteByIdResponse}
      */
-    ocViewMuteById(channelUrl, mutedUserId, opts) {
-      return this.ocViewMuteByIdWithHttpInfo(channelUrl, mutedUserId, opts)
+    ocViewMuteById(apiToken, channelUrl, mutedUserId) {
+      return this.ocViewMuteByIdWithHttpInfo(apiToken, channelUrl, mutedUserId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

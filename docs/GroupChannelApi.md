@@ -37,7 +37,7 @@ Method | HTTP request | Description
 
 ## gcAcceptInvitation
 
-> SendBirdGroupChannel gcAcceptInvitation(channelUrl, opts)
+> SendBirdGroupChannel gcAcceptInvitation(apiToken, channelUrl, opts)
 
 Accept an invitation
 
@@ -49,12 +49,12 @@ Accept an invitation
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcAcceptInvitationData': new SendbirdPlatformSdk.GcAcceptInvitationData() // GcAcceptInvitationData | 
 };
-apiInstance.gcAcceptInvitation(channelUrl, opts).then((data) => {
+apiInstance.gcAcceptInvitation(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -67,8 +67,8 @@ apiInstance.gcAcceptInvitation(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcAcceptInvitationData** | [**GcAcceptInvitationData**](GcAcceptInvitationData.md)|  | [optional] 
 
 ### Return type
@@ -87,7 +87,7 @@ No authorization required
 
 ## gcBanUser
 
-> GcBanUserResponse gcBanUser(channelUrl, opts)
+> GcBanUserResponse gcBanUser(apiToken, channelUrl, opts)
 
 Ban a user
 
@@ -99,12 +99,12 @@ Ban a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcBanUserData': new SendbirdPlatformSdk.GcBanUserData() // GcBanUserData | 
 };
-apiInstance.gcBanUser(channelUrl, opts).then((data) => {
+apiInstance.gcBanUser(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -117,8 +117,8 @@ apiInstance.gcBanUser(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcBanUserData** | [**GcBanUserData**](GcBanUserData.md)|  | [optional] 
 
 ### Return type
@@ -137,7 +137,7 @@ No authorization required
 
 ## gcCancelTheRegistrationOfOperators
 
-> gcCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts)
+> gcCancelTheRegistrationOfOperators(apiToken, channelUrl, operatorIds, opts)
 
 Cancel the registration of operators
 
@@ -149,13 +149,13 @@ Cancel the registration of operators
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let operatorIds = ["null"]; // [String] | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'deleteAll': true // Boolean | 
 };
-apiInstance.gcCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts).then(() => {
+apiInstance.gcCancelTheRegistrationOfOperators(apiToken, channelUrl, operatorIds, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -168,9 +168,9 @@ apiInstance.gcCancelTheRegistrationOfOperators(channelUrl, operatorIds, opts).th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
  **operatorIds** | [**[String]**](String.md)|  | 
- **apiToken** | **String**|  | [optional] 
  **deleteAll** | **Boolean**|  | [optional] 
 
 ### Return type
@@ -189,7 +189,7 @@ No authorization required
 
 ## gcCheckIfMemberById
 
-> GcCheckIfMemberByIdResponse gcCheckIfMemberById(channelUrl, userId, opts)
+> GcCheckIfMemberByIdResponse gcCheckIfMemberById(apiToken, channelUrl, userId)
 
 Check if member
 
@@ -201,12 +201,10 @@ Check if member
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let userId = "userId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.gcCheckIfMemberById(channelUrl, userId, opts).then((data) => {
+apiInstance.gcCheckIfMemberById(apiToken, channelUrl, userId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -219,9 +217,9 @@ apiInstance.gcCheckIfMemberById(channelUrl, userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -239,7 +237,7 @@ No authorization required
 
 ## gcCreateChannel
 
-> SendBirdGroupChannel gcCreateChannel(opts)
+> SendBirdGroupChannel gcCreateChannel(apiToken, opts)
 
 Create a channel
 
@@ -251,11 +249,11 @@ Create a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcCreateChannelData': new SendbirdPlatformSdk.GcCreateChannelData() // GcCreateChannelData | 
 };
-apiInstance.gcCreateChannel(opts).then((data) => {
+apiInstance.gcCreateChannel(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -268,7 +266,7 @@ apiInstance.gcCreateChannel(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **gcCreateChannelData** | [**GcCreateChannelData**](GcCreateChannelData.md)|  | [optional] 
 
 ### Return type
@@ -287,7 +285,7 @@ No authorization required
 
 ## gcDeclineInvitation
 
-> gcDeclineInvitation(channelUrl, opts)
+> gcDeclineInvitation(apiToken, channelUrl, opts)
 
 Decline an invitation
 
@@ -299,12 +297,12 @@ Decline an invitation
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcDeclineInvitationData': new SendbirdPlatformSdk.GcDeclineInvitationData() // GcDeclineInvitationData | 
 };
-apiInstance.gcDeclineInvitation(channelUrl, opts).then(() => {
+apiInstance.gcDeclineInvitation(apiToken, channelUrl, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -317,8 +315,8 @@ apiInstance.gcDeclineInvitation(channelUrl, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcDeclineInvitationData** | [**GcDeclineInvitationData**](GcDeclineInvitationData.md)|  | [optional] 
 
 ### Return type
@@ -337,7 +335,7 @@ No authorization required
 
 ## gcDeleteChannelByUrl
 
-> gcDeleteChannelByUrl(channelUrl, opts)
+> gcDeleteChannelByUrl(apiToken, channelUrl)
 
 Delete a channel
 
@@ -349,11 +347,9 @@ Delete a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.gcDeleteChannelByUrl(channelUrl, opts).then(() => {
+apiInstance.gcDeleteChannelByUrl(apiToken, channelUrl).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -366,8 +362,8 @@ apiInstance.gcDeleteChannelByUrl(channelUrl, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -385,7 +381,7 @@ No authorization required
 
 ## gcFreezeChannel
 
-> SendBirdGroupChannel gcFreezeChannel(channelUrl, opts)
+> SendBirdGroupChannel gcFreezeChannel(apiToken, channelUrl, opts)
 
 Freeze a channel
 
@@ -397,12 +393,12 @@ Freeze a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcFreezeChannelData': new SendbirdPlatformSdk.GcFreezeChannelData() // GcFreezeChannelData | 
 };
-apiInstance.gcFreezeChannel(channelUrl, opts).then((data) => {
+apiInstance.gcFreezeChannel(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -415,8 +411,8 @@ apiInstance.gcFreezeChannel(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcFreezeChannelData** | [**GcFreezeChannelData**](GcFreezeChannelData.md)|  | [optional] 
 
 ### Return type
@@ -435,7 +431,7 @@ No authorization required
 
 ## gcHideOrArchiveChannel
 
-> gcHideOrArchiveChannel(channelUrl, opts)
+> gcHideOrArchiveChannel(apiToken, channelUrl, opts)
 
 Hide or archive a channel
 
@@ -447,12 +443,12 @@ Hide or archive a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcHideOrArchiveChannelData': new SendbirdPlatformSdk.GcHideOrArchiveChannelData() // GcHideOrArchiveChannelData | 
 };
-apiInstance.gcHideOrArchiveChannel(channelUrl, opts).then(() => {
+apiInstance.gcHideOrArchiveChannel(apiToken, channelUrl, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -465,8 +461,8 @@ apiInstance.gcHideOrArchiveChannel(channelUrl, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcHideOrArchiveChannelData** | [**GcHideOrArchiveChannelData**](GcHideOrArchiveChannelData.md)|  | [optional] 
 
 ### Return type
@@ -485,7 +481,7 @@ No authorization required
 
 ## gcInviteAsMembers
 
-> SendBirdGroupChannel gcInviteAsMembers(channelUrl, opts)
+> SendBirdGroupChannel gcInviteAsMembers(apiToken, channelUrl, opts)
 
 Invite as members
 
@@ -497,12 +493,12 @@ Invite as members
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcInviteAsMembersData': new SendbirdPlatformSdk.GcInviteAsMembersData() // GcInviteAsMembersData | 
 };
-apiInstance.gcInviteAsMembers(channelUrl, opts).then((data) => {
+apiInstance.gcInviteAsMembers(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -515,8 +511,8 @@ apiInstance.gcInviteAsMembers(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcInviteAsMembersData** | [**GcInviteAsMembersData**](GcInviteAsMembersData.md)|  | [optional] 
 
 ### Return type
@@ -535,7 +531,7 @@ No authorization required
 
 ## gcJoinChannel
 
-> gcJoinChannel(channelUrl, opts)
+> gcJoinChannel(apiToken, channelUrl, opts)
 
 Join a channel
 
@@ -547,12 +543,12 @@ Join a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcJoinChannelData': new SendbirdPlatformSdk.GcJoinChannelData() // GcJoinChannelData | 
 };
-apiInstance.gcJoinChannel(channelUrl, opts).then(() => {
+apiInstance.gcJoinChannel(apiToken, channelUrl, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -565,8 +561,8 @@ apiInstance.gcJoinChannel(channelUrl, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcJoinChannelData** | [**GcJoinChannelData**](GcJoinChannelData.md)|  | [optional] 
 
 ### Return type
@@ -585,7 +581,7 @@ No authorization required
 
 ## gcLeaveChannel
 
-> gcLeaveChannel(channelUrl, opts)
+> gcLeaveChannel(apiToken, channelUrl, opts)
 
 Leave a channel
 
@@ -597,12 +593,12 @@ Leave a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcLeaveChannelData': new SendbirdPlatformSdk.GcLeaveChannelData() // GcLeaveChannelData | 
 };
-apiInstance.gcLeaveChannel(channelUrl, opts).then(() => {
+apiInstance.gcLeaveChannel(apiToken, channelUrl, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -615,8 +611,8 @@ apiInstance.gcLeaveChannel(channelUrl, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcLeaveChannelData** | [**GcLeaveChannelData**](GcLeaveChannelData.md)|  | [optional] 
 
 ### Return type
@@ -635,7 +631,7 @@ No authorization required
 
 ## gcListBannedUsers
 
-> GcListBannedUsersResponse gcListBannedUsers(channelUrl, opts)
+> GcListBannedUsersResponse gcListBannedUsers(apiToken, channelUrl, opts)
 
 List banned users
 
@@ -647,13 +643,13 @@ List banned users
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.gcListBannedUsers(channelUrl, opts).then((data) => {
+apiInstance.gcListBannedUsers(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -666,8 +662,8 @@ apiInstance.gcListBannedUsers(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -687,7 +683,7 @@ No authorization required
 
 ## gcListChannels
 
-> GcListChannelsResponse gcListChannels(opts)
+> GcListChannelsResponse gcListChannels(apiToken, opts)
 
 List channels
 
@@ -699,8 +695,8 @@ List channels
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56, // Number | 
   'distinctMode': "distinctMode_example", // String | 
@@ -744,7 +740,7 @@ let opts = {
   'membersIn': "membersIn_example", // String | 
   'userId': "userId_example" // String | 
 };
-apiInstance.gcListChannels(opts).then((data) => {
+apiInstance.gcListChannels(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -757,7 +753,7 @@ apiInstance.gcListChannels(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **distinctMode** | **String**|  | [optional] 
@@ -817,7 +813,7 @@ No authorization required
 
 ## gcListMembers
 
-> GcListMembersResponse gcListMembers(channelUrl, opts)
+> GcListMembersResponse gcListMembers(apiToken, channelUrl, opts)
 
 List members
 
@@ -829,9 +825,9 @@ List members
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56, // Number | 
   'showDeliveryReceipt': true, // Boolean | 
@@ -842,7 +838,7 @@ let opts = {
   'mutedMemberFilter': "mutedMemberFilter_example", // String | 
   'nicknameStartswith': "nicknameStartswith_example" // String | 
 };
-apiInstance.gcListMembers(channelUrl, opts).then((data) => {
+apiInstance.gcListMembers(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -855,8 +851,8 @@ apiInstance.gcListMembers(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **showDeliveryReceipt** | **Boolean**|  | [optional] 
@@ -883,7 +879,7 @@ No authorization required
 
 ## gcListMutedUsers
 
-> GcListMutedUsersResponse gcListMutedUsers(channelUrl, opts)
+> GcListMutedUsersResponse gcListMutedUsers(apiToken, channelUrl, opts)
 
 List muted users
 
@@ -895,13 +891,13 @@ List muted users
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.gcListMutedUsers(channelUrl, opts).then((data) => {
+apiInstance.gcListMutedUsers(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -914,8 +910,8 @@ apiInstance.gcListMutedUsers(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -935,7 +931,7 @@ No authorization required
 
 ## gcListOperators
 
-> GcListOperatorsResponse gcListOperators(channelUrl, opts)
+> GcListOperatorsResponse gcListOperators(apiToken, channelUrl, opts)
 
 List operators
 
@@ -947,13 +943,13 @@ List operators
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.gcListOperators(channelUrl, opts).then((data) => {
+apiInstance.gcListOperators(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -966,8 +962,8 @@ apiInstance.gcListOperators(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -987,7 +983,7 @@ No authorization required
 
 ## gcMuteUser
 
-> SendBirdGroupChannel gcMuteUser(channelUrl, opts)
+> SendBirdGroupChannel gcMuteUser(apiToken, channelUrl, opts)
 
 Mute a user
 
@@ -999,12 +995,12 @@ Mute a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcMuteUserData': new SendbirdPlatformSdk.GcMuteUserData() // GcMuteUserData | 
 };
-apiInstance.gcMuteUser(channelUrl, opts).then((data) => {
+apiInstance.gcMuteUser(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1017,8 +1013,8 @@ apiInstance.gcMuteUser(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcMuteUserData** | [**GcMuteUserData**](GcMuteUserData.md)|  | [optional] 
 
 ### Return type
@@ -1037,7 +1033,7 @@ No authorization required
 
 ## gcRegisterOperators
 
-> GcRegisterOperatorsResponse gcRegisterOperators(channelUrl, opts)
+> GcRegisterOperatorsResponse gcRegisterOperators(apiToken, channelUrl, opts)
 
 Register operators
 
@@ -1049,12 +1045,12 @@ Register operators
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcRegisterOperatorsData': new SendbirdPlatformSdk.GcRegisterOperatorsData() // GcRegisterOperatorsData | 
 };
-apiInstance.gcRegisterOperators(channelUrl, opts).then((data) => {
+apiInstance.gcRegisterOperators(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1067,8 +1063,8 @@ apiInstance.gcRegisterOperators(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcRegisterOperatorsData** | [**GcRegisterOperatorsData**](GcRegisterOperatorsData.md)|  | [optional] 
 
 ### Return type
@@ -1087,7 +1083,7 @@ No authorization required
 
 ## gcResetChatHistory
 
-> gcResetChatHistory(channelUrl, opts)
+> gcResetChatHistory(apiToken, channelUrl, opts)
 
 Reset chat history
 
@@ -1099,12 +1095,12 @@ Reset chat history
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcResetChatHistoryData': new SendbirdPlatformSdk.GcResetChatHistoryData() // GcResetChatHistoryData | 
 };
-apiInstance.gcResetChatHistory(channelUrl, opts).then(() => {
+apiInstance.gcResetChatHistory(apiToken, channelUrl, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -1117,8 +1113,8 @@ apiInstance.gcResetChatHistory(channelUrl, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcResetChatHistoryData** | [**GcResetChatHistoryData**](GcResetChatHistoryData.md)|  | [optional] 
 
 ### Return type
@@ -1137,7 +1133,7 @@ No authorization required
 
 ## gcUnbanUserById
 
-> gcUnbanUserById(channelUrl, bannedUserId, opts)
+> gcUnbanUserById(apiToken, channelUrl, bannedUserId)
 
 Unban a user
 
@@ -1149,12 +1145,10 @@ Unban a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let bannedUserId = "bannedUserId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.gcUnbanUserById(channelUrl, bannedUserId, opts).then(() => {
+apiInstance.gcUnbanUserById(apiToken, channelUrl, bannedUserId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -1167,9 +1161,9 @@ apiInstance.gcUnbanUserById(channelUrl, bannedUserId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
  **bannedUserId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1187,7 +1181,7 @@ No authorization required
 
 ## gcUnhideOrUnarchiveChannel
 
-> gcUnhideOrUnarchiveChannel(channelUrl, userId, opts)
+> gcUnhideOrUnarchiveChannel(apiToken, channelUrl, userId, opts)
 
 Unhide or unarchive a channel
 
@@ -1199,13 +1193,13 @@ Unhide or unarchive a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'shouldUnhideAll': true // Boolean | 
 };
-apiInstance.gcUnhideOrUnarchiveChannel(channelUrl, userId, opts).then(() => {
+apiInstance.gcUnhideOrUnarchiveChannel(apiToken, channelUrl, userId, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -1218,9 +1212,9 @@ apiInstance.gcUnhideOrUnarchiveChannel(channelUrl, userId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **shouldUnhideAll** | **Boolean**|  | [optional] 
 
 ### Return type
@@ -1239,7 +1233,7 @@ No authorization required
 
 ## gcUnmuteUserById
 
-> gcUnmuteUserById(channelUrl, mutedUserId, opts)
+> gcUnmuteUserById(apiToken, channelUrl, mutedUserId)
 
 Unmute a user
 
@@ -1251,12 +1245,10 @@ Unmute a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let mutedUserId = "mutedUserId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.gcUnmuteUserById(channelUrl, mutedUserId, opts).then(() => {
+apiInstance.gcUnmuteUserById(apiToken, channelUrl, mutedUserId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -1269,9 +1261,9 @@ apiInstance.gcUnmuteUserById(channelUrl, mutedUserId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
  **mutedUserId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1289,7 +1281,7 @@ No authorization required
 
 ## gcUpdateBanById
 
-> SendBirdUser gcUpdateBanById(channelUrl, bannedUserId, opts)
+> SendBirdUser gcUpdateBanById(apiToken, channelUrl, bannedUserId, opts)
 
 Update a ban
 
@@ -1301,13 +1293,13 @@ Update a ban
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let bannedUserId = "bannedUserId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcUpdateBanByIdData': new SendbirdPlatformSdk.GcUpdateBanByIdData() // GcUpdateBanByIdData | 
 };
-apiInstance.gcUpdateBanById(channelUrl, bannedUserId, opts).then((data) => {
+apiInstance.gcUpdateBanById(apiToken, channelUrl, bannedUserId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1320,9 +1312,9 @@ apiInstance.gcUpdateBanById(channelUrl, bannedUserId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
  **bannedUserId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcUpdateBanByIdData** | [**GcUpdateBanByIdData**](GcUpdateBanByIdData.md)|  | [optional] 
 
 ### Return type
@@ -1341,7 +1333,7 @@ No authorization required
 
 ## gcUpdateChannelByUrl
 
-> SendBirdGroupChannel gcUpdateChannelByUrl(channelUrl, opts)
+> SendBirdGroupChannel gcUpdateChannelByUrl(apiToken, channelUrl, opts)
 
 Update a channel
 
@@ -1353,12 +1345,12 @@ Update a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'gcUpdateChannelByUrlData': new SendbirdPlatformSdk.GcUpdateChannelByUrlData() // GcUpdateChannelByUrlData | 
 };
-apiInstance.gcUpdateChannelByUrl(channelUrl, opts).then((data) => {
+apiInstance.gcUpdateChannelByUrl(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1371,8 +1363,8 @@ apiInstance.gcUpdateChannelByUrl(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **gcUpdateChannelByUrlData** | [**GcUpdateChannelByUrlData**](GcUpdateChannelByUrlData.md)|  | [optional] 
 
 ### Return type
@@ -1391,7 +1383,7 @@ No authorization required
 
 ## gcViewBanById
 
-> SendBirdUser gcViewBanById(channelUrl, bannedUserId, opts)
+> SendBirdUser gcViewBanById(apiToken, channelUrl, bannedUserId)
 
 View a ban
 
@@ -1403,12 +1395,10 @@ View a ban
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let bannedUserId = "bannedUserId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.gcViewBanById(channelUrl, bannedUserId, opts).then((data) => {
+apiInstance.gcViewBanById(apiToken, channelUrl, bannedUserId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1421,9 +1411,9 @@ apiInstance.gcViewBanById(channelUrl, bannedUserId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
  **bannedUserId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1441,7 +1431,7 @@ No authorization required
 
 ## gcViewChannelByUrl
 
-> SendBirdGroupChannel gcViewChannelByUrl(channelUrl, opts)
+> SendBirdGroupChannel gcViewChannelByUrl(apiToken, channelUrl, opts)
 
 View a channel
 
@@ -1453,16 +1443,16 @@ View a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'showDeliveryReceipt': true, // Boolean | 
   'showReadReceipt': true, // Boolean | 
   'showMember': true, // Boolean | 
   'readReceipt': true, // Boolean | 
   'member': true // Boolean | 
 };
-apiInstance.gcViewChannelByUrl(channelUrl, opts).then((data) => {
+apiInstance.gcViewChannelByUrl(apiToken, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1475,8 +1465,8 @@ apiInstance.gcViewChannelByUrl(channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **showDeliveryReceipt** | **Boolean**|  | [optional] 
  **showReadReceipt** | **Boolean**|  | [optional] 
  **showMember** | **Boolean**|  | [optional] 
@@ -1499,7 +1489,7 @@ No authorization required
 
 ## gcViewMuteById
 
-> GcViewMuteByIdResponse gcViewMuteById(channelUrl, mutedUserId, opts)
+> GcViewMuteByIdResponse gcViewMuteById(apiToken, channelUrl, mutedUserId)
 
 View a mute
 
@@ -1511,12 +1501,10 @@ View a mute
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let mutedUserId = "mutedUserId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.gcViewMuteById(channelUrl, mutedUserId, opts).then((data) => {
+apiInstance.gcViewMuteById(apiToken, channelUrl, mutedUserId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1529,9 +1517,9 @@ apiInstance.gcViewMuteById(channelUrl, mutedUserId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelUrl** | **String**|  | 
  **mutedUserId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 

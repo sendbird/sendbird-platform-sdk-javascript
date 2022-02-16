@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## migrateMessagesByUrl
 
-> migrateMessagesByUrl(targetChannelUrl, opts)
+> migrateMessagesByUrl(apiToken, targetChannelUrl, opts)
 
 Migrate messages
 
@@ -22,12 +22,12 @@ Migrate messages
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MigrationApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let targetChannelUrl = "targetChannelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.migrateMessagesByUrl(targetChannelUrl, opts).then(() => {
+apiInstance.migrateMessagesByUrl(apiToken, targetChannelUrl, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -40,8 +40,8 @@ apiInstance.migrateMessagesByUrl(targetChannelUrl, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **targetChannelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **body** | **Object**|  | [optional] 
 
 ### Return type

@@ -38,20 +38,22 @@ export default class AdvancedAnalyticsApi {
     /**
      * Retrieve Advanced analytics metrics
      * ## Retrieve Advanced analytics metrics  Retrieves Advanced analytics metrics based on the specified parameters. You can retrieve either daily or monthly metrics using the time_dimension parameter.  >__Note__: Daily metrics are calculated and updated every three hours, starting at 1 a.m. in UTC. Meanwhile, monthly metrics are calculated after the last day of the month.  https://sendbird.com/docs/chat/v3/platform-api/guides/advanced-analytics#2-retrieve-advanced-analytics-metrics ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
+     * @param {String} apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RetrieveAdvancedAnalyticsMetricsResponse} and HTTP response
      */
-    retrieveAdvancedAnalyticsMetricsWithHttpInfo(opts) {
-      opts = opts || {};
+    retrieveAdvancedAnalyticsMetricsWithHttpInfo(apiToken) {
       let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling retrieveAdvancedAnalyticsMetrics");
+      }
 
       let pathParams = {
       };
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       let formParams = {
       };
@@ -70,12 +72,11 @@ export default class AdvancedAnalyticsApi {
     /**
      * Retrieve Advanced analytics metrics
      * ## Retrieve Advanced analytics metrics  Retrieves Advanced analytics metrics based on the specified parameters. You can retrieve either daily or monthly metrics using the time_dimension parameter.  >__Note__: Daily metrics are calculated and updated every three hours, starting at 1 a.m. in UTC. Meanwhile, monthly metrics are calculated after the last day of the month.  https://sendbird.com/docs/chat/v3/platform-api/guides/advanced-analytics#2-retrieve-advanced-analytics-metrics ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
+     * @param {String} apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RetrieveAdvancedAnalyticsMetricsResponse}
      */
-    retrieveAdvancedAnalyticsMetrics(opts) {
-      return this.retrieveAdvancedAnalyticsMetricsWithHttpInfo(opts)
+    retrieveAdvancedAnalyticsMetrics(apiToken) {
+      return this.retrieveAdvancedAnalyticsMetricsWithHttpInfo(apiToken)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

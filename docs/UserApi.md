@@ -45,7 +45,7 @@ Method | HTTP request | Description
 
 ## addRegistrationOrDeviceToken
 
-> AddRegistrationOrDeviceTokenResponse addRegistrationOrDeviceToken(userId, tokenType, opts)
+> AddRegistrationOrDeviceTokenResponse addRegistrationOrDeviceToken(apiToken, userId, tokenType, opts)
 
 Add a registration or device token
 
@@ -57,13 +57,13 @@ Add a registration or device token
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let tokenType = "tokenType_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'addRegistrationOrDeviceTokenData': new SendbirdPlatformSdk.AddRegistrationOrDeviceTokenData() // AddRegistrationOrDeviceTokenData | 
 };
-apiInstance.addRegistrationOrDeviceToken(userId, tokenType, opts).then((data) => {
+apiInstance.addRegistrationOrDeviceToken(apiToken, userId, tokenType, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -76,9 +76,9 @@ apiInstance.addRegistrationOrDeviceToken(userId, tokenType, opts).then((data) =>
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
  **tokenType** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **addRegistrationOrDeviceTokenData** | [**AddRegistrationOrDeviceTokenData**](AddRegistrationOrDeviceTokenData.md)|  | [optional] 
 
 ### Return type
@@ -97,7 +97,7 @@ No authorization required
 
 ## banFromChannelsWithCustomChannelTypes
 
-> banFromChannelsWithCustomChannelTypes(userId, opts)
+> banFromChannelsWithCustomChannelTypes(apiToken, userId, opts)
 
 Ban from channels with custom channel types
 
@@ -109,12 +109,12 @@ Ban from channels with custom channel types
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'banFromChannelsWithCustomChannelTypesData': new SendbirdPlatformSdk.BanFromChannelsWithCustomChannelTypesData() // BanFromChannelsWithCustomChannelTypesData | 
 };
-apiInstance.banFromChannelsWithCustomChannelTypes(userId, opts).then(() => {
+apiInstance.banFromChannelsWithCustomChannelTypes(apiToken, userId, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -127,8 +127,8 @@ apiInstance.banFromChannelsWithCustomChannelTypes(userId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **banFromChannelsWithCustomChannelTypesData** | [**BanFromChannelsWithCustomChannelTypesData**](BanFromChannelsWithCustomChannelTypesData.md)|  | [optional] 
 
 ### Return type
@@ -147,7 +147,7 @@ No authorization required
 
 ## blockUser
 
-> SendBirdUser blockUser(userId, opts)
+> SendBirdUser blockUser(apiToken, userId, opts)
 
 Block a user
 
@@ -159,12 +159,12 @@ Block a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'blockUserData': new SendbirdPlatformSdk.BlockUserData() // BlockUserData | 
 };
-apiInstance.blockUser(userId, opts).then((data) => {
+apiInstance.blockUser(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -177,8 +177,8 @@ apiInstance.blockUser(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **blockUserData** | [**BlockUserData**](BlockUserData.md)|  | [optional] 
 
 ### Return type
@@ -197,7 +197,7 @@ No authorization required
 
 ## choosePushNotificationContentTemplate
 
-> ChoosePushNotificationContentTemplateResponse choosePushNotificationContentTemplate(userId, opts)
+> ChoosePushNotificationContentTemplateResponse choosePushNotificationContentTemplate(apiToken, userId, opts)
 
 Choose a push notification content template
 
@@ -209,12 +209,12 @@ Choose a push notification content template
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.choosePushNotificationContentTemplate(userId, opts).then((data) => {
+apiInstance.choosePushNotificationContentTemplate(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -227,8 +227,8 @@ apiInstance.choosePushNotificationContentTemplate(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **body** | **Object**|  | [optional] 
 
 ### Return type
@@ -247,7 +247,7 @@ No authorization required
 
 ## createUser
 
-> SendBirdUser createUser(opts)
+> SendBirdUser createUser(apiToken, opts)
 
 Create a user
 
@@ -259,11 +259,11 @@ Create a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'createUserData': new SendbirdPlatformSdk.CreateUserData() // CreateUserData | 
 };
-apiInstance.createUser(opts).then((data) => {
+apiInstance.createUser(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -276,7 +276,7 @@ apiInstance.createUser(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **createUserData** | [**CreateUserData**](CreateUserData.md)|  | [optional] 
 
 ### Return type
@@ -295,7 +295,7 @@ No authorization required
 
 ## deleteUserById
 
-> deleteUserById(userId, opts)
+> deleteUserById(apiToken, userId)
 
 Delete a user
 
@@ -307,11 +307,9 @@ Delete a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.deleteUserById(userId, opts).then(() => {
+apiInstance.deleteUserById(apiToken, userId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -324,8 +322,8 @@ apiInstance.deleteUserById(userId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -343,7 +341,7 @@ No authorization required
 
 ## leaveMyGroupChannels
 
-> leaveMyGroupChannels(userId, opts)
+> leaveMyGroupChannels(apiToken, userId, opts)
 
 Leave my group channels
 
@@ -355,12 +353,12 @@ Leave my group channels
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'leaveMyGroupChannelsData': new SendbirdPlatformSdk.LeaveMyGroupChannelsData() // LeaveMyGroupChannelsData | 
 };
-apiInstance.leaveMyGroupChannels(userId, opts).then(() => {
+apiInstance.leaveMyGroupChannels(apiToken, userId, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -373,8 +371,8 @@ apiInstance.leaveMyGroupChannels(userId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **leaveMyGroupChannelsData** | [**LeaveMyGroupChannelsData**](LeaveMyGroupChannelsData.md)|  | [optional] 
 
 ### Return type
@@ -393,7 +391,7 @@ No authorization required
 
 ## listBannedChannels
 
-> ListBannedChannelsResponse listBannedChannels(userId, opts)
+> ListBannedChannelsResponse listBannedChannels(apiToken, userId, opts)
 
 List banned channels
 
@@ -405,13 +403,13 @@ List banned channels
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listBannedChannels(userId, opts).then((data) => {
+apiInstance.listBannedChannels(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -424,8 +422,8 @@ apiInstance.listBannedChannels(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -445,7 +443,7 @@ No authorization required
 
 ## listBlockedUsers
 
-> ListBlockedUsersResponse listBlockedUsers(userId, opts)
+> ListBlockedUsersResponse listBlockedUsers(apiToken, userId, opts)
 
 List blocked users
 
@@ -457,16 +455,16 @@ List blocked users
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56, // Number | 
   'userIds': "userIds_example", // String | 
   'metadatakey': "metadatakey_example", // String | 
   'metadatavaluesIn': "metadatavaluesIn_example" // String | 
 };
-apiInstance.listBlockedUsers(userId, opts).then((data) => {
+apiInstance.listBlockedUsers(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -479,8 +477,8 @@ apiInstance.listBlockedUsers(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **userIds** | **String**|  | [optional] 
@@ -503,7 +501,7 @@ No authorization required
 
 ## listMutedChannels
 
-> ListMutedChannelsResponse listMutedChannels(userId, opts)
+> ListMutedChannelsResponse listMutedChannels(apiToken, userId, opts)
 
 List muted channels
 
@@ -515,13 +513,13 @@ List muted channels
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listMutedChannels(userId, opts).then((data) => {
+apiInstance.listMutedChannels(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -534,8 +532,8 @@ apiInstance.listMutedChannels(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -555,7 +553,7 @@ No authorization required
 
 ## listMyGroupChannels
 
-> ListMyGroupChannelsResponse listMyGroupChannels(userId, opts)
+> ListMyGroupChannelsResponse listMyGroupChannels(apiToken, userId, opts)
 
 List my group channels
 
@@ -567,9 +565,9 @@ List my group channels
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56, // Number | 
   'distinctMode': "distinctMode_example", // String | 
@@ -611,7 +609,7 @@ let opts = {
   'metacounterValueLte': "metacounterValueLte_example", // String | 
   'customType': "customType_example" // String | 
 };
-apiInstance.listMyGroupChannels(userId, opts).then((data) => {
+apiInstance.listMyGroupChannels(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -624,8 +622,8 @@ apiInstance.listMyGroupChannels(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **distinctMode** | **String**|  | [optional] 
@@ -683,7 +681,7 @@ No authorization required
 
 ## listRegistrationOrDeviceTokens
 
-> ListRegistrationOrDeviceTokensResponse listRegistrationOrDeviceTokens(userId, tokenType, opts)
+> ListRegistrationOrDeviceTokensResponse listRegistrationOrDeviceTokens(apiToken, userId, tokenType)
 
 List registration or device tokens
 
@@ -695,12 +693,10 @@ List registration or device tokens
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let tokenType = "tokenType_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.listRegistrationOrDeviceTokens(userId, tokenType, opts).then((data) => {
+apiInstance.listRegistrationOrDeviceTokens(apiToken, userId, tokenType).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -713,9 +709,9 @@ apiInstance.listRegistrationOrDeviceTokens(userId, tokenType, opts).then((data) 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
  **tokenType** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -733,7 +729,7 @@ No authorization required
 
 ## listUsers
 
-> ListUsersResponse listUsers(opts)
+> ListUsersResponse listUsers(apiToken, opts)
 
 List users
 
@@ -745,8 +741,8 @@ List users
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56, // Number | 
   'activeMode': "activeMode_example", // String | 
@@ -757,7 +753,7 @@ let opts = {
   'metadatakey': "metadatakey_example", // String | 
   'metadatavaluesIn': "metadatavaluesIn_example" // String | 
 };
-apiInstance.listUsers(opts).then((data) => {
+apiInstance.listUsers(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -770,7 +766,7 @@ apiInstance.listUsers(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **activeMode** | **String**|  | [optional] 
@@ -797,7 +793,7 @@ No authorization required
 
 ## markAllMessagesAsRead
 
-> markAllMessagesAsRead(userId, opts)
+> markAllMessagesAsRead(apiToken, userId, opts)
 
 Mark all messages as read
 
@@ -809,12 +805,12 @@ Mark all messages as read
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'markAllMessagesAsReadData': new SendbirdPlatformSdk.MarkAllMessagesAsReadData() // MarkAllMessagesAsReadData | 
 };
-apiInstance.markAllMessagesAsRead(userId, opts).then(() => {
+apiInstance.markAllMessagesAsRead(apiToken, userId, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -827,8 +823,8 @@ apiInstance.markAllMessagesAsRead(userId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **markAllMessagesAsReadData** | [**MarkAllMessagesAsReadData**](MarkAllMessagesAsReadData.md)|  | [optional] 
 
 ### Return type
@@ -847,7 +843,7 @@ No authorization required
 
 ## muteInChannelsWithCustomChannelTypes
 
-> muteInChannelsWithCustomChannelTypes(userId, opts)
+> muteInChannelsWithCustomChannelTypes(apiToken, userId, opts)
 
 Mute in channels with custom channel types
 
@@ -859,12 +855,12 @@ Mute in channels with custom channel types
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'muteInChannelsWithCustomChannelTypesData': new SendbirdPlatformSdk.MuteInChannelsWithCustomChannelTypesData() // MuteInChannelsWithCustomChannelTypesData | 
 };
-apiInstance.muteInChannelsWithCustomChannelTypes(userId, opts).then(() => {
+apiInstance.muteInChannelsWithCustomChannelTypes(apiToken, userId, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -877,8 +873,8 @@ apiInstance.muteInChannelsWithCustomChannelTypes(userId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **muteInChannelsWithCustomChannelTypesData** | [**MuteInChannelsWithCustomChannelTypesData**](MuteInChannelsWithCustomChannelTypesData.md)|  | [optional] 
 
 ### Return type
@@ -897,7 +893,7 @@ No authorization required
 
 ## registerAsOperatorToChannelsWithCustomChannelTypes
 
-> registerAsOperatorToChannelsWithCustomChannelTypes(userId, opts)
+> registerAsOperatorToChannelsWithCustomChannelTypes(apiToken, userId, opts)
 
 Register as an operator to channels with custom channel types
 
@@ -909,12 +905,12 @@ Register as an operator to channels with custom channel types
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'registerAsOperatorToChannelsWithCustomChannelTypesData': new SendbirdPlatformSdk.RegisterAsOperatorToChannelsWithCustomChannelTypesData() // RegisterAsOperatorToChannelsWithCustomChannelTypesData | 
 };
-apiInstance.registerAsOperatorToChannelsWithCustomChannelTypes(userId, opts).then(() => {
+apiInstance.registerAsOperatorToChannelsWithCustomChannelTypes(apiToken, userId, opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -927,8 +923,8 @@ apiInstance.registerAsOperatorToChannelsWithCustomChannelTypes(userId, opts).the
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **registerAsOperatorToChannelsWithCustomChannelTypesData** | [**RegisterAsOperatorToChannelsWithCustomChannelTypesData**](RegisterAsOperatorToChannelsWithCustomChannelTypesData.md)|  | [optional] 
 
 ### Return type
@@ -947,7 +943,7 @@ No authorization required
 
 ## removeRegistrationOrDeviceToken
 
-> RemoveRegistrationOrDeviceTokenResponse removeRegistrationOrDeviceToken(userId, opts)
+> RemoveRegistrationOrDeviceTokenResponse removeRegistrationOrDeviceToken(apiToken, userId)
 
 Remove a registration or device token - When unregistering all device tokens
 
@@ -959,11 +955,9 @@ Remove a registration or device token - When unregistering all device tokens
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.removeRegistrationOrDeviceToken(userId, opts).then((data) => {
+apiInstance.removeRegistrationOrDeviceToken(apiToken, userId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -976,8 +970,8 @@ apiInstance.removeRegistrationOrDeviceToken(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -995,7 +989,7 @@ No authorization required
 
 ## removeRegistrationOrDeviceTokenByToken
 
-> RemoveRegistrationOrDeviceTokenByTokenResponse removeRegistrationOrDeviceTokenByToken(userId, tokenType, token, opts)
+> RemoveRegistrationOrDeviceTokenByTokenResponse removeRegistrationOrDeviceTokenByToken(apiToken, userId, tokenType, token)
 
 Remove a registration or device token - When unregistering a specific token
 
@@ -1007,13 +1001,11 @@ Remove a registration or device token - When unregistering a specific token
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let tokenType = "tokenType_example"; // String | 
 let token = "token_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.removeRegistrationOrDeviceTokenByToken(userId, tokenType, token, opts).then((data) => {
+apiInstance.removeRegistrationOrDeviceTokenByToken(apiToken, userId, tokenType, token).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1026,10 +1018,10 @@ apiInstance.removeRegistrationOrDeviceTokenByToken(userId, tokenType, token, opt
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
  **tokenType** | **String**|  | 
  **token** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1047,7 +1039,7 @@ No authorization required
 
 ## removeRegistrationOrDeviceTokenFromOwnerByToken
 
-> RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse removeRegistrationOrDeviceTokenFromOwnerByToken(tokenType, token, opts)
+> RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse removeRegistrationOrDeviceTokenFromOwnerByToken(apiToken, tokenType, token)
 
 Remove a registration or device token from an owner
 
@@ -1059,12 +1051,10 @@ Remove a registration or device token from an owner
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let tokenType = "tokenType_example"; // String | 
 let token = "token_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.removeRegistrationOrDeviceTokenFromOwnerByToken(tokenType, token, opts).then((data) => {
+apiInstance.removeRegistrationOrDeviceTokenFromOwnerByToken(apiToken, tokenType, token).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1077,9 +1067,9 @@ apiInstance.removeRegistrationOrDeviceTokenFromOwnerByToken(tokenType, token, op
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **tokenType** | **String**|  | 
  **token** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1097,7 +1087,7 @@ No authorization required
 
 ## resetPushPreferences
 
-> resetPushPreferences(userId, opts)
+> resetPushPreferences(apiToken, userId)
 
 Reset push preferences
 
@@ -1109,11 +1099,9 @@ Reset push preferences
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.resetPushPreferences(userId, opts).then(() => {
+apiInstance.resetPushPreferences(apiToken, userId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -1126,8 +1114,8 @@ apiInstance.resetPushPreferences(userId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1145,7 +1133,7 @@ No authorization required
 
 ## unblockUserById
 
-> unblockUserById(userId, targetId, opts)
+> unblockUserById(apiToken, userId, targetId)
 
 Unblock a user
 
@@ -1157,12 +1145,10 @@ Unblock a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let targetId = "targetId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.unblockUserById(userId, targetId, opts).then(() => {
+apiInstance.unblockUserById(apiToken, userId, targetId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -1175,9 +1161,9 @@ apiInstance.unblockUserById(userId, targetId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
  **targetId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1195,7 +1181,7 @@ No authorization required
 
 ## updateChannelInvitationPreference
 
-> UpdateChannelInvitationPreferenceResponse updateChannelInvitationPreference(userId, opts)
+> UpdateChannelInvitationPreferenceResponse updateChannelInvitationPreference(apiToken, userId, opts)
 
 Update channel invitation preference
 
@@ -1207,12 +1193,12 @@ Update channel invitation preference
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateChannelInvitationPreferenceData': new SendbirdPlatformSdk.UpdateChannelInvitationPreferenceData() // UpdateChannelInvitationPreferenceData | 
 };
-apiInstance.updateChannelInvitationPreference(userId, opts).then((data) => {
+apiInstance.updateChannelInvitationPreference(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1225,8 +1211,8 @@ apiInstance.updateChannelInvitationPreference(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateChannelInvitationPreferenceData** | [**UpdateChannelInvitationPreferenceData**](UpdateChannelInvitationPreferenceData.md)|  | [optional] 
 
 ### Return type
@@ -1245,7 +1231,7 @@ No authorization required
 
 ## updateCountPreferenceOfChannelByUrl
 
-> UpdateCountPreferenceOfChannelByUrlResponse updateCountPreferenceOfChannelByUrl(userId, channelUrl, opts)
+> UpdateCountPreferenceOfChannelByUrlResponse updateCountPreferenceOfChannelByUrl(apiToken, userId, channelUrl, opts)
 
 Update count preference of a channel
 
@@ -1257,13 +1243,13 @@ Update count preference of a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateCountPreferenceOfChannelByUrlData': new SendbirdPlatformSdk.UpdateCountPreferenceOfChannelByUrlData() // UpdateCountPreferenceOfChannelByUrlData | 
 };
-apiInstance.updateCountPreferenceOfChannelByUrl(userId, channelUrl, opts).then((data) => {
+apiInstance.updateCountPreferenceOfChannelByUrl(apiToken, userId, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1276,9 +1262,9 @@ apiInstance.updateCountPreferenceOfChannelByUrl(userId, channelUrl, opts).then((
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateCountPreferenceOfChannelByUrlData** | [**UpdateCountPreferenceOfChannelByUrlData**](UpdateCountPreferenceOfChannelByUrlData.md)|  | [optional] 
 
 ### Return type
@@ -1297,7 +1283,7 @@ No authorization required
 
 ## updatePushPreferences
 
-> UpdatePushPreferencesResponse updatePushPreferences(userId, opts)
+> UpdatePushPreferencesResponse updatePushPreferences(apiToken, userId, opts)
 
 Update push preferences
 
@@ -1309,12 +1295,12 @@ Update push preferences
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updatePushPreferencesData': new SendbirdPlatformSdk.UpdatePushPreferencesData() // UpdatePushPreferencesData | 
 };
-apiInstance.updatePushPreferences(userId, opts).then((data) => {
+apiInstance.updatePushPreferences(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1327,8 +1313,8 @@ apiInstance.updatePushPreferences(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updatePushPreferencesData** | [**UpdatePushPreferencesData**](UpdatePushPreferencesData.md)|  | [optional] 
 
 ### Return type
@@ -1347,7 +1333,7 @@ No authorization required
 
 ## updatePushPreferencesForChannelByUrl
 
-> UpdatePushPreferencesForChannelByUrlResponse updatePushPreferencesForChannelByUrl(userId, channelUrl, opts)
+> UpdatePushPreferencesForChannelByUrlResponse updatePushPreferencesForChannelByUrl(apiToken, userId, channelUrl, opts)
 
 Update push preferences for a channel
 
@@ -1359,13 +1345,13 @@ Update push preferences for a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updatePushPreferencesForChannelByUrlData': new SendbirdPlatformSdk.UpdatePushPreferencesForChannelByUrlData() // UpdatePushPreferencesForChannelByUrlData | 
 };
-apiInstance.updatePushPreferencesForChannelByUrl(userId, channelUrl, opts).then((data) => {
+apiInstance.updatePushPreferencesForChannelByUrl(apiToken, userId, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1378,9 +1364,9 @@ apiInstance.updatePushPreferencesForChannelByUrl(userId, channelUrl, opts).then(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updatePushPreferencesForChannelByUrlData** | [**UpdatePushPreferencesForChannelByUrlData**](UpdatePushPreferencesForChannelByUrlData.md)|  | [optional] 
 
 ### Return type
@@ -1399,7 +1385,7 @@ No authorization required
 
 ## updateUserById
 
-> SendBirdUser updateUserById(userId, opts)
+> SendBirdUser updateUserById(apiToken, userId, opts)
 
 Update a user
 
@@ -1411,12 +1397,12 @@ Update a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateUserByIdData': new SendbirdPlatformSdk.UpdateUserByIdData() // UpdateUserByIdData | 
 };
-apiInstance.updateUserById(userId, opts).then((data) => {
+apiInstance.updateUserById(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1429,8 +1415,8 @@ apiInstance.updateUserById(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateUserByIdData** | [**UpdateUserByIdData**](UpdateUserByIdData.md)|  | [optional] 
 
 ### Return type
@@ -1449,7 +1435,7 @@ No authorization required
 
 ## viewChannelInvitationPreference
 
-> ViewChannelInvitationPreferenceResponse viewChannelInvitationPreference(userId, opts)
+> ViewChannelInvitationPreferenceResponse viewChannelInvitationPreference(apiToken, userId)
 
 View channel invitation preference
 
@@ -1461,11 +1447,9 @@ View channel invitation preference
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewChannelInvitationPreference(userId, opts).then((data) => {
+apiInstance.viewChannelInvitationPreference(apiToken, userId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1478,8 +1462,8 @@ apiInstance.viewChannelInvitationPreference(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1497,7 +1481,7 @@ No authorization required
 
 ## viewCountPreferenceOfChannelByUrl
 
-> ViewCountPreferenceOfChannelByUrlResponse viewCountPreferenceOfChannelByUrl(userId, channelUrl, opts)
+> ViewCountPreferenceOfChannelByUrlResponse viewCountPreferenceOfChannelByUrl(apiToken, userId, channelUrl)
 
 View count preference of a channel
 
@@ -1509,12 +1493,10 @@ View count preference of a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewCountPreferenceOfChannelByUrl(userId, channelUrl, opts).then((data) => {
+apiInstance.viewCountPreferenceOfChannelByUrl(apiToken, userId, channelUrl).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1527,9 +1509,9 @@ apiInstance.viewCountPreferenceOfChannelByUrl(userId, channelUrl, opts).then((da
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1547,7 +1529,7 @@ No authorization required
 
 ## viewNumberOfChannelsByJoinStatus
 
-> ViewNumberOfChannelsByJoinStatusResponse viewNumberOfChannelsByJoinStatus(userId, opts)
+> ViewNumberOfChannelsByJoinStatusResponse viewNumberOfChannelsByJoinStatus(apiToken, userId, opts)
 
 View number of channels by join status
 
@@ -1559,12 +1541,12 @@ View number of channels by join status
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'state': "state_example" // String | 
 };
-apiInstance.viewNumberOfChannelsByJoinStatus(userId, opts).then((data) => {
+apiInstance.viewNumberOfChannelsByJoinStatus(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1577,8 +1559,8 @@ apiInstance.viewNumberOfChannelsByJoinStatus(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **state** | **String**|  | [optional] 
 
 ### Return type
@@ -1597,7 +1579,7 @@ No authorization required
 
 ## viewNumberOfChannelsWithUnreadMessages
 
-> ViewNumberOfChannelsWithUnreadMessagesResponse viewNumberOfChannelsWithUnreadMessages(userId, opts)
+> ViewNumberOfChannelsWithUnreadMessagesResponse viewNumberOfChannelsWithUnreadMessages(apiToken, userId, opts)
 
 View number of channels with unread messages
 
@@ -1609,13 +1591,13 @@ View number of channels with unread messages
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'customTypes': ["null"], // [String] | 
   'superMode': "superMode_example" // String | 
 };
-apiInstance.viewNumberOfChannelsWithUnreadMessages(userId, opts).then((data) => {
+apiInstance.viewNumberOfChannelsWithUnreadMessages(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1628,8 +1610,8 @@ apiInstance.viewNumberOfChannelsWithUnreadMessages(userId, opts).then((data) => 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **customTypes** | [**[String]**](String.md)|  | [optional] 
  **superMode** | **String**|  | [optional] 
 
@@ -1649,7 +1631,7 @@ No authorization required
 
 ## viewNumberOfUnreadItems
 
-> ViewNumberOfUnreadItemsResponse viewNumberOfUnreadItems(userId, opts)
+> ViewNumberOfUnreadItemsResponse viewNumberOfUnreadItems(apiToken, userId, opts)
 
 View number of unread items
 
@@ -1661,13 +1643,13 @@ View number of unread items
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'customType': "customType_example", // String | 
   'itemKeys': "itemKeys_example" // String | 
 };
-apiInstance.viewNumberOfUnreadItems(userId, opts).then((data) => {
+apiInstance.viewNumberOfUnreadItems(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1680,8 +1662,8 @@ apiInstance.viewNumberOfUnreadItems(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **customType** | **String**|  | [optional] 
  **itemKeys** | **String**|  | [optional] 
 
@@ -1701,7 +1683,7 @@ No authorization required
 
 ## viewNumberOfUnreadMessages
 
-> ViewNumberOfUnreadMessagesResponse viewNumberOfUnreadMessages(userId, opts)
+> ViewNumberOfUnreadMessagesResponse viewNumberOfUnreadMessages(apiToken, userId, opts)
 
 View number of unread messages
 
@@ -1713,13 +1695,13 @@ View number of unread messages
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'customTypes': "customTypes_example", // String | 
   'superMode': "superMode_example" // String | 
 };
-apiInstance.viewNumberOfUnreadMessages(userId, opts).then((data) => {
+apiInstance.viewNumberOfUnreadMessages(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1732,8 +1714,8 @@ apiInstance.viewNumberOfUnreadMessages(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **customTypes** | **String**|  | [optional] 
  **superMode** | **String**|  | [optional] 
 
@@ -1753,7 +1735,7 @@ No authorization required
 
 ## viewPushPreferences
 
-> ViewPushPreferencesResponse viewPushPreferences(userId, opts)
+> ViewPushPreferencesResponse viewPushPreferences(apiToken, userId)
 
 View push preferences
 
@@ -1765,11 +1747,9 @@ View push preferences
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewPushPreferences(userId, opts).then((data) => {
+apiInstance.viewPushPreferences(apiToken, userId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1782,8 +1762,8 @@ apiInstance.viewPushPreferences(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1801,7 +1781,7 @@ No authorization required
 
 ## viewPushPreferencesForChannelByUrl
 
-> ViewPushPreferencesForChannelByUrlResponse viewPushPreferencesForChannelByUrl(userId, channelUrl, opts)
+> ViewPushPreferencesForChannelByUrlResponse viewPushPreferencesForChannelByUrl(apiToken, userId, channelUrl)
 
 View push preferences for a channel
 
@@ -1813,12 +1793,10 @@ View push preferences for a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewPushPreferencesForChannelByUrl(userId, channelUrl, opts).then((data) => {
+apiInstance.viewPushPreferencesForChannelByUrl(apiToken, userId, channelUrl).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1831,9 +1809,9 @@ apiInstance.viewPushPreferencesForChannelByUrl(userId, channelUrl, opts).then((d
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1851,7 +1829,7 @@ No authorization required
 
 ## viewUserById
 
-> SendBirdUser viewUserById(userId, opts)
+> SendBirdUser viewUserById(apiToken, userId, opts)
 
 View a user
 
@@ -1863,14 +1841,14 @@ View a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let userId = "userId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'includeUnreadCount': true, // Boolean | 
   'customTypes': "customTypes_example", // String | 
   'superMode': "superMode_example" // String | 
 };
-apiInstance.viewUserById(userId, opts).then((data) => {
+apiInstance.viewUserById(apiToken, userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1883,8 +1861,8 @@ apiInstance.viewUserById(userId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **userId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **includeUnreadCount** | **Boolean**|  | [optional] 
  **customTypes** | **String**|  | [optional] 
  **superMode** | **String**|  | [optional] 
@@ -1905,7 +1883,7 @@ No authorization required
 
 ## viewWhoOwnsRegistrationOrDeviceTokenByToken
 
-> ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse viewWhoOwnsRegistrationOrDeviceTokenByToken(tokenType, token, opts)
+> ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse viewWhoOwnsRegistrationOrDeviceTokenByToken(apiToken, tokenType, token)
 
 View who owns a registration or device token
 
@@ -1917,12 +1895,10 @@ View who owns a registration or device token
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let tokenType = "tokenType_example"; // String | 
 let token = "token_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewWhoOwnsRegistrationOrDeviceTokenByToken(tokenType, token, opts).then((data) => {
+apiInstance.viewWhoOwnsRegistrationOrDeviceTokenByToken(apiToken, tokenType, token).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1935,9 +1911,9 @@ apiInstance.viewWhoOwnsRegistrationOrDeviceTokenByToken(tokenType, token, opts).
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **tokenType** | **String**|  | 
  **token** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## listDataExportsByMessageChannelOrUser
 
-> ListDataExportsByMessageChannelOrUserResponse listDataExportsByMessageChannelOrUser(dataType, opts)
+> ListDataExportsByMessageChannelOrUserResponse listDataExportsByMessageChannelOrUser(apiToken, dataType, opts)
 
 List data exports by message, channel, or user
 
@@ -24,13 +24,13 @@ List data exports by message, channel, or user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.DataExportApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let dataType = "dataType_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listDataExportsByMessageChannelOrUser(dataType, opts).then((data) => {
+apiInstance.listDataExportsByMessageChannelOrUser(apiToken, dataType, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -43,8 +43,8 @@ apiInstance.listDataExportsByMessageChannelOrUser(dataType, opts).then((data) =>
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **dataType** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -64,7 +64,7 @@ No authorization required
 
 ## registerAndScheduleDataExport
 
-> RegisterAndScheduleDataExportResponse registerAndScheduleDataExport(dataType, opts)
+> RegisterAndScheduleDataExportResponse registerAndScheduleDataExport(apiToken, dataType, opts)
 
 Register and schedule a data export
 
@@ -76,12 +76,12 @@ Register and schedule a data export
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.DataExportApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let dataType = "dataType_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'registerAndScheduleDataExportData': new SendbirdPlatformSdk.RegisterAndScheduleDataExportData() // RegisterAndScheduleDataExportData | 
 };
-apiInstance.registerAndScheduleDataExport(dataType, opts).then((data) => {
+apiInstance.registerAndScheduleDataExport(apiToken, dataType, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -94,8 +94,8 @@ apiInstance.registerAndScheduleDataExport(dataType, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **dataType** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **registerAndScheduleDataExportData** | [**RegisterAndScheduleDataExportData**](RegisterAndScheduleDataExportData.md)|  | [optional] 
 
 ### Return type
@@ -114,7 +114,7 @@ No authorization required
 
 ## viewDataExportById
 
-> ViewDataExportByIdResponse viewDataExportById(dataType, requestId, opts)
+> ViewDataExportByIdResponse viewDataExportById(apiToken, dataType, requestId)
 
 View a data export
 
@@ -126,12 +126,10 @@ View a data export
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.DataExportApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let dataType = "dataType_example"; // String | 
 let requestId = "requestId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewDataExportById(dataType, requestId, opts).then((data) => {
+apiInstance.viewDataExportById(apiToken, dataType, requestId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -144,9 +142,9 @@ apiInstance.viewDataExportById(dataType, requestId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **dataType** | **String**|  | 
  **requestId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## listReports
 
-> ListReportsResponse listReports(opts)
+> ListReportsResponse listReports(apiToken, opts)
 
 List reports
 
@@ -29,14 +29,14 @@ List reports
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56, // Number | 
   'startTs': 56, // Number | 
   'endTs': 56 // Number | 
 };
-apiInstance.listReports(opts).then((data) => {
+apiInstance.listReports(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -49,7 +49,7 @@ apiInstance.listReports(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **startTs** | **Number**|  | [optional] 
@@ -71,7 +71,7 @@ No authorization required
 
 ## listReportsOnChannelByUrl
 
-> ListReportsOnChannelByUrlResponse listReportsOnChannelByUrl(channelType, channelUrl, opts)
+> ListReportsOnChannelByUrlResponse listReportsOnChannelByUrl(apiToken, channelType, channelUrl, opts)
 
 List reports on a channel
 
@@ -83,14 +83,14 @@ List reports on a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listReportsOnChannelByUrl(channelType, channelUrl, opts).then((data) => {
+apiInstance.listReportsOnChannelByUrl(apiToken, channelType, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -103,9 +103,9 @@ apiInstance.listReportsOnChannelByUrl(channelType, channelUrl, opts).then((data)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -125,7 +125,7 @@ No authorization required
 
 ## listReportsOnMessageById
 
-> ListReportsOnMessageByIdResponse listReportsOnMessageById(channelType, channelUrl, messageId, opts)
+> ListReportsOnMessageByIdResponse listReportsOnMessageById(apiToken, channelType, channelUrl, messageId, opts)
 
 List reports on a message
 
@@ -137,15 +137,15 @@ List reports on a message
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listReportsOnMessageById(channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.listReportsOnMessageById(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -158,10 +158,10 @@ apiInstance.listReportsOnMessageById(channelType, channelUrl, messageId, opts).t
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -181,7 +181,7 @@ No authorization required
 
 ## listReportsOnUserById
 
-> ListReportsOnUserByIdResponse listReportsOnUserById(offendingUserId, opts)
+> ListReportsOnUserByIdResponse listReportsOnUserById(apiToken, offendingUserId, opts)
 
 List reports on a user
 
@@ -193,13 +193,13 @@ List reports on a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let offendingUserId = "offendingUserId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'token': "token_example", // String | 
   'limit': 56 // Number | 
 };
-apiInstance.listReportsOnUserById(offendingUserId, opts).then((data) => {
+apiInstance.listReportsOnUserById(apiToken, offendingUserId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -212,8 +212,8 @@ apiInstance.listReportsOnUserById(offendingUserId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **offendingUserId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **token** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
@@ -233,7 +233,7 @@ No authorization required
 
 ## reportChannelByUrl
 
-> ReportChannelByUrlResponse reportChannelByUrl(channelType, channelUrl, opts)
+> ReportChannelByUrlResponse reportChannelByUrl(apiToken, channelType, channelUrl, opts)
 
 Report a channel
 
@@ -245,13 +245,13 @@ Report a channel
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'reportChannelByUrlData': new SendbirdPlatformSdk.ReportChannelByUrlData() // ReportChannelByUrlData | 
 };
-apiInstance.reportChannelByUrl(channelType, channelUrl, opts).then((data) => {
+apiInstance.reportChannelByUrl(apiToken, channelType, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -264,9 +264,9 @@ apiInstance.reportChannelByUrl(channelType, channelUrl, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **reportChannelByUrlData** | [**ReportChannelByUrlData**](ReportChannelByUrlData.md)|  | [optional] 
 
 ### Return type
@@ -285,7 +285,7 @@ No authorization required
 
 ## reportMessageById
 
-> ReportMessageByIdResponse reportMessageById(channelType, channelUrl, messageId, opts)
+> ReportMessageByIdResponse reportMessageById(apiToken, channelType, channelUrl, messageId, opts)
 
 Report a message
 
@@ -297,14 +297,14 @@ Report a message
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'reportMessageByIdData': new SendbirdPlatformSdk.ReportMessageByIdData() // ReportMessageByIdData | 
 };
-apiInstance.reportMessageById(channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.reportMessageById(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -317,10 +317,10 @@ apiInstance.reportMessageById(channelType, channelUrl, messageId, opts).then((da
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **reportMessageByIdData** | [**ReportMessageByIdData**](ReportMessageByIdData.md)|  | [optional] 
 
 ### Return type
@@ -339,7 +339,7 @@ No authorization required
 
 ## reportUserById
 
-> ReportUserByIdResponse reportUserById(offendingUserId, opts)
+> ReportUserByIdResponse reportUserById(apiToken, offendingUserId, opts)
 
 Report a user
 
@@ -351,12 +351,12 @@ Report a user
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let offendingUserId = "offendingUserId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'reportUserByIdData': new SendbirdPlatformSdk.ReportUserByIdData() // ReportUserByIdData | 
 };
-apiInstance.reportUserById(offendingUserId, opts).then((data) => {
+apiInstance.reportUserById(apiToken, offendingUserId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -369,8 +369,8 @@ apiInstance.reportUserById(offendingUserId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **offendingUserId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **reportUserByIdData** | [**ReportUserByIdData**](ReportUserByIdData.md)|  | [optional] 
 
 ### Return type
@@ -389,7 +389,7 @@ No authorization required
 
 ## viewModeratedMessageById
 
-> {String: String} viewModeratedMessageById(channelType, channelUrl, messageId, opts)
+> {String: String} viewModeratedMessageById(apiToken, channelType, channelUrl, messageId)
 
 View a moderated message
 
@@ -401,13 +401,11 @@ View a moderated message
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.viewModeratedMessageById(channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.viewModeratedMessageById(apiToken, channelType, channelUrl, messageId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -420,10 +418,10 @@ apiInstance.viewModeratedMessageById(channelType, channelUrl, messageId, opts).t
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 

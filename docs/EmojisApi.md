@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## addEmojiCategories
 
-> AddEmojiCategoriesResponse addEmojiCategories(opts)
+> AddEmojiCategoriesResponse addEmojiCategories(apiToken, opts)
 
 Add emoji categories
 
@@ -33,11 +33,11 @@ Add emoji categories
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'body': {key: null} // Object | 
 };
-apiInstance.addEmojiCategories(opts).then((data) => {
+apiInstance.addEmojiCategories(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -50,7 +50,7 @@ apiInstance.addEmojiCategories(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **body** | **Object**|  | [optional] 
 
 ### Return type
@@ -69,7 +69,7 @@ No authorization required
 
 ## addEmojis
 
-> AddEmojisResponse addEmojis(opts)
+> AddEmojisResponse addEmojis(apiToken, opts)
 
 Add emojis
 
@@ -81,11 +81,11 @@ Add emojis
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'addEmojisData': new SendbirdPlatformSdk.AddEmojisData() // AddEmojisData | 
 };
-apiInstance.addEmojis(opts).then((data) => {
+apiInstance.addEmojis(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -98,7 +98,7 @@ apiInstance.addEmojis(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **addEmojisData** | [**AddEmojisData**](AddEmojisData.md)|  | [optional] 
 
 ### Return type
@@ -117,7 +117,7 @@ No authorization required
 
 ## deleteEmojiByKey
 
-> deleteEmojiByKey(emojiKey, opts)
+> deleteEmojiByKey(apiToken, emojiKey)
 
 Delete an emoji
 
@@ -129,11 +129,9 @@ Delete an emoji
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let emojiKey = "emojiKey_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.deleteEmojiByKey(emojiKey, opts).then(() => {
+apiInstance.deleteEmojiByKey(apiToken, emojiKey).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -146,8 +144,8 @@ apiInstance.deleteEmojiByKey(emojiKey, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **emojiKey** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -165,7 +163,7 @@ No authorization required
 
 ## deleteEmojiCategoryById
 
-> deleteEmojiCategoryById(emojiCategoryId, opts)
+> deleteEmojiCategoryById(apiToken, emojiCategoryId)
 
 Delete an emoji category
 
@@ -177,11 +175,9 @@ Delete an emoji category
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let emojiCategoryId = "emojiCategoryId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.deleteEmojiCategoryById(emojiCategoryId, opts).then(() => {
+apiInstance.deleteEmojiCategoryById(apiToken, emojiCategoryId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -194,8 +190,8 @@ apiInstance.deleteEmojiCategoryById(emojiCategoryId, opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **emojiCategoryId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -213,7 +209,7 @@ No authorization required
 
 ## enableReactions
 
-> EnableReactionsResponse enableReactions(opts)
+> EnableReactionsResponse enableReactions(apiToken, opts)
 
 Enable reactions
 
@@ -225,11 +221,11 @@ Enable reactions
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'enableReactionsData': new SendbirdPlatformSdk.EnableReactionsData() // EnableReactionsData | 
 };
-apiInstance.enableReactions(opts).then((data) => {
+apiInstance.enableReactions(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -242,7 +238,7 @@ apiInstance.enableReactions(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **enableReactionsData** | [**EnableReactionsData**](EnableReactionsData.md)|  | [optional] 
 
 ### Return type
@@ -261,7 +257,7 @@ No authorization required
 
 ## getEmojiByKey
 
-> SendBirdEmoji getEmojiByKey(emojiKey, opts)
+> SendBirdEmoji getEmojiByKey(apiToken, emojiKey)
 
 Get an emoji
 
@@ -273,11 +269,9 @@ Get an emoji
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let emojiKey = "emojiKey_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.getEmojiByKey(emojiKey, opts).then((data) => {
+apiInstance.getEmojiByKey(apiToken, emojiKey).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -290,8 +284,8 @@ apiInstance.getEmojiByKey(emojiKey, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **emojiKey** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -309,7 +303,7 @@ No authorization required
 
 ## getEmojiCategoryById
 
-> SendBirdEmojiCategory getEmojiCategoryById(emojiCategoryId, opts)
+> SendBirdEmojiCategory getEmojiCategoryById(apiToken, emojiCategoryId)
 
 Get an emoji category
 
@@ -321,11 +315,9 @@ Get an emoji category
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let emojiCategoryId = "emojiCategoryId_example"; // String | 
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.getEmojiCategoryById(emojiCategoryId, opts).then((data) => {
+apiInstance.getEmojiCategoryById(apiToken, emojiCategoryId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -338,8 +330,8 @@ apiInstance.getEmojiCategoryById(emojiCategoryId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **emojiCategoryId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -357,7 +349,7 @@ No authorization required
 
 ## listAllEmojisAndEmojiCategories
 
-> ListAllEmojisAndEmojiCategoriesResponse listAllEmojisAndEmojiCategories(opts)
+> ListAllEmojisAndEmojiCategoriesResponse listAllEmojisAndEmojiCategories(apiToken)
 
 List all emojis and emoji categories
 
@@ -369,10 +361,8 @@ List all emojis and emoji categories
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.listAllEmojisAndEmojiCategories(opts).then((data) => {
+let apiToken = {{API_TOKEN}}; // String | 
+apiInstance.listAllEmojisAndEmojiCategories(apiToken).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -385,7 +375,7 @@ apiInstance.listAllEmojisAndEmojiCategories(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
 
 ### Return type
 
@@ -403,7 +393,7 @@ No authorization required
 
 ## listEmojis
 
-> ListEmojisResponse listEmojis(opts)
+> ListEmojisResponse listEmojis(apiToken)
 
 List emojis
 
@@ -415,10 +405,8 @@ List emojis
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
-let opts = {
-  'apiToken': {{API_TOKEN}} // String | 
-};
-apiInstance.listEmojis(opts).then((data) => {
+let apiToken = {{API_TOKEN}}; // String | 
+apiInstance.listEmojis(apiToken).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -431,7 +419,7 @@ apiInstance.listEmojis(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
 
 ### Return type
 
@@ -449,7 +437,7 @@ No authorization required
 
 ## updateEmojiCategoryUrlById
 
-> SendBirdEmojiCategory updateEmojiCategoryUrlById(emojiCategoryId, opts)
+> SendBirdEmojiCategory updateEmojiCategoryUrlById(apiToken, emojiCategoryId, opts)
 
 Update an emoji category URL
 
@@ -461,12 +449,12 @@ Update an emoji category URL
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let emojiCategoryId = "emojiCategoryId_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateEmojiCategoryUrlByIdData': new SendbirdPlatformSdk.UpdateEmojiCategoryUrlByIdData() // UpdateEmojiCategoryUrlByIdData | 
 };
-apiInstance.updateEmojiCategoryUrlById(emojiCategoryId, opts).then((data) => {
+apiInstance.updateEmojiCategoryUrlById(apiToken, emojiCategoryId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -479,8 +467,8 @@ apiInstance.updateEmojiCategoryUrlById(emojiCategoryId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **emojiCategoryId** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateEmojiCategoryUrlByIdData** | [**UpdateEmojiCategoryUrlByIdData**](UpdateEmojiCategoryUrlByIdData.md)|  | [optional] 
 
 ### Return type
@@ -499,7 +487,7 @@ No authorization required
 
 ## updateEmojiUrlByKey
 
-> SendBirdEmoji updateEmojiUrlByKey(emojiKey, opts)
+> SendBirdEmoji updateEmojiUrlByKey(apiToken, emojiKey, opts)
 
 Update an emoji URL
 
@@ -511,12 +499,12 @@ Update an emoji URL
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let emojiKey = "emojiKey_example"; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'updateEmojiUrlByKeyData': new SendbirdPlatformSdk.UpdateEmojiUrlByKeyData() // UpdateEmojiUrlByKeyData | 
 };
-apiInstance.updateEmojiUrlByKey(emojiKey, opts).then((data) => {
+apiInstance.updateEmojiUrlByKey(apiToken, emojiKey, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -529,8 +517,8 @@ apiInstance.updateEmojiUrlByKey(emojiKey, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
  **emojiKey** | **String**|  | 
- **apiToken** | **String**|  | [optional] 
  **updateEmojiUrlByKeyData** | [**UpdateEmojiUrlByKeyData**](UpdateEmojiUrlByKeyData.md)|  | [optional] 
 
 ### Return type
@@ -549,7 +537,7 @@ No authorization required
 
 ## useDefaultEmojis
 
-> UseDefaultEmojisResponse useDefaultEmojis(opts)
+> UseDefaultEmojisResponse useDefaultEmojis(apiToken, opts)
 
 Use default emojis
 
@@ -561,11 +549,11 @@ Use default emojis
 import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
+let apiToken = {{API_TOKEN}}; // String | 
 let opts = {
-  'apiToken': {{API_TOKEN}}, // String | 
   'useDefaultEmojisData': new SendbirdPlatformSdk.UseDefaultEmojisData() // UseDefaultEmojisData | 
 };
-apiInstance.useDefaultEmojis(opts).then((data) => {
+apiInstance.useDefaultEmojis(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -578,7 +566,7 @@ apiInstance.useDefaultEmojis(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | [optional] 
+ **apiToken** | **String**|  | 
  **useDefaultEmojisData** | [**UseDefaultEmojisData**](UseDefaultEmojisData.md)|  | [optional] 
 
 ### Return type
