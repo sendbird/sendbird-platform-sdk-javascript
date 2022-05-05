@@ -178,7 +178,7 @@ No authorization required
 
 ## ocDeleteChannelByUrl
 
-> ocDeleteChannelByUrl(apiToken, channelUrl)
+> InlineResponse200 ocDeleteChannelByUrl(apiToken, channelUrl)
 
 Delete a channel
 
@@ -192,8 +192,8 @@ import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
-apiInstance.ocDeleteChannelByUrl(apiToken, channelUrl).then(() => {
-  console.log('API called successfully.');
+apiInstance.ocDeleteChannelByUrl(apiToken, channelUrl).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## ocFreezeChannel
@@ -594,7 +594,7 @@ No authorization required
 
 ## ocRegisterOperators
 
-> ocRegisterOperators(apiToken, channelUrl, opts)
+> InlineResponse200 ocRegisterOperators(apiToken, channelUrl, opts)
 
 Register operators
 
@@ -611,8 +611,8 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'ocRegisterOperatorsData': new SendbirdPlatformSdk.OcRegisterOperatorsData() // OcRegisterOperatorsData | 
 };
-apiInstance.ocRegisterOperators(apiToken, channelUrl, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.ocRegisterOperators(apiToken, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -630,7 +630,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -639,12 +639,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## ocUnbanUserById
 
-> ocUnbanUserById(apiToken, channelUrl, bannedUserId)
+> InlineResponse200 ocUnbanUserById(apiToken, channelUrl, bannedUserId)
 
 Unban a user
 
@@ -659,8 +659,8 @@ let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let bannedUserId = "bannedUserId_example"; // String | 
-apiInstance.ocUnbanUserById(apiToken, channelUrl, bannedUserId).then(() => {
-  console.log('API called successfully.');
+apiInstance.ocUnbanUserById(apiToken, channelUrl, bannedUserId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -678,7 +678,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -687,12 +687,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## ocUnmuteUserById
 
-> ocUnmuteUserById(apiToken, channelUrl, mutedUserId)
+> InlineResponse200 ocUnmuteUserById(apiToken, channelUrl, mutedUserId)
 
 Unmute a user
 
@@ -707,8 +707,8 @@ let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let mutedUserId = "mutedUserId_example"; // String | 
-apiInstance.ocUnmuteUserById(apiToken, channelUrl, mutedUserId).then(() => {
-  console.log('API called successfully.');
+apiInstance.ocUnmuteUserById(apiToken, channelUrl, mutedUserId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -726,7 +726,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -735,12 +735,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## ocUpdateBanById
 
-> SendBirdUser ocUpdateBanById(apiToken, channelUrl, bannedUserId, opts)
+> OcUpdateBanByIdResponse ocUpdateBanById(apiToken, channelUrl, bannedUserId, opts)
 
 Update a ban
 
@@ -778,7 +778,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SendBirdUser**](SendBirdUser.md)
+[**OcUpdateBanByIdResponse**](OcUpdateBanByIdResponse.md)
 
 ### Authorization
 
@@ -842,7 +842,7 @@ No authorization required
 
 ## ocViewBanById
 
-> SendBirdUser ocViewBanById(apiToken, channelUrl, bannedUserId)
+> OcViewBanByIdResponse ocViewBanById(apiToken, channelUrl, bannedUserId)
 
 View a ban
 
@@ -876,7 +876,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SendBirdUser**](SendBirdUser.md)
+[**OcViewBanByIdResponse**](OcViewBanByIdResponse.md)
 
 ### Authorization
 

@@ -16,8 +16,8 @@ import ApiClient from "../ApiClient";
 import CreateBotData from '../model/CreateBotData';
 import CreateBotResponse from '../model/CreateBotResponse';
 import JoinChannelsData from '../model/JoinChannelsData';
+import JoinChannelsResponse from '../model/JoinChannelsResponse';
 import ListBotsResponse from '../model/ListBotsResponse';
-import SendBirdGroupChannelCollection from '../model/SendBirdGroupChannelCollection';
 import SendBirdMessageResponse from '../model/SendBirdMessageResponse';
 import SendBotSMessageData from '../model/SendBotSMessageData';
 import UpdateBotByIdData from '../model/UpdateBotByIdData';
@@ -102,7 +102,7 @@ export default class BotInterfaceApi {
      * ## Delete a bot  Deletes a bot from an application.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-delete-a-bot ----------------------------
      * @param {String} apiToken 
      * @param {String} botUserid 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     deleteBotByIdWithHttpInfo(apiToken, botUserid) {
       let postBody = null;
@@ -128,8 +128,8 @@ export default class BotInterfaceApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -142,7 +142,7 @@ export default class BotInterfaceApi {
      * ## Delete a bot  Deletes a bot from an application.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-delete-a-bot ----------------------------
      * @param {String} apiToken 
      * @param {String} botUserid 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     deleteBotById(apiToken, botUserid) {
       return this.deleteBotByIdWithHttpInfo(apiToken, botUserid)
@@ -159,7 +159,7 @@ export default class BotInterfaceApi {
      * @param {String} botUserid 
      * @param {Object} opts Optional parameters
      * @param {module:model/JoinChannelsData} opts.joinChannelsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdGroupChannelCollection} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/JoinChannelsResponse} and HTTP response
      */
     joinChannelsWithHttpInfo(apiToken, botUserid, opts) {
       opts = opts || {};
@@ -187,7 +187,7 @@ export default class BotInterfaceApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = SendBirdGroupChannelCollection;
+      let returnType = JoinChannelsResponse;
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}/channels', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -202,7 +202,7 @@ export default class BotInterfaceApi {
      * @param {String} botUserid 
      * @param {Object} opts Optional parameters
      * @param {module:model/JoinChannelsData} opts.joinChannelsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdGroupChannelCollection}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/JoinChannelsResponse}
      */
     joinChannels(apiToken, botUserid, opts) {
       return this.joinChannelsWithHttpInfo(apiToken, botUserid, opts)
@@ -279,7 +279,7 @@ export default class BotInterfaceApi {
      * @param {String} apiToken 
      * @param {String} botUserid 
      * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     leaveChannelsByUrlWithHttpInfo(apiToken, botUserid, channelUrl) {
       let postBody = null;
@@ -310,8 +310,8 @@ export default class BotInterfaceApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}/channels/{channel_url}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -325,7 +325,7 @@ export default class BotInterfaceApi {
      * @param {String} apiToken 
      * @param {String} botUserid 
      * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     leaveChannelsByUrl(apiToken, botUserid, channelUrl) {
       return this.leaveChannelsByUrlWithHttpInfo(apiToken, botUserid, channelUrl)

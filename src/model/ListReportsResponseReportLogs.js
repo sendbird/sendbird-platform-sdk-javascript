@@ -50,6 +50,9 @@ class ListReportsResponseReportLogs {
         if (data) {
             obj = obj || new ListReportsResponseReportLogs();
 
+            if (data.hasOwnProperty('reporting_user')) {
+                obj['reporting_user'] = SendBirdUser.constructFromObject(data['reporting_user']);
+            }
             if (data.hasOwnProperty('report_type')) {
                 obj['report_type'] = ApiClient.convertToType(data['report_type'], 'String');
             }
@@ -77,6 +80,11 @@ class ListReportsResponseReportLogs {
 
 
 }
+
+/**
+ * @member {module:model/SendBirdUser} reporting_user
+ */
+ListReportsResponseReportLogs.prototype['reporting_user'] = undefined;
 
 /**
  * @member {String} report_type

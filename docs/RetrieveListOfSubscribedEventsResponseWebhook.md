@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **includeMembers** | **Boolean** |  | [optional] 
 **enabledEvents** | **[String]** |  | [optional] 
 **allWebhookCategories** | **[String]** |  | [optional] 
+**includeUnreadCount** | **Boolean** |  | [optional] 
 
 

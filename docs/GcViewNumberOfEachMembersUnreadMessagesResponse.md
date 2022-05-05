@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**unread** | [**GcViewNumberOfEachMembersUnreadMessagesResponseUnread**](GcViewNumberOfEachMembersUnreadMessagesResponseUnread.md) |  | [optional] 
+**unread** | **{String: Number}** |  | [optional] 
 
 

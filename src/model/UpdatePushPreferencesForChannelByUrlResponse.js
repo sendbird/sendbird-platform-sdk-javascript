@@ -80,6 +80,9 @@ class UpdatePushPreferencesForChannelByUrlResponse {
             if (data.hasOwnProperty('push_sound')) {
                 obj['push_sound'] = ApiClient.convertToType(data['push_sound'], 'String');
             }
+            if (data.hasOwnProperty('enable')) {
+                obj['enable'] = ApiClient.convertToType(data['enable'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -141,6 +144,11 @@ UpdatePushPreferencesForChannelByUrlResponse.prototype['timezone'] = undefined;
  * @member {String} push_sound
  */
 UpdatePushPreferencesForChannelByUrlResponse.prototype['push_sound'] = undefined;
+
+/**
+ * @member {Boolean} enable
+ */
+UpdatePushPreferencesForChannelByUrlResponse.prototype['enable'] = undefined;
 
 
 

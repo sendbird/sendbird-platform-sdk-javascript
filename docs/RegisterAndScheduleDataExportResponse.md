@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**channelCustomTypes** | **[String]** |  | [optional] 
+**dataType** | **String** |  | [optional] 
 **requestId** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
 **format** | **String** |  | [optional] 

@@ -54,6 +54,9 @@ class GcListChannelsResponse {
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
             }
+            if (data.hasOwnProperty('ts')) {
+                obj['ts'] = ApiClient.convertToType(data['ts'], 'Number');
+            }
         }
         return obj;
     }
@@ -70,6 +73,11 @@ GcListChannelsResponse.prototype['channels'] = undefined;
  * @member {String} next
  */
 GcListChannelsResponse.prototype['next'] = undefined;
+
+/**
+ * @member {Number} ts
+ */
+GcListChannelsResponse.prototype['ts'] = undefined;
 
 
 

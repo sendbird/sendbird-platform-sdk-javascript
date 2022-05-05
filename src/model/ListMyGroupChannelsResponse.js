@@ -54,6 +54,9 @@ class ListMyGroupChannelsResponse {
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
             }
+            if (data.hasOwnProperty('ts')) {
+                obj['ts'] = ApiClient.convertToType(data['ts'], 'Number');
+            }
         }
         return obj;
     }
@@ -70,6 +73,11 @@ ListMyGroupChannelsResponse.prototype['channels'] = undefined;
  * @member {String} next
  */
 ListMyGroupChannelsResponse.prototype['next'] = undefined;
+
+/**
+ * @member {Number} ts
+ */
+ListMyGroupChannelsResponse.prototype['ts'] = undefined;
 
 
 

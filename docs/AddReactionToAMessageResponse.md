@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **success** | **Boolean** |  | [optional] 
 **reaction** | **String** |  | [optional] 
 **updatedAt** | **Number** |  | [optional] 
+**msgId** | **Number** |  | [optional] 
 
 

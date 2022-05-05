@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import InlineResponse200 from './InlineResponse200';
 import SendBirdUser from './SendBirdUser';
 
 /**
@@ -48,9 +49,6 @@ class OcBanUserResponse {
         if (data) {
             obj = obj || new OcBanUserResponse();
 
-            if (data.hasOwnProperty('user')) {
-                obj['user'] = SendBirdUser.constructFromObject(data['user']);
-            }
             if (data.hasOwnProperty('start_at')) {
                 obj['start_at'] = ApiClient.convertToType(data['start_at'], 'Number');
             }
@@ -60,17 +58,33 @@ class OcBanUserResponse {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
+            if (data.hasOwnProperty('user_id')) {
+                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
+            }
+            if (data.hasOwnProperty('user')) {
+                obj['user'] = SendBirdUser.constructFromObject(data['user']);
+            }
+            if (data.hasOwnProperty('next_url')) {
+                obj['next_url'] = ApiClient.convertToType(data['next_url'], 'String');
+            }
+            if (data.hasOwnProperty('require_auth_for_profile_image')) {
+                obj['require_auth_for_profile_image'] = ApiClient.convertToType(data['require_auth_for_profile_image'], 'Boolean');
+            }
+            if (data.hasOwnProperty('nickname')) {
+                obj['nickname'] = ApiClient.convertToType(data['nickname'], 'String');
+            }
+            if (data.hasOwnProperty('profile_url')) {
+                obj['profile_url'] = ApiClient.convertToType(data['profile_url'], 'String');
+            }
+            if (data.hasOwnProperty('metadata')) {
+                obj['metadata'] = InlineResponse200.constructFromObject(data['metadata']);
+            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * @member {module:model/SendBirdUser} user
- */
-OcBanUserResponse.prototype['user'] = undefined;
 
 /**
  * @member {Number} start_at
@@ -86,6 +100,41 @@ OcBanUserResponse.prototype['end_at'] = undefined;
  * @member {String} description
  */
 OcBanUserResponse.prototype['description'] = undefined;
+
+/**
+ * @member {String} user_id
+ */
+OcBanUserResponse.prototype['user_id'] = undefined;
+
+/**
+ * @member {module:model/SendBirdUser} user
+ */
+OcBanUserResponse.prototype['user'] = undefined;
+
+/**
+ * @member {String} next_url
+ */
+OcBanUserResponse.prototype['next_url'] = undefined;
+
+/**
+ * @member {Boolean} require_auth_for_profile_image
+ */
+OcBanUserResponse.prototype['require_auth_for_profile_image'] = undefined;
+
+/**
+ * @member {String} nickname
+ */
+OcBanUserResponse.prototype['nickname'] = undefined;
+
+/**
+ * @member {String} profile_url
+ */
+OcBanUserResponse.prototype['profile_url'] = undefined;
+
+/**
+ * @member {module:model/InlineResponse200} metadata
+ */
+OcBanUserResponse.prototype['metadata'] = undefined;
 
 
 

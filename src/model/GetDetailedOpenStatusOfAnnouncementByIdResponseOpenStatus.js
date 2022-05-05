@@ -56,6 +56,12 @@ class GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus {
             if (data.hasOwnProperty('has_opened')) {
                 obj['has_opened'] = ApiClient.convertToType(data['has_opened'], 'Boolean');
             }
+            if (data.hasOwnProperty('sent_at')) {
+                obj['sent_at'] = ApiClient.convertToType(data['sent_at'], 'Number');
+            }
+            if (data.hasOwnProperty('open_at')) {
+                obj['open_at'] = ApiClient.convertToType(data['open_at'], 'Number');
+            }
         }
         return obj;
     }
@@ -77,6 +83,16 @@ GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus.prototype['channel_url
  * @member {Boolean} has_opened
  */
 GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus.prototype['has_opened'] = undefined;
+
+/**
+ * @member {Number} sent_at
+ */
+GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus.prototype['sent_at'] = undefined;
+
+/**
+ * @member {Number} open_at
+ */
+GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus.prototype['open_at'] = undefined;
 
 
 

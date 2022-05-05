@@ -59,6 +59,9 @@ class ChooseWhichEventsToSubscribeToResponseWebhook {
             if (data.hasOwnProperty('enabled_events')) {
                 obj['enabled_events'] = ApiClient.convertToType(data['enabled_events'], ['String']);
             }
+            if (data.hasOwnProperty('include_unread_count')) {
+                obj['include_unread_count'] = ApiClient.convertToType(data['include_unread_count'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -85,6 +88,11 @@ ChooseWhichEventsToSubscribeToResponseWebhook.prototype['include_members'] = und
  * @member {Array.<String>} enabled_events
  */
 ChooseWhichEventsToSubscribeToResponseWebhook.prototype['enabled_events'] = undefined;
+
+/**
+ * @member {Boolean} include_unread_count
+ */
+ChooseWhichEventsToSubscribeToResponseWebhook.prototype['include_unread_count'] = undefined;
 
 
 

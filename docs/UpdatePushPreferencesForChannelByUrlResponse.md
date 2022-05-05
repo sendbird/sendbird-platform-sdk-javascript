@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **snoozeEndTs** | **Number** |  | [optional] 
 **timezone** | **String** |  | [optional] 
 **pushSound** | **String** |  | [optional] 
+**enable** | **Boolean** |  | [optional] 
 
 

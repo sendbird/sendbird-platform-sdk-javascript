@@ -62,6 +62,9 @@ class RetrieveListOfSubscribedEventsResponseWebhook {
             if (data.hasOwnProperty('all_webhook_categories')) {
                 obj['all_webhook_categories'] = ApiClient.convertToType(data['all_webhook_categories'], ['String']);
             }
+            if (data.hasOwnProperty('include_unread_count')) {
+                obj['include_unread_count'] = ApiClient.convertToType(data['include_unread_count'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -93,6 +96,11 @@ RetrieveListOfSubscribedEventsResponseWebhook.prototype['enabled_events'] = unde
  * @member {Array.<String>} all_webhook_categories
  */
 RetrieveListOfSubscribedEventsResponseWebhook.prototype['all_webhook_categories'] = undefined;
+
+/**
+ * @member {Boolean} include_unread_count
+ */
+RetrieveListOfSubscribedEventsResponseWebhook.prototype['include_unread_count'] = undefined;
 
 
 

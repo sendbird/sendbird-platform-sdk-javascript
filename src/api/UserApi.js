@@ -17,6 +17,7 @@ import AddRegistrationOrDeviceTokenData from '../model/AddRegistrationOrDeviceTo
 import AddRegistrationOrDeviceTokenResponse from '../model/AddRegistrationOrDeviceTokenResponse';
 import BanFromChannelsWithCustomChannelTypesData from '../model/BanFromChannelsWithCustomChannelTypesData';
 import BlockUserData from '../model/BlockUserData';
+import BlockUserResponse from '../model/BlockUserResponse';
 import ChoosePushNotificationContentTemplateResponse from '../model/ChoosePushNotificationContentTemplateResponse';
 import CreateUserData from '../model/CreateUserData';
 import LeaveMyGroupChannelsData from '../model/LeaveMyGroupChannelsData';
@@ -32,6 +33,7 @@ import RegisterAsOperatorToChannelsWithCustomChannelTypesData from '../model/Reg
 import RemoveRegistrationOrDeviceTokenByTokenResponse from '../model/RemoveRegistrationOrDeviceTokenByTokenResponse';
 import RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse from '../model/RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse';
 import RemoveRegistrationOrDeviceTokenResponse from '../model/RemoveRegistrationOrDeviceTokenResponse';
+import ResetPushPreferencesResponse from '../model/ResetPushPreferencesResponse';
 import SendBirdUser from '../model/SendBirdUser';
 import UpdateChannelInvitationPreferenceData from '../model/UpdateChannelInvitationPreferenceData';
 import UpdateChannelInvitationPreferenceResponse from '../model/UpdateChannelInvitationPreferenceResponse';
@@ -50,7 +52,6 @@ import ViewNumberOfUnreadItemsResponse from '../model/ViewNumberOfUnreadItemsRes
 import ViewNumberOfUnreadMessagesResponse from '../model/ViewNumberOfUnreadMessagesResponse';
 import ViewPushPreferencesForChannelByUrlResponse from '../model/ViewPushPreferencesForChannelByUrlResponse';
 import ViewPushPreferencesResponse from '../model/ViewPushPreferencesResponse';
-import ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse from '../model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse';
 
 /**
 * User service.
@@ -146,7 +147,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {module:model/BanFromChannelsWithCustomChannelTypesData} opts.banFromChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     banFromChannelsWithCustomChannelTypesWithHttpInfo(apiToken, userId, opts) {
       opts = opts || {};
@@ -173,8 +174,8 @@ export default class UserApi {
 
       let authNames = [];
       let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/banned_channel_custom_types', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -189,7 +190,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {module:model/BanFromChannelsWithCustomChannelTypesData} opts.banFromChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     banFromChannelsWithCustomChannelTypes(apiToken, userId, opts) {
       return this.banFromChannelsWithCustomChannelTypesWithHttpInfo(apiToken, userId, opts)
@@ -206,7 +207,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {module:model/BlockUserData} opts.blockUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BlockUserResponse} and HTTP response
      */
     blockUserWithHttpInfo(apiToken, userId, opts) {
       opts = opts || {};
@@ -234,7 +235,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = SendBirdUser;
+      let returnType = BlockUserResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/block', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -249,7 +250,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {module:model/BlockUserData} opts.blockUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BlockUserResponse}
      */
     blockUser(apiToken, userId, opts) {
       return this.blockUserWithHttpInfo(apiToken, userId, opts)
@@ -377,7 +378,7 @@ export default class UserApi {
      * ## Delete a user  Deletes a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-delete-a-user ----------------------------
      * @param {String} apiToken 
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     deleteUserByIdWithHttpInfo(apiToken, userId) {
       let postBody = null;
@@ -403,8 +404,8 @@ export default class UserApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/users/{user_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -417,7 +418,7 @@ export default class UserApi {
      * ## Delete a user  Deletes a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-delete-a-user ----------------------------
      * @param {String} apiToken 
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     deleteUserById(apiToken, userId) {
       return this.deleteUserByIdWithHttpInfo(apiToken, userId)
@@ -434,7 +435,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {module:model/LeaveMyGroupChannelsData} opts.leaveMyGroupChannelsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     leaveMyGroupChannelsWithHttpInfo(apiToken, userId, opts) {
       opts = opts || {};
@@ -461,8 +462,8 @@ export default class UserApi {
 
       let authNames = [];
       let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/my_group_channels/leave', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -477,7 +478,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {module:model/LeaveMyGroupChannelsData} opts.leaveMyGroupChannelsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     leaveMyGroupChannels(apiToken, userId, opts) {
       return this.leaveMyGroupChannelsWithHttpInfo(apiToken, userId, opts)
@@ -1013,7 +1014,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {module:model/MarkAllMessagesAsReadData} opts.markAllMessagesAsReadData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     markAllMessagesAsReadWithHttpInfo(apiToken, userId, opts) {
       opts = opts || {};
@@ -1040,8 +1041,8 @@ export default class UserApi {
 
       let authNames = [];
       let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/mark_as_read_all', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1056,7 +1057,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {module:model/MarkAllMessagesAsReadData} opts.markAllMessagesAsReadData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     markAllMessagesAsRead(apiToken, userId, opts) {
       return this.markAllMessagesAsReadWithHttpInfo(apiToken, userId, opts)
@@ -1073,7 +1074,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {module:model/MuteInChannelsWithCustomChannelTypesData} opts.muteInChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     muteInChannelsWithCustomChannelTypesWithHttpInfo(apiToken, userId, opts) {
       opts = opts || {};
@@ -1100,8 +1101,8 @@ export default class UserApi {
 
       let authNames = [];
       let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/muted_channel_custom_types', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1116,7 +1117,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {module:model/MuteInChannelsWithCustomChannelTypesData} opts.muteInChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     muteInChannelsWithCustomChannelTypes(apiToken, userId, opts) {
       return this.muteInChannelsWithCustomChannelTypesWithHttpInfo(apiToken, userId, opts)
@@ -1133,7 +1134,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterAsOperatorToChannelsWithCustomChannelTypesData} opts.registerAsOperatorToChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     registerAsOperatorToChannelsWithCustomChannelTypesWithHttpInfo(apiToken, userId, opts) {
       opts = opts || {};
@@ -1160,8 +1161,8 @@ export default class UserApi {
 
       let authNames = [];
       let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/operating_channel_custom_types', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1176,7 +1177,7 @@ export default class UserApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {module:model/RegisterAsOperatorToChannelsWithCustomChannelTypesData} opts.registerAsOperatorToChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     registerAsOperatorToChannelsWithCustomChannelTypes(apiToken, userId, opts) {
       return this.registerAsOperatorToChannelsWithCustomChannelTypesWithHttpInfo(apiToken, userId, opts)
@@ -1377,7 +1378,7 @@ export default class UserApi {
      * ## Reset push preferences  Resets a user's push preferences. After performing this action,   `do_not_disturb` and `snooze_enabled` are set to false.  The values of the parameters associated with the time frame are all set to 0.  `timezone` is reset to `UTC`.  `push_sound` is reset to `default`.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-reset-push-preferences ----------------------------
      * @param {String} apiToken 
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResetPushPreferencesResponse} and HTTP response
      */
     resetPushPreferencesWithHttpInfo(apiToken, userId) {
       let postBody = null;
@@ -1403,8 +1404,8 @@ export default class UserApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = ResetPushPreferencesResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1417,7 +1418,7 @@ export default class UserApi {
      * ## Reset push preferences  Resets a user's push preferences. After performing this action,   `do_not_disturb` and `snooze_enabled` are set to false.  The values of the parameters associated with the time frame are all set to 0.  `timezone` is reset to `UTC`.  `push_sound` is reset to `default`.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-reset-push-preferences ----------------------------
      * @param {String} apiToken 
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResetPushPreferencesResponse}
      */
     resetPushPreferences(apiToken, userId) {
       return this.resetPushPreferencesWithHttpInfo(apiToken, userId)
@@ -1433,7 +1434,7 @@ export default class UserApi {
      * @param {String} apiToken 
      * @param {String} userId 
      * @param {String} targetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     unblockUserByIdWithHttpInfo(apiToken, userId, targetId) {
       let postBody = null;
@@ -1464,8 +1465,8 @@ export default class UserApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/block/{target_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1479,7 +1480,7 @@ export default class UserApi {
      * @param {String} apiToken 
      * @param {String} userId 
      * @param {String} targetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     unblockUserById(apiToken, userId, targetId) {
       return this.unblockUserByIdWithHttpInfo(apiToken, userId, targetId)
@@ -2363,7 +2364,7 @@ export default class UserApi {
      * @param {String} apiToken 
      * @param {String} tokenType 
      * @param {String} token 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<Object>} and HTTP response
      */
     viewWhoOwnsRegistrationOrDeviceTokenByTokenWithHttpInfo(apiToken, tokenType, token) {
       let postBody = null;
@@ -2395,7 +2396,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse;
+      let returnType = [Object];
       return this.apiClient.callApi(
         '/v3/push/device_tokens/{token_type}/{token}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -2409,7 +2410,7 @@ export default class UserApi {
      * @param {String} apiToken 
      * @param {String} tokenType 
      * @param {String} token 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponse}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<Object>}
      */
     viewWhoOwnsRegistrationOrDeviceTokenByToken(apiToken, tokenType, token) {
       return this.viewWhoOwnsRegistrationOrDeviceTokenByTokenWithHttpInfo(apiToken, tokenType, token)

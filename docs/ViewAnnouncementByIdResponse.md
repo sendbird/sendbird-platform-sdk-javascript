@@ -19,5 +19,12 @@ Name | Type | Description | Notes
 **sentUserCount** | **Number** |  | [optional] 
 **openCount** | **Number** |  | [optional] 
 **openRate** | **Number** |  | [optional] 
+**createChannel** | **Boolean** |  | [optional] 
+**createChannelOptions** | [**ScheduleAnnouncementResponseCreateChannelOptions**](ScheduleAnnouncementResponseCreateChannelOptions.md) |  | [optional] 
+**endAt** | **Number** |  | [optional] 
+**markAsRead** | **Boolean** |  | [optional] 
+**sentChannelCount** | **Number** |  | [optional] 
+**targetChannelType** | **String** |  | [optional] 
+**targetCustomType** | **String** |  | [optional] 
 
 

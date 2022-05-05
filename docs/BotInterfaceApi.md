@@ -66,7 +66,7 @@ No authorization required
 
 ## deleteBotById
 
-> deleteBotById(apiToken, botUserid)
+> Object deleteBotById(apiToken, botUserid)
 
 Delete a bot
 
@@ -80,8 +80,8 @@ import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
 let apiToken = {{API_TOKEN}}; // String | 
 let botUserid = "botUserid_example"; // String | 
-apiInstance.deleteBotById(apiToken, botUserid).then(() => {
-  console.log('API called successfully.');
+apiInstance.deleteBotById(apiToken, botUserid).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -107,12 +107,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## joinChannels
 
-> SendBirdGroupChannelCollection joinChannels(apiToken, botUserid, opts)
+> JoinChannelsResponse joinChannels(apiToken, botUserid, opts)
 
 Join channels
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SendBirdGroupChannelCollection**](SendBirdGroupChannelCollection.md)
+[**JoinChannelsResponse**](JoinChannelsResponse.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ No authorization required
 
 ## leaveChannelsByUrl
 
-> leaveChannelsByUrl(apiToken, botUserid, channelUrl)
+> Object leaveChannelsByUrl(apiToken, botUserid, channelUrl)
 
 Leave channels - When leaving a channel by its channel URL
 
@@ -227,8 +227,8 @@ let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
 let apiToken = {{API_TOKEN}}; // String | 
 let botUserid = "botUserid_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
-apiInstance.leaveChannelsByUrl(apiToken, botUserid, channelUrl).then(() => {
-  console.log('API called successfully.');
+apiInstance.leaveChannelsByUrl(apiToken, botUserid, channelUrl).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -255,7 +255,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## listBots

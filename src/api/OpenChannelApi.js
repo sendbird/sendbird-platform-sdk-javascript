@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import InlineResponse200 from '../model/InlineResponse200';
 import OcBanUserData from '../model/OcBanUserData';
 import OcBanUserResponse from '../model/OcBanUserResponse';
 import OcCreateChannelData from '../model/OcCreateChannelData';
@@ -25,10 +26,11 @@ import OcListParticipantsResponse from '../model/OcListParticipantsResponse';
 import OcMuteUserData from '../model/OcMuteUserData';
 import OcRegisterOperatorsData from '../model/OcRegisterOperatorsData';
 import OcUpdateBanByIdData from '../model/OcUpdateBanByIdData';
+import OcUpdateBanByIdResponse from '../model/OcUpdateBanByIdResponse';
 import OcUpdateChannelByUrlData from '../model/OcUpdateChannelByUrlData';
+import OcViewBanByIdResponse from '../model/OcViewBanByIdResponse';
 import OcViewMuteByIdResponse from '../model/OcViewMuteByIdResponse';
 import SendBirdOpenChannel from '../model/SendBirdOpenChannel';
-import SendBirdUser from '../model/SendBirdUser';
 
 /**
 * OpenChannel service.
@@ -236,7 +238,7 @@ export default class OpenChannelApi {
      * ## Delete a channel  Deletes an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-delete-a-channel ----------------------------
      * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
     ocDeleteChannelByUrlWithHttpInfo(apiToken, channelUrl) {
       let postBody = null;
@@ -262,8 +264,8 @@ export default class OpenChannelApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = InlineResponse200;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -276,7 +278,7 @@ export default class OpenChannelApi {
      * ## Delete a channel  Deletes an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-delete-a-channel ----------------------------
      * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
     ocDeleteChannelByUrl(apiToken, channelUrl) {
       return this.ocDeleteChannelByUrlWithHttpInfo(apiToken, channelUrl)
@@ -744,7 +746,7 @@ export default class OpenChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/OcRegisterOperatorsData} opts.ocRegisterOperatorsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
     ocRegisterOperatorsWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
@@ -771,8 +773,8 @@ export default class OpenChannelApi {
 
       let authNames = [];
       let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = InlineResponse200;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/operators', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -787,7 +789,7 @@ export default class OpenChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/OcRegisterOperatorsData} opts.ocRegisterOperatorsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
     ocRegisterOperators(apiToken, channelUrl, opts) {
       return this.ocRegisterOperatorsWithHttpInfo(apiToken, channelUrl, opts)
@@ -803,7 +805,7 @@ export default class OpenChannelApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
     ocUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId) {
       let postBody = null;
@@ -834,8 +836,8 @@ export default class OpenChannelApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = InlineResponse200;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/ban/{banned_user_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -849,7 +851,7 @@ export default class OpenChannelApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
     ocUnbanUserById(apiToken, channelUrl, bannedUserId) {
       return this.ocUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId)
@@ -865,7 +867,7 @@ export default class OpenChannelApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
     ocUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId) {
       let postBody = null;
@@ -896,8 +898,8 @@ export default class OpenChannelApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = InlineResponse200;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/mute/{muted_user_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -911,7 +913,7 @@ export default class OpenChannelApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
     ocUnmuteUserById(apiToken, channelUrl, mutedUserId) {
       return this.ocUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId)
@@ -929,7 +931,7 @@ export default class OpenChannelApi {
      * @param {String} bannedUserId 
      * @param {Object} opts Optional parameters
      * @param {module:model/OcUpdateBanByIdData} opts.ocUpdateBanByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcUpdateBanByIdResponse} and HTTP response
      */
     ocUpdateBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId, opts) {
       opts = opts || {};
@@ -962,7 +964,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = SendBirdUser;
+      let returnType = OcUpdateBanByIdResponse;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/ban/{banned_user_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -978,7 +980,7 @@ export default class OpenChannelApi {
      * @param {String} bannedUserId 
      * @param {Object} opts Optional parameters
      * @param {module:model/OcUpdateBanByIdData} opts.ocUpdateBanByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcUpdateBanByIdResponse}
      */
     ocUpdateBanById(apiToken, channelUrl, bannedUserId, opts) {
       return this.ocUpdateBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId, opts)
@@ -1054,7 +1056,7 @@ export default class OpenChannelApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcViewBanByIdResponse} and HTTP response
      */
     ocViewBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId) {
       let postBody = null;
@@ -1086,7 +1088,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = SendBirdUser;
+      let returnType = OcViewBanByIdResponse;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/ban/{banned_user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1100,7 +1102,7 @@ export default class OpenChannelApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcViewBanByIdResponse}
      */
     ocViewBanById(apiToken, channelUrl, bannedUserId) {
       return this.ocViewBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId)

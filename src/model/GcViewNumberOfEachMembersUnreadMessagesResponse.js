@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import GcViewNumberOfEachMembersUnreadMessagesResponseUnread from './GcViewNumberOfEachMembersUnreadMessagesResponseUnread';
 
 /**
  * The GcViewNumberOfEachMembersUnreadMessagesResponse model module.
@@ -49,7 +48,7 @@ class GcViewNumberOfEachMembersUnreadMessagesResponse {
             obj = obj || new GcViewNumberOfEachMembersUnreadMessagesResponse();
 
             if (data.hasOwnProperty('unread')) {
-                obj['unread'] = GcViewNumberOfEachMembersUnreadMessagesResponseUnread.constructFromObject(data['unread']);
+                obj['unread'] = ApiClient.convertToType(data['unread'], {'String': 'Number'});
             }
         }
         return obj;
@@ -59,7 +58,7 @@ class GcViewNumberOfEachMembersUnreadMessagesResponse {
 }
 
 /**
- * @member {module:model/GcViewNumberOfEachMembersUnreadMessagesResponseUnread} unread
+ * @member {Object.<String, Number>} unread
  */
 GcViewNumberOfEachMembersUnreadMessagesResponse.prototype['unread'] = undefined;
 

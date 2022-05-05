@@ -47,8 +47,8 @@ class ListAnnouncementGroupsResponse {
         if (data) {
             obj = obj || new ListAnnouncementGroupsResponse();
 
-            if (data.hasOwnProperty('announcement_group')) {
-                obj['announcement_group'] = ApiClient.convertToType(data['announcement_group'], ['String']);
+            if (data.hasOwnProperty('announcement_groups')) {
+                obj['announcement_groups'] = ApiClient.convertToType(data['announcement_groups'], ['String']);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -61,9 +61,9 @@ class ListAnnouncementGroupsResponse {
 }
 
 /**
- * @member {Array.<String>} announcement_group
+ * @member {Array.<String>} announcement_groups
  */
-ListAnnouncementGroupsResponse.prototype['announcement_group'] = undefined;
+ListAnnouncementGroupsResponse.prototype['announcement_groups'] = undefined;
 
 /**
  * @member {String} next

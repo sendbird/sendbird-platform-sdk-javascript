@@ -206,7 +206,7 @@ export default class MessagesApi {
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} messageId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     deleteMessageByIdWithHttpInfo(apiToken, channelType, channelUrl, messageId) {
       let postBody = null;
@@ -242,8 +242,8 @@ export default class MessagesApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -258,7 +258,7 @@ export default class MessagesApi {
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} messageId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     deleteMessageById(apiToken, channelType, channelUrl, messageId) {
       return this.deleteMessageByIdWithHttpInfo(apiToken, channelType, channelUrl, messageId)
@@ -335,7 +335,7 @@ export default class MessagesApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcMarkAllMessagesAsReadData} opts.gcMarkAllMessagesAsReadData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     gcMarkAllMessagesAsReadWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
@@ -362,8 +362,8 @@ export default class MessagesApi {
 
       let authNames = [];
       let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/messages/mark_as_read', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -378,7 +378,7 @@ export default class MessagesApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcMarkAllMessagesAsReadData} opts.gcMarkAllMessagesAsReadData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     gcMarkAllMessagesAsRead(apiToken, channelUrl, opts) {
       return this.gcMarkAllMessagesAsReadWithHttpInfo(apiToken, channelUrl, opts)
@@ -652,7 +652,7 @@ export default class MessagesApi {
      * @param {String} messageId 
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.keys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     removeExtraDataFromMessageWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts) {
       opts = opts || {};
@@ -690,8 +690,8 @@ export default class MessagesApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -708,7 +708,7 @@ export default class MessagesApi {
      * @param {String} messageId 
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.keys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     removeExtraDataFromMessage(apiToken, channelType, channelUrl, messageId, opts) {
       return this.removeExtraDataFromMessageWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts)

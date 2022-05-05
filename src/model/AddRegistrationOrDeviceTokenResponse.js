@@ -48,8 +48,11 @@ class AddRegistrationOrDeviceTokenResponse {
         if (data) {
             obj = obj || new AddRegistrationOrDeviceTokenResponse();
 
+            if (data.hasOwnProperty('tokens')) {
+                obj['tokens'] = ApiClient.convertToType(data['tokens'], ['String']);
+            }
             if (data.hasOwnProperty('token')) {
-                obj['token'] = ApiClient.convertToType(data['token'], 'String');
+                obj['token'] = ApiClient.convertToType(data['token'], ['String']);
             }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -65,7 +68,12 @@ class AddRegistrationOrDeviceTokenResponse {
 }
 
 /**
- * @member {String} token
+ * @member {Array.<String>} tokens
+ */
+AddRegistrationOrDeviceTokenResponse.prototype['tokens'] = undefined;
+
+/**
+ * @member {Array.<String>} token
  */
 AddRegistrationOrDeviceTokenResponse.prototype['token'] = undefined;
 

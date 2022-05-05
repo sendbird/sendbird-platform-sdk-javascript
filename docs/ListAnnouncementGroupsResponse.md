@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**announcementGroup** | **[String]** |  | [optional] 
+**announcementGroups** | **[String]** |  | [optional] 
 **next** | **String** |  | [optional] 
 
 

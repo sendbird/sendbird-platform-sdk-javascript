@@ -51,14 +51,14 @@ class ListBannedChannelsResponseBannedChannels {
             if (data.hasOwnProperty('start_at')) {
                 obj['start_at'] = ApiClient.convertToType(data['start_at'], 'Number');
             }
-            if (data.hasOwnProperty('end_at')) {
-                obj['end_at'] = ApiClient.convertToType(data['end_at'], 'Number');
-            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('channel')) {
                 obj['channel'] = SendBirdChannelResponse.constructFromObject(data['channel']);
+            }
+            if (data.hasOwnProperty('end_at')) {
+                obj['end_at'] = ApiClient.convertToType(data['end_at'], 'Number');
             }
         }
         return obj;
@@ -73,11 +73,6 @@ class ListBannedChannelsResponseBannedChannels {
 ListBannedChannelsResponseBannedChannels.prototype['start_at'] = undefined;
 
 /**
- * @member {Number} end_at
- */
-ListBannedChannelsResponseBannedChannels.prototype['end_at'] = undefined;
-
-/**
  * @member {String} description
  */
 ListBannedChannelsResponseBannedChannels.prototype['description'] = undefined;
@@ -86,6 +81,11 @@ ListBannedChannelsResponseBannedChannels.prototype['description'] = undefined;
  * @member {module:model/SendBirdChannelResponse} channel
  */
 ListBannedChannelsResponseBannedChannels.prototype['channel'] = undefined;
+
+/**
+ * @member {Number} end_at
+ */
+ListBannedChannelsResponseBannedChannels.prototype['end_at'] = undefined;
 
 
 

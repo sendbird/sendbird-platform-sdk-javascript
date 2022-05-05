@@ -54,6 +54,9 @@ class OcListChannelsResponse {
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
             }
+            if (data.hasOwnProperty('ts')) {
+                obj['ts'] = ApiClient.convertToType(data['ts'], 'Number');
+            }
         }
         return obj;
     }
@@ -70,6 +73,11 @@ OcListChannelsResponse.prototype['channels'] = undefined;
  * @member {String} next
  */
 OcListChannelsResponse.prototype['next'] = undefined;
+
+/**
+ * @member {Number} ts
+ */
+OcListChannelsResponse.prototype['ts'] = undefined;
 
 
 

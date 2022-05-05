@@ -137,7 +137,7 @@ No authorization required
 
 ## gcCancelTheRegistrationOfOperators
 
-> gcCancelTheRegistrationOfOperators(apiToken, channelUrl, operatorIds, opts)
+> InlineResponse200 gcCancelTheRegistrationOfOperators(apiToken, channelUrl, operatorIds, opts)
 
 Cancel the registration of operators
 
@@ -155,8 +155,8 @@ let operatorIds = ["null"]; // [String] |
 let opts = {
   'deleteAll': true // Boolean | 
 };
-apiInstance.gcCancelTheRegistrationOfOperators(apiToken, channelUrl, operatorIds, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.gcCancelTheRegistrationOfOperators(apiToken, channelUrl, operatorIds, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## gcCheckIfMemberById
@@ -285,7 +285,7 @@ No authorization required
 
 ## gcDeclineInvitation
 
-> gcDeclineInvitation(apiToken, channelUrl, opts)
+> InlineResponse200 gcDeclineInvitation(apiToken, channelUrl, opts)
 
 Decline an invitation
 
@@ -302,8 +302,8 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'gcDeclineInvitationData': new SendbirdPlatformSdk.GcDeclineInvitationData() // GcDeclineInvitationData | 
 };
-apiInstance.gcDeclineInvitation(apiToken, channelUrl, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.gcDeclineInvitation(apiToken, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -330,12 +330,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## gcDeleteChannelByUrl
 
-> gcDeleteChannelByUrl(apiToken, channelUrl)
+> InlineResponse200 gcDeleteChannelByUrl(apiToken, channelUrl)
 
 Delete a channel
 
@@ -349,8 +349,8 @@ import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
-apiInstance.gcDeleteChannelByUrl(apiToken, channelUrl).then(() => {
-  console.log('API called successfully.');
+apiInstance.gcDeleteChannelByUrl(apiToken, channelUrl).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -376,7 +376,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## gcFreezeChannel
@@ -431,7 +431,7 @@ No authorization required
 
 ## gcHideOrArchiveChannel
 
-> gcHideOrArchiveChannel(apiToken, channelUrl, opts)
+> InlineResponse200 gcHideOrArchiveChannel(apiToken, channelUrl, opts)
 
 Hide or archive a channel
 
@@ -448,8 +448,8 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'gcHideOrArchiveChannelData': new SendbirdPlatformSdk.GcHideOrArchiveChannelData() // GcHideOrArchiveChannelData | 
 };
-apiInstance.gcHideOrArchiveChannel(apiToken, channelUrl, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.gcHideOrArchiveChannel(apiToken, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -467,7 +467,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -476,7 +476,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## gcInviteAsMembers
@@ -581,7 +581,7 @@ No authorization required
 
 ## gcLeaveChannel
 
-> gcLeaveChannel(apiToken, channelUrl, opts)
+> InlineResponse200 gcLeaveChannel(apiToken, channelUrl, opts)
 
 Leave a channel
 
@@ -598,8 +598,8 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'gcLeaveChannelData': new SendbirdPlatformSdk.GcLeaveChannelData() // GcLeaveChannelData | 
 };
-apiInstance.gcLeaveChannel(apiToken, channelUrl, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.gcLeaveChannel(apiToken, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -617,7 +617,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -626,7 +626,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## gcListBannedUsers
@@ -1083,7 +1083,7 @@ No authorization required
 
 ## gcResetChatHistory
 
-> gcResetChatHistory(apiToken, channelUrl, opts)
+> GcResetChatHistoryResponse gcResetChatHistory(apiToken, channelUrl, opts)
 
 Reset chat history
 
@@ -1100,8 +1100,8 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'gcResetChatHistoryData': new SendbirdPlatformSdk.GcResetChatHistoryData() // GcResetChatHistoryData | 
 };
-apiInstance.gcResetChatHistory(apiToken, channelUrl, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.gcResetChatHistory(apiToken, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -1119,7 +1119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**GcResetChatHistoryResponse**](GcResetChatHistoryResponse.md)
 
 ### Authorization
 
@@ -1128,12 +1128,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## gcUnbanUserById
 
-> gcUnbanUserById(apiToken, channelUrl, bannedUserId)
+> InlineResponse200 gcUnbanUserById(apiToken, channelUrl, bannedUserId)
 
 Unban a user
 
@@ -1148,8 +1148,8 @@ let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let bannedUserId = "bannedUserId_example"; // String | 
-apiInstance.gcUnbanUserById(apiToken, channelUrl, bannedUserId).then(() => {
-  console.log('API called successfully.');
+apiInstance.gcUnbanUserById(apiToken, channelUrl, bannedUserId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -1167,7 +1167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -1176,12 +1176,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## gcUnhideOrUnarchiveChannel
 
-> gcUnhideOrUnarchiveChannel(apiToken, channelUrl, userId, opts)
+> InlineResponse200 gcUnhideOrUnarchiveChannel(apiToken, channelUrl, userId, opts)
 
 Unhide or unarchive a channel
 
@@ -1199,8 +1199,8 @@ let userId = "userId_example"; // String |
 let opts = {
   'shouldUnhideAll': true // Boolean | 
 };
-apiInstance.gcUnhideOrUnarchiveChannel(apiToken, channelUrl, userId, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.gcUnhideOrUnarchiveChannel(apiToken, channelUrl, userId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -1219,7 +1219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -1228,12 +1228,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## gcUnmuteUserById
 
-> gcUnmuteUserById(apiToken, channelUrl, mutedUserId)
+> InlineResponse200 gcUnmuteUserById(apiToken, channelUrl, mutedUserId)
 
 Unmute a user
 
@@ -1248,8 +1248,8 @@ let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let mutedUserId = "mutedUserId_example"; // String | 
-apiInstance.gcUnmuteUserById(apiToken, channelUrl, mutedUserId).then(() => {
-  console.log('API called successfully.');
+apiInstance.gcUnmuteUserById(apiToken, channelUrl, mutedUserId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -1267,7 +1267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -1276,12 +1276,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## gcUpdateBanById
 
-> SendBirdUser gcUpdateBanById(apiToken, channelUrl, bannedUserId, opts)
+> GcUpdateBanByIdResponse gcUpdateBanById(apiToken, channelUrl, bannedUserId, opts)
 
 Update a ban
 
@@ -1319,7 +1319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SendBirdUser**](SendBirdUser.md)
+[**GcUpdateBanByIdResponse**](GcUpdateBanByIdResponse.md)
 
 ### Authorization
 
@@ -1383,7 +1383,7 @@ No authorization required
 
 ## gcViewBanById
 
-> SendBirdUser gcViewBanById(apiToken, channelUrl, bannedUserId)
+> GcViewBanByIdResponse gcViewBanById(apiToken, channelUrl, bannedUserId)
 
 View a ban
 
@@ -1417,7 +1417,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SendBirdUser**](SendBirdUser.md)
+[**GcViewBanByIdResponse**](GcViewBanByIdResponse.md)
 
 ### Authorization
 

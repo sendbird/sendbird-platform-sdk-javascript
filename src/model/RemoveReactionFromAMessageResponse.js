@@ -47,20 +47,23 @@ class RemoveReactionFromAMessageResponse {
         if (data) {
             obj = obj || new RemoveReactionFromAMessageResponse();
 
-            if (data.hasOwnProperty('user_id')) {
-                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
+            if (data.hasOwnProperty('reaction')) {
+                obj['reaction'] = ApiClient.convertToType(data['reaction'], 'String');
             }
-            if (data.hasOwnProperty('operation')) {
-                obj['operation'] = ApiClient.convertToType(data['operation'], 'String');
+            if (data.hasOwnProperty('user_id')) {
+                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'Number');
             }
             if (data.hasOwnProperty('success')) {
                 obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
             }
-            if (data.hasOwnProperty('reaction')) {
-                obj['reaction'] = ApiClient.convertToType(data['reaction'], 'String');
+            if (data.hasOwnProperty('msg_id')) {
+                obj['msg_id'] = ApiClient.convertToType(data['msg_id'], 'Number');
             }
             if (data.hasOwnProperty('updated_at')) {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Number');
+            }
+            if (data.hasOwnProperty('operation')) {
+                obj['operation'] = ApiClient.convertToType(data['operation'], 'String');
             }
         }
         return obj;
@@ -70,14 +73,14 @@ class RemoveReactionFromAMessageResponse {
 }
 
 /**
- * @member {String} user_id
+ * @member {String} reaction
  */
-RemoveReactionFromAMessageResponse.prototype['user_id'] = undefined;
+RemoveReactionFromAMessageResponse.prototype['reaction'] = undefined;
 
 /**
- * @member {String} operation
+ * @member {Number} user_id
  */
-RemoveReactionFromAMessageResponse.prototype['operation'] = undefined;
+RemoveReactionFromAMessageResponse.prototype['user_id'] = undefined;
 
 /**
  * @member {Boolean} success
@@ -85,14 +88,19 @@ RemoveReactionFromAMessageResponse.prototype['operation'] = undefined;
 RemoveReactionFromAMessageResponse.prototype['success'] = undefined;
 
 /**
- * @member {String} reaction
+ * @member {Number} msg_id
  */
-RemoveReactionFromAMessageResponse.prototype['reaction'] = undefined;
+RemoveReactionFromAMessageResponse.prototype['msg_id'] = undefined;
 
 /**
  * @member {Number} updated_at
  */
 RemoveReactionFromAMessageResponse.prototype['updated_at'] = undefined;
+
+/**
+ * @member {String} operation
+ */
+RemoveReactionFromAMessageResponse.prototype['operation'] = undefined;
 
 
 

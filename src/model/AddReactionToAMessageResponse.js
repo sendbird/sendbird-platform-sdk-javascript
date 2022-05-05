@@ -62,6 +62,9 @@ class AddReactionToAMessageResponse {
             if (data.hasOwnProperty('updated_at')) {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Number');
             }
+            if (data.hasOwnProperty('msg_id')) {
+                obj['msg_id'] = ApiClient.convertToType(data['msg_id'], 'Number');
+            }
         }
         return obj;
     }
@@ -93,6 +96,11 @@ AddReactionToAMessageResponse.prototype['reaction'] = undefined;
  * @member {Number} updated_at
  */
 AddReactionToAMessageResponse.prototype['updated_at'] = undefined;
+
+/**
+ * @member {Number} msg_id
+ */
+AddReactionToAMessageResponse.prototype['msg_id'] = undefined;
 
 
 

@@ -50,6 +50,9 @@ class GcCheckIfMemberByIdResponse {
             if (data.hasOwnProperty('is_member')) {
                 obj['is_member'] = ApiClient.convertToType(data['is_member'], 'Boolean');
             }
+            if (data.hasOwnProperty('state')) {
+                obj['state'] = ApiClient.convertToType(data['state'], 'String');
+            }
         }
         return obj;
     }
@@ -61,6 +64,11 @@ class GcCheckIfMemberByIdResponse {
  * @member {Boolean} is_member
  */
 GcCheckIfMemberByIdResponse.prototype['is_member'] = undefined;
+
+/**
+ * @member {String} state
+ */
+GcCheckIfMemberByIdResponse.prototype['state'] = undefined;
 
 
 

@@ -33,11 +33,14 @@ import GcMuteUserData from '../model/GcMuteUserData';
 import GcRegisterOperatorsData from '../model/GcRegisterOperatorsData';
 import GcRegisterOperatorsResponse from '../model/GcRegisterOperatorsResponse';
 import GcResetChatHistoryData from '../model/GcResetChatHistoryData';
+import GcResetChatHistoryResponse from '../model/GcResetChatHistoryResponse';
 import GcUpdateBanByIdData from '../model/GcUpdateBanByIdData';
+import GcUpdateBanByIdResponse from '../model/GcUpdateBanByIdResponse';
 import GcUpdateChannelByUrlData from '../model/GcUpdateChannelByUrlData';
+import GcViewBanByIdResponse from '../model/GcViewBanByIdResponse';
 import GcViewMuteByIdResponse from '../model/GcViewMuteByIdResponse';
+import InlineResponse200 from '../model/InlineResponse200';
 import SendBirdGroupChannel from '../model/SendBirdGroupChannel';
-import SendBirdUser from '../model/SendBirdUser';
 
 /**
 * GroupChannel service.
@@ -187,7 +190,7 @@ export default class GroupChannelApi {
      * @param {Array.<String>} operatorIds 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.deleteAll 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
     gcCancelTheRegistrationOfOperatorsWithHttpInfo(apiToken, channelUrl, operatorIds, opts) {
       opts = opts || {};
@@ -220,8 +223,8 @@ export default class GroupChannelApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = InlineResponse200;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/operators', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -237,7 +240,7 @@ export default class GroupChannelApi {
      * @param {Array.<String>} operatorIds 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.deleteAll 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
     gcCancelTheRegistrationOfOperators(apiToken, channelUrl, operatorIds, opts) {
       return this.gcCancelTheRegistrationOfOperatorsWithHttpInfo(apiToken, channelUrl, operatorIds, opts)
@@ -369,7 +372,7 @@ export default class GroupChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcDeclineInvitationData} opts.gcDeclineInvitationData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
     gcDeclineInvitationWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
@@ -396,8 +399,8 @@ export default class GroupChannelApi {
 
       let authNames = [];
       let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = InlineResponse200;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/decline', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -412,7 +415,7 @@ export default class GroupChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcDeclineInvitationData} opts.gcDeclineInvitationData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
     gcDeclineInvitation(apiToken, channelUrl, opts) {
       return this.gcDeclineInvitationWithHttpInfo(apiToken, channelUrl, opts)
@@ -427,7 +430,7 @@ export default class GroupChannelApi {
      * ## Delete a channel  Deletes a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-delete-a-channel ----------------------------
      * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
     gcDeleteChannelByUrlWithHttpInfo(apiToken, channelUrl) {
       let postBody = null;
@@ -453,8 +456,8 @@ export default class GroupChannelApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = InlineResponse200;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -467,7 +470,7 @@ export default class GroupChannelApi {
      * ## Delete a channel  Deletes a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-delete-a-channel ----------------------------
      * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
     gcDeleteChannelByUrl(apiToken, channelUrl) {
       return this.gcDeleteChannelByUrlWithHttpInfo(apiToken, channelUrl)
@@ -544,7 +547,7 @@ export default class GroupChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcHideOrArchiveChannelData} opts.gcHideOrArchiveChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
     gcHideOrArchiveChannelWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
@@ -571,8 +574,8 @@ export default class GroupChannelApi {
 
       let authNames = [];
       let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = InlineResponse200;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/hide', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -587,7 +590,7 @@ export default class GroupChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcHideOrArchiveChannelData} opts.gcHideOrArchiveChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
     gcHideOrArchiveChannel(apiToken, channelUrl, opts) {
       return this.gcHideOrArchiveChannelWithHttpInfo(apiToken, channelUrl, opts)
@@ -724,7 +727,7 @@ export default class GroupChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcLeaveChannelData} opts.gcLeaveChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
     gcLeaveChannelWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
@@ -751,8 +754,8 @@ export default class GroupChannelApi {
 
       let authNames = [];
       let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = InlineResponse200;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/leave', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -767,7 +770,7 @@ export default class GroupChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcLeaveChannelData} opts.gcLeaveChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
     gcLeaveChannel(apiToken, channelUrl, opts) {
       return this.gcLeaveChannelWithHttpInfo(apiToken, channelUrl, opts)
@@ -1358,7 +1361,7 @@ export default class GroupChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcResetChatHistoryData} opts.gcResetChatHistoryData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcResetChatHistoryResponse} and HTTP response
      */
     gcResetChatHistoryWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
@@ -1385,8 +1388,8 @@ export default class GroupChannelApi {
 
       let authNames = [];
       let contentTypes = ['application/json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = GcResetChatHistoryResponse;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/reset_user_history', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1401,7 +1404,7 @@ export default class GroupChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcResetChatHistoryData} opts.gcResetChatHistoryData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcResetChatHistoryResponse}
      */
     gcResetChatHistory(apiToken, channelUrl, opts) {
       return this.gcResetChatHistoryWithHttpInfo(apiToken, channelUrl, opts)
@@ -1417,7 +1420,7 @@ export default class GroupChannelApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
     gcUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId) {
       let postBody = null;
@@ -1448,8 +1451,8 @@ export default class GroupChannelApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = InlineResponse200;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/ban/{banned_user_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1463,7 +1466,7 @@ export default class GroupChannelApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
     gcUnbanUserById(apiToken, channelUrl, bannedUserId) {
       return this.gcUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId)
@@ -1481,7 +1484,7 @@ export default class GroupChannelApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.shouldUnhideAll 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
     gcUnhideOrUnarchiveChannelWithHttpInfo(apiToken, channelUrl, userId, opts) {
       opts = opts || {};
@@ -1514,8 +1517,8 @@ export default class GroupChannelApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = InlineResponse200;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/hide', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1531,7 +1534,7 @@ export default class GroupChannelApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.shouldUnhideAll 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
     gcUnhideOrUnarchiveChannel(apiToken, channelUrl, userId, opts) {
       return this.gcUnhideOrUnarchiveChannelWithHttpInfo(apiToken, channelUrl, userId, opts)
@@ -1547,7 +1550,7 @@ export default class GroupChannelApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
     gcUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId) {
       let postBody = null;
@@ -1578,8 +1581,8 @@ export default class GroupChannelApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = InlineResponse200;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/mute/{muted_user_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1593,7 +1596,7 @@ export default class GroupChannelApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
     gcUnmuteUserById(apiToken, channelUrl, mutedUserId) {
       return this.gcUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId)
@@ -1611,7 +1614,7 @@ export default class GroupChannelApi {
      * @param {String} bannedUserId 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcUpdateBanByIdData} opts.gcUpdateBanByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcUpdateBanByIdResponse} and HTTP response
      */
     gcUpdateBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId, opts) {
       opts = opts || {};
@@ -1644,7 +1647,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = SendBirdUser;
+      let returnType = GcUpdateBanByIdResponse;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/ban/{banned_user_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1660,7 +1663,7 @@ export default class GroupChannelApi {
      * @param {String} bannedUserId 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcUpdateBanByIdData} opts.gcUpdateBanByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcUpdateBanByIdResponse}
      */
     gcUpdateBanById(apiToken, channelUrl, bannedUserId, opts) {
       return this.gcUpdateBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId, opts)
@@ -1736,7 +1739,7 @@ export default class GroupChannelApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcViewBanByIdResponse} and HTTP response
      */
     gcViewBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId) {
       let postBody = null;
@@ -1768,7 +1771,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = SendBirdUser;
+      let returnType = GcViewBanByIdResponse;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/ban/{banned_user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1782,7 +1785,7 @@ export default class GroupChannelApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcViewBanByIdResponse}
      */
     gcViewBanById(apiToken, channelUrl, bannedUserId) {
       return this.gcViewBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId)

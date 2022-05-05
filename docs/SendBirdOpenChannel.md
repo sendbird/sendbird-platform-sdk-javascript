@@ -4,16 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**coverUrl** | **String** |  | [optional] 
-**createdAt** | **Number** |  | [optional] 
-**creator** | [**SendBirdUser**](SendBirdUser.md) |  | [optional] 
+**name** | **String** |  | [optional] 
 **customType** | **String** |  | [optional] 
+**channelUrl** | **String** |  | [optional] 
+**createdAt** | **Number** |  | [optional] 
+**coverUrl** | **String** |  | [optional] 
+**creator** | [**SendBirdUser**](SendBirdUser.md) |  | [optional] 
 **data** | **String** |  | [optional] 
+**isDynamicPartitioned** | **Boolean** |  | [optional] 
 **isEphemeral** | **Boolean** |  | [optional] 
 **isFrozen** | **Boolean** |  | [optional] 
-**name** | **String** |  | [optional] 
+**maxLengthMessage** | **Number** |  | [optional] 
 **operators** | [**[SendBirdUser]**](SendBirdUser.md) |  | [optional] 
 **participantCount** | **Number** |  | [optional] 
-**channelUrl** | **String** |  | [optional] 
+**freeze** | **Boolean** |  | [optional] 
 
 

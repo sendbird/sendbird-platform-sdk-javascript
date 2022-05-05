@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import InlineResponse200 from './InlineResponse200';
 import SendBirdUser from './SendBirdUser';
 
 /**
@@ -60,6 +61,24 @@ class GcBanUserResponse {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
+            if (data.hasOwnProperty('metadata')) {
+                obj['metadata'] = InlineResponse200.constructFromObject(data['metadata']);
+            }
+            if (data.hasOwnProperty('next_url')) {
+                obj['next_url'] = ApiClient.convertToType(data['next_url'], 'String');
+            }
+            if (data.hasOwnProperty('nickname')) {
+                obj['nickname'] = ApiClient.convertToType(data['nickname'], 'String');
+            }
+            if (data.hasOwnProperty('profile_url')) {
+                obj['profile_url'] = ApiClient.convertToType(data['profile_url'], 'String');
+            }
+            if (data.hasOwnProperty('require_auth_for_profile_image')) {
+                obj['require_auth_for_profile_image'] = ApiClient.convertToType(data['require_auth_for_profile_image'], 'Boolean');
+            }
+            if (data.hasOwnProperty('user_id')) {
+                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
+            }
         }
         return obj;
     }
@@ -86,6 +105,36 @@ GcBanUserResponse.prototype['end_at'] = undefined;
  * @member {String} description
  */
 GcBanUserResponse.prototype['description'] = undefined;
+
+/**
+ * @member {module:model/InlineResponse200} metadata
+ */
+GcBanUserResponse.prototype['metadata'] = undefined;
+
+/**
+ * @member {String} next_url
+ */
+GcBanUserResponse.prototype['next_url'] = undefined;
+
+/**
+ * @member {String} nickname
+ */
+GcBanUserResponse.prototype['nickname'] = undefined;
+
+/**
+ * @member {String} profile_url
+ */
+GcBanUserResponse.prototype['profile_url'] = undefined;
+
+/**
+ * @member {Boolean} require_auth_for_profile_image
+ */
+GcBanUserResponse.prototype['require_auth_for_profile_image'] = undefined;
+
+/**
+ * @member {String} user_id
+ */
+GcBanUserResponse.prototype['user_id'] = undefined;
 
 
 

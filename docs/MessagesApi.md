@@ -133,7 +133,7 @@ No authorization required
 
 ## deleteMessageById
 
-> deleteMessageById(apiToken, channelType, channelUrl, messageId)
+> Object deleteMessageById(apiToken, channelType, channelUrl, messageId)
 
 Delete a message
 
@@ -149,8 +149,8 @@ let apiToken = {{API_TOKEN}}; // String |
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
-apiInstance.deleteMessageById(apiToken, channelType, channelUrl, messageId).then(() => {
-  console.log('API called successfully.');
+apiInstance.deleteMessageById(apiToken, channelType, channelUrl, messageId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -178,7 +178,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## gcMarkAllMessagesAsDelivered
@@ -233,7 +233,7 @@ No authorization required
 
 ## gcMarkAllMessagesAsRead
 
-> gcMarkAllMessagesAsRead(apiToken, channelUrl, opts)
+> Object gcMarkAllMessagesAsRead(apiToken, channelUrl, opts)
 
 Mark all messages as read
 
@@ -250,8 +250,8 @@ let channelUrl = "channelUrl_example"; // String |
 let opts = {
   'gcMarkAllMessagesAsReadData': new SendbirdPlatformSdk.GcMarkAllMessagesAsReadData() // GcMarkAllMessagesAsReadData | 
 };
-apiInstance.gcMarkAllMessagesAsRead(apiToken, channelUrl, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.gcMarkAllMessagesAsRead(apiToken, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -278,7 +278,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## gcViewNumberOfEachMembersUnreadMessages
@@ -473,7 +473,7 @@ No authorization required
 
 ## removeExtraDataFromMessage
 
-> removeExtraDataFromMessage(apiToken, channelType, channelUrl, messageId, opts)
+> Object removeExtraDataFromMessage(apiToken, channelType, channelUrl, messageId, opts)
 
 Remove extra data from a message
 
@@ -492,8 +492,8 @@ let messageId = "messageId_example"; // String |
 let opts = {
   'keys': ["null"] // [String] | 
 };
-apiInstance.removeExtraDataFromMessage(apiToken, channelType, channelUrl, messageId, opts).then(() => {
-  console.log('API called successfully.');
+apiInstance.removeExtraDataFromMessage(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -513,7 +513,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -522,7 +522,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## removeReactionFromAMessage

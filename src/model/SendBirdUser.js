@@ -49,14 +49,20 @@ class SendBirdUser {
         if (data) {
             obj = obj || new SendBirdUser();
 
-            if (data.hasOwnProperty('connection_status')) {
-                obj['connection_status'] = ApiClient.convertToType(data['connection_status'], 'String');
+            if (data.hasOwnProperty('require_auth_for_profile_image')) {
+                obj['require_auth_for_profile_image'] = ApiClient.convertToType(data['require_auth_for_profile_image'], 'Boolean');
             }
-            if (data.hasOwnProperty('friend_discovery_key')) {
-                obj['friend_discovery_key'] = ApiClient.convertToType(data['friend_discovery_key'], 'String');
+            if (data.hasOwnProperty('is_online')) {
+                obj['is_online'] = ApiClient.convertToType(data['is_online'], 'Boolean');
             }
-            if (data.hasOwnProperty('friend_name')) {
-                obj['friend_name'] = ApiClient.convertToType(data['friend_name'], 'String');
+            if (data.hasOwnProperty('user_id')) {
+                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
+            }
+            if (data.hasOwnProperty('access_token')) {
+                obj['access_token'] = ApiClient.convertToType(data['access_token'], 'String');
+            }
+            if (data.hasOwnProperty('has_ever_logged_in')) {
+                obj['has_ever_logged_in'] = ApiClient.convertToType(data['has_ever_logged_in'], 'Boolean');
             }
             if (data.hasOwnProperty('is_active')) {
                 obj['is_active'] = ApiClient.convertToType(data['is_active'], 'Boolean');
@@ -64,14 +70,14 @@ class SendBirdUser {
             if (data.hasOwnProperty('last_seen_at')) {
                 obj['last_seen_at'] = ApiClient.convertToType(data['last_seen_at'], 'Number');
             }
-            if (data.hasOwnProperty('meta_data')) {
-                obj['meta_data'] = SBObject.constructFromObject(data['meta_data']);
-            }
             if (data.hasOwnProperty('nickname')) {
                 obj['nickname'] = ApiClient.convertToType(data['nickname'], 'String');
             }
-            if (data.hasOwnProperty('plain_profile_url')) {
-                obj['plain_profile_url'] = ApiClient.convertToType(data['plain_profile_url'], 'String');
+            if (data.hasOwnProperty('discovery_keys')) {
+                obj['discovery_keys'] = ApiClient.convertToType(data['discovery_keys'], ['String']);
+            }
+            if (data.hasOwnProperty('session_tokens')) {
+                obj['session_tokens'] = ApiClient.convertToType(data['session_tokens'], ['String']);
             }
             if (data.hasOwnProperty('preferred_languages')) {
                 obj['preferred_languages'] = ApiClient.convertToType(data['preferred_languages'], ['String']);
@@ -79,11 +85,38 @@ class SendBirdUser {
             if (data.hasOwnProperty('profile_url')) {
                 obj['profile_url'] = ApiClient.convertToType(data['profile_url'], 'String');
             }
-            if (data.hasOwnProperty('require_auth')) {
-                obj['require_auth'] = ApiClient.convertToType(data['require_auth'], 'Boolean');
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Number');
             }
-            if (data.hasOwnProperty('user_id')) {
-                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
+            if (data.hasOwnProperty('phone_number')) {
+                obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
+            }
+            if (data.hasOwnProperty('local')) {
+                obj['local'] = ApiClient.convertToType(data['local'], 'String');
+            }
+            if (data.hasOwnProperty('locale')) {
+                obj['locale'] = ApiClient.convertToType(data['locale'], 'String');
+            }
+            if (data.hasOwnProperty('is_hide_me_from_friends')) {
+                obj['is_hide_me_from_friends'] = ApiClient.convertToType(data['is_hide_me_from_friends'], 'Boolean');
+            }
+            if (data.hasOwnProperty('is_shadow_blocked')) {
+                obj['is_shadow_blocked'] = ApiClient.convertToType(data['is_shadow_blocked'], 'Boolean');
+            }
+            if (data.hasOwnProperty('is_created')) {
+                obj['is_created'] = ApiClient.convertToType(data['is_created'], 'Boolean');
+            }
+            if (data.hasOwnProperty('metadata')) {
+                obj['metadata'] = SBObject.constructFromObject(data['metadata']);
+            }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
+            if (data.hasOwnProperty('end_at')) {
+                obj['end_at'] = ApiClient.convertToType(data['end_at'], 'Number');
+            }
+            if (data.hasOwnProperty('start_at')) {
+                obj['start_at'] = ApiClient.convertToType(data['start_at'], 'Number');
             }
         }
         return obj;
@@ -93,19 +126,29 @@ class SendBirdUser {
 }
 
 /**
- * @member {String} connection_status
+ * @member {Boolean} require_auth_for_profile_image
  */
-SendBirdUser.prototype['connection_status'] = undefined;
+SendBirdUser.prototype['require_auth_for_profile_image'] = undefined;
 
 /**
- * @member {String} friend_discovery_key
+ * @member {Boolean} is_online
  */
-SendBirdUser.prototype['friend_discovery_key'] = undefined;
+SendBirdUser.prototype['is_online'] = undefined;
 
 /**
- * @member {String} friend_name
+ * @member {String} user_id
  */
-SendBirdUser.prototype['friend_name'] = undefined;
+SendBirdUser.prototype['user_id'] = undefined;
+
+/**
+ * @member {String} access_token
+ */
+SendBirdUser.prototype['access_token'] = undefined;
+
+/**
+ * @member {Boolean} has_ever_logged_in
+ */
+SendBirdUser.prototype['has_ever_logged_in'] = undefined;
 
 /**
  * @member {Boolean} is_active
@@ -118,19 +161,19 @@ SendBirdUser.prototype['is_active'] = undefined;
 SendBirdUser.prototype['last_seen_at'] = undefined;
 
 /**
- * @member {module:model/SBObject} meta_data
- */
-SendBirdUser.prototype['meta_data'] = undefined;
-
-/**
  * @member {String} nickname
  */
 SendBirdUser.prototype['nickname'] = undefined;
 
 /**
- * @member {String} plain_profile_url
+ * @member {Array.<String>} discovery_keys
  */
-SendBirdUser.prototype['plain_profile_url'] = undefined;
+SendBirdUser.prototype['discovery_keys'] = undefined;
+
+/**
+ * @member {Array.<String>} session_tokens
+ */
+SendBirdUser.prototype['session_tokens'] = undefined;
 
 /**
  * @member {Array.<String>} preferred_languages
@@ -143,14 +186,59 @@ SendBirdUser.prototype['preferred_languages'] = undefined;
 SendBirdUser.prototype['profile_url'] = undefined;
 
 /**
- * @member {Boolean} require_auth
+ * @member {Number} created_at
  */
-SendBirdUser.prototype['require_auth'] = undefined;
+SendBirdUser.prototype['created_at'] = undefined;
 
 /**
- * @member {String} user_id
+ * @member {String} phone_number
  */
-SendBirdUser.prototype['user_id'] = undefined;
+SendBirdUser.prototype['phone_number'] = undefined;
+
+/**
+ * @member {String} local
+ */
+SendBirdUser.prototype['local'] = undefined;
+
+/**
+ * @member {String} locale
+ */
+SendBirdUser.prototype['locale'] = undefined;
+
+/**
+ * @member {Boolean} is_hide_me_from_friends
+ */
+SendBirdUser.prototype['is_hide_me_from_friends'] = undefined;
+
+/**
+ * @member {Boolean} is_shadow_blocked
+ */
+SendBirdUser.prototype['is_shadow_blocked'] = undefined;
+
+/**
+ * @member {Boolean} is_created
+ */
+SendBirdUser.prototype['is_created'] = undefined;
+
+/**
+ * @member {module:model/SBObject} metadata
+ */
+SendBirdUser.prototype['metadata'] = undefined;
+
+/**
+ * @member {String} description
+ */
+SendBirdUser.prototype['description'] = undefined;
+
+/**
+ * @member {Number} end_at
+ */
+SendBirdUser.prototype['end_at'] = undefined;
+
+/**
+ * @member {Number} start_at
+ */
+SendBirdUser.prototype['start_at'] = undefined;
 
 
 

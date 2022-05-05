@@ -213,7 +213,7 @@ export default class EmojisApi {
      * ## Delete an emoji category  Deletes an emoji category with the specified ID.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-delete-an-emoji-category ----------------------------
      * @param {String} apiToken 
      * @param {String} emojiCategoryId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     deleteEmojiCategoryByIdWithHttpInfo(apiToken, emojiCategoryId) {
       let postBody = null;
@@ -239,8 +239,8 @@ export default class EmojisApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/emoji_categories/{emoji_category_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -253,7 +253,7 @@ export default class EmojisApi {
      * ## Delete an emoji category  Deletes an emoji category with the specified ID.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-delete-an-emoji-category ----------------------------
      * @param {String} apiToken 
      * @param {String} emojiCategoryId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     deleteEmojiCategoryById(apiToken, emojiCategoryId) {
       return this.deleteEmojiCategoryByIdWithHttpInfo(apiToken, emojiCategoryId)

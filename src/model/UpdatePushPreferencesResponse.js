@@ -47,6 +47,15 @@ class UpdatePushPreferencesResponse {
         if (data) {
             obj = obj || new UpdatePushPreferencesResponse();
 
+            if (data.hasOwnProperty('block_push_from_bots')) {
+                obj['block_push_from_bots'] = ApiClient.convertToType(data['block_push_from_bots'], 'Boolean');
+            }
+            if (data.hasOwnProperty('enable_push_for_replies')) {
+                obj['enable_push_for_replies'] = ApiClient.convertToType(data['enable_push_for_replies'], 'Boolean');
+            }
+            if (data.hasOwnProperty('push_blocked_bot_ids')) {
+                obj['push_blocked_bot_ids'] = ApiClient.convertToType(data['push_blocked_bot_ids'], ['String']);
+            }
             if (data.hasOwnProperty('push_trigger_option')) {
                 obj['push_trigger_option'] = ApiClient.convertToType(data['push_trigger_option'], 'String');
             }
@@ -86,6 +95,21 @@ class UpdatePushPreferencesResponse {
 
 
 }
+
+/**
+ * @member {Boolean} block_push_from_bots
+ */
+UpdatePushPreferencesResponse.prototype['block_push_from_bots'] = undefined;
+
+/**
+ * @member {Boolean} enable_push_for_replies
+ */
+UpdatePushPreferencesResponse.prototype['enable_push_for_replies'] = undefined;
+
+/**
+ * @member {Array.<String>} push_blocked_bot_ids
+ */
+UpdatePushPreferencesResponse.prototype['push_blocked_bot_ids'] = undefined;
 
 /**
  * @member {String} push_trigger_option

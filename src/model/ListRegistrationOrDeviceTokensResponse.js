@@ -48,6 +48,9 @@ class ListRegistrationOrDeviceTokensResponse {
         if (data) {
             obj = obj || new ListRegistrationOrDeviceTokensResponse();
 
+            if (data.hasOwnProperty('token')) {
+                obj['token'] = ApiClient.convertToType(data['token'], ['String']);
+            }
             if (data.hasOwnProperty('tokens')) {
                 obj['tokens'] = ApiClient.convertToType(data['tokens'], ['String']);
             }
@@ -63,6 +66,11 @@ class ListRegistrationOrDeviceTokensResponse {
 
 
 }
+
+/**
+ * @member {Array.<String>} token
+ */
+ListRegistrationOrDeviceTokensResponse.prototype['token'] = undefined;
 
 /**
  * @member {Array.<String>} tokens

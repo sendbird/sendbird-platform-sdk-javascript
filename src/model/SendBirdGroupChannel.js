@@ -12,6 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
+import SendBirdGroupChannelCreatedBy from './SendBirdGroupChannelCreatedBy';
+import SendBirdGroupChannelDisappearingMessage from './SendBirdGroupChannelDisappearingMessage';
+import SendBirdGroupChannelSmsFallback from './SendBirdGroupChannelSmsFallback';
 import SendBirdMember from './SendBirdMember';
 import SendBirdMessageResponse from './SendBirdMessageResponse';
 import SendBirdUser from './SendBirdUser';
@@ -50,11 +53,17 @@ class SendBirdGroupChannel {
         if (data) {
             obj = obj || new SendBirdGroupChannel();
 
+            if (data.hasOwnProperty('channel_url')) {
+                obj['channel_url'] = ApiClient.convertToType(data['channel_url'], 'String');
+            }
             if (data.hasOwnProperty('cover_url')) {
                 obj['cover_url'] = ApiClient.convertToType(data['cover_url'], 'String');
             }
             if (data.hasOwnProperty('created_at')) {
                 obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Number');
+            }
+            if (data.hasOwnProperty('created_by')) {
+                obj['created_by'] = SendBirdGroupChannelCreatedBy.constructFromObject(data['created_by']);
             }
             if (data.hasOwnProperty('creator')) {
                 obj['creator'] = SendBirdUser.constructFromObject(data['creator']);
@@ -64,6 +73,15 @@ class SendBirdGroupChannel {
             }
             if (data.hasOwnProperty('data')) {
                 obj['data'] = ApiClient.convertToType(data['data'], 'String');
+            }
+            if (data.hasOwnProperty('disappearing_message')) {
+                obj['disappearing_message'] = SendBirdGroupChannelDisappearingMessage.constructFromObject(data['disappearing_message']);
+            }
+            if (data.hasOwnProperty('freeze')) {
+                obj['freeze'] = ApiClient.convertToType(data['freeze'], 'Boolean');
+            }
+            if (data.hasOwnProperty('ignore_profanity_filter')) {
+                obj['ignore_profanity_filter'] = ApiClient.convertToType(data['ignore_profanity_filter'], 'Boolean');
             }
             if (data.hasOwnProperty('hidden_state')) {
                 obj['hidden_state'] = ApiClient.convertToType(data['hidden_state'], 'String');
@@ -79,6 +97,9 @@ class SendBirdGroupChannel {
             }
             if (data.hasOwnProperty('is_broadcast')) {
                 obj['is_broadcast'] = ApiClient.convertToType(data['is_broadcast'], 'Boolean');
+            }
+            if (data.hasOwnProperty('is_created')) {
+                obj['is_created'] = ApiClient.convertToType(data['is_created'], 'Boolean');
             }
             if (data.hasOwnProperty('is_discoverable')) {
                 obj['is_discoverable'] = ApiClient.convertToType(data['is_discoverable'], 'Boolean');
@@ -113,6 +134,9 @@ class SendBirdGroupChannel {
             if (data.hasOwnProperty('last_message')) {
                 obj['last_message'] = SendBirdMessageResponse.constructFromObject(data['last_message']);
             }
+            if (data.hasOwnProperty('max_length_message')) {
+                obj['max_length_message'] = ApiClient.convertToType(data['max_length_message'], 'Number');
+            }
             if (data.hasOwnProperty('member_count')) {
                 obj['member_count'] = ApiClient.convertToType(data['member_count'], 'Number');
             }
@@ -146,14 +170,17 @@ class SendBirdGroupChannel {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('operators')) {
+                obj['operators'] = ApiClient.convertToType(data['operators'], ['String']);
+            }
+            if (data.hasOwnProperty('sms_fallback')) {
+                obj['sms_fallback'] = SendBirdGroupChannelSmsFallback.constructFromObject(data['sms_fallback']);
+            }
             if (data.hasOwnProperty('unread_mention_count')) {
                 obj['unread_mention_count'] = ApiClient.convertToType(data['unread_mention_count'], 'Number');
             }
             if (data.hasOwnProperty('unread_message_count')) {
                 obj['unread_message_count'] = ApiClient.convertToType(data['unread_message_count'], 'Number');
-            }
-            if (data.hasOwnProperty('channel_url')) {
-                obj['channel_url'] = ApiClient.convertToType(data['channel_url'], 'String');
             }
         }
         return obj;
@@ -161,6 +188,11 @@ class SendBirdGroupChannel {
 
 
 }
+
+/**
+ * @member {String} channel_url
+ */
+SendBirdGroupChannel.prototype['channel_url'] = undefined;
 
 /**
  * @member {String} cover_url
@@ -171,6 +203,11 @@ SendBirdGroupChannel.prototype['cover_url'] = undefined;
  * @member {Number} created_at
  */
 SendBirdGroupChannel.prototype['created_at'] = undefined;
+
+/**
+ * @member {module:model/SendBirdGroupChannelCreatedBy} created_by
+ */
+SendBirdGroupChannel.prototype['created_by'] = undefined;
 
 /**
  * @member {module:model/SendBirdUser} creator
@@ -186,6 +223,21 @@ SendBirdGroupChannel.prototype['custom_type'] = undefined;
  * @member {String} data
  */
 SendBirdGroupChannel.prototype['data'] = undefined;
+
+/**
+ * @member {module:model/SendBirdGroupChannelDisappearingMessage} disappearing_message
+ */
+SendBirdGroupChannel.prototype['disappearing_message'] = undefined;
+
+/**
+ * @member {Boolean} freeze
+ */
+SendBirdGroupChannel.prototype['freeze'] = undefined;
+
+/**
+ * @member {Boolean} ignore_profanity_filter
+ */
+SendBirdGroupChannel.prototype['ignore_profanity_filter'] = undefined;
 
 /**
  * @member {module:model/SendBirdGroupChannel.HiddenStateEnum} hidden_state
@@ -211,6 +263,11 @@ SendBirdGroupChannel.prototype['is_access_code_required'] = undefined;
  * @member {Boolean} is_broadcast
  */
 SendBirdGroupChannel.prototype['is_broadcast'] = undefined;
+
+/**
+ * @member {Boolean} is_created
+ */
+SendBirdGroupChannel.prototype['is_created'] = undefined;
 
 /**
  * @member {Boolean} is_discoverable
@@ -268,6 +325,11 @@ SendBirdGroupChannel.prototype['joined_member_count'] = undefined;
 SendBirdGroupChannel.prototype['last_message'] = undefined;
 
 /**
+ * @member {Number} max_length_message
+ */
+SendBirdGroupChannel.prototype['max_length_message'] = undefined;
+
+/**
  * @member {Number} member_count
  */
 SendBirdGroupChannel.prototype['member_count'] = undefined;
@@ -323,6 +385,16 @@ SendBirdGroupChannel.prototype['my_role'] = undefined;
 SendBirdGroupChannel.prototype['name'] = undefined;
 
 /**
+ * @member {Array.<String>} operators
+ */
+SendBirdGroupChannel.prototype['operators'] = undefined;
+
+/**
+ * @member {module:model/SendBirdGroupChannelSmsFallback} sms_fallback
+ */
+SendBirdGroupChannel.prototype['sms_fallback'] = undefined;
+
+/**
  * @member {Number} unread_mention_count
  */
 SendBirdGroupChannel.prototype['unread_mention_count'] = undefined;
@@ -331,11 +403,6 @@ SendBirdGroupChannel.prototype['unread_mention_count'] = undefined;
  * @member {Number} unread_message_count
  */
 SendBirdGroupChannel.prototype['unread_message_count'] = undefined;
-
-/**
- * @member {String} channel_url
- */
-SendBirdGroupChannel.prototype['channel_url'] = undefined;
 
 
 

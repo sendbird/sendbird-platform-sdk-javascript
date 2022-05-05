@@ -4,6 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**blockPushFromBots** | **Boolean** |  | [optional] 
+**enablePushForReplies** | **Boolean** |  | [optional] 
+**pushBlockedBotIds** | **[String]** |  | [optional] 
 **pushTriggerOption** | **String** |  | [optional] 
 **doNotDisturb** | **Boolean** |  | [optional] 
 **startHour** | **Number** |  | [optional] 

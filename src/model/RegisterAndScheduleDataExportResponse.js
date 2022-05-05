@@ -48,6 +48,12 @@ class RegisterAndScheduleDataExportResponse {
         if (data) {
             obj = obj || new RegisterAndScheduleDataExportResponse();
 
+            if (data.hasOwnProperty('channel_custom_types')) {
+                obj['channel_custom_types'] = ApiClient.convertToType(data['channel_custom_types'], ['String']);
+            }
+            if (data.hasOwnProperty('data_type')) {
+                obj['data_type'] = ApiClient.convertToType(data['data_type'], 'String');
+            }
             if (data.hasOwnProperty('request_id')) {
                 obj['request_id'] = ApiClient.convertToType(data['request_id'], 'String');
             }
@@ -90,6 +96,16 @@ class RegisterAndScheduleDataExportResponse {
 
 
 }
+
+/**
+ * @member {Array.<String>} channel_custom_types
+ */
+RegisterAndScheduleDataExportResponse.prototype['channel_custom_types'] = undefined;
+
+/**
+ * @member {String} data_type
+ */
+RegisterAndScheduleDataExportResponse.prototype['data_type'] = undefined;
 
 /**
  * @member {String} request_id

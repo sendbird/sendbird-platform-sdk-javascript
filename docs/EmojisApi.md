@@ -163,7 +163,7 @@ No authorization required
 
 ## deleteEmojiCategoryById
 
-> deleteEmojiCategoryById(apiToken, emojiCategoryId)
+> Object deleteEmojiCategoryById(apiToken, emojiCategoryId)
 
 Delete an emoji category
 
@@ -177,8 +177,8 @@ import SendbirdPlatformSdk from 'sendbird_platform_sdk';
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let apiToken = {{API_TOKEN}}; // String | 
 let emojiCategoryId = "emojiCategoryId_example"; // String | 
-apiInstance.deleteEmojiCategoryById(apiToken, emojiCategoryId).then(() => {
-  console.log('API called successfully.');
+apiInstance.deleteEmojiCategoryById(apiToken, emojiCategoryId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -204,7 +204,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## enableReactions
