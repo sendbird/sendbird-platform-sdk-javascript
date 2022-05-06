@@ -46,7 +46,7 @@ Accept an invitation
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -96,7 +96,7 @@ Ban a user
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -146,7 +146,7 @@ Cancel the registration of operators
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -198,7 +198,7 @@ Check if member
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -246,7 +246,7 @@ Create a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -294,7 +294,7 @@ Decline an invitation
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -344,7 +344,7 @@ Delete a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -390,7 +390,7 @@ Freeze a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -440,7 +440,7 @@ Hide or archive a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -490,7 +490,7 @@ Invite as members
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -540,7 +540,7 @@ Join a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -590,7 +590,7 @@ Leave a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -640,7 +640,7 @@ List banned users
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -692,7 +692,7 @@ List channels
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -822,7 +822,7 @@ List members
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -888,7 +888,7 @@ List muted users
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -940,7 +940,7 @@ List operators
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -992,7 +992,7 @@ Mute a user
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1042,7 +1042,7 @@ Register operators
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1092,7 +1092,7 @@ Reset chat history
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1142,7 +1142,7 @@ Unban a user
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1190,7 +1190,7 @@ Unhide or unarchive a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1242,7 +1242,7 @@ Unmute a user
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1290,7 +1290,7 @@ Update a ban
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1342,7 +1342,7 @@ Update a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1392,7 +1392,7 @@ View a ban
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1440,7 +1440,7 @@ View a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1498,7 +1498,7 @@ View a mute
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.GroupChannelApi();
 let apiToken = {{API_TOKEN}}; // String | 

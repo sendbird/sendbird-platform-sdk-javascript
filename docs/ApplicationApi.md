@@ -44,7 +44,7 @@ Add an APNs push configuration
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -92,7 +92,7 @@ Add a FCM push configuration
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -140,7 +140,7 @@ Add an HMS push configuration
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -188,7 +188,7 @@ Add an IP to a whitelist
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -236,7 +236,7 @@ Delete allowed IPs from a whitelist
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -282,7 +282,7 @@ Delete an APNs certificate
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -328,7 +328,7 @@ Generate a secondary API token
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -376,7 +376,7 @@ List push configurations
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -422,7 +422,7 @@ List push notification content templates
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -466,7 +466,7 @@ List secondary API tokens
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -510,7 +510,7 @@ Remove a push configuration
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -558,7 +558,7 @@ Retrieve an IP whitelist
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -602,7 +602,7 @@ Revoke a secondary API token
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -648,7 +648,7 @@ Update an APNs push configuration
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -698,7 +698,7 @@ Update default channel invitation preference
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -746,7 +746,7 @@ Update a FCM push configuration
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -796,7 +796,7 @@ Update an HMS push configuration
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -846,7 +846,7 @@ Update a push notification content template
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -896,7 +896,7 @@ View default channel invitation preference
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -940,7 +940,7 @@ View number of concurrent connections
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -984,7 +984,7 @@ View number of daily active users
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1032,7 +1032,7 @@ View number of monthly active users
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1080,7 +1080,7 @@ View number of peak connections
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1140,7 +1140,7 @@ View a push configuration
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1188,7 +1188,7 @@ View a push notification content template
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1234,7 +1234,7 @@ View a secondary API token
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
 let apiToken = {{API_TOKEN}}; // String | 

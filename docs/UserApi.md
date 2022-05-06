@@ -54,7 +54,7 @@ Add a registration or device token
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -106,7 +106,7 @@ Ban from channels with custom channel types
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -156,7 +156,7 @@ Block a user
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -206,7 +206,7 @@ Choose a push notification content template
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -256,7 +256,7 @@ Create a user
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -304,7 +304,7 @@ Delete a user
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -350,7 +350,7 @@ Leave my group channels
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -400,7 +400,7 @@ List banned channels
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -452,7 +452,7 @@ List blocked users
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -510,7 +510,7 @@ List muted channels
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -562,7 +562,7 @@ List my group channels
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -690,7 +690,7 @@ List registration or device tokens
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -738,7 +738,7 @@ List users
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -802,7 +802,7 @@ Mark all messages as read
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -852,7 +852,7 @@ Mute in channels with custom channel types
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -902,7 +902,7 @@ Register as an operator to channels with custom channel types
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -952,7 +952,7 @@ Remove a registration or device token - When unregistering all device tokens
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -998,7 +998,7 @@ Remove a registration or device token - When unregistering a specific token
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1048,7 +1048,7 @@ Remove a registration or device token from an owner
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1096,7 +1096,7 @@ Reset push preferences
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1142,7 +1142,7 @@ Unblock a user
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1190,7 +1190,7 @@ Update channel invitation preference
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1240,7 +1240,7 @@ Update count preference of a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1292,7 +1292,7 @@ Update push preferences
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1342,7 +1342,7 @@ Update push preferences for a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1394,7 +1394,7 @@ Update a user
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1444,7 +1444,7 @@ View channel invitation preference
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1490,7 +1490,7 @@ View count preference of a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1538,7 +1538,7 @@ View number of channels by join status
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1588,7 +1588,7 @@ View number of channels with unread messages
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1640,7 +1640,7 @@ View number of unread items
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1692,7 +1692,7 @@ View number of unread messages
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1744,7 +1744,7 @@ View push preferences
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1790,7 +1790,7 @@ View push preferences for a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1838,7 +1838,7 @@ View a user
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1892,7 +1892,7 @@ View who owns a registration or device token
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserApi();
 let apiToken = {{API_TOKEN}}; // String | 

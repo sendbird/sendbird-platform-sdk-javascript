@@ -34,7 +34,7 @@ Add extra data to a message
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -88,7 +88,7 @@ Add a reaction to a message
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -142,7 +142,7 @@ Delete a message
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -192,7 +192,7 @@ Mark all messages as delivered
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -242,7 +242,7 @@ Mark all messages as read
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -292,7 +292,7 @@ View number of each member&#39;s unread messages
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -342,7 +342,7 @@ List messages
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -428,7 +428,7 @@ List reactions of a message
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -482,7 +482,7 @@ Remove extra data from a message
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -536,7 +536,7 @@ Remove a reaction from a message
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -592,7 +592,7 @@ Send a message
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -644,7 +644,7 @@ Translate a message into other languages
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -698,7 +698,7 @@ Update extra data in a message
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -752,7 +752,7 @@ Update a message
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -806,7 +806,7 @@ View a message
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -862,7 +862,7 @@ View total number of messages in a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessagesApi();
 let apiToken = {{API_TOKEN}}; // String | 

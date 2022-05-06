@@ -19,7 +19,7 @@ Retrieve Advanced analytics metrics
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AdvancedAnalyticsApi();
 let apiToken = {{API_TOKEN}}; // String | 

@@ -29,7 +29,7 @@ Get detailed open rate of an announcement
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -75,7 +75,7 @@ Get detailed open rate of an announcement group
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -121,7 +121,7 @@ Get detailed open status of an announcement
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -179,7 +179,7 @@ Get statistics - weekly
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -223,7 +223,7 @@ Get statistics - daily
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -283,7 +283,7 @@ Get statistics - monthly
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -327,7 +327,7 @@ List announcement groups
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -377,7 +377,7 @@ List announcements
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -433,7 +433,7 @@ Schedule an announcement
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -481,7 +481,7 @@ Update an announcement
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -531,7 +531,7 @@ View an announcement
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.AnnouncementsApi();
 let apiToken = {{API_TOKEN}}; // String | 

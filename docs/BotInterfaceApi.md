@@ -27,7 +27,7 @@ Create a bot
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -75,7 +75,7 @@ Delete a bot
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -121,7 +121,7 @@ Join channels
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -171,7 +171,7 @@ Leave channels - When leaving all channels
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -221,7 +221,7 @@ Leave channels - When leaving a channel by its channel URL
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -269,7 +269,7 @@ List bots
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -319,7 +319,7 @@ Send a bot&#39;s message
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -369,7 +369,7 @@ Update a bot
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -419,7 +419,7 @@ View a bot
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.BotInterfaceApi();
 let apiToken = {{API_TOKEN}}; // String | 

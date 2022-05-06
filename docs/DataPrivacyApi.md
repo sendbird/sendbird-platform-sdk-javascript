@@ -22,7 +22,7 @@ Cancel the registration of a GDPR request
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.DataPrivacyApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -68,7 +68,7 @@ List GDPR requests
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.DataPrivacyApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -118,7 +118,7 @@ Register a GDPR request
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.DataPrivacyApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -166,7 +166,7 @@ View a GDPR request
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.DataPrivacyApi();
 let apiToken = {{API_TOKEN}}; // String | 

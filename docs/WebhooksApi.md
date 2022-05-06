@@ -20,7 +20,7 @@ Choose which events to subscribe to
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.WebhooksApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -68,7 +68,7 @@ Retrieve a list of subscribed events
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.WebhooksApi();
 let apiToken = {{API_TOKEN}}; // String | 

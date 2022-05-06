@@ -26,7 +26,7 @@ List reports
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -80,7 +80,7 @@ List reports on a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -134,7 +134,7 @@ List reports on a message
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -190,7 +190,7 @@ List reports on a user
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -242,7 +242,7 @@ Report a channel
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -294,7 +294,7 @@ Report a message
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -348,7 +348,7 @@ Report a user
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -398,7 +398,7 @@ View a moderated message
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.ReportContentSubjectApi();
 let apiToken = {{API_TOKEN}}; // String | 

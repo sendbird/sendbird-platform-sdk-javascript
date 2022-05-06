@@ -39,7 +39,7 @@ Create a channel metacounter
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -91,7 +91,7 @@ Create a channel metadata
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -143,7 +143,7 @@ Create a user metadata
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -193,7 +193,7 @@ Delete a channel metacounter - When deleting all items of a channel metacounter
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -241,7 +241,7 @@ Delete a channel metacounter - When deleting a specific item of a channel metaco
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -291,7 +291,7 @@ Delete a channel metadata - When deleting all items of a channel metadata
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -343,7 +343,7 @@ Delete a channel metadata - When deleting a specific item of a channel metadata 
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -393,7 +393,7 @@ Delete a user metadata - When deleting all items of a user metadata
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -443,7 +443,7 @@ Delete a user metadata - When deleting a specific item of a user metadata by its
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -491,7 +491,7 @@ Update a channel metacounter - When updating existing items of a channel metacou
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -543,7 +543,7 @@ Update a channel metacounter - When updating a specific item of a channel metaco
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -597,7 +597,7 @@ Update a channel metadata - When updating existing items of a channel metadata b
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -649,7 +649,7 @@ Update a channel metadata - When updating a specific item of a channel metadata 
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -703,7 +703,7 @@ Update a user metadata - When updating existing items of a user metadata by thei
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -753,7 +753,7 @@ Update a user metadata - When updating a specific item of a user metadata by its
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -805,7 +805,7 @@ View a channel metacounter - When retrieving all items of a channel metacounter
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -859,7 +859,7 @@ View a channel metacounter - When retrieving a specific item of a channel metaco
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -909,7 +909,7 @@ View a channel metadata - When retrieving all items of a channel metadata
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -963,7 +963,7 @@ View a channel metadata - When retrieving a specific item of a channel metadata 
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1013,7 +1013,7 @@ View a user metadata - When retrieving all items of a user metadata
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -1065,7 +1065,7 @@ View a user metadata - When retrieving a specific item of a user metadata by its
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.UserChannelMetadataApi();
 let apiToken = {{API_TOKEN}}; // String | 

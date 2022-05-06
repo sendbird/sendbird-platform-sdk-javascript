@@ -30,7 +30,7 @@ Add emoji categories
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -78,7 +78,7 @@ Add emojis
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -126,7 +126,7 @@ Delete an emoji
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -172,7 +172,7 @@ Delete an emoji category
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -218,7 +218,7 @@ Enable reactions
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -266,7 +266,7 @@ Get an emoji
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -312,7 +312,7 @@ Get an emoji category
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -358,7 +358,7 @@ List all emojis and emoji categories
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -402,7 +402,7 @@ List emojis
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -446,7 +446,7 @@ Update an emoji category URL
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -496,7 +496,7 @@ Update an emoji URL
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -546,7 +546,7 @@ Use default emojis
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.EmojisApi();
 let apiToken = {{API_TOKEN}}; // String | 

@@ -21,7 +21,7 @@ List data exports by message, channel, or user
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.DataExportApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -73,7 +73,7 @@ Register and schedule a data export
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.DataExportApi();
 let apiToken = {{API_TOKEN}}; // String | 
@@ -123,7 +123,7 @@ View a data export
 ### Example
 
 ```javascript
-import SendbirdPlatformSdk from 'sendbird_platform_sdk';
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.DataExportApi();
 let apiToken = {{API_TOKEN}}; // String | 
