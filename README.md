@@ -6,7 +6,7 @@
 
 This is a Node.js package that makes talking to the [Sendbird Platform API](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api) easier. With this library you can extend your Sendbird integration to include advanced features like channel automation and user management.
 # Install
-```npm install```
+```npm install sendbird-platform-sdk```
 
 # 🔥 Quick start
 
