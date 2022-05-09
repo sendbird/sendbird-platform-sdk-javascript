@@ -1,8 +1,8 @@
 {
   "name": "sendbird-platform-sdk",
   "version": "1.0.0",
-  "description": "Sendbird_Platform_API_Javascript_SDKhttps__sendbird_com_docs_chat_v3_platform_api_getting_started_prepare_to_use_api",
-  "license": "Unlicense",
+  "description": "Sendbird Platform API SDK for JavaScript",
+  "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",

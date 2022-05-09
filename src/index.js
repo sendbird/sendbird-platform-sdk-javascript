@@ -302,7 +302,7 @@ import WebhooksApi from './api/WebhooksApi';
 
 
 /**
-* Sendbird_Platform_API_Javascript_SDKhttps__sendbird_com_docs_chat_v3_platform_api_getting_started_prepare_to_use_api.<br>
+* Sendbird Platform API SDK for JavaScript.<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
