@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ChooseWhichEventsToSubscribeToResponseWebhook model module.
  * @module model/ChooseWhichEventsToSubscribeToResponseWebhook
- * @version 1.0.0
+ * @version 1.0.1
  */
 class ChooseWhichEventsToSubscribeToResponseWebhook {
     /**

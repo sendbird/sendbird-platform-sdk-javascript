@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendBirdAdditionalProperties model module.
  * @module model/SendBirdAdditionalProperties
- * @version 1.0.0
+ * @version 1.0.1
  */
 class SendBirdAdditionalProperties {
     /**

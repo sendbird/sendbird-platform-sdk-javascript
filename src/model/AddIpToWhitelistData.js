@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddIpToWhitelistData model module.
  * @module model/AddIpToWhitelistData
- * @version 1.0.0
+ * @version 1.0.1
  */
 class AddIpToWhitelistData {
     /**

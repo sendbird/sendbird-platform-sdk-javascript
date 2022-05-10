@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcJoinChannelData model module.
  * @module model/GcJoinChannelData
- * @version 1.0.0
+ * @version 1.0.1
  */
 class GcJoinChannelData {
     /**

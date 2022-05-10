@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcFreezeChannelData model module.
  * @module model/GcFreezeChannelData
- * @version 1.0.0
+ * @version 1.0.1
  */
 class GcFreezeChannelData {
     /**

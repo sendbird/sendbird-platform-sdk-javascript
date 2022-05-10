@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScheduleAnnouncementData model module.
  * @module model/ScheduleAnnouncementData
- * @version 1.0.0
+ * @version 1.0.1
  */
 class ScheduleAnnouncementData {
     /**

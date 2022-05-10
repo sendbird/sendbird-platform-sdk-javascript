@@ -18,7 +18,7 @@ import RetrieveAdvancedAnalyticsMetricsResponse from '../model/RetrieveAdvancedA
 /**
 * AdvancedAnalytics service.
 * @module api/AdvancedAnalyticsApi
-* @version 1.0.0
+* @version 1.0.1
 */
 export default class AdvancedAnalyticsApi {
 

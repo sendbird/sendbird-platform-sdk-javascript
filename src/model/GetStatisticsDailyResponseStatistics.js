@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetStatisticsDailyResponseStatistics model module.
  * @module model/GetStatisticsDailyResponseStatistics
- * @version 1.0.0
+ * @version 1.0.1
  */
 class GetStatisticsDailyResponseStatistics {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdatePushPreferencesResponse model module.
  * @module model/UpdatePushPreferencesResponse
- * @version 1.0.0
+ * @version 1.0.1
  */
 class UpdatePushPreferencesResponse {
     /**

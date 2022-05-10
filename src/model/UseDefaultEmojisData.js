@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UseDefaultEmojisData model module.
  * @module model/UseDefaultEmojisData
- * @version 1.0.0
+ * @version 1.0.1
  */
 class UseDefaultEmojisData {
     /**

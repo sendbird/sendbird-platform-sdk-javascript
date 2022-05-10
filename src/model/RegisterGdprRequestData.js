@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RegisterGdprRequestData model module.
  * @module model/RegisterGdprRequestData
- * @version 1.0.0
+ * @version 1.0.1
  */
 class RegisterGdprRequestData {
     /**

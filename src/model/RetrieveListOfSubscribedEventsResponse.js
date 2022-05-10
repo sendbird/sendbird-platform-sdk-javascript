@@ -17,7 +17,7 @@ import RetrieveListOfSubscribedEventsResponseWebhook from './RetrieveListOfSubsc
 /**
  * The RetrieveListOfSubscribedEventsResponse model module.
  * @module model/RetrieveListOfSubscribedEventsResponse
- * @version 1.0.0
+ * @version 1.0.1
  */
 class RetrieveListOfSubscribedEventsResponse {
     /**

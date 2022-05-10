@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The OcListParticipantsResponse model module.
  * @module model/OcListParticipantsResponse
- * @version 1.0.0
+ * @version 1.0.1
  */
 class OcListParticipantsResponse {
     /**

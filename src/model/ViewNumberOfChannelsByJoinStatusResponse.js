@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ViewNumberOfChannelsByJoinStatusResponse model module.
  * @module model/ViewNumberOfChannelsByJoinStatusResponse
- * @version 1.0.0
+ * @version 1.0.1
  */
 class ViewNumberOfChannelsByJoinStatusResponse {
     /**

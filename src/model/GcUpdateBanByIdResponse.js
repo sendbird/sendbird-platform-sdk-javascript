@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The GcUpdateBanByIdResponse model module.
  * @module model/GcUpdateBanByIdResponse
- * @version 1.0.0
+ * @version 1.0.1
  */
 class GcUpdateBanByIdResponse {
     /**

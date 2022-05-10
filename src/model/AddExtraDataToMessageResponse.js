@@ -17,7 +17,7 @@ import ListMessagesResponseSortedMetaarray from './ListMessagesResponseSortedMet
 /**
  * The AddExtraDataToMessageResponse model module.
  * @module model/AddExtraDataToMessageResponse
- * @version 1.0.0
+ * @version 1.0.1
  */
 class AddExtraDataToMessageResponse {
     /**

@@ -17,7 +17,7 @@ import ApiClient from "../ApiClient";
 /**
 * Migration service.
 * @module api/MigrationApi
-* @version 1.0.0
+* @version 1.0.1
 */
 export default class MigrationApi {
 

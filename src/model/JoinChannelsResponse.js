@@ -17,7 +17,7 @@ import SendBirdGroupChannel from './SendBirdGroupChannel';
 /**
  * The JoinChannelsResponse model module.
  * @module model/JoinChannelsResponse
- * @version 1.0.0
+ * @version 1.0.1
  */
 class JoinChannelsResponse {
     /**

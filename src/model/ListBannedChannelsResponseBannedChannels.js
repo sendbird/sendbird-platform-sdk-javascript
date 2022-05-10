@@ -17,7 +17,7 @@ import SendBirdChannelResponse from './SendBirdChannelResponse';
 /**
  * The ListBannedChannelsResponseBannedChannels model module.
  * @module model/ListBannedChannelsResponseBannedChannels
- * @version 1.0.0
+ * @version 1.0.1
  */
 class ListBannedChannelsResponseBannedChannels {
     /**

@@ -17,7 +17,7 @@ import UpdateAnnouncementByIdResponseMessage from './UpdateAnnouncementByIdRespo
 /**
  * The UpdateAnnouncementByIdResponse model module.
  * @module model/UpdateAnnouncementByIdResponse
- * @version 1.0.0
+ * @version 1.0.1
  */
 class UpdateAnnouncementByIdResponse {
     /**

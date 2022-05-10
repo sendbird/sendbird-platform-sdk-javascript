@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OcUpdateChannelByUrlData model module.
  * @module model/OcUpdateChannelByUrlData
- * @version 1.0.0
+ * @version 1.0.1
  */
 class OcUpdateChannelByUrlData {
     /**

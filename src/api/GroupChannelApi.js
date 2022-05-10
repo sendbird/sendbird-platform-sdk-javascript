@@ -45,7 +45,7 @@ import SendBirdGroupChannel from '../model/SendBirdGroupChannel';
 /**
 * GroupChannel service.
 * @module api/GroupChannelApi
-* @version 1.0.0
+* @version 1.0.1
 */
 export default class GroupChannelApi {
 

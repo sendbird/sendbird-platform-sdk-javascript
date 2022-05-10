@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcInviteAsMembersData model module.
  * @module model/GcInviteAsMembersData
- * @version 1.0.0
+ * @version 1.0.1
  */
 class GcInviteAsMembersData {
     /**

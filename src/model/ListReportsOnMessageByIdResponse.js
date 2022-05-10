@@ -17,7 +17,7 @@ import ListReportsOnMessageByIdResponseReportLogs from './ListReportsOnMessageBy
 /**
  * The ListReportsOnMessageByIdResponse model module.
  * @module model/ListReportsOnMessageByIdResponse
- * @version 1.0.0
+ * @version 1.0.1
  */
 class ListReportsOnMessageByIdResponse {
     /**

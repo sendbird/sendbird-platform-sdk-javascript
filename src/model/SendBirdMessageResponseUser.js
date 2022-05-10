@@ -17,7 +17,7 @@ import InlineResponse200 from './InlineResponse200';
 /**
  * The SendBirdMessageResponseUser model module.
  * @module model/SendBirdMessageResponseUser
- * @version 1.0.0
+ * @version 1.0.1
  */
 class SendBirdMessageResponseUser {
     /**

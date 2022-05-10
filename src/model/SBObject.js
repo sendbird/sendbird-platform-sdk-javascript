@@ -17,7 +17,7 @@ import Function from './Function';
 /**
  * The SBObject model module.
  * @module model/SBObject
- * @version 1.0.0
+ * @version 1.0.1
  */
 class SBObject {
     /**

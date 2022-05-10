@@ -17,7 +17,7 @@ import ListMessagesResponseOgTagOgImage from './ListMessagesResponseOgTagOgImage
 /**
  * The ListMessagesResponseOgTag model module.
  * @module model/ListMessagesResponseOgTag
- * @version 1.0.0
+ * @version 1.0.1
  */
 class ListMessagesResponseOgTag {
     /**

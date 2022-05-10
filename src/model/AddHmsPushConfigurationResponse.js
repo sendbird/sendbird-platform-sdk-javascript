@@ -17,7 +17,7 @@ import AddHmsPushConfigurationResponsePushConfigurations from './AddHmsPushConfi
 /**
  * The AddHmsPushConfigurationResponse model module.
  * @module model/AddHmsPushConfigurationResponse
- * @version 1.0.0
+ * @version 1.0.1
  */
 class AddHmsPushConfigurationResponse {
     /**

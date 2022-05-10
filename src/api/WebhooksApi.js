@@ -20,7 +20,7 @@ import RetrieveListOfSubscribedEventsResponse from '../model/RetrieveListOfSubsc
 /**
 * Webhooks service.
 * @module api/WebhooksApi
-* @version 1.0.0
+* @version 1.0.1
 */
 export default class WebhooksApi {
 

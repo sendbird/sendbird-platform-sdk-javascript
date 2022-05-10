@@ -53,11 +53,6 @@ In order to make requests with this SDK you will need you master API token. This
 
 You will need [Node.js](https://nodejs.org/en/download/) installed. This has been developed and tested with NodeJS 17+.
 
-# ⚙️ Installation
-
-🚨 Package not yet in npm 🚨
-```npm install sendbird-platform-sdk```
-
 # 🤓 Local Development
 
 To run locally we need to make use of the [npm link](https://docs.npmjs.com/cli/v8/commands/npm-link) command. You will require two terminal tabs.

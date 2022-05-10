@@ -17,7 +17,7 @@ import ListReportsResponseReportLogs from './ListReportsResponseReportLogs';
 /**
  * The ListReportsResponse model module.
  * @module model/ListReportsResponse
- * @version 1.0.0
+ * @version 1.0.1
  */
 class ListReportsResponse {
     /**

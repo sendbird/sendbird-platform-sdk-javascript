@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateChannelMetacounterData model module.
  * @module model/CreateChannelMetacounterData
- * @version 1.0.0
+ * @version 1.0.1
  */
 class CreateChannelMetacounterData {
     /**

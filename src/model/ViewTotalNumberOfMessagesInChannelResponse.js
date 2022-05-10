@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ViewTotalNumberOfMessagesInChannelResponse model module.
  * @module model/ViewTotalNumberOfMessagesInChannelResponse
- * @version 1.0.0
+ * @version 1.0.1
  */
 class ViewTotalNumberOfMessagesInChannelResponse {
     /**

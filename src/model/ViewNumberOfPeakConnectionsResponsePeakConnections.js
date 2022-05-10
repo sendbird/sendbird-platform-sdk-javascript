@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ViewNumberOfPeakConnectionsResponsePeakConnections model module.
  * @module model/ViewNumberOfPeakConnectionsResponsePeakConnections
- * @version 1.0.0
+ * @version 1.0.1
  */
 class ViewNumberOfPeakConnectionsResponsePeakConnections {
     /**

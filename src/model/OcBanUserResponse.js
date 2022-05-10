@@ -18,7 +18,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The OcBanUserResponse model module.
  * @module model/OcBanUserResponse
- * @version 1.0.0
+ * @version 1.0.1
  */
 class OcBanUserResponse {
     /**

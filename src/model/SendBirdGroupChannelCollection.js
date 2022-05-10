@@ -17,7 +17,7 @@ import SendBirdGroupChannel from './SendBirdGroupChannel';
 /**
  * The SendBirdGroupChannelCollection model module.
  * @module model/SendBirdGroupChannelCollection
- * @version 1.0.0
+ * @version 1.0.1
  */
 class SendBirdGroupChannelCollection {
     /**

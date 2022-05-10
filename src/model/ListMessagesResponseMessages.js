@@ -20,7 +20,7 @@ import SendBirdMessageResponseUser from './SendBirdMessageResponseUser';
 /**
  * The ListMessagesResponseMessages model module.
  * @module model/ListMessagesResponseMessages
- * @version 1.0.0
+ * @version 1.0.1
  */
 class ListMessagesResponseMessages {
     /**

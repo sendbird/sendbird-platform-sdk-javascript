@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddEmojisData model module.
  * @module model/AddEmojisData
- * @version 1.0.0
+ * @version 1.0.1
  */
 class AddEmojisData {
     /**

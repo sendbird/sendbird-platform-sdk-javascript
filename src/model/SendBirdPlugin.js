@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendBirdPlugin model module.
  * @module model/SendBirdPlugin
- * @version 1.0.0
+ * @version 1.0.1
  */
 class SendBirdPlugin {
     /**

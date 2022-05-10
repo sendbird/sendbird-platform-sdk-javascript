@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Function model module.
  * @module model/Function
- * @version 1.0.0
+ * @version 1.0.1
  */
 class Function {
     /**

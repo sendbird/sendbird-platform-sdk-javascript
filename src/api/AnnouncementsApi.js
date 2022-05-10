@@ -30,7 +30,7 @@ import ViewAnnouncementByIdResponse from '../model/ViewAnnouncementByIdResponse'
 /**
 * Announcements service.
 * @module api/AnnouncementsApi
-* @version 1.0.0
+* @version 1.0.1
 */
 export default class AnnouncementsApi {
 

@@ -18,7 +18,7 @@ import SendBirdMessageResponseUser from './SendBirdMessageResponseUser';
 /**
  * The SendBirdMessageResponse model module.
  * @module model/SendBirdMessageResponse
- * @version 1.0.0
+ * @version 1.0.1
  */
 class SendBirdMessageResponse {
     /**

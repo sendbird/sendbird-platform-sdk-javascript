@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcUpdateChannelByUrlData model module.
  * @module model/GcUpdateChannelByUrlData
- * @version 1.0.0
+ * @version 1.0.1
  */
 class GcUpdateChannelByUrlData {
     /**

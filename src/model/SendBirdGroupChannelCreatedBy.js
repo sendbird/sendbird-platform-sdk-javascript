@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendBirdGroupChannelCreatedBy model module.
  * @module model/SendBirdGroupChannelCreatedBy
- * @version 1.0.0
+ * @version 1.0.1
  */
 class SendBirdGroupChannelCreatedBy {
     /**

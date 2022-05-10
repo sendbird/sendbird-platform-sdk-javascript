@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LeaveMyGroupChannelsData model module.
  * @module model/LeaveMyGroupChannelsData
- * @version 1.0.0
+ * @version 1.0.1
  */
 class LeaveMyGroupChannelsData {
     /**

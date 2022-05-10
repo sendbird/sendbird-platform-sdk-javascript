@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdatePushNotificationContentTemplateData model module.
  * @module model/UpdatePushNotificationContentTemplateData
- * @version 1.0.0
+ * @version 1.0.1
  */
 class UpdatePushNotificationContentTemplateData {
     /**
