@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property ts (base name: "ts")', function() {
+      // uncomment below and update the code to test the property ts
+      //var instance = new SendbirdPlatformSdk.GcListChannelsResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

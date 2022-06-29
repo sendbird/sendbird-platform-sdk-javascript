@@ -54,6 +54,18 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.RegisterAndScheduleDataExportResponse);
     });
 
+    it('should have the property channelCustomTypes (base name: "channel_custom_types")', function() {
+      // uncomment below and update the code to test the property channelCustomTypes
+      //var instance = new SendbirdPlatformSdk.RegisterAndScheduleDataExportResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property dataType (base name: "data_type")', function() {
+      // uncomment below and update the code to test the property dataType
+      //var instance = new SendbirdPlatformSdk.RegisterAndScheduleDataExportResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property requestId (base name: "request_id")', function() {
       // uncomment below and update the code to test the property requestId
       //var instance = new SendbirdPlatformSdk.RegisterAndScheduleDataExportResponse();

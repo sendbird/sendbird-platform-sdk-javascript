@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcRegisterOperatorsData model module.
  * @module model/OcRegisterOperatorsData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var OcRegisterOperatorsData = /*#__PURE__*/function () {
   /**

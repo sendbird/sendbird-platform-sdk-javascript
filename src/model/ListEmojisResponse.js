@@ -17,7 +17,7 @@ import SendBirdEmoji from './SendBirdEmoji';
 /**
  * The ListEmojisResponse model module.
  * @module model/ListEmojisResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ListEmojisResponse {
     /**

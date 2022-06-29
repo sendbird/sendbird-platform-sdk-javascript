@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMyGroupChannelsResponse model module.
  * @module model/ListMyGroupChannelsResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListMyGroupChannelsResponse = /*#__PURE__*/function () {
   /**
@@ -63,6 +63,10 @@ var ListMyGroupChannelsResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('next')) {
           obj['next'] = _ApiClient["default"].convertToType(data['next'], 'String');
         }
+
+        if (data.hasOwnProperty('ts')) {
+          obj['ts'] = _ApiClient["default"].convertToType(data['ts'], 'Number');
+        }
       }
 
       return obj;
@@ -82,5 +86,10 @@ ListMyGroupChannelsResponse.prototype['channels'] = undefined;
  */
 
 ListMyGroupChannelsResponse.prototype['next'] = undefined;
+/**
+ * @member {Number} ts
+ */
+
+ListMyGroupChannelsResponse.prototype['ts'] = undefined;
 var _default = ListMyGroupChannelsResponse;
 exports["default"] = _default;

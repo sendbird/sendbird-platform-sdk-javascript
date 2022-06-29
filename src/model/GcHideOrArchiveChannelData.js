@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcHideOrArchiveChannelData model module.
  * @module model/GcHideOrArchiveChannelData
- * @version 1.0.1
+ * @version 1.0.3
  */
 class GcHideOrArchiveChannelData {
     /**

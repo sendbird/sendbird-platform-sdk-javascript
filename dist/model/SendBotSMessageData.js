@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBotSMessageData model module.
  * @module model/SendBotSMessageData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var SendBotSMessageData = /*#__PURE__*/function () {
   /**

@@ -48,16 +48,6 @@
   }
 
   describe('OpenChannelApi', function() {
-    describe('ocBanUser', function() {
-      it('should call ocBanUser successfully', function(done) {
-        //uncomment below and update the code to test ocBanUser
-        //instance.ocBanUser(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('ocCancelTheRegistrationOfOperators', function() {
       it('should call ocCancelTheRegistrationOfOperators successfully', function(done) {
         //uncomment below and update the code to test ocCancelTheRegistrationOfOperators
@@ -88,40 +78,10 @@
         done();
       });
     });
-    describe('ocFreezeChannel', function() {
-      it('should call ocFreezeChannel successfully', function(done) {
-        //uncomment below and update the code to test ocFreezeChannel
-        //instance.ocFreezeChannel(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('ocListBannedUsers', function() {
-      it('should call ocListBannedUsers successfully', function(done) {
-        //uncomment below and update the code to test ocListBannedUsers
-        //instance.ocListBannedUsers(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('ocListChannels', function() {
       it('should call ocListChannels successfully', function(done) {
         //uncomment below and update the code to test ocListChannels
         //instance.ocListChannels(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('ocListMutedUsers', function() {
-      it('should call ocListMutedUsers successfully', function(done) {
-        //uncomment below and update the code to test ocListMutedUsers
-        //instance.ocListMutedUsers(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -148,50 +108,10 @@
         done();
       });
     });
-    describe('ocMuteUser', function() {
-      it('should call ocMuteUser successfully', function(done) {
-        //uncomment below and update the code to test ocMuteUser
-        //instance.ocMuteUser(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('ocRegisterOperators', function() {
       it('should call ocRegisterOperators successfully', function(done) {
         //uncomment below and update the code to test ocRegisterOperators
         //instance.ocRegisterOperators(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('ocUnbanUserById', function() {
-      it('should call ocUnbanUserById successfully', function(done) {
-        //uncomment below and update the code to test ocUnbanUserById
-        //instance.ocUnbanUserById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('ocUnmuteUserById', function() {
-      it('should call ocUnmuteUserById successfully', function(done) {
-        //uncomment below and update the code to test ocUnmuteUserById
-        //instance.ocUnmuteUserById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('ocUpdateBanById', function() {
-      it('should call ocUpdateBanById successfully', function(done) {
-        //uncomment below and update the code to test ocUpdateBanById
-        //instance.ocUpdateBanById(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -208,30 +128,10 @@
         done();
       });
     });
-    describe('ocViewBanById', function() {
-      it('should call ocViewBanById successfully', function(done) {
-        //uncomment below and update the code to test ocViewBanById
-        //instance.ocViewBanById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('ocViewChannelByUrl', function() {
       it('should call ocViewChannelByUrl successfully', function(done) {
         //uncomment below and update the code to test ocViewChannelByUrl
         //instance.ocViewChannelByUrl(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('ocViewMuteById', function() {
-      it('should call ocViewMuteById successfully', function(done) {
-        //uncomment below and update the code to test ocViewMuteById
-        //instance.ocViewMuteById(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

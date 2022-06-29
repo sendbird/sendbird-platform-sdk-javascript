@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewPushPreferencesForChannelByUrlResponse model module.
  * @module model/ViewPushPreferencesForChannelByUrlResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ViewPushPreferencesForChannelByUrlResponse = /*#__PURE__*/function () {
   /**
@@ -97,6 +97,10 @@ var ViewPushPreferencesForChannelByUrlResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('push_sound')) {
           obj['push_sound'] = _ApiClient["default"].convertToType(data['push_sound'], 'String');
         }
+
+        if (data.hasOwnProperty('enable')) {
+          obj['enable'] = _ApiClient["default"].convertToType(data['enable'], 'Boolean');
+        }
       }
 
       return obj;
@@ -161,5 +165,10 @@ ViewPushPreferencesForChannelByUrlResponse.prototype['timezone'] = undefined;
  */
 
 ViewPushPreferencesForChannelByUrlResponse.prototype['push_sound'] = undefined;
+/**
+ * @member {Boolean} enable
+ */
+
+ViewPushPreferencesForChannelByUrlResponse.prototype['enable'] = undefined;
 var _default = ViewPushPreferencesForChannelByUrlResponse;
 exports["default"] = _default;

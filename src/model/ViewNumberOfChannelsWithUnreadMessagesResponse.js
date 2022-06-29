@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ViewNumberOfChannelsWithUnreadMessagesResponse model module.
  * @module model/ViewNumberOfChannelsWithUnreadMessagesResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ViewNumberOfChannelsWithUnreadMessagesResponse {
     /**

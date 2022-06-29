@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListAnnouncementGroupsResponse model module.
  * @module model/ListAnnouncementGroupsResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListAnnouncementGroupsResponse = /*#__PURE__*/function () {
   /**
@@ -54,8 +54,8 @@ var ListAnnouncementGroupsResponse = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ListAnnouncementGroupsResponse();
 
-        if (data.hasOwnProperty('announcement_group')) {
-          obj['announcement_group'] = _ApiClient["default"].convertToType(data['announcement_group'], ['String']);
+        if (data.hasOwnProperty('announcement_groups')) {
+          obj['announcement_groups'] = _ApiClient["default"].convertToType(data['announcement_groups'], ['String']);
         }
 
         if (data.hasOwnProperty('next')) {
@@ -70,11 +70,11 @@ var ListAnnouncementGroupsResponse = /*#__PURE__*/function () {
   return ListAnnouncementGroupsResponse;
 }();
 /**
- * @member {Array.<String>} announcement_group
+ * @member {Array.<String>} announcement_groups
  */
 
 
-ListAnnouncementGroupsResponse.prototype['announcement_group'] = undefined;
+ListAnnouncementGroupsResponse.prototype['announcement_groups'] = undefined;
 /**
  * @member {String} next
  */

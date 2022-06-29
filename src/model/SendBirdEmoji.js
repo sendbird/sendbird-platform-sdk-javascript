@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendBirdEmoji model module.
  * @module model/SendBirdEmoji
- * @version 1.0.1
+ * @version 1.0.3
  */
 class SendBirdEmoji {
     /**

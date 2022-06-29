@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListPushConfigurationsResponse model module.
  * @module model/ListPushConfigurationsResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListPushConfigurationsResponse = /*#__PURE__*/function () {
   /**

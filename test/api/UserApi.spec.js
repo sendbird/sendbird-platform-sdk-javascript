@@ -58,30 +58,30 @@
         done();
       });
     });
-    describe('banFromChannelsWithCustomChannelTypes', function() {
-      it('should call banFromChannelsWithCustomChannelTypes successfully', function(done) {
-        //uncomment below and update the code to test banFromChannelsWithCustomChannelTypes
-        //instance.banFromChannelsWithCustomChannelTypes(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('blockUser', function() {
-      it('should call blockUser successfully', function(done) {
-        //uncomment below and update the code to test blockUser
-        //instance.blockUser(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('choosePushNotificationContentTemplate', function() {
       it('should call choosePushNotificationContentTemplate successfully', function(done) {
         //uncomment below and update the code to test choosePushNotificationContentTemplate
         //instance.choosePushNotificationContentTemplate(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('createChannelMetacounter', function() {
+      it('should call createChannelMetacounter successfully', function(done) {
+        //uncomment below and update the code to test createChannelMetacounter
+        //instance.createChannelMetacounter(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('createChannelMetadata', function() {
+      it('should call createChannelMetadata successfully', function(done) {
+        //uncomment below and update the code to test createChannelMetadata
+        //instance.createChannelMetadata(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -98,6 +98,56 @@
         done();
       });
     });
+    describe('createUserMetadata', function() {
+      it('should call createUserMetadata successfully', function(done) {
+        //uncomment below and update the code to test createUserMetadata
+        //instance.createUserMetadata(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteChannelMetacounter', function() {
+      it('should call deleteChannelMetacounter successfully', function(done) {
+        //uncomment below and update the code to test deleteChannelMetacounter
+        //instance.deleteChannelMetacounter(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteChannelMetacounterByKey', function() {
+      it('should call deleteChannelMetacounterByKey successfully', function(done) {
+        //uncomment below and update the code to test deleteChannelMetacounterByKey
+        //instance.deleteChannelMetacounterByKey(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteChannelMetadata', function() {
+      it('should call deleteChannelMetadata successfully', function(done) {
+        //uncomment below and update the code to test deleteChannelMetadata
+        //instance.deleteChannelMetadata(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteChannelMetadataByKey', function() {
+      it('should call deleteChannelMetadataByKey successfully', function(done) {
+        //uncomment below and update the code to test deleteChannelMetadataByKey
+        //instance.deleteChannelMetadataByKey(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deleteUserById', function() {
       it('should call deleteUserById successfully', function(done) {
         //uncomment below and update the code to test deleteUserById
@@ -108,40 +158,30 @@
         done();
       });
     });
+    describe('deleteUserMetadata', function() {
+      it('should call deleteUserMetadata successfully', function(done) {
+        //uncomment below and update the code to test deleteUserMetadata
+        //instance.deleteUserMetadata(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteUserMetadataByKey', function() {
+      it('should call deleteUserMetadataByKey successfully', function(done) {
+        //uncomment below and update the code to test deleteUserMetadataByKey
+        //instance.deleteUserMetadataByKey(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('leaveMyGroupChannels', function() {
       it('should call leaveMyGroupChannels successfully', function(done) {
         //uncomment below and update the code to test leaveMyGroupChannels
         //instance.leaveMyGroupChannels(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listBannedChannels', function() {
-      it('should call listBannedChannels successfully', function(done) {
-        //uncomment below and update the code to test listBannedChannels
-        //instance.listBannedChannels(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listBlockedUsers', function() {
-      it('should call listBlockedUsers successfully', function(done) {
-        //uncomment below and update the code to test listBlockedUsers
-        //instance.listBlockedUsers(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listMutedChannels', function() {
-      it('should call listMutedChannels successfully', function(done) {
-        //uncomment below and update the code to test listMutedChannels
-        //instance.listMutedChannels(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -182,16 +222,6 @@
       it('should call markAllMessagesAsRead successfully', function(done) {
         //uncomment below and update the code to test markAllMessagesAsRead
         //instance.markAllMessagesAsRead(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('muteInChannelsWithCustomChannelTypes', function() {
-      it('should call muteInChannelsWithCustomChannelTypes successfully', function(done) {
-        //uncomment below and update the code to test muteInChannelsWithCustomChannelTypes
-        //instance.muteInChannelsWithCustomChannelTypes(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -248,20 +278,50 @@
         done();
       });
     });
-    describe('unblockUserById', function() {
-      it('should call unblockUserById successfully', function(done) {
-        //uncomment below and update the code to test unblockUserById
-        //instance.unblockUserById(function(error) {
+    describe('updateChannelInvitationPreference', function() {
+      it('should call updateChannelInvitationPreference successfully', function(done) {
+        //uncomment below and update the code to test updateChannelInvitationPreference
+        //instance.updateChannelInvitationPreference(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('updateChannelInvitationPreference', function() {
-      it('should call updateChannelInvitationPreference successfully', function(done) {
-        //uncomment below and update the code to test updateChannelInvitationPreference
-        //instance.updateChannelInvitationPreference(function(error) {
+    describe('updateChannelMetacounter', function() {
+      it('should call updateChannelMetacounter successfully', function(done) {
+        //uncomment below and update the code to test updateChannelMetacounter
+        //instance.updateChannelMetacounter(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateChannelMetacounterByKey', function() {
+      it('should call updateChannelMetacounterByKey successfully', function(done) {
+        //uncomment below and update the code to test updateChannelMetacounterByKey
+        //instance.updateChannelMetacounterByKey(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateChannelMetadata', function() {
+      it('should call updateChannelMetadata successfully', function(done) {
+        //uncomment below and update the code to test updateChannelMetadata
+        //instance.updateChannelMetadata(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateChannelMetadataByKey', function() {
+      it('should call updateChannelMetadataByKey successfully', function(done) {
+        //uncomment below and update the code to test updateChannelMetadataByKey
+        //instance.updateChannelMetadataByKey(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -302,6 +362,26 @@
       it('should call updateUserById successfully', function(done) {
         //uncomment below and update the code to test updateUserById
         //instance.updateUserById(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateUserMetadata', function() {
+      it('should call updateUserMetadata successfully', function(done) {
+        //uncomment below and update the code to test updateUserMetadata
+        //instance.updateUserMetadata(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateUserMetadataByKey', function() {
+      it('should call updateUserMetadataByKey successfully', function(done) {
+        //uncomment below and update the code to test updateUserMetadataByKey
+        //instance.updateUserMetadataByKey(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

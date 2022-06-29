@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListBannedChannelsResponseBannedChannels model module.
  * @module model/ListBannedChannelsResponseBannedChannels
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListBannedChannelsResponseBannedChannels = /*#__PURE__*/function () {
   /**
@@ -60,16 +60,16 @@ var ListBannedChannelsResponseBannedChannels = /*#__PURE__*/function () {
           obj['start_at'] = _ApiClient["default"].convertToType(data['start_at'], 'Number');
         }
 
-        if (data.hasOwnProperty('end_at')) {
-          obj['end_at'] = _ApiClient["default"].convertToType(data['end_at'], 'Number');
-        }
-
         if (data.hasOwnProperty('description')) {
           obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
         }
 
         if (data.hasOwnProperty('channel')) {
           obj['channel'] = _SendBirdChannelResponse["default"].constructFromObject(data['channel']);
+        }
+
+        if (data.hasOwnProperty('end_at')) {
+          obj['end_at'] = _ApiClient["default"].convertToType(data['end_at'], 'Number');
         }
       }
 
@@ -86,11 +86,6 @@ var ListBannedChannelsResponseBannedChannels = /*#__PURE__*/function () {
 
 ListBannedChannelsResponseBannedChannels.prototype['start_at'] = undefined;
 /**
- * @member {Number} end_at
- */
-
-ListBannedChannelsResponseBannedChannels.prototype['end_at'] = undefined;
-/**
  * @member {String} description
  */
 
@@ -100,5 +95,10 @@ ListBannedChannelsResponseBannedChannels.prototype['description'] = undefined;
  */
 
 ListBannedChannelsResponseBannedChannels.prototype['channel'] = undefined;
+/**
+ * @member {Number} end_at
+ */
+
+ListBannedChannelsResponseBannedChannels.prototype['end_at'] = undefined;
 var _default = ListBannedChannelsResponseBannedChannels;
 exports["default"] = _default;

@@ -12,13 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse200 from './InlineResponse200';
+import InlineResponse2001 from './InlineResponse2001';
 import SendBirdUser from './SendBirdUser';
 
 /**
  * The GcBanUserResponse model module.
  * @module model/GcBanUserResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class GcBanUserResponse {
     /**
@@ -62,7 +62,7 @@ class GcBanUserResponse {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('metadata')) {
-                obj['metadata'] = InlineResponse200.constructFromObject(data['metadata']);
+                obj['metadata'] = InlineResponse2001.constructFromObject(data['metadata']);
             }
             if (data.hasOwnProperty('next_url')) {
                 obj['next_url'] = ApiClient.convertToType(data['next_url'], 'String');
@@ -107,7 +107,7 @@ GcBanUserResponse.prototype['end_at'] = undefined;
 GcBanUserResponse.prototype['description'] = undefined;
 
 /**
- * @member {module:model/InlineResponse200} metadata
+ * @member {module:model/InlineResponse2001} metadata
  */
 GcBanUserResponse.prototype['metadata'] = undefined;
 

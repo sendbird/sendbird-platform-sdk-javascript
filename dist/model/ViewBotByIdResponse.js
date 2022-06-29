@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewBotByIdResponse model module.
  * @module model/ViewBotByIdResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ViewBotByIdResponse = /*#__PURE__*/function () {
   /**

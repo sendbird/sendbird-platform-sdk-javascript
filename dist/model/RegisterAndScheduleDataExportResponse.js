@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RegisterAndScheduleDataExportResponse model module.
  * @module model/RegisterAndScheduleDataExportResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var RegisterAndScheduleDataExportResponse = /*#__PURE__*/function () {
   /**
@@ -55,6 +55,14 @@ var RegisterAndScheduleDataExportResponse = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new RegisterAndScheduleDataExportResponse();
+
+        if (data.hasOwnProperty('channel_custom_types')) {
+          obj['channel_custom_types'] = _ApiClient["default"].convertToType(data['channel_custom_types'], ['String']);
+        }
+
+        if (data.hasOwnProperty('data_type')) {
+          obj['data_type'] = _ApiClient["default"].convertToType(data['data_type'], 'String');
+        }
 
         if (data.hasOwnProperty('request_id')) {
           obj['request_id'] = _ApiClient["default"].convertToType(data['request_id'], 'String');
@@ -112,9 +120,19 @@ var RegisterAndScheduleDataExportResponse = /*#__PURE__*/function () {
   return RegisterAndScheduleDataExportResponse;
 }();
 /**
- * @member {String} request_id
+ * @member {Array.<String>} channel_custom_types
  */
 
+
+RegisterAndScheduleDataExportResponse.prototype['channel_custom_types'] = undefined;
+/**
+ * @member {String} data_type
+ */
+
+RegisterAndScheduleDataExportResponse.prototype['data_type'] = undefined;
+/**
+ * @member {String} request_id
+ */
 
 RegisterAndScheduleDataExportResponse.prototype['request_id'] = undefined;
 /**

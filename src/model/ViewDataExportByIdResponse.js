@@ -17,7 +17,7 @@ import ListDataExportsByMessageChannelOrUserResponseFile from './ListDataExports
 /**
  * The ViewDataExportByIdResponse model module.
  * @module model/ViewDataExportByIdResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ViewDataExportByIdResponse {
     /**

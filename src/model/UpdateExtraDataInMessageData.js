@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateExtraDataInMessageData model module.
  * @module model/UpdateExtraDataInMessageData
- * @version 1.0.1
+ * @version 1.0.3
  */
 class UpdateExtraDataInMessageData {
     /**

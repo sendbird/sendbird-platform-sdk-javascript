@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcListChannelsResponse model module.
  * @module model/GcListChannelsResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcListChannelsResponse = /*#__PURE__*/function () {
   /**
@@ -63,6 +63,10 @@ var GcListChannelsResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('next')) {
           obj['next'] = _ApiClient["default"].convertToType(data['next'], 'String');
         }
+
+        if (data.hasOwnProperty('ts')) {
+          obj['ts'] = _ApiClient["default"].convertToType(data['ts'], 'Number');
+        }
       }
 
       return obj;
@@ -82,5 +86,10 @@ GcListChannelsResponse.prototype['channels'] = undefined;
  */
 
 GcListChannelsResponse.prototype['next'] = undefined;
+/**
+ * @member {Number} ts
+ */
+
+GcListChannelsResponse.prototype['ts'] = undefined;
 var _default = GcListChannelsResponse;
 exports["default"] = _default;

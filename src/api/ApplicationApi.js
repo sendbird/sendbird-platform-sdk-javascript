@@ -21,16 +21,22 @@ import AddHmsPushConfigurationData from '../model/AddHmsPushConfigurationData';
 import AddHmsPushConfigurationResponse from '../model/AddHmsPushConfigurationResponse';
 import AddIpToWhitelistData from '../model/AddIpToWhitelistData';
 import AddIpToWhitelistResponse from '../model/AddIpToWhitelistResponse';
+import BanUsersInChannelsWithCustomChannelTypeData from '../model/BanUsersInChannelsWithCustomChannelTypeData';
+import CustomTypeListBannedUsersResponse from '../model/CustomTypeListBannedUsersResponse';
 import DeleteAllowedIpsFromWhitelistResponse from '../model/DeleteAllowedIpsFromWhitelistResponse';
 import DeleteApnsCertificateByIdResponse from '../model/DeleteApnsCertificateByIdResponse';
 import GenerateSecondaryApiTokenData from '../model/GenerateSecondaryApiTokenData';
 import GenerateSecondaryApiTokenResponse from '../model/GenerateSecondaryApiTokenResponse';
+import InlineResponse200 from '../model/InlineResponse200';
 import ListPushConfigurationsResponse from '../model/ListPushConfigurationsResponse';
 import ListPushNotificationContentTemplatesResponse from '../model/ListPushNotificationContentTemplatesResponse';
 import ListSecondaryApiTokensResponse from '../model/ListSecondaryApiTokensResponse';
+import MuteUsersInChannelsWithCustomChannelTypeData from '../model/MuteUsersInChannelsWithCustomChannelTypeData';
 import RemovePushConfigurationByIdResponse from '../model/RemovePushConfigurationByIdResponse';
 import RetrieveIpWhitelistResponse from '../model/RetrieveIpWhitelistResponse';
 import RevokeSecondaryApiTokenByTokenResponse from '../model/RevokeSecondaryApiTokenByTokenResponse';
+import SendBirdChannelResponse from '../model/SendBirdChannelResponse';
+import SetDomainFilterData from '../model/SetDomainFilterData';
 import UpdateApnsPushConfigurationByIdData from '../model/UpdateApnsPushConfigurationByIdData';
 import UpdateApnsPushConfigurationByIdResponse from '../model/UpdateApnsPushConfigurationByIdResponse';
 import UpdateDefaultChannelInvitationPreferenceData from '../model/UpdateDefaultChannelInvitationPreferenceData';
@@ -42,10 +48,6 @@ import UpdateHmsPushConfigurationByIdResponse from '../model/UpdateHmsPushConfig
 import UpdatePushNotificationContentTemplateData from '../model/UpdatePushNotificationContentTemplateData';
 import UpdatePushNotificationContentTemplateResponse from '../model/UpdatePushNotificationContentTemplateResponse';
 import ViewDefaultChannelInvitationPreferenceResponse from '../model/ViewDefaultChannelInvitationPreferenceResponse';
-import ViewNumberOfConcurrentConnectionsResponse from '../model/ViewNumberOfConcurrentConnectionsResponse';
-import ViewNumberOfDailyActiveUsersResponse from '../model/ViewNumberOfDailyActiveUsersResponse';
-import ViewNumberOfMonthlyActiveUsersResponse from '../model/ViewNumberOfMonthlyActiveUsersResponse';
-import ViewNumberOfPeakConnectionsResponse from '../model/ViewNumberOfPeakConnectionsResponse';
 import ViewPushConfigurationByIdResponse from '../model/ViewPushConfigurationByIdResponse';
 import ViewPushNotificationContentTemplateResponse from '../model/ViewPushNotificationContentTemplateResponse';
 import ViewSecondaryApiTokenByTokenResponse from '../model/ViewSecondaryApiTokenByTokenResponse';
@@ -53,7 +55,7 @@ import ViewSecondaryApiTokenByTokenResponse from '../model/ViewSecondaryApiToken
 /**
 * Application service.
 * @module api/ApplicationApi
-* @version 1.0.1
+* @version 1.0.3
 */
 export default class ApplicationApi {
 
@@ -283,6 +285,66 @@ export default class ApplicationApi {
 
 
     /**
+     * Ban users in channels with a custom channel type
+     * ## Ban specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/BanUsersInChannelsWithCustomChannelTypeData} opts.banUsersInChannelsWithCustomChannelTypeData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+    banUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts) {
+      opts = opts || {};
+      let postBody = opts['banUsersInChannelsWithCustomChannelTypeData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling banUsersInChannelsWithCustomChannelType");
+      }
+      // verify the required parameter 'customType' is set
+      if (customType === undefined || customType === null) {
+        throw new Error("Missing the required parameter 'customType' when calling banUsersInChannelsWithCustomChannelType");
+      }
+
+      let pathParams = {
+        'custom_type': customType
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Api-Token': apiToken
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/v3/applications/settings_by_channel_custom_type/{custom_type}/ban', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Ban users in channels with a custom channel type
+     * ## Ban specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/BanUsersInChannelsWithCustomChannelTypeData} opts.banUsersInChannelsWithCustomChannelTypeData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+    banUsersInChannelsWithCustomChannelType(apiToken, customType, opts) {
+      return this.banUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Delete allowed IPs from a whitelist
      * ## Delete allowed IPs from a whitelist  Deletes allowed IPs from the whitelist by specifying their IP addresses or ranges. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-delete-allowed-ips-from-a-whitelist
      * @param {String} apiToken 
@@ -446,6 +508,134 @@ export default class ApplicationApi {
 
 
     /**
+     * List banned users in channels with a custom channel type
+     * ## Retrieves a list of users banned from channels with the specified custom channel type.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.token 
+     * @param {Number} opts.limit 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomTypeListBannedUsersResponse} and HTTP response
+     */
+    listBannedUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling listBannedUsersInChannelsWithCustomChannelType");
+      }
+      // verify the required parameter 'customType' is set
+      if (customType === undefined || customType === null) {
+        throw new Error("Missing the required parameter 'customType' when calling listBannedUsersInChannelsWithCustomChannelType");
+      }
+
+      let pathParams = {
+        'custom_type': customType
+      };
+      let queryParams = {
+        'token': opts['token'],
+        'limit': opts['limit']
+      };
+      let headerParams = {
+        'Api-Token': apiToken
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = CustomTypeListBannedUsersResponse;
+      return this.apiClient.callApi(
+        '/v3/applications/settings_by_channel_custom_type/{custom_type}/ban', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * List banned users in channels with a custom channel type
+     * ## Retrieves a list of users banned from channels with the specified custom channel type.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.token 
+     * @param {Number} opts.limit 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomTypeListBannedUsersResponse}
+     */
+    listBannedUsersInChannelsWithCustomChannelType(apiToken, customType, opts) {
+      return this.listBannedUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * List muted users in channels with a custom channel type
+     * ## Retrieves a list of the muted users in channels with a custom channel type.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.token 
+     * @param {Number} opts.limit 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
+     */
+    listMutedUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling listMutedUsersInChannelsWithCustomChannelType");
+      }
+      // verify the required parameter 'customType' is set
+      if (customType === undefined || customType === null) {
+        throw new Error("Missing the required parameter 'customType' when calling listMutedUsersInChannelsWithCustomChannelType");
+      }
+
+      let pathParams = {
+        'custom_type': customType
+      };
+      let queryParams = {
+        'token': opts['token'],
+        'limit': opts['limit']
+      };
+      let headerParams = {
+        'Api-Token': apiToken
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = InlineResponse200;
+      return this.apiClient.callApi(
+        '/v3/applications/settings_by_channel_custom_type/{custom_type}/mute', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * List muted users in channels with a custom channel type
+     * ## Retrieves a list of the muted users in channels with a custom channel type.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.token 
+     * @param {Number} opts.limit 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
+     */
+    listMutedUsersInChannelsWithCustomChannelType(apiToken, customType, opts) {
+      return this.listMutedUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * List push configurations
      * ## List push configurations  Retrieves a list of an application's registered push configurations.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-push-configurations ----------------------------
      * @param {String} apiToken 
@@ -590,6 +780,66 @@ export default class ApplicationApi {
      */
     listSecondaryApiTokens(apiToken) {
       return this.listSecondaryApiTokensWithHttpInfo(apiToken)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Mute users in channels with a custom channel type
+     * ## Mutes specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/MuteUsersInChannelsWithCustomChannelTypeData} opts.muteUsersInChannelsWithCustomChannelTypeData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+    muteUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts) {
+      opts = opts || {};
+      let postBody = opts['muteUsersInChannelsWithCustomChannelTypeData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling muteUsersInChannelsWithCustomChannelType");
+      }
+      // verify the required parameter 'customType' is set
+      if (customType === undefined || customType === null) {
+        throw new Error("Missing the required parameter 'customType' when calling muteUsersInChannelsWithCustomChannelType");
+      }
+
+      let pathParams = {
+        'custom_type': customType
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Api-Token': apiToken
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/v3/applications/settings_by_channel_custom_type/{custom_type}/mute', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Mute users in channels with a custom channel type
+     * ## Mutes specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/MuteUsersInChannelsWithCustomChannelTypeData} opts.muteUsersInChannelsWithCustomChannelTypeData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+    muteUsersInChannelsWithCustomChannelType(apiToken, customType, opts) {
+      return this.muteUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -755,6 +1005,190 @@ export default class ApplicationApi {
      */
     revokeSecondaryApiTokenByToken(apiToken, apiToken2) {
       return this.revokeSecondaryApiTokenByTokenWithHttpInfo(apiToken, apiToken2)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Message moderation
+     * ## 
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SetDomainFilterData} opts.setDomainFilterData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdChannelResponse} and HTTP response
+     */
+    setDomainFilterWithHttpInfo(apiToken, customType, opts) {
+      opts = opts || {};
+      let postBody = opts['setDomainFilterData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling setDomainFilter");
+      }
+      // verify the required parameter 'customType' is set
+      if (customType === undefined || customType === null) {
+        throw new Error("Missing the required parameter 'customType' when calling setDomainFilter");
+      }
+
+      let pathParams = {
+        'custom_type': customType
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Api-Token': apiToken
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SendBirdChannelResponse;
+      return this.apiClient.callApi(
+        '/v3/applications/settings_global/{custom_type}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Message moderation
+     * ## 
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SetDomainFilterData} opts.setDomainFilterData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdChannelResponse}
+     */
+    setDomainFilter(apiToken, customType, opts) {
+      return this.setDomainFilterWithHttpInfo(apiToken, customType, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Unban users in channels with a custom channel type
+     * ## Unban specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Array.<String>} userIds 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+    unbanUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, userIds) {
+      let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling unbanUsersInChannelsWithCustomChannelType");
+      }
+      // verify the required parameter 'customType' is set
+      if (customType === undefined || customType === null) {
+        throw new Error("Missing the required parameter 'customType' when calling unbanUsersInChannelsWithCustomChannelType");
+      }
+      // verify the required parameter 'userIds' is set
+      if (userIds === undefined || userIds === null) {
+        throw new Error("Missing the required parameter 'userIds' when calling unbanUsersInChannelsWithCustomChannelType");
+      }
+
+      let pathParams = {
+        'custom_type': customType
+      };
+      let queryParams = {
+        'user_ids': this.apiClient.buildCollectionParam(userIds, 'multi')
+      };
+      let headerParams = {
+        'Api-Token': apiToken
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/v3/applications/settings_by_channel_custom_type/{custom_type}/ban', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Unban users in channels with a custom channel type
+     * ## Unban specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Array.<String>} userIds 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+    unbanUsersInChannelsWithCustomChannelType(apiToken, customType, userIds) {
+      return this.unbanUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, userIds)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Unmute users in channels with a custom channel type
+     * ## Unmute specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Array.<String>} userIds 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+    unmuteUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, userIds) {
+      let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling unmuteUsersInChannelsWithCustomChannelType");
+      }
+      // verify the required parameter 'customType' is set
+      if (customType === undefined || customType === null) {
+        throw new Error("Missing the required parameter 'customType' when calling unmuteUsersInChannelsWithCustomChannelType");
+      }
+      // verify the required parameter 'userIds' is set
+      if (userIds === undefined || userIds === null) {
+        throw new Error("Missing the required parameter 'userIds' when calling unmuteUsersInChannelsWithCustomChannelType");
+      }
+
+      let pathParams = {
+        'custom_type': customType
+      };
+      let queryParams = {
+        'user_ids': this.apiClient.buildCollectionParam(userIds, 'multi')
+      };
+      let headerParams = {
+        'Api-Token': apiToken
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/v3/applications/settings_by_channel_custom_type/{custom_type}/mute', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Unmute users in channels with a custom channel type
+     * ## Unmute specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Array.<String>} userIds 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+    unmuteUsersInChannelsWithCustomChannelType(apiToken, customType, userIds) {
+      return this.unmuteUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, userIds)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1096,254 +1530,6 @@ export default class ApplicationApi {
      */
     viewDefaultChannelInvitationPreference(apiToken) {
       return this.viewDefaultChannelInvitationPreferenceWithHttpInfo(apiToken)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View number of concurrent connections
-     * ## View number of concurrent connections  Retrieves the number of devices and opened browser tabs which are currently connected to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-concurrent-connections
-     * @param {String} apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfConcurrentConnectionsResponse} and HTTP response
-     */
-    viewNumberOfConcurrentConnectionsWithHttpInfo(apiToken) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewNumberOfConcurrentConnections");
-      }
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ViewNumberOfConcurrentConnectionsResponse;
-      return this.apiClient.callApi(
-        '/v3/applications/ccu', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * View number of concurrent connections
-     * ## View number of concurrent connections  Retrieves the number of devices and opened browser tabs which are currently connected to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-concurrent-connections
-     * @param {String} apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfConcurrentConnectionsResponse}
-     */
-    viewNumberOfConcurrentConnections(apiToken) {
-      return this.viewNumberOfConcurrentConnectionsWithHttpInfo(apiToken)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View number of daily active users
-     * ## View number of daily active users  Retrieves the number of daily active users of the application (DAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-daily-active-users ----------------------------
-     * @param {String} apiToken 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfDailyActiveUsersResponse} and HTTP response
-     */
-    viewNumberOfDailyActiveUsersWithHttpInfo(apiToken, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewNumberOfDailyActiveUsers");
-      }
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'date': opts['date']
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ViewNumberOfDailyActiveUsersResponse;
-      return this.apiClient.callApi(
-        '/v3/applications/dau', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * View number of daily active users
-     * ## View number of daily active users  Retrieves the number of daily active users of the application (DAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-daily-active-users ----------------------------
-     * @param {String} apiToken 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfDailyActiveUsersResponse}
-     */
-    viewNumberOfDailyActiveUsers(apiToken, opts) {
-      return this.viewNumberOfDailyActiveUsersWithHttpInfo(apiToken, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View number of monthly active users
-     * ## View number of monthly active users  Retrieves the number of monthly active users of the application (MAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-monthly-active-users ----------------------------
-     * @param {String} apiToken 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfMonthlyActiveUsersResponse} and HTTP response
-     */
-    viewNumberOfMonthlyActiveUsersWithHttpInfo(apiToken, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewNumberOfMonthlyActiveUsers");
-      }
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'date': opts['date']
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ViewNumberOfMonthlyActiveUsersResponse;
-      return this.apiClient.callApi(
-        '/v3/applications/mau', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * View number of monthly active users
-     * ## View number of monthly active users  Retrieves the number of monthly active users of the application (MAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-monthly-active-users ----------------------------
-     * @param {String} apiToken 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfMonthlyActiveUsersResponse}
-     */
-    viewNumberOfMonthlyActiveUsers(apiToken, opts) {
-      return this.viewNumberOfMonthlyActiveUsersWithHttpInfo(apiToken, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View number of peak connections
-     * ## View number of peak connections  Retrieves the number of concurrently connected devices to Sendbird server during the requested time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-peak-connections ----------------------------
-     * @param {String} apiToken 
-     * @param {String} timeDimension 
-     * @param {Number} startYear 
-     * @param {Number} startMonth 
-     * @param {Number} endYear 
-     * @param {Number} endMonth 
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.startDay 
-     * @param {Number} opts.endDay 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfPeakConnectionsResponse} and HTTP response
-     */
-    viewNumberOfPeakConnectionsWithHttpInfo(apiToken, timeDimension, startYear, startMonth, endYear, endMonth, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewNumberOfPeakConnections");
-      }
-      // verify the required parameter 'timeDimension' is set
-      if (timeDimension === undefined || timeDimension === null) {
-        throw new Error("Missing the required parameter 'timeDimension' when calling viewNumberOfPeakConnections");
-      }
-      // verify the required parameter 'startYear' is set
-      if (startYear === undefined || startYear === null) {
-        throw new Error("Missing the required parameter 'startYear' when calling viewNumberOfPeakConnections");
-      }
-      // verify the required parameter 'startMonth' is set
-      if (startMonth === undefined || startMonth === null) {
-        throw new Error("Missing the required parameter 'startMonth' when calling viewNumberOfPeakConnections");
-      }
-      // verify the required parameter 'endYear' is set
-      if (endYear === undefined || endYear === null) {
-        throw new Error("Missing the required parameter 'endYear' when calling viewNumberOfPeakConnections");
-      }
-      // verify the required parameter 'endMonth' is set
-      if (endMonth === undefined || endMonth === null) {
-        throw new Error("Missing the required parameter 'endMonth' when calling viewNumberOfPeakConnections");
-      }
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'time_dimension': timeDimension,
-        'start_year': startYear,
-        'start_month': startMonth,
-        'end_year': endYear,
-        'end_month': endMonth,
-        'start_day': opts['startDay'],
-        'end_day': opts['endDay']
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ViewNumberOfPeakConnectionsResponse;
-      return this.apiClient.callApi(
-        '/v3/applications/peak_connections', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * View number of peak connections
-     * ## View number of peak connections  Retrieves the number of concurrently connected devices to Sendbird server during the requested time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-peak-connections ----------------------------
-     * @param {String} apiToken 
-     * @param {String} timeDimension 
-     * @param {Number} startYear 
-     * @param {Number} startMonth 
-     * @param {Number} endYear 
-     * @param {Number} endMonth 
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.startDay 
-     * @param {Number} opts.endDay 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfPeakConnectionsResponse}
-     */
-    viewNumberOfPeakConnections(apiToken, timeDimension, startYear, startMonth, endYear, endMonth, opts) {
-      return this.viewNumberOfPeakConnectionsWithHttpInfo(apiToken, timeDimension, startYear, startMonth, endYear, endMonth, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListRegistrationOrDeviceTokensResponse model module.
  * @module model/ListRegistrationOrDeviceTokensResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListRegistrationOrDeviceTokensResponse = /*#__PURE__*/function () {
   /**
@@ -56,6 +56,10 @@ var ListRegistrationOrDeviceTokensResponse = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ListRegistrationOrDeviceTokensResponse();
 
+        if (data.hasOwnProperty('token')) {
+          obj['token'] = _ApiClient["default"].convertToType(data['token'], ['String']);
+        }
+
         if (data.hasOwnProperty('tokens')) {
           obj['tokens'] = _ApiClient["default"].convertToType(data['tokens'], ['String']);
         }
@@ -76,9 +80,14 @@ var ListRegistrationOrDeviceTokensResponse = /*#__PURE__*/function () {
   return ListRegistrationOrDeviceTokensResponse;
 }();
 /**
- * @member {Array.<String>} tokens
+ * @member {Array.<String>} token
  */
 
+
+ListRegistrationOrDeviceTokensResponse.prototype['token'] = undefined;
+/**
+ * @member {Array.<String>} tokens
+ */
 
 ListRegistrationOrDeviceTokensResponse.prototype['tokens'] = undefined;
 /**

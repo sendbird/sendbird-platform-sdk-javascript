@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ViewUserMetadataResponse model module.
  * @module model/ViewUserMetadataResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ViewUserMetadataResponse {
     /**

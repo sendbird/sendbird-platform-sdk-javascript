@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddReactionToAMessageResponse model module.
  * @module model/AddReactionToAMessageResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class AddReactionToAMessageResponse {
     /**

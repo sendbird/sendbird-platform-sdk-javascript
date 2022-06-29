@@ -7,8 +7,6 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _InlineResponse2002PushConfigurations = _interopRequireDefault(require("./InlineResponse2002PushConfigurations"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse2002 model module.
  * @module model/InlineResponse2002
- * @version 1.0.0
+ * @version 1.0.1
  */
 var InlineResponse2002 = /*#__PURE__*/function () {
   /**
@@ -56,8 +54,8 @@ var InlineResponse2002 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse2002();
 
-        if (data.hasOwnProperty('push_configurations')) {
-          obj['push_configurations'] = _ApiClient["default"].convertToType(data['push_configurations'], [_InlineResponse2002PushConfigurations["default"]]);
+        if (data.hasOwnProperty('anyOf')) {
+          obj['anyOf'] = _ApiClient["default"].convertToType(data['anyOf'], 'String');
         }
       }
 
@@ -68,10 +66,10 @@ var InlineResponse2002 = /*#__PURE__*/function () {
   return InlineResponse2002;
 }();
 /**
- * @member {Array.<module:model/InlineResponse2002PushConfigurations>} push_configurations
+ * @member {String} anyOf
  */
 
 
-InlineResponse2002.prototype['push_configurations'] = undefined;
+InlineResponse2002.prototype['anyOf'] = undefined;
 var _default = InlineResponse2002;
 exports["default"] = _default;

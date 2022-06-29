@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UseDefaultEmojisData model module.
  * @module model/UseDefaultEmojisData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var UseDefaultEmojisData = /*#__PURE__*/function () {
   /**

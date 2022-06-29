@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendBirdOGImage model module.
  * @module model/SendBirdOGImage
- * @version 1.0.1
+ * @version 1.0.3
  */
 class SendBirdOGImage {
     /**

@@ -19,7 +19,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The ListReportsOnMessageByIdResponseReportLogs model module.
  * @module model/ListReportsOnMessageByIdResponseReportLogs
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ListReportsOnMessageByIdResponseReportLogs {
     /**

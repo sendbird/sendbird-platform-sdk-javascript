@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The JoinChannelsData model module.
  * @module model/JoinChannelsData
- * @version 1.0.1
+ * @version 1.0.3
  */
 class JoinChannelsData {
     /**

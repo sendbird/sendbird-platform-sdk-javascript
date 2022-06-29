@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListReportsResponseReportLogs model module.
  * @module model/ListReportsResponseReportLogs
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListReportsResponseReportLogs = /*#__PURE__*/function () {
   /**
@@ -59,6 +59,10 @@ var ListReportsResponseReportLogs = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ListReportsResponseReportLogs();
+
+        if (data.hasOwnProperty('reporting_user')) {
+          obj['reporting_user'] = _SendBirdUser["default"].constructFromObject(data['reporting_user']);
+        }
 
         if (data.hasOwnProperty('report_type')) {
           obj['report_type'] = _ApiClient["default"].convertToType(data['report_type'], 'String');
@@ -96,9 +100,14 @@ var ListReportsResponseReportLogs = /*#__PURE__*/function () {
   return ListReportsResponseReportLogs;
 }();
 /**
- * @member {String} report_type
+ * @member {module:model/SendBirdUser} reporting_user
  */
 
+
+ListReportsResponseReportLogs.prototype['reporting_user'] = undefined;
+/**
+ * @member {String} report_type
+ */
 
 ListReportsResponseReportLogs.prototype['report_type'] = undefined;
 /**

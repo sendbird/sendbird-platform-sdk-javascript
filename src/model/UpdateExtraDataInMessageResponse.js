@@ -17,7 +17,7 @@ import UpdateExtraDataInMessageResponseSortedMetaarray from './UpdateExtraDataIn
 /**
  * The UpdateExtraDataInMessageResponse model module.
  * @module model/UpdateExtraDataInMessageResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class UpdateExtraDataInMessageResponse {
     /**

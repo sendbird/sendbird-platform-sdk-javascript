@@ -17,7 +17,7 @@ import GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus from './GetDeta
 /**
  * The GetDetailedOpenStatusOfAnnouncementByIdResponse model module.
  * @module model/GetDetailedOpenStatusOfAnnouncementByIdResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class GetDetailedOpenStatusOfAnnouncementByIdResponse {
     /**

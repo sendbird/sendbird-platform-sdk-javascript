@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcMuteUserData model module.
  * @module model/OcMuteUserData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var OcMuteUserData = /*#__PURE__*/function () {
   /**

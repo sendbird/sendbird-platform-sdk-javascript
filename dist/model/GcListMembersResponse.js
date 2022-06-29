@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcListMembersResponse model module.
  * @module model/GcListMembersResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcListMembersResponse = /*#__PURE__*/function () {
   /**

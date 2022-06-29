@@ -72,6 +72,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property sentAt (base name: "sent_at")', function() {
+      // uncomment below and update the code to test the property sentAt
+      //var instance = new SendbirdPlatformSdk.GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property openAt (base name: "open_at")', function() {
+      // uncomment below and update the code to test the property openAt
+      //var instance = new SendbirdPlatformSdk.GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

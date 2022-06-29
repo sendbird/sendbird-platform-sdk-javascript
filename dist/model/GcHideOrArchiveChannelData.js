@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcHideOrArchiveChannelData model module.
  * @module model/GcHideOrArchiveChannelData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcHideOrArchiveChannelData = /*#__PURE__*/function () {
   /**

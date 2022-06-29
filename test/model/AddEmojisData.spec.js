@@ -66,18 +66,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property emojiKey (base name: "(emoji).key")', function() {
-      // uncomment below and update the code to test the property emojiKey
-      //var instance = new SendbirdPlatformSdk.AddEmojisData();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property emojiUrl (base name: "(emoji).url")', function() {
-      // uncomment below and update the code to test the property emojiUrl
-      //var instance = new SendbirdPlatformSdk.AddEmojisData();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

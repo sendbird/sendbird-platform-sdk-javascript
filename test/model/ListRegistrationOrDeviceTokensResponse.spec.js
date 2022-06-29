@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.ListRegistrationOrDeviceTokensResponse);
     });
 
+    it('should have the property token (base name: "token")', function() {
+      // uncomment below and update the code to test the property token
+      //var instance = new SendbirdPlatformSdk.ListRegistrationOrDeviceTokensResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property tokens (base name: "tokens")', function() {
       // uncomment below and update the code to test the property tokens
       //var instance = new SendbirdPlatformSdk.ListRegistrationOrDeviceTokensResponse();

@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The OcListMutedUsersResponse model module.
  * @module model/OcListMutedUsersResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class OcListMutedUsersResponse {
     /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcBanUserData model module.
  * @module model/GcBanUserData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcBanUserData = /*#__PURE__*/function () {
   /**

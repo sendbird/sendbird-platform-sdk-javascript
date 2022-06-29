@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddApnsPushConfigurationResponsePushConfigurations model module.
  * @module model/AddApnsPushConfigurationResponsePushConfigurations
- * @version 1.0.1
+ * @version 1.0.3
  */
 class AddApnsPushConfigurationResponsePushConfigurations {
     /**

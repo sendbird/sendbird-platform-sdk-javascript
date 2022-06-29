@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListAllEmojisAndEmojiCategoriesResponseEmojiCategories model module.
  * @module model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategories
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListAllEmojisAndEmojiCategoriesResponseEmojiCategories = /*#__PURE__*/function () {
   /**

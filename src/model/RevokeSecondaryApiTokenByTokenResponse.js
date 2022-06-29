@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RevokeSecondaryApiTokenByTokenResponse model module.
  * @module model/RevokeSecondaryApiTokenByTokenResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class RevokeSecondaryApiTokenByTokenResponse {
     /**

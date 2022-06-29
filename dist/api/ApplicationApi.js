@@ -23,6 +23,10 @@ var _AddIpToWhitelistData = _interopRequireDefault(require("../model/AddIpToWhit
 
 var _AddIpToWhitelistResponse = _interopRequireDefault(require("../model/AddIpToWhitelistResponse"));
 
+var _BanUsersInChannelsWithCustomChannelTypeData = _interopRequireDefault(require("../model/BanUsersInChannelsWithCustomChannelTypeData"));
+
+var _CustomTypeListBannedUsersResponse = _interopRequireDefault(require("../model/CustomTypeListBannedUsersResponse"));
+
 var _DeleteAllowedIpsFromWhitelistResponse = _interopRequireDefault(require("../model/DeleteAllowedIpsFromWhitelistResponse"));
 
 var _DeleteApnsCertificateByIdResponse = _interopRequireDefault(require("../model/DeleteApnsCertificateByIdResponse"));
@@ -31,17 +35,25 @@ var _GenerateSecondaryApiTokenData = _interopRequireDefault(require("../model/Ge
 
 var _GenerateSecondaryApiTokenResponse = _interopRequireDefault(require("../model/GenerateSecondaryApiTokenResponse"));
 
+var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse200"));
+
 var _ListPushConfigurationsResponse = _interopRequireDefault(require("../model/ListPushConfigurationsResponse"));
 
 var _ListPushNotificationContentTemplatesResponse = _interopRequireDefault(require("../model/ListPushNotificationContentTemplatesResponse"));
 
 var _ListSecondaryApiTokensResponse = _interopRequireDefault(require("../model/ListSecondaryApiTokensResponse"));
 
+var _MuteUsersInChannelsWithCustomChannelTypeData = _interopRequireDefault(require("../model/MuteUsersInChannelsWithCustomChannelTypeData"));
+
 var _RemovePushConfigurationByIdResponse = _interopRequireDefault(require("../model/RemovePushConfigurationByIdResponse"));
 
 var _RetrieveIpWhitelistResponse = _interopRequireDefault(require("../model/RetrieveIpWhitelistResponse"));
 
 var _RevokeSecondaryApiTokenByTokenResponse = _interopRequireDefault(require("../model/RevokeSecondaryApiTokenByTokenResponse"));
+
+var _SendBirdChannelResponse = _interopRequireDefault(require("../model/SendBirdChannelResponse"));
+
+var _SetDomainFilterData = _interopRequireDefault(require("../model/SetDomainFilterData"));
 
 var _UpdateApnsPushConfigurationByIdData = _interopRequireDefault(require("../model/UpdateApnsPushConfigurationByIdData"));
 
@@ -65,14 +77,6 @@ var _UpdatePushNotificationContentTemplateResponse = _interopRequireDefault(requ
 
 var _ViewDefaultChannelInvitationPreferenceResponse = _interopRequireDefault(require("../model/ViewDefaultChannelInvitationPreferenceResponse"));
 
-var _ViewNumberOfConcurrentConnectionsResponse = _interopRequireDefault(require("../model/ViewNumberOfConcurrentConnectionsResponse"));
-
-var _ViewNumberOfDailyActiveUsersResponse = _interopRequireDefault(require("../model/ViewNumberOfDailyActiveUsersResponse"));
-
-var _ViewNumberOfMonthlyActiveUsersResponse = _interopRequireDefault(require("../model/ViewNumberOfMonthlyActiveUsersResponse"));
-
-var _ViewNumberOfPeakConnectionsResponse = _interopRequireDefault(require("../model/ViewNumberOfPeakConnectionsResponse"));
-
 var _ViewPushConfigurationByIdResponse = _interopRequireDefault(require("../model/ViewPushConfigurationByIdResponse"));
 
 var _ViewPushNotificationContentTemplateResponse = _interopRequireDefault(require("../model/ViewPushNotificationContentTemplateResponse"));
@@ -90,7 +94,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Application service.
 * @module api/ApplicationApi
-* @version 1.0.0
+* @version 1.0.3
 */
 var ApplicationApi = /*#__PURE__*/function () {
   /**
@@ -108,8 +112,8 @@ var ApplicationApi = /*#__PURE__*/function () {
   /**
    * Add an APNs push configuration
    * ## Add an APNs push configuration  Registers an APNs (Apple Push Notification service) push configuration for your client app. To send push notifications to iOS devices, your should first register the APNs push configuration. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  > __Note__: To upload a [.p12](https://sendbird.com/docs/chat/v3/ios/guides/push-notifications#2-step-3-export-a-p12-file-and-upload-to-sendbird-dashboard) certificate file to Sendbird server, you should send a [Multipart request](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api#2-headers-3-multipart-requests).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-an-apns-push-configuration
+   * @param {String} apiToken 
    * @param {Object} opts Optional parameters
-   * @param {String} opts.apiToken 
    * @param {module:model/AddApnsPushConfigurationData} opts.addApnsPushConfigurationData 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddApnsPushConfigurationResponse} and HTTP response
    */
@@ -117,13 +121,18 @@ var ApplicationApi = /*#__PURE__*/function () {
 
   _createClass(ApplicationApi, [{
     key: "addApnsPushConfigurationWithHttpInfo",
-    value: function addApnsPushConfigurationWithHttpInfo(opts) {
+    value: function addApnsPushConfigurationWithHttpInfo(apiToken, opts) {
       opts = opts || {};
-      var postBody = opts['addApnsPushConfigurationData'];
+      var postBody = opts['addApnsPushConfigurationData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling addApnsPushConfiguration");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -135,37 +144,42 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Add an APNs push configuration
      * ## Add an APNs push configuration  Registers an APNs (Apple Push Notification service) push configuration for your client app. To send push notifications to iOS devices, your should first register the APNs push configuration. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  > __Note__: To upload a [.p12](https://sendbird.com/docs/chat/v3/ios/guides/push-notifications#2-step-3-export-a-p12-file-and-upload-to-sendbird-dashboard) certificate file to Sendbird server, you should send a [Multipart request](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api#2-headers-3-multipart-requests).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-an-apns-push-configuration
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/AddApnsPushConfigurationData} opts.addApnsPushConfigurationData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddApnsPushConfigurationResponse}
      */
 
   }, {
     key: "addApnsPushConfiguration",
-    value: function addApnsPushConfiguration(opts) {
-      return this.addApnsPushConfigurationWithHttpInfo(opts).then(function (response_and_data) {
+    value: function addApnsPushConfiguration(apiToken, opts) {
+      return this.addApnsPushConfigurationWithHttpInfo(apiToken, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Add a FCM push configuration
      * ## Add a FCM push configuration  Registers a FCM (Firebase Cloud Messaging) push configuration for your client app. To send push notifications to Android devices, you should first register the FCM push configuration. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-a-fcm-push-configuration
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/AddFcmPushConfigurationData} opts.addFcmPushConfigurationData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddFcmPushConfigurationResponse} and HTTP response
      */
 
   }, {
     key: "addFcmPushConfigurationWithHttpInfo",
-    value: function addFcmPushConfigurationWithHttpInfo(opts) {
+    value: function addFcmPushConfigurationWithHttpInfo(apiToken, opts) {
       opts = opts || {};
-      var postBody = opts['addFcmPushConfigurationData'];
+      var postBody = opts['addFcmPushConfigurationData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling addFcmPushConfiguration");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -177,37 +191,42 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Add a FCM push configuration
      * ## Add a FCM push configuration  Registers a FCM (Firebase Cloud Messaging) push configuration for your client app. To send push notifications to Android devices, you should first register the FCM push configuration. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-a-fcm-push-configuration
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/AddFcmPushConfigurationData} opts.addFcmPushConfigurationData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddFcmPushConfigurationResponse}
      */
 
   }, {
     key: "addFcmPushConfiguration",
-    value: function addFcmPushConfiguration(opts) {
-      return this.addFcmPushConfigurationWithHttpInfo(opts).then(function (response_and_data) {
+    value: function addFcmPushConfiguration(apiToken, opts) {
+      return this.addFcmPushConfigurationWithHttpInfo(apiToken, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Add an HMS push configuration
      * ## Add an HMS push configuration  Registers an HMS (Huawei Mobile Services) push configuration for your client app. To send push notifications to Android devices for HMS, you should first register the HMS push configuration. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-an-hms-push-configuration
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/AddHmsPushConfigurationData} opts.addHmsPushConfigurationData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddHmsPushConfigurationResponse} and HTTP response
      */
 
   }, {
     key: "addHmsPushConfigurationWithHttpInfo",
-    value: function addHmsPushConfigurationWithHttpInfo(opts) {
+    value: function addHmsPushConfigurationWithHttpInfo(apiToken, opts) {
       opts = opts || {};
-      var postBody = opts['addHmsPushConfigurationData'];
+      var postBody = opts['addHmsPushConfigurationData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling addHmsPushConfiguration");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -219,37 +238,42 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Add an HMS push configuration
      * ## Add an HMS push configuration  Registers an HMS (Huawei Mobile Services) push configuration for your client app. To send push notifications to Android devices for HMS, you should first register the HMS push configuration. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-an-hms-push-configuration
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/AddHmsPushConfigurationData} opts.addHmsPushConfigurationData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddHmsPushConfigurationResponse}
      */
 
   }, {
     key: "addHmsPushConfiguration",
-    value: function addHmsPushConfiguration(opts) {
-      return this.addHmsPushConfigurationWithHttpInfo(opts).then(function (response_and_data) {
+    value: function addHmsPushConfiguration(apiToken, opts) {
+      return this.addHmsPushConfigurationWithHttpInfo(apiToken, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Add an IP to a whitelist
      * ## Add an IP to a whitelist  Adds IP addresses and ranges to your Sendbird application settings. Both currently added and any previously added IPs are granted API access. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-an-ip-to-a-whitelist
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/AddIpToWhitelistData} opts.addIpToWhitelistData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddIpToWhitelistResponse} and HTTP response
      */
 
   }, {
     key: "addIpToWhitelistWithHttpInfo",
-    value: function addIpToWhitelistWithHttpInfo(opts) {
+    value: function addIpToWhitelistWithHttpInfo(apiToken, opts) {
       opts = opts || {};
-      var postBody = opts['addIpToWhitelistData'];
+      var postBody = opts['addIpToWhitelistData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling addIpToWhitelist");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -261,33 +285,92 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Add an IP to a whitelist
      * ## Add an IP to a whitelist  Adds IP addresses and ranges to your Sendbird application settings. Both currently added and any previously added IPs are granted API access. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-add-an-ip-to-a-whitelist
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/AddIpToWhitelistData} opts.addIpToWhitelistData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddIpToWhitelistResponse}
      */
 
   }, {
     key: "addIpToWhitelist",
-    value: function addIpToWhitelist(opts) {
-      return this.addIpToWhitelistWithHttpInfo(opts).then(function (response_and_data) {
+    value: function addIpToWhitelist(apiToken, opts) {
+      return this.addIpToWhitelistWithHttpInfo(apiToken, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Ban users in channels with a custom channel type
+     * ## Ban specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/BanUsersInChannelsWithCustomChannelTypeData} opts.banUsersInChannelsWithCustomChannelTypeData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+
+  }, {
+    key: "banUsersInChannelsWithCustomChannelTypeWithHttpInfo",
+    value: function banUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts) {
+      opts = opts || {};
+      var postBody = opts['banUsersInChannelsWithCustomChannelTypeData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling banUsersInChannelsWithCustomChannelType");
+      } // verify the required parameter 'customType' is set
+
+
+      if (customType === undefined || customType === null) {
+        throw new Error("Missing the required parameter 'customType' when calling banUsersInChannelsWithCustomChannelType");
+      }
+
+      var pathParams = {
+        'custom_type': customType
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Api-Token': apiToken
+      };
+      var formParams = {};
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Object;
+      return this.apiClient.callApi('/v3/applications/settings_by_channel_custom_type/{custom_type}/ban', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Ban users in channels with a custom channel type
+     * ## Ban specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/BanUsersInChannelsWithCustomChannelTypeData} opts.banUsersInChannelsWithCustomChannelTypeData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+
+  }, {
+    key: "banUsersInChannelsWithCustomChannelType",
+    value: function banUsersInChannelsWithCustomChannelType(apiToken, customType, opts) {
+      return this.banUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Delete allowed IPs from a whitelist
      * ## Delete allowed IPs from a whitelist  Deletes allowed IPs from the whitelist by specifying their IP addresses or ranges. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-delete-allowed-ips-from-a-whitelist
+     * @param {String} apiToken 
      * @param {Array.<String>} ipWhitelistAddresses 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DeleteAllowedIpsFromWhitelistResponse} and HTTP response
      */
 
   }, {
     key: "deleteAllowedIpsFromWhitelistWithHttpInfo",
-    value: function deleteAllowedIpsFromWhitelistWithHttpInfo(ipWhitelistAddresses, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'ipWhitelistAddresses' is set
+    value: function deleteAllowedIpsFromWhitelistWithHttpInfo(apiToken, ipWhitelistAddresses) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling deleteAllowedIpsFromWhitelist");
+      } // verify the required parameter 'ipWhitelistAddresses' is set
+
 
       if (ipWhitelistAddresses === undefined || ipWhitelistAddresses === null) {
         throw new Error("Missing the required parameter 'ipWhitelistAddresses' when calling deleteAllowedIpsFromWhitelist");
@@ -298,7 +381,7 @@ var ApplicationApi = /*#__PURE__*/function () {
         'ip_whitelist_addresses': this.apiClient.buildCollectionParam(ipWhitelistAddresses, 'multi')
       };
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -310,33 +393,35 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Delete allowed IPs from a whitelist
      * ## Delete allowed IPs from a whitelist  Deletes allowed IPs from the whitelist by specifying their IP addresses or ranges. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-delete-allowed-ips-from-a-whitelist
+     * @param {String} apiToken 
      * @param {Array.<String>} ipWhitelistAddresses 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DeleteAllowedIpsFromWhitelistResponse}
      */
 
   }, {
     key: "deleteAllowedIpsFromWhitelist",
-    value: function deleteAllowedIpsFromWhitelist(ipWhitelistAddresses, opts) {
-      return this.deleteAllowedIpsFromWhitelistWithHttpInfo(ipWhitelistAddresses, opts).then(function (response_and_data) {
+    value: function deleteAllowedIpsFromWhitelist(apiToken, ipWhitelistAddresses) {
+      return this.deleteAllowedIpsFromWhitelistWithHttpInfo(apiToken, ipWhitelistAddresses).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Delete an APNs certificate
      * ## Delete an APNs certificate  Deletes a specific APNs certificate.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-delete-an-apns-certificate ----------------------------
+     * @param {String} apiToken 
      * @param {String} providerId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DeleteApnsCertificateByIdResponse} and HTTP response
      */
 
   }, {
     key: "deleteApnsCertificateByIdWithHttpInfo",
-    value: function deleteApnsCertificateByIdWithHttpInfo(providerId, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'providerId' is set
+    value: function deleteApnsCertificateByIdWithHttpInfo(apiToken, providerId) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling deleteApnsCertificateById");
+      } // verify the required parameter 'providerId' is set
+
 
       if (providerId === undefined || providerId === null) {
         throw new Error("Missing the required parameter 'providerId' when calling deleteApnsCertificateById");
@@ -347,7 +432,7 @@ var ApplicationApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -359,37 +444,41 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Delete an APNs certificate
      * ## Delete an APNs certificate  Deletes a specific APNs certificate.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-delete-an-apns-certificate ----------------------------
+     * @param {String} apiToken 
      * @param {String} providerId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DeleteApnsCertificateByIdResponse}
      */
 
   }, {
     key: "deleteApnsCertificateById",
-    value: function deleteApnsCertificateById(providerId, opts) {
-      return this.deleteApnsCertificateByIdWithHttpInfo(providerId, opts).then(function (response_and_data) {
+    value: function deleteApnsCertificateById(apiToken, providerId) {
+      return this.deleteApnsCertificateByIdWithHttpInfo(apiToken, providerId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Generate a secondary API token
      * ## Generate a secondary API token  Generates a new secondary API token.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-generate-a-secondary-api-token
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GenerateSecondaryApiTokenData} opts.generateSecondaryApiTokenData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenerateSecondaryApiTokenResponse} and HTTP response
      */
 
   }, {
     key: "generateSecondaryApiTokenWithHttpInfo",
-    value: function generateSecondaryApiTokenWithHttpInfo(opts) {
+    value: function generateSecondaryApiTokenWithHttpInfo(apiToken, opts) {
       opts = opts || {};
-      var postBody = opts['generateSecondaryApiTokenData'];
+      var postBody = opts['generateSecondaryApiTokenData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling generateSecondaryApiToken");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -401,33 +490,158 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Generate a secondary API token
      * ## Generate a secondary API token  Generates a new secondary API token.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-generate-a-secondary-api-token
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/GenerateSecondaryApiTokenData} opts.generateSecondaryApiTokenData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenerateSecondaryApiTokenResponse}
      */
 
   }, {
     key: "generateSecondaryApiToken",
-    value: function generateSecondaryApiToken(opts) {
-      return this.generateSecondaryApiTokenWithHttpInfo(opts).then(function (response_and_data) {
+    value: function generateSecondaryApiToken(apiToken, opts) {
+      return this.generateSecondaryApiTokenWithHttpInfo(apiToken, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * List banned users in channels with a custom channel type
+     * ## Retrieves a list of users banned from channels with the specified custom channel type.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.token 
+     * @param {Number} opts.limit 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomTypeListBannedUsersResponse} and HTTP response
+     */
+
+  }, {
+    key: "listBannedUsersInChannelsWithCustomChannelTypeWithHttpInfo",
+    value: function listBannedUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts) {
+      opts = opts || {};
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling listBannedUsersInChannelsWithCustomChannelType");
+      } // verify the required parameter 'customType' is set
+
+
+      if (customType === undefined || customType === null) {
+        throw new Error("Missing the required parameter 'customType' when calling listBannedUsersInChannelsWithCustomChannelType");
+      }
+
+      var pathParams = {
+        'custom_type': customType
+      };
+      var queryParams = {
+        'token': opts['token'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+        'Api-Token': apiToken
+      };
+      var formParams = {};
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _CustomTypeListBannedUsersResponse["default"];
+      return this.apiClient.callApi('/v3/applications/settings_by_channel_custom_type/{custom_type}/ban', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * List banned users in channels with a custom channel type
+     * ## Retrieves a list of users banned from channels with the specified custom channel type.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.token 
+     * @param {Number} opts.limit 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomTypeListBannedUsersResponse}
+     */
+
+  }, {
+    key: "listBannedUsersInChannelsWithCustomChannelType",
+    value: function listBannedUsersInChannelsWithCustomChannelType(apiToken, customType, opts) {
+      return this.listBannedUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * List muted users in channels with a custom channel type
+     * ## Retrieves a list of the muted users in channels with a custom channel type.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.token 
+     * @param {Number} opts.limit 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
+     */
+
+  }, {
+    key: "listMutedUsersInChannelsWithCustomChannelTypeWithHttpInfo",
+    value: function listMutedUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts) {
+      opts = opts || {};
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling listMutedUsersInChannelsWithCustomChannelType");
+      } // verify the required parameter 'customType' is set
+
+
+      if (customType === undefined || customType === null) {
+        throw new Error("Missing the required parameter 'customType' when calling listMutedUsersInChannelsWithCustomChannelType");
+      }
+
+      var pathParams = {
+        'custom_type': customType
+      };
+      var queryParams = {
+        'token': opts['token'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+        'Api-Token': apiToken
+      };
+      var formParams = {};
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _InlineResponse["default"];
+      return this.apiClient.callApi('/v3/applications/settings_by_channel_custom_type/{custom_type}/mute', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * List muted users in channels with a custom channel type
+     * ## Retrieves a list of the muted users in channels with a custom channel type.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.token 
+     * @param {Number} opts.limit 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
+     */
+
+  }, {
+    key: "listMutedUsersInChannelsWithCustomChannelType",
+    value: function listMutedUsersInChannelsWithCustomChannelType(apiToken, customType, opts) {
+      return this.listMutedUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * List push configurations
      * ## List push configurations  Retrieves a list of an application's registered push configurations.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-push-configurations ----------------------------
+     * @param {String} apiToken 
      * @param {String} pushType 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListPushConfigurationsResponse} and HTTP response
      */
 
   }, {
     key: "listPushConfigurationsWithHttpInfo",
-    value: function listPushConfigurationsWithHttpInfo(pushType, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'pushType' is set
+    value: function listPushConfigurationsWithHttpInfo(apiToken, pushType) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling listPushConfigurations");
+      } // verify the required parameter 'pushType' is set
+
 
       if (pushType === undefined || pushType === null) {
         throw new Error("Missing the required parameter 'pushType' when calling listPushConfigurations");
@@ -438,7 +652,7 @@ var ApplicationApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -450,36 +664,38 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * List push configurations
      * ## List push configurations  Retrieves a list of an application's registered push configurations.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-push-configurations ----------------------------
+     * @param {String} apiToken 
      * @param {String} pushType 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListPushConfigurationsResponse}
      */
 
   }, {
     key: "listPushConfigurations",
-    value: function listPushConfigurations(pushType, opts) {
-      return this.listPushConfigurationsWithHttpInfo(pushType, opts).then(function (response_and_data) {
+    value: function listPushConfigurations(apiToken, pushType) {
+      return this.listPushConfigurationsWithHttpInfo(apiToken, pushType).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * List push notification content templates
      * ## List push notification content templates  Retrieves a list of push notification content templates of an application.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-push-notification-content-templates
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
+     * @param {String} apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListPushNotificationContentTemplatesResponse} and HTTP response
      */
 
   }, {
     key: "listPushNotificationContentTemplatesWithHttpInfo",
-    value: function listPushNotificationContentTemplatesWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = null;
+    value: function listPushNotificationContentTemplatesWithHttpInfo(apiToken) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling listPushNotificationContentTemplates");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -491,35 +707,37 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * List push notification content templates
      * ## List push notification content templates  Retrieves a list of push notification content templates of an application.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-push-notification-content-templates
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
+     * @param {String} apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListPushNotificationContentTemplatesResponse}
      */
 
   }, {
     key: "listPushNotificationContentTemplates",
-    value: function listPushNotificationContentTemplates(opts) {
-      return this.listPushNotificationContentTemplatesWithHttpInfo(opts).then(function (response_and_data) {
+    value: function listPushNotificationContentTemplates(apiToken) {
+      return this.listPushNotificationContentTemplatesWithHttpInfo(apiToken).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * List secondary API tokens
      * ## List secondary API tokens  Retrieves a list of secondary API tokens.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-secondary-api-tokens
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
+     * @param {String} apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListSecondaryApiTokensResponse} and HTTP response
      */
 
   }, {
     key: "listSecondaryApiTokensWithHttpInfo",
-    value: function listSecondaryApiTokensWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = null;
+    value: function listSecondaryApiTokensWithHttpInfo(apiToken) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling listSecondaryApiTokens");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -531,33 +749,91 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * List secondary API tokens
      * ## List secondary API tokens  Retrieves a list of secondary API tokens.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-list-secondary-api-tokens
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
+     * @param {String} apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListSecondaryApiTokensResponse}
      */
 
   }, {
     key: "listSecondaryApiTokens",
-    value: function listSecondaryApiTokens(opts) {
-      return this.listSecondaryApiTokensWithHttpInfo(opts).then(function (response_and_data) {
+    value: function listSecondaryApiTokens(apiToken) {
+      return this.listSecondaryApiTokensWithHttpInfo(apiToken).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Mute users in channels with a custom channel type
+     * ## Mutes specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/MuteUsersInChannelsWithCustomChannelTypeData} opts.muteUsersInChannelsWithCustomChannelTypeData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+
+  }, {
+    key: "muteUsersInChannelsWithCustomChannelTypeWithHttpInfo",
+    value: function muteUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts) {
+      opts = opts || {};
+      var postBody = opts['muteUsersInChannelsWithCustomChannelTypeData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling muteUsersInChannelsWithCustomChannelType");
+      } // verify the required parameter 'customType' is set
+
+
+      if (customType === undefined || customType === null) {
+        throw new Error("Missing the required parameter 'customType' when calling muteUsersInChannelsWithCustomChannelType");
+      }
+
+      var pathParams = {
+        'custom_type': customType
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Api-Token': apiToken
+      };
+      var formParams = {};
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Object;
+      return this.apiClient.callApi('/v3/applications/settings_by_channel_custom_type/{custom_type}/mute', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Mute users in channels with a custom channel type
+     * ## Mutes specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/MuteUsersInChannelsWithCustomChannelTypeData} opts.muteUsersInChannelsWithCustomChannelTypeData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+
+  }, {
+    key: "muteUsersInChannelsWithCustomChannelType",
+    value: function muteUsersInChannelsWithCustomChannelType(apiToken, customType, opts) {
+      return this.muteUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Remove a push configuration
      * ## Remove a push configuration  Removes a specific push configuration from an application. The type of a push configuration is either `fcm`, `huawei`, or `apns`.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-remove-a-push-configuration ----------------------------
+     * @param {String} apiToken 
      * @param {String} pushType 
      * @param {String} providerId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemovePushConfigurationByIdResponse} and HTTP response
      */
 
   }, {
     key: "removePushConfigurationByIdWithHttpInfo",
-    value: function removePushConfigurationByIdWithHttpInfo(pushType, providerId, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'pushType' is set
+    value: function removePushConfigurationByIdWithHttpInfo(apiToken, pushType, providerId) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling removePushConfigurationById");
+      } // verify the required parameter 'pushType' is set
+
 
       if (pushType === undefined || pushType === null) {
         throw new Error("Missing the required parameter 'pushType' when calling removePushConfigurationById");
@@ -574,7 +850,7 @@ var ApplicationApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -586,37 +862,39 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Remove a push configuration
      * ## Remove a push configuration  Removes a specific push configuration from an application. The type of a push configuration is either `fcm`, `huawei`, or `apns`.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-remove-a-push-configuration ----------------------------
+     * @param {String} apiToken 
      * @param {String} pushType 
      * @param {String} providerId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemovePushConfigurationByIdResponse}
      */
 
   }, {
     key: "removePushConfigurationById",
-    value: function removePushConfigurationById(pushType, providerId, opts) {
-      return this.removePushConfigurationByIdWithHttpInfo(pushType, providerId, opts).then(function (response_and_data) {
+    value: function removePushConfigurationById(apiToken, pushType, providerId) {
+      return this.removePushConfigurationByIdWithHttpInfo(apiToken, pushType, providerId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Retrieve an IP whitelist
      * ## Retrieve an IP whitelist  Retrieves a list of all the IP ranges and addresses that have access to your Sendbird application. This list is called an IP whitelist and its addresses are granted API access when the IP whitelist API enables [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notations.  If you specify which IP addresses or ranges to include in the whitelist, any unlisted foreign IP addresses will be denied access. If you don't specify any IP address or range to include in the whitelist, all IP addresses will be granted API access. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-retrieve-an-ip-whitelist
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
+     * @param {String} apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RetrieveIpWhitelistResponse} and HTTP response
      */
 
   }, {
     key: "retrieveIpWhitelistWithHttpInfo",
-    value: function retrieveIpWhitelistWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = null;
+    value: function retrieveIpWhitelistWithHttpInfo(apiToken) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling retrieveIpWhitelist");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -628,32 +906,34 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Retrieve an IP whitelist
      * ## Retrieve an IP whitelist  Retrieves a list of all the IP ranges and addresses that have access to your Sendbird application. This list is called an IP whitelist and its addresses are granted API access when the IP whitelist API enables [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notations.  If you specify which IP addresses or ranges to include in the whitelist, any unlisted foreign IP addresses will be denied access. If you don't specify any IP address or range to include in the whitelist, all IP addresses will be granted API access. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-retrieve-an-ip-whitelist
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
+     * @param {String} apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RetrieveIpWhitelistResponse}
      */
 
   }, {
     key: "retrieveIpWhitelist",
-    value: function retrieveIpWhitelist(opts) {
-      return this.retrieveIpWhitelistWithHttpInfo(opts).then(function (response_and_data) {
+    value: function retrieveIpWhitelist(apiToken) {
+      return this.retrieveIpWhitelistWithHttpInfo(apiToken).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Revoke a secondary API token
      * ## Revoke a secondary API token  Revokes a secondary API token.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-revoke-a-secondary-api-token
+     * @param {String} apiToken 
      * @param {String} apiToken2 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RevokeSecondaryApiTokenByTokenResponse} and HTTP response
      */
 
   }, {
     key: "revokeSecondaryApiTokenByTokenWithHttpInfo",
-    value: function revokeSecondaryApiTokenByTokenWithHttpInfo(apiToken2, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'apiToken2' is set
+    value: function revokeSecondaryApiTokenByTokenWithHttpInfo(apiToken, apiToken2) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling revokeSecondaryApiTokenByToken");
+      } // verify the required parameter 'apiToken2' is set
+
 
       if (apiToken2 === undefined || apiToken2 === null) {
         throw new Error("Missing the required parameter 'apiToken2' when calling revokeSecondaryApiTokenByToken");
@@ -664,7 +944,7 @@ var ApplicationApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -676,34 +956,214 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Revoke a secondary API token
      * ## Revoke a secondary API token  Revokes a secondary API token.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-revoke-a-secondary-api-token
+     * @param {String} apiToken 
      * @param {String} apiToken2 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RevokeSecondaryApiTokenByTokenResponse}
      */
 
   }, {
     key: "revokeSecondaryApiTokenByToken",
-    value: function revokeSecondaryApiTokenByToken(apiToken2, opts) {
-      return this.revokeSecondaryApiTokenByTokenWithHttpInfo(apiToken2, opts).then(function (response_and_data) {
+    value: function revokeSecondaryApiTokenByToken(apiToken, apiToken2) {
+      return this.revokeSecondaryApiTokenByTokenWithHttpInfo(apiToken, apiToken2).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Message moderation
+     * ## 
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SetDomainFilterData} opts.setDomainFilterData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdChannelResponse} and HTTP response
+     */
+
+  }, {
+    key: "setDomainFilterWithHttpInfo",
+    value: function setDomainFilterWithHttpInfo(apiToken, customType, opts) {
+      opts = opts || {};
+      var postBody = opts['setDomainFilterData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling setDomainFilter");
+      } // verify the required parameter 'customType' is set
+
+
+      if (customType === undefined || customType === null) {
+        throw new Error("Missing the required parameter 'customType' when calling setDomainFilter");
+      }
+
+      var pathParams = {
+        'custom_type': customType
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Api-Token': apiToken
+      };
+      var formParams = {};
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _SendBirdChannelResponse["default"];
+      return this.apiClient.callApi('/v3/applications/settings_global/{custom_type}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Message moderation
+     * ## 
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SetDomainFilterData} opts.setDomainFilterData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdChannelResponse}
+     */
+
+  }, {
+    key: "setDomainFilter",
+    value: function setDomainFilter(apiToken, customType, opts) {
+      return this.setDomainFilterWithHttpInfo(apiToken, customType, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Unban users in channels with a custom channel type
+     * ## Unban specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Array.<String>} userIds 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+
+  }, {
+    key: "unbanUsersInChannelsWithCustomChannelTypeWithHttpInfo",
+    value: function unbanUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, userIds) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling unbanUsersInChannelsWithCustomChannelType");
+      } // verify the required parameter 'customType' is set
+
+
+      if (customType === undefined || customType === null) {
+        throw new Error("Missing the required parameter 'customType' when calling unbanUsersInChannelsWithCustomChannelType");
+      } // verify the required parameter 'userIds' is set
+
+
+      if (userIds === undefined || userIds === null) {
+        throw new Error("Missing the required parameter 'userIds' when calling unbanUsersInChannelsWithCustomChannelType");
+      }
+
+      var pathParams = {
+        'custom_type': customType
+      };
+      var queryParams = {
+        'user_ids': this.apiClient.buildCollectionParam(userIds, 'multi')
+      };
+      var headerParams = {
+        'Api-Token': apiToken
+      };
+      var formParams = {};
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = Object;
+      return this.apiClient.callApi('/v3/applications/settings_by_channel_custom_type/{custom_type}/ban', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Unban users in channels with a custom channel type
+     * ## Unban specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Array.<String>} userIds 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+
+  }, {
+    key: "unbanUsersInChannelsWithCustomChannelType",
+    value: function unbanUsersInChannelsWithCustomChannelType(apiToken, customType, userIds) {
+      return this.unbanUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, userIds).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Unmute users in channels with a custom channel type
+     * ## Unmute specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Array.<String>} userIds 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+
+  }, {
+    key: "unmuteUsersInChannelsWithCustomChannelTypeWithHttpInfo",
+    value: function unmuteUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, userIds) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling unmuteUsersInChannelsWithCustomChannelType");
+      } // verify the required parameter 'customType' is set
+
+
+      if (customType === undefined || customType === null) {
+        throw new Error("Missing the required parameter 'customType' when calling unmuteUsersInChannelsWithCustomChannelType");
+      } // verify the required parameter 'userIds' is set
+
+
+      if (userIds === undefined || userIds === null) {
+        throw new Error("Missing the required parameter 'userIds' when calling unmuteUsersInChannelsWithCustomChannelType");
+      }
+
+      var pathParams = {
+        'custom_type': customType
+      };
+      var queryParams = {
+        'user_ids': this.apiClient.buildCollectionParam(userIds, 'multi')
+      };
+      var headerParams = {
+        'Api-Token': apiToken
+      };
+      var formParams = {};
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = Object;
+      return this.apiClient.callApi('/v3/applications/settings_by_channel_custom_type/{custom_type}/mute', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Unmute users in channels with a custom channel type
+     * ## Unmute specified users in channels with a custom channel type at once.
+     * @param {String} apiToken 
+     * @param {String} customType 
+     * @param {Array.<String>} userIds 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+
+  }, {
+    key: "unmuteUsersInChannelsWithCustomChannelType",
+    value: function unmuteUsersInChannelsWithCustomChannelType(apiToken, customType, userIds) {
+      return this.unmuteUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, userIds).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Update an APNs push configuration
      * ## Update an APNs push configuration  Updates a specific APNs (Apple Push Notification service) push configuration for your client app. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  > __Note__: If your HTTP request body contains a [.p12](https://sendbird.com/docs/chat/v3/ios/guides/push-notifications#2-step-3-export-a-p12-file-and-upload-to-sendbird-dashboard) certificate file to upload to Sendbird server, you should send a [Multipart request](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api#2-headers-3-multipart-requests) .  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-an-apns-push-configuration ----------------------------
+     * @param {String} apiToken 
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateApnsPushConfigurationByIdData} opts.updateApnsPushConfigurationByIdData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateApnsPushConfigurationByIdResponse} and HTTP response
      */
 
   }, {
     key: "updateApnsPushConfigurationByIdWithHttpInfo",
-    value: function updateApnsPushConfigurationByIdWithHttpInfo(providerId, opts) {
+    value: function updateApnsPushConfigurationByIdWithHttpInfo(apiToken, providerId, opts) {
       opts = opts || {};
-      var postBody = opts['updateApnsPushConfigurationByIdData']; // verify the required parameter 'providerId' is set
+      var postBody = opts['updateApnsPushConfigurationByIdData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling updateApnsPushConfigurationById");
+      } // verify the required parameter 'providerId' is set
+
 
       if (providerId === undefined || providerId === null) {
         throw new Error("Missing the required parameter 'providerId' when calling updateApnsPushConfigurationById");
@@ -714,7 +1174,7 @@ var ApplicationApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -726,38 +1186,43 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Update an APNs push configuration
      * ## Update an APNs push configuration  Updates a specific APNs (Apple Push Notification service) push configuration for your client app. You can also register the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  > __Note__: If your HTTP request body contains a [.p12](https://sendbird.com/docs/chat/v3/ios/guides/push-notifications#2-step-3-export-a-p12-file-and-upload-to-sendbird-dashboard) certificate file to upload to Sendbird server, you should send a [Multipart request](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api#2-headers-3-multipart-requests) .  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-an-apns-push-configuration ----------------------------
+     * @param {String} apiToken 
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateApnsPushConfigurationByIdData} opts.updateApnsPushConfigurationByIdData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateApnsPushConfigurationByIdResponse}
      */
 
   }, {
     key: "updateApnsPushConfigurationById",
-    value: function updateApnsPushConfigurationById(providerId, opts) {
-      return this.updateApnsPushConfigurationByIdWithHttpInfo(providerId, opts).then(function (response_and_data) {
+    value: function updateApnsPushConfigurationById(apiToken, providerId, opts) {
+      return this.updateApnsPushConfigurationByIdWithHttpInfo(apiToken, providerId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Update default channel invitation preference
      * ## Update default channel invitation preference  Updates the default channel invitation preference of an application.  > __Note__: Using the [update channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-channel-invitation-preference) action, you can update the value of a specific user's channel invitation preference, which can be set individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-default-channel-invitation-preference
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateDefaultChannelInvitationPreferenceData} opts.updateDefaultChannelInvitationPreferenceData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateDefaultChannelInvitationPreferenceResponse} and HTTP response
      */
 
   }, {
     key: "updateDefaultChannelInvitationPreferenceWithHttpInfo",
-    value: function updateDefaultChannelInvitationPreferenceWithHttpInfo(opts) {
+    value: function updateDefaultChannelInvitationPreferenceWithHttpInfo(apiToken, opts) {
       opts = opts || {};
-      var postBody = opts['updateDefaultChannelInvitationPreferenceData'];
+      var postBody = opts['updateDefaultChannelInvitationPreferenceData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling updateDefaultChannelInvitationPreference");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -769,34 +1234,39 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Update default channel invitation preference
      * ## Update default channel invitation preference  Updates the default channel invitation preference of an application.  > __Note__: Using the [update channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-channel-invitation-preference) action, you can update the value of a specific user's channel invitation preference, which can be set individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-default-channel-invitation-preference
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateDefaultChannelInvitationPreferenceData} opts.updateDefaultChannelInvitationPreferenceData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateDefaultChannelInvitationPreferenceResponse}
      */
 
   }, {
     key: "updateDefaultChannelInvitationPreference",
-    value: function updateDefaultChannelInvitationPreference(opts) {
-      return this.updateDefaultChannelInvitationPreferenceWithHttpInfo(opts).then(function (response_and_data) {
+    value: function updateDefaultChannelInvitationPreference(apiToken, opts) {
+      return this.updateDefaultChannelInvitationPreferenceWithHttpInfo(apiToken, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Update a FCM push configuration
      * ## Update a FCM push configuration  Updates a specific FCM (Firebase Cloud Messaging) push configuration for your client app. You can also update the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-a-fcm-push-configuration ----------------------------
+     * @param {String} apiToken 
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateFcmPushConfigurationByIdData} opts.updateFcmPushConfigurationByIdData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateFcmPushConfigurationByIdResponse} and HTTP response
      */
 
   }, {
     key: "updateFcmPushConfigurationByIdWithHttpInfo",
-    value: function updateFcmPushConfigurationByIdWithHttpInfo(providerId, opts) {
+    value: function updateFcmPushConfigurationByIdWithHttpInfo(apiToken, providerId, opts) {
       opts = opts || {};
-      var postBody = opts['updateFcmPushConfigurationByIdData']; // verify the required parameter 'providerId' is set
+      var postBody = opts['updateFcmPushConfigurationByIdData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling updateFcmPushConfigurationById");
+      } // verify the required parameter 'providerId' is set
+
 
       if (providerId === undefined || providerId === null) {
         throw new Error("Missing the required parameter 'providerId' when calling updateFcmPushConfigurationById");
@@ -807,7 +1277,7 @@ var ApplicationApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -819,35 +1289,40 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Update a FCM push configuration
      * ## Update a FCM push configuration  Updates a specific FCM (Firebase Cloud Messaging) push configuration for your client app. You can also update the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-a-fcm-push-configuration ----------------------------
+     * @param {String} apiToken 
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateFcmPushConfigurationByIdData} opts.updateFcmPushConfigurationByIdData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateFcmPushConfigurationByIdResponse}
      */
 
   }, {
     key: "updateFcmPushConfigurationById",
-    value: function updateFcmPushConfigurationById(providerId, opts) {
-      return this.updateFcmPushConfigurationByIdWithHttpInfo(providerId, opts).then(function (response_and_data) {
+    value: function updateFcmPushConfigurationById(apiToken, providerId, opts) {
+      return this.updateFcmPushConfigurationByIdWithHttpInfo(apiToken, providerId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Update an HMS push configuration
      * ## Update an HMS push configuration  Updates a specific HMS (Huawei Mobile Services) push configuration for your client app. You can also update the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-an-hms-push-configuration ----------------------------
+     * @param {String} apiToken 
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateHmsPushConfigurationByIdData} opts.updateHmsPushConfigurationByIdData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateHmsPushConfigurationByIdResponse} and HTTP response
      */
 
   }, {
     key: "updateHmsPushConfigurationByIdWithHttpInfo",
-    value: function updateHmsPushConfigurationByIdWithHttpInfo(providerId, opts) {
+    value: function updateHmsPushConfigurationByIdWithHttpInfo(apiToken, providerId, opts) {
       opts = opts || {};
-      var postBody = opts['updateHmsPushConfigurationByIdData']; // verify the required parameter 'providerId' is set
+      var postBody = opts['updateHmsPushConfigurationByIdData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling updateHmsPushConfigurationById");
+      } // verify the required parameter 'providerId' is set
+
 
       if (providerId === undefined || providerId === null) {
         throw new Error("Missing the required parameter 'providerId' when calling updateHmsPushConfigurationById");
@@ -858,7 +1333,7 @@ var ApplicationApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -870,35 +1345,40 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Update an HMS push configuration
      * ## Update an HMS push configuration  Updates a specific HMS (Huawei Mobile Services) push configuration for your client app. You can also update the configurations in your [dashboard](https://dashboard.sendbird.com) under Settings > Application > Notifications.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-an-hms-push-configuration ----------------------------
+     * @param {String} apiToken 
      * @param {String} providerId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateHmsPushConfigurationByIdData} opts.updateHmsPushConfigurationByIdData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateHmsPushConfigurationByIdResponse}
      */
 
   }, {
     key: "updateHmsPushConfigurationById",
-    value: function updateHmsPushConfigurationById(providerId, opts) {
-      return this.updateHmsPushConfigurationByIdWithHttpInfo(providerId, opts).then(function (response_and_data) {
+    value: function updateHmsPushConfigurationById(apiToken, providerId, opts) {
+      return this.updateHmsPushConfigurationByIdWithHttpInfo(apiToken, providerId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Update a push notification content template
      * ## Update a push notification content template  Updates a specific push notification content template of an application. The name of a content template is either `default` or `alternative`.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-a-push-notification-content-template ----------------------------
+     * @param {String} apiToken 
      * @param {String} templateName 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdatePushNotificationContentTemplateData} opts.updatePushNotificationContentTemplateData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdatePushNotificationContentTemplateResponse} and HTTP response
      */
 
   }, {
     key: "updatePushNotificationContentTemplateWithHttpInfo",
-    value: function updatePushNotificationContentTemplateWithHttpInfo(templateName, opts) {
+    value: function updatePushNotificationContentTemplateWithHttpInfo(apiToken, templateName, opts) {
       opts = opts || {};
-      var postBody = opts['updatePushNotificationContentTemplateData']; // verify the required parameter 'templateName' is set
+      var postBody = opts['updatePushNotificationContentTemplateData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling updatePushNotificationContentTemplate");
+      } // verify the required parameter 'templateName' is set
+
 
       if (templateName === undefined || templateName === null) {
         throw new Error("Missing the required parameter 'templateName' when calling updatePushNotificationContentTemplate");
@@ -909,7 +1389,7 @@ var ApplicationApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -921,37 +1401,40 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * Update a push notification content template
      * ## Update a push notification content template  Updates a specific push notification content template of an application. The name of a content template is either `default` or `alternative`.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-a-push-notification-content-template ----------------------------
+     * @param {String} apiToken 
      * @param {String} templateName 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdatePushNotificationContentTemplateData} opts.updatePushNotificationContentTemplateData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdatePushNotificationContentTemplateResponse}
      */
 
   }, {
     key: "updatePushNotificationContentTemplate",
-    value: function updatePushNotificationContentTemplate(templateName, opts) {
-      return this.updatePushNotificationContentTemplateWithHttpInfo(templateName, opts).then(function (response_and_data) {
+    value: function updatePushNotificationContentTemplate(apiToken, templateName, opts) {
+      return this.updatePushNotificationContentTemplateWithHttpInfo(apiToken, templateName, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * View default channel invitation preference
      * ## View default channel invitation preference  Retrieves the default channel invitation preference of an application.  > __Note__: Using the [view channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-channel-invitation-preference) action, you can retrieve the value of a specific user's channel invitation preference, which can be set individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-default-channel-invitation-preference
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
+     * @param {String} apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewDefaultChannelInvitationPreferenceResponse} and HTTP response
      */
 
   }, {
     key: "viewDefaultChannelInvitationPreferenceWithHttpInfo",
-    value: function viewDefaultChannelInvitationPreferenceWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = null;
+    value: function viewDefaultChannelInvitationPreferenceWithHttpInfo(apiToken) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling viewDefaultChannelInvitationPreference");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -963,248 +1446,35 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * View default channel invitation preference
      * ## View default channel invitation preference  Retrieves the default channel invitation preference of an application.  > __Note__: Using the [view channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-channel-invitation-preference) action, you can retrieve the value of a specific user's channel invitation preference, which can be set individually by user.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-default-channel-invitation-preference
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
+     * @param {String} apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewDefaultChannelInvitationPreferenceResponse}
      */
 
   }, {
     key: "viewDefaultChannelInvitationPreference",
-    value: function viewDefaultChannelInvitationPreference(opts) {
-      return this.viewDefaultChannelInvitationPreferenceWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-    /**
-     * View number of concurrent connections
-     * ## View number of concurrent connections  Retrieves the number of devices and opened browser tabs which are currently connected to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-concurrent-connections
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfConcurrentConnectionsResponse} and HTTP response
-     */
-
-  }, {
-    key: "viewNumberOfConcurrentConnectionsWithHttpInfo",
-    value: function viewNumberOfConcurrentConnectionsWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = null;
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': opts['apiToken']
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _ViewNumberOfConcurrentConnectionsResponse["default"];
-      return this.apiClient.callApi('/v3/applications/ccu', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-    /**
-     * View number of concurrent connections
-     * ## View number of concurrent connections  Retrieves the number of devices and opened browser tabs which are currently connected to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-concurrent-connections
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfConcurrentConnectionsResponse}
-     */
-
-  }, {
-    key: "viewNumberOfConcurrentConnections",
-    value: function viewNumberOfConcurrentConnections(opts) {
-      return this.viewNumberOfConcurrentConnectionsWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-    /**
-     * View number of daily active users
-     * ## View number of daily active users  Retrieves the number of daily active users of the application (DAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-daily-active-users ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfDailyActiveUsersResponse} and HTTP response
-     */
-
-  }, {
-    key: "viewNumberOfDailyActiveUsersWithHttpInfo",
-    value: function viewNumberOfDailyActiveUsersWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = null;
-      var pathParams = {};
-      var queryParams = {
-        'date': opts['date']
-      };
-      var headerParams = {
-        'Api-Token': opts['apiToken']
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _ViewNumberOfDailyActiveUsersResponse["default"];
-      return this.apiClient.callApi('/v3/applications/dau', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-    /**
-     * View number of daily active users
-     * ## View number of daily active users  Retrieves the number of daily active users of the application (DAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-daily-active-users ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfDailyActiveUsersResponse}
-     */
-
-  }, {
-    key: "viewNumberOfDailyActiveUsers",
-    value: function viewNumberOfDailyActiveUsers(opts) {
-      return this.viewNumberOfDailyActiveUsersWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-    /**
-     * View number of monthly active users
-     * ## View number of monthly active users  Retrieves the number of monthly active users of the application (MAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-monthly-active-users ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfMonthlyActiveUsersResponse} and HTTP response
-     */
-
-  }, {
-    key: "viewNumberOfMonthlyActiveUsersWithHttpInfo",
-    value: function viewNumberOfMonthlyActiveUsersWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = null;
-      var pathParams = {};
-      var queryParams = {
-        'date': opts['date']
-      };
-      var headerParams = {
-        'Api-Token': opts['apiToken']
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _ViewNumberOfMonthlyActiveUsersResponse["default"];
-      return this.apiClient.callApi('/v3/applications/mau', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-    /**
-     * View number of monthly active users
-     * ## View number of monthly active users  Retrieves the number of monthly active users of the application (MAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-monthly-active-users ----------------------------
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {String} opts.date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfMonthlyActiveUsersResponse}
-     */
-
-  }, {
-    key: "viewNumberOfMonthlyActiveUsers",
-    value: function viewNumberOfMonthlyActiveUsers(opts) {
-      return this.viewNumberOfMonthlyActiveUsersWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-    /**
-     * View number of peak connections
-     * ## View number of peak connections  Retrieves the number of concurrently connected devices to Sendbird server during the requested time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-peak-connections ----------------------------
-     * @param {String} timeDimension 
-     * @param {Number} startYear 
-     * @param {Number} startMonth 
-     * @param {Number} endYear 
-     * @param {Number} endMonth 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {Number} opts.startDay 
-     * @param {Number} opts.endDay 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfPeakConnectionsResponse} and HTTP response
-     */
-
-  }, {
-    key: "viewNumberOfPeakConnectionsWithHttpInfo",
-    value: function viewNumberOfPeakConnectionsWithHttpInfo(timeDimension, startYear, startMonth, endYear, endMonth, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'timeDimension' is set
-
-      if (timeDimension === undefined || timeDimension === null) {
-        throw new Error("Missing the required parameter 'timeDimension' when calling viewNumberOfPeakConnections");
-      } // verify the required parameter 'startYear' is set
-
-
-      if (startYear === undefined || startYear === null) {
-        throw new Error("Missing the required parameter 'startYear' when calling viewNumberOfPeakConnections");
-      } // verify the required parameter 'startMonth' is set
-
-
-      if (startMonth === undefined || startMonth === null) {
-        throw new Error("Missing the required parameter 'startMonth' when calling viewNumberOfPeakConnections");
-      } // verify the required parameter 'endYear' is set
-
-
-      if (endYear === undefined || endYear === null) {
-        throw new Error("Missing the required parameter 'endYear' when calling viewNumberOfPeakConnections");
-      } // verify the required parameter 'endMonth' is set
-
-
-      if (endMonth === undefined || endMonth === null) {
-        throw new Error("Missing the required parameter 'endMonth' when calling viewNumberOfPeakConnections");
-      }
-
-      var pathParams = {};
-      var queryParams = {
-        'time_dimension': timeDimension,
-        'start_year': startYear,
-        'start_month': startMonth,
-        'end_year': endYear,
-        'end_month': endMonth,
-        'start_day': opts['startDay'],
-        'end_day': opts['endDay']
-      };
-      var headerParams = {
-        'Api-Token': opts['apiToken']
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _ViewNumberOfPeakConnectionsResponse["default"];
-      return this.apiClient.callApi('/v3/applications/peak_connections', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-    /**
-     * View number of peak connections
-     * ## View number of peak connections  Retrieves the number of concurrently connected devices to Sendbird server during the requested time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-peak-connections ----------------------------
-     * @param {String} timeDimension 
-     * @param {Number} startYear 
-     * @param {Number} startMonth 
-     * @param {Number} endYear 
-     * @param {Number} endMonth 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @param {Number} opts.startDay 
-     * @param {Number} opts.endDay 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfPeakConnectionsResponse}
-     */
-
-  }, {
-    key: "viewNumberOfPeakConnections",
-    value: function viewNumberOfPeakConnections(timeDimension, startYear, startMonth, endYear, endMonth, opts) {
-      return this.viewNumberOfPeakConnectionsWithHttpInfo(timeDimension, startYear, startMonth, endYear, endMonth, opts).then(function (response_and_data) {
+    value: function viewDefaultChannelInvitationPreference(apiToken) {
+      return this.viewDefaultChannelInvitationPreferenceWithHttpInfo(apiToken).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * View a push configuration
      * ## View a push configuration  Retrieves a specific push configuration of an application. The type of a push configuration is either `fcm`, `huawei`, or `apns`.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-a-push-configuration ----------------------------
+     * @param {String} apiToken 
      * @param {String} pushType 
      * @param {String} providerId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewPushConfigurationByIdResponse} and HTTP response
      */
 
   }, {
     key: "viewPushConfigurationByIdWithHttpInfo",
-    value: function viewPushConfigurationByIdWithHttpInfo(pushType, providerId, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'pushType' is set
+    value: function viewPushConfigurationByIdWithHttpInfo(apiToken, pushType, providerId) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling viewPushConfigurationById");
+      } // verify the required parameter 'pushType' is set
+
 
       if (pushType === undefined || pushType === null) {
         throw new Error("Missing the required parameter 'pushType' when calling viewPushConfigurationById");
@@ -1221,7 +1491,7 @@ var ApplicationApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -1233,34 +1503,36 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * View a push configuration
      * ## View a push configuration  Retrieves a specific push configuration of an application. The type of a push configuration is either `fcm`, `huawei`, or `apns`.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-a-push-configuration ----------------------------
+     * @param {String} apiToken 
      * @param {String} pushType 
      * @param {String} providerId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewPushConfigurationByIdResponse}
      */
 
   }, {
     key: "viewPushConfigurationById",
-    value: function viewPushConfigurationById(pushType, providerId, opts) {
-      return this.viewPushConfigurationByIdWithHttpInfo(pushType, providerId, opts).then(function (response_and_data) {
+    value: function viewPushConfigurationById(apiToken, pushType, providerId) {
+      return this.viewPushConfigurationByIdWithHttpInfo(apiToken, pushType, providerId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * View a push notification content template
      * ## View a push notification content template  Retrieves information on a specific push notification content templates of an application. The name of a content template is either `default` or `alternative`.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-a-push-notification-content-template ----------------------------
+     * @param {String} apiToken 
      * @param {String} templateName 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewPushNotificationContentTemplateResponse} and HTTP response
      */
 
   }, {
     key: "viewPushNotificationContentTemplateWithHttpInfo",
-    value: function viewPushNotificationContentTemplateWithHttpInfo(templateName, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'templateName' is set
+    value: function viewPushNotificationContentTemplateWithHttpInfo(apiToken, templateName) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling viewPushNotificationContentTemplate");
+      } // verify the required parameter 'templateName' is set
+
 
       if (templateName === undefined || templateName === null) {
         throw new Error("Missing the required parameter 'templateName' when calling viewPushNotificationContentTemplate");
@@ -1271,7 +1543,7 @@ var ApplicationApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -1283,33 +1555,35 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * View a push notification content template
      * ## View a push notification content template  Retrieves information on a specific push notification content templates of an application. The name of a content template is either `default` or `alternative`.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-a-push-notification-content-template ----------------------------
+     * @param {String} apiToken 
      * @param {String} templateName 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewPushNotificationContentTemplateResponse}
      */
 
   }, {
     key: "viewPushNotificationContentTemplate",
-    value: function viewPushNotificationContentTemplate(templateName, opts) {
-      return this.viewPushNotificationContentTemplateWithHttpInfo(templateName, opts).then(function (response_and_data) {
+    value: function viewPushNotificationContentTemplate(apiToken, templateName) {
+      return this.viewPushNotificationContentTemplateWithHttpInfo(apiToken, templateName).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * View a secondary API token
      * ## View a secondary API token  Retrieves the information on a secondary API token.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-a-secondary-api-token
+     * @param {String} apiToken 
      * @param {String} apiToken2 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewSecondaryApiTokenByTokenResponse} and HTTP response
      */
 
   }, {
     key: "viewSecondaryApiTokenByTokenWithHttpInfo",
-    value: function viewSecondaryApiTokenByTokenWithHttpInfo(apiToken2, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'apiToken2' is set
+    value: function viewSecondaryApiTokenByTokenWithHttpInfo(apiToken, apiToken2) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling viewSecondaryApiTokenByToken");
+      } // verify the required parameter 'apiToken2' is set
+
 
       if (apiToken2 === undefined || apiToken2 === null) {
         throw new Error("Missing the required parameter 'apiToken2' when calling viewSecondaryApiTokenByToken");
@@ -1320,7 +1594,7 @@ var ApplicationApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -1332,16 +1606,15 @@ var ApplicationApi = /*#__PURE__*/function () {
     /**
      * View a secondary API token
      * ## View a secondary API token  Retrieves the information on a secondary API token.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-a-secondary-api-token
+     * @param {String} apiToken 
      * @param {String} apiToken2 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewSecondaryApiTokenByTokenResponse}
      */
 
   }, {
     key: "viewSecondaryApiTokenByToken",
-    value: function viewSecondaryApiTokenByToken(apiToken2, opts) {
-      return this.viewSecondaryApiTokenByTokenWithHttpInfo(apiToken2, opts).then(function (response_and_data) {
+    value: function viewSecondaryApiTokenByToken(apiToken, apiToken2) {
+      return this.viewSecondaryApiTokenByTokenWithHttpInfo(apiToken, apiToken2).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

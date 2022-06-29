@@ -90,12 +90,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property metaarray (base name: "metaarray")', function() {
-      // uncomment below and update the code to test the property metaarray
-      //var instance = new SendbirdPlatformSdk.UpdateExtraDataInMessageData();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

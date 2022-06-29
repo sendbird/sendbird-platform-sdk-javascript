@@ -17,7 +17,7 @@ import SendBirdChannelResponse from './SendBirdChannelResponse';
 /**
  * The ListMutedChannelsResponse model module.
  * @module model/ListMutedChannelsResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ListMutedChannelsResponse {
     /**

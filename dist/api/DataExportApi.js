@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * DataExport service.
 * @module api/DataExportApi
-* @version 1.0.0
+* @version 1.0.3
 */
 var DataExportApi = /*#__PURE__*/function () {
   /**
@@ -44,9 +44,9 @@ var DataExportApi = /*#__PURE__*/function () {
   /**
    * List data exports by message, channel, or user
    * ## List data exports by message, channel, or user  Retrieves a list of message, channel or user data exports  https://sendbird.com/docs/chat/v3/platform-api/guides/data-export#2-list-data-exports-by-message,-channel,-or-user ----------------------------   `data_type`      Type: string      Description: Specifies the type of a data export to retrieve. Acceptable values are messages, channels, users, and failed_webhooks.
+   * @param {String} apiToken 
    * @param {String} dataType 
    * @param {Object} opts Optional parameters
-   * @param {String} opts.apiToken 
    * @param {String} opts.token 
    * @param {Number} opts.limit 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListDataExportsByMessageChannelOrUserResponse} and HTTP response
@@ -55,9 +55,14 @@ var DataExportApi = /*#__PURE__*/function () {
 
   _createClass(DataExportApi, [{
     key: "listDataExportsByMessageChannelOrUserWithHttpInfo",
-    value: function listDataExportsByMessageChannelOrUserWithHttpInfo(dataType, opts) {
+    value: function listDataExportsByMessageChannelOrUserWithHttpInfo(apiToken, dataType, opts) {
       opts = opts || {};
-      var postBody = null; // verify the required parameter 'dataType' is set
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling listDataExportsByMessageChannelOrUser");
+      } // verify the required parameter 'dataType' is set
+
 
       if (dataType === undefined || dataType === null) {
         throw new Error("Missing the required parameter 'dataType' when calling listDataExportsByMessageChannelOrUser");
@@ -71,7 +76,7 @@ var DataExportApi = /*#__PURE__*/function () {
         'limit': opts['limit']
       };
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -83,9 +88,9 @@ var DataExportApi = /*#__PURE__*/function () {
     /**
      * List data exports by message, channel, or user
      * ## List data exports by message, channel, or user  Retrieves a list of message, channel or user data exports  https://sendbird.com/docs/chat/v3/platform-api/guides/data-export#2-list-data-exports-by-message,-channel,-or-user ----------------------------   `data_type`      Type: string      Description: Specifies the type of a data export to retrieve. Acceptable values are messages, channels, users, and failed_webhooks.
+     * @param {String} apiToken 
      * @param {String} dataType 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListDataExportsByMessageChannelOrUserResponse}
@@ -93,26 +98,31 @@ var DataExportApi = /*#__PURE__*/function () {
 
   }, {
     key: "listDataExportsByMessageChannelOrUser",
-    value: function listDataExportsByMessageChannelOrUser(dataType, opts) {
-      return this.listDataExportsByMessageChannelOrUserWithHttpInfo(dataType, opts).then(function (response_and_data) {
+    value: function listDataExportsByMessageChannelOrUser(apiToken, dataType, opts) {
+      return this.listDataExportsByMessageChannelOrUserWithHttpInfo(apiToken, dataType, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Register and schedule a data export
      * ## Register and schedule a data export  Registers and schedules a message, channel, or user data export.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-export#2-register-and-schedule-a-data-export ----------------------------
+     * @param {String} apiToken 
      * @param {String} dataType 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/RegisterAndScheduleDataExportData} opts.registerAndScheduleDataExportData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RegisterAndScheduleDataExportResponse} and HTTP response
      */
 
   }, {
     key: "registerAndScheduleDataExportWithHttpInfo",
-    value: function registerAndScheduleDataExportWithHttpInfo(dataType, opts) {
+    value: function registerAndScheduleDataExportWithHttpInfo(apiToken, dataType, opts) {
       opts = opts || {};
-      var postBody = opts['registerAndScheduleDataExportData']; // verify the required parameter 'dataType' is set
+      var postBody = opts['registerAndScheduleDataExportData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling registerAndScheduleDataExport");
+      } // verify the required parameter 'dataType' is set
+
 
       if (dataType === undefined || dataType === null) {
         throw new Error("Missing the required parameter 'dataType' when calling registerAndScheduleDataExport");
@@ -123,7 +133,7 @@ var DataExportApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -135,35 +145,38 @@ var DataExportApi = /*#__PURE__*/function () {
     /**
      * Register and schedule a data export
      * ## Register and schedule a data export  Registers and schedules a message, channel, or user data export.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-export#2-register-and-schedule-a-data-export ----------------------------
+     * @param {String} apiToken 
      * @param {String} dataType 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/RegisterAndScheduleDataExportData} opts.registerAndScheduleDataExportData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RegisterAndScheduleDataExportResponse}
      */
 
   }, {
     key: "registerAndScheduleDataExport",
-    value: function registerAndScheduleDataExport(dataType, opts) {
-      return this.registerAndScheduleDataExportWithHttpInfo(dataType, opts).then(function (response_and_data) {
+    value: function registerAndScheduleDataExport(apiToken, dataType, opts) {
+      return this.registerAndScheduleDataExportWithHttpInfo(apiToken, dataType, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * View a data export
      * ## View a data export  Retrieves information on a message, channel or user data export.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-export#2-view-a-data-export ----------------------------   `data_type`      Type: string      Description: Specifies the type of a targeted data export. Acceptable values are messages, channels,  users, and failed_webhooks.  `request_id`      Type: string      Description: Specifies the unique ID of a data export to retrieve.
+     * @param {String} apiToken 
      * @param {String} dataType 
      * @param {String} requestId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewDataExportByIdResponse} and HTTP response
      */
 
   }, {
     key: "viewDataExportByIdWithHttpInfo",
-    value: function viewDataExportByIdWithHttpInfo(dataType, requestId, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'dataType' is set
+    value: function viewDataExportByIdWithHttpInfo(apiToken, dataType, requestId) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling viewDataExportById");
+      } // verify the required parameter 'dataType' is set
+
 
       if (dataType === undefined || dataType === null) {
         throw new Error("Missing the required parameter 'dataType' when calling viewDataExportById");
@@ -180,7 +193,7 @@ var DataExportApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -192,17 +205,16 @@ var DataExportApi = /*#__PURE__*/function () {
     /**
      * View a data export
      * ## View a data export  Retrieves information on a message, channel or user data export.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-export#2-view-a-data-export ----------------------------   `data_type`      Type: string      Description: Specifies the type of a targeted data export. Acceptable values are messages, channels,  users, and failed_webhooks.  `request_id`      Type: string      Description: Specifies the unique ID of a data export to retrieve.
+     * @param {String} apiToken 
      * @param {String} dataType 
      * @param {String} requestId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewDataExportByIdResponse}
      */
 
   }, {
     key: "viewDataExportById",
-    value: function viewDataExportById(dataType, requestId, opts) {
-      return this.viewDataExportByIdWithHttpInfo(dataType, requestId, opts).then(function (response_and_data) {
+    value: function viewDataExportById(apiToken, dataType, requestId) {
+      return this.viewDataExportByIdWithHttpInfo(apiToken, dataType, requestId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

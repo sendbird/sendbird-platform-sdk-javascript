@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewNumberOfConcurrentConnectionsResponse model module.
  * @module model/ViewNumberOfConcurrentConnectionsResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ViewNumberOfConcurrentConnectionsResponse = /*#__PURE__*/function () {
   /**

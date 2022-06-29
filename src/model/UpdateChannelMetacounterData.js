@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateChannelMetacounterData model module.
  * @module model/UpdateChannelMetacounterData
- * @version 1.0.1
+ * @version 1.0.3
  */
 class UpdateChannelMetacounterData {
     /**

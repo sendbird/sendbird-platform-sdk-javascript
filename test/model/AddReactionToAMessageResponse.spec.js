@@ -84,6 +84,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property msgId (base name: "msg_id")', function() {
+      // uncomment below and update the code to test the property msgId
+      //var instance = new SendbirdPlatformSdk.AddReactionToAMessageResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

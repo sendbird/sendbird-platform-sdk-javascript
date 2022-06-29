@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdatePushPreferencesData model module.
  * @module model/UpdatePushPreferencesData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var UpdatePushPreferencesData = /*#__PURE__*/function () {
   /**

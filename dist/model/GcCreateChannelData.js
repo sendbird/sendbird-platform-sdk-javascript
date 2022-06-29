@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcCreateChannelData model module.
  * @module model/GcCreateChannelData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcCreateChannelData = /*#__PURE__*/function () {
   /**

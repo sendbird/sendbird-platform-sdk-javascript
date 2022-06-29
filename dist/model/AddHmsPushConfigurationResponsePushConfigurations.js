@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddHmsPushConfigurationResponsePushConfigurations model module.
  * @module model/AddHmsPushConfigurationResponsePushConfigurations
- * @version 1.0.0
+ * @version 1.0.3
  */
 var AddHmsPushConfigurationResponsePushConfigurations = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChooseWhichEventsToSubscribeToResponseWebhook model module.
  * @module model/ChooseWhichEventsToSubscribeToResponseWebhook
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ChooseWhichEventsToSubscribeToResponseWebhook = /*#__PURE__*/function () {
   /**
@@ -69,6 +69,10 @@ var ChooseWhichEventsToSubscribeToResponseWebhook = /*#__PURE__*/function () {
         if (data.hasOwnProperty('enabled_events')) {
           obj['enabled_events'] = _ApiClient["default"].convertToType(data['enabled_events'], ['String']);
         }
+
+        if (data.hasOwnProperty('include_unread_count')) {
+          obj['include_unread_count'] = _ApiClient["default"].convertToType(data['include_unread_count'], 'Boolean');
+        }
       }
 
       return obj;
@@ -98,5 +102,10 @@ ChooseWhichEventsToSubscribeToResponseWebhook.prototype['include_members'] = und
  */
 
 ChooseWhichEventsToSubscribeToResponseWebhook.prototype['enabled_events'] = undefined;
+/**
+ * @member {Boolean} include_unread_count
+ */
+
+ChooseWhichEventsToSubscribeToResponseWebhook.prototype['include_unread_count'] = undefined;
 var _default = ChooseWhichEventsToSubscribeToResponseWebhook;
 exports["default"] = _default;

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListPushNotificationContentTemplatesResponsePushMessageTemplates model module.
  * @module model/ListPushNotificationContentTemplatesResponsePushMessageTemplates
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListPushNotificationContentTemplatesResponsePushMessageTemplates = /*#__PURE__*/function () {
   /**

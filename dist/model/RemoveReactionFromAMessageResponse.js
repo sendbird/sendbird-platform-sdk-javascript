@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RemoveReactionFromAMessageResponse model module.
  * @module model/RemoveReactionFromAMessageResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var RemoveReactionFromAMessageResponse = /*#__PURE__*/function () {
   /**
@@ -54,24 +54,28 @@ var RemoveReactionFromAMessageResponse = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new RemoveReactionFromAMessageResponse();
 
-        if (data.hasOwnProperty('user_id')) {
-          obj['user_id'] = _ApiClient["default"].convertToType(data['user_id'], 'String');
+        if (data.hasOwnProperty('reaction')) {
+          obj['reaction'] = _ApiClient["default"].convertToType(data['reaction'], 'String');
         }
 
-        if (data.hasOwnProperty('operation')) {
-          obj['operation'] = _ApiClient["default"].convertToType(data['operation'], 'String');
+        if (data.hasOwnProperty('user_id')) {
+          obj['user_id'] = _ApiClient["default"].convertToType(data['user_id'], 'Number');
         }
 
         if (data.hasOwnProperty('success')) {
           obj['success'] = _ApiClient["default"].convertToType(data['success'], 'Boolean');
         }
 
-        if (data.hasOwnProperty('reaction')) {
-          obj['reaction'] = _ApiClient["default"].convertToType(data['reaction'], 'String');
+        if (data.hasOwnProperty('msg_id')) {
+          obj['msg_id'] = _ApiClient["default"].convertToType(data['msg_id'], 'Number');
         }
 
         if (data.hasOwnProperty('updated_at')) {
           obj['updated_at'] = _ApiClient["default"].convertToType(data['updated_at'], 'Number');
+        }
+
+        if (data.hasOwnProperty('operation')) {
+          obj['operation'] = _ApiClient["default"].convertToType(data['operation'], 'String');
         }
       }
 
@@ -82,30 +86,35 @@ var RemoveReactionFromAMessageResponse = /*#__PURE__*/function () {
   return RemoveReactionFromAMessageResponse;
 }();
 /**
- * @member {String} user_id
+ * @member {String} reaction
  */
 
+
+RemoveReactionFromAMessageResponse.prototype['reaction'] = undefined;
+/**
+ * @member {Number} user_id
+ */
 
 RemoveReactionFromAMessageResponse.prototype['user_id'] = undefined;
-/**
- * @member {String} operation
- */
-
-RemoveReactionFromAMessageResponse.prototype['operation'] = undefined;
 /**
  * @member {Boolean} success
  */
 
 RemoveReactionFromAMessageResponse.prototype['success'] = undefined;
 /**
- * @member {String} reaction
+ * @member {Number} msg_id
  */
 
-RemoveReactionFromAMessageResponse.prototype['reaction'] = undefined;
+RemoveReactionFromAMessageResponse.prototype['msg_id'] = undefined;
 /**
  * @member {Number} updated_at
  */
 
 RemoveReactionFromAMessageResponse.prototype['updated_at'] = undefined;
+/**
+ * @member {String} operation
+ */
+
+RemoveReactionFromAMessageResponse.prototype['operation'] = undefined;
 var _default = RemoveReactionFromAMessageResponse;
 exports["default"] = _default;

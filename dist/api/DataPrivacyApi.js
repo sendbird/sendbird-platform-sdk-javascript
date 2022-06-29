@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * DataPrivacy service.
 * @module api/DataPrivacyApi
-* @version 1.0.0
+* @version 1.0.1
 */
 var DataPrivacyApi = /*#__PURE__*/function () {
   /**
@@ -44,18 +44,21 @@ var DataPrivacyApi = /*#__PURE__*/function () {
   /**
    * Cancel the registration of a GDPR request
    * ## Cancel the registration of a GDPR request  Cancels the registration of a specific GDPR request.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-privacy#2-cancel-the-registration-of-a-gdpr-request ----------------------------
+   * @param {String} apiToken 
    * @param {String} requestId 
-   * @param {Object} opts Optional parameters
-   * @param {String} opts.apiToken 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
    */
 
 
   _createClass(DataPrivacyApi, [{
     key: "cancelTheRegistrationOfGdprRequestByIdWithHttpInfo",
-    value: function cancelTheRegistrationOfGdprRequestByIdWithHttpInfo(requestId, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'requestId' is set
+    value: function cancelTheRegistrationOfGdprRequestByIdWithHttpInfo(apiToken, requestId) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling cancelTheRegistrationOfGdprRequestById");
+      } // verify the required parameter 'requestId' is set
+
 
       if (requestId === undefined || requestId === null) {
         throw new Error("Missing the required parameter 'requestId' when calling cancelTheRegistrationOfGdprRequestById");
@@ -66,7 +69,7 @@ var DataPrivacyApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -78,24 +81,23 @@ var DataPrivacyApi = /*#__PURE__*/function () {
     /**
      * Cancel the registration of a GDPR request
      * ## Cancel the registration of a GDPR request  Cancels the registration of a specific GDPR request.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-privacy#2-cancel-the-registration-of-a-gdpr-request ----------------------------
+     * @param {String} apiToken 
      * @param {String} requestId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
     key: "cancelTheRegistrationOfGdprRequestById",
-    value: function cancelTheRegistrationOfGdprRequestById(requestId, opts) {
-      return this.cancelTheRegistrationOfGdprRequestByIdWithHttpInfo(requestId, opts).then(function (response_and_data) {
+    value: function cancelTheRegistrationOfGdprRequestById(apiToken, requestId) {
+      return this.cancelTheRegistrationOfGdprRequestByIdWithHttpInfo(apiToken, requestId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * List GDPR requests
      * ## List GDPR requests  Retrieves a list of GDPR requests of all types.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-privacy#2-list-gdpr-requests ----------------------------
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListGdprRequestsResponse} and HTTP response
@@ -103,16 +105,21 @@ var DataPrivacyApi = /*#__PURE__*/function () {
 
   }, {
     key: "listGdprRequestsWithHttpInfo",
-    value: function listGdprRequestsWithHttpInfo(opts) {
+    value: function listGdprRequestsWithHttpInfo(apiToken, opts) {
       opts = opts || {};
-      var postBody = null;
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling listGdprRequests");
+      }
+
       var pathParams = {};
       var queryParams = {
         'token': opts['token'],
         'limit': opts['limit']
       };
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -124,8 +131,8 @@ var DataPrivacyApi = /*#__PURE__*/function () {
     /**
      * List GDPR requests
      * ## List GDPR requests  Retrieves a list of GDPR requests of all types.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-privacy#2-list-gdpr-requests ----------------------------
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.token 
      * @param {Number} opts.limit 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListGdprRequestsResponse}
@@ -133,29 +140,34 @@ var DataPrivacyApi = /*#__PURE__*/function () {
 
   }, {
     key: "listGdprRequests",
-    value: function listGdprRequests(opts) {
-      return this.listGdprRequestsWithHttpInfo(opts).then(function (response_and_data) {
+    value: function listGdprRequests(apiToken, opts) {
+      return this.listGdprRequestsWithHttpInfo(apiToken, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Register a GDPR request
      * ## Register a GDPR request  Registers a specific type of GDPR request to meet the GDPR's requirements.  > __Note__: Currently, only delete and access of the user data are supported. The features for the [right to restriction of processing](https://gdpr-info.eu/art-18-gdpr/) and [right to object](https://gdpr-info.eu/art-21-gdpr/) will be available soon.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-privacy#2-register-a-gdpr-request
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/RegisterGdprRequestData} opts.registerGdprRequestData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RegisterGdprRequestResponse} and HTTP response
      */
 
   }, {
     key: "registerGdprRequestWithHttpInfo",
-    value: function registerGdprRequestWithHttpInfo(opts) {
+    value: function registerGdprRequestWithHttpInfo(apiToken, opts) {
       opts = opts || {};
-      var postBody = opts['registerGdprRequestData'];
+      var postBody = opts['registerGdprRequestData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling registerGdprRequest");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -167,33 +179,36 @@ var DataPrivacyApi = /*#__PURE__*/function () {
     /**
      * Register a GDPR request
      * ## Register a GDPR request  Registers a specific type of GDPR request to meet the GDPR's requirements.  > __Note__: Currently, only delete and access of the user data are supported. The features for the [right to restriction of processing](https://gdpr-info.eu/art-18-gdpr/) and [right to object](https://gdpr-info.eu/art-21-gdpr/) will be available soon.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-privacy#2-register-a-gdpr-request
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/RegisterGdprRequestData} opts.registerGdprRequestData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RegisterGdprRequestResponse}
      */
 
   }, {
     key: "registerGdprRequest",
-    value: function registerGdprRequest(opts) {
-      return this.registerGdprRequestWithHttpInfo(opts).then(function (response_and_data) {
+    value: function registerGdprRequest(apiToken, opts) {
+      return this.registerGdprRequestWithHttpInfo(apiToken, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * View a GDPR request
      * ## View a GDPR request  Retrieves a specific GDPR request.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-privacy#2-view-a-gdpr-request ----------------------------
+     * @param {String} apiToken 
      * @param {String} requestId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewGdprRequestByIdResponse} and HTTP response
      */
 
   }, {
     key: "viewGdprRequestByIdWithHttpInfo",
-    value: function viewGdprRequestByIdWithHttpInfo(requestId, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'requestId' is set
+    value: function viewGdprRequestByIdWithHttpInfo(apiToken, requestId) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling viewGdprRequestById");
+      } // verify the required parameter 'requestId' is set
+
 
       if (requestId === undefined || requestId === null) {
         throw new Error("Missing the required parameter 'requestId' when calling viewGdprRequestById");
@@ -204,7 +219,7 @@ var DataPrivacyApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -216,16 +231,15 @@ var DataPrivacyApi = /*#__PURE__*/function () {
     /**
      * View a GDPR request
      * ## View a GDPR request  Retrieves a specific GDPR request.  https://sendbird.com/docs/chat/v3/platform-api/guides/data-privacy#2-view-a-gdpr-request ----------------------------
+     * @param {String} apiToken 
      * @param {String} requestId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewGdprRequestByIdResponse}
      */
 
   }, {
     key: "viewGdprRequestById",
-    value: function viewGdprRequestById(requestId, opts) {
-      return this.viewGdprRequestByIdWithHttpInfo(requestId, opts).then(function (response_and_data) {
+    value: function viewGdprRequestById(apiToken, requestId) {
+      return this.viewGdprRequestByIdWithHttpInfo(apiToken, requestId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

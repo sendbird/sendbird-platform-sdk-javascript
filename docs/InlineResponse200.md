@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**anyOf** | **String** |  | [optional] 
+**mutedList** | [**[SendBirdUser]**](SendBirdUser.md) |  | [optional] 
+**next** | **String** |  | [optional] 
 
 

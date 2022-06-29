@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdRestrictionInfo model module.
  * @module model/SendBirdRestrictionInfo
- * @version 1.0.0
+ * @version 1.0.3
  */
 var SendBirdRestrictionInfo = /*#__PURE__*/function () {
   /**

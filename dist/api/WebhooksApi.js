@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Webhooks service.
 * @module api/WebhooksApi
-* @version 1.0.0
+* @version 1.0.3
 */
 var WebhooksApi = /*#__PURE__*/function () {
   /**
@@ -42,8 +42,8 @@ var WebhooksApi = /*#__PURE__*/function () {
   /**
    * Choose which events to subscribe to
    * ## Choose which events to subscribe to  Chooses which events for your webhook server to receive payloads for. By subscribing to specific events based on your own needs, you can control the number of HTTP requests to your webhook server.  https://sendbird.com/docs/chat/v3/platform-api/guides/webhooks#2-choose-which-events-to-subscribe-to
+   * @param {String} apiToken 
    * @param {Object} opts Optional parameters
-   * @param {String} opts.apiToken 
    * @param {module:model/ChooseWhichEventsToSubscribeToData} opts.chooseWhichEventsToSubscribeToData 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChooseWhichEventsToSubscribeToResponse} and HTTP response
    */
@@ -51,13 +51,18 @@ var WebhooksApi = /*#__PURE__*/function () {
 
   _createClass(WebhooksApi, [{
     key: "chooseWhichEventsToSubscribeToWithHttpInfo",
-    value: function chooseWhichEventsToSubscribeToWithHttpInfo(opts) {
+    value: function chooseWhichEventsToSubscribeToWithHttpInfo(apiToken, opts) {
       opts = opts || {};
-      var postBody = opts['chooseWhichEventsToSubscribeToData'];
+      var postBody = opts['chooseWhichEventsToSubscribeToData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling chooseWhichEventsToSubscribeTo");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -69,39 +74,44 @@ var WebhooksApi = /*#__PURE__*/function () {
     /**
      * Choose which events to subscribe to
      * ## Choose which events to subscribe to  Chooses which events for your webhook server to receive payloads for. By subscribing to specific events based on your own needs, you can control the number of HTTP requests to your webhook server.  https://sendbird.com/docs/chat/v3/platform-api/guides/webhooks#2-choose-which-events-to-subscribe-to
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/ChooseWhichEventsToSubscribeToData} opts.chooseWhichEventsToSubscribeToData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChooseWhichEventsToSubscribeToResponse}
      */
 
   }, {
     key: "chooseWhichEventsToSubscribeTo",
-    value: function chooseWhichEventsToSubscribeTo(opts) {
-      return this.chooseWhichEventsToSubscribeToWithHttpInfo(opts).then(function (response_and_data) {
+    value: function chooseWhichEventsToSubscribeTo(apiToken, opts) {
+      return this.chooseWhichEventsToSubscribeToWithHttpInfo(apiToken, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Retrieve a list of subscribed events
      * ## Retrieve a list of subscribed events  Retrieves a list of events for your webhook server to receive payloads for.  https://sendbird.com/docs/chat/v3/platform-api/guides/webhooks#2-retrieve-a-list-of-subscribed-events ----------------------------
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Boolean} opts.displayAllWebhookCategories 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RetrieveListOfSubscribedEventsResponse} and HTTP response
      */
 
   }, {
     key: "retrieveListOfSubscribedEventsWithHttpInfo",
-    value: function retrieveListOfSubscribedEventsWithHttpInfo(opts) {
+    value: function retrieveListOfSubscribedEventsWithHttpInfo(apiToken, opts) {
       opts = opts || {};
-      var postBody = null;
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling retrieveListOfSubscribedEvents");
+      }
+
       var pathParams = {};
       var queryParams = {
         'display_all_webhook_categories': opts['displayAllWebhookCategories']
       };
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -113,16 +123,16 @@ var WebhooksApi = /*#__PURE__*/function () {
     /**
      * Retrieve a list of subscribed events
      * ## Retrieve a list of subscribed events  Retrieves a list of events for your webhook server to receive payloads for.  https://sendbird.com/docs/chat/v3/platform-api/guides/webhooks#2-retrieve-a-list-of-subscribed-events ----------------------------
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Boolean} opts.displayAllWebhookCategories 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RetrieveListOfSubscribedEventsResponse}
      */
 
   }, {
     key: "retrieveListOfSubscribedEvents",
-    value: function retrieveListOfSubscribedEvents(opts) {
-      return this.retrieveListOfSubscribedEventsWithHttpInfo(opts).then(function (response_and_data) {
+    value: function retrieveListOfSubscribedEvents(apiToken, opts) {
+      return this.retrieveListOfSubscribedEventsWithHttpInfo(apiToken, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

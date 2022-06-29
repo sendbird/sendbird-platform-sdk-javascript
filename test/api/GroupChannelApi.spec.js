@@ -58,16 +58,6 @@
         done();
       });
     });
-    describe('gcBanUser', function() {
-      it('should call gcBanUser successfully', function(done) {
-        //uncomment below and update the code to test gcBanUser
-        //instance.gcBanUser(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('gcCancelTheRegistrationOfOperators', function() {
       it('should call gcCancelTheRegistrationOfOperators successfully', function(done) {
         //uncomment below and update the code to test gcCancelTheRegistrationOfOperators
@@ -118,16 +108,6 @@
         done();
       });
     });
-    describe('gcFreezeChannel', function() {
-      it('should call gcFreezeChannel successfully', function(done) {
-        //uncomment below and update the code to test gcFreezeChannel
-        //instance.gcFreezeChannel(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('gcHideOrArchiveChannel', function() {
       it('should call gcHideOrArchiveChannel successfully', function(done) {
         //uncomment below and update the code to test gcHideOrArchiveChannel
@@ -168,16 +148,6 @@
         done();
       });
     });
-    describe('gcListBannedUsers', function() {
-      it('should call gcListBannedUsers successfully', function(done) {
-        //uncomment below and update the code to test gcListBannedUsers
-        //instance.gcListBannedUsers(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('gcListChannels', function() {
       it('should call gcListChannels successfully', function(done) {
         //uncomment below and update the code to test gcListChannels
@@ -198,30 +168,10 @@
         done();
       });
     });
-    describe('gcListMutedUsers', function() {
-      it('should call gcListMutedUsers successfully', function(done) {
-        //uncomment below and update the code to test gcListMutedUsers
-        //instance.gcListMutedUsers(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('gcListOperators', function() {
       it('should call gcListOperators successfully', function(done) {
         //uncomment below and update the code to test gcListOperators
         //instance.gcListOperators(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('gcMuteUser', function() {
-      it('should call gcMuteUser successfully', function(done) {
-        //uncomment below and update the code to test gcMuteUser
-        //instance.gcMuteUser(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -248,40 +198,10 @@
         done();
       });
     });
-    describe('gcUnbanUserById', function() {
-      it('should call gcUnbanUserById successfully', function(done) {
-        //uncomment below and update the code to test gcUnbanUserById
-        //instance.gcUnbanUserById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('gcUnhideOrUnarchiveChannel', function() {
       it('should call gcUnhideOrUnarchiveChannel successfully', function(done) {
         //uncomment below and update the code to test gcUnhideOrUnarchiveChannel
         //instance.gcUnhideOrUnarchiveChannel(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('gcUnmuteUserById', function() {
-      it('should call gcUnmuteUserById successfully', function(done) {
-        //uncomment below and update the code to test gcUnmuteUserById
-        //instance.gcUnmuteUserById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('gcUpdateBanById', function() {
-      it('should call gcUpdateBanById successfully', function(done) {
-        //uncomment below and update the code to test gcUpdateBanById
-        //instance.gcUpdateBanById(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -298,30 +218,10 @@
         done();
       });
     });
-    describe('gcViewBanById', function() {
-      it('should call gcViewBanById successfully', function(done) {
-        //uncomment below and update the code to test gcViewBanById
-        //instance.gcViewBanById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('gcViewChannelByUrl', function() {
       it('should call gcViewChannelByUrl successfully', function(done) {
         //uncomment below and update the code to test gcViewChannelByUrl
         //instance.gcViewChannelByUrl(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('gcViewMuteById', function() {
-      it('should call gcViewMuteById successfully', function(done) {
-        //uncomment below and update the code to test gcViewMuteById
-        //instance.gcViewMuteById(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddEmojisResponse model module.
  * @module model/AddEmojisResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var AddEmojisResponse = /*#__PURE__*/function () {
   /**

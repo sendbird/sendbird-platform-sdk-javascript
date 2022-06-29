@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _SendBirdUser = _interopRequireDefault(require("./SendBirdUser"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse200 model module.
  * @module model/InlineResponse200
- * @version 1.0.0
+ * @version 1.0.3
  */
 var InlineResponse200 = /*#__PURE__*/function () {
   /**
@@ -54,8 +56,12 @@ var InlineResponse200 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse200();
 
-        if (data.hasOwnProperty('ccu')) {
-          obj['ccu'] = _ApiClient["default"].convertToType(data['ccu'], 'Number');
+        if (data.hasOwnProperty('muted_list')) {
+          obj['muted_list'] = _ApiClient["default"].convertToType(data['muted_list'], [_SendBirdUser["default"]]);
+        }
+
+        if (data.hasOwnProperty('next')) {
+          obj['next'] = _ApiClient["default"].convertToType(data['next'], 'String');
         }
       }
 
@@ -66,10 +72,15 @@ var InlineResponse200 = /*#__PURE__*/function () {
   return InlineResponse200;
 }();
 /**
- * @member {Number} ccu
+ * @member {Array.<module:model/SendBirdUser>} muted_list
  */
 
 
-InlineResponse200.prototype['ccu'] = undefined;
+InlineResponse200.prototype['muted_list'] = undefined;
+/**
+ * @member {String} next
+ */
+
+InlineResponse200.prototype['next'] = undefined;
 var _default = InlineResponse200;
 exports["default"] = _default;

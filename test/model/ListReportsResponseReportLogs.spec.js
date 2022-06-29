@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.ListReportsResponseReportLogs);
     });
 
+    it('should have the property reportingUser (base name: "reporting_user")', function() {
+      // uncomment below and update the code to test the property reportingUser
+      //var instance = new SendbirdPlatformSdk.ListReportsResponseReportLogs();
+      //expect(instance).to.be();
+    });
+
     it('should have the property reportType (base name: "report_type")', function() {
       // uncomment below and update the code to test the property reportType
       //var instance = new SendbirdPlatformSdk.ListReportsResponseReportLogs();

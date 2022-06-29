@@ -54,8 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.InlineResponse200);
     });
 
-    it('should have the property anyOf (base name: "anyOf")', function() {
-      // uncomment below and update the code to test the property anyOf
+    it('should have the property mutedList (base name: "muted_list")', function() {
+      // uncomment below and update the code to test the property mutedList
+      //var instance = new SendbirdPlatformSdk.InlineResponse200();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property next (base name: "next")', function() {
+      // uncomment below and update the code to test the property next
       //var instance = new SendbirdPlatformSdk.InlineResponse200();
       //expect(instance).to.be();
     });

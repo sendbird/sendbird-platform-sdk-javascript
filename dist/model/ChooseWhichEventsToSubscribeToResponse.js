@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChooseWhichEventsToSubscribeToResponse model module.
  * @module model/ChooseWhichEventsToSubscribeToResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ChooseWhichEventsToSubscribeToResponse = /*#__PURE__*/function () {
   /**

@@ -12,13 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse200 from './InlineResponse200';
+import InlineResponse2001 from './InlineResponse2001';
 import SendBirdUser from './SendBirdUser';
 
 /**
  * The OcBanUserResponse model module.
  * @module model/OcBanUserResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class OcBanUserResponse {
     /**
@@ -77,7 +77,7 @@ class OcBanUserResponse {
                 obj['profile_url'] = ApiClient.convertToType(data['profile_url'], 'String');
             }
             if (data.hasOwnProperty('metadata')) {
-                obj['metadata'] = InlineResponse200.constructFromObject(data['metadata']);
+                obj['metadata'] = InlineResponse2001.constructFromObject(data['metadata']);
             }
         }
         return obj;
@@ -132,7 +132,7 @@ OcBanUserResponse.prototype['nickname'] = undefined;
 OcBanUserResponse.prototype['profile_url'] = undefined;
 
 /**
- * @member {module:model/InlineResponse200} metadata
+ * @member {module:model/InlineResponse2001} metadata
  */
 OcBanUserResponse.prototype['metadata'] = undefined;
 

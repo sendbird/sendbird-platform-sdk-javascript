@@ -44,7 +44,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Emojis service.
 * @module api/EmojisApi
-* @version 1.0.0
+* @version 1.0.1
 */
 var EmojisApi = /*#__PURE__*/function () {
   /**
@@ -62,8 +62,8 @@ var EmojisApi = /*#__PURE__*/function () {
   /**
    * Add emoji categories
    * ## Add emoji categories  Adds a list of one or more new emoji categories to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-add-emoji-categories
+   * @param {String} apiToken 
    * @param {Object} opts Optional parameters
-   * @param {String} opts.apiToken 
    * @param {Object.<String, Object>} opts.body 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddEmojiCategoriesResponse} and HTTP response
    */
@@ -71,13 +71,18 @@ var EmojisApi = /*#__PURE__*/function () {
 
   _createClass(EmojisApi, [{
     key: "addEmojiCategoriesWithHttpInfo",
-    value: function addEmojiCategoriesWithHttpInfo(opts) {
+    value: function addEmojiCategoriesWithHttpInfo(apiToken, opts) {
       opts = opts || {};
-      var postBody = opts['body'];
+      var postBody = opts['body']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling addEmojiCategories");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -89,37 +94,42 @@ var EmojisApi = /*#__PURE__*/function () {
     /**
      * Add emoji categories
      * ## Add emoji categories  Adds a list of one or more new emoji categories to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-add-emoji-categories
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddEmojiCategoriesResponse}
      */
 
   }, {
     key: "addEmojiCategories",
-    value: function addEmojiCategories(opts) {
-      return this.addEmojiCategoriesWithHttpInfo(opts).then(function (response_and_data) {
+    value: function addEmojiCategories(apiToken, opts) {
+      return this.addEmojiCategoriesWithHttpInfo(apiToken, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Add emojis
      * ## Add emojis  Adds a list of one or more new emojis to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-add-emojis
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/AddEmojisData} opts.addEmojisData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddEmojisResponse} and HTTP response
      */
 
   }, {
     key: "addEmojisWithHttpInfo",
-    value: function addEmojisWithHttpInfo(opts) {
+    value: function addEmojisWithHttpInfo(apiToken, opts) {
       opts = opts || {};
-      var postBody = opts['addEmojisData'];
+      var postBody = opts['addEmojisData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling addEmojis");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -131,33 +141,36 @@ var EmojisApi = /*#__PURE__*/function () {
     /**
      * Add emojis
      * ## Add emojis  Adds a list of one or more new emojis to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-add-emojis
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/AddEmojisData} opts.addEmojisData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddEmojisResponse}
      */
 
   }, {
     key: "addEmojis",
-    value: function addEmojis(opts) {
-      return this.addEmojisWithHttpInfo(opts).then(function (response_and_data) {
+    value: function addEmojis(apiToken, opts) {
+      return this.addEmojisWithHttpInfo(apiToken, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Delete an emoji
      * ## Delete an emoji  Deletes an emoji from the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-delete-an-emoji ----------------------------
+     * @param {String} apiToken 
      * @param {String} emojiKey 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
     key: "deleteEmojiByKeyWithHttpInfo",
-    value: function deleteEmojiByKeyWithHttpInfo(emojiKey, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'emojiKey' is set
+    value: function deleteEmojiByKeyWithHttpInfo(apiToken, emojiKey) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling deleteEmojiByKey");
+      } // verify the required parameter 'emojiKey' is set
+
 
       if (emojiKey === undefined || emojiKey === null) {
         throw new Error("Missing the required parameter 'emojiKey' when calling deleteEmojiByKey");
@@ -168,7 +181,7 @@ var EmojisApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -180,33 +193,35 @@ var EmojisApi = /*#__PURE__*/function () {
     /**
      * Delete an emoji
      * ## Delete an emoji  Deletes an emoji from the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-delete-an-emoji ----------------------------
+     * @param {String} apiToken 
      * @param {String} emojiKey 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
     key: "deleteEmojiByKey",
-    value: function deleteEmojiByKey(emojiKey, opts) {
-      return this.deleteEmojiByKeyWithHttpInfo(emojiKey, opts).then(function (response_and_data) {
+    value: function deleteEmojiByKey(apiToken, emojiKey) {
+      return this.deleteEmojiByKeyWithHttpInfo(apiToken, emojiKey).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Delete an emoji category
      * ## Delete an emoji category  Deletes an emoji category with the specified ID.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-delete-an-emoji-category ----------------------------
+     * @param {String} apiToken 
      * @param {String} emojiCategoryId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
 
   }, {
     key: "deleteEmojiCategoryByIdWithHttpInfo",
-    value: function deleteEmojiCategoryByIdWithHttpInfo(emojiCategoryId, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'emojiCategoryId' is set
+    value: function deleteEmojiCategoryByIdWithHttpInfo(apiToken, emojiCategoryId) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling deleteEmojiCategoryById");
+      } // verify the required parameter 'emojiCategoryId' is set
+
 
       if (emojiCategoryId === undefined || emojiCategoryId === null) {
         throw new Error("Missing the required parameter 'emojiCategoryId' when calling deleteEmojiCategoryById");
@@ -217,49 +232,53 @@ var EmojisApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
       var contentTypes = [];
-      var accepts = [];
-      var returnType = null;
+      var accepts = ['application/json'];
+      var returnType = Object;
       return this.apiClient.callApi('/v3/emoji_categories/{emoji_category_id}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Delete an emoji category
      * ## Delete an emoji category  Deletes an emoji category with the specified ID.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-delete-an-emoji-category ----------------------------
+     * @param {String} apiToken 
      * @param {String} emojiCategoryId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
 
   }, {
     key: "deleteEmojiCategoryById",
-    value: function deleteEmojiCategoryById(emojiCategoryId, opts) {
-      return this.deleteEmojiCategoryByIdWithHttpInfo(emojiCategoryId, opts).then(function (response_and_data) {
+    value: function deleteEmojiCategoryById(apiToken, emojiCategoryId) {
+      return this.deleteEmojiCategoryByIdWithHttpInfo(apiToken, emojiCategoryId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Enable reactions
      * ## Enable reactions  Turn on or off reactions in a Sendbird application.  > __Note__: This action also allows reactions in UIKit.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-enable-reactions
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/EnableReactionsData} opts.enableReactionsData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EnableReactionsResponse} and HTTP response
      */
 
   }, {
     key: "enableReactionsWithHttpInfo",
-    value: function enableReactionsWithHttpInfo(opts) {
+    value: function enableReactionsWithHttpInfo(apiToken, opts) {
       opts = opts || {};
-      var postBody = opts['enableReactionsData'];
+      var postBody = opts['enableReactionsData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling enableReactions");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -271,33 +290,36 @@ var EmojisApi = /*#__PURE__*/function () {
     /**
      * Enable reactions
      * ## Enable reactions  Turn on or off reactions in a Sendbird application.  > __Note__: This action also allows reactions in UIKit.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-enable-reactions
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/EnableReactionsData} opts.enableReactionsData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EnableReactionsResponse}
      */
 
   }, {
     key: "enableReactions",
-    value: function enableReactions(opts) {
-      return this.enableReactionsWithHttpInfo(opts).then(function (response_and_data) {
+    value: function enableReactions(apiToken, opts) {
+      return this.enableReactionsWithHttpInfo(apiToken, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Get an emoji
      * ## Get an emoji  Retrieves an emoji with the specified key.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-get-an-emoji ----------------------------
+     * @param {String} apiToken 
      * @param {String} emojiKey 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdEmoji} and HTTP response
      */
 
   }, {
     key: "getEmojiByKeyWithHttpInfo",
-    value: function getEmojiByKeyWithHttpInfo(emojiKey, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'emojiKey' is set
+    value: function getEmojiByKeyWithHttpInfo(apiToken, emojiKey) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling getEmojiByKey");
+      } // verify the required parameter 'emojiKey' is set
+
 
       if (emojiKey === undefined || emojiKey === null) {
         throw new Error("Missing the required parameter 'emojiKey' when calling getEmojiByKey");
@@ -308,7 +330,7 @@ var EmojisApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -320,33 +342,35 @@ var EmojisApi = /*#__PURE__*/function () {
     /**
      * Get an emoji
      * ## Get an emoji  Retrieves an emoji with the specified key.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-get-an-emoji ----------------------------
+     * @param {String} apiToken 
      * @param {String} emojiKey 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdEmoji}
      */
 
   }, {
     key: "getEmojiByKey",
-    value: function getEmojiByKey(emojiKey, opts) {
-      return this.getEmojiByKeyWithHttpInfo(emojiKey, opts).then(function (response_and_data) {
+    value: function getEmojiByKey(apiToken, emojiKey) {
+      return this.getEmojiByKeyWithHttpInfo(apiToken, emojiKey).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Get an emoji category
      * ## Get an emoji category  Retrieves an emoji category with the specified ID, including its emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-get-an-emoji-category ----------------------------   `emoji_category_id`      Type: int      Description: Specifies the unique ID of the emoji category to retrieve.
+     * @param {String} apiToken 
      * @param {String} emojiCategoryId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdEmojiCategory} and HTTP response
      */
 
   }, {
     key: "getEmojiCategoryByIdWithHttpInfo",
-    value: function getEmojiCategoryByIdWithHttpInfo(emojiCategoryId, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'emojiCategoryId' is set
+    value: function getEmojiCategoryByIdWithHttpInfo(apiToken, emojiCategoryId) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling getEmojiCategoryById");
+      } // verify the required parameter 'emojiCategoryId' is set
+
 
       if (emojiCategoryId === undefined || emojiCategoryId === null) {
         throw new Error("Missing the required parameter 'emojiCategoryId' when calling getEmojiCategoryById");
@@ -357,7 +381,7 @@ var EmojisApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -369,36 +393,38 @@ var EmojisApi = /*#__PURE__*/function () {
     /**
      * Get an emoji category
      * ## Get an emoji category  Retrieves an emoji category with the specified ID, including its emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-get-an-emoji-category ----------------------------   `emoji_category_id`      Type: int      Description: Specifies the unique ID of the emoji category to retrieve.
+     * @param {String} apiToken 
      * @param {String} emojiCategoryId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdEmojiCategory}
      */
 
   }, {
     key: "getEmojiCategoryById",
-    value: function getEmojiCategoryById(emojiCategoryId, opts) {
-      return this.getEmojiCategoryByIdWithHttpInfo(emojiCategoryId, opts).then(function (response_and_data) {
+    value: function getEmojiCategoryById(apiToken, emojiCategoryId) {
+      return this.getEmojiCategoryByIdWithHttpInfo(apiToken, emojiCategoryId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * List all emojis and emoji categories
      * ## List all emojis and emoji categories  Retrieves a list of all emoji categories registered to the application, including their emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-all-emojis-and-emoji-categories
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
+     * @param {String} apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListAllEmojisAndEmojiCategoriesResponse} and HTTP response
      */
 
   }, {
     key: "listAllEmojisAndEmojiCategoriesWithHttpInfo",
-    value: function listAllEmojisAndEmojiCategoriesWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = null;
+    value: function listAllEmojisAndEmojiCategoriesWithHttpInfo(apiToken) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling listAllEmojisAndEmojiCategories");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -410,35 +436,37 @@ var EmojisApi = /*#__PURE__*/function () {
     /**
      * List all emojis and emoji categories
      * ## List all emojis and emoji categories  Retrieves a list of all emoji categories registered to the application, including their emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-all-emojis-and-emoji-categories
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
+     * @param {String} apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListAllEmojisAndEmojiCategoriesResponse}
      */
 
   }, {
     key: "listAllEmojisAndEmojiCategories",
-    value: function listAllEmojisAndEmojiCategories(opts) {
-      return this.listAllEmojisAndEmojiCategoriesWithHttpInfo(opts).then(function (response_and_data) {
+    value: function listAllEmojisAndEmojiCategories(apiToken) {
+      return this.listAllEmojisAndEmojiCategoriesWithHttpInfo(apiToken).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * List emojis
      * ## List emojis  Retrieves a list of all emojis registered to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-emojis
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
+     * @param {String} apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListEmojisResponse} and HTTP response
      */
 
   }, {
     key: "listEmojisWithHttpInfo",
-    value: function listEmojisWithHttpInfo(opts) {
-      opts = opts || {};
-      var postBody = null;
+    value: function listEmojisWithHttpInfo(apiToken) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling listEmojis");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -450,33 +478,37 @@ var EmojisApi = /*#__PURE__*/function () {
     /**
      * List emojis
      * ## List emojis  Retrieves a list of all emojis registered to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-emojis
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
+     * @param {String} apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListEmojisResponse}
      */
 
   }, {
     key: "listEmojis",
-    value: function listEmojis(opts) {
-      return this.listEmojisWithHttpInfo(opts).then(function (response_and_data) {
+    value: function listEmojis(apiToken) {
+      return this.listEmojisWithHttpInfo(apiToken).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Update an emoji category URL
      * ## Update an emoji category URL  Updates the URL of an emoji category with the specified ID.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-update-an-emoji-category-url ----------------------------
+     * @param {String} apiToken 
      * @param {String} emojiCategoryId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateEmojiCategoryUrlByIdData} opts.updateEmojiCategoryUrlByIdData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdEmojiCategory} and HTTP response
      */
 
   }, {
     key: "updateEmojiCategoryUrlByIdWithHttpInfo",
-    value: function updateEmojiCategoryUrlByIdWithHttpInfo(emojiCategoryId, opts) {
+    value: function updateEmojiCategoryUrlByIdWithHttpInfo(apiToken, emojiCategoryId, opts) {
       opts = opts || {};
-      var postBody = opts['updateEmojiCategoryUrlByIdData']; // verify the required parameter 'emojiCategoryId' is set
+      var postBody = opts['updateEmojiCategoryUrlByIdData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling updateEmojiCategoryUrlById");
+      } // verify the required parameter 'emojiCategoryId' is set
+
 
       if (emojiCategoryId === undefined || emojiCategoryId === null) {
         throw new Error("Missing the required parameter 'emojiCategoryId' when calling updateEmojiCategoryUrlById");
@@ -487,7 +519,7 @@ var EmojisApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -499,35 +531,40 @@ var EmojisApi = /*#__PURE__*/function () {
     /**
      * Update an emoji category URL
      * ## Update an emoji category URL  Updates the URL of an emoji category with the specified ID.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-update-an-emoji-category-url ----------------------------
+     * @param {String} apiToken 
      * @param {String} emojiCategoryId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateEmojiCategoryUrlByIdData} opts.updateEmojiCategoryUrlByIdData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdEmojiCategory}
      */
 
   }, {
     key: "updateEmojiCategoryUrlById",
-    value: function updateEmojiCategoryUrlById(emojiCategoryId, opts) {
-      return this.updateEmojiCategoryUrlByIdWithHttpInfo(emojiCategoryId, opts).then(function (response_and_data) {
+    value: function updateEmojiCategoryUrlById(apiToken, emojiCategoryId, opts) {
+      return this.updateEmojiCategoryUrlByIdWithHttpInfo(apiToken, emojiCategoryId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Update an emoji URL
      * ## Update an emoji URL  Updates the image URL of an emoji with the specified key.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-update-an-emoji-url ----------------------------
+     * @param {String} apiToken 
      * @param {String} emojiKey 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateEmojiUrlByKeyData} opts.updateEmojiUrlByKeyData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdEmoji} and HTTP response
      */
 
   }, {
     key: "updateEmojiUrlByKeyWithHttpInfo",
-    value: function updateEmojiUrlByKeyWithHttpInfo(emojiKey, opts) {
+    value: function updateEmojiUrlByKeyWithHttpInfo(apiToken, emojiKey, opts) {
       opts = opts || {};
-      var postBody = opts['updateEmojiUrlByKeyData']; // verify the required parameter 'emojiKey' is set
+      var postBody = opts['updateEmojiUrlByKeyData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling updateEmojiUrlByKey");
+      } // verify the required parameter 'emojiKey' is set
+
 
       if (emojiKey === undefined || emojiKey === null) {
         throw new Error("Missing the required parameter 'emojiKey' when calling updateEmojiUrlByKey");
@@ -538,7 +575,7 @@ var EmojisApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -550,38 +587,43 @@ var EmojisApi = /*#__PURE__*/function () {
     /**
      * Update an emoji URL
      * ## Update an emoji URL  Updates the image URL of an emoji with the specified key.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-update-an-emoji-url ----------------------------
+     * @param {String} apiToken 
      * @param {String} emojiKey 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateEmojiUrlByKeyData} opts.updateEmojiUrlByKeyData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdEmoji}
      */
 
   }, {
     key: "updateEmojiUrlByKey",
-    value: function updateEmojiUrlByKey(emojiKey, opts) {
-      return this.updateEmojiUrlByKeyWithHttpInfo(emojiKey, opts).then(function (response_and_data) {
+    value: function updateEmojiUrlByKey(apiToken, emojiKey, opts) {
+      return this.updateEmojiUrlByKeyWithHttpInfo(apiToken, emojiKey, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Use default emojis
      * ## Use default emojis  Determines whether to use the 7 default emojis initially provided.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-use-default-emojis
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UseDefaultEmojisData} opts.useDefaultEmojisData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UseDefaultEmojisResponse} and HTTP response
      */
 
   }, {
     key: "useDefaultEmojisWithHttpInfo",
-    value: function useDefaultEmojisWithHttpInfo(opts) {
+    value: function useDefaultEmojisWithHttpInfo(apiToken, opts) {
       opts = opts || {};
-      var postBody = opts['useDefaultEmojisData'];
+      var postBody = opts['useDefaultEmojisData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling useDefaultEmojis");
+      }
+
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -593,16 +635,16 @@ var EmojisApi = /*#__PURE__*/function () {
     /**
      * Use default emojis
      * ## Use default emojis  Determines whether to use the 7 default emojis initially provided.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-use-default-emojis
+     * @param {String} apiToken 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UseDefaultEmojisData} opts.useDefaultEmojisData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UseDefaultEmojisResponse}
      */
 
   }, {
     key: "useDefaultEmojis",
-    value: function useDefaultEmojis(opts) {
-      return this.useDefaultEmojisWithHttpInfo(opts).then(function (response_and_data) {
+    value: function useDefaultEmojis(apiToken, opts) {
+      return this.useDefaultEmojisWithHttpInfo(apiToken, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

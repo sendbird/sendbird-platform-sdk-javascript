@@ -17,7 +17,7 @@ import ListBotsResponseBots from './ListBotsResponseBots';
 /**
  * The ListBotsResponse model module.
  * @module model/ListBotsResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ListBotsResponse {
     /**

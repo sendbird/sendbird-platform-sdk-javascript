@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import SendbirdUser from './SendbirdUser';
+import SendBirdUser from './SendBirdUser';
 
 /**
  * The OcViewBanByIdResponse model module.
  * @module model/OcViewBanByIdResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class OcViewBanByIdResponse {
     /**
@@ -49,7 +49,7 @@ class OcViewBanByIdResponse {
             obj = obj || new OcViewBanByIdResponse();
 
             if (data.hasOwnProperty('user')) {
-                obj['user'] = SendbirdUser.constructFromObject(data['user']);
+                obj['user'] = SendBirdUser.constructFromObject(data['user']);
             }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
@@ -68,7 +68,7 @@ class OcViewBanByIdResponse {
 }
 
 /**
- * @member {module:model/SendbirdUser} user
+ * @member {module:model/SendBirdUser} user
  */
 OcViewBanByIdResponse.prototype['user'] = undefined;
 

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdAdditionalProperties model module.
  * @module model/SendBirdAdditionalProperties
- * @version 1.0.0
+ * @version 1.0.3
  */
 var SendBirdAdditionalProperties = /*#__PURE__*/function () {
   /**

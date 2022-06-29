@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RetrieveListOfSubscribedEventsResponseWebhook model module.
  * @module model/RetrieveListOfSubscribedEventsResponseWebhook
- * @version 1.0.0
+ * @version 1.0.3
  */
 var RetrieveListOfSubscribedEventsResponseWebhook = /*#__PURE__*/function () {
   /**
@@ -73,6 +73,10 @@ var RetrieveListOfSubscribedEventsResponseWebhook = /*#__PURE__*/function () {
         if (data.hasOwnProperty('all_webhook_categories')) {
           obj['all_webhook_categories'] = _ApiClient["default"].convertToType(data['all_webhook_categories'], ['String']);
         }
+
+        if (data.hasOwnProperty('include_unread_count')) {
+          obj['include_unread_count'] = _ApiClient["default"].convertToType(data['include_unread_count'], 'Boolean');
+        }
       }
 
       return obj;
@@ -107,5 +111,10 @@ RetrieveListOfSubscribedEventsResponseWebhook.prototype['enabled_events'] = unde
  */
 
 RetrieveListOfSubscribedEventsResponseWebhook.prototype['all_webhook_categories'] = undefined;
+/**
+ * @member {Boolean} include_unread_count
+ */
+
+RetrieveListOfSubscribedEventsResponseWebhook.prototype['include_unread_count'] = undefined;
 var _default = RetrieveListOfSubscribedEventsResponseWebhook;
 exports["default"] = _default;

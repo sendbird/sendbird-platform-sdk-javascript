@@ -120,6 +120,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property enable (base name: "enable")', function() {
+      // uncomment below and update the code to test the property enable
+      //var instance = new SendbirdPlatformSdk.ViewPushPreferencesForChannelByUrlResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdatePushPreferencesResponse model module.
  * @module model/UpdatePushPreferencesResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var UpdatePushPreferencesResponse = /*#__PURE__*/function () {
   /**
@@ -53,6 +53,18 @@ var UpdatePushPreferencesResponse = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new UpdatePushPreferencesResponse();
+
+        if (data.hasOwnProperty('block_push_from_bots')) {
+          obj['block_push_from_bots'] = _ApiClient["default"].convertToType(data['block_push_from_bots'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('enable_push_for_replies')) {
+          obj['enable_push_for_replies'] = _ApiClient["default"].convertToType(data['enable_push_for_replies'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('push_blocked_bot_ids')) {
+          obj['push_blocked_bot_ids'] = _ApiClient["default"].convertToType(data['push_blocked_bot_ids'], ['String']);
+        }
 
         if (data.hasOwnProperty('push_trigger_option')) {
           obj['push_trigger_option'] = _ApiClient["default"].convertToType(data['push_trigger_option'], 'String');
@@ -106,9 +118,24 @@ var UpdatePushPreferencesResponse = /*#__PURE__*/function () {
   return UpdatePushPreferencesResponse;
 }();
 /**
- * @member {String} push_trigger_option
+ * @member {Boolean} block_push_from_bots
  */
 
+
+UpdatePushPreferencesResponse.prototype['block_push_from_bots'] = undefined;
+/**
+ * @member {Boolean} enable_push_for_replies
+ */
+
+UpdatePushPreferencesResponse.prototype['enable_push_for_replies'] = undefined;
+/**
+ * @member {Array.<String>} push_blocked_bot_ids
+ */
+
+UpdatePushPreferencesResponse.prototype['push_blocked_bot_ids'] = undefined;
+/**
+ * @member {String} push_trigger_option
+ */
 
 UpdatePushPreferencesResponse.prototype['push_trigger_option'] = undefined;
 /**

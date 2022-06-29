@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdPlugin model module.
  * @module model/SendBirdPlugin
- * @version 1.0.0
+ * @version 1.0.3
  */
 var SendBirdPlugin = /*#__PURE__*/function () {
   /**

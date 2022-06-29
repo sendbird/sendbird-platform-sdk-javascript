@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _InlineResponse = _interopRequireDefault(require("./InlineResponse2001"));
+
 var _SendBirdUser = _interopRequireDefault(require("./SendBirdUser"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -20,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcBanUserResponse model module.
  * @module model/OcBanUserResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var OcBanUserResponse = /*#__PURE__*/function () {
   /**
@@ -56,10 +58,6 @@ var OcBanUserResponse = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new OcBanUserResponse();
 
-        if (data.hasOwnProperty('user')) {
-          obj['user'] = _SendBirdUser["default"].constructFromObject(data['user']);
-        }
-
         if (data.hasOwnProperty('start_at')) {
           obj['start_at'] = _ApiClient["default"].convertToType(data['start_at'], 'Number');
         }
@@ -71,6 +69,34 @@ var OcBanUserResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('description')) {
           obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
         }
+
+        if (data.hasOwnProperty('user_id')) {
+          obj['user_id'] = _ApiClient["default"].convertToType(data['user_id'], 'String');
+        }
+
+        if (data.hasOwnProperty('user')) {
+          obj['user'] = _SendBirdUser["default"].constructFromObject(data['user']);
+        }
+
+        if (data.hasOwnProperty('next_url')) {
+          obj['next_url'] = _ApiClient["default"].convertToType(data['next_url'], 'String');
+        }
+
+        if (data.hasOwnProperty('require_auth_for_profile_image')) {
+          obj['require_auth_for_profile_image'] = _ApiClient["default"].convertToType(data['require_auth_for_profile_image'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('nickname')) {
+          obj['nickname'] = _ApiClient["default"].convertToType(data['nickname'], 'String');
+        }
+
+        if (data.hasOwnProperty('profile_url')) {
+          obj['profile_url'] = _ApiClient["default"].convertToType(data['profile_url'], 'String');
+        }
+
+        if (data.hasOwnProperty('metadata')) {
+          obj['metadata'] = _InlineResponse["default"].constructFromObject(data['metadata']);
+        }
       }
 
       return obj;
@@ -80,14 +106,9 @@ var OcBanUserResponse = /*#__PURE__*/function () {
   return OcBanUserResponse;
 }();
 /**
- * @member {module:model/SendBirdUser} user
- */
-
-
-OcBanUserResponse.prototype['user'] = undefined;
-/**
  * @member {Number} start_at
  */
+
 
 OcBanUserResponse.prototype['start_at'] = undefined;
 /**
@@ -100,5 +121,40 @@ OcBanUserResponse.prototype['end_at'] = undefined;
  */
 
 OcBanUserResponse.prototype['description'] = undefined;
+/**
+ * @member {String} user_id
+ */
+
+OcBanUserResponse.prototype['user_id'] = undefined;
+/**
+ * @member {module:model/SendBirdUser} user
+ */
+
+OcBanUserResponse.prototype['user'] = undefined;
+/**
+ * @member {String} next_url
+ */
+
+OcBanUserResponse.prototype['next_url'] = undefined;
+/**
+ * @member {Boolean} require_auth_for_profile_image
+ */
+
+OcBanUserResponse.prototype['require_auth_for_profile_image'] = undefined;
+/**
+ * @member {String} nickname
+ */
+
+OcBanUserResponse.prototype['nickname'] = undefined;
+/**
+ * @member {String} profile_url
+ */
+
+OcBanUserResponse.prototype['profile_url'] = undefined;
+/**
+ * @member {module:model/InlineResponse2001} metadata
+ */
+
+OcBanUserResponse.prototype['metadata'] = undefined;
 var _default = OcBanUserResponse;
 exports["default"] = _default;

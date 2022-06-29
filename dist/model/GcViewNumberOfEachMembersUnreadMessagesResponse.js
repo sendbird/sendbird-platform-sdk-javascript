@@ -7,8 +7,6 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _GcViewNumberOfEachMembersUnreadMessagesResponseUnread = _interopRequireDefault(require("./GcViewNumberOfEachMembersUnreadMessagesResponseUnread"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcViewNumberOfEachMembersUnreadMessagesResponse model module.
  * @module model/GcViewNumberOfEachMembersUnreadMessagesResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcViewNumberOfEachMembersUnreadMessagesResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +55,9 @@ var GcViewNumberOfEachMembersUnreadMessagesResponse = /*#__PURE__*/function () {
         obj = obj || new GcViewNumberOfEachMembersUnreadMessagesResponse();
 
         if (data.hasOwnProperty('unread')) {
-          obj['unread'] = _GcViewNumberOfEachMembersUnreadMessagesResponseUnread["default"].constructFromObject(data['unread']);
+          obj['unread'] = _ApiClient["default"].convertToType(data['unread'], {
+            'String': 'Number'
+          });
         }
       }
 
@@ -68,7 +68,7 @@ var GcViewNumberOfEachMembersUnreadMessagesResponse = /*#__PURE__*/function () {
   return GcViewNumberOfEachMembersUnreadMessagesResponse;
 }();
 /**
- * @member {module:model/GcViewNumberOfEachMembersUnreadMessagesResponseUnread} unread
+ * @member {Object.<String, Number>} unread
  */
 
 

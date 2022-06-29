@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdOGMetaData model module.
  * @module model/SendBirdOGMetaData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var SendBirdOGMetaData = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateUserMetadataData model module.
  * @module model/CreateUserMetadataData
- * @version 1.0.1
+ * @version 1.0.3
  */
 class CreateUserMetadataData {
     /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus model module.
  * @module model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus = /*#__PURE__*/function () {
   /**
@@ -65,6 +65,14 @@ var GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus = /*#__PURE__*/fun
         if (data.hasOwnProperty('has_opened')) {
           obj['has_opened'] = _ApiClient["default"].convertToType(data['has_opened'], 'Boolean');
         }
+
+        if (data.hasOwnProperty('sent_at')) {
+          obj['sent_at'] = _ApiClient["default"].convertToType(data['sent_at'], 'Number');
+        }
+
+        if (data.hasOwnProperty('open_at')) {
+          obj['open_at'] = _ApiClient["default"].convertToType(data['open_at'], 'Number');
+        }
       }
 
       return obj;
@@ -89,5 +97,15 @@ GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus.prototype['channel_url
  */
 
 GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus.prototype['has_opened'] = undefined;
+/**
+ * @member {Number} sent_at
+ */
+
+GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus.prototype['sent_at'] = undefined;
+/**
+ * @member {Number} open_at
+ */
+
+GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus.prototype['open_at'] = undefined;
 var _default = GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus;
 exports["default"] = _default;

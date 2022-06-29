@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BlockUserData model module.
  * @module model/BlockUserData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var BlockUserData = /*#__PURE__*/function () {
   /**

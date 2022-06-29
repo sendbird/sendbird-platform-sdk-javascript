@@ -17,7 +17,7 @@ import ListGdprRequestsResponseRequests from './ListGdprRequestsResponseRequests
 /**
  * The ListGdprRequestsResponse model module.
  * @module model/ListGdprRequestsResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ListGdprRequestsResponse {
     /**

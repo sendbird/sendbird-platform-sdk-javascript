@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMessagesResponseOgTag model module.
  * @module model/ListMessagesResponseOgTag
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListMessagesResponseOgTag = /*#__PURE__*/function () {
   /**

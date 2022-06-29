@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListDataExportsByMessageChannelOrUserResponseFile model module.
  * @module model/ListDataExportsByMessageChannelOrUserResponseFile
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ListDataExportsByMessageChannelOrUserResponseFile {
     /**

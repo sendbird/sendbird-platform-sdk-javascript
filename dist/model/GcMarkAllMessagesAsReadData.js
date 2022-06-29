@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcMarkAllMessagesAsReadData model module.
  * @module model/GcMarkAllMessagesAsReadData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcMarkAllMessagesAsReadData = /*#__PURE__*/function () {
   /**

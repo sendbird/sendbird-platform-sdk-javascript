@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OcRegisterOperatorsData model module.
  * @module model/OcRegisterOperatorsData
- * @version 1.0.1
+ * @version 1.0.3
  */
 class OcRegisterOperatorsData {
     /**

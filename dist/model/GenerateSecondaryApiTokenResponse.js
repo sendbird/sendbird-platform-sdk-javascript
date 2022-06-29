@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GenerateSecondaryApiTokenResponse model module.
  * @module model/GenerateSecondaryApiTokenResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GenerateSecondaryApiTokenResponse = /*#__PURE__*/function () {
   /**

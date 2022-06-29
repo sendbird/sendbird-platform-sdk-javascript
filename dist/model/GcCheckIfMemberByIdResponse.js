@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcCheckIfMemberByIdResponse model module.
  * @module model/GcCheckIfMemberByIdResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcCheckIfMemberByIdResponse = /*#__PURE__*/function () {
   /**
@@ -57,6 +57,10 @@ var GcCheckIfMemberByIdResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('is_member')) {
           obj['is_member'] = _ApiClient["default"].convertToType(data['is_member'], 'Boolean');
         }
+
+        if (data.hasOwnProperty('state')) {
+          obj['state'] = _ApiClient["default"].convertToType(data['state'], 'String');
+        }
       }
 
       return obj;
@@ -71,5 +75,10 @@ var GcCheckIfMemberByIdResponse = /*#__PURE__*/function () {
 
 
 GcCheckIfMemberByIdResponse.prototype['is_member'] = undefined;
+/**
+ * @member {String} state
+ */
+
+GcCheckIfMemberByIdResponse.prototype['state'] = undefined;
 var _default = GcCheckIfMemberByIdResponse;
 exports["default"] = _default;

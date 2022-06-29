@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ViewPushPreferencesResponse model module.
  * @module model/ViewPushPreferencesResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ViewPushPreferencesResponse {
     /**

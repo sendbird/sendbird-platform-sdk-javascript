@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListAnnouncementsResponse model module.
  * @module model/ListAnnouncementsResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListAnnouncementsResponse = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendBirdGroupChannelSmsFallback model module.
  * @module model/SendBirdGroupChannelSmsFallback
- * @version 1.0.1
+ * @version 1.0.3
  */
 class SendBirdGroupChannelSmsFallback {
     /**

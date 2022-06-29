@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateDefaultChannelInvitationPreferenceData model module.
  * @module model/UpdateDefaultChannelInvitationPreferenceData
- * @version 1.0.1
+ * @version 1.0.3
  */
 class UpdateDefaultChannelInvitationPreferenceData {
     /**

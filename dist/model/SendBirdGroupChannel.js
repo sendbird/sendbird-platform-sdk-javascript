@@ -7,6 +7,12 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _SendBirdGroupChannelCreatedBy = _interopRequireDefault(require("./SendBirdGroupChannelCreatedBy"));
+
+var _SendBirdGroupChannelDisappearingMessage = _interopRequireDefault(require("./SendBirdGroupChannelDisappearingMessage"));
+
+var _SendBirdGroupChannelSmsFallback = _interopRequireDefault(require("./SendBirdGroupChannelSmsFallback"));
+
 var _SendBirdMember = _interopRequireDefault(require("./SendBirdMember"));
 
 var _SendBirdMessageResponse = _interopRequireDefault(require("./SendBirdMessageResponse"));
@@ -24,7 +30,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdGroupChannel model module.
  * @module model/SendBirdGroupChannel
- * @version 1.0.0
+ * @version 1.0.3
  */
 var SendBirdGroupChannel = /*#__PURE__*/function () {
   /**
@@ -60,12 +66,20 @@ var SendBirdGroupChannel = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new SendBirdGroupChannel();
 
+        if (data.hasOwnProperty('channel_url')) {
+          obj['channel_url'] = _ApiClient["default"].convertToType(data['channel_url'], 'String');
+        }
+
         if (data.hasOwnProperty('cover_url')) {
           obj['cover_url'] = _ApiClient["default"].convertToType(data['cover_url'], 'String');
         }
 
         if (data.hasOwnProperty('created_at')) {
           obj['created_at'] = _ApiClient["default"].convertToType(data['created_at'], 'Number');
+        }
+
+        if (data.hasOwnProperty('created_by')) {
+          obj['created_by'] = _SendBirdGroupChannelCreatedBy["default"].constructFromObject(data['created_by']);
         }
 
         if (data.hasOwnProperty('creator')) {
@@ -78,6 +92,18 @@ var SendBirdGroupChannel = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('data')) {
           obj['data'] = _ApiClient["default"].convertToType(data['data'], 'String');
+        }
+
+        if (data.hasOwnProperty('disappearing_message')) {
+          obj['disappearing_message'] = _SendBirdGroupChannelDisappearingMessage["default"].constructFromObject(data['disappearing_message']);
+        }
+
+        if (data.hasOwnProperty('freeze')) {
+          obj['freeze'] = _ApiClient["default"].convertToType(data['freeze'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('ignore_profanity_filter')) {
+          obj['ignore_profanity_filter'] = _ApiClient["default"].convertToType(data['ignore_profanity_filter'], 'Boolean');
         }
 
         if (data.hasOwnProperty('hidden_state')) {
@@ -98,6 +124,10 @@ var SendBirdGroupChannel = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('is_broadcast')) {
           obj['is_broadcast'] = _ApiClient["default"].convertToType(data['is_broadcast'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('is_created')) {
+          obj['is_created'] = _ApiClient["default"].convertToType(data['is_created'], 'Boolean');
         }
 
         if (data.hasOwnProperty('is_discoverable')) {
@@ -144,6 +174,10 @@ var SendBirdGroupChannel = /*#__PURE__*/function () {
           obj['last_message'] = _SendBirdMessageResponse["default"].constructFromObject(data['last_message']);
         }
 
+        if (data.hasOwnProperty('max_length_message')) {
+          obj['max_length_message'] = _ApiClient["default"].convertToType(data['max_length_message'], 'Number');
+        }
+
         if (data.hasOwnProperty('member_count')) {
           obj['member_count'] = _ApiClient["default"].convertToType(data['member_count'], 'Number');
         }
@@ -188,16 +222,20 @@ var SendBirdGroupChannel = /*#__PURE__*/function () {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
 
+        if (data.hasOwnProperty('operators')) {
+          obj['operators'] = _ApiClient["default"].convertToType(data['operators'], ['String']);
+        }
+
+        if (data.hasOwnProperty('sms_fallback')) {
+          obj['sms_fallback'] = _SendBirdGroupChannelSmsFallback["default"].constructFromObject(data['sms_fallback']);
+        }
+
         if (data.hasOwnProperty('unread_mention_count')) {
           obj['unread_mention_count'] = _ApiClient["default"].convertToType(data['unread_mention_count'], 'Number');
         }
 
         if (data.hasOwnProperty('unread_message_count')) {
           obj['unread_message_count'] = _ApiClient["default"].convertToType(data['unread_message_count'], 'Number');
-        }
-
-        if (data.hasOwnProperty('channel_url')) {
-          obj['channel_url'] = _ApiClient["default"].convertToType(data['channel_url'], 'String');
         }
       }
 
@@ -208,9 +246,14 @@ var SendBirdGroupChannel = /*#__PURE__*/function () {
   return SendBirdGroupChannel;
 }();
 /**
- * @member {String} cover_url
+ * @member {String} channel_url
  */
 
+
+SendBirdGroupChannel.prototype['channel_url'] = undefined;
+/**
+ * @member {String} cover_url
+ */
 
 SendBirdGroupChannel.prototype['cover_url'] = undefined;
 /**
@@ -218,6 +261,11 @@ SendBirdGroupChannel.prototype['cover_url'] = undefined;
  */
 
 SendBirdGroupChannel.prototype['created_at'] = undefined;
+/**
+ * @member {module:model/SendBirdGroupChannelCreatedBy} created_by
+ */
+
+SendBirdGroupChannel.prototype['created_by'] = undefined;
 /**
  * @member {module:model/SendBirdUser} creator
  */
@@ -233,6 +281,21 @@ SendBirdGroupChannel.prototype['custom_type'] = undefined;
  */
 
 SendBirdGroupChannel.prototype['data'] = undefined;
+/**
+ * @member {module:model/SendBirdGroupChannelDisappearingMessage} disappearing_message
+ */
+
+SendBirdGroupChannel.prototype['disappearing_message'] = undefined;
+/**
+ * @member {Boolean} freeze
+ */
+
+SendBirdGroupChannel.prototype['freeze'] = undefined;
+/**
+ * @member {Boolean} ignore_profanity_filter
+ */
+
+SendBirdGroupChannel.prototype['ignore_profanity_filter'] = undefined;
 /**
  * @member {module:model/SendBirdGroupChannel.HiddenStateEnum} hidden_state
  */
@@ -258,6 +321,11 @@ SendBirdGroupChannel.prototype['is_access_code_required'] = undefined;
  */
 
 SendBirdGroupChannel.prototype['is_broadcast'] = undefined;
+/**
+ * @member {Boolean} is_created
+ */
+
+SendBirdGroupChannel.prototype['is_created'] = undefined;
 /**
  * @member {Boolean} is_discoverable
  */
@@ -314,6 +382,11 @@ SendBirdGroupChannel.prototype['joined_member_count'] = undefined;
 
 SendBirdGroupChannel.prototype['last_message'] = undefined;
 /**
+ * @member {Number} max_length_message
+ */
+
+SendBirdGroupChannel.prototype['max_length_message'] = undefined;
+/**
  * @member {Number} member_count
  */
 
@@ -369,6 +442,16 @@ SendBirdGroupChannel.prototype['my_role'] = undefined;
 
 SendBirdGroupChannel.prototype['name'] = undefined;
 /**
+ * @member {Array.<String>} operators
+ */
+
+SendBirdGroupChannel.prototype['operators'] = undefined;
+/**
+ * @member {module:model/SendBirdGroupChannelSmsFallback} sms_fallback
+ */
+
+SendBirdGroupChannel.prototype['sms_fallback'] = undefined;
+/**
  * @member {Number} unread_mention_count
  */
 
@@ -378,11 +461,6 @@ SendBirdGroupChannel.prototype['unread_mention_count'] = undefined;
  */
 
 SendBirdGroupChannel.prototype['unread_message_count'] = undefined;
-/**
- * @member {String} channel_url
- */
-
-SendBirdGroupChannel.prototype['channel_url'] = undefined;
 /**
  * Allowed values for the <code>hidden_state</code> property.
  * @enum {String}

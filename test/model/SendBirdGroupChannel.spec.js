@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.SendBirdGroupChannel);
     });
 
+    it('should have the property channelUrl (base name: "channel_url")', function() {
+      // uncomment below and update the code to test the property channelUrl
+      //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property coverUrl (base name: "cover_url")', function() {
       // uncomment below and update the code to test the property coverUrl
       //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
@@ -62,6 +68,12 @@
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
+      //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdBy (base name: "created_by")', function() {
+      // uncomment below and update the code to test the property createdBy
       //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
       //expect(instance).to.be();
     });
@@ -80,6 +92,24 @@
 
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
+      //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property disappearingMessage (base name: "disappearing_message")', function() {
+      // uncomment below and update the code to test the property disappearingMessage
+      //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property freeze (base name: "freeze")', function() {
+      // uncomment below and update the code to test the property freeze
+      //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property ignoreProfanityFilter (base name: "ignore_profanity_filter")', function() {
+      // uncomment below and update the code to test the property ignoreProfanityFilter
       //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
       //expect(instance).to.be();
     });
@@ -110,6 +140,12 @@
 
     it('should have the property isBroadcast (base name: "is_broadcast")', function() {
       // uncomment below and update the code to test the property isBroadcast
+      //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isCreated (base name: "is_created")', function() {
+      // uncomment below and update the code to test the property isCreated
       //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
       //expect(instance).to.be();
     });
@@ -180,6 +216,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property maxLengthMessage (base name: "max_length_message")', function() {
+      // uncomment below and update the code to test the property maxLengthMessage
+      //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property memberCount (base name: "member_count")', function() {
       // uncomment below and update the code to test the property memberCount
       //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
@@ -246,6 +288,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property operators (base name: "operators")', function() {
+      // uncomment below and update the code to test the property operators
+      //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property smsFallback (base name: "sms_fallback")', function() {
+      // uncomment below and update the code to test the property smsFallback
+      //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property unreadMentionCount (base name: "unread_mention_count")', function() {
       // uncomment below and update the code to test the property unreadMentionCount
       //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
@@ -254,12 +308,6 @@
 
     it('should have the property unreadMessageCount (base name: "unread_message_count")', function() {
       // uncomment below and update the code to test the property unreadMessageCount
-      //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property channelUrl (base name: "channel_url")', function() {
-      // uncomment below and update the code to test the property channelUrl
       //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
       //expect(instance).to.be();
     });

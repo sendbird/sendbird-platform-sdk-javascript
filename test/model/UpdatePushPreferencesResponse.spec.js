@@ -54,6 +54,24 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.UpdatePushPreferencesResponse);
     });
 
+    it('should have the property blockPushFromBots (base name: "block_push_from_bots")', function() {
+      // uncomment below and update the code to test the property blockPushFromBots
+      //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property enablePushForReplies (base name: "enable_push_for_replies")', function() {
+      // uncomment below and update the code to test the property enablePushForReplies
+      //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property pushBlockedBotIds (base name: "push_blocked_bot_ids")', function() {
+      // uncomment below and update the code to test the property pushBlockedBotIds
+      //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property pushTriggerOption (base name: "push_trigger_option")', function() {
       // uncomment below and update the code to test the property pushTriggerOption
       //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();

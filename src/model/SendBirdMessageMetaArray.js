@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendBirdMessageMetaArray model module.
  * @module model/SendBirdMessageMetaArray
- * @version 1.0.1
+ * @version 1.0.3
  */
 class SendBirdMessageMetaArray {
     /**

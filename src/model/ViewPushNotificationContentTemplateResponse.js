@@ -17,7 +17,7 @@ import ViewPushNotificationContentTemplateResponsePushMessageTemplates from './V
 /**
  * The ViewPushNotificationContentTemplateResponse model module.
  * @module model/ViewPushNotificationContentTemplateResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ViewPushNotificationContentTemplateResponse {
     /**

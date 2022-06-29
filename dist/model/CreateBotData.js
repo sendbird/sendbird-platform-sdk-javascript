@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateBotData model module.
  * @module model/CreateBotData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var CreateBotData = /*#__PURE__*/function () {
   /**

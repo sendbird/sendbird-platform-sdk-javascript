@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListAllEmojisAndEmojiCategoriesResponseEmojis model module.
  * @module model/ListAllEmojisAndEmojiCategoriesResponseEmojis
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ListAllEmojisAndEmojiCategoriesResponseEmojis {
     /**

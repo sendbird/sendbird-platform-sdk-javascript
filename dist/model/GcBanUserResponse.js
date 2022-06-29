@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _InlineResponse = _interopRequireDefault(require("./InlineResponse2001"));
+
 var _SendBirdUser = _interopRequireDefault(require("./SendBirdUser"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -20,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcBanUserResponse model module.
  * @module model/GcBanUserResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcBanUserResponse = /*#__PURE__*/function () {
   /**
@@ -71,6 +73,30 @@ var GcBanUserResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('description')) {
           obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
         }
+
+        if (data.hasOwnProperty('metadata')) {
+          obj['metadata'] = _InlineResponse["default"].constructFromObject(data['metadata']);
+        }
+
+        if (data.hasOwnProperty('next_url')) {
+          obj['next_url'] = _ApiClient["default"].convertToType(data['next_url'], 'String');
+        }
+
+        if (data.hasOwnProperty('nickname')) {
+          obj['nickname'] = _ApiClient["default"].convertToType(data['nickname'], 'String');
+        }
+
+        if (data.hasOwnProperty('profile_url')) {
+          obj['profile_url'] = _ApiClient["default"].convertToType(data['profile_url'], 'String');
+        }
+
+        if (data.hasOwnProperty('require_auth_for_profile_image')) {
+          obj['require_auth_for_profile_image'] = _ApiClient["default"].convertToType(data['require_auth_for_profile_image'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('user_id')) {
+          obj['user_id'] = _ApiClient["default"].convertToType(data['user_id'], 'String');
+        }
       }
 
       return obj;
@@ -100,5 +126,35 @@ GcBanUserResponse.prototype['end_at'] = undefined;
  */
 
 GcBanUserResponse.prototype['description'] = undefined;
+/**
+ * @member {module:model/InlineResponse2001} metadata
+ */
+
+GcBanUserResponse.prototype['metadata'] = undefined;
+/**
+ * @member {String} next_url
+ */
+
+GcBanUserResponse.prototype['next_url'] = undefined;
+/**
+ * @member {String} nickname
+ */
+
+GcBanUserResponse.prototype['nickname'] = undefined;
+/**
+ * @member {String} profile_url
+ */
+
+GcBanUserResponse.prototype['profile_url'] = undefined;
+/**
+ * @member {Boolean} require_auth_for_profile_image
+ */
+
+GcBanUserResponse.prototype['require_auth_for_profile_image'] = undefined;
+/**
+ * @member {String} user_id
+ */
+
+GcBanUserResponse.prototype['user_id'] = undefined;
 var _default = GcBanUserResponse;
 exports["default"] = _default;

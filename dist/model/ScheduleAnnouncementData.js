@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScheduleAnnouncementData model module.
  * @module model/ScheduleAnnouncementData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ScheduleAnnouncementData = /*#__PURE__*/function () {
   /**

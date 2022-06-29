@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcFreezeChannelData model module.
  * @module model/OcFreezeChannelData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var OcFreezeChannelData = /*#__PURE__*/function () {
   /**

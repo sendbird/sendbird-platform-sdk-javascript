@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewNumberOfPeakConnectionsResponse model module.
  * @module model/ViewNumberOfPeakConnectionsResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ViewNumberOfPeakConnectionsResponse = /*#__PURE__*/function () {
   /**

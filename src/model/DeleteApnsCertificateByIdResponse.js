@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeleteApnsCertificateByIdResponse model module.
  * @module model/DeleteApnsCertificateByIdResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class DeleteApnsCertificateByIdResponse {
     /**

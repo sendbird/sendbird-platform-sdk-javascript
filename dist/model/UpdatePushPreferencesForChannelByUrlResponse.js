@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdatePushPreferencesForChannelByUrlResponse model module.
  * @module model/UpdatePushPreferencesForChannelByUrlResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var UpdatePushPreferencesForChannelByUrlResponse = /*#__PURE__*/function () {
   /**
@@ -97,6 +97,10 @@ var UpdatePushPreferencesForChannelByUrlResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('push_sound')) {
           obj['push_sound'] = _ApiClient["default"].convertToType(data['push_sound'], 'String');
         }
+
+        if (data.hasOwnProperty('enable')) {
+          obj['enable'] = _ApiClient["default"].convertToType(data['enable'], 'Boolean');
+        }
       }
 
       return obj;
@@ -161,5 +165,10 @@ UpdatePushPreferencesForChannelByUrlResponse.prototype['timezone'] = undefined;
  */
 
 UpdatePushPreferencesForChannelByUrlResponse.prototype['push_sound'] = undefined;
+/**
+ * @member {Boolean} enable
+ */
+
+UpdatePushPreferencesForChannelByUrlResponse.prototype['enable'] = undefined;
 var _default = UpdatePushPreferencesForChannelByUrlResponse;
 exports["default"] = _default;

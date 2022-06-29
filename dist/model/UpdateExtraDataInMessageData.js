@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateExtraDataInMessageData model module.
  * @module model/UpdateExtraDataInMessageData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var UpdateExtraDataInMessageData = /*#__PURE__*/function () {
   /**

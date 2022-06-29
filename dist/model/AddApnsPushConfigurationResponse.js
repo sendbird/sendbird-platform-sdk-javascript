@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddApnsPushConfigurationResponse model module.
  * @module model/AddApnsPushConfigurationResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var AddApnsPushConfigurationResponse = /*#__PURE__*/function () {
   /**

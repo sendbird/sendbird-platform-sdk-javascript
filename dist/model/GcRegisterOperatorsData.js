@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcRegisterOperatorsData model module.
  * @module model/GcRegisterOperatorsData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcRegisterOperatorsData = /*#__PURE__*/function () {
   /**

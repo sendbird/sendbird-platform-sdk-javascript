@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcDeclineInvitationData model module.
  * @module model/GcDeclineInvitationData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcDeclineInvitationData = /*#__PURE__*/function () {
   /**

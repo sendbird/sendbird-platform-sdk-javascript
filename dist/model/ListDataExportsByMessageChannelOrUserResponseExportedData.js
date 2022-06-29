@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListDataExportsByMessageChannelOrUserResponseExportedData model module.
  * @module model/ListDataExportsByMessageChannelOrUserResponseExportedData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListDataExportsByMessageChannelOrUserResponseExportedData = /*#__PURE__*/function () {
   /**

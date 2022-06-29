@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcMarkAllMessagesAsDeliveredData model module.
  * @module model/GcMarkAllMessagesAsDeliveredData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcMarkAllMessagesAsDeliveredData = /*#__PURE__*/function () {
   /**

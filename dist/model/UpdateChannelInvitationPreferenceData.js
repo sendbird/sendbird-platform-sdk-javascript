@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateChannelInvitationPreferenceData model module.
  * @module model/UpdateChannelInvitationPreferenceData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var UpdateChannelInvitationPreferenceData = /*#__PURE__*/function () {
   /**

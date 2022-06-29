@@ -4,76 +4,16 @@ All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ocBanUser**](OpenChannelApi.md#ocBanUser) | **POST** /v3/open_channels/{channel_url}/ban | Ban a user
 [**ocCancelTheRegistrationOfOperators**](OpenChannelApi.md#ocCancelTheRegistrationOfOperators) | **DELETE** /v3/open_channels/{channel_url}/operators | Cancel the registration of operators
 [**ocCreateChannel**](OpenChannelApi.md#ocCreateChannel) | **POST** /v3/open_channels | Create a channel
 [**ocDeleteChannelByUrl**](OpenChannelApi.md#ocDeleteChannelByUrl) | **DELETE** /v3/open_channels/{channel_url} | Delete a channel
-[**ocFreezeChannel**](OpenChannelApi.md#ocFreezeChannel) | **PUT** /v3/open_channels/{channel_url}/freeze | Freeze a channel
-[**ocListBannedUsers**](OpenChannelApi.md#ocListBannedUsers) | **GET** /v3/open_channels/{channel_url}/ban | List banned users
 [**ocListChannels**](OpenChannelApi.md#ocListChannels) | **GET** /v3/open_channels | List channels
-[**ocListMutedUsers**](OpenChannelApi.md#ocListMutedUsers) | **GET** /v3/open_channels/{channel_url}/mute | List muted users
 [**ocListOperators**](OpenChannelApi.md#ocListOperators) | **GET** /v3/open_channels/{channel_url}/operators | List operators
 [**ocListParticipants**](OpenChannelApi.md#ocListParticipants) | **GET** /v3/open_channels/{channel_url}/participants | List participants
-[**ocMuteUser**](OpenChannelApi.md#ocMuteUser) | **POST** /v3/open_channels/{channel_url}/mute | Mute a user
 [**ocRegisterOperators**](OpenChannelApi.md#ocRegisterOperators) | **POST** /v3/open_channels/{channel_url}/operators | Register operators
-[**ocUnbanUserById**](OpenChannelApi.md#ocUnbanUserById) | **DELETE** /v3/open_channels/{channel_url}/ban/{banned_user_id} | Unban a user
-[**ocUnmuteUserById**](OpenChannelApi.md#ocUnmuteUserById) | **DELETE** /v3/open_channels/{channel_url}/mute/{muted_user_id} | Unmute a user
-[**ocUpdateBanById**](OpenChannelApi.md#ocUpdateBanById) | **PUT** /v3/open_channels/{channel_url}/ban/{banned_user_id} | Update a ban
 [**ocUpdateChannelByUrl**](OpenChannelApi.md#ocUpdateChannelByUrl) | **PUT** /v3/open_channels/{channel_url} | Update a channel
-[**ocViewBanById**](OpenChannelApi.md#ocViewBanById) | **GET** /v3/open_channels/{channel_url}/ban/{banned_user_id} | View a ban
 [**ocViewChannelByUrl**](OpenChannelApi.md#ocViewChannelByUrl) | **GET** /v3/open_channels/{channel_url} | View a channel
-[**ocViewMuteById**](OpenChannelApi.md#ocViewMuteById) | **GET** /v3/open_channels/{channel_url}/mute/{muted_user_id} | View a mute
 
-
-
-## ocBanUser
-
-> OcBanUserResponse ocBanUser(apiToken, channelUrl, opts)
-
-Ban a user
-
-## Ban a user  Bans a user from an open channel. A banned user is immediately expelled from a channel and allowed to participate in the channel again after a set time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-ban-a-user ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'ocBanUserData': new SendbirdPlatformSdk.OcBanUserData() // OcBanUserData | 
-};
-apiInstance.ocBanUser(apiToken, channelUrl, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelUrl** | **String**|  | 
- **ocBanUserData** | [**OcBanUserData**](OcBanUserData.md)|  | [optional] 
-
-### Return type
-
-[**OcBanUserResponse**](OcBanUserResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
 
 
 ## ocCancelTheRegistrationOfOperators
@@ -178,7 +118,7 @@ No authorization required
 
 ## ocDeleteChannelByUrl
 
-> InlineResponse200 ocDeleteChannelByUrl(apiToken, channelUrl)
+> InlineResponse2001 ocDeleteChannelByUrl(apiToken, channelUrl)
 
 Delete a channel
 
@@ -210,109 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## ocFreezeChannel
-
-> SendBirdOpenChannel ocFreezeChannel(apiToken, channelUrl, opts)
-
-Freeze a channel
-
-## Freeze a channel  Freezes or unfreezes an open channel.  &gt; __Note__: Only users designated as channel operators are allowed to talk when a channel is frozen.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-freeze-a-channel ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'ocFreezeChannelData': new SendbirdPlatformSdk.OcFreezeChannelData() // OcFreezeChannelData | 
-};
-apiInstance.ocFreezeChannel(apiToken, channelUrl, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelUrl** | **String**|  | 
- **ocFreezeChannelData** | [**OcFreezeChannelData**](OcFreezeChannelData.md)|  | [optional] 
-
-### Return type
-
-[**SendBirdOpenChannel**](SendBirdOpenChannel.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## ocListBannedUsers
-
-> OcListBannedUsersResponse ocListBannedUsers(apiToken, channelUrl, opts)
-
-List banned users
-
-## List banned users  Retrieves a list of banned users from a specific open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-banned-users ----------------------------   &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the channel where to retrieve a list of banned users.
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'token': "token_example", // String | 
-  'limit': 56 // Number | 
-};
-apiInstance.ocListBannedUsers(apiToken, channelUrl, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelUrl** | **String**|  | 
- **token** | **String**|  | [optional] 
- **limit** | **Number**|  | [optional] 
-
-### Return type
-
-[**OcListBannedUsersResponse**](OcListBannedUsersResponse.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -375,58 +213,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OcListChannelsResponse**](OcListChannelsResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## ocListMutedUsers
-
-> OcListMutedUsersResponse ocListMutedUsers(apiToken, channelUrl, opts)
-
-List muted users
-
-## List muted users  Retrieves a list of muted users in the channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-muted-users ----------------------------   &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the channel to retrieve a list of muted users.
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'token': "token_example", // String | 
-  'limit': 56 // Number | 
-};
-apiInstance.ocListMutedUsers(apiToken, channelUrl, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelUrl** | **String**|  | 
- **token** | **String**|  | [optional] 
- **limit** | **Number**|  | [optional] 
-
-### Return type
-
-[**OcListMutedUsersResponse**](OcListMutedUsersResponse.md)
 
 ### Authorization
 
@@ -542,59 +328,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## ocMuteUser
-
-> SendBirdOpenChannel ocMuteUser(apiToken, channelUrl, opts)
-
-Mute a user
-
-## Mute a user  Mutes a user in the channel. A muted user remains in the channel and is allowed to view the messages, but can&#39;t send any messages until unmuted.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-mute-a-user
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'ocMuteUserData': new SendbirdPlatformSdk.OcMuteUserData() // OcMuteUserData | 
-};
-apiInstance.ocMuteUser(apiToken, channelUrl, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelUrl** | **String**|  | 
- **ocMuteUserData** | [**OcMuteUserData**](OcMuteUserData.md)|  | [optional] 
-
-### Return type
-
-[**SendBirdOpenChannel**](SendBirdOpenChannel.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
 ## ocRegisterOperators
 
-> InlineResponse200 ocRegisterOperators(apiToken, channelUrl, opts)
+> InlineResponse2001 ocRegisterOperators(apiToken, channelUrl, opts)
 
 Register operators
 
@@ -630,155 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## ocUnbanUserById
-
-> InlineResponse200 ocUnbanUserById(apiToken, channelUrl, bannedUserId)
-
-Unban a user
-
-## Unban a user  Unbans a user from an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-unban-a-user ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let bannedUserId = "bannedUserId_example"; // String | 
-apiInstance.ocUnbanUserById(apiToken, channelUrl, bannedUserId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelUrl** | **String**|  | 
- **bannedUserId** | **String**|  | 
-
-### Return type
-
-[**InlineResponse200**](InlineResponse200.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## ocUnmuteUserById
-
-> InlineResponse200 ocUnmuteUserById(apiToken, channelUrl, mutedUserId)
-
-Unmute a user
-
-## Unmute a user  Unmutes a user from an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-unmute-a-user ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let mutedUserId = "mutedUserId_example"; // String | 
-apiInstance.ocUnmuteUserById(apiToken, channelUrl, mutedUserId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelUrl** | **String**|  | 
- **mutedUserId** | **String**|  | 
-
-### Return type
-
-[**InlineResponse200**](InlineResponse200.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## ocUpdateBanById
-
-> OcUpdateBanByIdResponse ocUpdateBanById(apiToken, channelUrl, bannedUserId, opts)
-
-Update a ban
-
-## Update a ban  Updates details of a ban imposed on a user. You can change the length of a ban with this action, and also provide an updated description.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-update-a-ban ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let bannedUserId = "bannedUserId_example"; // String | 
-let opts = {
-  'ocUpdateBanByIdData': new SendbirdPlatformSdk.OcUpdateBanByIdData() // OcUpdateBanByIdData | 
-};
-apiInstance.ocUpdateBanById(apiToken, channelUrl, bannedUserId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelUrl** | **String**|  | 
- **bannedUserId** | **String**|  | 
- **ocUpdateBanByIdData** | [**OcUpdateBanByIdData**](OcUpdateBanByIdData.md)|  | [optional] 
-
-### Return type
-
-[**OcUpdateBanByIdResponse**](OcUpdateBanByIdResponse.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -840,54 +428,6 @@ No authorization required
 - **Accept**: application/json
 
 
-## ocViewBanById
-
-> OcViewBanByIdResponse ocViewBanById(apiToken, channelUrl, bannedUserId)
-
-View a ban
-
-## View a ban  Retrieves details of a ban imposed on a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-view-a-ban ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let bannedUserId = "bannedUserId_example"; // String | 
-apiInstance.ocViewBanById(apiToken, channelUrl, bannedUserId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelUrl** | **String**|  | 
- **bannedUserId** | **String**|  | 
-
-### Return type
-
-[**OcViewBanByIdResponse**](OcViewBanByIdResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
 ## ocViewChannelByUrl
 
 > SendBirdOpenChannel ocViewChannelByUrl(apiToken, channelUrl)
@@ -923,54 +463,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SendBirdOpenChannel**](SendBirdOpenChannel.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## ocViewMuteById
-
-> OcViewMuteByIdResponse ocViewMuteById(apiToken, channelUrl, mutedUserId)
-
-View a mute
-
-## View a mute  Checks if a user is muted in an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-view-a-mute ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.OpenChannelApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let mutedUserId = "mutedUserId_example"; // String | 
-apiInstance.ocViewMuteById(apiToken, channelUrl, mutedUserId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelUrl** | **String**|  | 
- **mutedUserId** | **String**|  | 
-
-### Return type
-
-[**OcViewMuteByIdResponse**](OcViewMuteByIdResponse.md)
 
 ### Authorization
 

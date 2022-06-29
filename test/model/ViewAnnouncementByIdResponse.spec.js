@@ -144,6 +144,48 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property createChannel (base name: "create_channel")', function() {
+      // uncomment below and update the code to test the property createChannel
+      //var instance = new SendbirdPlatformSdk.ViewAnnouncementByIdResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createChannelOptions (base name: "create_channel_options")', function() {
+      // uncomment below and update the code to test the property createChannelOptions
+      //var instance = new SendbirdPlatformSdk.ViewAnnouncementByIdResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property endAt (base name: "end_at")', function() {
+      // uncomment below and update the code to test the property endAt
+      //var instance = new SendbirdPlatformSdk.ViewAnnouncementByIdResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property markAsRead (base name: "mark_as_read")', function() {
+      // uncomment below and update the code to test the property markAsRead
+      //var instance = new SendbirdPlatformSdk.ViewAnnouncementByIdResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sentChannelCount (base name: "sent_channel_count")', function() {
+      // uncomment below and update the code to test the property sentChannelCount
+      //var instance = new SendbirdPlatformSdk.ViewAnnouncementByIdResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property targetChannelType (base name: "target_channel_type")', function() {
+      // uncomment below and update the code to test the property targetChannelType
+      //var instance = new SendbirdPlatformSdk.ViewAnnouncementByIdResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property targetCustomType (base name: "target_custom_type")', function() {
+      // uncomment below and update the code to test the property targetCustomType
+      //var instance = new SendbirdPlatformSdk.ViewAnnouncementByIdResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

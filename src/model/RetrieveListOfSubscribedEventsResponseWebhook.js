@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RetrieveListOfSubscribedEventsResponseWebhook model module.
  * @module model/RetrieveListOfSubscribedEventsResponseWebhook
- * @version 1.0.1
+ * @version 1.0.3
  */
 class RetrieveListOfSubscribedEventsResponseWebhook {
     /**

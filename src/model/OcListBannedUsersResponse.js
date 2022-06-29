@@ -17,7 +17,7 @@ import OcListBannedUsersResponseBannedList from './OcListBannedUsersResponseBann
 /**
  * The OcListBannedUsersResponse model module.
  * @module model/OcListBannedUsersResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class OcListBannedUsersResponse {
     /**

@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ScheduleAnnouncementResponseCreateChannelOptions = _interopRequireDefault(require("./ScheduleAnnouncementResponseCreateChannelOptions"));
+
 var _ScheduleAnnouncementResponseMessage = _interopRequireDefault(require("./ScheduleAnnouncementResponseMessage"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -20,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListAnnouncementsResponseAnnouncements model module.
  * @module model/ListAnnouncementsResponseAnnouncements
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListAnnouncementsResponseAnnouncements = /*#__PURE__*/function () {
   /**
@@ -115,6 +117,34 @@ var ListAnnouncementsResponseAnnouncements = /*#__PURE__*/function () {
         if (data.hasOwnProperty('open_rate')) {
           obj['open_rate'] = _ApiClient["default"].convertToType(data['open_rate'], 'Number');
         }
+
+        if (data.hasOwnProperty('create_channel')) {
+          obj['create_channel'] = _ApiClient["default"].convertToType(data['create_channel'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('create_channel_options')) {
+          obj['create_channel_options'] = _ScheduleAnnouncementResponseCreateChannelOptions["default"].constructFromObject(data['create_channel_options']);
+        }
+
+        if (data.hasOwnProperty('end_at')) {
+          obj['end_at'] = _ApiClient["default"].convertToType(data['end_at'], 'Number');
+        }
+
+        if (data.hasOwnProperty('mark_as_read')) {
+          obj['mark_as_read'] = _ApiClient["default"].convertToType(data['mark_as_read'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('sent_channel_count')) {
+          obj['sent_channel_count'] = _ApiClient["default"].convertToType(data['sent_channel_count'], 'Number');
+        }
+
+        if (data.hasOwnProperty('target_channel_type')) {
+          obj['target_channel_type'] = _ApiClient["default"].convertToType(data['target_channel_type'], 'String');
+        }
+
+        if (data.hasOwnProperty('target_custom_type')) {
+          obj['target_custom_type'] = _ApiClient["default"].convertToType(data['target_custom_type'], 'String');
+        }
       }
 
       return obj;
@@ -199,5 +229,40 @@ ListAnnouncementsResponseAnnouncements.prototype['open_count'] = undefined;
  */
 
 ListAnnouncementsResponseAnnouncements.prototype['open_rate'] = undefined;
+/**
+ * @member {Boolean} create_channel
+ */
+
+ListAnnouncementsResponseAnnouncements.prototype['create_channel'] = undefined;
+/**
+ * @member {module:model/ScheduleAnnouncementResponseCreateChannelOptions} create_channel_options
+ */
+
+ListAnnouncementsResponseAnnouncements.prototype['create_channel_options'] = undefined;
+/**
+ * @member {Number} end_at
+ */
+
+ListAnnouncementsResponseAnnouncements.prototype['end_at'] = undefined;
+/**
+ * @member {Boolean} mark_as_read
+ */
+
+ListAnnouncementsResponseAnnouncements.prototype['mark_as_read'] = undefined;
+/**
+ * @member {Number} sent_channel_count
+ */
+
+ListAnnouncementsResponseAnnouncements.prototype['sent_channel_count'] = undefined;
+/**
+ * @member {String} target_channel_type
+ */
+
+ListAnnouncementsResponseAnnouncements.prototype['target_channel_type'] = undefined;
+/**
+ * @member {String} target_custom_type
+ */
+
+ListAnnouncementsResponseAnnouncements.prototype['target_custom_type'] = undefined;
 var _default = ListAnnouncementsResponseAnnouncements;
 exports["default"] = _default;

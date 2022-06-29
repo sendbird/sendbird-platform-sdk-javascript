@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RegisterAndScheduleDataExportData model module.
  * @module model/RegisterAndScheduleDataExportData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var RegisterAndScheduleDataExportData = /*#__PURE__*/function () {
   /**

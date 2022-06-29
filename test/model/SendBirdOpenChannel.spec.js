@@ -54,20 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.SendBirdOpenChannel);
     });
 
-    it('should have the property coverUrl (base name: "cover_url")', function() {
-      // uncomment below and update the code to test the property coverUrl
-      //var instance = new SendbirdPlatformSdk.SendBirdOpenChannel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new SendbirdPlatformSdk.SendBirdOpenChannel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property creator (base name: "creator")', function() {
-      // uncomment below and update the code to test the property creator
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
       //var instance = new SendbirdPlatformSdk.SendBirdOpenChannel();
       //expect(instance).to.be();
     });
@@ -78,8 +66,38 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property channelUrl (base name: "channel_url")', function() {
+      // uncomment below and update the code to test the property channelUrl
+      //var instance = new SendbirdPlatformSdk.SendBirdOpenChannel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new SendbirdPlatformSdk.SendBirdOpenChannel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property coverUrl (base name: "cover_url")', function() {
+      // uncomment below and update the code to test the property coverUrl
+      //var instance = new SendbirdPlatformSdk.SendBirdOpenChannel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property creator (base name: "creator")', function() {
+      // uncomment below and update the code to test the property creator
+      //var instance = new SendbirdPlatformSdk.SendBirdOpenChannel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
+      //var instance = new SendbirdPlatformSdk.SendBirdOpenChannel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isDynamicPartitioned (base name: "is_dynamic_partitioned")', function() {
+      // uncomment below and update the code to test the property isDynamicPartitioned
       //var instance = new SendbirdPlatformSdk.SendBirdOpenChannel();
       //expect(instance).to.be();
     });
@@ -96,8 +114,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
+    it('should have the property maxLengthMessage (base name: "max_length_message")', function() {
+      // uncomment below and update the code to test the property maxLengthMessage
       //var instance = new SendbirdPlatformSdk.SendBirdOpenChannel();
       //expect(instance).to.be();
     });
@@ -114,8 +132,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property channelUrl (base name: "channel_url")', function() {
-      // uncomment below and update the code to test the property channelUrl
+    it('should have the property freeze (base name: "freeze")', function() {
+      // uncomment below and update the code to test the property freeze
       //var instance = new SendbirdPlatformSdk.SendBirdOpenChannel();
       //expect(instance).to.be();
     });

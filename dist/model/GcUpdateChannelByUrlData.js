@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcUpdateChannelByUrlData model module.
  * @module model/GcUpdateChannelByUrlData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcUpdateChannelByUrlData = /*#__PURE__*/function () {
   /**

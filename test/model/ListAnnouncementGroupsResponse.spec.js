@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.ListAnnouncementGroupsResponse);
     });
 
-    it('should have the property announcementGroup (base name: "announcement_group")', function() {
-      // uncomment below and update the code to test the property announcementGroup
+    it('should have the property announcementGroups (base name: "announcement_groups")', function() {
+      // uncomment below and update the code to test the property announcementGroups
       //var instance = new SendbirdPlatformSdk.ListAnnouncementGroupsResponse();
       //expect(instance).to.be();
     });

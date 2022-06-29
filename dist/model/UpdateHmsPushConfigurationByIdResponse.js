@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateHmsPushConfigurationByIdResponse model module.
  * @module model/UpdateHmsPushConfigurationByIdResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var UpdateHmsPushConfigurationByIdResponse = /*#__PURE__*/function () {
   /**

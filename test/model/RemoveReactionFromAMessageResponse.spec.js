@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.RemoveReactionFromAMessageResponse);
     });
 
-    it('should have the property userId (base name: "user_id")', function() {
-      // uncomment below and update the code to test the property userId
+    it('should have the property reaction (base name: "reaction")', function() {
+      // uncomment below and update the code to test the property reaction
       //var instance = new SendbirdPlatformSdk.RemoveReactionFromAMessageResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property operation (base name: "operation")', function() {
-      // uncomment below and update the code to test the property operation
+    it('should have the property userId (base name: "user_id")', function() {
+      // uncomment below and update the code to test the property userId
       //var instance = new SendbirdPlatformSdk.RemoveReactionFromAMessageResponse();
       //expect(instance).to.be();
     });
@@ -72,14 +72,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property reaction (base name: "reaction")', function() {
-      // uncomment below and update the code to test the property reaction
+    it('should have the property msgId (base name: "msg_id")', function() {
+      // uncomment below and update the code to test the property msgId
       //var instance = new SendbirdPlatformSdk.RemoveReactionFromAMessageResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property updatedAt (base name: "updated_at")', function() {
       // uncomment below and update the code to test the property updatedAt
+      //var instance = new SendbirdPlatformSdk.RemoveReactionFromAMessageResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property operation (base name: "operation")', function() {
+      // uncomment below and update the code to test the property operation
       //var instance = new SendbirdPlatformSdk.RemoveReactionFromAMessageResponse();
       //expect(instance).to.be();
     });

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EnableReactionsData model module.
  * @module model/EnableReactionsData
- * @version 1.0.1
+ * @version 1.0.3
  */
 class EnableReactionsData {
     /**

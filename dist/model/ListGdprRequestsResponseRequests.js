@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListGdprRequestsResponseRequests model module.
  * @module model/ListGdprRequestsResponseRequests
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListGdprRequestsResponseRequests = /*#__PURE__*/function () {
   /**

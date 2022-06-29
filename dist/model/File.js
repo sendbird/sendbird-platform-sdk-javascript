@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The File model module.
  * @module model/File
- * @version 1.0.0
+ * @version 1.0.3
  */
 var File = /*#__PURE__*/function () {
   /**

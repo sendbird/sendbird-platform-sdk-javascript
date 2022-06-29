@@ -19,7 +19,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The ReportChannelByUrlResponse model module.
  * @module model/ReportChannelByUrlResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ReportChannelByUrlResponse {
     /**

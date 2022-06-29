@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReportChannelByUrlData model module.
  * @module model/ReportChannelByUrlData
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ReportChannelByUrlData {
     /**

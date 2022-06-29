@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateUserData model module.
  * @module model/CreateUserData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var CreateUserData = /*#__PURE__*/function () {
   /**

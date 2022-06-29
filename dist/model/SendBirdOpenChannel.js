@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdOpenChannel model module.
  * @module model/SendBirdOpenChannel
- * @version 1.0.0
+ * @version 1.0.3
  */
 var SendBirdOpenChannel = /*#__PURE__*/function () {
   /**
@@ -56,24 +56,36 @@ var SendBirdOpenChannel = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new SendBirdOpenChannel();
 
-        if (data.hasOwnProperty('cover_url')) {
-          obj['cover_url'] = _ApiClient["default"].convertToType(data['cover_url'], 'String');
-        }
-
-        if (data.hasOwnProperty('created_at')) {
-          obj['created_at'] = _ApiClient["default"].convertToType(data['created_at'], 'Number');
-        }
-
-        if (data.hasOwnProperty('creator')) {
-          obj['creator'] = _SendBirdUser["default"].constructFromObject(data['creator']);
+        if (data.hasOwnProperty('name')) {
+          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
 
         if (data.hasOwnProperty('custom_type')) {
           obj['custom_type'] = _ApiClient["default"].convertToType(data['custom_type'], 'String');
         }
 
+        if (data.hasOwnProperty('channel_url')) {
+          obj['channel_url'] = _ApiClient["default"].convertToType(data['channel_url'], 'String');
+        }
+
+        if (data.hasOwnProperty('created_at')) {
+          obj['created_at'] = _ApiClient["default"].convertToType(data['created_at'], 'Number');
+        }
+
+        if (data.hasOwnProperty('cover_url')) {
+          obj['cover_url'] = _ApiClient["default"].convertToType(data['cover_url'], 'String');
+        }
+
+        if (data.hasOwnProperty('creator')) {
+          obj['creator'] = _SendBirdUser["default"].constructFromObject(data['creator']);
+        }
+
         if (data.hasOwnProperty('data')) {
           obj['data'] = _ApiClient["default"].convertToType(data['data'], 'String');
+        }
+
+        if (data.hasOwnProperty('is_dynamic_partitioned')) {
+          obj['is_dynamic_partitioned'] = _ApiClient["default"].convertToType(data['is_dynamic_partitioned'], 'Boolean');
         }
 
         if (data.hasOwnProperty('is_ephemeral')) {
@@ -84,8 +96,8 @@ var SendBirdOpenChannel = /*#__PURE__*/function () {
           obj['is_frozen'] = _ApiClient["default"].convertToType(data['is_frozen'], 'Boolean');
         }
 
-        if (data.hasOwnProperty('name')) {
-          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
+        if (data.hasOwnProperty('max_length_message')) {
+          obj['max_length_message'] = _ApiClient["default"].convertToType(data['max_length_message'], 'Number');
         }
 
         if (data.hasOwnProperty('operators')) {
@@ -96,8 +108,8 @@ var SendBirdOpenChannel = /*#__PURE__*/function () {
           obj['participant_count'] = _ApiClient["default"].convertToType(data['participant_count'], 'Number');
         }
 
-        if (data.hasOwnProperty('channel_url')) {
-          obj['channel_url'] = _ApiClient["default"].convertToType(data['channel_url'], 'String');
+        if (data.hasOwnProperty('freeze')) {
+          obj['freeze'] = _ApiClient["default"].convertToType(data['freeze'], 'Boolean');
         }
       }
 
@@ -108,31 +120,46 @@ var SendBirdOpenChannel = /*#__PURE__*/function () {
   return SendBirdOpenChannel;
 }();
 /**
- * @member {String} cover_url
+ * @member {String} name
  */
 
 
-SendBirdOpenChannel.prototype['cover_url'] = undefined;
-/**
- * @member {Number} created_at
- */
-
-SendBirdOpenChannel.prototype['created_at'] = undefined;
-/**
- * @member {module:model/SendBirdUser} creator
- */
-
-SendBirdOpenChannel.prototype['creator'] = undefined;
+SendBirdOpenChannel.prototype['name'] = undefined;
 /**
  * @member {String} custom_type
  */
 
 SendBirdOpenChannel.prototype['custom_type'] = undefined;
 /**
+ * @member {String} channel_url
+ */
+
+SendBirdOpenChannel.prototype['channel_url'] = undefined;
+/**
+ * @member {Number} created_at
+ */
+
+SendBirdOpenChannel.prototype['created_at'] = undefined;
+/**
+ * @member {String} cover_url
+ */
+
+SendBirdOpenChannel.prototype['cover_url'] = undefined;
+/**
+ * @member {module:model/SendBirdUser} creator
+ */
+
+SendBirdOpenChannel.prototype['creator'] = undefined;
+/**
  * @member {String} data
  */
 
 SendBirdOpenChannel.prototype['data'] = undefined;
+/**
+ * @member {Boolean} is_dynamic_partitioned
+ */
+
+SendBirdOpenChannel.prototype['is_dynamic_partitioned'] = undefined;
 /**
  * @member {Boolean} is_ephemeral
  */
@@ -144,10 +171,10 @@ SendBirdOpenChannel.prototype['is_ephemeral'] = undefined;
 
 SendBirdOpenChannel.prototype['is_frozen'] = undefined;
 /**
- * @member {String} name
+ * @member {Number} max_length_message
  */
 
-SendBirdOpenChannel.prototype['name'] = undefined;
+SendBirdOpenChannel.prototype['max_length_message'] = undefined;
 /**
  * @member {Array.<module:model/SendBirdUser>} operators
  */
@@ -159,9 +186,9 @@ SendBirdOpenChannel.prototype['operators'] = undefined;
 
 SendBirdOpenChannel.prototype['participant_count'] = undefined;
 /**
- * @member {String} channel_url
+ * @member {Boolean} freeze
  */
 
-SendBirdOpenChannel.prototype['channel_url'] = undefined;
+SendBirdOpenChannel.prototype['freeze'] = undefined;
 var _default = SendBirdOpenChannel;
 exports["default"] = _default;

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListMessagesResponseOgTagOgImage model module.
  * @module model/ListMessagesResponseOgTagOgImage
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ListMessagesResponseOgTagOgImage {
     /**

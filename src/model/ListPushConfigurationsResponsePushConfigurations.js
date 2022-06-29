@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListPushConfigurationsResponsePushConfigurations model module.
  * @module model/ListPushConfigurationsResponsePushConfigurations
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ListPushConfigurationsResponsePushConfigurations {
     /**

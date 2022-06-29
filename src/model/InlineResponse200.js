@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import SendBirdUser from './SendBirdUser';
 
 /**
  * The InlineResponse200 model module.
  * @module model/InlineResponse200
- * @version 1.0.1
+ * @version 1.0.3
  */
 class InlineResponse200 {
     /**
@@ -47,8 +48,11 @@ class InlineResponse200 {
         if (data) {
             obj = obj || new InlineResponse200();
 
-            if (data.hasOwnProperty('anyOf')) {
-                obj['anyOf'] = ApiClient.convertToType(data['anyOf'], 'String');
+            if (data.hasOwnProperty('muted_list')) {
+                obj['muted_list'] = ApiClient.convertToType(data['muted_list'], [SendBirdUser]);
+            }
+            if (data.hasOwnProperty('next')) {
+                obj['next'] = ApiClient.convertToType(data['next'], 'String');
             }
         }
         return obj;
@@ -58,9 +62,14 @@ class InlineResponse200 {
 }
 
 /**
- * @member {String} anyOf
+ * @member {Array.<module:model/SendBirdUser>} muted_list
  */
-InlineResponse200.prototype['anyOf'] = undefined;
+InlineResponse200.prototype['muted_list'] = undefined;
+
+/**
+ * @member {String} next
+ */
+InlineResponse200.prototype['next'] = undefined;
 
 
 

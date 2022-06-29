@@ -17,7 +17,7 @@ import ListPushNotificationContentTemplatesResponsePushMessageTemplates from './
 /**
  * The ListPushNotificationContentTemplatesResponse model module.
  * @module model/ListPushNotificationContentTemplatesResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ListPushNotificationContentTemplatesResponse {
     /**

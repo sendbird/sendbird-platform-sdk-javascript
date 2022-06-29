@@ -17,7 +17,7 @@ import ListAllEmojisAndEmojiCategoriesResponseEmojiCategories from './ListAllEmo
 /**
  * The ListAllEmojisAndEmojiCategoriesResponse model module.
  * @module model/ListAllEmojisAndEmojiCategoriesResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class ListAllEmojisAndEmojiCategoriesResponse {
     /**

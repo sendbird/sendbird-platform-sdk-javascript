@@ -17,7 +17,7 @@ import ListDataExportsByMessageChannelOrUserResponseFile from './ListDataExports
 /**
  * The RegisterAndScheduleDataExportResponse model module.
  * @module model/RegisterAndScheduleDataExportResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class RegisterAndScheduleDataExportResponse {
     /**

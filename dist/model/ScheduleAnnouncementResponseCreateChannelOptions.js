@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScheduleAnnouncementResponseCreateChannelOptions model module.
  * @module model/ScheduleAnnouncementResponseCreateChannelOptions
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ScheduleAnnouncementResponseCreateChannelOptions = /*#__PURE__*/function () {
   /**

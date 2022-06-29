@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcListMutedUsersResponse model module.
  * @module model/GcListMutedUsersResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcListMutedUsersResponse = /*#__PURE__*/function () {
   /**

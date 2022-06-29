@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMessagesResponseSortedMetaarray model module.
  * @module model/ListMessagesResponseSortedMetaarray
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListMessagesResponseSortedMetaarray = /*#__PURE__*/function () {
   /**

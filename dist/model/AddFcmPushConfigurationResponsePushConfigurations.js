@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddFcmPushConfigurationResponsePushConfigurations model module.
  * @module model/AddFcmPushConfigurationResponsePushConfigurations
- * @version 1.0.0
+ * @version 1.0.3
  */
 var AddFcmPushConfigurationResponsePushConfigurations = /*#__PURE__*/function () {
   /**

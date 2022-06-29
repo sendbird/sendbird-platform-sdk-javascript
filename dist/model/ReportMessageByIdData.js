@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportMessageByIdData model module.
  * @module model/ReportMessageByIdData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ReportMessageByIdData = /*#__PURE__*/function () {
   /**

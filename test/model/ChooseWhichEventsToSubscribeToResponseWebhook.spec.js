@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property includeUnreadCount (base name: "include_unread_count")', function() {
+      // uncomment below and update the code to test the property includeUnreadCount
+      //var instance = new SendbirdPlatformSdk.ChooseWhichEventsToSubscribeToResponseWebhook();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

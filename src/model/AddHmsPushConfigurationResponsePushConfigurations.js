@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddHmsPushConfigurationResponsePushConfigurations model module.
  * @module model/AddHmsPushConfigurationResponsePushConfigurations
- * @version 1.0.1
+ * @version 1.0.3
  */
 class AddHmsPushConfigurationResponsePushConfigurations {
     /**

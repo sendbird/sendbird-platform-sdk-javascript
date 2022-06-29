@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewNumberOfDailyActiveUsersResponse model module.
  * @module model/ViewNumberOfDailyActiveUsersResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ViewNumberOfDailyActiveUsersResponse = /*#__PURE__*/function () {
   /**

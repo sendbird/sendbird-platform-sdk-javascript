@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateFcmPushConfigurationByIdData model module.
  * @module model/UpdateFcmPushConfigurationByIdData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var UpdateFcmPushConfigurationByIdData = /*#__PURE__*/function () {
   /**

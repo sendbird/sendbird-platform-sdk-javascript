@@ -40,7 +40,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * UserChannelMetadata service.
 * @module api/UserChannelMetadataApi
-* @version 1.0.0
+* @version 1.0.1
 */
 var UserChannelMetadataApi = /*#__PURE__*/function () {
   /**
@@ -58,10 +58,10 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
   /**
    * Create a channel metacounter
    * ## Create a channel metacounter  Creates a channel metacounter's items to store in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-create-a-channel-metacounter ----------------------------
+   * @param {String} apiToken 
    * @param {String} channelType 
    * @param {String} channelUrl 
    * @param {Object} opts Optional parameters
-   * @param {String} opts.apiToken 
    * @param {module:model/CreateChannelMetacounterData} opts.createChannelMetacounterData 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>} and HTTP response
    */
@@ -69,9 +69,14 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
 
   _createClass(UserChannelMetadataApi, [{
     key: "createChannelMetacounterWithHttpInfo",
-    value: function createChannelMetacounterWithHttpInfo(channelType, channelUrl, opts) {
+    value: function createChannelMetacounterWithHttpInfo(apiToken, channelType, channelUrl, opts) {
       opts = opts || {};
-      var postBody = opts['createChannelMetacounterData']; // verify the required parameter 'channelType' is set
+      var postBody = opts['createChannelMetacounterData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling createChannelMetacounter");
+      } // verify the required parameter 'channelType' is set
+
 
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling createChannelMetacounter");
@@ -88,7 +93,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -102,37 +107,42 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Create a channel metacounter
      * ## Create a channel metacounter  Creates a channel metacounter's items to store in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-create-a-channel-metacounter ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/CreateChannelMetacounterData} opts.createChannelMetacounterData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
      */
 
   }, {
     key: "createChannelMetacounter",
-    value: function createChannelMetacounter(channelType, channelUrl, opts) {
-      return this.createChannelMetacounterWithHttpInfo(channelType, channelUrl, opts).then(function (response_and_data) {
+    value: function createChannelMetacounter(apiToken, channelType, channelUrl, opts) {
+      return this.createChannelMetacounterWithHttpInfo(apiToken, channelType, channelUrl, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Create a channel metadata
      * ## Create a channel metadata  Creates a channel metadata's items to store in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-create-a-channel-metadata ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/CreateChannelMetadataData} opts.createChannelMetadataData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateChannelMetadataResponse} and HTTP response
      */
 
   }, {
     key: "createChannelMetadataWithHttpInfo",
-    value: function createChannelMetadataWithHttpInfo(channelType, channelUrl, opts) {
+    value: function createChannelMetadataWithHttpInfo(apiToken, channelType, channelUrl, opts) {
       opts = opts || {};
-      var postBody = opts['createChannelMetadataData']; // verify the required parameter 'channelType' is set
+      var postBody = opts['createChannelMetadataData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling createChannelMetadata");
+      } // verify the required parameter 'channelType' is set
+
 
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling createChannelMetadata");
@@ -149,7 +159,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -161,36 +171,41 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Create a channel metadata
      * ## Create a channel metadata  Creates a channel metadata's items to store in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-create-a-channel-metadata ----------------------------
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/CreateChannelMetadataData} opts.createChannelMetadataData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateChannelMetadataResponse}
      */
 
   }, {
     key: "createChannelMetadata",
-    value: function createChannelMetadata(channelType, channelUrl, opts) {
-      return this.createChannelMetadataWithHttpInfo(channelType, channelUrl, opts).then(function (response_and_data) {
+    value: function createChannelMetadata(apiToken, channelType, channelUrl, opts) {
+      return this.createChannelMetadataWithHttpInfo(apiToken, channelType, channelUrl, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Create a user metadata
      * ## Create a user metadata  Creates a user metadata's items to store in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-create-a-user-metadata ----------------------------
+     * @param {String} apiToken 
      * @param {String} userId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/CreateUserMetadataData} opts.createUserMetadataData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateUserMetadataResponse} and HTTP response
      */
 
   }, {
     key: "createUserMetadataWithHttpInfo",
-    value: function createUserMetadataWithHttpInfo(userId, opts) {
+    value: function createUserMetadataWithHttpInfo(apiToken, userId, opts) {
       opts = opts || {};
-      var postBody = opts['createUserMetadataData']; // verify the required parameter 'userId' is set
+      var postBody = opts['createUserMetadataData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling createUserMetadata");
+      } // verify the required parameter 'userId' is set
+
 
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling createUserMetadata");
@@ -201,7 +216,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -213,35 +228,38 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Create a user metadata
      * ## Create a user metadata  Creates a user metadata's items to store in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-create-a-user-metadata ----------------------------
+     * @param {String} apiToken 
      * @param {String} userId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/CreateUserMetadataData} opts.createUserMetadataData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateUserMetadataResponse}
      */
 
   }, {
     key: "createUserMetadata",
-    value: function createUserMetadata(userId, opts) {
-      return this.createUserMetadataWithHttpInfo(userId, opts).then(function (response_and_data) {
+    value: function createUserMetadata(apiToken, userId, opts) {
+      return this.createUserMetadataWithHttpInfo(apiToken, userId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Delete a channel metacounter - When deleting all items of a channel metacounter
      * ## Delete a channel metacounter  Deletes a channel metacounter's item that is stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel which has the metacounter to delete.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
     key: "deleteChannelMetacounterWithHttpInfo",
-    value: function deleteChannelMetacounterWithHttpInfo(channelType, channelUrl, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'channelType' is set
+    value: function deleteChannelMetacounterWithHttpInfo(apiToken, channelType, channelUrl) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling deleteChannelMetacounter");
+      } // verify the required parameter 'channelType' is set
+
 
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling deleteChannelMetacounter");
@@ -258,7 +276,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -270,36 +288,38 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Delete a channel metacounter - When deleting all items of a channel metacounter
      * ## Delete a channel metacounter  Deletes a channel metacounter's item that is stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel which has the metacounter to delete.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
     key: "deleteChannelMetacounter",
-    value: function deleteChannelMetacounter(channelType, channelUrl, opts) {
-      return this.deleteChannelMetacounterWithHttpInfo(channelType, channelUrl, opts).then(function (response_and_data) {
+    value: function deleteChannelMetacounter(apiToken, channelType, channelUrl) {
+      return this.deleteChannelMetacounterWithHttpInfo(apiToken, channelType, channelUrl).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Delete a channel metacounter - When deleting a specific item of a channel metacounter by its key
      * ## Delete a channel metacounter  Deletes a channel metacounter's item that is stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel which has the metacounter to delete.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} key 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
     key: "deleteChannelMetacounterByKeyWithHttpInfo",
-    value: function deleteChannelMetacounterByKeyWithHttpInfo(channelType, channelUrl, key, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'channelType' is set
+    value: function deleteChannelMetacounterByKeyWithHttpInfo(apiToken, channelType, channelUrl, key) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling deleteChannelMetacounterByKey");
+      } // verify the required parameter 'channelType' is set
+
 
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling deleteChannelMetacounterByKey");
@@ -322,7 +342,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -334,37 +354,41 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Delete a channel metacounter - When deleting a specific item of a channel metacounter by its key
      * ## Delete a channel metacounter  Deletes a channel metacounter's item that is stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel which has the metacounter to delete.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} key 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
     key: "deleteChannelMetacounterByKey",
-    value: function deleteChannelMetacounterByKey(channelType, channelUrl, key, opts) {
-      return this.deleteChannelMetacounterByKeyWithHttpInfo(channelType, channelUrl, key, opts).then(function (response_and_data) {
+    value: function deleteChannelMetacounterByKey(apiToken, channelType, channelUrl, key) {
+      return this.deleteChannelMetacounterByKeyWithHttpInfo(apiToken, channelType, channelUrl, key).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Delete a channel metadata - When deleting all items of a channel metadata
      * ## Delete a channel metadata  Deletes a channel metadata's one or all items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel which has the metadata to delete.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
     key: "deleteChannelMetadataWithHttpInfo",
-    value: function deleteChannelMetadataWithHttpInfo(channelType, channelUrl, opts) {
+    value: function deleteChannelMetadataWithHttpInfo(apiToken, channelType, channelUrl, opts) {
       opts = opts || {};
-      var postBody = null; // verify the required parameter 'channelType' is set
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling deleteChannelMetadata");
+      } // verify the required parameter 'channelType' is set
+
 
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling deleteChannelMetadata");
@@ -383,7 +407,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
         'key': opts['key']
       };
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -395,37 +419,40 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Delete a channel metadata - When deleting all items of a channel metadata
      * ## Delete a channel metadata  Deletes a channel metadata's one or all items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel which has the metadata to delete.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
     key: "deleteChannelMetadata",
-    value: function deleteChannelMetadata(channelType, channelUrl, opts) {
-      return this.deleteChannelMetadataWithHttpInfo(channelType, channelUrl, opts).then(function (response_and_data) {
+    value: function deleteChannelMetadata(apiToken, channelType, channelUrl, opts) {
+      return this.deleteChannelMetadataWithHttpInfo(apiToken, channelType, channelUrl, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Delete a channel metadata - When deleting a specific item of a channel metadata by its key
      * ## Delete a channel metadata  Deletes a channel metadata's one or all items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel which has the metadata to delete.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} key 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
     key: "deleteChannelMetadataByKeyWithHttpInfo",
-    value: function deleteChannelMetadataByKeyWithHttpInfo(channelType, channelUrl, key, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'channelType' is set
+    value: function deleteChannelMetadataByKeyWithHttpInfo(apiToken, channelType, channelUrl, key) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling deleteChannelMetadataByKey");
+      } // verify the required parameter 'channelType' is set
+
 
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling deleteChannelMetadataByKey");
@@ -448,7 +475,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -460,36 +487,40 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Delete a channel metadata - When deleting a specific item of a channel metadata by its key
      * ## Delete a channel metadata  Deletes a channel metadata's one or all items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel which has the metadata to delete.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} key 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
     key: "deleteChannelMetadataByKey",
-    value: function deleteChannelMetadataByKey(channelType, channelUrl, key, opts) {
-      return this.deleteChannelMetadataByKeyWithHttpInfo(channelType, channelUrl, key, opts).then(function (response_and_data) {
+    value: function deleteChannelMetadataByKey(apiToken, channelType, channelUrl, key) {
+      return this.deleteChannelMetadataByKeyWithHttpInfo(apiToken, channelType, channelUrl, key).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Delete a user metadata - When deleting all items of a user metadata
      * ## Delete a user metadata  Deletes a user metadata's one or all items that are stored in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user who has the metadata to delete.
+     * @param {String} apiToken 
      * @param {String} userId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
     key: "deleteUserMetadataWithHttpInfo",
-    value: function deleteUserMetadataWithHttpInfo(userId, opts) {
+    value: function deleteUserMetadataWithHttpInfo(apiToken, userId, opts) {
       opts = opts || {};
-      var postBody = null; // verify the required parameter 'userId' is set
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling deleteUserMetadata");
+      } // verify the required parameter 'userId' is set
+
 
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling deleteUserMetadata");
@@ -502,7 +533,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
         'key': opts['key']
       };
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -514,35 +545,38 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Delete a user metadata - When deleting all items of a user metadata
      * ## Delete a user metadata  Deletes a user metadata's one or all items that are stored in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user who has the metadata to delete.
+     * @param {String} apiToken 
      * @param {String} userId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
     key: "deleteUserMetadata",
-    value: function deleteUserMetadata(userId, opts) {
-      return this.deleteUserMetadataWithHttpInfo(userId, opts).then(function (response_and_data) {
+    value: function deleteUserMetadata(apiToken, userId, opts) {
+      return this.deleteUserMetadataWithHttpInfo(apiToken, userId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Delete a user metadata - When deleting a specific item of a user metadata by its key
      * ## Delete a user metadata  Deletes a user metadata's one or all items that are stored in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user who has the metadata to delete.
+     * @param {String} apiToken 
      * @param {String} userId 
      * @param {String} key 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
     key: "deleteUserMetadataByKeyWithHttpInfo",
-    value: function deleteUserMetadataByKeyWithHttpInfo(userId, key, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'userId' is set
+    value: function deleteUserMetadataByKeyWithHttpInfo(apiToken, userId, key) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling deleteUserMetadataByKey");
+      } // verify the required parameter 'userId' is set
+
 
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling deleteUserMetadataByKey");
@@ -559,7 +593,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -571,36 +605,40 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Delete a user metadata - When deleting a specific item of a user metadata by its key
      * ## Delete a user metadata  Deletes a user metadata's one or all items that are stored in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user who has the metadata to delete.
+     * @param {String} apiToken 
      * @param {String} userId 
      * @param {String} key 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
     key: "deleteUserMetadataByKey",
-    value: function deleteUserMetadataByKey(userId, key, opts) {
-      return this.deleteUserMetadataByKeyWithHttpInfo(userId, key, opts).then(function (response_and_data) {
+    value: function deleteUserMetadataByKey(apiToken, userId, key) {
+      return this.deleteUserMetadataByKeyWithHttpInfo(apiToken, userId, key).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Update a channel metacounter - When updating existing items of a channel metacounter by their keys or adding new items to the metacounter
      * ## Update a channel metacounter  Updates existing items of a channel metacounter by their keys, or adds new items to the metacounter.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateChannelMetacounterData} opts.updateChannelMetacounterData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>} and HTTP response
      */
 
   }, {
     key: "updateChannelMetacounterWithHttpInfo",
-    value: function updateChannelMetacounterWithHttpInfo(channelType, channelUrl, opts) {
+    value: function updateChannelMetacounterWithHttpInfo(apiToken, channelType, channelUrl, opts) {
       opts = opts || {};
-      var postBody = opts['updateChannelMetacounterData']; // verify the required parameter 'channelType' is set
+      var postBody = opts['updateChannelMetacounterData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling updateChannelMetacounter");
+      } // verify the required parameter 'channelType' is set
+
 
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling updateChannelMetacounter");
@@ -617,7 +655,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -631,38 +669,43 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Update a channel metacounter - When updating existing items of a channel metacounter by their keys or adding new items to the metacounter
      * ## Update a channel metacounter  Updates existing items of a channel metacounter by their keys, or adds new items to the metacounter.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateChannelMetacounterData} opts.updateChannelMetacounterData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
      */
 
   }, {
     key: "updateChannelMetacounter",
-    value: function updateChannelMetacounter(channelType, channelUrl, opts) {
-      return this.updateChannelMetacounterWithHttpInfo(channelType, channelUrl, opts).then(function (response_and_data) {
+    value: function updateChannelMetacounter(apiToken, channelType, channelUrl, opts) {
+      return this.updateChannelMetacounterWithHttpInfo(apiToken, channelType, channelUrl, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Update a channel metacounter - When updating a specific item of a channel metacounter by its key
      * ## Update a channel metacounter  Updates existing items of a channel metacounter by their keys, or adds new items to the metacounter.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} key 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
 
   }, {
     key: "updateChannelMetacounterByKeyWithHttpInfo",
-    value: function updateChannelMetacounterByKeyWithHttpInfo(channelType, channelUrl, key, opts) {
+    value: function updateChannelMetacounterByKeyWithHttpInfo(apiToken, channelType, channelUrl, key, opts) {
       opts = opts || {};
-      var postBody = opts['body']; // verify the required parameter 'channelType' is set
+      var postBody = opts['body']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling updateChannelMetacounterByKey");
+      } // verify the required parameter 'channelType' is set
+
 
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling updateChannelMetacounterByKey");
@@ -685,7 +728,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -699,38 +742,43 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Update a channel metacounter - When updating a specific item of a channel metacounter by its key
      * ## Update a channel metacounter  Updates existing items of a channel metacounter by their keys, or adds new items to the metacounter.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} key 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
 
   }, {
     key: "updateChannelMetacounterByKey",
-    value: function updateChannelMetacounterByKey(channelType, channelUrl, key, opts) {
-      return this.updateChannelMetacounterByKeyWithHttpInfo(channelType, channelUrl, key, opts).then(function (response_and_data) {
+    value: function updateChannelMetacounterByKey(apiToken, channelType, channelUrl, key, opts) {
+      return this.updateChannelMetacounterByKeyWithHttpInfo(apiToken, channelType, channelUrl, key, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Update a channel metadata - When updating existing items of a channel metadata by their keys or adding new items to the metadata
      * ## Update a channel metadata  Updates existing items of a channel metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateChannelMetadataData} opts.updateChannelMetadataData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
 
   }, {
     key: "updateChannelMetadataWithHttpInfo",
-    value: function updateChannelMetadataWithHttpInfo(channelType, channelUrl, opts) {
+    value: function updateChannelMetadataWithHttpInfo(apiToken, channelType, channelUrl, opts) {
       opts = opts || {};
-      var postBody = opts['updateChannelMetadataData']; // verify the required parameter 'channelType' is set
+      var postBody = opts['updateChannelMetadataData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling updateChannelMetadata");
+      } // verify the required parameter 'channelType' is set
+
 
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling updateChannelMetadata");
@@ -747,7 +795,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -761,38 +809,43 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Update a channel metadata - When updating existing items of a channel metadata by their keys or adding new items to the metadata
      * ## Update a channel metadata  Updates existing items of a channel metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateChannelMetadataData} opts.updateChannelMetadataData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
 
   }, {
     key: "updateChannelMetadata",
-    value: function updateChannelMetadata(channelType, channelUrl, opts) {
-      return this.updateChannelMetadataWithHttpInfo(channelType, channelUrl, opts).then(function (response_and_data) {
+    value: function updateChannelMetadata(apiToken, channelType, channelUrl, opts) {
+      return this.updateChannelMetadataWithHttpInfo(apiToken, channelType, channelUrl, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Update a channel metadata - When updating a specific item of a channel metadata by its key
      * ## Update a channel metadata  Updates existing items of a channel metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} key 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
 
   }, {
     key: "updateChannelMetadataByKeyWithHttpInfo",
-    value: function updateChannelMetadataByKeyWithHttpInfo(channelType, channelUrl, key, opts) {
+    value: function updateChannelMetadataByKeyWithHttpInfo(apiToken, channelType, channelUrl, key, opts) {
       opts = opts || {};
-      var postBody = opts['body']; // verify the required parameter 'channelType' is set
+      var postBody = opts['body']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling updateChannelMetadataByKey");
+      } // verify the required parameter 'channelType' is set
+
 
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling updateChannelMetadataByKey");
@@ -815,7 +868,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -829,37 +882,42 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Update a channel metadata - When updating a specific item of a channel metadata by its key
      * ## Update a channel metadata  Updates existing items of a channel metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} key 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
 
   }, {
     key: "updateChannelMetadataByKey",
-    value: function updateChannelMetadataByKey(channelType, channelUrl, key, opts) {
-      return this.updateChannelMetadataByKeyWithHttpInfo(channelType, channelUrl, key, opts).then(function (response_and_data) {
+    value: function updateChannelMetadataByKey(apiToken, channelType, channelUrl, key, opts) {
+      return this.updateChannelMetadataByKeyWithHttpInfo(apiToken, channelType, channelUrl, key, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Update a user metadata - When updating existing items of a user metadata by their keys or adding new items to the metadata
      * ## Update a user metadata  Updates existing items of a user metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user to update the metadata in.
+     * @param {String} apiToken 
      * @param {String} userId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateUserMetadataData} opts.updateUserMetadataData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateUserMetadataResponse} and HTTP response
      */
 
   }, {
     key: "updateUserMetadataWithHttpInfo",
-    value: function updateUserMetadataWithHttpInfo(userId, opts) {
+    value: function updateUserMetadataWithHttpInfo(apiToken, userId, opts) {
       opts = opts || {};
-      var postBody = opts['updateUserMetadataData']; // verify the required parameter 'userId' is set
+      var postBody = opts['updateUserMetadataData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling updateUserMetadata");
+      } // verify the required parameter 'userId' is set
+
 
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling updateUserMetadata");
@@ -870,7 +928,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -882,36 +940,41 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Update a user metadata - When updating existing items of a user metadata by their keys or adding new items to the metadata
      * ## Update a user metadata  Updates existing items of a user metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user to update the metadata in.
+     * @param {String} apiToken 
      * @param {String} userId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {module:model/UpdateUserMetadataData} opts.updateUserMetadataData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateUserMetadataResponse}
      */
 
   }, {
     key: "updateUserMetadata",
-    value: function updateUserMetadata(userId, opts) {
-      return this.updateUserMetadataWithHttpInfo(userId, opts).then(function (response_and_data) {
+    value: function updateUserMetadata(apiToken, userId, opts) {
+      return this.updateUserMetadataWithHttpInfo(apiToken, userId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Update a user metadata - When updating a specific item of a user metadata by its key
      * ## Update a user metadata  Updates existing items of a user metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user to update the metadata in.
+     * @param {String} apiToken 
      * @param {String} userId 
      * @param {String} key 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
 
   }, {
     key: "updateUserMetadataByKeyWithHttpInfo",
-    value: function updateUserMetadataByKeyWithHttpInfo(userId, key, opts) {
+    value: function updateUserMetadataByKeyWithHttpInfo(apiToken, userId, key, opts) {
       opts = opts || {};
-      var postBody = opts['body']; // verify the required parameter 'userId' is set
+      var postBody = opts['body']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling updateUserMetadataByKey");
+      } // verify the required parameter 'userId' is set
+
 
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling updateUserMetadataByKey");
@@ -928,7 +991,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -942,28 +1005,28 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * Update a user metadata - When updating a specific item of a user metadata by its key
      * ## Update a user metadata  Updates existing items of a user metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user to update the metadata in.
+     * @param {String} apiToken 
      * @param {String} userId 
      * @param {String} key 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
 
   }, {
     key: "updateUserMetadataByKey",
-    value: function updateUserMetadataByKey(userId, key, opts) {
-      return this.updateUserMetadataByKeyWithHttpInfo(userId, key, opts).then(function (response_and_data) {
+    value: function updateUserMetadataByKey(apiToken, userId, key, opts) {
+      return this.updateUserMetadataByKeyWithHttpInfo(apiToken, userId, key, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * View a channel metacounter - When retrieving all items of a channel metacounter
      * ## View a channel metacounter  Retrieves channel metacounter's one or more items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>} and HTTP response
@@ -971,9 +1034,14 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
 
   }, {
     key: "viewChannelMetacounterWithHttpInfo",
-    value: function viewChannelMetacounterWithHttpInfo(channelType, channelUrl, opts) {
+    value: function viewChannelMetacounterWithHttpInfo(apiToken, channelType, channelUrl, opts) {
       opts = opts || {};
-      var postBody = null; // verify the required parameter 'channelType' is set
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling viewChannelMetacounter");
+      } // verify the required parameter 'channelType' is set
+
 
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling viewChannelMetacounter");
@@ -993,7 +1061,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
         'keys': this.apiClient.buildCollectionParam(opts['keys'], 'multi')
       };
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -1007,10 +1075,10 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * View a channel metacounter - When retrieving all items of a channel metacounter
      * ## View a channel metacounter  Retrieves channel metacounter's one or more items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
@@ -1018,27 +1086,30 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
 
   }, {
     key: "viewChannelMetacounter",
-    value: function viewChannelMetacounter(channelType, channelUrl, opts) {
-      return this.viewChannelMetacounterWithHttpInfo(channelType, channelUrl, opts).then(function (response_and_data) {
+    value: function viewChannelMetacounter(apiToken, channelType, channelUrl, opts) {
+      return this.viewChannelMetacounterWithHttpInfo(apiToken, channelType, channelUrl, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * View a channel metacounter - When retrieving a specific item of a channel metacounter by its key
      * ## View a channel metacounter  Retrieves channel metacounter's one or more items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} key 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>} and HTTP response
      */
 
   }, {
     key: "viewChannelMetacounterByKeyWithHttpInfo",
-    value: function viewChannelMetacounterByKeyWithHttpInfo(channelType, channelUrl, key, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'channelType' is set
+    value: function viewChannelMetacounterByKeyWithHttpInfo(apiToken, channelType, channelUrl, key) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling viewChannelMetacounterByKey");
+      } // verify the required parameter 'channelType' is set
+
 
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling viewChannelMetacounterByKey");
@@ -1061,7 +1132,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -1075,28 +1146,27 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * View a channel metacounter - When retrieving a specific item of a channel metacounter by its key
      * ## View a channel metacounter  Retrieves channel metacounter's one or more items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-channel-metacounter ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} key 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, module:model/{String: SendBirdAdditionalProperties}>}
      */
 
   }, {
     key: "viewChannelMetacounterByKey",
-    value: function viewChannelMetacounterByKey(channelType, channelUrl, key, opts) {
-      return this.viewChannelMetacounterByKeyWithHttpInfo(channelType, channelUrl, key, opts).then(function (response_and_data) {
+    value: function viewChannelMetacounterByKey(apiToken, channelType, channelUrl, key) {
+      return this.viewChannelMetacounterByKeyWithHttpInfo(apiToken, channelType, channelUrl, key).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * View a channel metadata - When retrieving all items of a channel metadata
      * ## View a channel metadata  Retrieves a channel metadata's one or more items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
@@ -1104,9 +1174,14 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
 
   }, {
     key: "viewChannelMetadataWithHttpInfo",
-    value: function viewChannelMetadataWithHttpInfo(channelType, channelUrl, opts) {
+    value: function viewChannelMetadataWithHttpInfo(apiToken, channelType, channelUrl, opts) {
       opts = opts || {};
-      var postBody = null; // verify the required parameter 'channelType' is set
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling viewChannelMetadata");
+      } // verify the required parameter 'channelType' is set
+
 
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling viewChannelMetadata");
@@ -1126,7 +1201,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
         'keys': this.apiClient.buildCollectionParam(opts['keys'], 'multi')
       };
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -1140,10 +1215,10 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * View a channel metadata - When retrieving all items of a channel metadata
      * ## View a channel metadata  Retrieves a channel metadata's one or more items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
@@ -1151,27 +1226,30 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
 
   }, {
     key: "viewChannelMetadata",
-    value: function viewChannelMetadata(channelType, channelUrl, opts) {
-      return this.viewChannelMetadataWithHttpInfo(channelType, channelUrl, opts).then(function (response_and_data) {
+    value: function viewChannelMetadata(apiToken, channelType, channelUrl, opts) {
+      return this.viewChannelMetadataWithHttpInfo(apiToken, channelType, channelUrl, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * View a channel metadata - When retrieving a specific item of a channel metadata by its key
      * ## View a channel metadata  Retrieves a channel metadata's one or more items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} key 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
 
   }, {
     key: "viewChannelMetadataByKeyWithHttpInfo",
-    value: function viewChannelMetadataByKeyWithHttpInfo(channelType, channelUrl, key, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'channelType' is set
+    value: function viewChannelMetadataByKeyWithHttpInfo(apiToken, channelType, channelUrl, key) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling viewChannelMetadataByKey");
+      } // verify the required parameter 'channelType' is set
+
 
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling viewChannelMetadataByKey");
@@ -1194,7 +1272,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -1208,27 +1286,26 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * View a channel metadata - When retrieving a specific item of a channel metadata by its key
      * ## View a channel metadata  Retrieves a channel metadata's one or more items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-channel-metadata ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.
+     * @param {String} apiToken 
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} key 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
 
   }, {
     key: "viewChannelMetadataByKey",
-    value: function viewChannelMetadataByKey(channelType, channelUrl, key, opts) {
-      return this.viewChannelMetadataByKeyWithHttpInfo(channelType, channelUrl, key, opts).then(function (response_and_data) {
+    value: function viewChannelMetadataByKey(apiToken, channelType, channelUrl, key) {
+      return this.viewChannelMetadataByKeyWithHttpInfo(apiToken, channelType, channelUrl, key).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * View a user metadata - When retrieving all items of a user metadata
      * ## View a user metadata  Retrieves a user metadata's one or more items that are stored in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user to retrieve the metadata in.
+     * @param {String} apiToken 
      * @param {String} userId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewUserMetadataResponse} and HTTP response
@@ -1236,9 +1313,14 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
 
   }, {
     key: "viewUserMetadataWithHttpInfo",
-    value: function viewUserMetadataWithHttpInfo(userId, opts) {
+    value: function viewUserMetadataWithHttpInfo(apiToken, userId, opts) {
       opts = opts || {};
-      var postBody = null; // verify the required parameter 'userId' is set
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling viewUserMetadata");
+      } // verify the required parameter 'userId' is set
+
 
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling viewUserMetadata");
@@ -1252,7 +1334,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
         'keys': this.apiClient.buildCollectionParam(opts['keys'], 'multi')
       };
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -1264,9 +1346,9 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * View a user metadata - When retrieving all items of a user metadata
      * ## View a user metadata  Retrieves a user metadata's one or more items that are stored in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user to retrieve the metadata in.
+     * @param {String} apiToken 
      * @param {String} userId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewUserMetadataResponse}
@@ -1274,26 +1356,29 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
 
   }, {
     key: "viewUserMetadata",
-    value: function viewUserMetadata(userId, opts) {
-      return this.viewUserMetadataWithHttpInfo(userId, opts).then(function (response_and_data) {
+    value: function viewUserMetadata(apiToken, userId, opts) {
+      return this.viewUserMetadataWithHttpInfo(apiToken, userId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * View a user metadata - When retrieving a specific item of a user metadata by its key
      * ## View a user metadata  Retrieves a user metadata's one or more items that are stored in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user to retrieve the metadata in.
+     * @param {String} apiToken 
      * @param {String} userId 
      * @param {String} key 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
 
   }, {
     key: "viewUserMetadataByKeyWithHttpInfo",
-    value: function viewUserMetadataByKeyWithHttpInfo(userId, key, opts) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'userId' is set
+    value: function viewUserMetadataByKeyWithHttpInfo(apiToken, userId, key) {
+      var postBody = null; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling viewUserMetadataByKey");
+      } // verify the required parameter 'userId' is set
+
 
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling viewUserMetadataByKey");
@@ -1310,7 +1395,7 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': opts['apiToken']
+        'Api-Token': apiToken
       };
       var formParams = {};
       var authNames = [];
@@ -1324,17 +1409,16 @@ var UserChannelMetadataApi = /*#__PURE__*/function () {
     /**
      * View a user metadata - When retrieving a specific item of a user metadata by its key
      * ## View a user metadata  Retrieves a user metadata's one or more items that are stored in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-view-a-user-metadata ----------------------------   `user_id`      Type: string      Description: Specifies the ID of the user to retrieve the metadata in.
+     * @param {String} apiToken 
      * @param {String} userId 
      * @param {String} key 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
 
   }, {
     key: "viewUserMetadataByKey",
-    value: function viewUserMetadataByKey(userId, key, opts) {
-      return this.viewUserMetadataByKeyWithHttpInfo(userId, key, opts).then(function (response_and_data) {
+    value: function viewUserMetadataByKey(apiToken, userId, key) {
+      return this.viewUserMetadataByKeyWithHttpInfo(apiToken, userId, key).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

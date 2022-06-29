@@ -17,7 +17,7 @@ import AddApnsPushConfigurationResponsePushConfigurations from './AddApnsPushCon
 /**
  * The AddApnsPushConfigurationResponse model module.
  * @module model/AddApnsPushConfigurationResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class AddApnsPushConfigurationResponse {
     /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcInviteAsMembersData model module.
  * @module model/GcInviteAsMembersData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GcInviteAsMembersData = /*#__PURE__*/function () {
   /**

@@ -88,6 +88,16 @@
         done();
       });
     });
+    describe('banUsersInChannelsWithCustomChannelType', function() {
+      it('should call banUsersInChannelsWithCustomChannelType successfully', function(done) {
+        //uncomment below and update the code to test banUsersInChannelsWithCustomChannelType
+        //instance.banUsersInChannelsWithCustomChannelType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deleteAllowedIpsFromWhitelist', function() {
       it('should call deleteAllowedIpsFromWhitelist successfully', function(done) {
         //uncomment below and update the code to test deleteAllowedIpsFromWhitelist
@@ -112,6 +122,26 @@
       it('should call generateSecondaryApiToken successfully', function(done) {
         //uncomment below and update the code to test generateSecondaryApiToken
         //instance.generateSecondaryApiToken(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listBannedUsersInChannelsWithCustomChannelType', function() {
+      it('should call listBannedUsersInChannelsWithCustomChannelType successfully', function(done) {
+        //uncomment below and update the code to test listBannedUsersInChannelsWithCustomChannelType
+        //instance.listBannedUsersInChannelsWithCustomChannelType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listMutedUsersInChannelsWithCustomChannelType', function() {
+      it('should call listMutedUsersInChannelsWithCustomChannelType successfully', function(done) {
+        //uncomment below and update the code to test listMutedUsersInChannelsWithCustomChannelType
+        //instance.listMutedUsersInChannelsWithCustomChannelType(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -148,6 +178,16 @@
         done();
       });
     });
+    describe('muteUsersInChannelsWithCustomChannelType', function() {
+      it('should call muteUsersInChannelsWithCustomChannelType successfully', function(done) {
+        //uncomment below and update the code to test muteUsersInChannelsWithCustomChannelType
+        //instance.muteUsersInChannelsWithCustomChannelType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('removePushConfigurationById', function() {
       it('should call removePushConfigurationById successfully', function(done) {
         //uncomment below and update the code to test removePushConfigurationById
@@ -172,6 +212,36 @@
       it('should call revokeSecondaryApiTokenByToken successfully', function(done) {
         //uncomment below and update the code to test revokeSecondaryApiTokenByToken
         //instance.revokeSecondaryApiTokenByToken(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('setDomainFilter', function() {
+      it('should call setDomainFilter successfully', function(done) {
+        //uncomment below and update the code to test setDomainFilter
+        //instance.setDomainFilter(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('unbanUsersInChannelsWithCustomChannelType', function() {
+      it('should call unbanUsersInChannelsWithCustomChannelType successfully', function(done) {
+        //uncomment below and update the code to test unbanUsersInChannelsWithCustomChannelType
+        //instance.unbanUsersInChannelsWithCustomChannelType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('unmuteUsersInChannelsWithCustomChannelType', function() {
+      it('should call unmuteUsersInChannelsWithCustomChannelType successfully', function(done) {
+        //uncomment below and update the code to test unmuteUsersInChannelsWithCustomChannelType
+        //instance.unmuteUsersInChannelsWithCustomChannelType(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -232,46 +302,6 @@
       it('should call viewDefaultChannelInvitationPreference successfully', function(done) {
         //uncomment below and update the code to test viewDefaultChannelInvitationPreference
         //instance.viewDefaultChannelInvitationPreference(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewNumberOfConcurrentConnections', function() {
-      it('should call viewNumberOfConcurrentConnections successfully', function(done) {
-        //uncomment below and update the code to test viewNumberOfConcurrentConnections
-        //instance.viewNumberOfConcurrentConnections(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewNumberOfDailyActiveUsers', function() {
-      it('should call viewNumberOfDailyActiveUsers successfully', function(done) {
-        //uncomment below and update the code to test viewNumberOfDailyActiveUsers
-        //instance.viewNumberOfDailyActiveUsers(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewNumberOfMonthlyActiveUsers', function() {
-      it('should call viewNumberOfMonthlyActiveUsers successfully', function(done) {
-        //uncomment below and update the code to test viewNumberOfMonthlyActiveUsers
-        //instance.viewNumberOfMonthlyActiveUsers(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewNumberOfPeakConnections', function() {
-      it('should call viewNumberOfPeakConnections successfully', function(done) {
-        //uncomment below and update the code to test viewNumberOfPeakConnections
-        //instance.viewNumberOfPeakConnections(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcBanUserData model module.
  * @module model/OcBanUserData
- * @version 1.0.0
+ * @version 1.0.3
  */
 var OcBanUserData = /*#__PURE__*/function () {
   /**

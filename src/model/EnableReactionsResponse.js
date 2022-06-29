@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EnableReactionsResponse model module.
  * @module model/EnableReactionsResponse
- * @version 1.0.1
+ * @version 1.0.3
  */
 class EnableReactionsResponse {
     /**

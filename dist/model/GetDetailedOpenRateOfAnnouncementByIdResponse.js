@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GetDetailedOpenRateOfAnnouncementByIdResponse model module.
  * @module model/GetDetailedOpenRateOfAnnouncementByIdResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var GetDetailedOpenRateOfAnnouncementByIdResponse = /*#__PURE__*/function () {
   /**

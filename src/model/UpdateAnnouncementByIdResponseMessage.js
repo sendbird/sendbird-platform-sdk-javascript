@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateAnnouncementByIdResponseMessage model module.
  * @module model/UpdateAnnouncementByIdResponseMessage
- * @version 1.0.1
+ * @version 1.0.3
  */
 class UpdateAnnouncementByIdResponseMessage {
     /**

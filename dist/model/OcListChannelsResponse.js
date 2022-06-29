@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcListChannelsResponse model module.
  * @module model/OcListChannelsResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var OcListChannelsResponse = /*#__PURE__*/function () {
   /**
@@ -63,6 +63,10 @@ var OcListChannelsResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('next')) {
           obj['next'] = _ApiClient["default"].convertToType(data['next'], 'String');
         }
+
+        if (data.hasOwnProperty('ts')) {
+          obj['ts'] = _ApiClient["default"].convertToType(data['ts'], 'Number');
+        }
       }
 
       return obj;
@@ -82,5 +86,10 @@ OcListChannelsResponse.prototype['channels'] = undefined;
  */
 
 OcListChannelsResponse.prototype['next'] = undefined;
+/**
+ * @member {Number} ts
+ */
+
+OcListChannelsResponse.prototype['ts'] = undefined;
 var _default = OcListChannelsResponse;
 exports["default"] = _default;

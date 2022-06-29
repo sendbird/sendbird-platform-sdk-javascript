@@ -78,6 +78,42 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property metadata (base name: "metadata")', function() {
+      // uncomment below and update the code to test the property metadata
+      //var instance = new SendbirdPlatformSdk.GcBanUserResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nextUrl (base name: "next_url")', function() {
+      // uncomment below and update the code to test the property nextUrl
+      //var instance = new SendbirdPlatformSdk.GcBanUserResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nickname (base name: "nickname")', function() {
+      // uncomment below and update the code to test the property nickname
+      //var instance = new SendbirdPlatformSdk.GcBanUserResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property profileUrl (base name: "profile_url")', function() {
+      // uncomment below and update the code to test the property profileUrl
+      //var instance = new SendbirdPlatformSdk.GcBanUserResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property requireAuthForProfileImage (base name: "require_auth_for_profile_image")', function() {
+      // uncomment below and update the code to test the property requireAuthForProfileImage
+      //var instance = new SendbirdPlatformSdk.GcBanUserResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property userId (base name: "user_id")', function() {
+      // uncomment below and update the code to test the property userId
+      //var instance = new SendbirdPlatformSdk.GcBanUserResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

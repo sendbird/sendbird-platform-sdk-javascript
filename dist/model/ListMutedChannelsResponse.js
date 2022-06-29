@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMutedChannelsResponse model module.
  * @module model/ListMutedChannelsResponse
- * @version 1.0.0
+ * @version 1.0.3
  */
 var ListMutedChannelsResponse = /*#__PURE__*/function () {
   /**

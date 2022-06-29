@@ -54,14 +54,8 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.ListMessagesResponseMessages);
     });
 
-    it('should have the property messageId (base name: "message_id")', function() {
-      // uncomment below and update the code to test the property messageId
-      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
+    it('should have the property messageSurvivalSeconds (base name: "message_survival_seconds")', function() {
+      // uncomment below and update the code to test the property messageSurvivalSeconds
       //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
       //expect(instance).to.be();
     });
@@ -72,38 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property channelUrl (base name: "channel_url")', function() {
-      // uncomment below and update the code to test the property channelUrl
-      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property user (base name: "user")', function() {
-      // uncomment below and update the code to test the property user
-      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property mentionType (base name: "mention_type")', function() {
-      // uncomment below and update the code to test the property mentionType
-      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
-      //expect(instance).to.be();
-    });
-
     it('should have the property mentionedUsers (base name: "mentioned_users")', function() {
       // uncomment below and update the code to test the property mentionedUsers
-      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property isRemoved (base name: "is_removed")', function() {
-      // uncomment below and update the code to test the property isRemoved
-      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property message (base name: "message")', function() {
-      // uncomment below and update the code to test the property message
       //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
       //expect(instance).to.be();
     });
@@ -114,8 +78,98 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property updatedAt (base name: "updated_at")', function() {
+      // uncomment below and update the code to test the property updatedAt
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isOpMsg (base name: "is_op_msg")', function() {
+      // uncomment below and update the code to test the property isOpMsg
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isRemoved (base name: "is_removed")', function() {
+      // uncomment below and update the code to test the property isRemoved
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property user (base name: "user")', function() {
+      // uncomment below and update the code to test the property user
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property file (base name: "file")', function() {
+      // uncomment below and update the code to test the property file
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property message (base name: "message")', function() {
+      // uncomment below and update the code to test the property message
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property messageRetentionHour (base name: "message_retention_hour")', function() {
+      // uncomment below and update the code to test the property messageRetentionHour
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property silent (base name: "silent")', function() {
+      // uncomment below and update the code to test the property silent
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property channelType (base name: "channel_type")', function() {
+      // uncomment below and update the code to test the property channelType
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property reqId (base name: "req_id")', function() {
+      // uncomment below and update the code to test the property reqId
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property mentionType (base name: "mention_type")', function() {
+      // uncomment below and update the code to test the property mentionType
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property channelUrl (base name: "channel_url")', function() {
+      // uncomment below and update the code to test the property channelUrl
+      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property messageId (base name: "message_id")', function() {
+      // uncomment below and update the code to test the property messageId
       //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
       //expect(instance).to.be();
     });
@@ -128,24 +182,6 @@
 
     it('should have the property ogTag (base name: "og_tag")', function() {
       // uncomment below and update the code to test the property ogTag
-      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedAt (base name: "updated_at")', function() {
-      // uncomment below and update the code to test the property updatedAt
-      //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property file (base name: "file")', function() {
-      // uncomment below and update the code to test the property file
       //var instance = new SendbirdPlatformSdk.ListMessagesResponseMessages();
       //expect(instance).to.be();
     });

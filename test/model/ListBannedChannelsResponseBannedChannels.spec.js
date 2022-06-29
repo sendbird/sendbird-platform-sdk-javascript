@@ -60,12 +60,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property endAt (base name: "end_at")', function() {
-      // uncomment below and update the code to test the property endAt
-      //var instance = new SendbirdPlatformSdk.ListBannedChannelsResponseBannedChannels();
-      //expect(instance).to.be();
-    });
-
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
       //var instance = new SendbirdPlatformSdk.ListBannedChannelsResponseBannedChannels();
@@ -74,6 +68,12 @@
 
     it('should have the property channel (base name: "channel")', function() {
       // uncomment below and update the code to test the property channel
+      //var instance = new SendbirdPlatformSdk.ListBannedChannelsResponseBannedChannels();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property endAt (base name: "end_at")', function() {
+      // uncomment below and update the code to test the property endAt
       //var instance = new SendbirdPlatformSdk.ListBannedChannelsResponseBannedChannels();
       //expect(instance).to.be();
     });
