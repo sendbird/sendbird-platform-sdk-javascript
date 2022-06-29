@@ -77,19 +77,19 @@ The linking step is demonstrated visually here.
 
 ![npm link walkthrough](https://i.imgur.com/897SxfC.gif)
 
-# 🗃️ Documentation
 
-All the documentation for this project lives in the /docs directory of this repo.
+# 🗃️ Documentation 
+All the documentation for this project lives in the /docs directory of this repo. 
 
 ##### Helpful links
 
 |       | Documentation |
 | ----------- | ----------- |
-| Announcements   | [docs/AnnouncementsApi.md](docs/AnnouncementsApi.md)|
+| Announcement   | [docs/AnnouncementApi.md](docs/AnnouncementApi.md)|
 | Application | [docs/ApplicationApi.md](docs/ApplicationApi.md)  |
-| BotInterface | [docs/BotApi.md](docs/BotInterfaceApi.md)  |
+| Bot | [docs/BotApi.md](docs/BotApi.md)  |
 | GroupChannel | [docs/GroupChannelApi.md](docs/GroupChannelApi.md)  |
-| Messages | [docs/MessagesApi.md](docs/MessagesApi.md)  |
-| OpenChannel | [docs/OpenChannelApi.md](docs/OpenChannelApi.md)  |
+| Message | [docs/MessageApi.md](docs/MessageApi.md)  |
+| OpenChannel | [docs/OpenChannelApi.md ](docs/OpenChannelApi.md)  |
 | User | [docs/UserApi.md](docs/UserApi.md)  |
 | Webhooks | [docs/WebhooksApi.md](docs/WebhooksApi.md)  |
