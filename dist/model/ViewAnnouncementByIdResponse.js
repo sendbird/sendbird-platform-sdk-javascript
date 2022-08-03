@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewAnnouncementByIdResponse model module.
  * @module model/ViewAnnouncementByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ViewAnnouncementByIdResponse = /*#__PURE__*/function () {
   /**

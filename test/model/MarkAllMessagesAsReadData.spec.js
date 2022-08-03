@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.MarkAllMessagesAsReadData);
     });
 
-    it('should have the property userId (base name: "user_id")', function() {
-      // uncomment below and update the code to test the property userId
-      //var instance = new SendbirdPlatformSdk.MarkAllMessagesAsReadData();
-      //expect(instance).to.be();
-    });
-
     it('should have the property channelUrls (base name: "channel_urls")', function() {
       // uncomment below and update the code to test the property channelUrls
       //var instance = new SendbirdPlatformSdk.MarkAllMessagesAsReadData();

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The DeleteApnsCertificateByIdResponse model module.
  * @module model/DeleteApnsCertificateByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var DeleteApnsCertificateByIdResponse = /*#__PURE__*/function () {
   /**

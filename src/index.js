@@ -15,19 +15,19 @@
 import ApiClient from './ApiClient';
 import AddApnsPushConfigurationData from './model/AddApnsPushConfigurationData';
 import AddApnsPushConfigurationResponse from './model/AddApnsPushConfigurationResponse';
-import AddApnsPushConfigurationResponsePushConfigurations from './model/AddApnsPushConfigurationResponsePushConfigurations';
+import AddApnsPushConfigurationResponsePushConfigurationsInner from './model/AddApnsPushConfigurationResponsePushConfigurationsInner';
 import AddEmojiCategoriesResponse from './model/AddEmojiCategoriesResponse';
-import AddEmojiCategoriesResponseEmojiCategories from './model/AddEmojiCategoriesResponseEmojiCategories';
+import AddEmojiCategoriesResponseEmojiCategoriesInner from './model/AddEmojiCategoriesResponseEmojiCategoriesInner';
 import AddEmojisData from './model/AddEmojisData';
 import AddEmojisResponse from './model/AddEmojisResponse';
 import AddExtraDataToMessageData from './model/AddExtraDataToMessageData';
 import AddExtraDataToMessageResponse from './model/AddExtraDataToMessageResponse';
 import AddFcmPushConfigurationData from './model/AddFcmPushConfigurationData';
 import AddFcmPushConfigurationResponse from './model/AddFcmPushConfigurationResponse';
-import AddFcmPushConfigurationResponsePushConfigurations from './model/AddFcmPushConfigurationResponsePushConfigurations';
+import AddFcmPushConfigurationResponsePushConfigurationsInner from './model/AddFcmPushConfigurationResponsePushConfigurationsInner';
 import AddHmsPushConfigurationData from './model/AddHmsPushConfigurationData';
 import AddHmsPushConfigurationResponse from './model/AddHmsPushConfigurationResponse';
-import AddHmsPushConfigurationResponsePushConfigurations from './model/AddHmsPushConfigurationResponsePushConfigurations';
+import AddHmsPushConfigurationResponsePushConfigurationsInner from './model/AddHmsPushConfigurationResponsePushConfigurationsInner';
 import AddIpToWhitelistData from './model/AddIpToWhitelistData';
 import AddIpToWhitelistResponse from './model/AddIpToWhitelistResponse';
 import AddReactionToAMessageData from './model/AddReactionToAMessageData';
@@ -36,6 +36,7 @@ import AddRegistrationOrDeviceTokenData from './model/AddRegistrationOrDeviceTok
 import AddRegistrationOrDeviceTokenResponse from './model/AddRegistrationOrDeviceTokenResponse';
 import BanFromChannelsWithCustomChannelTypesData from './model/BanFromChannelsWithCustomChannelTypesData';
 import BanUsersInChannelsWithCustomChannelTypeData from './model/BanUsersInChannelsWithCustomChannelTypeData';
+import BanUsersInChannelsWithCustomChannelTypeDataBannedListInner from './model/BanUsersInChannelsWithCustomChannelTypeDataBannedListInner';
 import Blob from './model/Blob';
 import BlockUserData from './model/BlockUserData';
 import BlockUserResponse from './model/BlockUserResponse';
@@ -94,55 +95,54 @@ import GenerateSecondaryApiTokenResponse from './model/GenerateSecondaryApiToken
 import GetDetailedOpenRateOfAnnouncementByIdResponse from './model/GetDetailedOpenRateOfAnnouncementByIdResponse';
 import GetDetailedOpenRateOfAnnouncementGroupResponse from './model/GetDetailedOpenRateOfAnnouncementGroupResponse';
 import GetDetailedOpenStatusOfAnnouncementByIdResponse from './model/GetDetailedOpenStatusOfAnnouncementByIdResponse';
-import GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus from './model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus';
+import GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner from './model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner';
 import GetStatisticsDailyResponse from './model/GetStatisticsDailyResponse';
-import GetStatisticsDailyResponseStatistics from './model/GetStatisticsDailyResponseStatistics';
+import GetStatisticsDailyResponseStatisticsInner from './model/GetStatisticsDailyResponseStatisticsInner';
 import GetStatisticsMonthlyResponse from './model/GetStatisticsMonthlyResponse';
 import GetStatisticsResponse from './model/GetStatisticsResponse';
-import InlineResponse200 from './model/InlineResponse200';
-import InlineResponse2001 from './model/InlineResponse2001';
 import JoinChannelsData from './model/JoinChannelsData';
 import JoinChannelsResponse from './model/JoinChannelsResponse';
 import LeaveMyGroupChannelsData from './model/LeaveMyGroupChannelsData';
 import ListAllEmojisAndEmojiCategoriesResponse from './model/ListAllEmojisAndEmojiCategoriesResponse';
-import ListAllEmojisAndEmojiCategoriesResponseEmojiCategories from './model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategories';
-import ListAllEmojisAndEmojiCategoriesResponseEmojis from './model/ListAllEmojisAndEmojiCategoriesResponseEmojis';
+import ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner from './model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner';
+import ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner from './model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner';
 import ListAnnouncementGroupsResponse from './model/ListAnnouncementGroupsResponse';
 import ListAnnouncementsResponse from './model/ListAnnouncementsResponse';
-import ListAnnouncementsResponseAnnouncements from './model/ListAnnouncementsResponseAnnouncements';
+import ListAnnouncementsResponseAnnouncementsInner from './model/ListAnnouncementsResponseAnnouncementsInner';
 import ListBannedChannelsResponse from './model/ListBannedChannelsResponse';
-import ListBannedChannelsResponseBannedChannels from './model/ListBannedChannelsResponseBannedChannels';
+import ListBannedChannelsResponseBannedChannelsInner from './model/ListBannedChannelsResponseBannedChannelsInner';
 import ListBlockedUsersResponse from './model/ListBlockedUsersResponse';
 import ListBotsResponse from './model/ListBotsResponse';
-import ListBotsResponseBots from './model/ListBotsResponseBots';
+import ListBotsResponseBotsInner from './model/ListBotsResponseBotsInner';
 import ListDataExportsByMessageChannelOrUserResponse from './model/ListDataExportsByMessageChannelOrUserResponse';
-import ListDataExportsByMessageChannelOrUserResponseExportedData from './model/ListDataExportsByMessageChannelOrUserResponseExportedData';
-import ListDataExportsByMessageChannelOrUserResponseFile from './model/ListDataExportsByMessageChannelOrUserResponseFile';
+import ListDataExportsByMessageChannelOrUserResponseExportedDataInner from './model/ListDataExportsByMessageChannelOrUserResponseExportedDataInner';
+import ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile from './model/ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile';
 import ListEmojisResponse from './model/ListEmojisResponse';
 import ListGdprRequestsResponse from './model/ListGdprRequestsResponse';
-import ListGdprRequestsResponseRequests from './model/ListGdprRequestsResponseRequests';
+import ListGdprRequestsResponseRequestsInner from './model/ListGdprRequestsResponseRequestsInner';
 import ListMessagesResponse from './model/ListMessagesResponse';
-import ListMessagesResponseMessages from './model/ListMessagesResponseMessages';
-import ListMessagesResponseOgTag from './model/ListMessagesResponseOgTag';
-import ListMessagesResponseOgTagOgImage from './model/ListMessagesResponseOgTagOgImage';
-import ListMessagesResponseSortedMetaarray from './model/ListMessagesResponseSortedMetaarray';
+import ListMessagesResponseMessagesInner from './model/ListMessagesResponseMessagesInner';
+import ListMessagesResponseMessagesInnerOgTag from './model/ListMessagesResponseMessagesInnerOgTag';
+import ListMessagesResponseMessagesInnerOgTagOgImage from './model/ListMessagesResponseMessagesInnerOgTagOgImage';
+import ListMessagesResponseMessagesInnerSortedMetaarrayInner from './model/ListMessagesResponseMessagesInnerSortedMetaarrayInner';
 import ListMutedChannelsResponse from './model/ListMutedChannelsResponse';
+import ListMutedUsersInChannelsWithCustomChannelType200Response from './model/ListMutedUsersInChannelsWithCustomChannelType200Response';
 import ListMyGroupChannelsResponse from './model/ListMyGroupChannelsResponse';
 import ListPushConfigurationsResponse from './model/ListPushConfigurationsResponse';
-import ListPushConfigurationsResponsePushConfigurations from './model/ListPushConfigurationsResponsePushConfigurations';
+import ListPushConfigurationsResponsePushConfigurationsInner from './model/ListPushConfigurationsResponsePushConfigurationsInner';
 import ListPushNotificationContentTemplatesResponse from './model/ListPushNotificationContentTemplatesResponse';
-import ListPushNotificationContentTemplatesResponsePushMessageTemplates from './model/ListPushNotificationContentTemplatesResponsePushMessageTemplates';
-import ListPushNotificationContentTemplatesResponseTemplate from './model/ListPushNotificationContentTemplatesResponseTemplate';
+import ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner from './model/ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner';
+import ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate from './model/ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate';
 import ListReactionsOfMessageResponse from './model/ListReactionsOfMessageResponse';
 import ListRegistrationOrDeviceTokensResponse from './model/ListRegistrationOrDeviceTokensResponse';
 import ListReportsOnChannelByUrlResponse from './model/ListReportsOnChannelByUrlResponse';
 import ListReportsOnMessageByIdResponse from './model/ListReportsOnMessageByIdResponse';
-import ListReportsOnMessageByIdResponseReportLogs from './model/ListReportsOnMessageByIdResponseReportLogs';
+import ListReportsOnMessageByIdResponseReportLogsInner from './model/ListReportsOnMessageByIdResponseReportLogsInner';
 import ListReportsOnUserByIdResponse from './model/ListReportsOnUserByIdResponse';
 import ListReportsResponse from './model/ListReportsResponse';
-import ListReportsResponseReportLogs from './model/ListReportsResponseReportLogs';
+import ListReportsResponseReportLogsInner from './model/ListReportsResponseReportLogsInner';
 import ListSecondaryApiTokensResponse from './model/ListSecondaryApiTokensResponse';
-import ListSecondaryApiTokensResponseApiTokens from './model/ListSecondaryApiTokensResponseApiTokens';
+import ListSecondaryApiTokensResponseApiTokensInner from './model/ListSecondaryApiTokensResponseApiTokensInner';
 import ListUsersResponse from './model/ListUsersResponse';
 import MarkAllMessagesAsReadData from './model/MarkAllMessagesAsReadData';
 import MuteInChannelsWithCustomChannelTypesData from './model/MuteInChannelsWithCustomChannelTypesData';
@@ -150,9 +150,10 @@ import MuteUsersInChannelsWithCustomChannelTypeData from './model/MuteUsersInCha
 import OcBanUserData from './model/OcBanUserData';
 import OcBanUserResponse from './model/OcBanUserResponse';
 import OcCreateChannelData from './model/OcCreateChannelData';
+import OcDeleteChannelByUrl200Response from './model/OcDeleteChannelByUrl200Response';
 import OcFreezeChannelData from './model/OcFreezeChannelData';
 import OcListBannedUsersResponse from './model/OcListBannedUsersResponse';
-import OcListBannedUsersResponseBannedList from './model/OcListBannedUsersResponseBannedList';
+import OcListBannedUsersResponseBannedListInner from './model/OcListBannedUsersResponseBannedListInner';
 import OcListChannelsResponse from './model/OcListChannelsResponse';
 import OcListMutedUsersResponse from './model/OcListMutedUsersResponse';
 import OcListOperatorsResponse from './model/OcListOperatorsResponse';
@@ -191,7 +192,6 @@ import ScheduleAnnouncementData from './model/ScheduleAnnouncementData';
 import ScheduleAnnouncementResponse from './model/ScheduleAnnouncementResponse';
 import ScheduleAnnouncementResponseCreateChannelOptions from './model/ScheduleAnnouncementResponseCreateChannelOptions';
 import ScheduleAnnouncementResponseMessage from './model/ScheduleAnnouncementResponseMessage';
-import SendBirdAdditionalProperties from './model/SendBirdAdditionalProperties';
 import SendBirdAdminMessage from './model/SendBirdAdminMessage';
 import SendBirdAppleCriticalAlertOptions from './model/SendBirdAppleCriticalAlertOptions';
 import SendBirdBaseChannel from './model/SendBirdBaseChannel';
@@ -201,6 +201,7 @@ import SendBirdEmoji from './model/SendBirdEmoji';
 import SendBirdEmojiCategory from './model/SendBirdEmojiCategory';
 import SendBirdFileMessageParams from './model/SendBirdFileMessageParams';
 import SendBirdGroupChannel from './model/SendBirdGroupChannel';
+import SendBirdGroupChannelChannel from './model/SendBirdGroupChannelChannel';
 import SendBirdGroupChannelCollection from './model/SendBirdGroupChannelCollection';
 import SendBirdGroupChannelCreatedBy from './model/SendBirdGroupChannelCreatedBy';
 import SendBirdGroupChannelDisappearingMessage from './model/SendBirdGroupChannelDisappearingMessage';
@@ -208,7 +209,7 @@ import SendBirdGroupChannelSmsFallback from './model/SendBirdGroupChannelSmsFall
 import SendBirdMember from './model/SendBirdMember';
 import SendBirdMessageMetaArray from './model/SendBirdMessageMetaArray';
 import SendBirdMessageResponse from './model/SendBirdMessageResponse';
-import SendBirdMessageResponseMentionedUsers from './model/SendBirdMessageResponseMentionedUsers';
+import SendBirdMessageResponseMentionedUsersInner from './model/SendBirdMessageResponseMentionedUsersInner';
 import SendBirdMessageResponseUser from './model/SendBirdMessageResponseUser';
 import SendBirdOGImage from './model/SendBirdOGImage';
 import SendBirdOGMetaData from './model/SendBirdOGMetaData';
@@ -229,6 +230,13 @@ import SendBirdUserMessageParams from './model/SendBirdUserMessageParams';
 import SendBotSMessageData from './model/SendBotSMessageData';
 import SendMessageData from './model/SendMessageData';
 import SetDomainFilterData from './model/SetDomainFilterData';
+import SetDomainFilterDataDomainFilter from './model/SetDomainFilterDataDomainFilter';
+import SetDomainFilterDataImageModeration from './model/SetDomainFilterDataImageModeration';
+import SetDomainFilterDataImageModerationLimits from './model/SetDomainFilterDataImageModerationLimits';
+import SetDomainFilterDataProfanityFilter from './model/SetDomainFilterDataProfanityFilter';
+import SetDomainFilterDataProfanityFilterRegexFiltersInner from './model/SetDomainFilterDataProfanityFilterRegexFiltersInner';
+import SetDomainFilterDataProfanityTriggeredModeration from './model/SetDomainFilterDataProfanityTriggeredModeration';
+import TranslateMessageIntoOtherLanguagesData from './model/TranslateMessageIntoOtherLanguagesData';
 import UpdateAnnouncementByIdData from './model/UpdateAnnouncementByIdData';
 import UpdateAnnouncementByIdResponse from './model/UpdateAnnouncementByIdResponse';
 import UpdateAnnouncementByIdResponseMessage from './model/UpdateAnnouncementByIdResponseMessage';
@@ -248,7 +256,7 @@ import UpdateEmojiCategoryUrlByIdData from './model/UpdateEmojiCategoryUrlByIdDa
 import UpdateEmojiUrlByKeyData from './model/UpdateEmojiUrlByKeyData';
 import UpdateExtraDataInMessageData from './model/UpdateExtraDataInMessageData';
 import UpdateExtraDataInMessageResponse from './model/UpdateExtraDataInMessageResponse';
-import UpdateExtraDataInMessageResponseSortedMetaarray from './model/UpdateExtraDataInMessageResponseSortedMetaarray';
+import UpdateExtraDataInMessageResponseSortedMetaarrayInner from './model/UpdateExtraDataInMessageResponseSortedMetaarrayInner';
 import UpdateFcmPushConfigurationByIdData from './model/UpdateFcmPushConfigurationByIdData';
 import UpdateFcmPushConfigurationByIdResponse from './model/UpdateFcmPushConfigurationByIdResponse';
 import UpdateHmsPushConfigurationByIdData from './model/UpdateHmsPushConfigurationByIdData';
@@ -265,13 +273,6 @@ import UpdateUserMetadataData from './model/UpdateUserMetadataData';
 import UpdateUserMetadataResponse from './model/UpdateUserMetadataResponse';
 import UseDefaultEmojisData from './model/UseDefaultEmojisData';
 import UseDefaultEmojisResponse from './model/UseDefaultEmojisResponse';
-import V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList from './model/V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList';
-import V3ApplicationsSettingsGlobalCustomTypeDomainFilter from './model/V3ApplicationsSettingsGlobalCustomTypeDomainFilter';
-import V3ApplicationsSettingsGlobalCustomTypeImageModeration from './model/V3ApplicationsSettingsGlobalCustomTypeImageModeration';
-import V3ApplicationsSettingsGlobalCustomTypeImageModerationLimits from './model/V3ApplicationsSettingsGlobalCustomTypeImageModerationLimits';
-import V3ApplicationsSettingsGlobalCustomTypeProfanityFilter from './model/V3ApplicationsSettingsGlobalCustomTypeProfanityFilter';
-import V3ApplicationsSettingsGlobalCustomTypeProfanityFilterRegexFilters from './model/V3ApplicationsSettingsGlobalCustomTypeProfanityFilterRegexFilters';
-import V3ApplicationsSettingsGlobalCustomTypeProfanityTriggeredModeration from './model/V3ApplicationsSettingsGlobalCustomTypeProfanityTriggeredModeration';
 import ViewAnnouncementByIdResponse from './model/ViewAnnouncementByIdResponse';
 import ViewBotByIdResponse from './model/ViewBotByIdResponse';
 import ViewChannelInvitationPreferenceResponse from './model/ViewChannelInvitationPreferenceResponse';
@@ -285,17 +286,18 @@ import ViewNumberOfConcurrentConnectionsResponse from './model/ViewNumberOfConcu
 import ViewNumberOfDailyActiveUsersResponse from './model/ViewNumberOfDailyActiveUsersResponse';
 import ViewNumberOfMonthlyActiveUsersResponse from './model/ViewNumberOfMonthlyActiveUsersResponse';
 import ViewNumberOfPeakConnectionsResponse from './model/ViewNumberOfPeakConnectionsResponse';
-import ViewNumberOfPeakConnectionsResponsePeakConnections from './model/ViewNumberOfPeakConnectionsResponsePeakConnections';
+import ViewNumberOfPeakConnectionsResponsePeakConnectionsInner from './model/ViewNumberOfPeakConnectionsResponsePeakConnectionsInner';
 import ViewNumberOfUnreadItemsResponse from './model/ViewNumberOfUnreadItemsResponse';
 import ViewNumberOfUnreadMessagesResponse from './model/ViewNumberOfUnreadMessagesResponse';
 import ViewPushConfigurationByIdResponse from './model/ViewPushConfigurationByIdResponse';
 import ViewPushNotificationContentTemplateResponse from './model/ViewPushNotificationContentTemplateResponse';
-import ViewPushNotificationContentTemplateResponsePushMessageTemplates from './model/ViewPushNotificationContentTemplateResponsePushMessageTemplates';
+import ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner from './model/ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner';
 import ViewPushPreferencesForChannelByUrlResponse from './model/ViewPushPreferencesForChannelByUrlResponse';
 import ViewPushPreferencesResponse from './model/ViewPushPreferencesResponse';
 import ViewSecondaryApiTokenByTokenResponse from './model/ViewSecondaryApiTokenByTokenResponse';
 import ViewTotalNumberOfMessagesInChannelResponse from './model/ViewTotalNumberOfMessagesInChannelResponse';
 import ViewUserMetadataResponse from './model/ViewUserMetadataResponse';
+import ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner from './model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner';
 import AnnouncementApi from './api/AnnouncementApi';
 import ApplicationApi from './api/ApplicationApi';
 import BotApi from './api/BotApi';
@@ -309,7 +311,7 @@ import PrivacyApi from './api/PrivacyApi';
 import ReportApi from './api/ReportApi';
 import StatisticsApi from './api/StatisticsApi';
 import UserApi from './api/UserApi';
-import WebhooksApi from './api/WebhooksApi';
+import WebhookApi from './api/WebhookApi';
 
 
 /**
@@ -341,7 +343,7 @@ import WebhooksApi from './api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.3
+* @version 1.0.7
 */
 export {
     /**
@@ -363,10 +365,10 @@ export {
     AddApnsPushConfigurationResponse,
 
     /**
-     * The AddApnsPushConfigurationResponsePushConfigurations model constructor.
-     * @property {module:model/AddApnsPushConfigurationResponsePushConfigurations}
+     * The AddApnsPushConfigurationResponsePushConfigurationsInner model constructor.
+     * @property {module:model/AddApnsPushConfigurationResponsePushConfigurationsInner}
      */
-    AddApnsPushConfigurationResponsePushConfigurations,
+    AddApnsPushConfigurationResponsePushConfigurationsInner,
 
     /**
      * The AddEmojiCategoriesResponse model constructor.
@@ -375,10 +377,10 @@ export {
     AddEmojiCategoriesResponse,
 
     /**
-     * The AddEmojiCategoriesResponseEmojiCategories model constructor.
-     * @property {module:model/AddEmojiCategoriesResponseEmojiCategories}
+     * The AddEmojiCategoriesResponseEmojiCategoriesInner model constructor.
+     * @property {module:model/AddEmojiCategoriesResponseEmojiCategoriesInner}
      */
-    AddEmojiCategoriesResponseEmojiCategories,
+    AddEmojiCategoriesResponseEmojiCategoriesInner,
 
     /**
      * The AddEmojisData model constructor.
@@ -417,10 +419,10 @@ export {
     AddFcmPushConfigurationResponse,
 
     /**
-     * The AddFcmPushConfigurationResponsePushConfigurations model constructor.
-     * @property {module:model/AddFcmPushConfigurationResponsePushConfigurations}
+     * The AddFcmPushConfigurationResponsePushConfigurationsInner model constructor.
+     * @property {module:model/AddFcmPushConfigurationResponsePushConfigurationsInner}
      */
-    AddFcmPushConfigurationResponsePushConfigurations,
+    AddFcmPushConfigurationResponsePushConfigurationsInner,
 
     /**
      * The AddHmsPushConfigurationData model constructor.
@@ -435,10 +437,10 @@ export {
     AddHmsPushConfigurationResponse,
 
     /**
-     * The AddHmsPushConfigurationResponsePushConfigurations model constructor.
-     * @property {module:model/AddHmsPushConfigurationResponsePushConfigurations}
+     * The AddHmsPushConfigurationResponsePushConfigurationsInner model constructor.
+     * @property {module:model/AddHmsPushConfigurationResponsePushConfigurationsInner}
      */
-    AddHmsPushConfigurationResponsePushConfigurations,
+    AddHmsPushConfigurationResponsePushConfigurationsInner,
 
     /**
      * The AddIpToWhitelistData model constructor.
@@ -487,6 +489,12 @@ export {
      * @property {module:model/BanUsersInChannelsWithCustomChannelTypeData}
      */
     BanUsersInChannelsWithCustomChannelTypeData,
+
+    /**
+     * The BanUsersInChannelsWithCustomChannelTypeDataBannedListInner model constructor.
+     * @property {module:model/BanUsersInChannelsWithCustomChannelTypeDataBannedListInner}
+     */
+    BanUsersInChannelsWithCustomChannelTypeDataBannedListInner,
 
     /**
      * The Blob model constructor.
@@ -837,10 +845,10 @@ export {
     GetDetailedOpenStatusOfAnnouncementByIdResponse,
 
     /**
-     * The GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus model constructor.
-     * @property {module:model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus}
+     * The GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner model constructor.
+     * @property {module:model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner}
      */
-    GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus,
+    GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner,
 
     /**
      * The GetStatisticsDailyResponse model constructor.
@@ -849,10 +857,10 @@ export {
     GetStatisticsDailyResponse,
 
     /**
-     * The GetStatisticsDailyResponseStatistics model constructor.
-     * @property {module:model/GetStatisticsDailyResponseStatistics}
+     * The GetStatisticsDailyResponseStatisticsInner model constructor.
+     * @property {module:model/GetStatisticsDailyResponseStatisticsInner}
      */
-    GetStatisticsDailyResponseStatistics,
+    GetStatisticsDailyResponseStatisticsInner,
 
     /**
      * The GetStatisticsMonthlyResponse model constructor.
@@ -865,18 +873,6 @@ export {
      * @property {module:model/GetStatisticsResponse}
      */
     GetStatisticsResponse,
-
-    /**
-     * The InlineResponse200 model constructor.
-     * @property {module:model/InlineResponse200}
-     */
-    InlineResponse200,
-
-    /**
-     * The InlineResponse2001 model constructor.
-     * @property {module:model/InlineResponse2001}
-     */
-    InlineResponse2001,
 
     /**
      * The JoinChannelsData model constructor.
@@ -903,16 +899,16 @@ export {
     ListAllEmojisAndEmojiCategoriesResponse,
 
     /**
-     * The ListAllEmojisAndEmojiCategoriesResponseEmojiCategories model constructor.
-     * @property {module:model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategories}
+     * The ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner model constructor.
+     * @property {module:model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner}
      */
-    ListAllEmojisAndEmojiCategoriesResponseEmojiCategories,
+    ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner,
 
     /**
-     * The ListAllEmojisAndEmojiCategoriesResponseEmojis model constructor.
-     * @property {module:model/ListAllEmojisAndEmojiCategoriesResponseEmojis}
+     * The ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner model constructor.
+     * @property {module:model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner}
      */
-    ListAllEmojisAndEmojiCategoriesResponseEmojis,
+    ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner,
 
     /**
      * The ListAnnouncementGroupsResponse model constructor.
@@ -927,10 +923,10 @@ export {
     ListAnnouncementsResponse,
 
     /**
-     * The ListAnnouncementsResponseAnnouncements model constructor.
-     * @property {module:model/ListAnnouncementsResponseAnnouncements}
+     * The ListAnnouncementsResponseAnnouncementsInner model constructor.
+     * @property {module:model/ListAnnouncementsResponseAnnouncementsInner}
      */
-    ListAnnouncementsResponseAnnouncements,
+    ListAnnouncementsResponseAnnouncementsInner,
 
     /**
      * The ListBannedChannelsResponse model constructor.
@@ -939,10 +935,10 @@ export {
     ListBannedChannelsResponse,
 
     /**
-     * The ListBannedChannelsResponseBannedChannels model constructor.
-     * @property {module:model/ListBannedChannelsResponseBannedChannels}
+     * The ListBannedChannelsResponseBannedChannelsInner model constructor.
+     * @property {module:model/ListBannedChannelsResponseBannedChannelsInner}
      */
-    ListBannedChannelsResponseBannedChannels,
+    ListBannedChannelsResponseBannedChannelsInner,
 
     /**
      * The ListBlockedUsersResponse model constructor.
@@ -957,10 +953,10 @@ export {
     ListBotsResponse,
 
     /**
-     * The ListBotsResponseBots model constructor.
-     * @property {module:model/ListBotsResponseBots}
+     * The ListBotsResponseBotsInner model constructor.
+     * @property {module:model/ListBotsResponseBotsInner}
      */
-    ListBotsResponseBots,
+    ListBotsResponseBotsInner,
 
     /**
      * The ListDataExportsByMessageChannelOrUserResponse model constructor.
@@ -969,16 +965,16 @@ export {
     ListDataExportsByMessageChannelOrUserResponse,
 
     /**
-     * The ListDataExportsByMessageChannelOrUserResponseExportedData model constructor.
-     * @property {module:model/ListDataExportsByMessageChannelOrUserResponseExportedData}
+     * The ListDataExportsByMessageChannelOrUserResponseExportedDataInner model constructor.
+     * @property {module:model/ListDataExportsByMessageChannelOrUserResponseExportedDataInner}
      */
-    ListDataExportsByMessageChannelOrUserResponseExportedData,
+    ListDataExportsByMessageChannelOrUserResponseExportedDataInner,
 
     /**
-     * The ListDataExportsByMessageChannelOrUserResponseFile model constructor.
-     * @property {module:model/ListDataExportsByMessageChannelOrUserResponseFile}
+     * The ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile model constructor.
+     * @property {module:model/ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile}
      */
-    ListDataExportsByMessageChannelOrUserResponseFile,
+    ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile,
 
     /**
      * The ListEmojisResponse model constructor.
@@ -993,10 +989,10 @@ export {
     ListGdprRequestsResponse,
 
     /**
-     * The ListGdprRequestsResponseRequests model constructor.
-     * @property {module:model/ListGdprRequestsResponseRequests}
+     * The ListGdprRequestsResponseRequestsInner model constructor.
+     * @property {module:model/ListGdprRequestsResponseRequestsInner}
      */
-    ListGdprRequestsResponseRequests,
+    ListGdprRequestsResponseRequestsInner,
 
     /**
      * The ListMessagesResponse model constructor.
@@ -1005,34 +1001,40 @@ export {
     ListMessagesResponse,
 
     /**
-     * The ListMessagesResponseMessages model constructor.
-     * @property {module:model/ListMessagesResponseMessages}
+     * The ListMessagesResponseMessagesInner model constructor.
+     * @property {module:model/ListMessagesResponseMessagesInner}
      */
-    ListMessagesResponseMessages,
+    ListMessagesResponseMessagesInner,
 
     /**
-     * The ListMessagesResponseOgTag model constructor.
-     * @property {module:model/ListMessagesResponseOgTag}
+     * The ListMessagesResponseMessagesInnerOgTag model constructor.
+     * @property {module:model/ListMessagesResponseMessagesInnerOgTag}
      */
-    ListMessagesResponseOgTag,
+    ListMessagesResponseMessagesInnerOgTag,
 
     /**
-     * The ListMessagesResponseOgTagOgImage model constructor.
-     * @property {module:model/ListMessagesResponseOgTagOgImage}
+     * The ListMessagesResponseMessagesInnerOgTagOgImage model constructor.
+     * @property {module:model/ListMessagesResponseMessagesInnerOgTagOgImage}
      */
-    ListMessagesResponseOgTagOgImage,
+    ListMessagesResponseMessagesInnerOgTagOgImage,
 
     /**
-     * The ListMessagesResponseSortedMetaarray model constructor.
-     * @property {module:model/ListMessagesResponseSortedMetaarray}
+     * The ListMessagesResponseMessagesInnerSortedMetaarrayInner model constructor.
+     * @property {module:model/ListMessagesResponseMessagesInnerSortedMetaarrayInner}
      */
-    ListMessagesResponseSortedMetaarray,
+    ListMessagesResponseMessagesInnerSortedMetaarrayInner,
 
     /**
      * The ListMutedChannelsResponse model constructor.
      * @property {module:model/ListMutedChannelsResponse}
      */
     ListMutedChannelsResponse,
+
+    /**
+     * The ListMutedUsersInChannelsWithCustomChannelType200Response model constructor.
+     * @property {module:model/ListMutedUsersInChannelsWithCustomChannelType200Response}
+     */
+    ListMutedUsersInChannelsWithCustomChannelType200Response,
 
     /**
      * The ListMyGroupChannelsResponse model constructor.
@@ -1047,10 +1049,10 @@ export {
     ListPushConfigurationsResponse,
 
     /**
-     * The ListPushConfigurationsResponsePushConfigurations model constructor.
-     * @property {module:model/ListPushConfigurationsResponsePushConfigurations}
+     * The ListPushConfigurationsResponsePushConfigurationsInner model constructor.
+     * @property {module:model/ListPushConfigurationsResponsePushConfigurationsInner}
      */
-    ListPushConfigurationsResponsePushConfigurations,
+    ListPushConfigurationsResponsePushConfigurationsInner,
 
     /**
      * The ListPushNotificationContentTemplatesResponse model constructor.
@@ -1059,16 +1061,16 @@ export {
     ListPushNotificationContentTemplatesResponse,
 
     /**
-     * The ListPushNotificationContentTemplatesResponsePushMessageTemplates model constructor.
-     * @property {module:model/ListPushNotificationContentTemplatesResponsePushMessageTemplates}
+     * The ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner model constructor.
+     * @property {module:model/ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner}
      */
-    ListPushNotificationContentTemplatesResponsePushMessageTemplates,
+    ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner,
 
     /**
-     * The ListPushNotificationContentTemplatesResponseTemplate model constructor.
-     * @property {module:model/ListPushNotificationContentTemplatesResponseTemplate}
+     * The ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate model constructor.
+     * @property {module:model/ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate}
      */
-    ListPushNotificationContentTemplatesResponseTemplate,
+    ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate,
 
     /**
      * The ListReactionsOfMessageResponse model constructor.
@@ -1095,10 +1097,10 @@ export {
     ListReportsOnMessageByIdResponse,
 
     /**
-     * The ListReportsOnMessageByIdResponseReportLogs model constructor.
-     * @property {module:model/ListReportsOnMessageByIdResponseReportLogs}
+     * The ListReportsOnMessageByIdResponseReportLogsInner model constructor.
+     * @property {module:model/ListReportsOnMessageByIdResponseReportLogsInner}
      */
-    ListReportsOnMessageByIdResponseReportLogs,
+    ListReportsOnMessageByIdResponseReportLogsInner,
 
     /**
      * The ListReportsOnUserByIdResponse model constructor.
@@ -1113,10 +1115,10 @@ export {
     ListReportsResponse,
 
     /**
-     * The ListReportsResponseReportLogs model constructor.
-     * @property {module:model/ListReportsResponseReportLogs}
+     * The ListReportsResponseReportLogsInner model constructor.
+     * @property {module:model/ListReportsResponseReportLogsInner}
      */
-    ListReportsResponseReportLogs,
+    ListReportsResponseReportLogsInner,
 
     /**
      * The ListSecondaryApiTokensResponse model constructor.
@@ -1125,10 +1127,10 @@ export {
     ListSecondaryApiTokensResponse,
 
     /**
-     * The ListSecondaryApiTokensResponseApiTokens model constructor.
-     * @property {module:model/ListSecondaryApiTokensResponseApiTokens}
+     * The ListSecondaryApiTokensResponseApiTokensInner model constructor.
+     * @property {module:model/ListSecondaryApiTokensResponseApiTokensInner}
      */
-    ListSecondaryApiTokensResponseApiTokens,
+    ListSecondaryApiTokensResponseApiTokensInner,
 
     /**
      * The ListUsersResponse model constructor.
@@ -1173,6 +1175,12 @@ export {
     OcCreateChannelData,
 
     /**
+     * The OcDeleteChannelByUrl200Response model constructor.
+     * @property {module:model/OcDeleteChannelByUrl200Response}
+     */
+    OcDeleteChannelByUrl200Response,
+
+    /**
      * The OcFreezeChannelData model constructor.
      * @property {module:model/OcFreezeChannelData}
      */
@@ -1185,10 +1193,10 @@ export {
     OcListBannedUsersResponse,
 
     /**
-     * The OcListBannedUsersResponseBannedList model constructor.
-     * @property {module:model/OcListBannedUsersResponseBannedList}
+     * The OcListBannedUsersResponseBannedListInner model constructor.
+     * @property {module:model/OcListBannedUsersResponseBannedListInner}
      */
-    OcListBannedUsersResponseBannedList,
+    OcListBannedUsersResponseBannedListInner,
 
     /**
      * The OcListChannelsResponse model constructor.
@@ -1419,12 +1427,6 @@ export {
     ScheduleAnnouncementResponseMessage,
 
     /**
-     * The SendBirdAdditionalProperties model constructor.
-     * @property {module:model/SendBirdAdditionalProperties}
-     */
-    SendBirdAdditionalProperties,
-
-    /**
      * The SendBirdAdminMessage model constructor.
      * @property {module:model/SendBirdAdminMessage}
      */
@@ -1479,6 +1481,12 @@ export {
     SendBirdGroupChannel,
 
     /**
+     * The SendBirdGroupChannelChannel model constructor.
+     * @property {module:model/SendBirdGroupChannelChannel}
+     */
+    SendBirdGroupChannelChannel,
+
+    /**
      * The SendBirdGroupChannelCollection model constructor.
      * @property {module:model/SendBirdGroupChannelCollection}
      */
@@ -1521,10 +1529,10 @@ export {
     SendBirdMessageResponse,
 
     /**
-     * The SendBirdMessageResponseMentionedUsers model constructor.
-     * @property {module:model/SendBirdMessageResponseMentionedUsers}
+     * The SendBirdMessageResponseMentionedUsersInner model constructor.
+     * @property {module:model/SendBirdMessageResponseMentionedUsersInner}
      */
-    SendBirdMessageResponseMentionedUsers,
+    SendBirdMessageResponseMentionedUsersInner,
 
     /**
      * The SendBirdMessageResponseUser model constructor.
@@ -1647,6 +1655,48 @@ export {
     SetDomainFilterData,
 
     /**
+     * The SetDomainFilterDataDomainFilter model constructor.
+     * @property {module:model/SetDomainFilterDataDomainFilter}
+     */
+    SetDomainFilterDataDomainFilter,
+
+    /**
+     * The SetDomainFilterDataImageModeration model constructor.
+     * @property {module:model/SetDomainFilterDataImageModeration}
+     */
+    SetDomainFilterDataImageModeration,
+
+    /**
+     * The SetDomainFilterDataImageModerationLimits model constructor.
+     * @property {module:model/SetDomainFilterDataImageModerationLimits}
+     */
+    SetDomainFilterDataImageModerationLimits,
+
+    /**
+     * The SetDomainFilterDataProfanityFilter model constructor.
+     * @property {module:model/SetDomainFilterDataProfanityFilter}
+     */
+    SetDomainFilterDataProfanityFilter,
+
+    /**
+     * The SetDomainFilterDataProfanityFilterRegexFiltersInner model constructor.
+     * @property {module:model/SetDomainFilterDataProfanityFilterRegexFiltersInner}
+     */
+    SetDomainFilterDataProfanityFilterRegexFiltersInner,
+
+    /**
+     * The SetDomainFilterDataProfanityTriggeredModeration model constructor.
+     * @property {module:model/SetDomainFilterDataProfanityTriggeredModeration}
+     */
+    SetDomainFilterDataProfanityTriggeredModeration,
+
+    /**
+     * The TranslateMessageIntoOtherLanguagesData model constructor.
+     * @property {module:model/TranslateMessageIntoOtherLanguagesData}
+     */
+    TranslateMessageIntoOtherLanguagesData,
+
+    /**
      * The UpdateAnnouncementByIdData model constructor.
      * @property {module:model/UpdateAnnouncementByIdData}
      */
@@ -1761,10 +1811,10 @@ export {
     UpdateExtraDataInMessageResponse,
 
     /**
-     * The UpdateExtraDataInMessageResponseSortedMetaarray model constructor.
-     * @property {module:model/UpdateExtraDataInMessageResponseSortedMetaarray}
+     * The UpdateExtraDataInMessageResponseSortedMetaarrayInner model constructor.
+     * @property {module:model/UpdateExtraDataInMessageResponseSortedMetaarrayInner}
      */
-    UpdateExtraDataInMessageResponseSortedMetaarray,
+    UpdateExtraDataInMessageResponseSortedMetaarrayInner,
 
     /**
      * The UpdateFcmPushConfigurationByIdData model constructor.
@@ -1863,48 +1913,6 @@ export {
     UseDefaultEmojisResponse,
 
     /**
-     * The V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList model constructor.
-     * @property {module:model/V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList}
-     */
-    V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList,
-
-    /**
-     * The V3ApplicationsSettingsGlobalCustomTypeDomainFilter model constructor.
-     * @property {module:model/V3ApplicationsSettingsGlobalCustomTypeDomainFilter}
-     */
-    V3ApplicationsSettingsGlobalCustomTypeDomainFilter,
-
-    /**
-     * The V3ApplicationsSettingsGlobalCustomTypeImageModeration model constructor.
-     * @property {module:model/V3ApplicationsSettingsGlobalCustomTypeImageModeration}
-     */
-    V3ApplicationsSettingsGlobalCustomTypeImageModeration,
-
-    /**
-     * The V3ApplicationsSettingsGlobalCustomTypeImageModerationLimits model constructor.
-     * @property {module:model/V3ApplicationsSettingsGlobalCustomTypeImageModerationLimits}
-     */
-    V3ApplicationsSettingsGlobalCustomTypeImageModerationLimits,
-
-    /**
-     * The V3ApplicationsSettingsGlobalCustomTypeProfanityFilter model constructor.
-     * @property {module:model/V3ApplicationsSettingsGlobalCustomTypeProfanityFilter}
-     */
-    V3ApplicationsSettingsGlobalCustomTypeProfanityFilter,
-
-    /**
-     * The V3ApplicationsSettingsGlobalCustomTypeProfanityFilterRegexFilters model constructor.
-     * @property {module:model/V3ApplicationsSettingsGlobalCustomTypeProfanityFilterRegexFilters}
-     */
-    V3ApplicationsSettingsGlobalCustomTypeProfanityFilterRegexFilters,
-
-    /**
-     * The V3ApplicationsSettingsGlobalCustomTypeProfanityTriggeredModeration model constructor.
-     * @property {module:model/V3ApplicationsSettingsGlobalCustomTypeProfanityTriggeredModeration}
-     */
-    V3ApplicationsSettingsGlobalCustomTypeProfanityTriggeredModeration,
-
-    /**
      * The ViewAnnouncementByIdResponse model constructor.
      * @property {module:model/ViewAnnouncementByIdResponse}
      */
@@ -1983,10 +1991,10 @@ export {
     ViewNumberOfPeakConnectionsResponse,
 
     /**
-     * The ViewNumberOfPeakConnectionsResponsePeakConnections model constructor.
-     * @property {module:model/ViewNumberOfPeakConnectionsResponsePeakConnections}
+     * The ViewNumberOfPeakConnectionsResponsePeakConnectionsInner model constructor.
+     * @property {module:model/ViewNumberOfPeakConnectionsResponsePeakConnectionsInner}
      */
-    ViewNumberOfPeakConnectionsResponsePeakConnections,
+    ViewNumberOfPeakConnectionsResponsePeakConnectionsInner,
 
     /**
      * The ViewNumberOfUnreadItemsResponse model constructor.
@@ -2013,10 +2021,10 @@ export {
     ViewPushNotificationContentTemplateResponse,
 
     /**
-     * The ViewPushNotificationContentTemplateResponsePushMessageTemplates model constructor.
-     * @property {module:model/ViewPushNotificationContentTemplateResponsePushMessageTemplates}
+     * The ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner model constructor.
+     * @property {module:model/ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner}
      */
-    ViewPushNotificationContentTemplateResponsePushMessageTemplates,
+    ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner,
 
     /**
      * The ViewPushPreferencesForChannelByUrlResponse model constructor.
@@ -2047,6 +2055,12 @@ export {
      * @property {module:model/ViewUserMetadataResponse}
      */
     ViewUserMetadataResponse,
+
+    /**
+     * The ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner model constructor.
+     * @property {module:model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner}
+     */
+    ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner,
 
     /**
     * The AnnouncementApi service constructor.
@@ -2127,8 +2141,8 @@ export {
     UserApi,
 
     /**
-    * The WebhooksApi service constructor.
-    * @property {module:api/WebhooksApi}
+    * The WebhookApi service constructor.
+    * @property {module:api/WebhookApi}
     */
-    WebhooksApi
+    WebhookApi
 };

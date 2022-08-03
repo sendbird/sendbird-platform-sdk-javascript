@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import AddFcmPushConfigurationResponsePushConfigurations from './AddFcmPushConfigurationResponsePushConfigurations';
+import AddFcmPushConfigurationResponsePushConfigurationsInner from './AddFcmPushConfigurationResponsePushConfigurationsInner';
 
 /**
  * The AddFcmPushConfigurationResponse model module.
  * @module model/AddFcmPushConfigurationResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class AddFcmPushConfigurationResponse {
     /**
@@ -49,7 +49,7 @@ class AddFcmPushConfigurationResponse {
             obj = obj || new AddFcmPushConfigurationResponse();
 
             if (data.hasOwnProperty('push_configurations')) {
-                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], [AddFcmPushConfigurationResponsePushConfigurations]);
+                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], [AddFcmPushConfigurationResponsePushConfigurationsInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class AddFcmPushConfigurationResponse {
 }
 
 /**
- * @member {Array.<module:model/AddFcmPushConfigurationResponsePushConfigurations>} push_configurations
+ * @member {Array.<module:model/AddFcmPushConfigurationResponsePushConfigurationsInner>} push_configurations
  */
 AddFcmPushConfigurationResponse.prototype['push_configurations'] = undefined;
 

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMyGroupChannelsResponse model module.
  * @module model/ListMyGroupChannelsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ListMyGroupChannelsResponse = /*#__PURE__*/function () {
   /**

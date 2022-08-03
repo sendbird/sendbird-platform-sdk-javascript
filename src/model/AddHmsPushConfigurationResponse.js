@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import AddHmsPushConfigurationResponsePushConfigurations from './AddHmsPushConfigurationResponsePushConfigurations';
+import AddHmsPushConfigurationResponsePushConfigurationsInner from './AddHmsPushConfigurationResponsePushConfigurationsInner';
 
 /**
  * The AddHmsPushConfigurationResponse model module.
  * @module model/AddHmsPushConfigurationResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class AddHmsPushConfigurationResponse {
     /**
@@ -49,7 +49,7 @@ class AddHmsPushConfigurationResponse {
             obj = obj || new AddHmsPushConfigurationResponse();
 
             if (data.hasOwnProperty('push_configurations')) {
-                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], [AddHmsPushConfigurationResponsePushConfigurations]);
+                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], [AddHmsPushConfigurationResponsePushConfigurationsInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class AddHmsPushConfigurationResponse {
 }
 
 /**
- * @member {Array.<module:model/AddHmsPushConfigurationResponsePushConfigurations>} push_configurations
+ * @member {Array.<module:model/AddHmsPushConfigurationResponsePushConfigurationsInner>} push_configurations
  */
 AddHmsPushConfigurationResponse.prototype['push_configurations'] = undefined;
 

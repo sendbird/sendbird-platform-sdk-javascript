@@ -17,7 +17,7 @@ import SendBirdEmoji from './SendBirdEmoji';
 /**
  * The SendBirdEmojiCategory model module.
  * @module model/SendBirdEmojiCategory
- * @version 1.0.3
+ * @version 1.0.7
  */
 class SendBirdEmojiCategory {
     /**

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**apiTokens** | [**[ListSecondaryApiTokensResponseApiTokens]**](ListSecondaryApiTokensResponseApiTokens.md) |  | [optional] 
+**apiTokens** | [**[ListSecondaryApiTokensResponseApiTokensInner]**](ListSecondaryApiTokensResponseApiTokensInner.md) |  | [optional] 
 
 

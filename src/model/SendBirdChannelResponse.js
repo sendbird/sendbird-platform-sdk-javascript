@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import SendBirdGroupChannel from './SendBirdGroupChannel';
+import SendBirdGroupChannelChannel from './SendBirdGroupChannelChannel';
 import SendBirdGroupChannelCreatedBy from './SendBirdGroupChannelCreatedBy';
 import SendBirdGroupChannelDisappearingMessage from './SendBirdGroupChannelDisappearingMessage';
 import SendBirdGroupChannelSmsFallback from './SendBirdGroupChannelSmsFallback';
@@ -24,7 +25,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The SendBirdChannelResponse model module.
  * @module model/SendBirdChannelResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class SendBirdChannelResponse {
     /**
@@ -187,6 +188,9 @@ class SendBirdChannelResponse {
             }
             if (data.hasOwnProperty('unread_message_count')) {
                 obj['unread_message_count'] = ApiClient.convertToType(data['unread_message_count'], 'Number');
+            }
+            if (data.hasOwnProperty('channel')) {
+                obj['channel'] = SendBirdGroupChannelChannel.constructFromObject(data['channel']);
             }
             if (data.hasOwnProperty('is_dynamic_partitioned')) {
                 obj['is_dynamic_partitioned'] = ApiClient.convertToType(data['is_dynamic_partitioned'], 'Boolean');
@@ -417,6 +421,11 @@ SendBirdChannelResponse.prototype['unread_mention_count'] = undefined;
 SendBirdChannelResponse.prototype['unread_message_count'] = undefined;
 
 /**
+ * @member {module:model/SendBirdGroupChannelChannel} channel
+ */
+SendBirdChannelResponse.prototype['channel'] = undefined;
+
+/**
  * @member {Boolean} is_dynamic_partitioned
  */
 SendBirdChannelResponse.prototype['is_dynamic_partitioned'] = undefined;
@@ -600,6 +609,10 @@ SendBirdGroupChannel.prototype['unread_mention_count'] = undefined;
  * @member {Number} unread_message_count
  */
 SendBirdGroupChannel.prototype['unread_message_count'] = undefined;
+/**
+ * @member {module:model/SendBirdGroupChannelChannel} channel
+ */
+SendBirdGroupChannel.prototype['channel'] = undefined;
 // Implement SendBirdOpenChannel interface:
 /**
  * @member {String} name

@@ -18,19 +18,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LeaveMyGroupChannelsData model module.
  * @module model/LeaveMyGroupChannelsData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var LeaveMyGroupChannelsData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>LeaveMyGroupChannelsData</code>.
    * @alias module:model/LeaveMyGroupChannelsData
-   * @param userId {String} Specifies the unique ID of the user to leave all joined group channels.
    * @param customType {String} Specifies the custom channel type to make the user leave joined group channels with the corresponding type.
    */
-  function LeaveMyGroupChannelsData(userId, customType) {
+  function LeaveMyGroupChannelsData(customType) {
     _classCallCheck(this, LeaveMyGroupChannelsData);
 
-    LeaveMyGroupChannelsData.initialize(this, userId, customType);
+    LeaveMyGroupChannelsData.initialize(this, customType);
   }
   /**
    * Initializes the fields of this object.
@@ -41,8 +40,7 @@ var LeaveMyGroupChannelsData = /*#__PURE__*/function () {
 
   _createClass(LeaveMyGroupChannelsData, null, [{
     key: "initialize",
-    value: function initialize(obj, userId, customType) {
-      obj['user_id'] = userId;
+    value: function initialize(obj, customType) {
       obj['custom_type'] = customType;
     }
     /**
@@ -59,10 +57,6 @@ var LeaveMyGroupChannelsData = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new LeaveMyGroupChannelsData();
 
-        if (data.hasOwnProperty('user_id')) {
-          obj['user_id'] = _ApiClient["default"].convertToType(data['user_id'], 'String');
-        }
-
         if (data.hasOwnProperty('custom_type')) {
           obj['custom_type'] = _ApiClient["default"].convertToType(data['custom_type'], 'String');
         }
@@ -75,16 +69,10 @@ var LeaveMyGroupChannelsData = /*#__PURE__*/function () {
   return LeaveMyGroupChannelsData;
 }();
 /**
- * Specifies the unique ID of the user to leave all joined group channels.
- * @member {String} user_id
- */
-
-
-LeaveMyGroupChannelsData.prototype['user_id'] = undefined;
-/**
  * Specifies the custom channel type to make the user leave joined group channels with the corresponding type.
  * @member {String} custom_type
  */
+
 
 LeaveMyGroupChannelsData.prototype['custom_type'] = undefined;
 var _default = LeaveMyGroupChannelsData;

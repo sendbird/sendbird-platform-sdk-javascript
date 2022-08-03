@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _AddApnsPushConfigurationResponsePushConfigurations = _interopRequireDefault(require("./AddApnsPushConfigurationResponsePushConfigurations"));
+var _AddApnsPushConfigurationResponsePushConfigurationsInner = _interopRequireDefault(require("./AddApnsPushConfigurationResponsePushConfigurationsInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddApnsPushConfigurationResponse model module.
  * @module model/AddApnsPushConfigurationResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var AddApnsPushConfigurationResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var AddApnsPushConfigurationResponse = /*#__PURE__*/function () {
         obj = obj || new AddApnsPushConfigurationResponse();
 
         if (data.hasOwnProperty('push_configurations')) {
-          obj['push_configurations'] = _ApiClient["default"].convertToType(data['push_configurations'], [_AddApnsPushConfigurationResponsePushConfigurations["default"]]);
+          obj['push_configurations'] = _ApiClient["default"].convertToType(data['push_configurations'], [_AddApnsPushConfigurationResponsePushConfigurationsInner["default"]]);
         }
       }
 
@@ -68,7 +68,7 @@ var AddApnsPushConfigurationResponse = /*#__PURE__*/function () {
   return AddApnsPushConfigurationResponse;
 }();
 /**
- * @member {Array.<module:model/AddApnsPushConfigurationResponsePushConfigurations>} push_configurations
+ * @member {Array.<module:model/AddApnsPushConfigurationResponsePushConfigurationsInner>} push_configurations
  */
 
 

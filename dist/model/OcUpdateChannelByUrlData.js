@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcUpdateChannelByUrlData model module.
  * @module model/OcUpdateChannelByUrlData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var OcUpdateChannelByUrlData = /*#__PURE__*/function () {
   /**
@@ -30,7 +30,7 @@ var OcUpdateChannelByUrlData = /*#__PURE__*/function () {
    * @param coverFile {File} Uploads the file for the channel cover image.
    * @param customType {String} Specifies the custom channel type which is used for channel grouping. The length is limited to 128 characters.<br /><br /> Custom types are also used within Sendbird's [Advanced analytics](/docs/chat/v3/platform-api/guides/advanced-analytics) to segment metrics, which enables the sub-classification of data views.
    * @param data {String} Specifies additional channel information such as a long description of the channel or `JSON` formatted string.
-   * @param operatorIds {Array.<Number>} Specifies an array of one or more user IDs to register as operators of the channel. The maximum allowed number of operators per channel is 100. Operators can delete any messages in the channel, and can also receive all messages that have been throttled.<br/><br/>  Operators cannot view messages that have been [moderated by](/docs/chat/v3/platform-api/guides/filter-and-moderation) the domain filter or profanity filter. Only the sender will be notified that the message has been blocked.
+   * @param operatorIds {Array.<String>} Specifies an array of one or more user IDs to register as operators of the channel. The maximum allowed number of operators per channel is 100. Operators can delete any messages in the channel, and can also receive all messages that have been throttled.<br/><br/>  Operators cannot view messages that have been [moderated by](/docs/chat/v3/platform-api/guides/filter-and-moderation) the domain filter or profanity filter. Only the sender will be notified that the message has been blocked.
    * @param operators {Array.<String>} (Deprecated) Specifies the string IDs of the users registered as channel operators. Operators can delete any messages in the channel, and can also receive all messages that have been throttled.
    */
   function OcUpdateChannelByUrlData(channelUrl, name, coverUrl, coverFile, customType, data, operatorIds, operators) {
@@ -96,7 +96,7 @@ var OcUpdateChannelByUrlData = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('operator_ids')) {
-          obj['operator_ids'] = _ApiClient["default"].convertToType(data['operator_ids'], ['Number']);
+          obj['operator_ids'] = _ApiClient["default"].convertToType(data['operator_ids'], ['String']);
         }
 
         if (data.hasOwnProperty('operators')) {
@@ -149,7 +149,7 @@ OcUpdateChannelByUrlData.prototype['custom_type'] = undefined;
 OcUpdateChannelByUrlData.prototype['data'] = undefined;
 /**
  * Specifies an array of one or more user IDs to register as operators of the channel. The maximum allowed number of operators per channel is 100. Operators can delete any messages in the channel, and can also receive all messages that have been throttled.<br/><br/>  Operators cannot view messages that have been [moderated by](/docs/chat/v3/platform-api/guides/filter-and-moderation) the domain filter or profanity filter. Only the sender will be notified that the message has been blocked.
- * @member {Array.<Number>} operator_ids
+ * @member {Array.<String>} operator_ids
  */
 
 OcUpdateChannelByUrlData.prototype['operator_ids'] = undefined;

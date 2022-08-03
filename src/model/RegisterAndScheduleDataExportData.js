@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RegisterAndScheduleDataExportData model module.
  * @module model/RegisterAndScheduleDataExportData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class RegisterAndScheduleDataExportData {
     /**
@@ -67,10 +67,10 @@ class RegisterAndScheduleDataExportData {
                 obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
             }
             if (data.hasOwnProperty('sender_ids')) {
-                obj['sender_ids'] = ApiClient.convertToType(data['sender_ids'], ['Number']);
+                obj['sender_ids'] = ApiClient.convertToType(data['sender_ids'], ['String']);
             }
             if (data.hasOwnProperty('exclude_sender_ids')) {
-                obj['exclude_sender_ids'] = ApiClient.convertToType(data['exclude_sender_ids'], ['Number']);
+                obj['exclude_sender_ids'] = ApiClient.convertToType(data['exclude_sender_ids'], ['String']);
             }
             if (data.hasOwnProperty('channel_urls')) {
                 obj['channel_urls'] = ApiClient.convertToType(data['channel_urls'], ['String']);
@@ -79,7 +79,7 @@ class RegisterAndScheduleDataExportData {
                 obj['exclude_channel_urls'] = ApiClient.convertToType(data['exclude_channel_urls'], ['String']);
             }
             if (data.hasOwnProperty('user_ids')) {
-                obj['user_ids'] = ApiClient.convertToType(data['user_ids'], ['Number']);
+                obj['user_ids'] = ApiClient.convertToType(data['user_ids'], ['String']);
             }
             if (data.hasOwnProperty('show_read_receipt')) {
                 obj['show_read_receipt'] = ApiClient.convertToType(data['show_read_receipt'], 'Boolean');
@@ -129,13 +129,13 @@ RegisterAndScheduleDataExportData.prototype['timezone'] = undefined;
 
 /**
  * Specifies an array of the IDs of the users which are used to filter the messages by its sender for the export. This property is effective only when the data_type parameter is set to messages, and can be specified up to 10 IDs in the request. (Default: all messages sent by any user)
- * @member {Array.<Number>} sender_ids
+ * @member {Array.<String>} sender_ids
  */
 RegisterAndScheduleDataExportData.prototype['sender_ids'] = undefined;
 
 /**
  * Specifies an array of the IDs of the users which are used to exclude their sent messages from the export. This property is effective only when the data_type parameter is set to messages, and can be specified up to 10 IDs. (Default: all messages sent by any user)
- * @member {Array.<Number>} exclude_sender_ids
+ * @member {Array.<String>} exclude_sender_ids
  */
 RegisterAndScheduleDataExportData.prototype['exclude_sender_ids'] = undefined;
 
@@ -153,7 +153,7 @@ RegisterAndScheduleDataExportData.prototype['exclude_channel_urls'] = undefined;
 
 /**
  * Specifies an array of the IDs of the users to export their information. This property is effective only when the data_type parameter is set to users. (Default: all users)
- * @member {Array.<Number>} user_ids
+ * @member {Array.<String>} user_ids
  */
 RegisterAndScheduleDataExportData.prototype['user_ids'] = undefined;
 

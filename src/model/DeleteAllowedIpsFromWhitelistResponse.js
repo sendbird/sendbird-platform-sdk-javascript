@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeleteAllowedIpsFromWhitelistResponse model module.
  * @module model/DeleteAllowedIpsFromWhitelistResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class DeleteAllowedIpsFromWhitelistResponse {
     /**

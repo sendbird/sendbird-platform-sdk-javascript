@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListAnnouncementsResponseAnnouncements from './ListAnnouncementsResponseAnnouncements';
+import ListAnnouncementsResponseAnnouncementsInner from './ListAnnouncementsResponseAnnouncementsInner';
 
 /**
  * The ListAnnouncementsResponse model module.
  * @module model/ListAnnouncementsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ListAnnouncementsResponse {
     /**
@@ -49,7 +49,7 @@ class ListAnnouncementsResponse {
             obj = obj || new ListAnnouncementsResponse();
 
             if (data.hasOwnProperty('announcements')) {
-                obj['announcements'] = ApiClient.convertToType(data['announcements'], [ListAnnouncementsResponseAnnouncements]);
+                obj['announcements'] = ApiClient.convertToType(data['announcements'], [ListAnnouncementsResponseAnnouncementsInner]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -62,7 +62,7 @@ class ListAnnouncementsResponse {
 }
 
 /**
- * @member {Array.<module:model/ListAnnouncementsResponseAnnouncements>} announcements
+ * @member {Array.<module:model/ListAnnouncementsResponseAnnouncementsInner>} announcements
  */
 ListAnnouncementsResponse.prototype['announcements'] = undefined;
 

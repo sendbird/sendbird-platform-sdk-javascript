@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ViewPushNotificationContentTemplateResponsePushMessageTemplates from './ViewPushNotificationContentTemplateResponsePushMessageTemplates';
+import ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner from './ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner';
 
 /**
  * The UpdatePushNotificationContentTemplateResponse model module.
  * @module model/UpdatePushNotificationContentTemplateResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class UpdatePushNotificationContentTemplateResponse {
     /**
@@ -49,7 +49,7 @@ class UpdatePushNotificationContentTemplateResponse {
             obj = obj || new UpdatePushNotificationContentTemplateResponse();
 
             if (data.hasOwnProperty('push_message_templates')) {
-                obj['push_message_templates'] = ApiClient.convertToType(data['push_message_templates'], [ViewPushNotificationContentTemplateResponsePushMessageTemplates]);
+                obj['push_message_templates'] = ApiClient.convertToType(data['push_message_templates'], [ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class UpdatePushNotificationContentTemplateResponse {
 }
 
 /**
- * @member {Array.<module:model/ViewPushNotificationContentTemplateResponsePushMessageTemplates>} push_message_templates
+ * @member {Array.<module:model/ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner>} push_message_templates
  */
 UpdatePushNotificationContentTemplateResponse.prototype['push_message_templates'] = undefined;
 

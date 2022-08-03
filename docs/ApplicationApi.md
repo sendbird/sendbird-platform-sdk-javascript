@@ -472,7 +472,7 @@ No authorization required
 
 ## listMutedUsersInChannelsWithCustomChannelType
 
-> InlineResponse200 listMutedUsersInChannelsWithCustomChannelType(apiToken, customType, opts)
+> ListMutedUsersInChannelsWithCustomChannelType200Response listMutedUsersInChannelsWithCustomChannelType(apiToken, customType, opts)
 
 List muted users in channels with a custom channel type
 
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**ListMutedUsersInChannelsWithCustomChannelType200Response**](ListMutedUsersInChannelsWithCustomChannelType200Response.md)
 
 ### Authorization
 

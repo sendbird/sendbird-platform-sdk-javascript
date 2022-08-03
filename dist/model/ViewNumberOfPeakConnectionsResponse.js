@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ViewNumberOfPeakConnectionsResponsePeakConnections = _interopRequireDefault(require("./ViewNumberOfPeakConnectionsResponsePeakConnections"));
+var _ViewNumberOfPeakConnectionsResponsePeakConnectionsInner = _interopRequireDefault(require("./ViewNumberOfPeakConnectionsResponsePeakConnectionsInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewNumberOfPeakConnectionsResponse model module.
  * @module model/ViewNumberOfPeakConnectionsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ViewNumberOfPeakConnectionsResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var ViewNumberOfPeakConnectionsResponse = /*#__PURE__*/function () {
         obj = obj || new ViewNumberOfPeakConnectionsResponse();
 
         if (data.hasOwnProperty('peak_connections')) {
-          obj['peak_connections'] = _ApiClient["default"].convertToType(data['peak_connections'], [_ViewNumberOfPeakConnectionsResponsePeakConnections["default"]]);
+          obj['peak_connections'] = _ApiClient["default"].convertToType(data['peak_connections'], [_ViewNumberOfPeakConnectionsResponsePeakConnectionsInner["default"]]);
         }
       }
 
@@ -68,7 +68,7 @@ var ViewNumberOfPeakConnectionsResponse = /*#__PURE__*/function () {
   return ViewNumberOfPeakConnectionsResponse;
 }();
 /**
- * @member {Array.<module:model/ViewNumberOfPeakConnectionsResponsePeakConnections>} peak_connections
+ * @member {Array.<module:model/ViewNumberOfPeakConnectionsResponsePeakConnectionsInner>} peak_connections
  */
 
 

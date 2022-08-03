@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListBotsResponseBots = _interopRequireDefault(require("./ListBotsResponseBots"));
+var _ListBotsResponseBotsInner = _interopRequireDefault(require("./ListBotsResponseBotsInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListBotsResponse model module.
  * @module model/ListBotsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ListBotsResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var ListBotsResponse = /*#__PURE__*/function () {
         obj = obj || new ListBotsResponse();
 
         if (data.hasOwnProperty('bots')) {
-          obj['bots'] = _ApiClient["default"].convertToType(data['bots'], [_ListBotsResponseBots["default"]]);
+          obj['bots'] = _ApiClient["default"].convertToType(data['bots'], [_ListBotsResponseBotsInner["default"]]);
         }
 
         if (data.hasOwnProperty('next')) {
@@ -72,7 +72,7 @@ var ListBotsResponse = /*#__PURE__*/function () {
   return ListBotsResponse;
 }();
 /**
- * @member {Array.<module:model/ListBotsResponseBots>} bots
+ * @member {Array.<module:model/ListBotsResponseBotsInner>} bots
  */
 
 

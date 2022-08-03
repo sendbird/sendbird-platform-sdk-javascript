@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListDataExportsByMessageChannelOrUserResponseExportedData = _interopRequireDefault(require("./ListDataExportsByMessageChannelOrUserResponseExportedData"));
+var _ListDataExportsByMessageChannelOrUserResponseExportedDataInner = _interopRequireDefault(require("./ListDataExportsByMessageChannelOrUserResponseExportedDataInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListDataExportsByMessageChannelOrUserResponse model module.
  * @module model/ListDataExportsByMessageChannelOrUserResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ListDataExportsByMessageChannelOrUserResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var ListDataExportsByMessageChannelOrUserResponse = /*#__PURE__*/function () {
         obj = obj || new ListDataExportsByMessageChannelOrUserResponse();
 
         if (data.hasOwnProperty('exported_data')) {
-          obj['exported_data'] = _ApiClient["default"].convertToType(data['exported_data'], [_ListDataExportsByMessageChannelOrUserResponseExportedData["default"]]);
+          obj['exported_data'] = _ApiClient["default"].convertToType(data['exported_data'], [_ListDataExportsByMessageChannelOrUserResponseExportedDataInner["default"]]);
         }
 
         if (data.hasOwnProperty('next')) {
@@ -72,7 +72,7 @@ var ListDataExportsByMessageChannelOrUserResponse = /*#__PURE__*/function () {
   return ListDataExportsByMessageChannelOrUserResponse;
 }();
 /**
- * @member {Array.<module:model/ListDataExportsByMessageChannelOrUserResponseExportedData>} exported_data
+ * @member {Array.<module:model/ListDataExportsByMessageChannelOrUserResponseExportedDataInner>} exported_data
  */
 
 

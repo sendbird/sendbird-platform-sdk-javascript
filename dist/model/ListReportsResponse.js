@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListReportsResponseReportLogs = _interopRequireDefault(require("./ListReportsResponseReportLogs"));
+var _ListReportsResponseReportLogsInner = _interopRequireDefault(require("./ListReportsResponseReportLogsInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListReportsResponse model module.
  * @module model/ListReportsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ListReportsResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var ListReportsResponse = /*#__PURE__*/function () {
         obj = obj || new ListReportsResponse();
 
         if (data.hasOwnProperty('report_logs')) {
-          obj['report_logs'] = _ApiClient["default"].convertToType(data['report_logs'], [_ListReportsResponseReportLogs["default"]]);
+          obj['report_logs'] = _ApiClient["default"].convertToType(data['report_logs'], [_ListReportsResponseReportLogsInner["default"]]);
         }
 
         if (data.hasOwnProperty('next')) {
@@ -72,7 +72,7 @@ var ListReportsResponse = /*#__PURE__*/function () {
   return ListReportsResponse;
 }();
 /**
- * @member {Array.<module:model/ListReportsResponseReportLogs>} report_logs
+ * @member {Array.<module:model/ListReportsResponseReportLogsInner>} report_logs
  */
 
 

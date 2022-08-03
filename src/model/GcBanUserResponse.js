@@ -12,13 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse2001 from './InlineResponse2001';
+import OcDeleteChannelByUrl200Response from './OcDeleteChannelByUrl200Response';
 import SendBirdUser from './SendBirdUser';
 
 /**
  * The GcBanUserResponse model module.
  * @module model/GcBanUserResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class GcBanUserResponse {
     /**
@@ -62,7 +62,7 @@ class GcBanUserResponse {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('metadata')) {
-                obj['metadata'] = InlineResponse2001.constructFromObject(data['metadata']);
+                obj['metadata'] = OcDeleteChannelByUrl200Response.constructFromObject(data['metadata']);
             }
             if (data.hasOwnProperty('next_url')) {
                 obj['next_url'] = ApiClient.convertToType(data['next_url'], 'String');
@@ -107,7 +107,7 @@ GcBanUserResponse.prototype['end_at'] = undefined;
 GcBanUserResponse.prototype['description'] = undefined;
 
 /**
- * @member {module:model/InlineResponse2001} metadata
+ * @member {module:model/OcDeleteChannelByUrl200Response} metadata
  */
 GcBanUserResponse.prototype['metadata'] = undefined;
 

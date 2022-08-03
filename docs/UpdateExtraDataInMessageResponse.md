@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sortedMetaarray** | [**[UpdateExtraDataInMessageResponseSortedMetaarray]**](UpdateExtraDataInMessageResponseSortedMetaarray.md) |  | [optional] 
+**sortedMetaarray** | [**[UpdateExtraDataInMessageResponseSortedMetaarrayInner]**](UpdateExtraDataInMessageResponseSortedMetaarrayInner.md) |  | [optional] 
 
 

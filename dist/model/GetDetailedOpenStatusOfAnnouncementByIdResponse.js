@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus = _interopRequireDefault(require("./GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus"));
+var _GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner = _interopRequireDefault(require("./GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GetDetailedOpenStatusOfAnnouncementByIdResponse model module.
  * @module model/GetDetailedOpenStatusOfAnnouncementByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var GetDetailedOpenStatusOfAnnouncementByIdResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var GetDetailedOpenStatusOfAnnouncementByIdResponse = /*#__PURE__*/function () {
         obj = obj || new GetDetailedOpenStatusOfAnnouncementByIdResponse();
 
         if (data.hasOwnProperty('open_status')) {
-          obj['open_status'] = _ApiClient["default"].convertToType(data['open_status'], [_GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus["default"]]);
+          obj['open_status'] = _ApiClient["default"].convertToType(data['open_status'], [_GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner["default"]]);
         }
 
         if (data.hasOwnProperty('next')) {
@@ -72,7 +72,7 @@ var GetDetailedOpenStatusOfAnnouncementByIdResponse = /*#__PURE__*/function () {
   return GetDetailedOpenStatusOfAnnouncementByIdResponse;
 }();
 /**
- * @member {Array.<module:model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus>} open_status
+ * @member {Array.<module:model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner>} open_status
  */
 
 

@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListDataExportsByMessageChannelOrUserResponseFile = _interopRequireDefault(require("./ListDataExportsByMessageChannelOrUserResponseFile"));
+var _ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile = _interopRequireDefault(require("./ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewDataExportByIdResponse model module.
  * @module model/ViewDataExportByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ViewDataExportByIdResponse = /*#__PURE__*/function () {
   /**
@@ -105,11 +105,11 @@ var ViewDataExportByIdResponse = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('file')) {
-          obj['file'] = _ListDataExportsByMessageChannelOrUserResponseFile["default"].constructFromObject(data['file']);
+          obj['file'] = _ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile["default"].constructFromObject(data['file']);
         }
 
         if (data.hasOwnProperty('user_ids')) {
-          obj['user_ids'] = _ApiClient["default"].convertToType(data['user_ids'], ['Number']);
+          obj['user_ids'] = _ApiClient["default"].convertToType(data['user_ids'], ['String']);
         }
       }
 
@@ -181,12 +181,12 @@ ViewDataExportByIdResponse.prototype['channel_custom_types'] = undefined;
 
 ViewDataExportByIdResponse.prototype['sender_ids'] = undefined;
 /**
- * @member {module:model/ListDataExportsByMessageChannelOrUserResponseFile} file
+ * @member {module:model/ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile} file
  */
 
 ViewDataExportByIdResponse.prototype['file'] = undefined;
 /**
- * @member {Array.<Number>} user_ids
+ * @member {Array.<String>} user_ids
  */
 
 ViewDataExportByIdResponse.prototype['user_ids'] = undefined;

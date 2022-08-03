@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EnableReactionsData model module.
  * @module model/EnableReactionsData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var EnableReactionsData = /*#__PURE__*/function () {
   /**

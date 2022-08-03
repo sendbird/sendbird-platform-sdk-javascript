@@ -21,7 +21,7 @@ import ViewDataExportByIdResponse from '../model/ViewDataExportByIdResponse';
 /**
 * DataExport service.
 * @module api/DataExportApi
-* @version 1.0.3
+* @version 1.0.7
 */
 export default class DataExportApi {
 

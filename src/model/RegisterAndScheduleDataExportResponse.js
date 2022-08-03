@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListDataExportsByMessageChannelOrUserResponseFile from './ListDataExportsByMessageChannelOrUserResponseFile';
+import ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile from './ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile';
 
 /**
  * The RegisterAndScheduleDataExportResponse model module.
  * @module model/RegisterAndScheduleDataExportResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class RegisterAndScheduleDataExportResponse {
     /**
@@ -85,10 +85,10 @@ class RegisterAndScheduleDataExportResponse {
                 obj['sender_ids'] = ApiClient.convertToType(data['sender_ids'], ['String']);
             }
             if (data.hasOwnProperty('file')) {
-                obj['file'] = ListDataExportsByMessageChannelOrUserResponseFile.constructFromObject(data['file']);
+                obj['file'] = ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile.constructFromObject(data['file']);
             }
             if (data.hasOwnProperty('user_ids')) {
-                obj['user_ids'] = ApiClient.convertToType(data['user_ids'], ['Number']);
+                obj['user_ids'] = ApiClient.convertToType(data['user_ids'], ['String']);
             }
         }
         return obj;
@@ -158,12 +158,12 @@ RegisterAndScheduleDataExportResponse.prototype['channel_urls'] = undefined;
 RegisterAndScheduleDataExportResponse.prototype['sender_ids'] = undefined;
 
 /**
- * @member {module:model/ListDataExportsByMessageChannelOrUserResponseFile} file
+ * @member {module:model/ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile} file
  */
 RegisterAndScheduleDataExportResponse.prototype['file'] = undefined;
 
 /**
- * @member {Array.<Number>} user_ids
+ * @member {Array.<String>} user_ids
  */
 RegisterAndScheduleDataExportResponse.prototype['user_ids'] = undefined;
 

@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _InlineResponse = _interopRequireDefault(require("./InlineResponse2001"));
+var _OcDeleteChannelByUrl200Response = _interopRequireDefault(require("./OcDeleteChannelByUrl200Response"));
 
 var _SendBirdUser = _interopRequireDefault(require("./SendBirdUser"));
 
@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcBanUserResponse model module.
  * @module model/OcBanUserResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var OcBanUserResponse = /*#__PURE__*/function () {
   /**
@@ -95,7 +95,7 @@ var OcBanUserResponse = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('metadata')) {
-          obj['metadata'] = _InlineResponse["default"].constructFromObject(data['metadata']);
+          obj['metadata'] = _OcDeleteChannelByUrl200Response["default"].constructFromObject(data['metadata']);
         }
       }
 
@@ -152,7 +152,7 @@ OcBanUserResponse.prototype['nickname'] = undefined;
 
 OcBanUserResponse.prototype['profile_url'] = undefined;
 /**
- * @member {module:model/InlineResponse2001} metadata
+ * @member {module:model/OcDeleteChannelByUrl200Response} metadata
  */
 
 OcBanUserResponse.prototype['metadata'] = undefined;

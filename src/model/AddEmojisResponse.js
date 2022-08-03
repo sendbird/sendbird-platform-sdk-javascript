@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListAllEmojisAndEmojiCategoriesResponseEmojis from './ListAllEmojisAndEmojiCategoriesResponseEmojis';
+import ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner from './ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner';
 
 /**
  * The AddEmojisResponse model module.
  * @module model/AddEmojisResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class AddEmojisResponse {
     /**
@@ -49,7 +49,7 @@ class AddEmojisResponse {
             obj = obj || new AddEmojisResponse();
 
             if (data.hasOwnProperty('emojis')) {
-                obj['emojis'] = ApiClient.convertToType(data['emojis'], [ListAllEmojisAndEmojiCategoriesResponseEmojis]);
+                obj['emojis'] = ApiClient.convertToType(data['emojis'], [ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class AddEmojisResponse {
 }
 
 /**
- * @member {Array.<module:model/ListAllEmojisAndEmojiCategoriesResponseEmojis>} emojis
+ * @member {Array.<module:model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner>} emojis
  */
 AddEmojisResponse.prototype['emojis'] = undefined;
 

@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _AddFcmPushConfigurationResponsePushConfigurations = _interopRequireDefault(require("./AddFcmPushConfigurationResponsePushConfigurations"));
+var _AddFcmPushConfigurationResponsePushConfigurationsInner = _interopRequireDefault(require("./AddFcmPushConfigurationResponsePushConfigurationsInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddFcmPushConfigurationResponse model module.
  * @module model/AddFcmPushConfigurationResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var AddFcmPushConfigurationResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var AddFcmPushConfigurationResponse = /*#__PURE__*/function () {
         obj = obj || new AddFcmPushConfigurationResponse();
 
         if (data.hasOwnProperty('push_configurations')) {
-          obj['push_configurations'] = _ApiClient["default"].convertToType(data['push_configurations'], [_AddFcmPushConfigurationResponsePushConfigurations["default"]]);
+          obj['push_configurations'] = _ApiClient["default"].convertToType(data['push_configurations'], [_AddFcmPushConfigurationResponsePushConfigurationsInner["default"]]);
         }
       }
 
@@ -68,7 +68,7 @@ var AddFcmPushConfigurationResponse = /*#__PURE__*/function () {
   return AddFcmPushConfigurationResponse;
 }();
 /**
- * @member {Array.<module:model/AddFcmPushConfigurationResponsePushConfigurations>} push_configurations
+ * @member {Array.<module:model/AddFcmPushConfigurationResponsePushConfigurationsInner>} push_configurations
  */
 
 

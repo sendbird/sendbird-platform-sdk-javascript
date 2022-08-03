@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RetrieveAdvancedAnalyticsMetricsResponse model module.
  * @module model/RetrieveAdvancedAnalyticsMetricsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var RetrieveAdvancedAnalyticsMetricsResponse = /*#__PURE__*/function () {
   /**

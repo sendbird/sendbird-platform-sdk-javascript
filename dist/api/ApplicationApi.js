@@ -35,7 +35,7 @@ var _GenerateSecondaryApiTokenData = _interopRequireDefault(require("../model/Ge
 
 var _GenerateSecondaryApiTokenResponse = _interopRequireDefault(require("../model/GenerateSecondaryApiTokenResponse"));
 
-var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse200"));
+var _ListMutedUsersInChannelsWithCustomChannelType200Response = _interopRequireDefault(require("../model/ListMutedUsersInChannelsWithCustomChannelType200Response"));
 
 var _ListPushConfigurationsResponse = _interopRequireDefault(require("../model/ListPushConfigurationsResponse"));
 
@@ -94,7 +94,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Application service.
 * @module api/ApplicationApi
-* @version 1.0.3
+* @version 1.0.7
 */
 var ApplicationApi = /*#__PURE__*/function () {
   /**
@@ -572,7 +572,7 @@ var ApplicationApi = /*#__PURE__*/function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListMutedUsersInChannelsWithCustomChannelType200Response} and HTTP response
      */
 
   }, {
@@ -604,7 +604,7 @@ var ApplicationApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse["default"];
+      var returnType = _ListMutedUsersInChannelsWithCustomChannelType200Response["default"];
       return this.apiClient.callApi('/v3/applications/settings_by_channel_custom_type/{custom_type}/mute', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -615,7 +615,7 @@ var ApplicationApi = /*#__PURE__*/function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListMutedUsersInChannelsWithCustomChannelType200Response}
      */
 
   }, {

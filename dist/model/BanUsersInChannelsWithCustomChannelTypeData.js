@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList = _interopRequireDefault(require("./V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList"));
+var _BanUsersInChannelsWithCustomChannelTypeDataBannedListInner = _interopRequireDefault(require("./BanUsersInChannelsWithCustomChannelTypeDataBannedListInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,13 +20,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BanUsersInChannelsWithCustomChannelTypeData model module.
  * @module model/BanUsersInChannelsWithCustomChannelTypeData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var BanUsersInChannelsWithCustomChannelTypeData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>BanUsersInChannelsWithCustomChannelTypeData</code>.
    * @alias module:model/BanUsersInChannelsWithCustomChannelTypeData
-   * @param bannedList {Array.<module:model/V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList>} 
+   * @param bannedList {Array.<module:model/BanUsersInChannelsWithCustomChannelTypeDataBannedListInner>} 
    */
   function BanUsersInChannelsWithCustomChannelTypeData(bannedList) {
     _classCallCheck(this, BanUsersInChannelsWithCustomChannelTypeData);
@@ -60,7 +60,7 @@ var BanUsersInChannelsWithCustomChannelTypeData = /*#__PURE__*/function () {
         obj = obj || new BanUsersInChannelsWithCustomChannelTypeData();
 
         if (data.hasOwnProperty('banned_list')) {
-          obj['banned_list'] = _ApiClient["default"].convertToType(data['banned_list'], [_V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList["default"]]);
+          obj['banned_list'] = _ApiClient["default"].convertToType(data['banned_list'], [_BanUsersInChannelsWithCustomChannelTypeDataBannedListInner["default"]]);
         }
 
         if (data.hasOwnProperty('on_demand_upsert')) {
@@ -75,7 +75,7 @@ var BanUsersInChannelsWithCustomChannelTypeData = /*#__PURE__*/function () {
   return BanUsersInChannelsWithCustomChannelTypeData;
 }();
 /**
- * @member {Array.<module:model/V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList>} banned_list
+ * @member {Array.<module:model/BanUsersInChannelsWithCustomChannelTypeDataBannedListInner>} banned_list
  */
 
 

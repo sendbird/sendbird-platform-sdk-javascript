@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**emojiCategories** | [**[AddEmojiCategoriesResponseEmojiCategories]**](AddEmojiCategoriesResponseEmojiCategories.md) |  | [optional] 
+**emojiCategories** | [**[AddEmojiCategoriesResponseEmojiCategoriesInner]**](AddEmojiCategoriesResponseEmojiCategoriesInner.md) |  | [optional] 
 
 

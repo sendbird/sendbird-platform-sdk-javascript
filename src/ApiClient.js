@@ -17,7 +17,7 @@ import querystring from "querystring";
 
 /**
 * @module ApiClient
-* @version 1.0.3
+* @version 1.0.7
 */
 
 /**
@@ -54,7 +54,7 @@ class ApiClient {
          * @default {}
          */
         this.defaultHeaders = {
-            'User-Agent': 'OpenAPI-Generator/1.0.3/Javascript'
+            'User-Agent': 'OpenAPI-Generator/1.0.7/Javascript'
         };
 
         /**
@@ -463,7 +463,7 @@ class ApiClient {
         if (returnType === 'Blob') {
           request.responseType('blob');
         } else if (returnType === 'String') {
-          request.responseType('string');
+          request.responseType('text');
         }
 
         // Attach previously saved cookies, if enabled

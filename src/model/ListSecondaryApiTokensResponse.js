@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListSecondaryApiTokensResponseApiTokens from './ListSecondaryApiTokensResponseApiTokens';
+import ListSecondaryApiTokensResponseApiTokensInner from './ListSecondaryApiTokensResponseApiTokensInner';
 
 /**
  * The ListSecondaryApiTokensResponse model module.
  * @module model/ListSecondaryApiTokensResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ListSecondaryApiTokensResponse {
     /**
@@ -49,7 +49,7 @@ class ListSecondaryApiTokensResponse {
             obj = obj || new ListSecondaryApiTokensResponse();
 
             if (data.hasOwnProperty('api_tokens')) {
-                obj['api_tokens'] = ApiClient.convertToType(data['api_tokens'], [ListSecondaryApiTokensResponseApiTokens]);
+                obj['api_tokens'] = ApiClient.convertToType(data['api_tokens'], [ListSecondaryApiTokensResponseApiTokensInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ListSecondaryApiTokensResponse {
 }
 
 /**
- * @member {Array.<module:model/ListSecondaryApiTokensResponseApiTokens>} api_tokens
+ * @member {Array.<module:model/ListSecondaryApiTokensResponseApiTokensInner>} api_tokens
  */
 ListSecondaryApiTokensResponse.prototype['api_tokens'] = undefined;
 

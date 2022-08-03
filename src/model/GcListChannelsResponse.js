@@ -17,7 +17,7 @@ import SendBirdGroupChannel from './SendBirdGroupChannel';
 /**
  * The GcListChannelsResponse model module.
  * @module model/GcListChannelsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class GcListChannelsResponse {
     /**

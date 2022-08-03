@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChoosePushNotificationContentTemplateResponse model module.
  * @module model/ChoosePushNotificationContentTemplateResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ChoosePushNotificationContentTemplateResponse = /*#__PURE__*/function () {
   /**

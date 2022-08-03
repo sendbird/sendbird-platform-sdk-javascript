@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RemovePushConfigurationByIdResponse model module.
  * @module model/RemovePushConfigurationByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class RemovePushConfigurationByIdResponse {
     /**

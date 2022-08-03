@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendBirdGroupChannelDisappearingMessage model module.
  * @module model/SendBirdGroupChannelDisappearingMessage
- * @version 1.0.3
+ * @version 1.0.7
  */
 class SendBirdGroupChannelDisappearingMessage {
     /**

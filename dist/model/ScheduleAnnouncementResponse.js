@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScheduleAnnouncementResponse model module.
  * @module model/ScheduleAnnouncementResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ScheduleAnnouncementResponse = /*#__PURE__*/function () {
   /**

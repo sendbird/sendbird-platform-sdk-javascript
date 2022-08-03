@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Announcement service.
 * @module api/AnnouncementApi
-* @version 1.0.3
+* @version 1.0.7
 */
 var AnnouncementApi = /*#__PURE__*/function () {
   /**

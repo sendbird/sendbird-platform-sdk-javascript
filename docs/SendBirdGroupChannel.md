@@ -47,6 +47,7 @@ Name | Type | Description | Notes
 **smsFallback** | [**SendBirdGroupChannelSmsFallback**](SendBirdGroupChannelSmsFallback.md) |  | [optional] 
 **unreadMentionCount** | **Number** |  | [optional] 
 **unreadMessageCount** | **Number** |  | [optional] 
+**channel** | [**SendBirdGroupChannelChannel**](SendBirdGroupChannelChannel.md) |  | [optional] 
 
 
 

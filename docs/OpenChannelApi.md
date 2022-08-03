@@ -118,7 +118,7 @@ No authorization required
 
 ## ocDeleteChannelByUrl
 
-> InlineResponse2001 ocDeleteChannelByUrl(apiToken, channelUrl)
+> OcDeleteChannelByUrl200Response ocDeleteChannelByUrl(apiToken, channelUrl)
 
 Delete a channel
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**OcDeleteChannelByUrl200Response**](OcDeleteChannelByUrl200Response.md)
 
 ### Authorization
 
@@ -330,7 +330,7 @@ No authorization required
 
 ## ocRegisterOperators
 
-> InlineResponse2001 ocRegisterOperators(apiToken, channelUrl, opts)
+> OcDeleteChannelByUrl200Response ocRegisterOperators(apiToken, channelUrl, opts)
 
 Register operators
 
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**OcDeleteChannelByUrl200Response**](OcDeleteChannelByUrl200Response.md)
 
 ### Authorization
 

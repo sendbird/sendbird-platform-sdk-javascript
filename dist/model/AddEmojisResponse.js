@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListAllEmojisAndEmojiCategoriesResponseEmojis = _interopRequireDefault(require("./ListAllEmojisAndEmojiCategoriesResponseEmojis"));
+var _ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner = _interopRequireDefault(require("./ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddEmojisResponse model module.
  * @module model/AddEmojisResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var AddEmojisResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var AddEmojisResponse = /*#__PURE__*/function () {
         obj = obj || new AddEmojisResponse();
 
         if (data.hasOwnProperty('emojis')) {
-          obj['emojis'] = _ApiClient["default"].convertToType(data['emojis'], [_ListAllEmojisAndEmojiCategoriesResponseEmojis["default"]]);
+          obj['emojis'] = _ApiClient["default"].convertToType(data['emojis'], [_ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner["default"]]);
         }
       }
 
@@ -68,7 +68,7 @@ var AddEmojisResponse = /*#__PURE__*/function () {
   return AddEmojisResponse;
 }();
 /**
- * @member {Array.<module:model/ListAllEmojisAndEmojiCategoriesResponseEmojis>} emojis
+ * @member {Array.<module:model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner>} emojis
  */
 
 

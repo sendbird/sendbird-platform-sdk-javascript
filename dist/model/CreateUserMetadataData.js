@@ -18,19 +18,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateUserMetadataData model module.
  * @module model/CreateUserMetadataData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var CreateUserMetadataData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>CreateUserMetadataData</code>.
    * @alias module:model/CreateUserMetadataData
-   * @param userId {String} Specifies the ID of the user to store the metadata in.
-   * @param metadata {String} Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
+   * @param metadata {Object} Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
    */
-  function CreateUserMetadataData(userId, metadata) {
+  function CreateUserMetadataData(metadata) {
     _classCallCheck(this, CreateUserMetadataData);
 
-    CreateUserMetadataData.initialize(this, userId, metadata);
+    CreateUserMetadataData.initialize(this, metadata);
   }
   /**
    * Initializes the fields of this object.
@@ -41,8 +40,7 @@ var CreateUserMetadataData = /*#__PURE__*/function () {
 
   _createClass(CreateUserMetadataData, null, [{
     key: "initialize",
-    value: function initialize(obj, userId, metadata) {
-      obj['user_id'] = userId;
+    value: function initialize(obj, metadata) {
       obj['metadata'] = metadata;
     }
     /**
@@ -59,12 +57,8 @@ var CreateUserMetadataData = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new CreateUserMetadataData();
 
-        if (data.hasOwnProperty('user_id')) {
-          obj['user_id'] = _ApiClient["default"].convertToType(data['user_id'], 'String');
-        }
-
         if (data.hasOwnProperty('metadata')) {
-          obj['metadata'] = _ApiClient["default"].convertToType(data['metadata'], 'String');
+          obj['metadata'] = _ApiClient["default"].convertToType(data['metadata'], Object);
         }
       }
 
@@ -75,16 +69,10 @@ var CreateUserMetadataData = /*#__PURE__*/function () {
   return CreateUserMetadataData;
 }();
 /**
- * Specifies the ID of the user to store the metadata in.
- * @member {String} user_id
- */
-
-
-CreateUserMetadataData.prototype['user_id'] = undefined;
-/**
  * Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
- * @member {String} metadata
+ * @member {Object} metadata
  */
+
 
 CreateUserMetadataData.prototype['metadata'] = undefined;
 var _default = CreateUserMetadataData;

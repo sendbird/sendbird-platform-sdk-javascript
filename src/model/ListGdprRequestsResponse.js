@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListGdprRequestsResponseRequests from './ListGdprRequestsResponseRequests';
+import ListGdprRequestsResponseRequestsInner from './ListGdprRequestsResponseRequestsInner';
 
 /**
  * The ListGdprRequestsResponse model module.
  * @module model/ListGdprRequestsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ListGdprRequestsResponse {
     /**
@@ -49,7 +49,7 @@ class ListGdprRequestsResponse {
             obj = obj || new ListGdprRequestsResponse();
 
             if (data.hasOwnProperty('requests')) {
-                obj['requests'] = ApiClient.convertToType(data['requests'], [ListGdprRequestsResponseRequests]);
+                obj['requests'] = ApiClient.convertToType(data['requests'], [ListGdprRequestsResponseRequestsInner]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -62,7 +62,7 @@ class ListGdprRequestsResponse {
 }
 
 /**
- * @member {Array.<module:model/ListGdprRequestsResponseRequests>} requests
+ * @member {Array.<module:model/ListGdprRequestsResponseRequestsInner>} requests
  */
 ListGdprRequestsResponse.prototype['requests'] = undefined;
 

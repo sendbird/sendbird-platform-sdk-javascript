@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OcMuteUserData model module.
  * @module model/OcMuteUserData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class OcMuteUserData {
     /**

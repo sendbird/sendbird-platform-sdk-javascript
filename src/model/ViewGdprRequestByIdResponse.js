@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListDataExportsByMessageChannelOrUserResponseFile from './ListDataExportsByMessageChannelOrUserResponseFile';
+import ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile from './ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile';
 
 /**
  * The ViewGdprRequestByIdResponse model module.
  * @module model/ViewGdprRequestByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ViewGdprRequestByIdResponse {
     /**
@@ -61,7 +61,7 @@ class ViewGdprRequestByIdResponse {
                 obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
             }
             if (data.hasOwnProperty('files')) {
-                obj['files'] = ListDataExportsByMessageChannelOrUserResponseFile.constructFromObject(data['files']);
+                obj['files'] = ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile.constructFromObject(data['files']);
             }
             if (data.hasOwnProperty('user_ids')) {
                 obj['user_ids'] = ApiClient.convertToType(data['user_ids'], ['String']);
@@ -100,7 +100,7 @@ ViewGdprRequestByIdResponse.prototype['status'] = undefined;
 ViewGdprRequestByIdResponse.prototype['user_id'] = undefined;
 
 /**
- * @member {module:model/ListDataExportsByMessageChannelOrUserResponseFile} files
+ * @member {module:model/ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile} files
  */
 ViewGdprRequestByIdResponse.prototype['files'] = undefined;
 

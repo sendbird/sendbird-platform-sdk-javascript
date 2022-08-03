@@ -390,7 +390,7 @@ No authorization required
 
 ## gcUnbanUserById
 
-> InlineResponse2001 gcUnbanUserById(apiToken, channelUrl, bannedUserId)
+> OcDeleteChannelByUrl200Response gcUnbanUserById(apiToken, channelUrl, bannedUserId)
 
 Unban a user
 
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**OcDeleteChannelByUrl200Response**](OcDeleteChannelByUrl200Response.md)
 
 ### Authorization
 
@@ -438,7 +438,7 @@ No authorization required
 
 ## gcUnmuteUserById
 
-> InlineResponse2001 gcUnmuteUserById(apiToken, channelUrl, mutedUserId)
+> OcDeleteChannelByUrl200Response gcUnmuteUserById(apiToken, channelUrl, mutedUserId)
 
 Unmute a user
 
@@ -472,7 +472,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**OcDeleteChannelByUrl200Response**](OcDeleteChannelByUrl200Response.md)
 
 ### Authorization
 
@@ -1100,7 +1100,7 @@ No authorization required
 
 ## ocUnbanUserById
 
-> InlineResponse2001 ocUnbanUserById(apiToken, channelUrl, bannedUserId)
+> OcDeleteChannelByUrl200Response ocUnbanUserById(apiToken, channelUrl, bannedUserId)
 
 Unban a user
 
@@ -1134,7 +1134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**OcDeleteChannelByUrl200Response**](OcDeleteChannelByUrl200Response.md)
 
 ### Authorization
 
@@ -1148,7 +1148,7 @@ No authorization required
 
 ## ocUnmuteUserById
 
-> InlineResponse2001 ocUnmuteUserById(apiToken, channelUrl, mutedUserId)
+> OcDeleteChannelByUrl200Response ocUnmuteUserById(apiToken, channelUrl, mutedUserId)
 
 Unmute a user
 
@@ -1182,7 +1182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**OcDeleteChannelByUrl200Response**](OcDeleteChannelByUrl200Response.md)
 
 ### Authorization
 

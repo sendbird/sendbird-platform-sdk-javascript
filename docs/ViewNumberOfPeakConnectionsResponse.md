@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**peakConnections** | [**[ViewNumberOfPeakConnectionsResponsePeakConnections]**](ViewNumberOfPeakConnectionsResponsePeakConnections.md) |  | [optional] 
+**peakConnections** | [**[ViewNumberOfPeakConnectionsResponsePeakConnectionsInner]**](ViewNumberOfPeakConnectionsResponsePeakConnectionsInner.md) |  | [optional] 
 
 

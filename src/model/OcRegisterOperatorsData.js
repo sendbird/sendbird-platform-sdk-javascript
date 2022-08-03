@@ -16,14 +16,14 @@ import ApiClient from '../ApiClient';
 /**
  * The OcRegisterOperatorsData model module.
  * @module model/OcRegisterOperatorsData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class OcRegisterOperatorsData {
     /**
      * Constructs a new <code>OcRegisterOperatorsData</code>.
      * @alias module:model/OcRegisterOperatorsData
      * @param channelUrl {String} Specifies the URL of the channel to register operators to.
-     * @param operatorIds {Array.<Number>} Specifies an array of one or more IDs of users to register as operators of the channel. The maximum allowed number of operators per channel is 100.
+     * @param operatorIds {Array.<String>} Specifies an array of one or more IDs of users to register as operators of the channel. The maximum allowed number of operators per channel is 100.
      */
     constructor(channelUrl, operatorIds) { 
         
@@ -55,7 +55,7 @@ class OcRegisterOperatorsData {
                 obj['channel_url'] = ApiClient.convertToType(data['channel_url'], 'String');
             }
             if (data.hasOwnProperty('operator_ids')) {
-                obj['operator_ids'] = ApiClient.convertToType(data['operator_ids'], ['Number']);
+                obj['operator_ids'] = ApiClient.convertToType(data['operator_ids'], ['String']);
             }
         }
         return obj;
@@ -72,7 +72,7 @@ OcRegisterOperatorsData.prototype['channel_url'] = undefined;
 
 /**
  * Specifies an array of one or more IDs of users to register as operators of the channel. The maximum allowed number of operators per channel is 100.
- * @member {Array.<Number>} operator_ids
+ * @member {Array.<String>} operator_ids
  */
 OcRegisterOperatorsData.prototype['operator_ids'] = undefined;
 

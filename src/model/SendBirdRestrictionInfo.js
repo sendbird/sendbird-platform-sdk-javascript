@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendBirdRestrictionInfo model module.
  * @module model/SendBirdRestrictionInfo
- * @version 1.0.3
+ * @version 1.0.7
  */
 class SendBirdRestrictionInfo {
     /**

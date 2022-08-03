@@ -18,14 +18,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcRegisterOperatorsData model module.
  * @module model/OcRegisterOperatorsData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var OcRegisterOperatorsData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcRegisterOperatorsData</code>.
    * @alias module:model/OcRegisterOperatorsData
    * @param channelUrl {String} Specifies the URL of the channel to register operators to.
-   * @param operatorIds {Array.<Number>} Specifies an array of one or more IDs of users to register as operators of the channel. The maximum allowed number of operators per channel is 100.
+   * @param operatorIds {Array.<String>} Specifies an array of one or more IDs of users to register as operators of the channel. The maximum allowed number of operators per channel is 100.
    */
   function OcRegisterOperatorsData(channelUrl, operatorIds) {
     _classCallCheck(this, OcRegisterOperatorsData);
@@ -64,7 +64,7 @@ var OcRegisterOperatorsData = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('operator_ids')) {
-          obj['operator_ids'] = _ApiClient["default"].convertToType(data['operator_ids'], ['Number']);
+          obj['operator_ids'] = _ApiClient["default"].convertToType(data['operator_ids'], ['String']);
         }
       }
 
@@ -83,7 +83,7 @@ var OcRegisterOperatorsData = /*#__PURE__*/function () {
 OcRegisterOperatorsData.prototype['channel_url'] = undefined;
 /**
  * Specifies an array of one or more IDs of users to register as operators of the channel. The maximum allowed number of operators per channel is 100.
- * @member {Array.<Number>} operator_ids
+ * @member {Array.<String>} operator_ids
  */
 
 OcRegisterOperatorsData.prototype['operator_ids'] = undefined;

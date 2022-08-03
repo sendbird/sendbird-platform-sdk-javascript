@@ -12,15 +12,15 @@
  */
 
 import ApiClient from '../ApiClient';
-import V3ApplicationsSettingsGlobalCustomTypeDomainFilter from './V3ApplicationsSettingsGlobalCustomTypeDomainFilter';
-import V3ApplicationsSettingsGlobalCustomTypeImageModeration from './V3ApplicationsSettingsGlobalCustomTypeImageModeration';
-import V3ApplicationsSettingsGlobalCustomTypeProfanityFilter from './V3ApplicationsSettingsGlobalCustomTypeProfanityFilter';
-import V3ApplicationsSettingsGlobalCustomTypeProfanityTriggeredModeration from './V3ApplicationsSettingsGlobalCustomTypeProfanityTriggeredModeration';
+import SetDomainFilterDataDomainFilter from './SetDomainFilterDataDomainFilter';
+import SetDomainFilterDataImageModeration from './SetDomainFilterDataImageModeration';
+import SetDomainFilterDataProfanityFilter from './SetDomainFilterDataProfanityFilter';
+import SetDomainFilterDataProfanityTriggeredModeration from './SetDomainFilterDataProfanityTriggeredModeration';
 
 /**
  * The SetDomainFilterData model module.
  * @module model/SetDomainFilterData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class SetDomainFilterData {
     /**
@@ -52,16 +52,16 @@ class SetDomainFilterData {
             obj = obj || new SetDomainFilterData();
 
             if (data.hasOwnProperty('domain_filter')) {
-                obj['domain_filter'] = V3ApplicationsSettingsGlobalCustomTypeDomainFilter.constructFromObject(data['domain_filter']);
+                obj['domain_filter'] = SetDomainFilterDataDomainFilter.constructFromObject(data['domain_filter']);
             }
             if (data.hasOwnProperty('profanity_filter')) {
-                obj['profanity_filter'] = V3ApplicationsSettingsGlobalCustomTypeProfanityFilter.constructFromObject(data['profanity_filter']);
+                obj['profanity_filter'] = SetDomainFilterDataProfanityFilter.constructFromObject(data['profanity_filter']);
             }
             if (data.hasOwnProperty('profanity_triggered_moderation')) {
-                obj['profanity_triggered_moderation'] = V3ApplicationsSettingsGlobalCustomTypeProfanityTriggeredModeration.constructFromObject(data['profanity_triggered_moderation']);
+                obj['profanity_triggered_moderation'] = SetDomainFilterDataProfanityTriggeredModeration.constructFromObject(data['profanity_triggered_moderation']);
             }
             if (data.hasOwnProperty('image_moderation')) {
-                obj['image_moderation'] = V3ApplicationsSettingsGlobalCustomTypeImageModeration.constructFromObject(data['image_moderation']);
+                obj['image_moderation'] = SetDomainFilterDataImageModeration.constructFromObject(data['image_moderation']);
             }
         }
         return obj;
@@ -71,22 +71,22 @@ class SetDomainFilterData {
 }
 
 /**
- * @member {module:model/V3ApplicationsSettingsGlobalCustomTypeDomainFilter} domain_filter
+ * @member {module:model/SetDomainFilterDataDomainFilter} domain_filter
  */
 SetDomainFilterData.prototype['domain_filter'] = undefined;
 
 /**
- * @member {module:model/V3ApplicationsSettingsGlobalCustomTypeProfanityFilter} profanity_filter
+ * @member {module:model/SetDomainFilterDataProfanityFilter} profanity_filter
  */
 SetDomainFilterData.prototype['profanity_filter'] = undefined;
 
 /**
- * @member {module:model/V3ApplicationsSettingsGlobalCustomTypeProfanityTriggeredModeration} profanity_triggered_moderation
+ * @member {module:model/SetDomainFilterDataProfanityTriggeredModeration} profanity_triggered_moderation
  */
 SetDomainFilterData.prototype['profanity_triggered_moderation'] = undefined;
 
 /**
- * @member {module:model/V3ApplicationsSettingsGlobalCustomTypeImageModeration} image_moderation
+ * @member {module:model/SetDomainFilterDataImageModeration} image_moderation
  */
 SetDomainFilterData.prototype['image_moderation'] = undefined;
 

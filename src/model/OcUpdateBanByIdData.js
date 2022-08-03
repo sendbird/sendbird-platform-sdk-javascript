@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OcUpdateBanByIdData model module.
  * @module model/OcUpdateBanByIdData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class OcUpdateBanByIdData {
     /**

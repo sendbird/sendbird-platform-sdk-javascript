@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BlockUserData model module.
  * @module model/BlockUserData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var BlockUserData = /*#__PURE__*/function () {
   /**
@@ -26,8 +26,8 @@ var BlockUserData = /*#__PURE__*/function () {
    * @alias module:model/BlockUserData
    * @param userId {String} Specifies the unique ID of the user to block.
    * @param targetId {String} Specifies the ID of the user to be blocked.
-   * @param userIds {Array.<Number>} Specifies an array of the IDs of the users to be blocked at a time. (for bulk mode)
-   * @param users {Array.<Number>} Specifies an array of the IDs of the users to be blocked at a time. The user_ids above and this property can be used interchangeably. (for bulk mode)
+   * @param userIds {Array.<String>} Specifies an array of the IDs of the users to be blocked at a time. (for bulk mode)
+   * @param users {Array.<String>} Specifies an array of the IDs of the users to be blocked at a time. The user_ids above and this property can be used interchangeably. (for bulk mode)
    */
   function BlockUserData(userId, targetId, userIds, users) {
     _classCallCheck(this, BlockUserData);
@@ -72,11 +72,11 @@ var BlockUserData = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('user_ids')) {
-          obj['user_ids'] = _ApiClient["default"].convertToType(data['user_ids'], ['Number']);
+          obj['user_ids'] = _ApiClient["default"].convertToType(data['user_ids'], ['String']);
         }
 
         if (data.hasOwnProperty('users')) {
-          obj['users'] = _ApiClient["default"].convertToType(data['users'], ['Number']);
+          obj['users'] = _ApiClient["default"].convertToType(data['users'], ['String']);
         }
       }
 
@@ -101,13 +101,13 @@ BlockUserData.prototype['user_id'] = undefined;
 BlockUserData.prototype['target_id'] = undefined;
 /**
  * Specifies an array of the IDs of the users to be blocked at a time. (for bulk mode)
- * @member {Array.<Number>} user_ids
+ * @member {Array.<String>} user_ids
  */
 
 BlockUserData.prototype['user_ids'] = undefined;
 /**
  * Specifies an array of the IDs of the users to be blocked at a time. The user_ids above and this property can be used interchangeably. (for bulk mode)
- * @member {Array.<Number>} users
+ * @member {Array.<String>} users
  */
 
 BlockUserData.prototype['users'] = undefined;

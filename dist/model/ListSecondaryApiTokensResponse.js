@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListSecondaryApiTokensResponseApiTokens = _interopRequireDefault(require("./ListSecondaryApiTokensResponseApiTokens"));
+var _ListSecondaryApiTokensResponseApiTokensInner = _interopRequireDefault(require("./ListSecondaryApiTokensResponseApiTokensInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListSecondaryApiTokensResponse model module.
  * @module model/ListSecondaryApiTokensResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ListSecondaryApiTokensResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var ListSecondaryApiTokensResponse = /*#__PURE__*/function () {
         obj = obj || new ListSecondaryApiTokensResponse();
 
         if (data.hasOwnProperty('api_tokens')) {
-          obj['api_tokens'] = _ApiClient["default"].convertToType(data['api_tokens'], [_ListSecondaryApiTokensResponseApiTokens["default"]]);
+          obj['api_tokens'] = _ApiClient["default"].convertToType(data['api_tokens'], [_ListSecondaryApiTokensResponseApiTokensInner["default"]]);
         }
       }
 
@@ -68,7 +68,7 @@ var ListSecondaryApiTokensResponse = /*#__PURE__*/function () {
   return ListSecondaryApiTokensResponse;
 }();
 /**
- * @member {Array.<module:model/ListSecondaryApiTokensResponseApiTokens>} api_tokens
+ * @member {Array.<module:model/ListSecondaryApiTokensResponseApiTokensInner>} api_tokens
  */
 
 

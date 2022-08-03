@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import GetStatisticsDailyResponseStatistics from './GetStatisticsDailyResponseStatistics';
+import GetStatisticsDailyResponseStatisticsInner from './GetStatisticsDailyResponseStatisticsInner';
 
 /**
  * The GetStatisticsResponse model module.
  * @module model/GetStatisticsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class GetStatisticsResponse {
     /**
@@ -49,7 +49,7 @@ class GetStatisticsResponse {
             obj = obj || new GetStatisticsResponse();
 
             if (data.hasOwnProperty('statistics')) {
-                obj['statistics'] = ApiClient.convertToType(data['statistics'], [GetStatisticsDailyResponseStatistics]);
+                obj['statistics'] = ApiClient.convertToType(data['statistics'], [GetStatisticsDailyResponseStatisticsInner]);
             }
             if (data.hasOwnProperty('week')) {
                 obj['week'] = ApiClient.convertToType(data['week'], 'Number');
@@ -62,7 +62,7 @@ class GetStatisticsResponse {
 }
 
 /**
- * @member {Array.<module:model/GetStatisticsDailyResponseStatistics>} statistics
+ * @member {Array.<module:model/GetStatisticsDailyResponseStatisticsInner>} statistics
  */
 GetStatisticsResponse.prototype['statistics'] = undefined;
 

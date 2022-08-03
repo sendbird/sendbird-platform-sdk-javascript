@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendBotSMessageData model module.
  * @module model/SendBotSMessageData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class SendBotSMessageData {
     /**
@@ -67,7 +67,7 @@ class SendBotSMessageData {
                 obj['send_push'] = ApiClient.convertToType(data['send_push'], 'Boolean');
             }
             if (data.hasOwnProperty('mentioned')) {
-                obj['mentioned'] = ApiClient.convertToType(data['mentioned'], ['Number']);
+                obj['mentioned'] = ApiClient.convertToType(data['mentioned'], ['String']);
             }
             if (data.hasOwnProperty('mark_as_read')) {
                 obj['mark_as_read'] = ApiClient.convertToType(data['mark_as_read'], 'Boolean');
@@ -117,7 +117,7 @@ SendBotSMessageData.prototype['send_push'] = undefined;
 
 /**
  * Specifies an array of one or more IDs of the users who get a notification for the message.
- * @member {Array.<Number>} mentioned
+ * @member {Array.<String>} mentioned
  */
 SendBotSMessageData.prototype['mentioned'] = undefined;
 

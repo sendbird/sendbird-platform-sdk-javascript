@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pushConfigurations** | [**[AddApnsPushConfigurationResponsePushConfigurations]**](AddApnsPushConfigurationResponsePushConfigurations.md) |  | [optional] 
+**pushConfigurations** | [**[AddApnsPushConfigurationResponsePushConfigurationsInner]**](AddApnsPushConfigurationResponsePushConfigurationsInner.md) |  | [optional] 
 
 

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pushConfigurations** | [**[AddFcmPushConfigurationResponsePushConfigurations]**](AddFcmPushConfigurationResponsePushConfigurations.md) |  | [optional] 
+**pushConfigurations** | [**[AddFcmPushConfigurationResponsePushConfigurationsInner]**](AddFcmPushConfigurationResponsePushConfigurationsInner.md) |  | [optional] 
 
 

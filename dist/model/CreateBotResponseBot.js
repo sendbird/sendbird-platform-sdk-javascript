@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateBotResponseBot model module.
  * @module model/CreateBotResponseBot
- * @version 1.0.3
+ * @version 1.0.7
  */
 var CreateBotResponseBot = /*#__PURE__*/function () {
   /**

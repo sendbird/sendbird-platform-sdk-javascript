@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdMember model module.
  * @module model/SendBirdMember
- * @version 1.0.3
+ * @version 1.0.7
  */
 var SendBirdMember = /*#__PURE__*/function () {
   /**
@@ -74,14 +74,6 @@ var SendBirdMember = /*#__PURE__*/function () {
           obj['is_active'] = _ApiClient["default"].convertToType(data['is_active'], 'Boolean');
         }
 
-        if (data.hasOwnProperty('is_blocked_by_me')) {
-          obj['is_blocked_by_me'] = _ApiClient["default"].convertToType(data['is_blocked_by_me'], 'Boolean');
-        }
-
-        if (data.hasOwnProperty('is_blocking_me')) {
-          obj['is_blocking_me'] = _ApiClient["default"].convertToType(data['is_blocking_me'], 'Boolean');
-        }
-
         if (data.hasOwnProperty('is_muted')) {
           obj['is_muted'] = _ApiClient["default"].convertToType(data['is_muted'], 'Boolean');
         }
@@ -112,6 +104,26 @@ var SendBirdMember = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('require_auth')) {
           obj['require_auth'] = _ApiClient["default"].convertToType(data['require_auth'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('require_auth_for_profile_image')) {
+          obj['require_auth_for_profile_image'] = _ApiClient["default"].convertToType(data['require_auth_for_profile_image'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('metadata')) {
+          obj['metadata'] = _ApiClient["default"].convertToType(data['metadata'], Object);
+        }
+
+        if (data.hasOwnProperty('is_online')) {
+          obj['is_online'] = _ApiClient["default"].convertToType(data['is_online'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('muted_end_at')) {
+          obj['muted_end_at'] = _ApiClient["default"].convertToType(data['muted_end_at'], 'Number');
+        }
+
+        if (data.hasOwnProperty('muted_description')) {
+          obj['muted_description'] = _ApiClient["default"].convertToType(data['muted_description'], 'String');
         }
 
         if (data.hasOwnProperty('restriction_info')) {
@@ -159,16 +171,6 @@ SendBirdMember.prototype['friend_name'] = undefined;
 
 SendBirdMember.prototype['is_active'] = undefined;
 /**
- * @member {Boolean} is_blocked_by_me
- */
-
-SendBirdMember.prototype['is_blocked_by_me'] = undefined;
-/**
- * @member {Boolean} is_blocking_me
- */
-
-SendBirdMember.prototype['is_blocking_me'] = undefined;
-/**
  * @member {Boolean} is_muted
  */
 
@@ -208,6 +210,31 @@ SendBirdMember.prototype['profile_url'] = undefined;
  */
 
 SendBirdMember.prototype['require_auth'] = undefined;
+/**
+ * @member {Boolean} require_auth_for_profile_image
+ */
+
+SendBirdMember.prototype['require_auth_for_profile_image'] = undefined;
+/**
+ * @member {Object} metadata
+ */
+
+SendBirdMember.prototype['metadata'] = undefined;
+/**
+ * @member {Boolean} is_online
+ */
+
+SendBirdMember.prototype['is_online'] = undefined;
+/**
+ * @member {Number} muted_end_at
+ */
+
+SendBirdMember.prototype['muted_end_at'] = undefined;
+/**
+ * @member {String} muted_description
+ */
+
+SendBirdMember.prototype['muted_description'] = undefined;
 /**
  * @member {module:model/SendBirdRestrictionInfo} restriction_info
  */

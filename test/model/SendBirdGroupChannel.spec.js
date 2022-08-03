@@ -312,6 +312,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property channel (base name: "channel")', function() {
+      // uncomment below and update the code to test the property channel
+      //var instance = new SendbirdPlatformSdk.SendBirdGroupChannel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

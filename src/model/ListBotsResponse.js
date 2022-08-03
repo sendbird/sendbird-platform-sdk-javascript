@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListBotsResponseBots from './ListBotsResponseBots';
+import ListBotsResponseBotsInner from './ListBotsResponseBotsInner';
 
 /**
  * The ListBotsResponse model module.
  * @module model/ListBotsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ListBotsResponse {
     /**
@@ -49,7 +49,7 @@ class ListBotsResponse {
             obj = obj || new ListBotsResponse();
 
             if (data.hasOwnProperty('bots')) {
-                obj['bots'] = ApiClient.convertToType(data['bots'], [ListBotsResponseBots]);
+                obj['bots'] = ApiClient.convertToType(data['bots'], [ListBotsResponseBotsInner]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -62,7 +62,7 @@ class ListBotsResponse {
 }
 
 /**
- * @member {Array.<module:model/ListBotsResponseBots>} bots
+ * @member {Array.<module:model/ListBotsResponseBotsInner>} bots
  */
 ListBotsResponse.prototype['bots'] = undefined;
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ChooseWhichEventsToSubscribeToData model module.
  * @module model/ChooseWhichEventsToSubscribeToData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ChooseWhichEventsToSubscribeToData {
     /**

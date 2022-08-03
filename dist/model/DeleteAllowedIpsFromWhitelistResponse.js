@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The DeleteAllowedIpsFromWhitelistResponse model module.
  * @module model/DeleteAllowedIpsFromWhitelistResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var DeleteAllowedIpsFromWhitelistResponse = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OcViewMuteByIdResponse model module.
  * @module model/OcViewMuteByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class OcViewMuteByIdResponse {
     /**

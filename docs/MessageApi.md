@@ -1440,7 +1440,7 @@ let channelType = "channelType_example"; // String |
 let channelUrl = "channelUrl_example"; // String | 
 let messageId = "messageId_example"; // String | 
 let opts = {
-  'body': {key: null} // Object | 
+  'translateMessageIntoOtherLanguagesData': new SendbirdPlatformSdk.TranslateMessageIntoOtherLanguagesData() // TranslateMessageIntoOtherLanguagesData | 
 };
 apiInstance.translateMessageIntoOtherLanguages(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1459,7 +1459,7 @@ Name | Type | Description  | Notes
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
  **messageId** | **String**|  | 
- **body** | **Object**|  | [optional] 
+ **translateMessageIntoOtherLanguagesData** | [**TranslateMessageIntoOtherLanguagesData**](TranslateMessageIntoOtherLanguagesData.md)|  | [optional] 
 
 ### Return type
 

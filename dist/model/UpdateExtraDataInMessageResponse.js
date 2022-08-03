@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _UpdateExtraDataInMessageResponseSortedMetaarray = _interopRequireDefault(require("./UpdateExtraDataInMessageResponseSortedMetaarray"));
+var _UpdateExtraDataInMessageResponseSortedMetaarrayInner = _interopRequireDefault(require("./UpdateExtraDataInMessageResponseSortedMetaarrayInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateExtraDataInMessageResponse model module.
  * @module model/UpdateExtraDataInMessageResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var UpdateExtraDataInMessageResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var UpdateExtraDataInMessageResponse = /*#__PURE__*/function () {
         obj = obj || new UpdateExtraDataInMessageResponse();
 
         if (data.hasOwnProperty('sorted_metaarray')) {
-          obj['sorted_metaarray'] = _ApiClient["default"].convertToType(data['sorted_metaarray'], [_UpdateExtraDataInMessageResponseSortedMetaarray["default"]]);
+          obj['sorted_metaarray'] = _ApiClient["default"].convertToType(data['sorted_metaarray'], [_UpdateExtraDataInMessageResponseSortedMetaarrayInner["default"]]);
         }
       }
 
@@ -68,7 +68,7 @@ var UpdateExtraDataInMessageResponse = /*#__PURE__*/function () {
   return UpdateExtraDataInMessageResponse;
 }();
 /**
- * @member {Array.<module:model/UpdateExtraDataInMessageResponseSortedMetaarray>} sorted_metaarray
+ * @member {Array.<module:model/UpdateExtraDataInMessageResponseSortedMetaarrayInner>} sorted_metaarray
  */
 
 

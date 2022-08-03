@@ -18,14 +18,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcLeaveChannelData model module.
  * @module model/GcLeaveChannelData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var GcLeaveChannelData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcLeaveChannelData</code>.
    * @alias module:model/GcLeaveChannelData
    * @param channelUrl {String} Specifies the URL of the channel to leave.
-   * @param userIds {Array.<Number>} Specifies an array of one or more IDs of the users to leave the channel.
+   * @param userIds {Array.<String>} Specifies an array of one or more IDs of the users to leave the channel.
    * @param shouldLeaveAll {Boolean} Determines whether to make all members leave the channel. (Default: false)
    */
   function GcLeaveChannelData(channelUrl, userIds, shouldLeaveAll) {
@@ -66,7 +66,7 @@ var GcLeaveChannelData = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('user_ids')) {
-          obj['user_ids'] = _ApiClient["default"].convertToType(data['user_ids'], ['Number']);
+          obj['user_ids'] = _ApiClient["default"].convertToType(data['user_ids'], ['String']);
         }
 
         if (data.hasOwnProperty('should_leave_all')) {
@@ -89,7 +89,7 @@ var GcLeaveChannelData = /*#__PURE__*/function () {
 GcLeaveChannelData.prototype['channel_url'] = undefined;
 /**
  * Specifies an array of one or more IDs of the users to leave the channel.
- * @member {Array.<Number>} user_ids
+ * @member {Array.<String>} user_ids
  */
 
 GcLeaveChannelData.prototype['user_ids'] = undefined;

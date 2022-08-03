@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**exportedData** | [**[ListDataExportsByMessageChannelOrUserResponseExportedData]**](ListDataExportsByMessageChannelOrUserResponseExportedData.md) |  | [optional] 
+**exportedData** | [**[ListDataExportsByMessageChannelOrUserResponseExportedDataInner]**](ListDataExportsByMessageChannelOrUserResponseExportedDataInner.md) |  | [optional] 
 **next** | **String** |  | [optional] 
 
 

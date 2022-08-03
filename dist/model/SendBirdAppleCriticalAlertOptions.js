@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdAppleCriticalAlertOptions model module.
  * @module model/SendBirdAppleCriticalAlertOptions
- * @version 1.0.3
+ * @version 1.0.7
  */
 var SendBirdAppleCriticalAlertOptions = /*#__PURE__*/function () {
   /**

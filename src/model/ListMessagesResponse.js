@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListMessagesResponseMessages from './ListMessagesResponseMessages';
+import ListMessagesResponseMessagesInner from './ListMessagesResponseMessagesInner';
 
 /**
  * The ListMessagesResponse model module.
  * @module model/ListMessagesResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ListMessagesResponse {
     /**
@@ -49,7 +49,7 @@ class ListMessagesResponse {
             obj = obj || new ListMessagesResponse();
 
             if (data.hasOwnProperty('messages')) {
-                obj['messages'] = ApiClient.convertToType(data['messages'], [ListMessagesResponseMessages]);
+                obj['messages'] = ApiClient.convertToType(data['messages'], [ListMessagesResponseMessagesInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ListMessagesResponse {
 }
 
 /**
- * @member {Array.<module:model/ListMessagesResponseMessages>} messages
+ * @member {Array.<module:model/ListMessagesResponseMessagesInner>} messages
  */
 ListMessagesResponse.prototype['messages'] = undefined;
 

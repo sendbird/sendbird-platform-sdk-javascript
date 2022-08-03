@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcUpdateBanByIdData model module.
  * @module model/GcUpdateBanByIdData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class GcUpdateBanByIdData {
     /**

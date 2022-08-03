@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcViewMuteByIdResponse model module.
  * @module model/GcViewMuteByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class GcViewMuteByIdResponse {
     /**

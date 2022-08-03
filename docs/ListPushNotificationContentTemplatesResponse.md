@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pushMessageTemplates** | [**[ListPushNotificationContentTemplatesResponsePushMessageTemplates]**](ListPushNotificationContentTemplatesResponsePushMessageTemplates.md) |  | [optional] 
+**pushMessageTemplates** | [**[ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner]**](ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner.md) |  | [optional] 
 
 

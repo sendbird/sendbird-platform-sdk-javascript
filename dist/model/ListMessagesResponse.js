@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListMessagesResponseMessages = _interopRequireDefault(require("./ListMessagesResponseMessages"));
+var _ListMessagesResponseMessagesInner = _interopRequireDefault(require("./ListMessagesResponseMessagesInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMessagesResponse model module.
  * @module model/ListMessagesResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ListMessagesResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var ListMessagesResponse = /*#__PURE__*/function () {
         obj = obj || new ListMessagesResponse();
 
         if (data.hasOwnProperty('messages')) {
-          obj['messages'] = _ApiClient["default"].convertToType(data['messages'], [_ListMessagesResponseMessages["default"]]);
+          obj['messages'] = _ApiClient["default"].convertToType(data['messages'], [_ListMessagesResponseMessagesInner["default"]]);
         }
       }
 
@@ -68,7 +68,7 @@ var ListMessagesResponse = /*#__PURE__*/function () {
   return ListMessagesResponse;
 }();
 /**
- * @member {Array.<module:model/ListMessagesResponseMessages>} messages
+ * @member {Array.<module:model/ListMessagesResponseMessagesInner>} messages
  */
 
 

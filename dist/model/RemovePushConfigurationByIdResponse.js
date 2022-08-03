@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RemovePushConfigurationByIdResponse model module.
  * @module model/RemovePushConfigurationByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var RemovePushConfigurationByIdResponse = /*#__PURE__*/function () {
   /**

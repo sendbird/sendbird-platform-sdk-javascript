@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The GcListOperatorsResponse model module.
  * @module model/GcListOperatorsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class GcListOperatorsResponse {
     /**

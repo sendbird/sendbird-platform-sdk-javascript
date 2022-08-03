@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import SendBirdGroupChannelChannel from './SendBirdGroupChannelChannel';
 import SendBirdGroupChannelCreatedBy from './SendBirdGroupChannelCreatedBy';
 import SendBirdGroupChannelDisappearingMessage from './SendBirdGroupChannelDisappearingMessage';
 import SendBirdGroupChannelSmsFallback from './SendBirdGroupChannelSmsFallback';
@@ -22,7 +23,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The SendBirdGroupChannel model module.
  * @module model/SendBirdGroupChannel
- * @version 1.0.3
+ * @version 1.0.7
  */
 class SendBirdGroupChannel {
     /**
@@ -181,6 +182,9 @@ class SendBirdGroupChannel {
             }
             if (data.hasOwnProperty('unread_message_count')) {
                 obj['unread_message_count'] = ApiClient.convertToType(data['unread_message_count'], 'Number');
+            }
+            if (data.hasOwnProperty('channel')) {
+                obj['channel'] = SendBirdGroupChannelChannel.constructFromObject(data['channel']);
             }
         }
         return obj;
@@ -403,6 +407,11 @@ SendBirdGroupChannel.prototype['unread_mention_count'] = undefined;
  * @member {Number} unread_message_count
  */
 SendBirdGroupChannel.prototype['unread_message_count'] = undefined;
+
+/**
+ * @member {module:model/SendBirdGroupChannelChannel} channel
+ */
+SendBirdGroupChannel.prototype['channel'] = undefined;
 
 
 

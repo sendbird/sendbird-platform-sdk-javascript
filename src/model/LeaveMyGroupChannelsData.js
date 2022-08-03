@@ -16,18 +16,17 @@ import ApiClient from '../ApiClient';
 /**
  * The LeaveMyGroupChannelsData model module.
  * @module model/LeaveMyGroupChannelsData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class LeaveMyGroupChannelsData {
     /**
      * Constructs a new <code>LeaveMyGroupChannelsData</code>.
      * @alias module:model/LeaveMyGroupChannelsData
-     * @param userId {String} Specifies the unique ID of the user to leave all joined group channels.
      * @param customType {String} Specifies the custom channel type to make the user leave joined group channels with the corresponding type.
      */
-    constructor(userId, customType) { 
+    constructor(customType) { 
         
-        LeaveMyGroupChannelsData.initialize(this, userId, customType);
+        LeaveMyGroupChannelsData.initialize(this, customType);
     }
 
     /**
@@ -35,8 +34,7 @@ class LeaveMyGroupChannelsData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, userId, customType) { 
-        obj['user_id'] = userId;
+    static initialize(obj, customType) { 
         obj['custom_type'] = customType;
     }
 
@@ -51,9 +49,6 @@ class LeaveMyGroupChannelsData {
         if (data) {
             obj = obj || new LeaveMyGroupChannelsData();
 
-            if (data.hasOwnProperty('user_id')) {
-                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
-            }
             if (data.hasOwnProperty('custom_type')) {
                 obj['custom_type'] = ApiClient.convertToType(data['custom_type'], 'String');
             }
@@ -63,12 +58,6 @@ class LeaveMyGroupChannelsData {
 
 
 }
-
-/**
- * Specifies the unique ID of the user to leave all joined group channels.
- * @member {String} user_id
- */
-LeaveMyGroupChannelsData.prototype['user_id'] = undefined;
 
 /**
  * Specifies the custom channel type to make the user leave joined group channels with the corresponding type.

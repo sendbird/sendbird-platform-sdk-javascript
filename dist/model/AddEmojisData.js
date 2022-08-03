@@ -18,14 +18,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddEmojisData model module.
  * @module model/AddEmojisData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var AddEmojisData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddEmojisData</code>.
    * @alias module:model/AddEmojisData
    * @param emojiCategoryId {Number} Specifies the unique ID of the emoji category that a list of new emojis belong to.
-   * @param emojis {Array.<String>} Specifies a list of one or more new emojis to register.
+   * @param emojis {Array.<Object>} Specifies a list of one or more new emojis to register.
    */
   function AddEmojisData(emojiCategoryId, emojis) {
     _classCallCheck(this, AddEmojisData);
@@ -64,7 +64,7 @@ var AddEmojisData = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('emojis')) {
-          obj['emojis'] = _ApiClient["default"].convertToType(data['emojis'], ['String']);
+          obj['emojis'] = _ApiClient["default"].convertToType(data['emojis'], [Object]);
         }
       }
 
@@ -83,7 +83,7 @@ var AddEmojisData = /*#__PURE__*/function () {
 AddEmojisData.prototype['emoji_category_id'] = undefined;
 /**
  * Specifies a list of one or more new emojis to register.
- * @member {Array.<String>} emojis
+ * @member {Array.<Object>} emojis
  */
 
 AddEmojisData.prototype['emojis'] = undefined;

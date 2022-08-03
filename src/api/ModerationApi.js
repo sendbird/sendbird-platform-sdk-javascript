@@ -26,13 +26,13 @@ import GcUpdateBanByIdData from '../model/GcUpdateBanByIdData';
 import GcUpdateBanByIdResponse from '../model/GcUpdateBanByIdResponse';
 import GcViewBanByIdResponse from '../model/GcViewBanByIdResponse';
 import GcViewMuteByIdResponse from '../model/GcViewMuteByIdResponse';
-import InlineResponse2001 from '../model/InlineResponse2001';
 import ListBannedChannelsResponse from '../model/ListBannedChannelsResponse';
 import ListBlockedUsersResponse from '../model/ListBlockedUsersResponse';
 import ListMutedChannelsResponse from '../model/ListMutedChannelsResponse';
 import MuteInChannelsWithCustomChannelTypesData from '../model/MuteInChannelsWithCustomChannelTypesData';
 import OcBanUserData from '../model/OcBanUserData';
 import OcBanUserResponse from '../model/OcBanUserResponse';
+import OcDeleteChannelByUrl200Response from '../model/OcDeleteChannelByUrl200Response';
 import OcFreezeChannelData from '../model/OcFreezeChannelData';
 import OcListBannedUsersResponse from '../model/OcListBannedUsersResponse';
 import OcListMutedUsersResponse from '../model/OcListMutedUsersResponse';
@@ -47,7 +47,7 @@ import SendBirdOpenChannel from '../model/SendBirdOpenChannel';
 /**
 * Moderation service.
 * @module api/ModerationApi
-* @version 1.0.3
+* @version 1.0.7
 */
 export default class ModerationApi {
 
@@ -498,7 +498,7 @@ export default class ModerationApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
     gcUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId) {
       let postBody = null;
@@ -530,7 +530,7 @@ export default class ModerationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = OcDeleteChannelByUrl200Response;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/ban/{banned_user_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -544,7 +544,7 @@ export default class ModerationApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
     gcUnbanUserById(apiToken, channelUrl, bannedUserId) {
       return this.gcUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId)
@@ -560,7 +560,7 @@ export default class ModerationApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
     gcUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId) {
       let postBody = null;
@@ -592,7 +592,7 @@ export default class ModerationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = OcDeleteChannelByUrl200Response;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/mute/{muted_user_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -606,7 +606,7 @@ export default class ModerationApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
     gcUnmuteUserById(apiToken, channelUrl, mutedUserId) {
       return this.gcUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId)
@@ -1382,7 +1382,7 @@ export default class ModerationApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
     ocUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId) {
       let postBody = null;
@@ -1414,7 +1414,7 @@ export default class ModerationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = OcDeleteChannelByUrl200Response;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/ban/{banned_user_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1428,7 +1428,7 @@ export default class ModerationApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
     ocUnbanUserById(apiToken, channelUrl, bannedUserId) {
       return this.ocUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId)
@@ -1444,7 +1444,7 @@ export default class ModerationApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
     ocUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId) {
       let postBody = null;
@@ -1476,7 +1476,7 @@ export default class ModerationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = OcDeleteChannelByUrl200Response;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/mute/{muted_user_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1490,7 +1490,7 @@ export default class ModerationApi {
      * @param {String} apiToken 
      * @param {String} channelUrl 
      * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
     ocUnmuteUserById(apiToken, channelUrl, mutedUserId) {
       return this.ocUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId)

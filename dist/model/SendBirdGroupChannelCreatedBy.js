@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdGroupChannelCreatedBy model module.
  * @module model/SendBirdGroupChannelCreatedBy
- * @version 1.0.3
+ * @version 1.0.7
  */
 var SendBirdGroupChannelCreatedBy = /*#__PURE__*/function () {
   /**

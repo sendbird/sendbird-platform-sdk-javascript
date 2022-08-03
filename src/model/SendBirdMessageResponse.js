@@ -12,13 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
-import SendBirdMessageResponseMentionedUsers from './SendBirdMessageResponseMentionedUsers';
+import SendBirdMessageResponseMentionedUsersInner from './SendBirdMessageResponseMentionedUsersInner';
 import SendBirdMessageResponseUser from './SendBirdMessageResponseUser';
 
 /**
  * The SendBirdMessageResponse model module.
  * @module model/SendBirdMessageResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class SendBirdMessageResponse {
     /**
@@ -59,7 +59,7 @@ class SendBirdMessageResponse {
                 obj['custom_type'] = ApiClient.convertToType(data['custom_type'], 'String');
             }
             if (data.hasOwnProperty('mentioned_users')) {
-                obj['mentioned_users'] = ApiClient.convertToType(data['mentioned_users'], [SendBirdMessageResponseMentionedUsers]);
+                obj['mentioned_users'] = ApiClient.convertToType(data['mentioned_users'], [SendBirdMessageResponseMentionedUsersInner]);
             }
             if (data.hasOwnProperty('translations')) {
                 obj['translations'] = ApiClient.convertToType(data['translations'], Object);
@@ -153,7 +153,7 @@ SendBirdMessageResponse.prototype['message_survival_seconds'] = undefined;
 SendBirdMessageResponse.prototype['custom_type'] = undefined;
 
 /**
- * @member {Array.<module:model/SendBirdMessageResponseMentionedUsers>} mentioned_users
+ * @member {Array.<module:model/SendBirdMessageResponseMentionedUsersInner>} mentioned_users
  */
 SendBirdMessageResponse.prototype['mentioned_users'] = undefined;
 

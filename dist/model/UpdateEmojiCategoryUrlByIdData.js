@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateEmojiCategoryUrlByIdData model module.
  * @module model/UpdateEmojiCategoryUrlByIdData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var UpdateEmojiCategoryUrlByIdData = /*#__PURE__*/function () {
   /**

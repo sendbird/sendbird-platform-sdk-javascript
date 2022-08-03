@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListDataExportsByMessageChannelOrUserResponseFile from './ListDataExportsByMessageChannelOrUserResponseFile';
+import ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile from './ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile';
 
 /**
  * The ViewDataExportByIdResponse model module.
  * @module model/ViewDataExportByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ViewDataExportByIdResponse {
     /**
@@ -85,10 +85,10 @@ class ViewDataExportByIdResponse {
                 obj['sender_ids'] = ApiClient.convertToType(data['sender_ids'], ['String']);
             }
             if (data.hasOwnProperty('file')) {
-                obj['file'] = ListDataExportsByMessageChannelOrUserResponseFile.constructFromObject(data['file']);
+                obj['file'] = ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile.constructFromObject(data['file']);
             }
             if (data.hasOwnProperty('user_ids')) {
-                obj['user_ids'] = ApiClient.convertToType(data['user_ids'], ['Number']);
+                obj['user_ids'] = ApiClient.convertToType(data['user_ids'], ['String']);
             }
         }
         return obj;
@@ -158,12 +158,12 @@ ViewDataExportByIdResponse.prototype['channel_custom_types'] = undefined;
 ViewDataExportByIdResponse.prototype['sender_ids'] = undefined;
 
 /**
- * @member {module:model/ListDataExportsByMessageChannelOrUserResponseFile} file
+ * @member {module:model/ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile} file
  */
 ViewDataExportByIdResponse.prototype['file'] = undefined;
 
 /**
- * @member {Array.<Number>} user_ids
+ * @member {Array.<String>} user_ids
  */
 ViewDataExportByIdResponse.prototype['user_ids'] = undefined;
 

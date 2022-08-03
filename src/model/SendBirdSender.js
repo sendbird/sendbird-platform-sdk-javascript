@@ -17,7 +17,7 @@ import SBObject from './SBObject';
 /**
  * The SendBirdSender model module.
  * @module model/SendBirdSender
- * @version 1.0.3
+ * @version 1.0.7
  */
 class SendBirdSender {
     /**

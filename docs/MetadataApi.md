@@ -4,6 +4,21 @@ All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**createChannelMetacounter**](MetadataApi.md#createChannelMetacounter) | **POST** /v3/{channel_type}/{channel_url}/metacounter | Create a channel metacounter
+[**createChannelMetadata**](MetadataApi.md#createChannelMetadata) | **POST** /v3/{channel_type}/{channel_url}/metadata | Create a channel metadata
+[**createUserMetadata**](MetadataApi.md#createUserMetadata) | **POST** /v3/users/{user_id}/metadata | Create a user metadata
+[**deleteChannelMetacounter**](MetadataApi.md#deleteChannelMetacounter) | **DELETE** /v3/{channel_type}/{channel_url}/metacounter | Delete a channel metacounter - When deleting all items of a channel metacounter
+[**deleteChannelMetacounterByKey**](MetadataApi.md#deleteChannelMetacounterByKey) | **DELETE** /v3/{channel_type}/{channel_url}/metacounter/{key} | Delete a channel metacounter - When deleting a specific item of a channel metacounter by its key
+[**deleteChannelMetadata**](MetadataApi.md#deleteChannelMetadata) | **DELETE** /v3/{channel_type}/{channel_url}/metadata | Delete a channel metadata - When deleting all items of a channel metadata
+[**deleteChannelMetadataByKey**](MetadataApi.md#deleteChannelMetadataByKey) | **DELETE** /v3/{channel_type}/{channel_url}/metadata/{key} | Delete a channel metadata - When deleting a specific item of a channel metadata by its key
+[**deleteUserMetadata**](MetadataApi.md#deleteUserMetadata) | **DELETE** /v3/users/{user_id}/metadata | Delete a user metadata - When deleting all items of a user metadata
+[**deleteUserMetadataByKey**](MetadataApi.md#deleteUserMetadataByKey) | **DELETE** /v3/users/{user_id}/metadata/{key} | Delete a user metadata - When deleting a specific item of a user metadata by its key
+[**updateChannelMetacounter**](MetadataApi.md#updateChannelMetacounter) | **PUT** /v3/{channel_type}/{channel_url}/metacounter | Update a channel metacounter - When updating existing items of a channel metacounter by their keys or adding new items to the metacounter
+[**updateChannelMetacounterByKey**](MetadataApi.md#updateChannelMetacounterByKey) | **PUT** /v3/{channel_type}/{channel_url}/metacounter/{key} | Update a channel metacounter - When updating a specific item of a channel metacounter by its key
+[**updateChannelMetadata**](MetadataApi.md#updateChannelMetadata) | **PUT** /v3/{channel_type}/{channel_url}/metadata | Update a channel metadata - When updating existing items of a channel metadata by their keys or adding new items to the metadata
+[**updateChannelMetadataByKey**](MetadataApi.md#updateChannelMetadataByKey) | **PUT** /v3/{channel_type}/{channel_url}/metadata/{key} | Update a channel metadata - When updating a specific item of a channel metadata by its key
+[**updateUserMetadata**](MetadataApi.md#updateUserMetadata) | **PUT** /v3/users/{user_id}/metadata | Update a user metadata - When updating existing items of a user metadata by their keys or adding new items to the metadata
+[**updateUserMetadataByKey**](MetadataApi.md#updateUserMetadataByKey) | **PUT** /v3/users/{user_id}/metadata/{key} | Update a user metadata - When updating a specific item of a user metadata by its key
 [**viewChannelMetacounter**](MetadataApi.md#viewChannelMetacounter) | **GET** /v3/{channel_type}/{channel_url}/metacounter | View a channel metacounter - When retrieving all items of a channel metacounter
 [**viewChannelMetacounterByKey**](MetadataApi.md#viewChannelMetacounterByKey) | **GET** /v3/{channel_type}/{channel_url}/metacounter/{key} | View a channel metacounter - When retrieving a specific item of a channel metacounter by its key
 [**viewChannelMetadata**](MetadataApi.md#viewChannelMetadata) | **GET** /v3/{channel_type}/{channel_url}/metadata | View a channel metadata - When retrieving all items of a channel metadata
@@ -13,9 +28,775 @@ Method | HTTP request | Description
 
 
 
+## createChannelMetacounter
+
+> Object createChannelMetacounter(apiToken, channelType, channelUrl, opts)
+
+Create a channel metacounter
+
+## Create a channel metacounter  Creates a channel metacounter&#39;s items to store in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-create-a-channel-metacounter ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let channelType = "channelType_example"; // String | 
+let channelUrl = "channelUrl_example"; // String | 
+let opts = {
+  'createChannelMetacounterData': new SendbirdPlatformSdk.CreateChannelMetacounterData() // CreateChannelMetacounterData | 
+};
+apiInstance.createChannelMetacounter(apiToken, channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **channelType** | **String**|  | 
+ **channelUrl** | **String**|  | 
+ **createChannelMetacounterData** | [**CreateChannelMetacounterData**](CreateChannelMetacounterData.md)|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## createChannelMetadata
+
+> CreateChannelMetadataResponse createChannelMetadata(apiToken, channelType, channelUrl, opts)
+
+Create a channel metadata
+
+## Create a channel metadata  Creates a channel metadata&#39;s items to store in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-create-a-channel-metadata ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let channelType = "channelType_example"; // String | 
+let channelUrl = "channelUrl_example"; // String | 
+let opts = {
+  'createChannelMetadataData': new SendbirdPlatformSdk.CreateChannelMetadataData() // CreateChannelMetadataData | 
+};
+apiInstance.createChannelMetadata(apiToken, channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **channelType** | **String**|  | 
+ **channelUrl** | **String**|  | 
+ **createChannelMetadataData** | [**CreateChannelMetadataData**](CreateChannelMetadataData.md)|  | [optional] 
+
+### Return type
+
+[**CreateChannelMetadataResponse**](CreateChannelMetadataResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## createUserMetadata
+
+> CreateUserMetadataResponse createUserMetadata(apiToken, userId, opts)
+
+Create a user metadata
+
+## Create a user metadata  Creates a user metadata&#39;s items to store in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-create-a-user-metadata ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let userId = "userId_example"; // String | 
+let opts = {
+  'createUserMetadataData': new SendbirdPlatformSdk.CreateUserMetadataData() // CreateUserMetadataData | 
+};
+apiInstance.createUserMetadata(apiToken, userId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **userId** | **String**|  | 
+ **createUserMetadataData** | [**CreateUserMetadataData**](CreateUserMetadataData.md)|  | [optional] 
+
+### Return type
+
+[**CreateUserMetadataResponse**](CreateUserMetadataResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## deleteChannelMetacounter
+
+> deleteChannelMetacounter(apiToken, channelType, channelUrl)
+
+Delete a channel metacounter - When deleting all items of a channel metacounter
+
+## Delete a channel metacounter  Deletes a channel metacounter&#39;s item that is stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metacounter ----------------------------   &#x60;channel_type&#x60;      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the channel which has the metacounter to delete.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let channelType = "channelType_example"; // String | 
+let channelUrl = "channelUrl_example"; // String | 
+apiInstance.deleteChannelMetacounter(apiToken, channelType, channelUrl).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **channelType** | **String**|  | 
+ **channelUrl** | **String**|  | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## deleteChannelMetacounterByKey
+
+> deleteChannelMetacounterByKey(apiToken, channelType, channelUrl, key)
+
+Delete a channel metacounter - When deleting a specific item of a channel metacounter by its key
+
+## Delete a channel metacounter  Deletes a channel metacounter&#39;s item that is stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metacounter ----------------------------   &#x60;channel_type&#x60;      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the channel which has the metacounter to delete.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let channelType = "channelType_example"; // String | 
+let channelUrl = "channelUrl_example"; // String | 
+let key = "key_example"; // String | 
+apiInstance.deleteChannelMetacounterByKey(apiToken, channelType, channelUrl, key).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **channelType** | **String**|  | 
+ **channelUrl** | **String**|  | 
+ **key** | **String**|  | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## deleteChannelMetadata
+
+> deleteChannelMetadata(apiToken, channelType, channelUrl, opts)
+
+Delete a channel metadata - When deleting all items of a channel metadata
+
+## Delete a channel metadata  Deletes a channel metadata&#39;s one or all items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metadata ----------------------------   &#x60;channel_type&#x60;      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the channel which has the metadata to delete.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let channelType = "channelType_example"; // String | 
+let channelUrl = "channelUrl_example"; // String | 
+let opts = {
+  'key': "key_example" // String | 
+};
+apiInstance.deleteChannelMetadata(apiToken, channelType, channelUrl, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **channelType** | **String**|  | 
+ **channelUrl** | **String**|  | 
+ **key** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## deleteChannelMetadataByKey
+
+> deleteChannelMetadataByKey(apiToken, channelType, channelUrl, key)
+
+Delete a channel metadata - When deleting a specific item of a channel metadata by its key
+
+## Delete a channel metadata  Deletes a channel metadata&#39;s one or all items that are stored in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-channel-metadata ----------------------------   &#x60;channel_type&#x60;      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the channel which has the metadata to delete.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let channelType = "channelType_example"; // String | 
+let channelUrl = "channelUrl_example"; // String | 
+let key = "key_example"; // String | 
+apiInstance.deleteChannelMetadataByKey(apiToken, channelType, channelUrl, key).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **channelType** | **String**|  | 
+ **channelUrl** | **String**|  | 
+ **key** | **String**|  | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## deleteUserMetadata
+
+> deleteUserMetadata(apiToken, userId, opts)
+
+Delete a user metadata - When deleting all items of a user metadata
+
+## Delete a user metadata  Deletes a user metadata&#39;s one or all items that are stored in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-user-metadata ----------------------------   &#x60;user_id&#x60;      Type: string      Description: Specifies the ID of the user who has the metadata to delete.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let userId = "userId_example"; // String | 
+let opts = {
+  'key': "key_example" // String | 
+};
+apiInstance.deleteUserMetadata(apiToken, userId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **userId** | **String**|  | 
+ **key** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## deleteUserMetadataByKey
+
+> deleteUserMetadataByKey(apiToken, userId, key)
+
+Delete a user metadata - When deleting a specific item of a user metadata by its key
+
+## Delete a user metadata  Deletes a user metadata&#39;s one or all items that are stored in a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-delete-a-user-metadata ----------------------------   &#x60;user_id&#x60;      Type: string      Description: Specifies the ID of the user who has the metadata to delete.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let userId = "userId_example"; // String | 
+let key = "key_example"; // String | 
+apiInstance.deleteUserMetadataByKey(apiToken, userId, key).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **userId** | **String**|  | 
+ **key** | **String**|  | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## updateChannelMetacounter
+
+> Object updateChannelMetacounter(apiToken, channelType, channelUrl, opts)
+
+Update a channel metacounter - When updating existing items of a channel metacounter by their keys or adding new items to the metacounter
+
+## Update a channel metacounter  Updates existing items of a channel metacounter by their keys, or adds new items to the metacounter.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metacounter ----------------------------   &#x60;channel_type&#x60;      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the target channel.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let channelType = "channelType_example"; // String | 
+let channelUrl = "channelUrl_example"; // String | 
+let opts = {
+  'updateChannelMetacounterData': new SendbirdPlatformSdk.UpdateChannelMetacounterData() // UpdateChannelMetacounterData | 
+};
+apiInstance.updateChannelMetacounter(apiToken, channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **channelType** | **String**|  | 
+ **channelUrl** | **String**|  | 
+ **updateChannelMetacounterData** | [**UpdateChannelMetacounterData**](UpdateChannelMetacounterData.md)|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateChannelMetacounterByKey
+
+> Object updateChannelMetacounterByKey(apiToken, channelType, channelUrl, key, opts)
+
+Update a channel metacounter - When updating a specific item of a channel metacounter by its key
+
+## Update a channel metacounter  Updates existing items of a channel metacounter by their keys, or adds new items to the metacounter.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metacounter ----------------------------   &#x60;channel_type&#x60;      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the target channel.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let channelType = "channelType_example"; // String | 
+let channelUrl = "channelUrl_example"; // String | 
+let key = "key_example"; // String | 
+let opts = {
+  'body': {key: null} // Object | 
+};
+apiInstance.updateChannelMetacounterByKey(apiToken, channelType, channelUrl, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **channelType** | **String**|  | 
+ **channelUrl** | **String**|  | 
+ **key** | **String**|  | 
+ **body** | **Object**|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateChannelMetadata
+
+> Object updateChannelMetadata(apiToken, channelType, channelUrl, opts)
+
+Update a channel metadata - When updating existing items of a channel metadata by their keys or adding new items to the metadata
+
+## Update a channel metadata  Updates existing items of a channel metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metadata ----------------------------   &#x60;channel_type&#x60;      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the target channel.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let channelType = "channelType_example"; // String | 
+let channelUrl = "channelUrl_example"; // String | 
+let opts = {
+  'updateChannelMetadataData': new SendbirdPlatformSdk.UpdateChannelMetadataData() // UpdateChannelMetadataData | 
+};
+apiInstance.updateChannelMetadata(apiToken, channelType, channelUrl, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **channelType** | **String**|  | 
+ **channelUrl** | **String**|  | 
+ **updateChannelMetadataData** | [**UpdateChannelMetadataData**](UpdateChannelMetadataData.md)|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateChannelMetadataByKey
+
+> Object updateChannelMetadataByKey(apiToken, channelType, channelUrl, key, opts)
+
+Update a channel metadata - When updating a specific item of a channel metadata by its key
+
+## Update a channel metadata  Updates existing items of a channel metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-channel-metadata ----------------------------   &#x60;channel_type&#x60;      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the target channel.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let channelType = "channelType_example"; // String | 
+let channelUrl = "channelUrl_example"; // String | 
+let key = "key_example"; // String | 
+let opts = {
+  'body': {key: null} // Object | 
+};
+apiInstance.updateChannelMetadataByKey(apiToken, channelType, channelUrl, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **channelType** | **String**|  | 
+ **channelUrl** | **String**|  | 
+ **key** | **String**|  | 
+ **body** | **Object**|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateUserMetadata
+
+> UpdateUserMetadataResponse updateUserMetadata(apiToken, userId, opts)
+
+Update a user metadata - When updating existing items of a user metadata by their keys or adding new items to the metadata
+
+## Update a user metadata  Updates existing items of a user metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-user-metadata ----------------------------   &#x60;user_id&#x60;      Type: string      Description: Specifies the ID of the user to update the metadata in.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let userId = "userId_example"; // String | 
+let opts = {
+  'updateUserMetadataData': new SendbirdPlatformSdk.UpdateUserMetadataData() // UpdateUserMetadataData | 
+};
+apiInstance.updateUserMetadata(apiToken, userId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **userId** | **String**|  | 
+ **updateUserMetadataData** | [**UpdateUserMetadataData**](UpdateUserMetadataData.md)|  | [optional] 
+
+### Return type
+
+[**UpdateUserMetadataResponse**](UpdateUserMetadataResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateUserMetadataByKey
+
+> Object updateUserMetadataByKey(apiToken, userId, key, opts)
+
+Update a user metadata - When updating a specific item of a user metadata by its key
+
+## Update a user metadata  Updates existing items of a user metadata by their keys, or adds new items to the metadata.  https://sendbird.com/docs/chat/v3/platform-api/guides/user-and-channel-metadata#2-update-a-user-metadata ----------------------------   &#x60;user_id&#x60;      Type: string      Description: Specifies the ID of the user to update the metadata in.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MetadataApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let userId = "userId_example"; // String | 
+let key = "key_example"; // String | 
+let opts = {
+  'body': {key: null} // Object | 
+};
+apiInstance.updateUserMetadataByKey(apiToken, userId, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **userId** | **String**|  | 
+ **key** | **String**|  | 
+ **body** | **Object**|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## viewChannelMetacounter
 
-> {String: SendBirdAdditionalProperties} viewChannelMetacounter(apiToken, channelType, channelUrl, opts)
+> Object viewChannelMetacounter(apiToken, channelType, channelUrl, opts)
 
 View a channel metacounter - When retrieving all items of a channel metacounter
 
@@ -55,7 +836,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**{String: SendBirdAdditionalProperties}**](SendBirdAdditionalProperties.md)
+**Object**
 
 ### Authorization
 
@@ -69,7 +850,7 @@ No authorization required
 
 ## viewChannelMetacounterByKey
 
-> {String: SendBirdAdditionalProperties} viewChannelMetacounterByKey(apiToken, channelType, channelUrl, key)
+> Object viewChannelMetacounterByKey(apiToken, channelType, channelUrl, key)
 
 View a channel metacounter - When retrieving a specific item of a channel metacounter by its key
 
@@ -105,7 +886,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**{String: SendBirdAdditionalProperties}**](SendBirdAdditionalProperties.md)
+**Object**
 
 ### Authorization
 
@@ -119,7 +900,7 @@ No authorization required
 
 ## viewChannelMetadata
 
-> {String: String} viewChannelMetadata(apiToken, channelType, channelUrl, opts)
+> Object viewChannelMetadata(apiToken, channelType, channelUrl, opts)
 
 View a channel metadata - When retrieving all items of a channel metadata
 
@@ -159,7 +940,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**{String: String}**
+**Object**
 
 ### Authorization
 
@@ -173,7 +954,7 @@ No authorization required
 
 ## viewChannelMetadataByKey
 
-> {String: String} viewChannelMetadataByKey(apiToken, channelType, channelUrl, key)
+> Object viewChannelMetadataByKey(apiToken, channelType, channelUrl, key)
 
 View a channel metadata - When retrieving a specific item of a channel metadata by its key
 
@@ -209,7 +990,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**{String: String}**
+**Object**
 
 ### Authorization
 
@@ -275,7 +1056,7 @@ No authorization required
 
 ## viewUserMetadataByKey
 
-> {String: String} viewUserMetadataByKey(apiToken, userId, key)
+> Object viewUserMetadataByKey(apiToken, userId, key)
 
 View a user metadata - When retrieving a specific item of a user metadata by its key
 
@@ -309,7 +1090,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**{String: String}**
+**Object**
 
 ### Authorization
 

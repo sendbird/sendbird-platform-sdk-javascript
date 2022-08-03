@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListReportsOnMessageByIdResponseReportLogs = _interopRequireDefault(require("./ListReportsOnMessageByIdResponseReportLogs"));
+var _ListReportsOnMessageByIdResponseReportLogsInner = _interopRequireDefault(require("./ListReportsOnMessageByIdResponseReportLogsInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListReportsOnUserByIdResponse model module.
  * @module model/ListReportsOnUserByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ListReportsOnUserByIdResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var ListReportsOnUserByIdResponse = /*#__PURE__*/function () {
         obj = obj || new ListReportsOnUserByIdResponse();
 
         if (data.hasOwnProperty('report_logs')) {
-          obj['report_logs'] = _ApiClient["default"].convertToType(data['report_logs'], [_ListReportsOnMessageByIdResponseReportLogs["default"]]);
+          obj['report_logs'] = _ApiClient["default"].convertToType(data['report_logs'], [_ListReportsOnMessageByIdResponseReportLogsInner["default"]]);
         }
 
         if (data.hasOwnProperty('next')) {
@@ -72,7 +72,7 @@ var ListReportsOnUserByIdResponse = /*#__PURE__*/function () {
   return ListReportsOnUserByIdResponse;
 }();
 /**
- * @member {Array.<module:model/ListReportsOnMessageByIdResponseReportLogs>} report_logs
+ * @member {Array.<module:model/ListReportsOnMessageByIdResponseReportLogsInner>} report_logs
  */
 
 

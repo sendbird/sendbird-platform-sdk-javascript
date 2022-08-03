@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListPushConfigurationsResponsePushConfigurations = _interopRequireDefault(require("./ListPushConfigurationsResponsePushConfigurations"));
+var _ListPushConfigurationsResponsePushConfigurationsInner = _interopRequireDefault(require("./ListPushConfigurationsResponsePushConfigurationsInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewPushConfigurationByIdResponse model module.
  * @module model/ViewPushConfigurationByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ViewPushConfigurationByIdResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var ViewPushConfigurationByIdResponse = /*#__PURE__*/function () {
         obj = obj || new ViewPushConfigurationByIdResponse();
 
         if (data.hasOwnProperty('push_configurations')) {
-          obj['push_configurations'] = _ApiClient["default"].convertToType(data['push_configurations'], [_ListPushConfigurationsResponsePushConfigurations["default"]]);
+          obj['push_configurations'] = _ApiClient["default"].convertToType(data['push_configurations'], [_ListPushConfigurationsResponsePushConfigurationsInner["default"]]);
         }
       }
 
@@ -68,7 +68,7 @@ var ViewPushConfigurationByIdResponse = /*#__PURE__*/function () {
   return ViewPushConfigurationByIdResponse;
 }();
 /**
- * @member {Array.<module:model/ListPushConfigurationsResponsePushConfigurations>} push_configurations
+ * @member {Array.<module:model/ListPushConfigurationsResponsePushConfigurationsInner>} push_configurations
  */
 
 

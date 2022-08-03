@@ -48,6 +48,156 @@
   }
 
   describe('MetadataApi', function() {
+    describe('createChannelMetacounter', function() {
+      it('should call createChannelMetacounter successfully', function(done) {
+        //uncomment below and update the code to test createChannelMetacounter
+        //instance.createChannelMetacounter(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('createChannelMetadata', function() {
+      it('should call createChannelMetadata successfully', function(done) {
+        //uncomment below and update the code to test createChannelMetadata
+        //instance.createChannelMetadata(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('createUserMetadata', function() {
+      it('should call createUserMetadata successfully', function(done) {
+        //uncomment below and update the code to test createUserMetadata
+        //instance.createUserMetadata(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteChannelMetacounter', function() {
+      it('should call deleteChannelMetacounter successfully', function(done) {
+        //uncomment below and update the code to test deleteChannelMetacounter
+        //instance.deleteChannelMetacounter(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteChannelMetacounterByKey', function() {
+      it('should call deleteChannelMetacounterByKey successfully', function(done) {
+        //uncomment below and update the code to test deleteChannelMetacounterByKey
+        //instance.deleteChannelMetacounterByKey(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteChannelMetadata', function() {
+      it('should call deleteChannelMetadata successfully', function(done) {
+        //uncomment below and update the code to test deleteChannelMetadata
+        //instance.deleteChannelMetadata(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteChannelMetadataByKey', function() {
+      it('should call deleteChannelMetadataByKey successfully', function(done) {
+        //uncomment below and update the code to test deleteChannelMetadataByKey
+        //instance.deleteChannelMetadataByKey(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteUserMetadata', function() {
+      it('should call deleteUserMetadata successfully', function(done) {
+        //uncomment below and update the code to test deleteUserMetadata
+        //instance.deleteUserMetadata(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteUserMetadataByKey', function() {
+      it('should call deleteUserMetadataByKey successfully', function(done) {
+        //uncomment below and update the code to test deleteUserMetadataByKey
+        //instance.deleteUserMetadataByKey(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateChannelMetacounter', function() {
+      it('should call updateChannelMetacounter successfully', function(done) {
+        //uncomment below and update the code to test updateChannelMetacounter
+        //instance.updateChannelMetacounter(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateChannelMetacounterByKey', function() {
+      it('should call updateChannelMetacounterByKey successfully', function(done) {
+        //uncomment below and update the code to test updateChannelMetacounterByKey
+        //instance.updateChannelMetacounterByKey(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateChannelMetadata', function() {
+      it('should call updateChannelMetadata successfully', function(done) {
+        //uncomment below and update the code to test updateChannelMetadata
+        //instance.updateChannelMetadata(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateChannelMetadataByKey', function() {
+      it('should call updateChannelMetadataByKey successfully', function(done) {
+        //uncomment below and update the code to test updateChannelMetadataByKey
+        //instance.updateChannelMetadataByKey(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateUserMetadata', function() {
+      it('should call updateUserMetadata successfully', function(done) {
+        //uncomment below and update the code to test updateUserMetadata
+        //instance.updateUserMetadata(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateUserMetadataByKey', function() {
+      it('should call updateUserMetadataByKey successfully', function(done) {
+        //uncomment below and update the code to test updateUserMetadataByKey
+        //instance.updateUserMetadataByKey(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('viewChannelMetacounter', function() {
       it('should call viewChannelMetacounter successfully', function(done) {
         //uncomment below and update the code to test viewChannelMetacounter

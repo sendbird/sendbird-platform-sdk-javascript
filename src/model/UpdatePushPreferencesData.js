@@ -16,13 +16,12 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdatePushPreferencesData model module.
  * @module model/UpdatePushPreferencesData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class UpdatePushPreferencesData {
     /**
      * Constructs a new <code>UpdatePushPreferencesData</code>.
      * @alias module:model/UpdatePushPreferencesData
-     * @param userId {String} Specifies the unique ID of the target user.
      * @param pushTriggerOption {String} Determines the type of push notification trigger to apply to the user's joined group channels. Valid values are the following:<br />- all (default): when disconnected from Sendbird server, the user receives notifications for all new messages including mentioned messages the user has been mentioned in.<br />- mention_only: when disconnected from Sendbird server, the user only receives notifications for messages the user has been mentioned in.<br />- off: the user doesn't receive any notifications.
      * @param doNotDisturb {Boolean} Determines whether to pause notification messages for the user during a specific time of day. (Default: false)
      * @param startHour {Number} Specifies the hour to start pausing the notifications for Do Not Disturb of the user.
@@ -37,9 +36,9 @@ class UpdatePushPreferencesData {
      * @param timezone {String} Specifies the timezone to be applied to push preferences with a value such as UTC, Asia/Seoul, Europe/London, etc.
      * @param pushSound {String} Specifies the name of a sound file to be played when a push notification is delivered to your client app.
      */
-    constructor(userId, pushTriggerOption, doNotDisturb, startHour, startMin, endHour, endMin, snoozeEnabled, snoozeStartTs, snoozeEndTs, blockPushFromBots, pushBlockedBotIds, timezone, pushSound) { 
+    constructor(pushTriggerOption, doNotDisturb, startHour, startMin, endHour, endMin, snoozeEnabled, snoozeStartTs, snoozeEndTs, blockPushFromBots, pushBlockedBotIds, timezone, pushSound) { 
         
-        UpdatePushPreferencesData.initialize(this, userId, pushTriggerOption, doNotDisturb, startHour, startMin, endHour, endMin, snoozeEnabled, snoozeStartTs, snoozeEndTs, blockPushFromBots, pushBlockedBotIds, timezone, pushSound);
+        UpdatePushPreferencesData.initialize(this, pushTriggerOption, doNotDisturb, startHour, startMin, endHour, endMin, snoozeEnabled, snoozeStartTs, snoozeEndTs, blockPushFromBots, pushBlockedBotIds, timezone, pushSound);
     }
 
     /**
@@ -47,8 +46,7 @@ class UpdatePushPreferencesData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, userId, pushTriggerOption, doNotDisturb, startHour, startMin, endHour, endMin, snoozeEnabled, snoozeStartTs, snoozeEndTs, blockPushFromBots, pushBlockedBotIds, timezone, pushSound) { 
-        obj['user_id'] = userId;
+    static initialize(obj, pushTriggerOption, doNotDisturb, startHour, startMin, endHour, endMin, snoozeEnabled, snoozeStartTs, snoozeEndTs, blockPushFromBots, pushBlockedBotIds, timezone, pushSound) { 
         obj['push_trigger_option'] = pushTriggerOption;
         obj['do_not_disturb'] = doNotDisturb;
         obj['start_hour'] = startHour;
@@ -75,9 +73,6 @@ class UpdatePushPreferencesData {
         if (data) {
             obj = obj || new UpdatePushPreferencesData();
 
-            if (data.hasOwnProperty('user_id')) {
-                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
-            }
             if (data.hasOwnProperty('push_trigger_option')) {
                 obj['push_trigger_option'] = ApiClient.convertToType(data['push_trigger_option'], 'String');
             }
@@ -123,12 +118,6 @@ class UpdatePushPreferencesData {
 
 
 }
-
-/**
- * Specifies the unique ID of the target user.
- * @member {String} user_id
- */
-UpdatePushPreferencesData.prototype['user_id'] = undefined;
 
 /**
  * Determines the type of push notification trigger to apply to the user's joined group channels. Valid values are the following:<br />- all (default): when disconnected from Sendbird server, the user receives notifications for all new messages including mentioned messages the user has been mentioned in.<br />- mention_only: when disconnected from Sendbird server, the user only receives notifications for messages the user has been mentioned in.<br />- off: the user doesn't receive any notifications.

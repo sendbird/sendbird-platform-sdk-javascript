@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.CreateUserMetadataData);
     });
 
-    it('should have the property userId (base name: "user_id")', function() {
-      // uncomment below and update the code to test the property userId
-      //var instance = new SendbirdPlatformSdk.CreateUserMetadataData();
-      //expect(instance).to.be();
-    });
-
     it('should have the property metadata (base name: "metadata")', function() {
       // uncomment below and update the code to test the property metadata
       //var instance = new SendbirdPlatformSdk.CreateUserMetadataData();

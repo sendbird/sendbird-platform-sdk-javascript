@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListAllEmojisAndEmojiCategoriesResponseEmojiCategories from './ListAllEmojisAndEmojiCategoriesResponseEmojiCategories';
+import ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner from './ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner';
 
 /**
  * The ListAllEmojisAndEmojiCategoriesResponse model module.
  * @module model/ListAllEmojisAndEmojiCategoriesResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ListAllEmojisAndEmojiCategoriesResponse {
     /**
@@ -52,7 +52,7 @@ class ListAllEmojisAndEmojiCategoriesResponse {
                 obj['emoji_hash'] = ApiClient.convertToType(data['emoji_hash'], 'String');
             }
             if (data.hasOwnProperty('emoji_categories')) {
-                obj['emoji_categories'] = ApiClient.convertToType(data['emoji_categories'], [ListAllEmojisAndEmojiCategoriesResponseEmojiCategories]);
+                obj['emoji_categories'] = ApiClient.convertToType(data['emoji_categories'], [ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner]);
             }
         }
         return obj;
@@ -67,7 +67,7 @@ class ListAllEmojisAndEmojiCategoriesResponse {
 ListAllEmojisAndEmojiCategoriesResponse.prototype['emoji_hash'] = undefined;
 
 /**
- * @member {Array.<module:model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategories>} emoji_categories
+ * @member {Array.<module:model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner>} emoji_categories
  */
 ListAllEmojisAndEmojiCategoriesResponse.prototype['emoji_categories'] = undefined;
 

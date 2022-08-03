@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListBannedChannelsResponseBannedChannels = _interopRequireDefault(require("./ListBannedChannelsResponseBannedChannels"));
+var _ListBannedChannelsResponseBannedChannelsInner = _interopRequireDefault(require("./ListBannedChannelsResponseBannedChannelsInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListBannedChannelsResponse model module.
  * @module model/ListBannedChannelsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ListBannedChannelsResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var ListBannedChannelsResponse = /*#__PURE__*/function () {
         obj = obj || new ListBannedChannelsResponse();
 
         if (data.hasOwnProperty('banned_channels')) {
-          obj['banned_channels'] = _ApiClient["default"].convertToType(data['banned_channels'], [_ListBannedChannelsResponseBannedChannels["default"]]);
+          obj['banned_channels'] = _ApiClient["default"].convertToType(data['banned_channels'], [_ListBannedChannelsResponseBannedChannelsInner["default"]]);
         }
 
         if (data.hasOwnProperty('next')) {
@@ -72,7 +72,7 @@ var ListBannedChannelsResponse = /*#__PURE__*/function () {
   return ListBannedChannelsResponse;
 }();
 /**
- * @member {Array.<module:model/ListBannedChannelsResponseBannedChannels>} banned_channels
+ * @member {Array.<module:model/ListBannedChannelsResponseBannedChannelsInner>} banned_channels
  */
 
 

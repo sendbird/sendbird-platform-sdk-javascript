@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **requireAuth** | **Boolean** |  | [optional] 
 **messageSurvivalSeconds** | **Number** |  | [optional] 
 **customType** | **String** |  | [optional] 
-**mentionedUsers** | [**[SendBirdMessageResponseMentionedUsers]**](SendBirdMessageResponseMentionedUsers.md) |  | [optional] 
+**mentionedUsers** | [**[SendBirdMessageResponseMentionedUsersInner]**](SendBirdMessageResponseMentionedUsersInner.md) |  | [optional] 
 **translations** | **Object** |  | [optional] 
 **updatedAt** | **Number** |  | [optional] 
 **isOpMsg** | **Boolean** |  | [optional] 

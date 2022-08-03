@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewCountPreferenceOfChannelByUrlResponse model module.
  * @module model/ViewCountPreferenceOfChannelByUrlResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ViewCountPreferenceOfChannelByUrlResponse = /*#__PURE__*/function () {
   /**

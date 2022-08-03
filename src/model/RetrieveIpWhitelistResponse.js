@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RetrieveIpWhitelistResponse model module.
  * @module model/RetrieveIpWhitelistResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class RetrieveIpWhitelistResponse {
     /**

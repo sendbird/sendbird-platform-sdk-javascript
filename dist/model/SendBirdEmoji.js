@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdEmoji model module.
  * @module model/SendBirdEmoji
- * @version 1.0.3
+ * @version 1.0.7
  */
 var SendBirdEmoji = /*#__PURE__*/function () {
   /**

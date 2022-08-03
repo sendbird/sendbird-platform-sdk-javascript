@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListPushConfigurationsResponsePushConfigurations from './ListPushConfigurationsResponsePushConfigurations';
+import ListPushConfigurationsResponsePushConfigurationsInner from './ListPushConfigurationsResponsePushConfigurationsInner';
 
 /**
  * The ListPushConfigurationsResponse model module.
  * @module model/ListPushConfigurationsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ListPushConfigurationsResponse {
     /**
@@ -49,7 +49,7 @@ class ListPushConfigurationsResponse {
             obj = obj || new ListPushConfigurationsResponse();
 
             if (data.hasOwnProperty('push_configurations')) {
-                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], [ListPushConfigurationsResponsePushConfigurations]);
+                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], [ListPushConfigurationsResponsePushConfigurationsInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ListPushConfigurationsResponse {
 }
 
 /**
- * @member {Array.<module:model/ListPushConfigurationsResponsePushConfigurations>} push_configurations
+ * @member {Array.<module:model/ListPushConfigurationsResponsePushConfigurationsInner>} push_configurations
  */
 ListPushConfigurationsResponse.prototype['push_configurations'] = undefined;
 

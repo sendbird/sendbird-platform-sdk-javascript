@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**announcements** | [**[ListAnnouncementsResponseAnnouncements]**](ListAnnouncementsResponseAnnouncements.md) |  | [optional] 
+**announcements** | [**[ListAnnouncementsResponseAnnouncementsInner]**](ListAnnouncementsResponseAnnouncementsInner.md) |  | [optional] 
 **next** | **String** |  | [optional] 
 
 

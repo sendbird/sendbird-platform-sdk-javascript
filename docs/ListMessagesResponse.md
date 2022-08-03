@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**messages** | [**[ListMessagesResponseMessages]**](ListMessagesResponseMessages.md) |  | [optional] 
+**messages** | [**[ListMessagesResponseMessagesInner]**](ListMessagesResponseMessagesInner.md) |  | [optional] 
 
 

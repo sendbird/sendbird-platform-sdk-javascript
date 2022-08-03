@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcUpdateChannelByUrlData model module.
  * @module model/GcUpdateChannelByUrlData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var GcUpdateChannelByUrlData = /*#__PURE__*/function () {
   /**
@@ -33,7 +33,7 @@ var GcUpdateChannelByUrlData = /*#__PURE__*/function () {
    * @param isDistinct {Boolean} Determines whether to reuse an existing channel or create a new channel. If set to true, returns a channel with the current channel members users or creates a new channel if no match is found. Sendbird server can also use the custom channel type in the custom_type property if specified along with the users to return the corresponding channel. If set to false, Sendbird server always creates a new channel with a combination of the users as well as the channel custom type if specified. (Default: false)<br /><br /> Under this property, Sendbird server does not distinguish channels based on other properties such as channel URL or channel name.
    * @param isPublic {Boolean} Determines whether to allow a user to join the channel without an invitation. (Default: false)
    * @param accessCode {String} This property can be used only when the channel operator wants to set an access code for a public group channel. If specified, the is_access_code_required property of the channel resource is then set to true, and the channel begins to require the specified access code to a user who attempts to join.
-   * @param operatorIds {Array.<Number>} Specifies an array of one or more IDs of users to register as operators of the channel. If the operators are not members of the channel yet, they need an [invitation](#2-invite-as-members) to [join](#2-join-a-channel) a privte group channel while they don't need any to join a [public](#-3-private-vs-public) group channel. The maximum allowed number of operators per channel is 100.
+   * @param operatorIds {Array.<String>} Specifies an array of one or more IDs of users to register as operators of the channel. If the operators are not members of the channel yet, they need an [invitation](#2-invite-as-members) to [join](#2-join-a-channel) a privte group channel while they don't need any to join a [public](#-3-private-vs-public) group channel. The maximum allowed number of operators per channel is 100.
    */
   function GcUpdateChannelByUrlData(channelUrl, name, coverUrl, coverFile, customType, data, isDistinct, isPublic, accessCode, operatorIds) {
     _classCallCheck(this, GcUpdateChannelByUrlData);
@@ -112,7 +112,7 @@ var GcUpdateChannelByUrlData = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('operator_ids')) {
-          obj['operator_ids'] = _ApiClient["default"].convertToType(data['operator_ids'], ['Number']);
+          obj['operator_ids'] = _ApiClient["default"].convertToType(data['operator_ids'], ['String']);
         }
       }
 
@@ -179,7 +179,7 @@ GcUpdateChannelByUrlData.prototype['is_public'] = undefined;
 GcUpdateChannelByUrlData.prototype['access_code'] = undefined;
 /**
  * Specifies an array of one or more IDs of users to register as operators of the channel. If the operators are not members of the channel yet, they need an [invitation](#2-invite-as-members) to [join](#2-join-a-channel) a privte group channel while they don't need any to join a [public](#-3-private-vs-public) group channel. The maximum allowed number of operators per channel is 100.
- * @member {Array.<Number>} operator_ids
+ * @member {Array.<String>} operator_ids
  */
 
 GcUpdateChannelByUrlData.prototype['operator_ids'] = undefined;

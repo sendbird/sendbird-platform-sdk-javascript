@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListAllEmojisAndEmojiCategoriesResponseEmojiCategories = _interopRequireDefault(require("./ListAllEmojisAndEmojiCategoriesResponseEmojiCategories"));
+var _ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner = _interopRequireDefault(require("./ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListAllEmojisAndEmojiCategoriesResponse model module.
  * @module model/ListAllEmojisAndEmojiCategoriesResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ListAllEmojisAndEmojiCategoriesResponse = /*#__PURE__*/function () {
   /**
@@ -61,7 +61,7 @@ var ListAllEmojisAndEmojiCategoriesResponse = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('emoji_categories')) {
-          obj['emoji_categories'] = _ApiClient["default"].convertToType(data['emoji_categories'], [_ListAllEmojisAndEmojiCategoriesResponseEmojiCategories["default"]]);
+          obj['emoji_categories'] = _ApiClient["default"].convertToType(data['emoji_categories'], [_ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner["default"]]);
         }
       }
 
@@ -78,7 +78,7 @@ var ListAllEmojisAndEmojiCategoriesResponse = /*#__PURE__*/function () {
 
 ListAllEmojisAndEmojiCategoriesResponse.prototype['emoji_hash'] = undefined;
 /**
- * @member {Array.<module:model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategories>} emoji_categories
+ * @member {Array.<module:model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner>} emoji_categories
  */
 
 ListAllEmojisAndEmojiCategoriesResponse.prototype['emoji_categories'] = undefined;

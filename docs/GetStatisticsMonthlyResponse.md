@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**statistics** | [**[GetStatisticsDailyResponseStatistics]**](GetStatisticsDailyResponseStatistics.md) |  | [optional] 
+**statistics** | [**[GetStatisticsDailyResponseStatisticsInner]**](GetStatisticsDailyResponseStatisticsInner.md) |  | [optional] 
 **week** | **Number** |  | [optional] 
 
 

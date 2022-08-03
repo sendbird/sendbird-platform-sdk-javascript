@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import AddApnsPushConfigurationResponsePushConfigurations from './AddApnsPushConfigurationResponsePushConfigurations';
+import AddApnsPushConfigurationResponsePushConfigurationsInner from './AddApnsPushConfigurationResponsePushConfigurationsInner';
 
 /**
  * The AddApnsPushConfigurationResponse model module.
  * @module model/AddApnsPushConfigurationResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class AddApnsPushConfigurationResponse {
     /**
@@ -49,7 +49,7 @@ class AddApnsPushConfigurationResponse {
             obj = obj || new AddApnsPushConfigurationResponse();
 
             if (data.hasOwnProperty('push_configurations')) {
-                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], [AddApnsPushConfigurationResponsePushConfigurations]);
+                obj['push_configurations'] = ApiClient.convertToType(data['push_configurations'], [AddApnsPushConfigurationResponsePushConfigurationsInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class AddApnsPushConfigurationResponse {
 }
 
 /**
- * @member {Array.<module:model/AddApnsPushConfigurationResponsePushConfigurations>} push_configurations
+ * @member {Array.<module:model/AddApnsPushConfigurationResponsePushConfigurationsInner>} push_configurations
  */
 AddApnsPushConfigurationResponse.prototype['push_configurations'] = undefined;
 

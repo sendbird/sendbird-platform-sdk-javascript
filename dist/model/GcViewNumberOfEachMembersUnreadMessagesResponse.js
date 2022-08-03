@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcViewNumberOfEachMembersUnreadMessagesResponse model module.
  * @module model/GcViewNumberOfEachMembersUnreadMessagesResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var GcViewNumberOfEachMembersUnreadMessagesResponse = /*#__PURE__*/function () {
   /**

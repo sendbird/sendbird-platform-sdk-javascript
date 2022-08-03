@@ -312,6 +312,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property channel (base name: "channel")', function() {
+      // uncomment below and update the code to test the property channel
+      //var instance = new SendbirdPlatformSdk.SendBirdChannelResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property isDynamicPartitioned (base name: "is_dynamic_partitioned")', function() {
       // uncomment below and update the code to test the property isDynamicPartitioned
       //var instance = new SendbirdPlatformSdk.SendBirdChannelResponse();

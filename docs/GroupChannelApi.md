@@ -77,7 +77,7 @@ No authorization required
 
 ## gcCancelTheRegistrationOfOperators
 
-> InlineResponse2001 gcCancelTheRegistrationOfOperators(apiToken, channelUrl, operatorIds, opts)
+> OcDeleteChannelByUrl200Response gcCancelTheRegistrationOfOperators(apiToken, channelUrl, operatorIds, opts)
 
 Cancel the registration of operators
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**OcDeleteChannelByUrl200Response**](OcDeleteChannelByUrl200Response.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ No authorization required
 
 ## gcDeclineInvitation
 
-> InlineResponse2001 gcDeclineInvitation(apiToken, channelUrl, opts)
+> OcDeleteChannelByUrl200Response gcDeclineInvitation(apiToken, channelUrl, opts)
 
 Decline an invitation
 
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**OcDeleteChannelByUrl200Response**](OcDeleteChannelByUrl200Response.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ No authorization required
 
 ## gcDeleteChannelByUrl
 
-> InlineResponse2001 gcDeleteChannelByUrl(apiToken, channelUrl)
+> OcDeleteChannelByUrl200Response gcDeleteChannelByUrl(apiToken, channelUrl)
 
 Delete a channel
 
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**OcDeleteChannelByUrl200Response**](OcDeleteChannelByUrl200Response.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ No authorization required
 
 ## gcHideOrArchiveChannel
 
-> InlineResponse2001 gcHideOrArchiveChannel(apiToken, channelUrl, opts)
+> OcDeleteChannelByUrl200Response gcHideOrArchiveChannel(apiToken, channelUrl, opts)
 
 Hide or archive a channel
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**OcDeleteChannelByUrl200Response**](OcDeleteChannelByUrl200Response.md)
 
 ### Authorization
 
@@ -471,7 +471,7 @@ No authorization required
 
 ## gcLeaveChannel
 
-> InlineResponse2001 gcLeaveChannel(apiToken, channelUrl, opts)
+> OcDeleteChannelByUrl200Response gcLeaveChannel(apiToken, channelUrl, opts)
 
 Leave a channel
 
@@ -507,7 +507,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**OcDeleteChannelByUrl200Response**](OcDeleteChannelByUrl200Response.md)
 
 ### Authorization
 
@@ -869,7 +869,7 @@ No authorization required
 
 ## gcUnhideOrUnarchiveChannel
 
-> InlineResponse2001 gcUnhideOrUnarchiveChannel(apiToken, channelUrl, userId, opts)
+> OcDeleteChannelByUrl200Response gcUnhideOrUnarchiveChannel(apiToken, channelUrl, userId, opts)
 
 Unhide or unarchive a channel
 
@@ -907,7 +907,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**OcDeleteChannelByUrl200Response**](OcDeleteChannelByUrl200Response.md)
 
 ### Authorization
 

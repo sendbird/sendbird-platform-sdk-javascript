@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportChannelByUrlData model module.
  * @module model/ReportChannelByUrlData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ReportChannelByUrlData = /*#__PURE__*/function () {
   /**

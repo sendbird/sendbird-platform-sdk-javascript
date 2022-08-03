@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateUserMetadataResponse model module.
  * @module model/CreateUserMetadataResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var CreateUserMetadataResponse = /*#__PURE__*/function () {
   /**

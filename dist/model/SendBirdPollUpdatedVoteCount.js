@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdPollUpdatedVoteCount model module.
  * @module model/SendBirdPollUpdatedVoteCount
- * @version 1.0.3
+ * @version 1.0.7
  */
 var SendBirdPollUpdatedVoteCount = /*#__PURE__*/function () {
   /**

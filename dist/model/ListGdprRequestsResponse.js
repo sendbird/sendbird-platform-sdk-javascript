@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListGdprRequestsResponseRequests = _interopRequireDefault(require("./ListGdprRequestsResponseRequests"));
+var _ListGdprRequestsResponseRequestsInner = _interopRequireDefault(require("./ListGdprRequestsResponseRequestsInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListGdprRequestsResponse model module.
  * @module model/ListGdprRequestsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ListGdprRequestsResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var ListGdprRequestsResponse = /*#__PURE__*/function () {
         obj = obj || new ListGdprRequestsResponse();
 
         if (data.hasOwnProperty('requests')) {
-          obj['requests'] = _ApiClient["default"].convertToType(data['requests'], [_ListGdprRequestsResponseRequests["default"]]);
+          obj['requests'] = _ApiClient["default"].convertToType(data['requests'], [_ListGdprRequestsResponseRequestsInner["default"]]);
         }
 
         if (data.hasOwnProperty('next')) {
@@ -72,7 +72,7 @@ var ListGdprRequestsResponse = /*#__PURE__*/function () {
   return ListGdprRequestsResponse;
 }();
 /**
- * @member {Array.<module:model/ListGdprRequestsResponseRequests>} requests
+ * @member {Array.<module:model/ListGdprRequestsResponseRequestsInner>} requests
  */
 
 

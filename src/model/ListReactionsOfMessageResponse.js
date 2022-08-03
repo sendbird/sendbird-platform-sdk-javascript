@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListReactionsOfMessageResponse model module.
  * @module model/ListReactionsOfMessageResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ListReactionsOfMessageResponse {
     /**

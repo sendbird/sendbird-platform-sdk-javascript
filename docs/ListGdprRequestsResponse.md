@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**requests** | [**[ListGdprRequestsResponseRequests]**](ListGdprRequestsResponseRequests.md) |  | [optional] 
+**requests** | [**[ListGdprRequestsResponseRequestsInner]**](ListGdprRequestsResponseRequestsInner.md) |  | [optional] 
 **next** | **String** |  | [optional] 
 
 

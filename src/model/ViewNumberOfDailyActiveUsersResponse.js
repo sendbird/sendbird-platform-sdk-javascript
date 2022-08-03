@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ViewNumberOfDailyActiveUsersResponse model module.
  * @module model/ViewNumberOfDailyActiveUsersResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ViewNumberOfDailyActiveUsersResponse {
     /**

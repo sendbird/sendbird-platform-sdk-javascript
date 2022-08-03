@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateChannelMetadataData model module.
  * @module model/CreateChannelMetadataData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var CreateChannelMetadataData = /*#__PURE__*/function () {
   /**
@@ -26,7 +26,7 @@ var CreateChannelMetadataData = /*#__PURE__*/function () {
    * @alias module:model/CreateChannelMetadataData
    * @param channelType {String} Specifies the type of the channel. Either open_channels or group_channels.
    * @param channelUrl {String} Specifies the URL of the channel to store the metadata in.
-   * @param metadata {String} Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
+   * @param metadata {Object} Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
    */
   function CreateChannelMetadataData(channelType, channelUrl, metadata) {
     _classCallCheck(this, CreateChannelMetadataData);
@@ -70,7 +70,7 @@ var CreateChannelMetadataData = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('metadata')) {
-          obj['metadata'] = _ApiClient["default"].convertToType(data['metadata'], 'String');
+          obj['metadata'] = _ApiClient["default"].convertToType(data['metadata'], Object);
         }
 
         if (data.hasOwnProperty('include_ts')) {
@@ -99,7 +99,7 @@ CreateChannelMetadataData.prototype['channel_type'] = undefined;
 CreateChannelMetadataData.prototype['channel_url'] = undefined;
 /**
  * Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
- * @member {String} metadata
+ * @member {Object} metadata
  */
 
 CreateChannelMetadataData.prototype['metadata'] = undefined;

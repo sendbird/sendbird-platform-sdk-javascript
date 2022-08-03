@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListDataExportsByMessageChannelOrUserResponseExportedData from './ListDataExportsByMessageChannelOrUserResponseExportedData';
+import ListDataExportsByMessageChannelOrUserResponseExportedDataInner from './ListDataExportsByMessageChannelOrUserResponseExportedDataInner';
 
 /**
  * The ListDataExportsByMessageChannelOrUserResponse model module.
  * @module model/ListDataExportsByMessageChannelOrUserResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ListDataExportsByMessageChannelOrUserResponse {
     /**
@@ -49,7 +49,7 @@ class ListDataExportsByMessageChannelOrUserResponse {
             obj = obj || new ListDataExportsByMessageChannelOrUserResponse();
 
             if (data.hasOwnProperty('exported_data')) {
-                obj['exported_data'] = ApiClient.convertToType(data['exported_data'], [ListDataExportsByMessageChannelOrUserResponseExportedData]);
+                obj['exported_data'] = ApiClient.convertToType(data['exported_data'], [ListDataExportsByMessageChannelOrUserResponseExportedDataInner]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -62,7 +62,7 @@ class ListDataExportsByMessageChannelOrUserResponse {
 }
 
 /**
- * @member {Array.<module:model/ListDataExportsByMessageChannelOrUserResponseExportedData>} exported_data
+ * @member {Array.<module:model/ListDataExportsByMessageChannelOrUserResponseExportedDataInner>} exported_data
  */
 ListDataExportsByMessageChannelOrUserResponse.prototype['exported_data'] = undefined;
 

@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 **requireAuthForProfileImage** | **Boolean** |  | [optional] 
 **nickname** | **String** |  | [optional] 
 **profileUrl** | **String** |  | [optional] 
-**metadata** | [**InlineResponse2001**](InlineResponse2001.md) |  | [optional] 
+**metadata** | [**OcDeleteChannelByUrl200Response**](OcDeleteChannelByUrl200Response.md) |  | [optional] 
 
 

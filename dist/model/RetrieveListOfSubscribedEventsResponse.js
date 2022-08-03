@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RetrieveListOfSubscribedEventsResponse model module.
  * @module model/RetrieveListOfSubscribedEventsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var RetrieveListOfSubscribedEventsResponse = /*#__PURE__*/function () {
   /**

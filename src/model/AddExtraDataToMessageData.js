@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddExtraDataToMessageData model module.
  * @module model/AddExtraDataToMessageData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class AddExtraDataToMessageData {
     /**

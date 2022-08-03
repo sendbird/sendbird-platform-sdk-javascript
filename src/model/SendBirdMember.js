@@ -18,7 +18,7 @@ import SendBirdRestrictionInfo from './SendBirdRestrictionInfo';
 /**
  * The SendBirdMember model module.
  * @module model/SendBirdMember
- * @version 1.0.3
+ * @version 1.0.7
  */
 class SendBirdMember {
     /**
@@ -61,12 +61,6 @@ class SendBirdMember {
             if (data.hasOwnProperty('is_active')) {
                 obj['is_active'] = ApiClient.convertToType(data['is_active'], 'Boolean');
             }
-            if (data.hasOwnProperty('is_blocked_by_me')) {
-                obj['is_blocked_by_me'] = ApiClient.convertToType(data['is_blocked_by_me'], 'Boolean');
-            }
-            if (data.hasOwnProperty('is_blocking_me')) {
-                obj['is_blocking_me'] = ApiClient.convertToType(data['is_blocking_me'], 'Boolean');
-            }
             if (data.hasOwnProperty('is_muted')) {
                 obj['is_muted'] = ApiClient.convertToType(data['is_muted'], 'Boolean');
             }
@@ -90,6 +84,21 @@ class SendBirdMember {
             }
             if (data.hasOwnProperty('require_auth')) {
                 obj['require_auth'] = ApiClient.convertToType(data['require_auth'], 'Boolean');
+            }
+            if (data.hasOwnProperty('require_auth_for_profile_image')) {
+                obj['require_auth_for_profile_image'] = ApiClient.convertToType(data['require_auth_for_profile_image'], 'Boolean');
+            }
+            if (data.hasOwnProperty('metadata')) {
+                obj['metadata'] = ApiClient.convertToType(data['metadata'], Object);
+            }
+            if (data.hasOwnProperty('is_online')) {
+                obj['is_online'] = ApiClient.convertToType(data['is_online'], 'Boolean');
+            }
+            if (data.hasOwnProperty('muted_end_at')) {
+                obj['muted_end_at'] = ApiClient.convertToType(data['muted_end_at'], 'Number');
+            }
+            if (data.hasOwnProperty('muted_description')) {
+                obj['muted_description'] = ApiClient.convertToType(data['muted_description'], 'String');
             }
             if (data.hasOwnProperty('restriction_info')) {
                 obj['restriction_info'] = SendBirdRestrictionInfo.constructFromObject(data['restriction_info']);
@@ -131,16 +140,6 @@ SendBirdMember.prototype['friend_name'] = undefined;
 SendBirdMember.prototype['is_active'] = undefined;
 
 /**
- * @member {Boolean} is_blocked_by_me
- */
-SendBirdMember.prototype['is_blocked_by_me'] = undefined;
-
-/**
- * @member {Boolean} is_blocking_me
- */
-SendBirdMember.prototype['is_blocking_me'] = undefined;
-
-/**
  * @member {Boolean} is_muted
  */
 SendBirdMember.prototype['is_muted'] = undefined;
@@ -179,6 +178,31 @@ SendBirdMember.prototype['profile_url'] = undefined;
  * @member {Boolean} require_auth
  */
 SendBirdMember.prototype['require_auth'] = undefined;
+
+/**
+ * @member {Boolean} require_auth_for_profile_image
+ */
+SendBirdMember.prototype['require_auth_for_profile_image'] = undefined;
+
+/**
+ * @member {Object} metadata
+ */
+SendBirdMember.prototype['metadata'] = undefined;
+
+/**
+ * @member {Boolean} is_online
+ */
+SendBirdMember.prototype['is_online'] = undefined;
+
+/**
+ * @member {Number} muted_end_at
+ */
+SendBirdMember.prototype['muted_end_at'] = undefined;
+
+/**
+ * @member {String} muted_description
+ */
+SendBirdMember.prototype['muted_description'] = undefined;
 
 /**
  * @member {module:model/SendBirdRestrictionInfo} restriction_info

@@ -78,18 +78,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property isBlockedByMe (base name: "is_blocked_by_me")', function() {
-      // uncomment below and update the code to test the property isBlockedByMe
-      //var instance = new SendbirdPlatformSdk.SendBirdMember();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property isBlockingMe (base name: "is_blocking_me")', function() {
-      // uncomment below and update the code to test the property isBlockingMe
-      //var instance = new SendbirdPlatformSdk.SendBirdMember();
-      //expect(instance).to.be();
-    });
-
     it('should have the property isMuted (base name: "is_muted")', function() {
       // uncomment below and update the code to test the property isMuted
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
@@ -134,6 +122,36 @@
 
     it('should have the property requireAuth (base name: "require_auth")', function() {
       // uncomment below and update the code to test the property requireAuth
+      //var instance = new SendbirdPlatformSdk.SendBirdMember();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property requireAuthForProfileImage (base name: "require_auth_for_profile_image")', function() {
+      // uncomment below and update the code to test the property requireAuthForProfileImage
+      //var instance = new SendbirdPlatformSdk.SendBirdMember();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property metadata (base name: "metadata")', function() {
+      // uncomment below and update the code to test the property metadata
+      //var instance = new SendbirdPlatformSdk.SendBirdMember();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isOnline (base name: "is_online")', function() {
+      // uncomment below and update the code to test the property isOnline
+      //var instance = new SendbirdPlatformSdk.SendBirdMember();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property mutedEndAt (base name: "muted_end_at")', function() {
+      // uncomment below and update the code to test the property mutedEndAt
+      //var instance = new SendbirdPlatformSdk.SendBirdMember();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property mutedDescription (base name: "muted_description")', function() {
+      // uncomment below and update the code to test the property mutedDescription
       //var instance = new SendbirdPlatformSdk.SendBirdMember();
       //expect(instance).to.be();
     });

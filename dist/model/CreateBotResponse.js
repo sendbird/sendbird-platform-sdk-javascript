@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateBotResponse model module.
  * @module model/CreateBotResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var CreateBotResponse = /*#__PURE__*/function () {
   /**

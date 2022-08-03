@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListReportsResponseReportLogs from './ListReportsResponseReportLogs';
+import ListReportsResponseReportLogsInner from './ListReportsResponseReportLogsInner';
 
 /**
  * The ListReportsResponse model module.
  * @module model/ListReportsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ListReportsResponse {
     /**
@@ -49,7 +49,7 @@ class ListReportsResponse {
             obj = obj || new ListReportsResponse();
 
             if (data.hasOwnProperty('report_logs')) {
-                obj['report_logs'] = ApiClient.convertToType(data['report_logs'], [ListReportsResponseReportLogs]);
+                obj['report_logs'] = ApiClient.convertToType(data['report_logs'], [ListReportsResponseReportLogsInner]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -62,7 +62,7 @@ class ListReportsResponse {
 }
 
 /**
- * @member {Array.<module:model/ListReportsResponseReportLogs>} report_logs
+ * @member {Array.<module:model/ListReportsResponseReportLogsInner>} report_logs
  */
 ListReportsResponse.prototype['report_logs'] = undefined;
 

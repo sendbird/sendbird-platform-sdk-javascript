@@ -29,13 +29,13 @@ import GcRegisterOperatorsResponse from '../model/GcRegisterOperatorsResponse';
 import GcResetChatHistoryData from '../model/GcResetChatHistoryData';
 import GcResetChatHistoryResponse from '../model/GcResetChatHistoryResponse';
 import GcUpdateChannelByUrlData from '../model/GcUpdateChannelByUrlData';
-import InlineResponse2001 from '../model/InlineResponse2001';
+import OcDeleteChannelByUrl200Response from '../model/OcDeleteChannelByUrl200Response';
 import SendBirdGroupChannel from '../model/SendBirdGroupChannel';
 
 /**
 * GroupChannel service.
 * @module api/GroupChannelApi
-* @version 1.0.3
+* @version 1.0.7
 */
 export default class GroupChannelApi {
 
@@ -120,7 +120,7 @@ export default class GroupChannelApi {
      * @param {Array.<String>} operatorIds 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.deleteAll 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
     gcCancelTheRegistrationOfOperatorsWithHttpInfo(apiToken, channelUrl, operatorIds, opts) {
       opts = opts || {};
@@ -154,7 +154,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = OcDeleteChannelByUrl200Response;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/operators', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -170,7 +170,7 @@ export default class GroupChannelApi {
      * @param {Array.<String>} operatorIds 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.deleteAll 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
     gcCancelTheRegistrationOfOperators(apiToken, channelUrl, operatorIds, opts) {
       return this.gcCancelTheRegistrationOfOperatorsWithHttpInfo(apiToken, channelUrl, operatorIds, opts)
@@ -302,7 +302,7 @@ export default class GroupChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcDeclineInvitationData} opts.gcDeclineInvitationData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
     gcDeclineInvitationWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
@@ -330,7 +330,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = OcDeleteChannelByUrl200Response;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/decline', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -345,7 +345,7 @@ export default class GroupChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcDeclineInvitationData} opts.gcDeclineInvitationData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
     gcDeclineInvitation(apiToken, channelUrl, opts) {
       return this.gcDeclineInvitationWithHttpInfo(apiToken, channelUrl, opts)
@@ -360,7 +360,7 @@ export default class GroupChannelApi {
      * ## Delete a channel  Deletes a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-delete-a-channel ----------------------------
      * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
     gcDeleteChannelByUrlWithHttpInfo(apiToken, channelUrl) {
       let postBody = null;
@@ -387,7 +387,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = OcDeleteChannelByUrl200Response;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -400,7 +400,7 @@ export default class GroupChannelApi {
      * ## Delete a channel  Deletes a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-delete-a-channel ----------------------------
      * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
     gcDeleteChannelByUrl(apiToken, channelUrl) {
       return this.gcDeleteChannelByUrlWithHttpInfo(apiToken, channelUrl)
@@ -417,7 +417,7 @@ export default class GroupChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcHideOrArchiveChannelData} opts.gcHideOrArchiveChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
     gcHideOrArchiveChannelWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
@@ -445,7 +445,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = OcDeleteChannelByUrl200Response;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/hide', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -460,7 +460,7 @@ export default class GroupChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcHideOrArchiveChannelData} opts.gcHideOrArchiveChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
     gcHideOrArchiveChannel(apiToken, channelUrl, opts) {
       return this.gcHideOrArchiveChannelWithHttpInfo(apiToken, channelUrl, opts)
@@ -597,7 +597,7 @@ export default class GroupChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcLeaveChannelData} opts.gcLeaveChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
     gcLeaveChannelWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
@@ -625,7 +625,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = OcDeleteChannelByUrl200Response;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/leave', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -640,7 +640,7 @@ export default class GroupChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcLeaveChannelData} opts.gcLeaveChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
     gcLeaveChannel(apiToken, channelUrl, opts) {
       return this.gcLeaveChannelWithHttpInfo(apiToken, channelUrl, opts)
@@ -1104,7 +1104,7 @@ export default class GroupChannelApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.shouldUnhideAll 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
     gcUnhideOrUnarchiveChannelWithHttpInfo(apiToken, channelUrl, userId, opts) {
       opts = opts || {};
@@ -1138,7 +1138,7 @@ export default class GroupChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = OcDeleteChannelByUrl200Response;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/hide', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1154,7 +1154,7 @@ export default class GroupChannelApi {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.shouldUnhideAll 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
     gcUnhideOrUnarchiveChannel(apiToken, channelUrl, userId, opts) {
       return this.gcUnhideOrUnarchiveChannelWithHttpInfo(apiToken, channelUrl, userId, opts)

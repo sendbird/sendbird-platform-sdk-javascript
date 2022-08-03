@@ -27,7 +27,7 @@ import DeleteAllowedIpsFromWhitelistResponse from '../model/DeleteAllowedIpsFrom
 import DeleteApnsCertificateByIdResponse from '../model/DeleteApnsCertificateByIdResponse';
 import GenerateSecondaryApiTokenData from '../model/GenerateSecondaryApiTokenData';
 import GenerateSecondaryApiTokenResponse from '../model/GenerateSecondaryApiTokenResponse';
-import InlineResponse200 from '../model/InlineResponse200';
+import ListMutedUsersInChannelsWithCustomChannelType200Response from '../model/ListMutedUsersInChannelsWithCustomChannelType200Response';
 import ListPushConfigurationsResponse from '../model/ListPushConfigurationsResponse';
 import ListPushNotificationContentTemplatesResponse from '../model/ListPushNotificationContentTemplatesResponse';
 import ListSecondaryApiTokensResponse from '../model/ListSecondaryApiTokensResponse';
@@ -55,7 +55,7 @@ import ViewSecondaryApiTokenByTokenResponse from '../model/ViewSecondaryApiToken
 /**
 * Application service.
 * @module api/ApplicationApi
-* @version 1.0.3
+* @version 1.0.7
 */
 export default class ApplicationApi {
 
@@ -579,7 +579,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListMutedUsersInChannelsWithCustomChannelType200Response} and HTTP response
      */
     listMutedUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts) {
       opts = opts || {};
@@ -609,7 +609,7 @@ export default class ApplicationApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse200;
+      let returnType = ListMutedUsersInChannelsWithCustomChannelType200Response;
       return this.apiClient.callApi(
         '/v3/applications/settings_by_channel_custom_type/{custom_type}/mute', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -625,7 +625,7 @@ export default class ApplicationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListMutedUsersInChannelsWithCustomChannelType200Response}
      */
     listMutedUsersInChannelsWithCustomChannelType(apiToken, customType, opts) {
       return this.listMutedUsersInChannelsWithCustomChannelTypeWithHttpInfo(apiToken, customType, opts)

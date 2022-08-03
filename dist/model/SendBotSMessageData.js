@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBotSMessageData model module.
  * @module model/SendBotSMessageData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var SendBotSMessageData = /*#__PURE__*/function () {
   /**
@@ -80,7 +80,7 @@ var SendBotSMessageData = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('mentioned')) {
-          obj['mentioned'] = _ApiClient["default"].convertToType(data['mentioned'], ['Number']);
+          obj['mentioned'] = _ApiClient["default"].convertToType(data['mentioned'], ['String']);
         }
 
         if (data.hasOwnProperty('mark_as_read')) {
@@ -135,7 +135,7 @@ SendBotSMessageData.prototype['data'] = undefined;
 SendBotSMessageData.prototype['send_push'] = undefined;
 /**
  * Specifies an array of one or more IDs of the users who get a notification for the message.
- * @member {Array.<Number>} mentioned
+ * @member {Array.<String>} mentioned
  */
 
 SendBotSMessageData.prototype['mentioned'] = undefined;

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcViewMuteByIdResponse model module.
  * @module model/GcViewMuteByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var GcViewMuteByIdResponse = /*#__PURE__*/function () {
   /**

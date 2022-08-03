@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcRegisterOperatorsResponse model module.
  * @module model/GcRegisterOperatorsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class GcRegisterOperatorsResponse {
     /**

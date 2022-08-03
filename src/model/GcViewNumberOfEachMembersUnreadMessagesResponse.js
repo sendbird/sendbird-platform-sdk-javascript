@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcViewNumberOfEachMembersUnreadMessagesResponse model module.
  * @module model/GcViewNumberOfEachMembersUnreadMessagesResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class GcViewNumberOfEachMembersUnreadMessagesResponse {
     /**

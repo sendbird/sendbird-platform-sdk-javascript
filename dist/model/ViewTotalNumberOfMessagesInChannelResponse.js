@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewTotalNumberOfMessagesInChannelResponse model module.
  * @module model/ViewTotalNumberOfMessagesInChannelResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ViewTotalNumberOfMessagesInChannelResponse = /*#__PURE__*/function () {
   /**

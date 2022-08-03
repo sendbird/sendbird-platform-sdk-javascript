@@ -18,19 +18,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The MarkAllMessagesAsReadData model module.
  * @module model/MarkAllMessagesAsReadData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var MarkAllMessagesAsReadData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>MarkAllMessagesAsReadData</code>.
    * @alias module:model/MarkAllMessagesAsReadData
-   * @param userId {String} Specifies the unique ID of the target user.
    * @param channelUrls {Array.<String>} Specifies an array of one or more group channel URLs to mark all of the unread messages in as read. If not specified, all of the unread messages in the joined group channels are marked as read.
    */
-  function MarkAllMessagesAsReadData(userId, channelUrls) {
+  function MarkAllMessagesAsReadData(channelUrls) {
     _classCallCheck(this, MarkAllMessagesAsReadData);
 
-    MarkAllMessagesAsReadData.initialize(this, userId, channelUrls);
+    MarkAllMessagesAsReadData.initialize(this, channelUrls);
   }
   /**
    * Initializes the fields of this object.
@@ -41,8 +40,7 @@ var MarkAllMessagesAsReadData = /*#__PURE__*/function () {
 
   _createClass(MarkAllMessagesAsReadData, null, [{
     key: "initialize",
-    value: function initialize(obj, userId, channelUrls) {
-      obj['user_id'] = userId;
+    value: function initialize(obj, channelUrls) {
       obj['channel_urls'] = channelUrls;
     }
     /**
@@ -59,10 +57,6 @@ var MarkAllMessagesAsReadData = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new MarkAllMessagesAsReadData();
 
-        if (data.hasOwnProperty('user_id')) {
-          obj['user_id'] = _ApiClient["default"].convertToType(data['user_id'], 'String');
-        }
-
         if (data.hasOwnProperty('channel_urls')) {
           obj['channel_urls'] = _ApiClient["default"].convertToType(data['channel_urls'], ['String']);
         }
@@ -75,16 +69,10 @@ var MarkAllMessagesAsReadData = /*#__PURE__*/function () {
   return MarkAllMessagesAsReadData;
 }();
 /**
- * Specifies the unique ID of the target user.
- * @member {String} user_id
- */
-
-
-MarkAllMessagesAsReadData.prototype['user_id'] = undefined;
-/**
  * Specifies an array of one or more group channel URLs to mark all of the unread messages in as read. If not specified, all of the unread messages in the joined group channels are marked as read.
  * @member {Array.<String>} channel_urls
  */
+
 
 MarkAllMessagesAsReadData.prototype['channel_urls'] = undefined;
 var _default = MarkAllMessagesAsReadData;

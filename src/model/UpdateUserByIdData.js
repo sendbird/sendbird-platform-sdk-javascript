@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateUserByIdData model module.
  * @module model/UpdateUserByIdData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class UpdateUserByIdData {
     /**

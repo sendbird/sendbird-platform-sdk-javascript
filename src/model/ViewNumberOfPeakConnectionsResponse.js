@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ViewNumberOfPeakConnectionsResponsePeakConnections from './ViewNumberOfPeakConnectionsResponsePeakConnections';
+import ViewNumberOfPeakConnectionsResponsePeakConnectionsInner from './ViewNumberOfPeakConnectionsResponsePeakConnectionsInner';
 
 /**
  * The ViewNumberOfPeakConnectionsResponse model module.
  * @module model/ViewNumberOfPeakConnectionsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ViewNumberOfPeakConnectionsResponse {
     /**
@@ -49,7 +49,7 @@ class ViewNumberOfPeakConnectionsResponse {
             obj = obj || new ViewNumberOfPeakConnectionsResponse();
 
             if (data.hasOwnProperty('peak_connections')) {
-                obj['peak_connections'] = ApiClient.convertToType(data['peak_connections'], [ViewNumberOfPeakConnectionsResponsePeakConnections]);
+                obj['peak_connections'] = ApiClient.convertToType(data['peak_connections'], [ViewNumberOfPeakConnectionsResponsePeakConnectionsInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ViewNumberOfPeakConnectionsResponse {
 }
 
 /**
- * @member {Array.<module:model/ViewNumberOfPeakConnectionsResponsePeakConnections>} peak_connections
+ * @member {Array.<module:model/ViewNumberOfPeakConnectionsResponsePeakConnectionsInner>} peak_connections
  */
 ViewNumberOfPeakConnectionsResponse.prototype['peak_connections'] = undefined;
 

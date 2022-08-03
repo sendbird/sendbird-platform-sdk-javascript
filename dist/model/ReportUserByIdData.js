@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportUserByIdData model module.
  * @module model/ReportUserByIdData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ReportUserByIdData = /*#__PURE__*/function () {
   /**

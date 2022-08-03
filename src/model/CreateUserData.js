@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateUserData model module.
  * @module model/CreateUserData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class CreateUserData {
     /**
@@ -72,7 +72,7 @@ class CreateUserData {
                 obj['discovery_keys'] = ApiClient.convertToType(data['discovery_keys'], ['String']);
             }
             if (data.hasOwnProperty('metadata')) {
-                obj['metadata'] = ApiClient.convertToType(data['metadata'], 'String');
+                obj['metadata'] = ApiClient.convertToType(data['metadata'], Object);
             }
         }
         return obj;
@@ -119,7 +119,7 @@ CreateUserData.prototype['discovery_keys'] = undefined;
 
 /**
  * Specifies a `JSON` object to store key-value items for additional user information such as phone number, email or a long description of the user. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
- * @member {String} metadata
+ * @member {Object} metadata
  */
 CreateUserData.prototype['metadata'] = undefined;
 

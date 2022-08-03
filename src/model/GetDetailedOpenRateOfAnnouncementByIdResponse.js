@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetDetailedOpenRateOfAnnouncementByIdResponse model module.
  * @module model/GetDetailedOpenRateOfAnnouncementByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class GetDetailedOpenRateOfAnnouncementByIdResponse {
     /**

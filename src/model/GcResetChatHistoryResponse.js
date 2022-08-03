@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcResetChatHistoryResponse model module.
  * @module model/GcResetChatHistoryResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class GcResetChatHistoryResponse {
     /**

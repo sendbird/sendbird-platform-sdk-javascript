@@ -18,14 +18,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RegisterGdprRequestData model module.
  * @module model/RegisterGdprRequestData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var RegisterGdprRequestData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RegisterGdprRequestData</code>.
    * @alias module:model/RegisterGdprRequestData
    * @param action {String} Determines the type of a GDPR request. Acceptable values are limited to access and delete. If set to access, Sendbird server generates a downloadable zip file containing the data of the specified user with the user_id property to comply with GDPR's [right to access](https://gdpr-info.eu/art-15-gdpr/) of the data subject. If set to delete, the specified users with the user_ids property will be permanently deleted from your Sendbird application to comply with GDPR's [right to erasure](https://gdpr-info.eu/art-17-gdpr/) of the data subject. (Default: delete)
-   * @param userIds {Array.<Number>} Specifies an array of the IDs of the users to delete in order to meet the GDPR's requirements. The maximum number of users to be processed at once is 100. This should be specified when the value of the action property is delete.
+   * @param userIds {Array.<String>} Specifies an array of the IDs of the users to delete in order to meet the GDPR's requirements. The maximum number of users to be processed at once is 100. This should be specified when the value of the action property is delete.
    * @param channelDeleteOption {String} Determines the scope of group channels to delete in addition to deleting the specified users with the user_ids property. Acceptable values are limited to the following:<br />- do_not_delete (default): the users will be deleted but their joined group channels will remain.<br />- 1_on_1: only 1-on-1 group channels of the users will be deleted. (This option can be useful when eliminating spam users) <br />- all: all joined group channels of the users will be deleted.<br /><br /> This only works when the value of the action property is delete.
    * @param userId {String} Specifies the ID of the user to meet the GDPR's requirements.
    */
@@ -68,7 +68,7 @@ var RegisterGdprRequestData = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('user_ids')) {
-          obj['user_ids'] = _ApiClient["default"].convertToType(data['user_ids'], ['Number']);
+          obj['user_ids'] = _ApiClient["default"].convertToType(data['user_ids'], ['String']);
         }
 
         if (data.hasOwnProperty('channel_delete_option')) {
@@ -95,7 +95,7 @@ var RegisterGdprRequestData = /*#__PURE__*/function () {
 RegisterGdprRequestData.prototype['action'] = undefined;
 /**
  * Specifies an array of the IDs of the users to delete in order to meet the GDPR's requirements. The maximum number of users to be processed at once is 100. This should be specified when the value of the action property is delete.
- * @member {Array.<Number>} user_ids
+ * @member {Array.<String>} user_ids
  */
 
 RegisterGdprRequestData.prototype['user_ids'] = undefined;

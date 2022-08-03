@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RemoveRegistrationOrDeviceTokenResponse model module.
  * @module model/RemoveRegistrationOrDeviceTokenResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var RemoveRegistrationOrDeviceTokenResponse = /*#__PURE__*/function () {
   /**

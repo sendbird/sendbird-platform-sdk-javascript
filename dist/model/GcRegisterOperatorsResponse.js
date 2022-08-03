@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcRegisterOperatorsResponse model module.
  * @module model/GcRegisterOperatorsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var GcRegisterOperatorsResponse = /*#__PURE__*/function () {
   /**

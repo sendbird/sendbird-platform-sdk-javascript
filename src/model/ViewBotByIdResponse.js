@@ -17,7 +17,7 @@ import CreateBotResponseBot from './CreateBotResponseBot';
 /**
  * The ViewBotByIdResponse model module.
  * @module model/ViewBotByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ViewBotByIdResponse {
     /**

@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _AddHmsPushConfigurationResponsePushConfigurations = _interopRequireDefault(require("./AddHmsPushConfigurationResponsePushConfigurations"));
+var _AddHmsPushConfigurationResponsePushConfigurationsInner = _interopRequireDefault(require("./AddHmsPushConfigurationResponsePushConfigurationsInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddHmsPushConfigurationResponse model module.
  * @module model/AddHmsPushConfigurationResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var AddHmsPushConfigurationResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var AddHmsPushConfigurationResponse = /*#__PURE__*/function () {
         obj = obj || new AddHmsPushConfigurationResponse();
 
         if (data.hasOwnProperty('push_configurations')) {
-          obj['push_configurations'] = _ApiClient["default"].convertToType(data['push_configurations'], [_AddHmsPushConfigurationResponsePushConfigurations["default"]]);
+          obj['push_configurations'] = _ApiClient["default"].convertToType(data['push_configurations'], [_AddHmsPushConfigurationResponsePushConfigurationsInner["default"]]);
         }
       }
 
@@ -68,7 +68,7 @@ var AddHmsPushConfigurationResponse = /*#__PURE__*/function () {
   return AddHmsPushConfigurationResponse;
 }();
 /**
- * @member {Array.<module:model/AddHmsPushConfigurationResponsePushConfigurations>} push_configurations
+ * @member {Array.<module:model/AddHmsPushConfigurationResponsePushConfigurationsInner>} push_configurations
  */
 
 

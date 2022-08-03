@@ -38,7 +38,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Report service.
 * @module api/ReportApi
-* @version 1.0.3
+* @version 1.0.7
 */
 var ReportApi = /*#__PURE__*/function () {
   /**
@@ -518,7 +518,7 @@ var ReportApi = /*#__PURE__*/function () {
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} messageId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
 
   }, {
@@ -558,9 +558,7 @@ var ReportApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = {
-        'String': 'String'
-      };
+      var returnType = Object;
       return this.apiClient.callApi('/v3/report/{channel_type}/{channel_url}/profanity_messages/{message_id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -570,7 +568,7 @@ var ReportApi = /*#__PURE__*/function () {
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} messageId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
 
   }, {

@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListAnnouncementsResponseAnnouncements = _interopRequireDefault(require("./ListAnnouncementsResponseAnnouncements"));
+var _ListAnnouncementsResponseAnnouncementsInner = _interopRequireDefault(require("./ListAnnouncementsResponseAnnouncementsInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListAnnouncementsResponse model module.
  * @module model/ListAnnouncementsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ListAnnouncementsResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var ListAnnouncementsResponse = /*#__PURE__*/function () {
         obj = obj || new ListAnnouncementsResponse();
 
         if (data.hasOwnProperty('announcements')) {
-          obj['announcements'] = _ApiClient["default"].convertToType(data['announcements'], [_ListAnnouncementsResponseAnnouncements["default"]]);
+          obj['announcements'] = _ApiClient["default"].convertToType(data['announcements'], [_ListAnnouncementsResponseAnnouncementsInner["default"]]);
         }
 
         if (data.hasOwnProperty('next')) {
@@ -72,7 +72,7 @@ var ListAnnouncementsResponse = /*#__PURE__*/function () {
   return ListAnnouncementsResponse;
 }();
 /**
- * @member {Array.<module:model/ListAnnouncementsResponseAnnouncements>} announcements
+ * @member {Array.<module:model/ListAnnouncementsResponseAnnouncementsInner>} announcements
  */
 
 

@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse2001 from './InlineResponse2001';
+import OcDeleteChannelByUrl200Response from './OcDeleteChannelByUrl200Response';
 
 /**
  * The SendBirdMessageResponseUser model module.
  * @module model/SendBirdMessageResponseUser
- * @version 1.0.3
+ * @version 1.0.7
  */
 class SendBirdMessageResponseUser {
     /**
@@ -67,7 +67,7 @@ class SendBirdMessageResponseUser {
                 obj['profile_url'] = ApiClient.convertToType(data['profile_url'], 'String');
             }
             if (data.hasOwnProperty('metadata')) {
-                obj['metadata'] = InlineResponse2001.constructFromObject(data['metadata']);
+                obj['metadata'] = OcDeleteChannelByUrl200Response.constructFromObject(data['metadata']);
             }
         }
         return obj;
@@ -107,7 +107,7 @@ SendBirdMessageResponseUser.prototype['nickname'] = undefined;
 SendBirdMessageResponseUser.prototype['profile_url'] = undefined;
 
 /**
- * @member {module:model/InlineResponse2001} metadata
+ * @member {module:model/OcDeleteChannelByUrl200Response} metadata
  */
 SendBirdMessageResponseUser.prototype['metadata'] = undefined;
 

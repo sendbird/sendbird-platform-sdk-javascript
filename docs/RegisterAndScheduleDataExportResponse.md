@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **endTs** | **Number** |  | [optional] 
 **channelUrls** | **[String]** |  | [optional] 
 **senderIds** | **[String]** |  | [optional] 
-**file** | [**ListDataExportsByMessageChannelOrUserResponseFile**](ListDataExportsByMessageChannelOrUserResponseFile.md) |  | [optional] 
-**userIds** | **[Number]** |  | [optional] 
+**file** | [**ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile**](ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile.md) |  | [optional] 
+**userIds** | **[String]** |  | [optional] 
 
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ViewNumberOfUnreadItemsResponse model module.
  * @module model/ViewNumberOfUnreadItemsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ViewNumberOfUnreadItemsResponse {
     /**

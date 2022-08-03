@@ -22,7 +22,7 @@ import ViewNumberOfPeakConnectionsResponse from '../model/ViewNumberOfPeakConnec
 /**
 * Statistics service.
 * @module api/StatisticsApi
-* @version 1.0.3
+* @version 1.0.7
 */
 export default class StatisticsApi {
 

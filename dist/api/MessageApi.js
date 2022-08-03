@@ -65,6 +65,8 @@ var _SendBirdMessageResponse = _interopRequireDefault(require("../model/SendBird
 
 var _SendMessageData = _interopRequireDefault(require("../model/SendMessageData"));
 
+var _TranslateMessageIntoOtherLanguagesData = _interopRequireDefault(require("../model/TranslateMessageIntoOtherLanguagesData"));
+
 var _UpdateAnnouncementByIdData = _interopRequireDefault(require("../model/UpdateAnnouncementByIdData"));
 
 var _UpdateAnnouncementByIdResponse = _interopRequireDefault(require("../model/UpdateAnnouncementByIdResponse"));
@@ -96,7 +98,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Message service.
 * @module api/MessageApi
-* @version 1.0.3
+* @version 1.0.7
 */
 var MessageApi = /*#__PURE__*/function () {
   /**
@@ -1733,7 +1735,7 @@ var MessageApi = /*#__PURE__*/function () {
      * @param {String} channelUrl 
      * @param {String} messageId 
      * @param {Object} opts Optional parameters
-     * @param {Object.<String, Object>} opts.body 
+     * @param {module:model/TranslateMessageIntoOtherLanguagesData} opts.translateMessageIntoOtherLanguagesData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdMessageResponse} and HTTP response
      */
 
@@ -1741,7 +1743,7 @@ var MessageApi = /*#__PURE__*/function () {
     key: "translateMessageIntoOtherLanguagesWithHttpInfo",
     value: function translateMessageIntoOtherLanguagesWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts) {
       opts = opts || {};
-      var postBody = opts['body']; // verify the required parameter 'apiToken' is set
+      var postBody = opts['translateMessageIntoOtherLanguagesData']; // verify the required parameter 'apiToken' is set
 
       if (apiToken === undefined || apiToken === null) {
         throw new Error("Missing the required parameter 'apiToken' when calling translateMessageIntoOtherLanguages");
@@ -1786,7 +1788,7 @@ var MessageApi = /*#__PURE__*/function () {
      * @param {String} channelUrl 
      * @param {String} messageId 
      * @param {Object} opts Optional parameters
-     * @param {Object.<String, Object>} opts.body 
+     * @param {module:model/TranslateMessageIntoOtherLanguagesData} opts.translateMessageIntoOtherLanguagesData 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdMessageResponse}
      */
 

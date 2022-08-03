@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListDataExportsByMessageChannelOrUserResponseFile = _interopRequireDefault(require("./ListDataExportsByMessageChannelOrUserResponseFile"));
+var _ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile = _interopRequireDefault(require("./ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewGdprRequestByIdResponse model module.
  * @module model/ViewGdprRequestByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ViewGdprRequestByIdResponse = /*#__PURE__*/function () {
   /**
@@ -73,7 +73,7 @@ var ViewGdprRequestByIdResponse = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('files')) {
-          obj['files'] = _ListDataExportsByMessageChannelOrUserResponseFile["default"].constructFromObject(data['files']);
+          obj['files'] = _ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile["default"].constructFromObject(data['files']);
         }
 
         if (data.hasOwnProperty('user_ids')) {
@@ -117,7 +117,7 @@ ViewGdprRequestByIdResponse.prototype['status'] = undefined;
 
 ViewGdprRequestByIdResponse.prototype['user_id'] = undefined;
 /**
- * @member {module:model/ListDataExportsByMessageChannelOrUserResponseFile} files
+ * @member {module:model/ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile} files
  */
 
 ViewGdprRequestByIdResponse.prototype['files'] = undefined;

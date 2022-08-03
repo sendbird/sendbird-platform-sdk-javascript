@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcMuteUserData model module.
  * @module model/GcMuteUserData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var GcMuteUserData = /*#__PURE__*/function () {
   /**

@@ -12,18 +12,18 @@
  */
 
 import ApiClient from '../ApiClient';
-import V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList from './V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList';
+import BanUsersInChannelsWithCustomChannelTypeDataBannedListInner from './BanUsersInChannelsWithCustomChannelTypeDataBannedListInner';
 
 /**
  * The BanUsersInChannelsWithCustomChannelTypeData model module.
  * @module model/BanUsersInChannelsWithCustomChannelTypeData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class BanUsersInChannelsWithCustomChannelTypeData {
     /**
      * Constructs a new <code>BanUsersInChannelsWithCustomChannelTypeData</code>.
      * @alias module:model/BanUsersInChannelsWithCustomChannelTypeData
-     * @param bannedList {Array.<module:model/V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList>} 
+     * @param bannedList {Array.<module:model/BanUsersInChannelsWithCustomChannelTypeDataBannedListInner>} 
      */
     constructor(bannedList) { 
         
@@ -51,7 +51,7 @@ class BanUsersInChannelsWithCustomChannelTypeData {
             obj = obj || new BanUsersInChannelsWithCustomChannelTypeData();
 
             if (data.hasOwnProperty('banned_list')) {
-                obj['banned_list'] = ApiClient.convertToType(data['banned_list'], [V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList]);
+                obj['banned_list'] = ApiClient.convertToType(data['banned_list'], [BanUsersInChannelsWithCustomChannelTypeDataBannedListInner]);
             }
             if (data.hasOwnProperty('on_demand_upsert')) {
                 obj['on_demand_upsert'] = ApiClient.convertToType(data['on_demand_upsert'], 'Boolean');
@@ -64,7 +64,7 @@ class BanUsersInChannelsWithCustomChannelTypeData {
 }
 
 /**
- * @member {Array.<module:model/V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList>} banned_list
+ * @member {Array.<module:model/BanUsersInChannelsWithCustomChannelTypeDataBannedListInner>} banned_list
  */
 BanUsersInChannelsWithCustomChannelTypeData.prototype['banned_list'] = undefined;
 

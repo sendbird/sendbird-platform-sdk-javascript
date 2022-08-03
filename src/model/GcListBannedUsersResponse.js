@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import OcListBannedUsersResponseBannedList from './OcListBannedUsersResponseBannedList';
+import OcListBannedUsersResponseBannedListInner from './OcListBannedUsersResponseBannedListInner';
 
 /**
  * The GcListBannedUsersResponse model module.
  * @module model/GcListBannedUsersResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class GcListBannedUsersResponse {
     /**
@@ -49,7 +49,7 @@ class GcListBannedUsersResponse {
             obj = obj || new GcListBannedUsersResponse();
 
             if (data.hasOwnProperty('banned_list')) {
-                obj['banned_list'] = ApiClient.convertToType(data['banned_list'], [OcListBannedUsersResponseBannedList]);
+                obj['banned_list'] = ApiClient.convertToType(data['banned_list'], [OcListBannedUsersResponseBannedListInner]);
             }
             if (data.hasOwnProperty('total_ban_count')) {
                 obj['total_ban_count'] = ApiClient.convertToType(data['total_ban_count'], 'Number');
@@ -65,7 +65,7 @@ class GcListBannedUsersResponse {
 }
 
 /**
- * @member {Array.<module:model/OcListBannedUsersResponseBannedList>} banned_list
+ * @member {Array.<module:model/OcListBannedUsersResponseBannedListInner>} banned_list
  */
 GcListBannedUsersResponse.prototype['banned_list'] = undefined;
 

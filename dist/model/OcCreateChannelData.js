@@ -18,27 +18,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcCreateChannelData model module.
  * @module model/OcCreateChannelData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var OcCreateChannelData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcCreateChannelData</code>.
    * @alias module:model/OcCreateChannelData
-   * @param name {String} Specifies the channel topic, or the name of the channel. The length is limited to 191 characters. (Default: open channel)
-   * @param channelUrl {String} Specifies the URL of the channel. Only numbers, characters, and underscores are allowed. The length is 4 to 100 characters, inclusive. If not specified, a URL is automatically generated.
-   * @param coverUrl {String} Specifies the URL of the cover image. The length is limited to 2,048 characters.
-   * @param coverFile {File} Uploads a file for the channel cover image.
-   * @param customType {String} Specifies the custom channel type which is used for channel grouping. The length is limited to 128 characters.<br /><br /> Custom types are also used within Sendbird's [Advanced analytics](/docs/chat/v3/platform-api/guides/advanced-analytics) to segment metrics, which enables the sub-classification of data views.
-   * @param data {String} Specifies additional channel information such as a long description of the channel or `JSON` formatted string.
-   * @param isEphemeral {Boolean} Determines whether to preserve the messages in the channel for the purpose of retrieving chat history or not. It set to true, the messages in the channel are not saved in the Sendbird database and the chat history can't be retrieved. (Default: false)
-   * @param isDynamicPartitioned2HowDynamicPartitioningWorks {Boolean} Determines whether the channel is an open channel with dynamic partitioning or not. If the value of this property is true, the open channel can create several subchannels in order to accommodate a massive number of usres. (Default: false)<br/><br/>  For the new Sendbird applications created after December 15, 2020, this property will be automatically set to true.
-   * @param operatorIds {Array.<Number>} Specifies an array of one or more user IDs to register as operators of the channel. The maximum allowed number of operators per channel is 100. Operators can delete any messages in the channel, and can also receive all messages that have been throttled.<br/><br/>  Operators cannot view messages that have been [moderated by](/docs/chat/v3/platform-api/guides/filter-and-moderation) the domain filter or profanity filter. Only the sender will be notified that the message has been blocked.
-   * @param operators {Array.<String>} (Deprecated) Specifies the string IDs of the users registered as channel operators. Operators can delete any messages in the channel, and can also receive all messages that have been throttled.
    */
-  function OcCreateChannelData(name, channelUrl, coverUrl, coverFile, customType, data, isEphemeral, isDynamicPartitioned2HowDynamicPartitioningWorks, operatorIds, operators) {
+  function OcCreateChannelData() {
     _classCallCheck(this, OcCreateChannelData);
 
-    OcCreateChannelData.initialize(this, name, channelUrl, coverUrl, coverFile, customType, data, isEphemeral, isDynamicPartitioned2HowDynamicPartitioningWorks, operatorIds, operators);
+    OcCreateChannelData.initialize(this);
   }
   /**
    * Initializes the fields of this object.
@@ -49,18 +39,7 @@ var OcCreateChannelData = /*#__PURE__*/function () {
 
   _createClass(OcCreateChannelData, null, [{
     key: "initialize",
-    value: function initialize(obj, name, channelUrl, coverUrl, coverFile, customType, data, isEphemeral, isDynamicPartitioned2HowDynamicPartitioningWorks, operatorIds, operators) {
-      obj['name'] = name;
-      obj['channel_url'] = channelUrl;
-      obj['cover_url'] = coverUrl;
-      obj['cover_file'] = coverFile;
-      obj['custom_type'] = customType;
-      obj['data'] = data;
-      obj['is_ephemeral'] = isEphemeral;
-      obj['[is_dynamic_partitioned](#2-how-dynamic-partitioning-works)'] = isDynamicPartitioned2HowDynamicPartitioningWorks;
-      obj['operator_ids'] = operatorIds;
-      obj['operators'] = operators;
-    }
+    value: function initialize(obj) {}
     /**
      * Constructs a <code>OcCreateChannelData</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -108,7 +87,7 @@ var OcCreateChannelData = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('operator_ids')) {
-          obj['operator_ids'] = _ApiClient["default"].convertToType(data['operator_ids'], ['Number']);
+          obj['operator_ids'] = _ApiClient["default"].convertToType(data['operator_ids'], ['String']);
         }
 
         if (data.hasOwnProperty('operators')) {
@@ -173,7 +152,7 @@ OcCreateChannelData.prototype['is_ephemeral'] = undefined;
 OcCreateChannelData.prototype['[is_dynamic_partitioned](#2-how-dynamic-partitioning-works)'] = undefined;
 /**
  * Specifies an array of one or more user IDs to register as operators of the channel. The maximum allowed number of operators per channel is 100. Operators can delete any messages in the channel, and can also receive all messages that have been throttled.<br/><br/>  Operators cannot view messages that have been [moderated by](/docs/chat/v3/platform-api/guides/filter-and-moderation) the domain filter or profanity filter. Only the sender will be notified that the message has been blocked.
- * @member {Array.<Number>} operator_ids
+ * @member {Array.<String>} operator_ids
  */
 
 OcCreateChannelData.prototype['operator_ids'] = undefined;

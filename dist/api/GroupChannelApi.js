@@ -39,7 +39,7 @@ var _GcResetChatHistoryResponse = _interopRequireDefault(require("../model/GcRes
 
 var _GcUpdateChannelByUrlData = _interopRequireDefault(require("../model/GcUpdateChannelByUrlData"));
 
-var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2001"));
+var _OcDeleteChannelByUrl200Response = _interopRequireDefault(require("../model/OcDeleteChannelByUrl200Response"));
 
 var _SendBirdGroupChannel = _interopRequireDefault(require("../model/SendBirdGroupChannel"));
 
@@ -54,7 +54,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * GroupChannel service.
 * @module api/GroupChannelApi
-* @version 1.0.3
+* @version 1.0.7
 */
 var GroupChannelApi = /*#__PURE__*/function () {
   /**
@@ -134,7 +134,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
      * @param {Array.<String>} operatorIds 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.deleteAll 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
 
   }, {
@@ -171,7 +171,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse["default"];
+      var returnType = _OcDeleteChannelByUrl200Response["default"];
       return this.apiClient.callApi('/v3/group_channels/{channel_url}/operators', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -182,7 +182,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
      * @param {Array.<String>} operatorIds 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.deleteAll 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
 
   }, {
@@ -305,7 +305,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcDeclineInvitationData} opts.gcDeclineInvitationData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
 
   }, {
@@ -334,7 +334,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse["default"];
+      var returnType = _OcDeleteChannelByUrl200Response["default"];
       return this.apiClient.callApi('/v3/group_channels/{channel_url}/decline', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -344,7 +344,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcDeclineInvitationData} opts.gcDeclineInvitationData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
 
   }, {
@@ -359,7 +359,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
      * ## Delete a channel  Deletes a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-delete-a-channel ----------------------------
      * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
 
   }, {
@@ -387,7 +387,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse["default"];
+      var returnType = _OcDeleteChannelByUrl200Response["default"];
       return this.apiClient.callApi('/v3/group_channels/{channel_url}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -395,7 +395,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
      * ## Delete a channel  Deletes a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-delete-a-channel ----------------------------
      * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
 
   }, {
@@ -412,7 +412,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcHideOrArchiveChannelData} opts.gcHideOrArchiveChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
 
   }, {
@@ -441,7 +441,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse["default"];
+      var returnType = _OcDeleteChannelByUrl200Response["default"];
       return this.apiClient.callApi('/v3/group_channels/{channel_url}/hide', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -451,7 +451,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcHideOrArchiveChannelData} opts.gcHideOrArchiveChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
 
   }, {
@@ -580,7 +580,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcLeaveChannelData} opts.gcLeaveChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
 
   }, {
@@ -609,7 +609,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse["default"];
+      var returnType = _OcDeleteChannelByUrl200Response["default"];
       return this.apiClient.callApi('/v3/group_channels/{channel_url}/leave', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -619,7 +619,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/GcLeaveChannelData} opts.gcLeaveChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
 
   }, {
@@ -1064,7 +1064,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.shouldUnhideAll 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
 
   }, {
@@ -1101,7 +1101,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse["default"];
+      var returnType = _OcDeleteChannelByUrl200Response["default"];
       return this.apiClient.callApi('/v3/group_channels/{channel_url}/hide', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -1112,7 +1112,7 @@ var GroupChannelApi = /*#__PURE__*/function () {
      * @param {String} userId 
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.shouldUnhideAll 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
 
   }, {

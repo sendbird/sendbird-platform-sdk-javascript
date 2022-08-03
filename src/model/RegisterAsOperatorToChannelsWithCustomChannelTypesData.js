@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RegisterAsOperatorToChannelsWithCustomChannelTypesData model module.
  * @module model/RegisterAsOperatorToChannelsWithCustomChannelTypesData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class RegisterAsOperatorToChannelsWithCustomChannelTypesData {
     /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateMessageByIdData model module.
  * @module model/UpdateMessageByIdData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var UpdateMessageByIdData = /*#__PURE__*/function () {
   /**
@@ -90,7 +90,7 @@ var UpdateMessageByIdData = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('mentioned_user_ids')) {
-          obj['mentioned_user_ids'] = _ApiClient["default"].convertToType(data['mentioned_user_ids'], ['Number']);
+          obj['mentioned_user_ids'] = _ApiClient["default"].convertToType(data['mentioned_user_ids'], ['String']);
         }
       }
 
@@ -151,7 +151,7 @@ UpdateMessageByIdData.prototype['data'] = undefined;
 UpdateMessageByIdData.prototype['mention_type'] = undefined;
 /**
  * Specifies an array of one or more IDs of the users who will get a notification for the message.
- * @member {Array.<Number>} mentioned_user_ids
+ * @member {Array.<String>} mentioned_user_ids
  */
 
 UpdateMessageByIdData.prototype['mentioned_user_ids'] = undefined;

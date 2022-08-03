@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ResetPushPreferencesResponse model module.
  * @module model/ResetPushPreferencesResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ResetPushPreferencesResponse = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcUpdateBanByIdResponse model module.
  * @module model/GcUpdateBanByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var GcUpdateBanByIdResponse = /*#__PURE__*/function () {
   /**

@@ -27,7 +27,7 @@ import ReportUserByIdResponse from '../model/ReportUserByIdResponse';
 /**
 * Report service.
 * @module api/ReportApi
-* @version 1.0.3
+* @version 1.0.7
 */
 export default class ReportApi {
 
@@ -528,7 +528,7 @@ export default class ReportApi {
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} messageId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     viewModeratedMessageByIdWithHttpInfo(apiToken, channelType, channelUrl, messageId) {
       let postBody = null;
@@ -565,7 +565,7 @@ export default class ReportApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = {'String': 'String'};
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/report/{channel_type}/{channel_url}/profanity_messages/{message_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -580,7 +580,7 @@ export default class ReportApi {
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} messageId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     viewModeratedMessageById(apiToken, channelType, channelUrl, messageId) {
       return this.viewModeratedMessageByIdWithHttpInfo(apiToken, channelType, channelUrl, messageId)

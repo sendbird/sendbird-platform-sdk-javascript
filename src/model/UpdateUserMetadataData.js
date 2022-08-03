@@ -16,13 +16,13 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateUserMetadataData model module.
  * @module model/UpdateUserMetadataData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class UpdateUserMetadataData {
     /**
      * Constructs a new <code>UpdateUserMetadataData</code>.
      * @alias module:model/UpdateUserMetadataData
-     * @param metadata {String} Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
+     * @param metadata {Object} Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
      * @param upsert {Boolean} 
      */
     constructor(metadata, upsert) { 
@@ -52,7 +52,7 @@ class UpdateUserMetadataData {
             obj = obj || new UpdateUserMetadataData();
 
             if (data.hasOwnProperty('metadata')) {
-                obj['metadata'] = ApiClient.convertToType(data['metadata'], 'String');
+                obj['metadata'] = ApiClient.convertToType(data['metadata'], Object);
             }
             if (data.hasOwnProperty('upsert')) {
                 obj['upsert'] = ApiClient.convertToType(data['upsert'], 'Boolean');
@@ -66,7 +66,7 @@ class UpdateUserMetadataData {
 
 /**
  * Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
- * @member {String} metadata
+ * @member {Object} metadata
  */
 UpdateUserMetadataData.prototype['metadata'] = undefined;
 

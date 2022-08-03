@@ -16,14 +16,14 @@ import ApiClient from '../ApiClient';
 /**
  * The AddEmojisData model module.
  * @module model/AddEmojisData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class AddEmojisData {
     /**
      * Constructs a new <code>AddEmojisData</code>.
      * @alias module:model/AddEmojisData
      * @param emojiCategoryId {Number} Specifies the unique ID of the emoji category that a list of new emojis belong to.
-     * @param emojis {Array.<String>} Specifies a list of one or more new emojis to register.
+     * @param emojis {Array.<Object>} Specifies a list of one or more new emojis to register.
      */
     constructor(emojiCategoryId, emojis) { 
         
@@ -55,7 +55,7 @@ class AddEmojisData {
                 obj['emoji_category_id'] = ApiClient.convertToType(data['emoji_category_id'], 'Number');
             }
             if (data.hasOwnProperty('emojis')) {
-                obj['emojis'] = ApiClient.convertToType(data['emojis'], ['String']);
+                obj['emojis'] = ApiClient.convertToType(data['emojis'], [Object]);
             }
         }
         return obj;
@@ -72,7 +72,7 @@ AddEmojisData.prototype['emoji_category_id'] = undefined;
 
 /**
  * Specifies a list of one or more new emojis to register.
- * @member {Array.<String>} emojis
+ * @member {Array.<Object>} emojis
  */
 AddEmojisData.prototype['emojis'] = undefined;
 

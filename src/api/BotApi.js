@@ -27,7 +27,7 @@ import ViewBotByIdResponse from '../model/ViewBotByIdResponse';
 /**
 * Bot service.
 * @module api/BotApi
-* @version 1.0.3
+* @version 1.0.7
 */
 export default class BotApi {
 

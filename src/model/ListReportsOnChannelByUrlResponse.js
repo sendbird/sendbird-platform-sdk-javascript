@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListReportsOnMessageByIdResponseReportLogs from './ListReportsOnMessageByIdResponseReportLogs';
+import ListReportsOnMessageByIdResponseReportLogsInner from './ListReportsOnMessageByIdResponseReportLogsInner';
 
 /**
  * The ListReportsOnChannelByUrlResponse model module.
  * @module model/ListReportsOnChannelByUrlResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ListReportsOnChannelByUrlResponse {
     /**
@@ -49,7 +49,7 @@ class ListReportsOnChannelByUrlResponse {
             obj = obj || new ListReportsOnChannelByUrlResponse();
 
             if (data.hasOwnProperty('report_logs')) {
-                obj['report_logs'] = ApiClient.convertToType(data['report_logs'], [ListReportsOnMessageByIdResponseReportLogs]);
+                obj['report_logs'] = ApiClient.convertToType(data['report_logs'], [ListReportsOnMessageByIdResponseReportLogsInner]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -62,7 +62,7 @@ class ListReportsOnChannelByUrlResponse {
 }
 
 /**
- * @member {Array.<module:model/ListReportsOnMessageByIdResponseReportLogs>} report_logs
+ * @member {Array.<module:model/ListReportsOnMessageByIdResponseReportLogsInner>} report_logs
  */
 ListReportsOnChannelByUrlResponse.prototype['report_logs'] = undefined;
 

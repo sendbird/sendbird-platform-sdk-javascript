@@ -16,14 +16,14 @@ import ApiClient from '../ApiClient';
 /**
  * The GcRegisterOperatorsData model module.
  * @module model/GcRegisterOperatorsData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class GcRegisterOperatorsData {
     /**
      * Constructs a new <code>GcRegisterOperatorsData</code>.
      * @alias module:model/GcRegisterOperatorsData
      * @param channelUrl {String} Specifies the URL of the channel to register operators to.
-     * @param operatorIds {Array.<Number>} Specifies an array of one or more IDs of users to register as operators of the channel. If the operators are not members of the channel yet, they need an [invitation](#2-invite-as-members) to [join](#2-join-a-channel) a privte group channel while they don't need any to join a [public](#-3-private-vs-public) group channel. The maximum allowed number of operators per channel is 100.
+     * @param operatorIds {Array.<String>} Specifies an array of one or more IDs of users to register as operators of the channel. If the operators are not members of the channel yet, they need an [invitation](#2-invite-as-members) to [join](#2-join-a-channel) a privte group channel while they don't need any to join a [public](#-3-private-vs-public) group channel. The maximum allowed number of operators per channel is 100.
      */
     constructor(channelUrl, operatorIds) { 
         
@@ -55,7 +55,7 @@ class GcRegisterOperatorsData {
                 obj['channel_url'] = ApiClient.convertToType(data['channel_url'], 'String');
             }
             if (data.hasOwnProperty('operator_ids')) {
-                obj['operator_ids'] = ApiClient.convertToType(data['operator_ids'], ['Number']);
+                obj['operator_ids'] = ApiClient.convertToType(data['operator_ids'], ['String']);
             }
         }
         return obj;
@@ -72,7 +72,7 @@ GcRegisterOperatorsData.prototype['channel_url'] = undefined;
 
 /**
  * Specifies an array of one or more IDs of users to register as operators of the channel. If the operators are not members of the channel yet, they need an [invitation](#2-invite-as-members) to [join](#2-join-a-channel) a privte group channel while they don't need any to join a [public](#-3-private-vs-public) group channel. The maximum allowed number of operators per channel is 100.
- * @member {Array.<Number>} operator_ids
+ * @member {Array.<String>} operator_ids
  */
 GcRegisterOperatorsData.prototype['operator_ids'] = undefined;
 

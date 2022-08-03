@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _SendBirdGroupChannelChannel = _interopRequireDefault(require("./SendBirdGroupChannelChannel"));
+
 var _SendBirdGroupChannelCreatedBy = _interopRequireDefault(require("./SendBirdGroupChannelCreatedBy"));
 
 var _SendBirdGroupChannelDisappearingMessage = _interopRequireDefault(require("./SendBirdGroupChannelDisappearingMessage"));
@@ -30,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdGroupChannel model module.
  * @module model/SendBirdGroupChannel
- * @version 1.0.3
+ * @version 1.0.7
  */
 var SendBirdGroupChannel = /*#__PURE__*/function () {
   /**
@@ -236,6 +238,10 @@ var SendBirdGroupChannel = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('unread_message_count')) {
           obj['unread_message_count'] = _ApiClient["default"].convertToType(data['unread_message_count'], 'Number');
+        }
+
+        if (data.hasOwnProperty('channel')) {
+          obj['channel'] = _SendBirdGroupChannelChannel["default"].constructFromObject(data['channel']);
         }
       }
 
@@ -461,6 +467,11 @@ SendBirdGroupChannel.prototype['unread_mention_count'] = undefined;
  */
 
 SendBirdGroupChannel.prototype['unread_message_count'] = undefined;
+/**
+ * @member {module:model/SendBirdGroupChannelChannel} channel
+ */
+
+SendBirdGroupChannel.prototype['channel'] = undefined;
 /**
  * Allowed values for the <code>hidden_state</code> property.
  * @enum {String}

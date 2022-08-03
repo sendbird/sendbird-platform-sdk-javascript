@@ -16,17 +16,17 @@ import ApiClient from '../ApiClient';
 /**
  * The GcInviteAsMembersData model module.
  * @module model/GcInviteAsMembersData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class GcInviteAsMembersData {
     /**
      * Constructs a new <code>GcInviteAsMembersData</code>.
      * @alias module:model/GcInviteAsMembersData
      * @param channelUrl {String} Specifies the URL of the channel to invite into.
-     * @param userIds {Array.<Number>} Specifies an array of one or more user IDs to invite into the channel. The maximum number of users to be invited at once is 100. The users can be used instead of this property.
-     * @param users {Array.<Number>} Specifies a list of one or more `JSON` objects which contain the user_id property to invite into the channel. The maximum number of users to be invited at once is 100. The user_ids can be used instead of this property.
-     * @param invitationStatus {Array.<String>} Specifies an array of one or more information about the join status of each invited user to the channel. Each item of the array should be specified with a combination of the unique ID of a user in the user_ids or users property, a colon (:), and the user's join status (for example, user_id_1: join status). Acceptable values are joined, invited_by_friend, and invited_by_non_friend. (Default: joined)
-     * @param hiddenStatus {Array.<String>} Specifies an array of one or more channel hidden statuses about whether to hide the channel from each invited user's list of group channels, and whether to automatically unhide the hidden channel when receiving a new message from other member of that channel. Each item of the array should be specified with a combination of the unique ID of a user in the user_ids or users property, a colon (:), and the channel hidden status (for example, user_id_1: channel hidden status). Acceptable values are limited to the following:<br />- unhidden (default): the channel is included in when retrieving a list of group channels.<br />- hidden_allow_auto_unhide: the channel automatically gets unhidden when receiving a new message.<br />- hidden_prevent_auto_unhide: the channel keeps hidden though receiving a new message.
+     * @param userIds {Array.<String>} Specifies an array of one or more user IDs to invite into the channel. The maximum number of users to be invited at once is 100. The users can be used instead of this property.
+     * @param users {Array.<String>} Specifies a list of one or more `JSON` objects which contain the user_id property to invite into the channel. The maximum number of users to be invited at once is 100. The user_ids can be used instead of this property.
+     * @param invitationStatus {Object} Specifies one or more key-value pair items which set the invitation status of each user invited to the channel. The key should be a user_id and the value should be their joining status. Acceptable values are joined, invited_by_friend, and invited_by_non_friend. (Default: joined)
+     * @param hiddenStatus {Object} Specifies one or more key-value pair items which set the channel's hidden status for each user. The key should be a user_id and the value should be their hidden status. Acceptable values are limited to the following:<br />- unhidden (default): the channel is included in when retrieving a list of group channels.<br />- hidden_allow_auto_unhide: the channel automatically gets unhidden when receiving a new message.<br />- hidden_prevent_auto_unhide: the channel keeps hidden though receiving a new message.
      */
     constructor(channelUrl, userIds, users, invitationStatus, hiddenStatus) { 
         
@@ -61,16 +61,16 @@ class GcInviteAsMembersData {
                 obj['channel_url'] = ApiClient.convertToType(data['channel_url'], 'String');
             }
             if (data.hasOwnProperty('user_ids')) {
-                obj['user_ids'] = ApiClient.convertToType(data['user_ids'], ['Number']);
+                obj['user_ids'] = ApiClient.convertToType(data['user_ids'], ['String']);
             }
             if (data.hasOwnProperty('users')) {
-                obj['users'] = ApiClient.convertToType(data['users'], ['Number']);
+                obj['users'] = ApiClient.convertToType(data['users'], ['String']);
             }
             if (data.hasOwnProperty('invitation_status')) {
-                obj['invitation_status'] = ApiClient.convertToType(data['invitation_status'], ['String']);
+                obj['invitation_status'] = ApiClient.convertToType(data['invitation_status'], Object);
             }
             if (data.hasOwnProperty('hidden_status')) {
-                obj['hidden_status'] = ApiClient.convertToType(data['hidden_status'], ['String']);
+                obj['hidden_status'] = ApiClient.convertToType(data['hidden_status'], Object);
             }
         }
         return obj;
@@ -87,25 +87,25 @@ GcInviteAsMembersData.prototype['channel_url'] = undefined;
 
 /**
  * Specifies an array of one or more user IDs to invite into the channel. The maximum number of users to be invited at once is 100. The users can be used instead of this property.
- * @member {Array.<Number>} user_ids
+ * @member {Array.<String>} user_ids
  */
 GcInviteAsMembersData.prototype['user_ids'] = undefined;
 
 /**
  * Specifies a list of one or more `JSON` objects which contain the user_id property to invite into the channel. The maximum number of users to be invited at once is 100. The user_ids can be used instead of this property.
- * @member {Array.<Number>} users
+ * @member {Array.<String>} users
  */
 GcInviteAsMembersData.prototype['users'] = undefined;
 
 /**
- * Specifies an array of one or more information about the join status of each invited user to the channel. Each item of the array should be specified with a combination of the unique ID of a user in the user_ids or users property, a colon (:), and the user's join status (for example, user_id_1: join status). Acceptable values are joined, invited_by_friend, and invited_by_non_friend. (Default: joined)
- * @member {Array.<String>} invitation_status
+ * Specifies one or more key-value pair items which set the invitation status of each user invited to the channel. The key should be a user_id and the value should be their joining status. Acceptable values are joined, invited_by_friend, and invited_by_non_friend. (Default: joined)
+ * @member {Object} invitation_status
  */
 GcInviteAsMembersData.prototype['invitation_status'] = undefined;
 
 /**
- * Specifies an array of one or more channel hidden statuses about whether to hide the channel from each invited user's list of group channels, and whether to automatically unhide the hidden channel when receiving a new message from other member of that channel. Each item of the array should be specified with a combination of the unique ID of a user in the user_ids or users property, a colon (:), and the channel hidden status (for example, user_id_1: channel hidden status). Acceptable values are limited to the following:<br />- unhidden (default): the channel is included in when retrieving a list of group channels.<br />- hidden_allow_auto_unhide: the channel automatically gets unhidden when receiving a new message.<br />- hidden_prevent_auto_unhide: the channel keeps hidden though receiving a new message.
- * @member {Array.<String>} hidden_status
+ * Specifies one or more key-value pair items which set the channel's hidden status for each user. The key should be a user_id and the value should be their hidden status. Acceptable values are limited to the following:<br />- unhidden (default): the channel is included in when retrieving a list of group channels.<br />- hidden_allow_auto_unhide: the channel automatically gets unhidden when receiving a new message.<br />- hidden_prevent_auto_unhide: the channel keeps hidden though receiving a new message.
+ * @member {Object} hidden_status
  */
 GcInviteAsMembersData.prototype['hidden_status'] = undefined;
 

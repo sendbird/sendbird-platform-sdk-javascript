@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateMessageByIdData model module.
  * @module model/UpdateMessageByIdData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class UpdateMessageByIdData {
     /**
@@ -74,7 +74,7 @@ class UpdateMessageByIdData {
                 obj['mention_type'] = ApiClient.convertToType(data['mention_type'], 'String');
             }
             if (data.hasOwnProperty('mentioned_user_ids')) {
-                obj['mentioned_user_ids'] = ApiClient.convertToType(data['mentioned_user_ids'], ['Number']);
+                obj['mentioned_user_ids'] = ApiClient.convertToType(data['mentioned_user_ids'], ['String']);
             }
         }
         return obj;
@@ -133,7 +133,7 @@ UpdateMessageByIdData.prototype['mention_type'] = undefined;
 
 /**
  * Specifies an array of one or more IDs of the users who will get a notification for the message.
- * @member {Array.<Number>} mentioned_user_ids
+ * @member {Array.<String>} mentioned_user_ids
  */
 UpdateMessageByIdData.prototype['mentioned_user_ids'] = undefined;
 

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewNumberOfUnreadItemsResponse model module.
  * @module model/ViewNumberOfUnreadItemsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ViewNumberOfUnreadItemsResponse = /*#__PURE__*/function () {
   /**

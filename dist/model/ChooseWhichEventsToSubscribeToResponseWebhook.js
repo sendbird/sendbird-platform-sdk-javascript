@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChooseWhichEventsToSubscribeToResponseWebhook model module.
  * @module model/ChooseWhichEventsToSubscribeToResponseWebhook
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ChooseWhichEventsToSubscribeToResponseWebhook = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcViewBanByIdResponse model module.
  * @module model/OcViewBanByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var OcViewBanByIdResponse = /*#__PURE__*/function () {
   /**

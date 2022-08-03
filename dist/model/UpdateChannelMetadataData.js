@@ -18,13 +18,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateChannelMetadataData model module.
  * @module model/UpdateChannelMetadataData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var UpdateChannelMetadataData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateChannelMetadataData</code>.
    * @alias module:model/UpdateChannelMetadataData
-   * @param metadata {String} Specifies a `JSON` object which has key-value items to update. A key can't contain a comma (,) and its length is limited to 128 characters. A value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
+   * @param metadata {Object} Specifies a `JSON` object which has key-value items to update. A key can't contain a comma (,) and its length is limited to 128 characters. A value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
    * @param upsert {Boolean} 
    */
   function UpdateChannelMetadataData(metadata, upsert) {
@@ -60,7 +60,7 @@ var UpdateChannelMetadataData = /*#__PURE__*/function () {
         obj = obj || new UpdateChannelMetadataData();
 
         if (data.hasOwnProperty('metadata')) {
-          obj['metadata'] = _ApiClient["default"].convertToType(data['metadata'], 'String');
+          obj['metadata'] = _ApiClient["default"].convertToType(data['metadata'], Object);
         }
 
         if (data.hasOwnProperty('upsert')) {
@@ -76,7 +76,7 @@ var UpdateChannelMetadataData = /*#__PURE__*/function () {
 }();
 /**
  * Specifies a `JSON` object which has key-value items to update. A key can't contain a comma (,) and its length is limited to 128 characters. A value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
- * @member {String} metadata
+ * @member {Object} metadata
  */
 
 

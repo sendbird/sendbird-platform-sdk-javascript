@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RegisterAsOperatorToChannelsWithCustomChannelTypesData model module.
  * @module model/RegisterAsOperatorToChannelsWithCustomChannelTypesData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var RegisterAsOperatorToChannelsWithCustomChannelTypesData = /*#__PURE__*/function () {
   /**

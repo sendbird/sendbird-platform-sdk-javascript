@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _InlineResponse = _interopRequireDefault(require("./InlineResponse2001"));
+var _OcDeleteChannelByUrl200Response = _interopRequireDefault(require("./OcDeleteChannelByUrl200Response"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdMessageResponseUser model module.
  * @module model/SendBirdMessageResponseUser
- * @version 1.0.3
+ * @version 1.0.7
  */
 var SendBirdMessageResponseUser = /*#__PURE__*/function () {
   /**
@@ -81,7 +81,7 @@ var SendBirdMessageResponseUser = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('metadata')) {
-          obj['metadata'] = _InlineResponse["default"].constructFromObject(data['metadata']);
+          obj['metadata'] = _OcDeleteChannelByUrl200Response["default"].constructFromObject(data['metadata']);
         }
       }
 
@@ -123,7 +123,7 @@ SendBirdMessageResponseUser.prototype['nickname'] = undefined;
 
 SendBirdMessageResponseUser.prototype['profile_url'] = undefined;
 /**
- * @member {module:model/InlineResponse2001} metadata
+ * @member {module:model/OcDeleteChannelByUrl200Response} metadata
  */
 
 SendBirdMessageResponseUser.prototype['metadata'] = undefined;

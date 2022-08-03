@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateFcmPushConfigurationByIdData model module.
  * @module model/UpdateFcmPushConfigurationByIdData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class UpdateFcmPushConfigurationByIdData {
     /**

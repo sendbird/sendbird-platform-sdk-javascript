@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BanFromChannelsWithCustomChannelTypesData model module.
  * @module model/BanFromChannelsWithCustomChannelTypesData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var BanFromChannelsWithCustomChannelTypesData = /*#__PURE__*/function () {
   /**

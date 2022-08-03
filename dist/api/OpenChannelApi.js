@@ -7,9 +7,9 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2001"));
-
 var _OcCreateChannelData = _interopRequireDefault(require("../model/OcCreateChannelData"));
+
+var _OcDeleteChannelByUrl200Response = _interopRequireDefault(require("../model/OcDeleteChannelByUrl200Response"));
 
 var _OcListChannelsResponse = _interopRequireDefault(require("../model/OcListChannelsResponse"));
 
@@ -34,7 +34,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * OpenChannel service.
 * @module api/OpenChannelApi
-* @version 1.0.3
+* @version 1.0.7
 */
 var OpenChannelApi = /*#__PURE__*/function () {
   /**
@@ -168,7 +168,7 @@ var OpenChannelApi = /*#__PURE__*/function () {
      * ## Delete a channel  Deletes an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-delete-a-channel ----------------------------
      * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
 
   }, {
@@ -196,7 +196,7 @@ var OpenChannelApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse["default"];
+      var returnType = _OcDeleteChannelByUrl200Response["default"];
       return this.apiClient.callApi('/v3/open_channels/{channel_url}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -204,7 +204,7 @@ var OpenChannelApi = /*#__PURE__*/function () {
      * ## Delete a channel  Deletes an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-delete-a-channel ----------------------------
      * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
 
   }, {
@@ -413,7 +413,7 @@ var OpenChannelApi = /*#__PURE__*/function () {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/OcRegisterOperatorsData} opts.ocRegisterOperatorsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
 
   }, {
@@ -442,7 +442,7 @@ var OpenChannelApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse["default"];
+      var returnType = _OcDeleteChannelByUrl200Response["default"];
       return this.apiClient.callApi('/v3/open_channels/{channel_url}/operators', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -452,7 +452,7 @@ var OpenChannelApi = /*#__PURE__*/function () {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/OcRegisterOperatorsData} opts.ocRegisterOperatorsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
 
   }, {

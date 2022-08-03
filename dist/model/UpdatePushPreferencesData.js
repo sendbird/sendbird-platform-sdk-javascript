@@ -18,13 +18,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdatePushPreferencesData model module.
  * @module model/UpdatePushPreferencesData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var UpdatePushPreferencesData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdatePushPreferencesData</code>.
    * @alias module:model/UpdatePushPreferencesData
-   * @param userId {String} Specifies the unique ID of the target user.
    * @param pushTriggerOption {String} Determines the type of push notification trigger to apply to the user's joined group channels. Valid values are the following:<br />- all (default): when disconnected from Sendbird server, the user receives notifications for all new messages including mentioned messages the user has been mentioned in.<br />- mention_only: when disconnected from Sendbird server, the user only receives notifications for messages the user has been mentioned in.<br />- off: the user doesn't receive any notifications.
    * @param doNotDisturb {Boolean} Determines whether to pause notification messages for the user during a specific time of day. (Default: false)
    * @param startHour {Number} Specifies the hour to start pausing the notifications for Do Not Disturb of the user.
@@ -39,10 +38,10 @@ var UpdatePushPreferencesData = /*#__PURE__*/function () {
    * @param timezone {String} Specifies the timezone to be applied to push preferences with a value such as UTC, Asia/Seoul, Europe/London, etc.
    * @param pushSound {String} Specifies the name of a sound file to be played when a push notification is delivered to your client app.
    */
-  function UpdatePushPreferencesData(userId, pushTriggerOption, doNotDisturb, startHour, startMin, endHour, endMin, snoozeEnabled, snoozeStartTs, snoozeEndTs, blockPushFromBots, pushBlockedBotIds, timezone, pushSound) {
+  function UpdatePushPreferencesData(pushTriggerOption, doNotDisturb, startHour, startMin, endHour, endMin, snoozeEnabled, snoozeStartTs, snoozeEndTs, blockPushFromBots, pushBlockedBotIds, timezone, pushSound) {
     _classCallCheck(this, UpdatePushPreferencesData);
 
-    UpdatePushPreferencesData.initialize(this, userId, pushTriggerOption, doNotDisturb, startHour, startMin, endHour, endMin, snoozeEnabled, snoozeStartTs, snoozeEndTs, blockPushFromBots, pushBlockedBotIds, timezone, pushSound);
+    UpdatePushPreferencesData.initialize(this, pushTriggerOption, doNotDisturb, startHour, startMin, endHour, endMin, snoozeEnabled, snoozeStartTs, snoozeEndTs, blockPushFromBots, pushBlockedBotIds, timezone, pushSound);
   }
   /**
    * Initializes the fields of this object.
@@ -53,8 +52,7 @@ var UpdatePushPreferencesData = /*#__PURE__*/function () {
 
   _createClass(UpdatePushPreferencesData, null, [{
     key: "initialize",
-    value: function initialize(obj, userId, pushTriggerOption, doNotDisturb, startHour, startMin, endHour, endMin, snoozeEnabled, snoozeStartTs, snoozeEndTs, blockPushFromBots, pushBlockedBotIds, timezone, pushSound) {
-      obj['user_id'] = userId;
+    value: function initialize(obj, pushTriggerOption, doNotDisturb, startHour, startMin, endHour, endMin, snoozeEnabled, snoozeStartTs, snoozeEndTs, blockPushFromBots, pushBlockedBotIds, timezone, pushSound) {
       obj['push_trigger_option'] = pushTriggerOption;
       obj['do_not_disturb'] = doNotDisturb;
       obj['start_hour'] = startHour;
@@ -82,10 +80,6 @@ var UpdatePushPreferencesData = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new UpdatePushPreferencesData();
-
-        if (data.hasOwnProperty('user_id')) {
-          obj['user_id'] = _ApiClient["default"].convertToType(data['user_id'], 'String');
-        }
 
         if (data.hasOwnProperty('push_trigger_option')) {
           obj['push_trigger_option'] = _ApiClient["default"].convertToType(data['push_trigger_option'], 'String');
@@ -147,16 +141,10 @@ var UpdatePushPreferencesData = /*#__PURE__*/function () {
   return UpdatePushPreferencesData;
 }();
 /**
- * Specifies the unique ID of the target user.
- * @member {String} user_id
- */
-
-
-UpdatePushPreferencesData.prototype['user_id'] = undefined;
-/**
  * Determines the type of push notification trigger to apply to the user's joined group channels. Valid values are the following:<br />- all (default): when disconnected from Sendbird server, the user receives notifications for all new messages including mentioned messages the user has been mentioned in.<br />- mention_only: when disconnected from Sendbird server, the user only receives notifications for messages the user has been mentioned in.<br />- off: the user doesn't receive any notifications.
  * @member {String} push_trigger_option
  */
+
 
 UpdatePushPreferencesData.prototype['push_trigger_option'] = undefined;
 /**

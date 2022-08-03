@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdatePushPreferencesForChannelByUrlResponse model module.
  * @module model/UpdatePushPreferencesForChannelByUrlResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var UpdatePushPreferencesForChannelByUrlResponse = /*#__PURE__*/function () {
   /**

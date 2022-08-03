@@ -16,18 +16,17 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateUserMetadataData model module.
  * @module model/CreateUserMetadataData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class CreateUserMetadataData {
     /**
      * Constructs a new <code>CreateUserMetadataData</code>.
      * @alias module:model/CreateUserMetadataData
-     * @param userId {String} Specifies the ID of the user to store the metadata in.
-     * @param metadata {String} Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
+     * @param metadata {Object} Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
      */
-    constructor(userId, metadata) { 
+    constructor(metadata) { 
         
-        CreateUserMetadataData.initialize(this, userId, metadata);
+        CreateUserMetadataData.initialize(this, metadata);
     }
 
     /**
@@ -35,8 +34,7 @@ class CreateUserMetadataData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, userId, metadata) { 
-        obj['user_id'] = userId;
+    static initialize(obj, metadata) { 
         obj['metadata'] = metadata;
     }
 
@@ -51,11 +49,8 @@ class CreateUserMetadataData {
         if (data) {
             obj = obj || new CreateUserMetadataData();
 
-            if (data.hasOwnProperty('user_id')) {
-                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
-            }
             if (data.hasOwnProperty('metadata')) {
-                obj['metadata'] = ApiClient.convertToType(data['metadata'], 'String');
+                obj['metadata'] = ApiClient.convertToType(data['metadata'], Object);
             }
         }
         return obj;
@@ -65,14 +60,8 @@ class CreateUserMetadataData {
 }
 
 /**
- * Specifies the ID of the user to store the metadata in.
- * @member {String} user_id
- */
-CreateUserMetadataData.prototype['user_id'] = undefined;
-
-/**
  * Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
- * @member {String} metadata
+ * @member {Object} metadata
  */
 CreateUserMetadataData.prototype['metadata'] = undefined;
 

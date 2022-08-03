@@ -9,6 +9,8 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
 var _SendBirdGroupChannel = _interopRequireDefault(require("./SendBirdGroupChannel"));
 
+var _SendBirdGroupChannelChannel = _interopRequireDefault(require("./SendBirdGroupChannelChannel"));
+
 var _SendBirdGroupChannelCreatedBy = _interopRequireDefault(require("./SendBirdGroupChannelCreatedBy"));
 
 var _SendBirdGroupChannelDisappearingMessage = _interopRequireDefault(require("./SendBirdGroupChannelDisappearingMessage"));
@@ -34,7 +36,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdChannelResponse model module.
  * @module model/SendBirdChannelResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var SendBirdChannelResponse = /*#__PURE__*/function () {
   /**
@@ -250,6 +252,10 @@ var SendBirdChannelResponse = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('unread_message_count')) {
           obj['unread_message_count'] = _ApiClient["default"].convertToType(data['unread_message_count'], 'Number');
+        }
+
+        if (data.hasOwnProperty('channel')) {
+          obj['channel'] = _SendBirdGroupChannelChannel["default"].constructFromObject(data['channel']);
         }
 
         if (data.hasOwnProperty('is_dynamic_partitioned')) {
@@ -484,6 +490,11 @@ SendBirdChannelResponse.prototype['unread_mention_count'] = undefined;
 
 SendBirdChannelResponse.prototype['unread_message_count'] = undefined;
 /**
+ * @member {module:model/SendBirdGroupChannelChannel} channel
+ */
+
+SendBirdChannelResponse.prototype['channel'] = undefined;
+/**
  * @member {Boolean} is_dynamic_partitioned
  */
 
@@ -708,7 +719,12 @@ _SendBirdGroupChannel["default"].prototype['unread_mention_count'] = undefined;
  * @member {Number} unread_message_count
  */
 
-_SendBirdGroupChannel["default"].prototype['unread_message_count'] = undefined; // Implement SendBirdOpenChannel interface:
+_SendBirdGroupChannel["default"].prototype['unread_message_count'] = undefined;
+/**
+ * @member {module:model/SendBirdGroupChannelChannel} channel
+ */
+
+_SendBirdGroupChannel["default"].prototype['channel'] = undefined; // Implement SendBirdOpenChannel interface:
 
 /**
  * @member {String} name

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewDefaultChannelInvitationPreferenceResponse model module.
  * @module model/ViewDefaultChannelInvitationPreferenceResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ViewDefaultChannelInvitationPreferenceResponse = /*#__PURE__*/function () {
   /**

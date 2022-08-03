@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus from './GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus';
+import GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner from './GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner';
 
 /**
  * The GetDetailedOpenStatusOfAnnouncementByIdResponse model module.
  * @module model/GetDetailedOpenStatusOfAnnouncementByIdResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class GetDetailedOpenStatusOfAnnouncementByIdResponse {
     /**
@@ -49,7 +49,7 @@ class GetDetailedOpenStatusOfAnnouncementByIdResponse {
             obj = obj || new GetDetailedOpenStatusOfAnnouncementByIdResponse();
 
             if (data.hasOwnProperty('open_status')) {
-                obj['open_status'] = ApiClient.convertToType(data['open_status'], [GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus]);
+                obj['open_status'] = ApiClient.convertToType(data['open_status'], [GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -62,7 +62,7 @@ class GetDetailedOpenStatusOfAnnouncementByIdResponse {
 }
 
 /**
- * @member {Array.<module:model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus>} open_status
+ * @member {Array.<module:model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner>} open_status
  */
 GetDetailedOpenStatusOfAnnouncementByIdResponse.prototype['open_status'] = undefined;
 

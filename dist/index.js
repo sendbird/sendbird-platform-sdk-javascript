@@ -15,10 +15,10 @@ Object.defineProperty(exports, "AddApnsPushConfigurationResponse", {
     return _AddApnsPushConfigurationResponse["default"];
   }
 });
-Object.defineProperty(exports, "AddApnsPushConfigurationResponsePushConfigurations", {
+Object.defineProperty(exports, "AddApnsPushConfigurationResponsePushConfigurationsInner", {
   enumerable: true,
   get: function get() {
-    return _AddApnsPushConfigurationResponsePushConfigurations["default"];
+    return _AddApnsPushConfigurationResponsePushConfigurationsInner["default"];
   }
 });
 Object.defineProperty(exports, "AddEmojiCategoriesResponse", {
@@ -27,10 +27,10 @@ Object.defineProperty(exports, "AddEmojiCategoriesResponse", {
     return _AddEmojiCategoriesResponse["default"];
   }
 });
-Object.defineProperty(exports, "AddEmojiCategoriesResponseEmojiCategories", {
+Object.defineProperty(exports, "AddEmojiCategoriesResponseEmojiCategoriesInner", {
   enumerable: true,
   get: function get() {
-    return _AddEmojiCategoriesResponseEmojiCategories["default"];
+    return _AddEmojiCategoriesResponseEmojiCategoriesInner["default"];
   }
 });
 Object.defineProperty(exports, "AddEmojisData", {
@@ -69,10 +69,10 @@ Object.defineProperty(exports, "AddFcmPushConfigurationResponse", {
     return _AddFcmPushConfigurationResponse["default"];
   }
 });
-Object.defineProperty(exports, "AddFcmPushConfigurationResponsePushConfigurations", {
+Object.defineProperty(exports, "AddFcmPushConfigurationResponsePushConfigurationsInner", {
   enumerable: true,
   get: function get() {
-    return _AddFcmPushConfigurationResponsePushConfigurations["default"];
+    return _AddFcmPushConfigurationResponsePushConfigurationsInner["default"];
   }
 });
 Object.defineProperty(exports, "AddHmsPushConfigurationData", {
@@ -87,10 +87,10 @@ Object.defineProperty(exports, "AddHmsPushConfigurationResponse", {
     return _AddHmsPushConfigurationResponse["default"];
   }
 });
-Object.defineProperty(exports, "AddHmsPushConfigurationResponsePushConfigurations", {
+Object.defineProperty(exports, "AddHmsPushConfigurationResponsePushConfigurationsInner", {
   enumerable: true,
   get: function get() {
-    return _AddHmsPushConfigurationResponsePushConfigurations["default"];
+    return _AddHmsPushConfigurationResponsePushConfigurationsInner["default"];
   }
 });
 Object.defineProperty(exports, "AddIpToWhitelistData", {
@@ -157,6 +157,12 @@ Object.defineProperty(exports, "BanUsersInChannelsWithCustomChannelTypeData", {
   enumerable: true,
   get: function get() {
     return _BanUsersInChannelsWithCustomChannelTypeData["default"];
+  }
+});
+Object.defineProperty(exports, "BanUsersInChannelsWithCustomChannelTypeDataBannedListInner", {
+  enumerable: true,
+  get: function get() {
+    return _BanUsersInChannelsWithCustomChannelTypeDataBannedListInner["default"];
   }
 });
 Object.defineProperty(exports, "Blob", {
@@ -519,10 +525,10 @@ Object.defineProperty(exports, "GetDetailedOpenStatusOfAnnouncementByIdResponse"
     return _GetDetailedOpenStatusOfAnnouncementByIdResponse["default"];
   }
 });
-Object.defineProperty(exports, "GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus", {
+Object.defineProperty(exports, "GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner", {
   enumerable: true,
   get: function get() {
-    return _GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus["default"];
+    return _GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner["default"];
   }
 });
 Object.defineProperty(exports, "GetStatisticsDailyResponse", {
@@ -531,10 +537,10 @@ Object.defineProperty(exports, "GetStatisticsDailyResponse", {
     return _GetStatisticsDailyResponse["default"];
   }
 });
-Object.defineProperty(exports, "GetStatisticsDailyResponseStatistics", {
+Object.defineProperty(exports, "GetStatisticsDailyResponseStatisticsInner", {
   enumerable: true,
   get: function get() {
-    return _GetStatisticsDailyResponseStatistics["default"];
+    return _GetStatisticsDailyResponseStatisticsInner["default"];
   }
 });
 Object.defineProperty(exports, "GetStatisticsMonthlyResponse", {
@@ -553,18 +559,6 @@ Object.defineProperty(exports, "GroupChannelApi", {
   enumerable: true,
   get: function get() {
     return _GroupChannelApi["default"];
-  }
-});
-Object.defineProperty(exports, "InlineResponse200", {
-  enumerable: true,
-  get: function get() {
-    return _InlineResponse["default"];
-  }
-});
-Object.defineProperty(exports, "InlineResponse2001", {
-  enumerable: true,
-  get: function get() {
-    return _InlineResponse2["default"];
   }
 });
 Object.defineProperty(exports, "JoinChannelsData", {
@@ -591,16 +585,16 @@ Object.defineProperty(exports, "ListAllEmojisAndEmojiCategoriesResponse", {
     return _ListAllEmojisAndEmojiCategoriesResponse["default"];
   }
 });
-Object.defineProperty(exports, "ListAllEmojisAndEmojiCategoriesResponseEmojiCategories", {
+Object.defineProperty(exports, "ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner", {
   enumerable: true,
   get: function get() {
-    return _ListAllEmojisAndEmojiCategoriesResponseEmojiCategories["default"];
+    return _ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner["default"];
   }
 });
-Object.defineProperty(exports, "ListAllEmojisAndEmojiCategoriesResponseEmojis", {
+Object.defineProperty(exports, "ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner", {
   enumerable: true,
   get: function get() {
-    return _ListAllEmojisAndEmojiCategoriesResponseEmojis["default"];
+    return _ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner["default"];
   }
 });
 Object.defineProperty(exports, "ListAnnouncementGroupsResponse", {
@@ -615,10 +609,10 @@ Object.defineProperty(exports, "ListAnnouncementsResponse", {
     return _ListAnnouncementsResponse["default"];
   }
 });
-Object.defineProperty(exports, "ListAnnouncementsResponseAnnouncements", {
+Object.defineProperty(exports, "ListAnnouncementsResponseAnnouncementsInner", {
   enumerable: true,
   get: function get() {
-    return _ListAnnouncementsResponseAnnouncements["default"];
+    return _ListAnnouncementsResponseAnnouncementsInner["default"];
   }
 });
 Object.defineProperty(exports, "ListBannedChannelsResponse", {
@@ -627,10 +621,10 @@ Object.defineProperty(exports, "ListBannedChannelsResponse", {
     return _ListBannedChannelsResponse["default"];
   }
 });
-Object.defineProperty(exports, "ListBannedChannelsResponseBannedChannels", {
+Object.defineProperty(exports, "ListBannedChannelsResponseBannedChannelsInner", {
   enumerable: true,
   get: function get() {
-    return _ListBannedChannelsResponseBannedChannels["default"];
+    return _ListBannedChannelsResponseBannedChannelsInner["default"];
   }
 });
 Object.defineProperty(exports, "ListBlockedUsersResponse", {
@@ -645,10 +639,10 @@ Object.defineProperty(exports, "ListBotsResponse", {
     return _ListBotsResponse["default"];
   }
 });
-Object.defineProperty(exports, "ListBotsResponseBots", {
+Object.defineProperty(exports, "ListBotsResponseBotsInner", {
   enumerable: true,
   get: function get() {
-    return _ListBotsResponseBots["default"];
+    return _ListBotsResponseBotsInner["default"];
   }
 });
 Object.defineProperty(exports, "ListDataExportsByMessageChannelOrUserResponse", {
@@ -657,16 +651,16 @@ Object.defineProperty(exports, "ListDataExportsByMessageChannelOrUserResponse", 
     return _ListDataExportsByMessageChannelOrUserResponse["default"];
   }
 });
-Object.defineProperty(exports, "ListDataExportsByMessageChannelOrUserResponseExportedData", {
+Object.defineProperty(exports, "ListDataExportsByMessageChannelOrUserResponseExportedDataInner", {
   enumerable: true,
   get: function get() {
-    return _ListDataExportsByMessageChannelOrUserResponseExportedData["default"];
+    return _ListDataExportsByMessageChannelOrUserResponseExportedDataInner["default"];
   }
 });
-Object.defineProperty(exports, "ListDataExportsByMessageChannelOrUserResponseFile", {
+Object.defineProperty(exports, "ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile", {
   enumerable: true,
   get: function get() {
-    return _ListDataExportsByMessageChannelOrUserResponseFile["default"];
+    return _ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile["default"];
   }
 });
 Object.defineProperty(exports, "ListEmojisResponse", {
@@ -681,10 +675,10 @@ Object.defineProperty(exports, "ListGdprRequestsResponse", {
     return _ListGdprRequestsResponse["default"];
   }
 });
-Object.defineProperty(exports, "ListGdprRequestsResponseRequests", {
+Object.defineProperty(exports, "ListGdprRequestsResponseRequestsInner", {
   enumerable: true,
   get: function get() {
-    return _ListGdprRequestsResponseRequests["default"];
+    return _ListGdprRequestsResponseRequestsInner["default"];
   }
 });
 Object.defineProperty(exports, "ListMessagesResponse", {
@@ -693,34 +687,40 @@ Object.defineProperty(exports, "ListMessagesResponse", {
     return _ListMessagesResponse["default"];
   }
 });
-Object.defineProperty(exports, "ListMessagesResponseMessages", {
+Object.defineProperty(exports, "ListMessagesResponseMessagesInner", {
   enumerable: true,
   get: function get() {
-    return _ListMessagesResponseMessages["default"];
+    return _ListMessagesResponseMessagesInner["default"];
   }
 });
-Object.defineProperty(exports, "ListMessagesResponseOgTag", {
+Object.defineProperty(exports, "ListMessagesResponseMessagesInnerOgTag", {
   enumerable: true,
   get: function get() {
-    return _ListMessagesResponseOgTag["default"];
+    return _ListMessagesResponseMessagesInnerOgTag["default"];
   }
 });
-Object.defineProperty(exports, "ListMessagesResponseOgTagOgImage", {
+Object.defineProperty(exports, "ListMessagesResponseMessagesInnerOgTagOgImage", {
   enumerable: true,
   get: function get() {
-    return _ListMessagesResponseOgTagOgImage["default"];
+    return _ListMessagesResponseMessagesInnerOgTagOgImage["default"];
   }
 });
-Object.defineProperty(exports, "ListMessagesResponseSortedMetaarray", {
+Object.defineProperty(exports, "ListMessagesResponseMessagesInnerSortedMetaarrayInner", {
   enumerable: true,
   get: function get() {
-    return _ListMessagesResponseSortedMetaarray["default"];
+    return _ListMessagesResponseMessagesInnerSortedMetaarrayInner["default"];
   }
 });
 Object.defineProperty(exports, "ListMutedChannelsResponse", {
   enumerable: true,
   get: function get() {
     return _ListMutedChannelsResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ListMutedUsersInChannelsWithCustomChannelType200Response", {
+  enumerable: true,
+  get: function get() {
+    return _ListMutedUsersInChannelsWithCustomChannelType200Response["default"];
   }
 });
 Object.defineProperty(exports, "ListMyGroupChannelsResponse", {
@@ -735,10 +735,10 @@ Object.defineProperty(exports, "ListPushConfigurationsResponse", {
     return _ListPushConfigurationsResponse["default"];
   }
 });
-Object.defineProperty(exports, "ListPushConfigurationsResponsePushConfigurations", {
+Object.defineProperty(exports, "ListPushConfigurationsResponsePushConfigurationsInner", {
   enumerable: true,
   get: function get() {
-    return _ListPushConfigurationsResponsePushConfigurations["default"];
+    return _ListPushConfigurationsResponsePushConfigurationsInner["default"];
   }
 });
 Object.defineProperty(exports, "ListPushNotificationContentTemplatesResponse", {
@@ -747,16 +747,16 @@ Object.defineProperty(exports, "ListPushNotificationContentTemplatesResponse", {
     return _ListPushNotificationContentTemplatesResponse["default"];
   }
 });
-Object.defineProperty(exports, "ListPushNotificationContentTemplatesResponsePushMessageTemplates", {
+Object.defineProperty(exports, "ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner", {
   enumerable: true,
   get: function get() {
-    return _ListPushNotificationContentTemplatesResponsePushMessageTemplates["default"];
+    return _ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner["default"];
   }
 });
-Object.defineProperty(exports, "ListPushNotificationContentTemplatesResponseTemplate", {
+Object.defineProperty(exports, "ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate", {
   enumerable: true,
   get: function get() {
-    return _ListPushNotificationContentTemplatesResponseTemplate["default"];
+    return _ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate["default"];
   }
 });
 Object.defineProperty(exports, "ListReactionsOfMessageResponse", {
@@ -783,10 +783,10 @@ Object.defineProperty(exports, "ListReportsOnMessageByIdResponse", {
     return _ListReportsOnMessageByIdResponse["default"];
   }
 });
-Object.defineProperty(exports, "ListReportsOnMessageByIdResponseReportLogs", {
+Object.defineProperty(exports, "ListReportsOnMessageByIdResponseReportLogsInner", {
   enumerable: true,
   get: function get() {
-    return _ListReportsOnMessageByIdResponseReportLogs["default"];
+    return _ListReportsOnMessageByIdResponseReportLogsInner["default"];
   }
 });
 Object.defineProperty(exports, "ListReportsOnUserByIdResponse", {
@@ -801,10 +801,10 @@ Object.defineProperty(exports, "ListReportsResponse", {
     return _ListReportsResponse["default"];
   }
 });
-Object.defineProperty(exports, "ListReportsResponseReportLogs", {
+Object.defineProperty(exports, "ListReportsResponseReportLogsInner", {
   enumerable: true,
   get: function get() {
-    return _ListReportsResponseReportLogs["default"];
+    return _ListReportsResponseReportLogsInner["default"];
   }
 });
 Object.defineProperty(exports, "ListSecondaryApiTokensResponse", {
@@ -813,10 +813,10 @@ Object.defineProperty(exports, "ListSecondaryApiTokensResponse", {
     return _ListSecondaryApiTokensResponse["default"];
   }
 });
-Object.defineProperty(exports, "ListSecondaryApiTokensResponseApiTokens", {
+Object.defineProperty(exports, "ListSecondaryApiTokensResponseApiTokensInner", {
   enumerable: true,
   get: function get() {
-    return _ListSecondaryApiTokensResponseApiTokens["default"];
+    return _ListSecondaryApiTokensResponseApiTokensInner["default"];
   }
 });
 Object.defineProperty(exports, "ListUsersResponse", {
@@ -879,6 +879,12 @@ Object.defineProperty(exports, "OcCreateChannelData", {
     return _OcCreateChannelData["default"];
   }
 });
+Object.defineProperty(exports, "OcDeleteChannelByUrl200Response", {
+  enumerable: true,
+  get: function get() {
+    return _OcDeleteChannelByUrl200Response["default"];
+  }
+});
 Object.defineProperty(exports, "OcFreezeChannelData", {
   enumerable: true,
   get: function get() {
@@ -891,10 +897,10 @@ Object.defineProperty(exports, "OcListBannedUsersResponse", {
     return _OcListBannedUsersResponse["default"];
   }
 });
-Object.defineProperty(exports, "OcListBannedUsersResponseBannedList", {
+Object.defineProperty(exports, "OcListBannedUsersResponseBannedListInner", {
   enumerable: true,
   get: function get() {
-    return _OcListBannedUsersResponseBannedList["default"];
+    return _OcListBannedUsersResponseBannedListInner["default"];
   }
 });
 Object.defineProperty(exports, "OcListChannelsResponse", {
@@ -1143,12 +1149,6 @@ Object.defineProperty(exports, "ScheduleAnnouncementResponseMessage", {
     return _ScheduleAnnouncementResponseMessage["default"];
   }
 });
-Object.defineProperty(exports, "SendBirdAdditionalProperties", {
-  enumerable: true,
-  get: function get() {
-    return _SendBirdAdditionalProperties["default"];
-  }
-});
 Object.defineProperty(exports, "SendBirdAdminMessage", {
   enumerable: true,
   get: function get() {
@@ -1203,6 +1203,12 @@ Object.defineProperty(exports, "SendBirdGroupChannel", {
     return _SendBirdGroupChannel["default"];
   }
 });
+Object.defineProperty(exports, "SendBirdGroupChannelChannel", {
+  enumerable: true,
+  get: function get() {
+    return _SendBirdGroupChannelChannel["default"];
+  }
+});
 Object.defineProperty(exports, "SendBirdGroupChannelCollection", {
   enumerable: true,
   get: function get() {
@@ -1245,10 +1251,10 @@ Object.defineProperty(exports, "SendBirdMessageResponse", {
     return _SendBirdMessageResponse["default"];
   }
 });
-Object.defineProperty(exports, "SendBirdMessageResponseMentionedUsers", {
+Object.defineProperty(exports, "SendBirdMessageResponseMentionedUsersInner", {
   enumerable: true,
   get: function get() {
-    return _SendBirdMessageResponseMentionedUsers["default"];
+    return _SendBirdMessageResponseMentionedUsersInner["default"];
   }
 });
 Object.defineProperty(exports, "SendBirdMessageResponseUser", {
@@ -1371,10 +1377,52 @@ Object.defineProperty(exports, "SetDomainFilterData", {
     return _SetDomainFilterData["default"];
   }
 });
+Object.defineProperty(exports, "SetDomainFilterDataDomainFilter", {
+  enumerable: true,
+  get: function get() {
+    return _SetDomainFilterDataDomainFilter["default"];
+  }
+});
+Object.defineProperty(exports, "SetDomainFilterDataImageModeration", {
+  enumerable: true,
+  get: function get() {
+    return _SetDomainFilterDataImageModeration["default"];
+  }
+});
+Object.defineProperty(exports, "SetDomainFilterDataImageModerationLimits", {
+  enumerable: true,
+  get: function get() {
+    return _SetDomainFilterDataImageModerationLimits["default"];
+  }
+});
+Object.defineProperty(exports, "SetDomainFilterDataProfanityFilter", {
+  enumerable: true,
+  get: function get() {
+    return _SetDomainFilterDataProfanityFilter["default"];
+  }
+});
+Object.defineProperty(exports, "SetDomainFilterDataProfanityFilterRegexFiltersInner", {
+  enumerable: true,
+  get: function get() {
+    return _SetDomainFilterDataProfanityFilterRegexFiltersInner["default"];
+  }
+});
+Object.defineProperty(exports, "SetDomainFilterDataProfanityTriggeredModeration", {
+  enumerable: true,
+  get: function get() {
+    return _SetDomainFilterDataProfanityTriggeredModeration["default"];
+  }
+});
 Object.defineProperty(exports, "StatisticsApi", {
   enumerable: true,
   get: function get() {
     return _StatisticsApi["default"];
+  }
+});
+Object.defineProperty(exports, "TranslateMessageIntoOtherLanguagesData", {
+  enumerable: true,
+  get: function get() {
+    return _TranslateMessageIntoOtherLanguagesData["default"];
   }
 });
 Object.defineProperty(exports, "UpdateAnnouncementByIdData", {
@@ -1491,10 +1539,10 @@ Object.defineProperty(exports, "UpdateExtraDataInMessageResponse", {
     return _UpdateExtraDataInMessageResponse["default"];
   }
 });
-Object.defineProperty(exports, "UpdateExtraDataInMessageResponseSortedMetaarray", {
+Object.defineProperty(exports, "UpdateExtraDataInMessageResponseSortedMetaarrayInner", {
   enumerable: true,
   get: function get() {
-    return _UpdateExtraDataInMessageResponseSortedMetaarray["default"];
+    return _UpdateExtraDataInMessageResponseSortedMetaarrayInner["default"];
   }
 });
 Object.defineProperty(exports, "UpdateFcmPushConfigurationByIdData", {
@@ -1599,48 +1647,6 @@ Object.defineProperty(exports, "UserApi", {
     return _UserApi["default"];
   }
 });
-Object.defineProperty(exports, "V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList", {
-  enumerable: true,
-  get: function get() {
-    return _V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList["default"];
-  }
-});
-Object.defineProperty(exports, "V3ApplicationsSettingsGlobalCustomTypeDomainFilter", {
-  enumerable: true,
-  get: function get() {
-    return _V3ApplicationsSettingsGlobalCustomTypeDomainFilter["default"];
-  }
-});
-Object.defineProperty(exports, "V3ApplicationsSettingsGlobalCustomTypeImageModeration", {
-  enumerable: true,
-  get: function get() {
-    return _V3ApplicationsSettingsGlobalCustomTypeImageModeration["default"];
-  }
-});
-Object.defineProperty(exports, "V3ApplicationsSettingsGlobalCustomTypeImageModerationLimits", {
-  enumerable: true,
-  get: function get() {
-    return _V3ApplicationsSettingsGlobalCustomTypeImageModerationLimits["default"];
-  }
-});
-Object.defineProperty(exports, "V3ApplicationsSettingsGlobalCustomTypeProfanityFilter", {
-  enumerable: true,
-  get: function get() {
-    return _V3ApplicationsSettingsGlobalCustomTypeProfanityFilter["default"];
-  }
-});
-Object.defineProperty(exports, "V3ApplicationsSettingsGlobalCustomTypeProfanityFilterRegexFilters", {
-  enumerable: true,
-  get: function get() {
-    return _V3ApplicationsSettingsGlobalCustomTypeProfanityFilterRegexFilters["default"];
-  }
-});
-Object.defineProperty(exports, "V3ApplicationsSettingsGlobalCustomTypeProfanityTriggeredModeration", {
-  enumerable: true,
-  get: function get() {
-    return _V3ApplicationsSettingsGlobalCustomTypeProfanityTriggeredModeration["default"];
-  }
-});
 Object.defineProperty(exports, "ViewAnnouncementByIdResponse", {
   enumerable: true,
   get: function get() {
@@ -1719,10 +1725,10 @@ Object.defineProperty(exports, "ViewNumberOfPeakConnectionsResponse", {
     return _ViewNumberOfPeakConnectionsResponse["default"];
   }
 });
-Object.defineProperty(exports, "ViewNumberOfPeakConnectionsResponsePeakConnections", {
+Object.defineProperty(exports, "ViewNumberOfPeakConnectionsResponsePeakConnectionsInner", {
   enumerable: true,
   get: function get() {
-    return _ViewNumberOfPeakConnectionsResponsePeakConnections["default"];
+    return _ViewNumberOfPeakConnectionsResponsePeakConnectionsInner["default"];
   }
 });
 Object.defineProperty(exports, "ViewNumberOfUnreadItemsResponse", {
@@ -1749,10 +1755,10 @@ Object.defineProperty(exports, "ViewPushNotificationContentTemplateResponse", {
     return _ViewPushNotificationContentTemplateResponse["default"];
   }
 });
-Object.defineProperty(exports, "ViewPushNotificationContentTemplateResponsePushMessageTemplates", {
+Object.defineProperty(exports, "ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner", {
   enumerable: true,
   get: function get() {
-    return _ViewPushNotificationContentTemplateResponsePushMessageTemplates["default"];
+    return _ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner["default"];
   }
 });
 Object.defineProperty(exports, "ViewPushPreferencesForChannelByUrlResponse", {
@@ -1785,10 +1791,16 @@ Object.defineProperty(exports, "ViewUserMetadataResponse", {
     return _ViewUserMetadataResponse["default"];
   }
 });
-Object.defineProperty(exports, "WebhooksApi", {
+Object.defineProperty(exports, "ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner", {
   enumerable: true,
   get: function get() {
-    return _WebhooksApi["default"];
+    return _ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner["default"];
+  }
+});
+Object.defineProperty(exports, "WebhookApi", {
+  enumerable: true,
+  get: function get() {
+    return _WebhookApi["default"];
   }
 });
 
@@ -1798,11 +1810,11 @@ var _AddApnsPushConfigurationData = _interopRequireDefault(require("./model/AddA
 
 var _AddApnsPushConfigurationResponse = _interopRequireDefault(require("./model/AddApnsPushConfigurationResponse"));
 
-var _AddApnsPushConfigurationResponsePushConfigurations = _interopRequireDefault(require("./model/AddApnsPushConfigurationResponsePushConfigurations"));
+var _AddApnsPushConfigurationResponsePushConfigurationsInner = _interopRequireDefault(require("./model/AddApnsPushConfigurationResponsePushConfigurationsInner"));
 
 var _AddEmojiCategoriesResponse = _interopRequireDefault(require("./model/AddEmojiCategoriesResponse"));
 
-var _AddEmojiCategoriesResponseEmojiCategories = _interopRequireDefault(require("./model/AddEmojiCategoriesResponseEmojiCategories"));
+var _AddEmojiCategoriesResponseEmojiCategoriesInner = _interopRequireDefault(require("./model/AddEmojiCategoriesResponseEmojiCategoriesInner"));
 
 var _AddEmojisData = _interopRequireDefault(require("./model/AddEmojisData"));
 
@@ -1816,13 +1828,13 @@ var _AddFcmPushConfigurationData = _interopRequireDefault(require("./model/AddFc
 
 var _AddFcmPushConfigurationResponse = _interopRequireDefault(require("./model/AddFcmPushConfigurationResponse"));
 
-var _AddFcmPushConfigurationResponsePushConfigurations = _interopRequireDefault(require("./model/AddFcmPushConfigurationResponsePushConfigurations"));
+var _AddFcmPushConfigurationResponsePushConfigurationsInner = _interopRequireDefault(require("./model/AddFcmPushConfigurationResponsePushConfigurationsInner"));
 
 var _AddHmsPushConfigurationData = _interopRequireDefault(require("./model/AddHmsPushConfigurationData"));
 
 var _AddHmsPushConfigurationResponse = _interopRequireDefault(require("./model/AddHmsPushConfigurationResponse"));
 
-var _AddHmsPushConfigurationResponsePushConfigurations = _interopRequireDefault(require("./model/AddHmsPushConfigurationResponsePushConfigurations"));
+var _AddHmsPushConfigurationResponsePushConfigurationsInner = _interopRequireDefault(require("./model/AddHmsPushConfigurationResponsePushConfigurationsInner"));
 
 var _AddIpToWhitelistData = _interopRequireDefault(require("./model/AddIpToWhitelistData"));
 
@@ -1839,6 +1851,8 @@ var _AddRegistrationOrDeviceTokenResponse = _interopRequireDefault(require("./mo
 var _BanFromChannelsWithCustomChannelTypesData = _interopRequireDefault(require("./model/BanFromChannelsWithCustomChannelTypesData"));
 
 var _BanUsersInChannelsWithCustomChannelTypeData = _interopRequireDefault(require("./model/BanUsersInChannelsWithCustomChannelTypeData"));
+
+var _BanUsersInChannelsWithCustomChannelTypeDataBannedListInner = _interopRequireDefault(require("./model/BanUsersInChannelsWithCustomChannelTypeDataBannedListInner"));
 
 var _Blob = _interopRequireDefault(require("./model/Blob"));
 
@@ -1956,19 +1970,15 @@ var _GetDetailedOpenRateOfAnnouncementGroupResponse = _interopRequireDefault(req
 
 var _GetDetailedOpenStatusOfAnnouncementByIdResponse = _interopRequireDefault(require("./model/GetDetailedOpenStatusOfAnnouncementByIdResponse"));
 
-var _GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus = _interopRequireDefault(require("./model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus"));
+var _GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner = _interopRequireDefault(require("./model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner"));
 
 var _GetStatisticsDailyResponse = _interopRequireDefault(require("./model/GetStatisticsDailyResponse"));
 
-var _GetStatisticsDailyResponseStatistics = _interopRequireDefault(require("./model/GetStatisticsDailyResponseStatistics"));
+var _GetStatisticsDailyResponseStatisticsInner = _interopRequireDefault(require("./model/GetStatisticsDailyResponseStatisticsInner"));
 
 var _GetStatisticsMonthlyResponse = _interopRequireDefault(require("./model/GetStatisticsMonthlyResponse"));
 
 var _GetStatisticsResponse = _interopRequireDefault(require("./model/GetStatisticsResponse"));
-
-var _InlineResponse = _interopRequireDefault(require("./model/InlineResponse200"));
-
-var _InlineResponse2 = _interopRequireDefault(require("./model/InlineResponse2001"));
 
 var _JoinChannelsData = _interopRequireDefault(require("./model/JoinChannelsData"));
 
@@ -1978,61 +1988,63 @@ var _LeaveMyGroupChannelsData = _interopRequireDefault(require("./model/LeaveMyG
 
 var _ListAllEmojisAndEmojiCategoriesResponse = _interopRequireDefault(require("./model/ListAllEmojisAndEmojiCategoriesResponse"));
 
-var _ListAllEmojisAndEmojiCategoriesResponseEmojiCategories = _interopRequireDefault(require("./model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategories"));
+var _ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner = _interopRequireDefault(require("./model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner"));
 
-var _ListAllEmojisAndEmojiCategoriesResponseEmojis = _interopRequireDefault(require("./model/ListAllEmojisAndEmojiCategoriesResponseEmojis"));
+var _ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner = _interopRequireDefault(require("./model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner"));
 
 var _ListAnnouncementGroupsResponse = _interopRequireDefault(require("./model/ListAnnouncementGroupsResponse"));
 
 var _ListAnnouncementsResponse = _interopRequireDefault(require("./model/ListAnnouncementsResponse"));
 
-var _ListAnnouncementsResponseAnnouncements = _interopRequireDefault(require("./model/ListAnnouncementsResponseAnnouncements"));
+var _ListAnnouncementsResponseAnnouncementsInner = _interopRequireDefault(require("./model/ListAnnouncementsResponseAnnouncementsInner"));
 
 var _ListBannedChannelsResponse = _interopRequireDefault(require("./model/ListBannedChannelsResponse"));
 
-var _ListBannedChannelsResponseBannedChannels = _interopRequireDefault(require("./model/ListBannedChannelsResponseBannedChannels"));
+var _ListBannedChannelsResponseBannedChannelsInner = _interopRequireDefault(require("./model/ListBannedChannelsResponseBannedChannelsInner"));
 
 var _ListBlockedUsersResponse = _interopRequireDefault(require("./model/ListBlockedUsersResponse"));
 
 var _ListBotsResponse = _interopRequireDefault(require("./model/ListBotsResponse"));
 
-var _ListBotsResponseBots = _interopRequireDefault(require("./model/ListBotsResponseBots"));
+var _ListBotsResponseBotsInner = _interopRequireDefault(require("./model/ListBotsResponseBotsInner"));
 
 var _ListDataExportsByMessageChannelOrUserResponse = _interopRequireDefault(require("./model/ListDataExportsByMessageChannelOrUserResponse"));
 
-var _ListDataExportsByMessageChannelOrUserResponseExportedData = _interopRequireDefault(require("./model/ListDataExportsByMessageChannelOrUserResponseExportedData"));
+var _ListDataExportsByMessageChannelOrUserResponseExportedDataInner = _interopRequireDefault(require("./model/ListDataExportsByMessageChannelOrUserResponseExportedDataInner"));
 
-var _ListDataExportsByMessageChannelOrUserResponseFile = _interopRequireDefault(require("./model/ListDataExportsByMessageChannelOrUserResponseFile"));
+var _ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile = _interopRequireDefault(require("./model/ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile"));
 
 var _ListEmojisResponse = _interopRequireDefault(require("./model/ListEmojisResponse"));
 
 var _ListGdprRequestsResponse = _interopRequireDefault(require("./model/ListGdprRequestsResponse"));
 
-var _ListGdprRequestsResponseRequests = _interopRequireDefault(require("./model/ListGdprRequestsResponseRequests"));
+var _ListGdprRequestsResponseRequestsInner = _interopRequireDefault(require("./model/ListGdprRequestsResponseRequestsInner"));
 
 var _ListMessagesResponse = _interopRequireDefault(require("./model/ListMessagesResponse"));
 
-var _ListMessagesResponseMessages = _interopRequireDefault(require("./model/ListMessagesResponseMessages"));
+var _ListMessagesResponseMessagesInner = _interopRequireDefault(require("./model/ListMessagesResponseMessagesInner"));
 
-var _ListMessagesResponseOgTag = _interopRequireDefault(require("./model/ListMessagesResponseOgTag"));
+var _ListMessagesResponseMessagesInnerOgTag = _interopRequireDefault(require("./model/ListMessagesResponseMessagesInnerOgTag"));
 
-var _ListMessagesResponseOgTagOgImage = _interopRequireDefault(require("./model/ListMessagesResponseOgTagOgImage"));
+var _ListMessagesResponseMessagesInnerOgTagOgImage = _interopRequireDefault(require("./model/ListMessagesResponseMessagesInnerOgTagOgImage"));
 
-var _ListMessagesResponseSortedMetaarray = _interopRequireDefault(require("./model/ListMessagesResponseSortedMetaarray"));
+var _ListMessagesResponseMessagesInnerSortedMetaarrayInner = _interopRequireDefault(require("./model/ListMessagesResponseMessagesInnerSortedMetaarrayInner"));
 
 var _ListMutedChannelsResponse = _interopRequireDefault(require("./model/ListMutedChannelsResponse"));
+
+var _ListMutedUsersInChannelsWithCustomChannelType200Response = _interopRequireDefault(require("./model/ListMutedUsersInChannelsWithCustomChannelType200Response"));
 
 var _ListMyGroupChannelsResponse = _interopRequireDefault(require("./model/ListMyGroupChannelsResponse"));
 
 var _ListPushConfigurationsResponse = _interopRequireDefault(require("./model/ListPushConfigurationsResponse"));
 
-var _ListPushConfigurationsResponsePushConfigurations = _interopRequireDefault(require("./model/ListPushConfigurationsResponsePushConfigurations"));
+var _ListPushConfigurationsResponsePushConfigurationsInner = _interopRequireDefault(require("./model/ListPushConfigurationsResponsePushConfigurationsInner"));
 
 var _ListPushNotificationContentTemplatesResponse = _interopRequireDefault(require("./model/ListPushNotificationContentTemplatesResponse"));
 
-var _ListPushNotificationContentTemplatesResponsePushMessageTemplates = _interopRequireDefault(require("./model/ListPushNotificationContentTemplatesResponsePushMessageTemplates"));
+var _ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner = _interopRequireDefault(require("./model/ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner"));
 
-var _ListPushNotificationContentTemplatesResponseTemplate = _interopRequireDefault(require("./model/ListPushNotificationContentTemplatesResponseTemplate"));
+var _ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate = _interopRequireDefault(require("./model/ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate"));
 
 var _ListReactionsOfMessageResponse = _interopRequireDefault(require("./model/ListReactionsOfMessageResponse"));
 
@@ -2042,17 +2054,17 @@ var _ListReportsOnChannelByUrlResponse = _interopRequireDefault(require("./model
 
 var _ListReportsOnMessageByIdResponse = _interopRequireDefault(require("./model/ListReportsOnMessageByIdResponse"));
 
-var _ListReportsOnMessageByIdResponseReportLogs = _interopRequireDefault(require("./model/ListReportsOnMessageByIdResponseReportLogs"));
+var _ListReportsOnMessageByIdResponseReportLogsInner = _interopRequireDefault(require("./model/ListReportsOnMessageByIdResponseReportLogsInner"));
 
 var _ListReportsOnUserByIdResponse = _interopRequireDefault(require("./model/ListReportsOnUserByIdResponse"));
 
 var _ListReportsResponse = _interopRequireDefault(require("./model/ListReportsResponse"));
 
-var _ListReportsResponseReportLogs = _interopRequireDefault(require("./model/ListReportsResponseReportLogs"));
+var _ListReportsResponseReportLogsInner = _interopRequireDefault(require("./model/ListReportsResponseReportLogsInner"));
 
 var _ListSecondaryApiTokensResponse = _interopRequireDefault(require("./model/ListSecondaryApiTokensResponse"));
 
-var _ListSecondaryApiTokensResponseApiTokens = _interopRequireDefault(require("./model/ListSecondaryApiTokensResponseApiTokens"));
+var _ListSecondaryApiTokensResponseApiTokensInner = _interopRequireDefault(require("./model/ListSecondaryApiTokensResponseApiTokensInner"));
 
 var _ListUsersResponse = _interopRequireDefault(require("./model/ListUsersResponse"));
 
@@ -2068,11 +2080,13 @@ var _OcBanUserResponse = _interopRequireDefault(require("./model/OcBanUserRespon
 
 var _OcCreateChannelData = _interopRequireDefault(require("./model/OcCreateChannelData"));
 
+var _OcDeleteChannelByUrl200Response = _interopRequireDefault(require("./model/OcDeleteChannelByUrl200Response"));
+
 var _OcFreezeChannelData = _interopRequireDefault(require("./model/OcFreezeChannelData"));
 
 var _OcListBannedUsersResponse = _interopRequireDefault(require("./model/OcListBannedUsersResponse"));
 
-var _OcListBannedUsersResponseBannedList = _interopRequireDefault(require("./model/OcListBannedUsersResponseBannedList"));
+var _OcListBannedUsersResponseBannedListInner = _interopRequireDefault(require("./model/OcListBannedUsersResponseBannedListInner"));
 
 var _OcListChannelsResponse = _interopRequireDefault(require("./model/OcListChannelsResponse"));
 
@@ -2150,8 +2164,6 @@ var _ScheduleAnnouncementResponseCreateChannelOptions = _interopRequireDefault(r
 
 var _ScheduleAnnouncementResponseMessage = _interopRequireDefault(require("./model/ScheduleAnnouncementResponseMessage"));
 
-var _SendBirdAdditionalProperties = _interopRequireDefault(require("./model/SendBirdAdditionalProperties"));
-
 var _SendBirdAdminMessage = _interopRequireDefault(require("./model/SendBirdAdminMessage"));
 
 var _SendBirdAppleCriticalAlertOptions = _interopRequireDefault(require("./model/SendBirdAppleCriticalAlertOptions"));
@@ -2170,6 +2182,8 @@ var _SendBirdFileMessageParams = _interopRequireDefault(require("./model/SendBir
 
 var _SendBirdGroupChannel = _interopRequireDefault(require("./model/SendBirdGroupChannel"));
 
+var _SendBirdGroupChannelChannel = _interopRequireDefault(require("./model/SendBirdGroupChannelChannel"));
+
 var _SendBirdGroupChannelCollection = _interopRequireDefault(require("./model/SendBirdGroupChannelCollection"));
 
 var _SendBirdGroupChannelCreatedBy = _interopRequireDefault(require("./model/SendBirdGroupChannelCreatedBy"));
@@ -2184,7 +2198,7 @@ var _SendBirdMessageMetaArray = _interopRequireDefault(require("./model/SendBird
 
 var _SendBirdMessageResponse = _interopRequireDefault(require("./model/SendBirdMessageResponse"));
 
-var _SendBirdMessageResponseMentionedUsers = _interopRequireDefault(require("./model/SendBirdMessageResponseMentionedUsers"));
+var _SendBirdMessageResponseMentionedUsersInner = _interopRequireDefault(require("./model/SendBirdMessageResponseMentionedUsersInner"));
 
 var _SendBirdMessageResponseUser = _interopRequireDefault(require("./model/SendBirdMessageResponseUser"));
 
@@ -2226,6 +2240,20 @@ var _SendMessageData = _interopRequireDefault(require("./model/SendMessageData")
 
 var _SetDomainFilterData = _interopRequireDefault(require("./model/SetDomainFilterData"));
 
+var _SetDomainFilterDataDomainFilter = _interopRequireDefault(require("./model/SetDomainFilterDataDomainFilter"));
+
+var _SetDomainFilterDataImageModeration = _interopRequireDefault(require("./model/SetDomainFilterDataImageModeration"));
+
+var _SetDomainFilterDataImageModerationLimits = _interopRequireDefault(require("./model/SetDomainFilterDataImageModerationLimits"));
+
+var _SetDomainFilterDataProfanityFilter = _interopRequireDefault(require("./model/SetDomainFilterDataProfanityFilter"));
+
+var _SetDomainFilterDataProfanityFilterRegexFiltersInner = _interopRequireDefault(require("./model/SetDomainFilterDataProfanityFilterRegexFiltersInner"));
+
+var _SetDomainFilterDataProfanityTriggeredModeration = _interopRequireDefault(require("./model/SetDomainFilterDataProfanityTriggeredModeration"));
+
+var _TranslateMessageIntoOtherLanguagesData = _interopRequireDefault(require("./model/TranslateMessageIntoOtherLanguagesData"));
+
 var _UpdateAnnouncementByIdData = _interopRequireDefault(require("./model/UpdateAnnouncementByIdData"));
 
 var _UpdateAnnouncementByIdResponse = _interopRequireDefault(require("./model/UpdateAnnouncementByIdResponse"));
@@ -2264,7 +2292,7 @@ var _UpdateExtraDataInMessageData = _interopRequireDefault(require("./model/Upda
 
 var _UpdateExtraDataInMessageResponse = _interopRequireDefault(require("./model/UpdateExtraDataInMessageResponse"));
 
-var _UpdateExtraDataInMessageResponseSortedMetaarray = _interopRequireDefault(require("./model/UpdateExtraDataInMessageResponseSortedMetaarray"));
+var _UpdateExtraDataInMessageResponseSortedMetaarrayInner = _interopRequireDefault(require("./model/UpdateExtraDataInMessageResponseSortedMetaarrayInner"));
 
 var _UpdateFcmPushConfigurationByIdData = _interopRequireDefault(require("./model/UpdateFcmPushConfigurationByIdData"));
 
@@ -2298,20 +2326,6 @@ var _UseDefaultEmojisData = _interopRequireDefault(require("./model/UseDefaultEm
 
 var _UseDefaultEmojisResponse = _interopRequireDefault(require("./model/UseDefaultEmojisResponse"));
 
-var _V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList = _interopRequireDefault(require("./model/V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList"));
-
-var _V3ApplicationsSettingsGlobalCustomTypeDomainFilter = _interopRequireDefault(require("./model/V3ApplicationsSettingsGlobalCustomTypeDomainFilter"));
-
-var _V3ApplicationsSettingsGlobalCustomTypeImageModeration = _interopRequireDefault(require("./model/V3ApplicationsSettingsGlobalCustomTypeImageModeration"));
-
-var _V3ApplicationsSettingsGlobalCustomTypeImageModerationLimits = _interopRequireDefault(require("./model/V3ApplicationsSettingsGlobalCustomTypeImageModerationLimits"));
-
-var _V3ApplicationsSettingsGlobalCustomTypeProfanityFilter = _interopRequireDefault(require("./model/V3ApplicationsSettingsGlobalCustomTypeProfanityFilter"));
-
-var _V3ApplicationsSettingsGlobalCustomTypeProfanityFilterRegexFilters = _interopRequireDefault(require("./model/V3ApplicationsSettingsGlobalCustomTypeProfanityFilterRegexFilters"));
-
-var _V3ApplicationsSettingsGlobalCustomTypeProfanityTriggeredModeration = _interopRequireDefault(require("./model/V3ApplicationsSettingsGlobalCustomTypeProfanityTriggeredModeration"));
-
 var _ViewAnnouncementByIdResponse = _interopRequireDefault(require("./model/ViewAnnouncementByIdResponse"));
 
 var _ViewBotByIdResponse = _interopRequireDefault(require("./model/ViewBotByIdResponse"));
@@ -2338,7 +2352,7 @@ var _ViewNumberOfMonthlyActiveUsersResponse = _interopRequireDefault(require("./
 
 var _ViewNumberOfPeakConnectionsResponse = _interopRequireDefault(require("./model/ViewNumberOfPeakConnectionsResponse"));
 
-var _ViewNumberOfPeakConnectionsResponsePeakConnections = _interopRequireDefault(require("./model/ViewNumberOfPeakConnectionsResponsePeakConnections"));
+var _ViewNumberOfPeakConnectionsResponsePeakConnectionsInner = _interopRequireDefault(require("./model/ViewNumberOfPeakConnectionsResponsePeakConnectionsInner"));
 
 var _ViewNumberOfUnreadItemsResponse = _interopRequireDefault(require("./model/ViewNumberOfUnreadItemsResponse"));
 
@@ -2348,7 +2362,7 @@ var _ViewPushConfigurationByIdResponse = _interopRequireDefault(require("./model
 
 var _ViewPushNotificationContentTemplateResponse = _interopRequireDefault(require("./model/ViewPushNotificationContentTemplateResponse"));
 
-var _ViewPushNotificationContentTemplateResponsePushMessageTemplates = _interopRequireDefault(require("./model/ViewPushNotificationContentTemplateResponsePushMessageTemplates"));
+var _ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner = _interopRequireDefault(require("./model/ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner"));
 
 var _ViewPushPreferencesForChannelByUrlResponse = _interopRequireDefault(require("./model/ViewPushPreferencesForChannelByUrlResponse"));
 
@@ -2359,6 +2373,8 @@ var _ViewSecondaryApiTokenByTokenResponse = _interopRequireDefault(require("./mo
 var _ViewTotalNumberOfMessagesInChannelResponse = _interopRequireDefault(require("./model/ViewTotalNumberOfMessagesInChannelResponse"));
 
 var _ViewUserMetadataResponse = _interopRequireDefault(require("./model/ViewUserMetadataResponse"));
+
+var _ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner = _interopRequireDefault(require("./model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner"));
 
 var _AnnouncementApi = _interopRequireDefault(require("./api/AnnouncementApi"));
 
@@ -2386,6 +2402,6 @@ var _StatisticsApi = _interopRequireDefault(require("./api/StatisticsApi"));
 
 var _UserApi = _interopRequireDefault(require("./api/UserApi"));
 
-var _WebhooksApi = _interopRequireDefault(require("./api/WebhooksApi"));
+var _WebhookApi = _interopRequireDefault(require("./api/WebhookApi"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

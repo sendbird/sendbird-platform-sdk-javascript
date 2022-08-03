@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bannedList** | [**[OcListBannedUsersResponseBannedList]**](OcListBannedUsersResponseBannedList.md) |  | [optional] 
+**bannedList** | [**[OcListBannedUsersResponseBannedListInner]**](OcListBannedUsersResponseBannedListInner.md) |  | [optional] 
 **next** | **String** |  | [optional] 
 
 

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UseDefaultEmojisResponse model module.
  * @module model/UseDefaultEmojisResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var UseDefaultEmojisResponse = /*#__PURE__*/function () {
   /**

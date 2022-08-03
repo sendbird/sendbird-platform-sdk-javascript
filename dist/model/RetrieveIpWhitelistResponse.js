@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RetrieveIpWhitelistResponse model module.
  * @module model/RetrieveIpWhitelistResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var RetrieveIpWhitelistResponse = /*#__PURE__*/function () {
   /**

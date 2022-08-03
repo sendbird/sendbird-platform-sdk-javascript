@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bannedChannels** | [**[ListBannedChannelsResponseBannedChannels]**](ListBannedChannelsResponseBannedChannels.md) |  | [optional] 
+**bannedChannels** | [**[ListBannedChannelsResponseBannedChannelsInner]**](ListBannedChannelsResponseBannedChannelsInner.md) |  | [optional] 
 **next** | **String** |  | [optional] 
 
 

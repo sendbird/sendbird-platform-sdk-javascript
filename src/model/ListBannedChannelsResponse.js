@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListBannedChannelsResponseBannedChannels from './ListBannedChannelsResponseBannedChannels';
+import ListBannedChannelsResponseBannedChannelsInner from './ListBannedChannelsResponseBannedChannelsInner';
 
 /**
  * The ListBannedChannelsResponse model module.
  * @module model/ListBannedChannelsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ListBannedChannelsResponse {
     /**
@@ -49,7 +49,7 @@ class ListBannedChannelsResponse {
             obj = obj || new ListBannedChannelsResponse();
 
             if (data.hasOwnProperty('banned_channels')) {
-                obj['banned_channels'] = ApiClient.convertToType(data['banned_channels'], [ListBannedChannelsResponseBannedChannels]);
+                obj['banned_channels'] = ApiClient.convertToType(data['banned_channels'], [ListBannedChannelsResponseBannedChannelsInner]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -62,7 +62,7 @@ class ListBannedChannelsResponse {
 }
 
 /**
- * @member {Array.<module:model/ListBannedChannelsResponseBannedChannels>} banned_channels
+ * @member {Array.<module:model/ListBannedChannelsResponseBannedChannelsInner>} banned_channels
  */
 ListBannedChannelsResponse.prototype['banned_channels'] = undefined;
 

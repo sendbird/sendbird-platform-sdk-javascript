@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import UpdateExtraDataInMessageResponseSortedMetaarray from './UpdateExtraDataInMessageResponseSortedMetaarray';
+import UpdateExtraDataInMessageResponseSortedMetaarrayInner from './UpdateExtraDataInMessageResponseSortedMetaarrayInner';
 
 /**
  * The UpdateExtraDataInMessageResponse model module.
  * @module model/UpdateExtraDataInMessageResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class UpdateExtraDataInMessageResponse {
     /**
@@ -49,7 +49,7 @@ class UpdateExtraDataInMessageResponse {
             obj = obj || new UpdateExtraDataInMessageResponse();
 
             if (data.hasOwnProperty('sorted_metaarray')) {
-                obj['sorted_metaarray'] = ApiClient.convertToType(data['sorted_metaarray'], [UpdateExtraDataInMessageResponseSortedMetaarray]);
+                obj['sorted_metaarray'] = ApiClient.convertToType(data['sorted_metaarray'], [UpdateExtraDataInMessageResponseSortedMetaarrayInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class UpdateExtraDataInMessageResponse {
 }
 
 /**
- * @member {Array.<module:model/UpdateExtraDataInMessageResponseSortedMetaarray>} sorted_metaarray
+ * @member {Array.<module:model/UpdateExtraDataInMessageResponseSortedMetaarrayInner>} sorted_metaarray
  */
 UpdateExtraDataInMessageResponse.prototype['sorted_metaarray'] = undefined;
 

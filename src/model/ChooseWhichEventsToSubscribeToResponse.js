@@ -17,7 +17,7 @@ import ChooseWhichEventsToSubscribeToResponseWebhook from './ChooseWhichEventsTo
 /**
  * The ChooseWhichEventsToSubscribeToResponse model module.
  * @module model/ChooseWhichEventsToSubscribeToResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ChooseWhichEventsToSubscribeToResponse {
     /**

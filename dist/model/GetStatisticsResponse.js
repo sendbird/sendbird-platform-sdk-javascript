@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _GetStatisticsDailyResponseStatistics = _interopRequireDefault(require("./GetStatisticsDailyResponseStatistics"));
+var _GetStatisticsDailyResponseStatisticsInner = _interopRequireDefault(require("./GetStatisticsDailyResponseStatisticsInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GetStatisticsResponse model module.
  * @module model/GetStatisticsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var GetStatisticsResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var GetStatisticsResponse = /*#__PURE__*/function () {
         obj = obj || new GetStatisticsResponse();
 
         if (data.hasOwnProperty('statistics')) {
-          obj['statistics'] = _ApiClient["default"].convertToType(data['statistics'], [_GetStatisticsDailyResponseStatistics["default"]]);
+          obj['statistics'] = _ApiClient["default"].convertToType(data['statistics'], [_GetStatisticsDailyResponseStatisticsInner["default"]]);
         }
 
         if (data.hasOwnProperty('week')) {
@@ -72,7 +72,7 @@ var GetStatisticsResponse = /*#__PURE__*/function () {
   return GetStatisticsResponse;
 }();
 /**
- * @member {Array.<module:model/GetStatisticsDailyResponseStatistics>} statistics
+ * @member {Array.<module:model/GetStatisticsDailyResponseStatisticsInner>} statistics
  */
 
 

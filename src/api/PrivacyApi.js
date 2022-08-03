@@ -21,7 +21,7 @@ import ViewGdprRequestByIdResponse from '../model/ViewGdprRequestByIdResponse';
 /**
 * Privacy service.
 * @module api/PrivacyApi
-* @version 1.0.3
+* @version 1.0.7
 */
 export default class PrivacyApi {
 

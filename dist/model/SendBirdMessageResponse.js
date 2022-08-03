@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _SendBirdMessageResponseMentionedUsers = _interopRequireDefault(require("./SendBirdMessageResponseMentionedUsers"));
+var _SendBirdMessageResponseMentionedUsersInner = _interopRequireDefault(require("./SendBirdMessageResponseMentionedUsersInner"));
 
 var _SendBirdMessageResponseUser = _interopRequireDefault(require("./SendBirdMessageResponseUser"));
 
@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdMessageResponse model module.
  * @module model/SendBirdMessageResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var SendBirdMessageResponse = /*#__PURE__*/function () {
   /**
@@ -71,7 +71,7 @@ var SendBirdMessageResponse = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('mentioned_users')) {
-          obj['mentioned_users'] = _ApiClient["default"].convertToType(data['mentioned_users'], [_SendBirdMessageResponseMentionedUsers["default"]]);
+          obj['mentioned_users'] = _ApiClient["default"].convertToType(data['mentioned_users'], [_SendBirdMessageResponseMentionedUsersInner["default"]]);
         }
 
         if (data.hasOwnProperty('translations')) {
@@ -190,7 +190,7 @@ SendBirdMessageResponse.prototype['message_survival_seconds'] = undefined;
 
 SendBirdMessageResponse.prototype['custom_type'] = undefined;
 /**
- * @member {Array.<module:model/SendBirdMessageResponseMentionedUsers>} mentioned_users
+ * @member {Array.<module:model/SendBirdMessageResponseMentionedUsersInner>} mentioned_users
  */
 
 SendBirdMessageResponse.prototype['mentioned_users'] = undefined;

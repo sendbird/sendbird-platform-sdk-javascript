@@ -16,18 +16,17 @@ import ApiClient from '../ApiClient';
 /**
  * The MarkAllMessagesAsReadData model module.
  * @module model/MarkAllMessagesAsReadData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class MarkAllMessagesAsReadData {
     /**
      * Constructs a new <code>MarkAllMessagesAsReadData</code>.
      * @alias module:model/MarkAllMessagesAsReadData
-     * @param userId {String} Specifies the unique ID of the target user.
      * @param channelUrls {Array.<String>} Specifies an array of one or more group channel URLs to mark all of the unread messages in as read. If not specified, all of the unread messages in the joined group channels are marked as read.
      */
-    constructor(userId, channelUrls) { 
+    constructor(channelUrls) { 
         
-        MarkAllMessagesAsReadData.initialize(this, userId, channelUrls);
+        MarkAllMessagesAsReadData.initialize(this, channelUrls);
     }
 
     /**
@@ -35,8 +34,7 @@ class MarkAllMessagesAsReadData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, userId, channelUrls) { 
-        obj['user_id'] = userId;
+    static initialize(obj, channelUrls) { 
         obj['channel_urls'] = channelUrls;
     }
 
@@ -51,9 +49,6 @@ class MarkAllMessagesAsReadData {
         if (data) {
             obj = obj || new MarkAllMessagesAsReadData();
 
-            if (data.hasOwnProperty('user_id')) {
-                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
-            }
             if (data.hasOwnProperty('channel_urls')) {
                 obj['channel_urls'] = ApiClient.convertToType(data['channel_urls'], ['String']);
             }
@@ -63,12 +58,6 @@ class MarkAllMessagesAsReadData {
 
 
 }
-
-/**
- * Specifies the unique ID of the target user.
- * @member {String} user_id
- */
-MarkAllMessagesAsReadData.prototype['user_id'] = undefined;
 
 /**
  * Specifies an array of one or more group channel URLs to mark all of the unread messages in as read. If not specified, all of the unread messages in the joined group channels are marked as read.

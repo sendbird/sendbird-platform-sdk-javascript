@@ -389,7 +389,7 @@ No authorization required
 
 ## viewModeratedMessageById
 
-> {String: String} viewModeratedMessageById(apiToken, channelType, channelUrl, messageId)
+> Object viewModeratedMessageById(apiToken, channelType, channelUrl, messageId)
 
 View a moderated message
 
@@ -425,7 +425,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**{String: String}**
+**Object**
 
 ### Authorization
 

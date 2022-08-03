@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**openStatus** | [**[GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus]**](GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatus.md) |  | [optional] 
+**openStatus** | [**[GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner]**](GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner.md) |  | [optional] 
 **next** | **String** |  | [optional] 
 
 

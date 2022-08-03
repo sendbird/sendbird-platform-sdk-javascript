@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bots** | [**[ListBotsResponseBots]**](ListBotsResponseBots.md) |  | [optional] 
+**bots** | [**[ListBotsResponseBotsInner]**](ListBotsResponseBotsInner.md) |  | [optional] 
 **next** | **String** |  | [optional] 
 
 

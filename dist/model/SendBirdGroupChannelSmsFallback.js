@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdGroupChannelSmsFallback model module.
  * @module model/SendBirdGroupChannelSmsFallback
- * @version 1.0.3
+ * @version 1.0.7
  */
 var SendBirdGroupChannelSmsFallback = /*#__PURE__*/function () {
   /**

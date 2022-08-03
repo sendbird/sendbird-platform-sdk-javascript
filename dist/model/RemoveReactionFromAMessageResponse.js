@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RemoveReactionFromAMessageResponse model module.
  * @module model/RemoveReactionFromAMessageResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var RemoveReactionFromAMessageResponse = /*#__PURE__*/function () {
   /**

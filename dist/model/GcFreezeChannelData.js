@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcFreezeChannelData model module.
  * @module model/GcFreezeChannelData
- * @version 1.0.3
+ * @version 1.0.7
  */
 var GcFreezeChannelData = /*#__PURE__*/function () {
   /**

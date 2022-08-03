@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ViewDefaultChannelInvitationPreferenceResponse model module.
  * @module model/ViewDefaultChannelInvitationPreferenceResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ViewDefaultChannelInvitationPreferenceResponse {
     /**

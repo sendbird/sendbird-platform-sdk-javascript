@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import OcListBannedUsersResponseBannedList from './OcListBannedUsersResponseBannedList';
+import OcListBannedUsersResponseBannedListInner from './OcListBannedUsersResponseBannedListInner';
 
 /**
  * The CustomTypeListBannedUsersResponse model module.
  * @module model/CustomTypeListBannedUsersResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class CustomTypeListBannedUsersResponse {
     /**
@@ -49,7 +49,7 @@ class CustomTypeListBannedUsersResponse {
             obj = obj || new CustomTypeListBannedUsersResponse();
 
             if (data.hasOwnProperty('banned_list')) {
-                obj['banned_list'] = ApiClient.convertToType(data['banned_list'], [OcListBannedUsersResponseBannedList]);
+                obj['banned_list'] = ApiClient.convertToType(data['banned_list'], [OcListBannedUsersResponseBannedListInner]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -62,7 +62,7 @@ class CustomTypeListBannedUsersResponse {
 }
 
 /**
- * @member {Array.<module:model/OcListBannedUsersResponseBannedList>} banned_list
+ * @member {Array.<module:model/OcListBannedUsersResponseBannedListInner>} banned_list
  */
 CustomTypeListBannedUsersResponse.prototype['banned_list'] = undefined;
 

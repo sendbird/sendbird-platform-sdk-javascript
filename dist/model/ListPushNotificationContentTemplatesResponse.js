@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ListPushNotificationContentTemplatesResponsePushMessageTemplates = _interopRequireDefault(require("./ListPushNotificationContentTemplatesResponsePushMessageTemplates"));
+var _ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner = _interopRequireDefault(require("./ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListPushNotificationContentTemplatesResponse model module.
  * @module model/ListPushNotificationContentTemplatesResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var ListPushNotificationContentTemplatesResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var ListPushNotificationContentTemplatesResponse = /*#__PURE__*/function () {
         obj = obj || new ListPushNotificationContentTemplatesResponse();
 
         if (data.hasOwnProperty('push_message_templates')) {
-          obj['push_message_templates'] = _ApiClient["default"].convertToType(data['push_message_templates'], [_ListPushNotificationContentTemplatesResponsePushMessageTemplates["default"]]);
+          obj['push_message_templates'] = _ApiClient["default"].convertToType(data['push_message_templates'], [_ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner["default"]]);
         }
       }
 
@@ -68,7 +68,7 @@ var ListPushNotificationContentTemplatesResponse = /*#__PURE__*/function () {
   return ListPushNotificationContentTemplatesResponse;
 }();
 /**
- * @member {Array.<module:model/ListPushNotificationContentTemplatesResponsePushMessageTemplates>} push_message_templates
+ * @member {Array.<module:model/ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner>} push_message_templates
  */
 
 

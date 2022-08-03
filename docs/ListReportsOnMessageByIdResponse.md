@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reportLogs** | [**[ListReportsOnMessageByIdResponseReportLogs]**](ListReportsOnMessageByIdResponseReportLogs.md) |  | [optional] 
+**reportLogs** | [**[ListReportsOnMessageByIdResponseReportLogsInner]**](ListReportsOnMessageByIdResponseReportLogsInner.md) |  | [optional] 
 **next** | **String** |  | [optional] 
 
 

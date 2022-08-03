@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReportMessageByIdData model module.
  * @module model/ReportMessageByIdData
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ReportMessageByIdData {
     /**

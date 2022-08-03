@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ViewNumberOfConcurrentConnectionsResponse model module.
  * @module model/ViewNumberOfConcurrentConnectionsResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 class ViewNumberOfConcurrentConnectionsResponse {
     /**

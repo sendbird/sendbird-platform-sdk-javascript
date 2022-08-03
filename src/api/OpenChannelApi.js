@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
-import InlineResponse2001 from '../model/InlineResponse2001';
 import OcCreateChannelData from '../model/OcCreateChannelData';
+import OcDeleteChannelByUrl200Response from '../model/OcDeleteChannelByUrl200Response';
 import OcListChannelsResponse from '../model/OcListChannelsResponse';
 import OcListOperatorsResponse from '../model/OcListOperatorsResponse';
 import OcListParticipantsResponse from '../model/OcListParticipantsResponse';
@@ -25,7 +25,7 @@ import SendBirdOpenChannel from '../model/SendBirdOpenChannel';
 /**
 * OpenChannel service.
 * @module api/OpenChannelApi
-* @version 1.0.3
+* @version 1.0.7
 */
 export default class OpenChannelApi {
 
@@ -168,7 +168,7 @@ export default class OpenChannelApi {
      * ## Delete a channel  Deletes an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-delete-a-channel ----------------------------
      * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
     ocDeleteChannelByUrlWithHttpInfo(apiToken, channelUrl) {
       let postBody = null;
@@ -195,7 +195,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = OcDeleteChannelByUrl200Response;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -208,7 +208,7 @@ export default class OpenChannelApi {
      * ## Delete a channel  Deletes an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-delete-a-channel ----------------------------
      * @param {String} apiToken 
      * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
     ocDeleteChannelByUrl(apiToken, channelUrl) {
       return this.ocDeleteChannelByUrlWithHttpInfo(apiToken, channelUrl)
@@ -428,7 +428,7 @@ export default class OpenChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/OcRegisterOperatorsData} opts.ocRegisterOperatorsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
      */
     ocRegisterOperatorsWithHttpInfo(apiToken, channelUrl, opts) {
       opts = opts || {};
@@ -456,7 +456,7 @@ export default class OpenChannelApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = OcDeleteChannelByUrl200Response;
       return this.apiClient.callApi(
         '/v3/open_channels/{channel_url}/operators', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -471,7 +471,7 @@ export default class OpenChannelApi {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/OcRegisterOperatorsData} opts.ocRegisterOperatorsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
      */
     ocRegisterOperators(apiToken, channelUrl, opts) {
       return this.ocRegisterOperatorsWithHttpInfo(apiToken, channelUrl, opts)

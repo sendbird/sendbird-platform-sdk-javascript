@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bannedList** | [**[V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList]**](V3ApplicationsSettingsByChannelCustomTypeCustomTypeBanBannedList.md) |  | 
+**bannedList** | [**[BanUsersInChannelsWithCustomChannelTypeDataBannedListInner]**](BanUsersInChannelsWithCustomChannelTypeDataBannedListInner.md) |  | 
 **onDemandUpsert** | **Boolean** |  | [optional] 
 
 

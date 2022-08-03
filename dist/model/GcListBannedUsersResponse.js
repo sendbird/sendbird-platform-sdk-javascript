@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _OcListBannedUsersResponseBannedList = _interopRequireDefault(require("./OcListBannedUsersResponseBannedList"));
+var _OcListBannedUsersResponseBannedListInner = _interopRequireDefault(require("./OcListBannedUsersResponseBannedListInner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcListBannedUsersResponse model module.
  * @module model/GcListBannedUsersResponse
- * @version 1.0.3
+ * @version 1.0.7
  */
 var GcListBannedUsersResponse = /*#__PURE__*/function () {
   /**
@@ -57,7 +57,7 @@ var GcListBannedUsersResponse = /*#__PURE__*/function () {
         obj = obj || new GcListBannedUsersResponse();
 
         if (data.hasOwnProperty('banned_list')) {
-          obj['banned_list'] = _ApiClient["default"].convertToType(data['banned_list'], [_OcListBannedUsersResponseBannedList["default"]]);
+          obj['banned_list'] = _ApiClient["default"].convertToType(data['banned_list'], [_OcListBannedUsersResponseBannedListInner["default"]]);
         }
 
         if (data.hasOwnProperty('total_ban_count')) {
@@ -76,7 +76,7 @@ var GcListBannedUsersResponse = /*#__PURE__*/function () {
   return GcListBannedUsersResponse;
 }();
 /**
- * @member {Array.<module:model/OcListBannedUsersResponseBannedList>} banned_list
+ * @member {Array.<module:model/OcListBannedUsersResponseBannedListInner>} banned_list
  */
 
 
