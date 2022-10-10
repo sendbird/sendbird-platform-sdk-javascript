@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The OcListBannedUsersResponseBannedListInner model module.
  * @module model/OcListBannedUsersResponseBannedListInner
- * @version 0.0.13
+ * @version 0.0.14
  */
 class OcListBannedUsersResponseBannedListInner {
     /**

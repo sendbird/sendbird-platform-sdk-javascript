@@ -20,7 +20,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The SendBirdFileMessageParams model module.
  * @module model/SendBirdFileMessageParams
- * @version 0.0.13
+ * @version 0.0.14
  */
 class SendBirdFileMessageParams {
     /**

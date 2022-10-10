@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BanFromChannelsWithCustomChannelTypesData model module.
  * @module model/BanFromChannelsWithCustomChannelTypesData
- * @version 0.0.13
+ * @version 0.0.14
  */
 class BanFromChannelsWithCustomChannelTypesData {
     /**

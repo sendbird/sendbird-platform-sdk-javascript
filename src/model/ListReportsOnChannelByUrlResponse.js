@@ -17,7 +17,7 @@ import ListReportsOnMessageByIdResponseReportLogsInner from './ListReportsOnMess
 /**
  * The ListReportsOnChannelByUrlResponse model module.
  * @module model/ListReportsOnChannelByUrlResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ListReportsOnChannelByUrlResponse {
     /**

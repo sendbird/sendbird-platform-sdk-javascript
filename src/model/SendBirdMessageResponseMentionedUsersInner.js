@@ -17,7 +17,7 @@ import OcDeleteChannelByUrl200Response from './OcDeleteChannelByUrl200Response';
 /**
  * The SendBirdMessageResponseMentionedUsersInner model module.
  * @module model/SendBirdMessageResponseMentionedUsersInner
- * @version 0.0.13
+ * @version 0.0.14
  */
 class SendBirdMessageResponseMentionedUsersInner {
     /**

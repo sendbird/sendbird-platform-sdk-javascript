@@ -17,7 +17,7 @@ import ListSecondaryApiTokensResponseApiTokensInner from './ListSecondaryApiToke
 /**
  * The ListSecondaryApiTokensResponse model module.
  * @module model/ListSecondaryApiTokensResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ListSecondaryApiTokensResponse {
     /**

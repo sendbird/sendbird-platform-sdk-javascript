@@ -17,7 +17,7 @@ import ListMessagesResponseMessagesInnerOgTagOgImage from './ListMessagesRespons
 /**
  * The ListMessagesResponseMessagesInnerOgTag model module.
  * @module model/ListMessagesResponseMessagesInnerOgTag
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ListMessagesResponseMessagesInnerOgTag {
     /**

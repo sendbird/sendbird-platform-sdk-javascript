@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendMessageData model module.
  * @module model/SendMessageData
- * @version 0.0.13
+ * @version 0.0.14
  */
 class SendMessageData {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListMessagesResponseMessagesInnerSortedMetaarrayInner model module.
  * @module model/ListMessagesResponseMessagesInnerSortedMetaarrayInner
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ListMessagesResponseMessagesInnerSortedMetaarrayInner {
     /**

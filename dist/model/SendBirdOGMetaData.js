@@ -4,44 +4,35 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _SendBirdOGImage = _interopRequireDefault(require("./SendBirdOGImage"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
 /**
  * The SendBirdOGMetaData model module.
  * @module model/SendBirdOGMetaData
- * @version 0.0.13
- */
-var SendBirdOGMetaData = /*#__PURE__*/function () {
+ * @version 0.0.14
+ */var SendBirdOGMetaData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdOGMetaData</code>.
    * @alias module:model/SendBirdOGMetaData
    */
   function SendBirdOGMetaData() {
     _classCallCheck(this, SendBirdOGMetaData);
-
     SendBirdOGMetaData.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   _createClass(SendBirdOGMetaData, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>SendBirdOGMetaData</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -49,56 +40,46 @@ var SendBirdOGMetaData = /*#__PURE__*/function () {
      * @param {module:model/SendBirdOGMetaData} obj Optional instance to populate.
      * @return {module:model/SendBirdOGMetaData} The populated <code>SendBirdOGMetaData</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SendBirdOGMetaData();
-
         if (data.hasOwnProperty('default_image')) {
           obj['default_image'] = _SendBirdOGImage["default"].constructFromObject(data['default_image']);
         }
-
         if (data.hasOwnProperty('description')) {
           obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
         }
-
         if (data.hasOwnProperty('title')) {
           obj['title'] = _ApiClient["default"].convertToType(data['title'], 'String');
         }
-
         if (data.hasOwnProperty('url')) {
           obj['url'] = _ApiClient["default"].convertToType(data['url'], 'String');
         }
       }
-
       return obj;
     }
   }]);
-
   return SendBirdOGMetaData;
-}();
-/**
- * @member {module:model/SendBirdOGImage} default_image
- */
-
-
+}(); /**
+      * @member {module:model/SendBirdOGImage} default_image
+      */
 SendBirdOGMetaData.prototype['default_image'] = undefined;
+
 /**
  * @member {String} description
  */
-
 SendBirdOGMetaData.prototype['description'] = undefined;
+
 /**
  * @member {String} title
  */
-
 SendBirdOGMetaData.prototype['title'] = undefined;
+
 /**
  * @member {String} url
  */
-
 SendBirdOGMetaData.prototype['url'] = undefined;
 var _default = SendBirdOGMetaData;
 exports["default"] = _default;

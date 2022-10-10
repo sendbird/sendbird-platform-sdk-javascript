@@ -20,13 +20,12 @@ import SendBirdMessageResponseUser from './SendBirdMessageResponseUser';
 /**
  * The ListMessagesResponseMessagesInner model module.
  * @module model/ListMessagesResponseMessagesInner
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ListMessagesResponseMessagesInner {
     /**
      * Constructs a new <code>ListMessagesResponseMessagesInner</code>.
      * @alias module:model/ListMessagesResponseMessagesInner
-     * @extends Object
      */
     constructor() { 
         
@@ -51,9 +50,6 @@ class ListMessagesResponseMessagesInner {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ListMessagesResponseMessagesInner();
-
-            ApiClient.constructFromObject(data, obj, 'Object');
-            
 
             if (data.hasOwnProperty('message_survival_seconds')) {
                 obj['message_survival_seconds'] = ApiClient.convertToType(data['message_survival_seconds'], 'Number');

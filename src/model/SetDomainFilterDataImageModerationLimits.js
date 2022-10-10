@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SetDomainFilterDataImageModerationLimits model module.
  * @module model/SetDomainFilterDataImageModerationLimits
- * @version 0.0.13
+ * @version 0.0.14
  */
 class SetDomainFilterDataImageModerationLimits {
     /**

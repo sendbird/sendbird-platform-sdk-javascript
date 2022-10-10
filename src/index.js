@@ -347,7 +347,7 @@ import WebhookApi from './api/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 0.0.13
+* @version 0.0.14
 */
 export {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListAnnouncementGroupsResponse model module.
  * @module model/ListAnnouncementGroupsResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ListAnnouncementGroupsResponse {
     /**

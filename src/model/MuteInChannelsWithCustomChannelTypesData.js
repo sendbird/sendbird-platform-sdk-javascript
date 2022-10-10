@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MuteInChannelsWithCustomChannelTypesData model module.
  * @module model/MuteInChannelsWithCustomChannelTypesData
- * @version 0.0.13
+ * @version 0.0.14
  */
 class MuteInChannelsWithCustomChannelTypesData {
     /**

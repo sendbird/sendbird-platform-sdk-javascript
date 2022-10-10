@@ -17,7 +17,7 @@ import BanUsersInChannelsWithCustomChannelTypeDataBannedListInner from './BanUse
 /**
  * The BanUsersInChannelsWithCustomChannelTypeData model module.
  * @module model/BanUsersInChannelsWithCustomChannelTypeData
- * @version 0.0.13
+ * @version 0.0.14
  */
 class BanUsersInChannelsWithCustomChannelTypeData {
     /**

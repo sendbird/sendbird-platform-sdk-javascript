@@ -19,7 +19,7 @@ import SendBirdMessageResponseUser from './SendBirdMessageResponseUser';
 /**
  * The SendBirdGroupChannelLastMessage model module.
  * @module model/SendBirdGroupChannelLastMessage
- * @version 0.0.13
+ * @version 0.0.14
  */
 class SendBirdGroupChannelLastMessage {
     /**

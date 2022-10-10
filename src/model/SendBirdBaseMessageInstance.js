@@ -24,7 +24,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The SendBirdBaseMessageInstance model module.
  * @module model/SendBirdBaseMessageInstance
- * @version 0.0.13
+ * @version 0.0.14
  */
 class SendBirdBaseMessageInstance {
     /**

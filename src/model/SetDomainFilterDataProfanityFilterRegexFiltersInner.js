@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SetDomainFilterDataProfanityFilterRegexFiltersInner model module.
  * @module model/SetDomainFilterDataProfanityFilterRegexFiltersInner
- * @version 0.0.13
+ * @version 0.0.14
  */
 class SetDomainFilterDataProfanityFilterRegexFiltersInner {
     /**

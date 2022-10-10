@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendBirdPollUpdatedVoteCount model module.
  * @module model/SendBirdPollUpdatedVoteCount
- * @version 0.0.13
+ * @version 0.0.14
  */
 class SendBirdPollUpdatedVoteCount {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RegisterAndScheduleDataExportData model module.
  * @module model/RegisterAndScheduleDataExportData
- * @version 0.0.13
+ * @version 0.0.14
  */
 class RegisterAndScheduleDataExportData {
     /**

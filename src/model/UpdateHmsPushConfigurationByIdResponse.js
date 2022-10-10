@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateHmsPushConfigurationByIdResponse model module.
  * @module model/UpdateHmsPushConfigurationByIdResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class UpdateHmsPushConfigurationByIdResponse {
     /**

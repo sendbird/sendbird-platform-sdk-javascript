@@ -19,13 +19,12 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The ReportMessageByIdResponse model module.
  * @module model/ReportMessageByIdResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ReportMessageByIdResponse {
     /**
      * Constructs a new <code>ReportMessageByIdResponse</code>.
      * @alias module:model/ReportMessageByIdResponse
-     * @extends Object
      */
     constructor() { 
         
@@ -50,9 +49,6 @@ class ReportMessageByIdResponse {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ReportMessageByIdResponse();
-
-            ApiClient.constructFromObject(data, obj, 'Object');
-            
 
             if (data.hasOwnProperty('report_type')) {
                 obj['report_type'] = ApiClient.convertToType(data['report_type'], 'String');

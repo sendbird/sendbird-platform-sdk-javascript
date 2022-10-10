@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateExtraDataInMessageResponseSortedMetaarrayInner model module.
  * @module model/UpdateExtraDataInMessageResponseSortedMetaarrayInner
- * @version 0.0.13
+ * @version 0.0.14
  */
 class UpdateExtraDataInMessageResponseSortedMetaarrayInner {
     /**

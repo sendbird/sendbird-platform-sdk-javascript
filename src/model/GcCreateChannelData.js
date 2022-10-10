@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The GcCreateChannelData model module.
  * @module model/GcCreateChannelData
- * @version 0.0.13
+ * @version 0.0.14
  */
 class GcCreateChannelData {
     /**

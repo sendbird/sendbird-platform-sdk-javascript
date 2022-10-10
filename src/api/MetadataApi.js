@@ -27,7 +27,7 @@ import ViewUserMetadataResponse from '../model/ViewUserMetadataResponse';
 /**
 * Metadata service.
 * @module api/MetadataApi
-* @version 0.0.13
+* @version 0.0.14
 */
 export default class MetadataApi {
 

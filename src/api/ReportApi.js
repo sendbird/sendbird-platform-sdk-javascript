@@ -27,7 +27,7 @@ import ReportUserByIdResponse from '../model/ReportUserByIdResponse';
 /**
 * Report service.
 * @module api/ReportApi
-* @version 0.0.13
+* @version 0.0.14
 */
 export default class ReportApi {
 

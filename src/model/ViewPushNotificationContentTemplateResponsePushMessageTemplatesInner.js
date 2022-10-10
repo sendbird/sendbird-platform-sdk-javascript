@@ -17,7 +17,7 @@ import ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemp
 /**
  * The ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner model module.
  * @module model/ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner {
     /**

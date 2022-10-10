@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SetDomainFilterDataDomainFilter model module.
  * @module model/SetDomainFilterDataDomainFilter
- * @version 0.0.13
+ * @version 0.0.14
  */
 class SetDomainFilterDataDomainFilter {
     /**

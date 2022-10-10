@@ -17,7 +17,7 @@ import ViewNumberOfPeakConnectionsResponsePeakConnectionsInner from './ViewNumbe
 /**
  * The ViewNumberOfPeakConnectionsResponse model module.
  * @module model/ViewNumberOfPeakConnectionsResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ViewNumberOfPeakConnectionsResponse {
     /**

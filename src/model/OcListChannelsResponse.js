@@ -17,7 +17,7 @@ import SendBirdOpenChannel from './SendBirdOpenChannel';
 /**
  * The OcListChannelsResponse model module.
  * @module model/OcListChannelsResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class OcListChannelsResponse {
     /**

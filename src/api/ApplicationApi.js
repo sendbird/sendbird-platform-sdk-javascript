@@ -55,7 +55,7 @@ import ViewSecondaryApiTokenByTokenResponse from '../model/ViewSecondaryApiToken
 /**
 * Application service.
 * @module api/ApplicationApi
-* @version 0.0.13
+* @version 0.0.14
 */
 export default class ApplicationApi {
 

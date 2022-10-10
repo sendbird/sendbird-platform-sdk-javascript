@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendBirdAppleCriticalAlertOptions model module.
  * @module model/SendBirdAppleCriticalAlertOptions
- * @version 0.0.13
+ * @version 0.0.14
  */
 class SendBirdAppleCriticalAlertOptions {
     /**

@@ -17,7 +17,7 @@ import ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile from '
 /**
  * The ListDataExportsByMessageChannelOrUserResponseExportedDataInner model module.
  * @module model/ListDataExportsByMessageChannelOrUserResponseExportedDataInner
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ListDataExportsByMessageChannelOrUserResponseExportedDataInner {
     /**

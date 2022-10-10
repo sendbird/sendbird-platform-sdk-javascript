@@ -18,13 +18,12 @@ import SendBirdMessageResponseUser from './SendBirdMessageResponseUser';
 /**
  * The SendBirdMessageResponse model module.
  * @module model/SendBirdMessageResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class SendBirdMessageResponse {
     /**
      * Constructs a new <code>SendBirdMessageResponse</code>.
      * @alias module:model/SendBirdMessageResponse
-     * @extends Object
      */
     constructor() { 
         
@@ -49,9 +48,6 @@ class SendBirdMessageResponse {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new SendBirdMessageResponse();
-
-            ApiClient.constructFromObject(data, obj, 'Object');
-            
 
             if (data.hasOwnProperty('require_auth')) {
                 obj['require_auth'] = ApiClient.convertToType(data['require_auth'], 'Boolean');

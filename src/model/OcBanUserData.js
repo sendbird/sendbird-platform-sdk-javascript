@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OcBanUserData model module.
  * @module model/OcBanUserData
- * @version 0.0.13
+ * @version 0.0.14
  */
 class OcBanUserData {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResetPushPreferencesResponse model module.
  * @module model/ResetPushPreferencesResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ResetPushPreferencesResponse {
     /**

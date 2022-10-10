@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListPushConfigurationsResponsePushConfigurationsInner model module.
  * @module model/ListPushConfigurationsResponsePushConfigurationsInner
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ListPushConfigurationsResponsePushConfigurationsInner {
     /**

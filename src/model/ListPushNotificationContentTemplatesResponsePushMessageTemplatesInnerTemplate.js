@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate model module.
  * @module model/ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate {
     /**

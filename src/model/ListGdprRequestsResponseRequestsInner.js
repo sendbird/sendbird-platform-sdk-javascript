@@ -17,7 +17,7 @@ import ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile from '
 /**
  * The ListGdprRequestsResponseRequestsInner model module.
  * @module model/ListGdprRequestsResponseRequestsInner
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ListGdprRequestsResponseRequestsInner {
     /**

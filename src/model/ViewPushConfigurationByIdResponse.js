@@ -17,7 +17,7 @@ import ListPushConfigurationsResponsePushConfigurationsInner from './ListPushCon
 /**
  * The ViewPushConfigurationByIdResponse model module.
  * @module model/ViewPushConfigurationByIdResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ViewPushConfigurationByIdResponse {
     /**

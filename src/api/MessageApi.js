@@ -57,7 +57,7 @@ import ViewTotalNumberOfMessagesInChannelResponse from '../model/ViewTotalNumber
 /**
 * Message service.
 * @module api/MessageApi
-* @version 0.0.13
+* @version 0.0.14
 */
 export default class MessageApi {
 

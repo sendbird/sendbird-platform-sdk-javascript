@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BlockUserResponse model module.
  * @module model/BlockUserResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class BlockUserResponse {
     /**

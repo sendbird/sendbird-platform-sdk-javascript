@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The SendBirdThreadInfo model module.
  * @module model/SendBirdThreadInfo
- * @version 0.0.13
+ * @version 0.0.14
  */
 class SendBirdThreadInfo {
     /**

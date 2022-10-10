@@ -18,7 +18,7 @@ import ScheduleAnnouncementResponseMessage from './ScheduleAnnouncementResponseM
 /**
  * The ListAnnouncementsResponseAnnouncementsInner model module.
  * @module model/ListAnnouncementsResponseAnnouncementsInner
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ListAnnouncementsResponseAnnouncementsInner {
     /**

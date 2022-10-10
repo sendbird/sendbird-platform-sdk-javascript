@@ -17,7 +17,7 @@ import SendBirdGroupChannel from './SendBirdGroupChannel';
 /**
  * The ListMyGroupChannelsResponse model module.
  * @module model/ListMyGroupChannelsResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ListMyGroupChannelsResponse {
     /**

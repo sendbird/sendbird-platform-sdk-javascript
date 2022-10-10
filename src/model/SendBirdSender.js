@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendBirdSender model module.
  * @module model/SendBirdSender
- * @version 0.0.13
+ * @version 0.0.14
  */
 class SendBirdSender {
     /**

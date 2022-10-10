@@ -21,7 +21,7 @@ import ViewAnnouncementByIdResponse from '../model/ViewAnnouncementByIdResponse'
 /**
 * Announcement service.
 * @module api/AnnouncementApi
-* @version 0.0.13
+* @version 0.0.14
 */
 export default class AnnouncementApi {
 

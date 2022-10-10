@@ -17,7 +17,7 @@ import SendBirdOGImage from './SendBirdOGImage';
 /**
  * The SendBirdOGMetaData model module.
  * @module model/SendBirdOGMetaData
- * @version 0.0.13
+ * @version 0.0.14
  */
 class SendBirdOGMetaData {
     /**

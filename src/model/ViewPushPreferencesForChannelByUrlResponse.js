@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ViewPushPreferencesForChannelByUrlResponse model module.
  * @module model/ViewPushPreferencesForChannelByUrlResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ViewPushPreferencesForChannelByUrlResponse {
     /**

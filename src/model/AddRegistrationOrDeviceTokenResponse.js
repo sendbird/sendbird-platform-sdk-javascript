@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The AddRegistrationOrDeviceTokenResponse model module.
  * @module model/AddRegistrationOrDeviceTokenResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class AddRegistrationOrDeviceTokenResponse {
     /**

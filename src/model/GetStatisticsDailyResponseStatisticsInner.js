@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetStatisticsDailyResponseStatisticsInner model module.
  * @module model/GetStatisticsDailyResponseStatisticsInner
- * @version 0.0.13
+ * @version 0.0.14
  */
 class GetStatisticsDailyResponseStatisticsInner {
     /**

@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The ListMutedUsersInChannelsWithCustomChannelType200Response model module.
  * @module model/ListMutedUsersInChannelsWithCustomChannelType200Response
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ListMutedUsersInChannelsWithCustomChannelType200Response {
     /**

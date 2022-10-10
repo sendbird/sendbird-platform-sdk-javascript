@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner model module.
  * @module model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner
- * @version 0.0.13
+ * @version 0.0.14
  */
 class GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner {
     /**

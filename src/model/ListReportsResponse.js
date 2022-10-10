@@ -17,7 +17,7 @@ import ListReportsResponseReportLogsInner from './ListReportsResponseReportLogsI
 /**
  * The ListReportsResponse model module.
  * @module model/ListReportsResponse
- * @version 0.0.13
+ * @version 0.0.14
  */
 class ListReportsResponse {
     /**
