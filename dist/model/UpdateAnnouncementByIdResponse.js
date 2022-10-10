@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateAnnouncementByIdResponse model module.
  * @module model/UpdateAnnouncementByIdResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var UpdateAnnouncementByIdResponse = /*#__PURE__*/function () {
   /**

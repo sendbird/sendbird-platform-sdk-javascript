@@ -78,7 +78,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Moderation service.
 * @module api/ModerationApi
-* @version 1.0.7
+* @version 0.0.13
 */
 var ModerationApi = /*#__PURE__*/function () {
   /**

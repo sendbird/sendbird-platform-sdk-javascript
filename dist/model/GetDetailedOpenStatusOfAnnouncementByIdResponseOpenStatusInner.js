@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner model module.
  * @module model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner
- * @version 1.0.7
+ * @version 0.0.13
  */
 var GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner = /*#__PURE__*/function () {
   /**

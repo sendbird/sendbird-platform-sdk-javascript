@@ -15,11 +15,13 @@ var _SendBirdGroupChannelCreatedBy = _interopRequireDefault(require("./SendBirdG
 
 var _SendBirdGroupChannelDisappearingMessage = _interopRequireDefault(require("./SendBirdGroupChannelDisappearingMessage"));
 
+var _SendBirdGroupChannelInviter = _interopRequireDefault(require("./SendBirdGroupChannelInviter"));
+
+var _SendBirdGroupChannelLastMessage = _interopRequireDefault(require("./SendBirdGroupChannelLastMessage"));
+
 var _SendBirdGroupChannelSmsFallback = _interopRequireDefault(require("./SendBirdGroupChannelSmsFallback"));
 
 var _SendBirdMember = _interopRequireDefault(require("./SendBirdMember"));
-
-var _SendBirdMessageResponse = _interopRequireDefault(require("./SendBirdMessageResponse"));
 
 var _SendBirdOpenChannel = _interopRequireDefault(require("./SendBirdOpenChannel"));
 
@@ -36,7 +38,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdChannelResponse model module.
  * @module model/SendBirdChannelResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdChannelResponse = /*#__PURE__*/function () {
   /**
@@ -131,7 +133,7 @@ var SendBirdChannelResponse = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('inviter')) {
-          obj['inviter'] = _SendBirdUser["default"].constructFromObject(data['inviter']);
+          obj['inviter'] = _SendBirdGroupChannelInviter["default"].constructFromObject(data['inviter']);
         }
 
         if (data.hasOwnProperty('is_access_code_required')) {
@@ -187,7 +189,7 @@ var SendBirdChannelResponse = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('last_message')) {
-          obj['last_message'] = _SendBirdMessageResponse["default"].constructFromObject(data['last_message']);
+          obj['last_message'] = _SendBirdGroupChannelLastMessage["default"].constructFromObject(data['last_message']);
         }
 
         if (data.hasOwnProperty('max_length_message')) {
@@ -335,7 +337,7 @@ SendBirdChannelResponse.prototype['hidden_state'] = undefined;
 
 SendBirdChannelResponse.prototype['invited_at'] = undefined;
 /**
- * @member {module:model/SendBirdUser} inviter
+ * @member {module:model/SendBirdGroupChannelInviter} inviter
  */
 
 SendBirdChannelResponse.prototype['inviter'] = undefined;
@@ -405,7 +407,7 @@ SendBirdChannelResponse.prototype['joined_at'] = undefined;
 
 SendBirdChannelResponse.prototype['joined_member_count'] = undefined;
 /**
- * @member {module:model/SendBirdMessageResponse} last_message
+ * @member {module:model/SendBirdGroupChannelLastMessage} last_message
  */
 
 SendBirdChannelResponse.prototype['last_message'] = undefined;
@@ -566,7 +568,7 @@ _SendBirdGroupChannel["default"].prototype['hidden_state'] = undefined;
 
 _SendBirdGroupChannel["default"].prototype['invited_at'] = undefined;
 /**
- * @member {module:model/SendBirdUser} inviter
+ * @member {module:model/SendBirdGroupChannelInviter} inviter
  */
 
 _SendBirdGroupChannel["default"].prototype['inviter'] = undefined;
@@ -636,7 +638,7 @@ _SendBirdGroupChannel["default"].prototype['joined_at'] = undefined;
 
 _SendBirdGroupChannel["default"].prototype['joined_member_count'] = undefined;
 /**
- * @member {module:model/SendBirdMessageResponse} last_message
+ * @member {module:model/SendBirdGroupChannelLastMessage} last_message
  */
 
 _SendBirdGroupChannel["default"].prototype['last_message'] = undefined;
@@ -701,7 +703,7 @@ _SendBirdGroupChannel["default"].prototype['my_role'] = undefined;
 
 _SendBirdGroupChannel["default"].prototype['name'] = undefined;
 /**
- * @member {Array.<String>} operators
+ * @member {Array.<Object>} operators
  */
 
 _SendBirdGroupChannel["default"].prototype['operators'] = undefined;
@@ -903,6 +905,12 @@ SendBirdChannelResponse['MyPushTriggerOptionEnum'] = {
  */
 
 SendBirdChannelResponse['MyRoleEnum'] = {
+  /**
+   * value: ""
+   * @const
+   */
+  "empty": "",
+
   /**
    * value: "none"
    * @const

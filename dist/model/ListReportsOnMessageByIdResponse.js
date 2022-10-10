@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListReportsOnMessageByIdResponse model module.
  * @module model/ListReportsOnMessageByIdResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListReportsOnMessageByIdResponse = /*#__PURE__*/function () {
   /**

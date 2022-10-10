@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TranslateMessageIntoOtherLanguagesData model module.
  * @module model/TranslateMessageIntoOtherLanguagesData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var TranslateMessageIntoOtherLanguagesData = /*#__PURE__*/function () {
   /**

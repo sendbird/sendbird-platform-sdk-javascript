@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcListBannedUsersResponse model module.
  * @module model/GcListBannedUsersResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var GcListBannedUsersResponse = /*#__PURE__*/function () {
   /**

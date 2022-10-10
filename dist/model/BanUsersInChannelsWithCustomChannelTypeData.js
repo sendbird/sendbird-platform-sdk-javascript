@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BanUsersInChannelsWithCustomChannelTypeData model module.
  * @module model/BanUsersInChannelsWithCustomChannelTypeData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var BanUsersInChannelsWithCustomChannelTypeData = /*#__PURE__*/function () {
   /**

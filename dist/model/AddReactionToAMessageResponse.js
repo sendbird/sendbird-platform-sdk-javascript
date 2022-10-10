@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddReactionToAMessageResponse model module.
  * @module model/AddReactionToAMessageResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var AddReactionToAMessageResponse = /*#__PURE__*/function () {
   /**

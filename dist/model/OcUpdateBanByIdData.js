@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcUpdateBanByIdData model module.
  * @module model/OcUpdateBanByIdData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var OcUpdateBanByIdData = /*#__PURE__*/function () {
   /**

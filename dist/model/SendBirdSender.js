@@ -7,8 +7,6 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _SBObject = _interopRequireDefault(require("./SBObject"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdSender model module.
  * @module model/SendBirdSender
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdSender = /*#__PURE__*/function () {
   /**
@@ -80,8 +78,8 @@ var SendBirdSender = /*#__PURE__*/function () {
           obj['last_seen_at'] = _ApiClient["default"].convertToType(data['last_seen_at'], 'Number');
         }
 
-        if (data.hasOwnProperty('meta_data')) {
-          obj['meta_data'] = _SBObject["default"].constructFromObject(data['meta_data']);
+        if (data.hasOwnProperty('metadata')) {
+          obj['metadata'] = _ApiClient["default"].convertToType(data['metadata'], Object);
         }
 
         if (data.hasOwnProperty('nickname')) {
@@ -147,10 +145,10 @@ SendBirdSender.prototype['is_blocked_by_me'] = undefined;
 
 SendBirdSender.prototype['last_seen_at'] = undefined;
 /**
- * @member {module:model/SBObject} meta_data
+ * @member {Object} metadata
  */
 
-SendBirdSender.prototype['meta_data'] = undefined;
+SendBirdSender.prototype['metadata'] = undefined;
 /**
  * @member {String} nickname
  */

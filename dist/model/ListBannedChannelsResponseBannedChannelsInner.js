@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListBannedChannelsResponseBannedChannelsInner model module.
  * @module model/ListBannedChannelsResponseBannedChannelsInner
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListBannedChannelsResponseBannedChannelsInner = /*#__PURE__*/function () {
   /**

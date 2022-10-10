@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdatePushPreferencesResponse model module.
  * @module model/UpdatePushPreferencesResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var UpdatePushPreferencesResponse = /*#__PURE__*/function () {
   /**

@@ -94,7 +94,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Application service.
 * @module api/ApplicationApi
-* @version 1.0.7
+* @version 0.0.13
 */
 var ApplicationApi = /*#__PURE__*/function () {
   /**

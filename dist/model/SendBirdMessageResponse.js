@@ -22,12 +22,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdMessageResponse model module.
  * @module model/SendBirdMessageResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdMessageResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdMessageResponse</code>.
    * @alias module:model/SendBirdMessageResponse
+   * @extends Object
    */
   function SendBirdMessageResponse() {
     _classCallCheck(this, SendBirdMessageResponse);
@@ -57,6 +58,8 @@ var SendBirdMessageResponse = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SendBirdMessageResponse();
+
+        _ApiClient["default"].constructFromObject(data, obj, 'Object');
 
         if (data.hasOwnProperty('require_auth')) {
           obj['require_auth'] = _ApiClient["default"].convertToType(data['require_auth'], 'Boolean');

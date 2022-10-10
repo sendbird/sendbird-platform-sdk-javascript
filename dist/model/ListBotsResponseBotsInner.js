@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListBotsResponseBotsInner model module.
  * @module model/ListBotsResponseBotsInner
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListBotsResponseBotsInner = /*#__PURE__*/function () {
   /**

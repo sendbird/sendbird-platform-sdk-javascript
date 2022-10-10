@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListAnnouncementsResponseAnnouncementsInner model module.
  * @module model/ListAnnouncementsResponseAnnouncementsInner
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListAnnouncementsResponseAnnouncementsInner = /*#__PURE__*/function () {
   /**

@@ -46,6 +46,8 @@ docs/CreateChannelMetadataResponse.md
 docs/CreateUserData.md
 docs/CreateUserMetadataData.md
 docs/CreateUserMetadataResponse.md
+docs/CreateUserTokenData.md
+docs/CreateUserTokenResponse.md
 docs/CustomTypeListBannedUsersResponse.md
 docs/DataExportApi.md
 docs/DeleteAllowedIpsFromWhitelistResponse.md
@@ -206,6 +208,8 @@ docs/SendBirdGroupChannelChannel.md
 docs/SendBirdGroupChannelCollection.md
 docs/SendBirdGroupChannelCreatedBy.md
 docs/SendBirdGroupChannelDisappearingMessage.md
+docs/SendBirdGroupChannelInviter.md
+docs/SendBirdGroupChannelLastMessage.md
 docs/SendBirdGroupChannelSmsFallback.md
 docs/SendBirdMember.md
 docs/SendBirdMessageMetaArray.md
@@ -361,6 +365,8 @@ src/model/CreateChannelMetadataResponse.js
 src/model/CreateUserData.js
 src/model/CreateUserMetadataData.js
 src/model/CreateUserMetadataResponse.js
+src/model/CreateUserTokenData.js
+src/model/CreateUserTokenResponse.js
 src/model/CustomTypeListBannedUsersResponse.js
 src/model/DeleteAllowedIpsFromWhitelistResponse.js
 src/model/DeleteApnsCertificateByIdResponse.js
@@ -513,6 +519,8 @@ src/model/SendBirdGroupChannelChannel.js
 src/model/SendBirdGroupChannelCollection.js
 src/model/SendBirdGroupChannelCreatedBy.js
 src/model/SendBirdGroupChannelDisappearingMessage.js
+src/model/SendBirdGroupChannelInviter.js
+src/model/SendBirdGroupChannelLastMessage.js
 src/model/SendBirdGroupChannelSmsFallback.js
 src/model/SendBirdMember.js
 src/model/SendBirdMessageMetaArray.js
@@ -660,6 +668,8 @@ test/model/CreateChannelMetadataResponse.spec.js
 test/model/CreateUserData.spec.js
 test/model/CreateUserMetadataData.spec.js
 test/model/CreateUserMetadataResponse.spec.js
+test/model/CreateUserTokenData.spec.js
+test/model/CreateUserTokenResponse.spec.js
 test/model/CustomTypeListBannedUsersResponse.spec.js
 test/model/DeleteAllowedIpsFromWhitelistResponse.spec.js
 test/model/DeleteApnsCertificateByIdResponse.spec.js
@@ -812,6 +822,8 @@ test/model/SendBirdGroupChannelChannel.spec.js
 test/model/SendBirdGroupChannelCollection.spec.js
 test/model/SendBirdGroupChannelCreatedBy.spec.js
 test/model/SendBirdGroupChannelDisappearingMessage.spec.js
+test/model/SendBirdGroupChannelInviter.spec.js
+test/model/SendBirdGroupChannelLastMessage.spec.js
 test/model/SendBirdGroupChannelSmsFallback.spec.js
 test/model/SendBirdMember.spec.js
 test/model/SendBirdMessageMetaArray.spec.js

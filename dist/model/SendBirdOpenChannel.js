@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdOpenChannel model module.
  * @module model/SendBirdOpenChannel
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdOpenChannel = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateExtraDataInMessageResponse model module.
  * @module model/UpdateExtraDataInMessageResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var UpdateExtraDataInMessageResponse = /*#__PURE__*/function () {
   /**

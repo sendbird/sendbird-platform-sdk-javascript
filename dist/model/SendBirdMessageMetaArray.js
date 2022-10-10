@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdMessageMetaArray model module.
  * @module model/SendBirdMessageMetaArray
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdMessageMetaArray = /*#__PURE__*/function () {
   /**

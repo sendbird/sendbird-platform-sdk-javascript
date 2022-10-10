@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcLeaveChannelData model module.
  * @module model/GcLeaveChannelData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var GcLeaveChannelData = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewPushConfigurationByIdResponse model module.
  * @module model/ViewPushConfigurationByIdResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ViewPushConfigurationByIdResponse = /*#__PURE__*/function () {
   /**

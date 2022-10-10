@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateMessageByIdData model module.
  * @module model/UpdateMessageByIdData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var UpdateMessageByIdData = /*#__PURE__*/function () {
   /**

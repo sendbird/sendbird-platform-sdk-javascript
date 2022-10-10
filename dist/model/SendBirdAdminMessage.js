@@ -34,7 +34,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdAdminMessage model module.
  * @module model/SendBirdAdminMessage
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdAdminMessage = /*#__PURE__*/function () {
   /**

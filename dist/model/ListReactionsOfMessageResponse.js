@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListReactionsOfMessageResponse model module.
  * @module model/ListReactionsOfMessageResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListReactionsOfMessageResponse = /*#__PURE__*/function () {
   /**

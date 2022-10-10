@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdMessageResponseUser model module.
  * @module model/SendBirdMessageResponseUser
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdMessageResponseUser = /*#__PURE__*/function () {
   /**

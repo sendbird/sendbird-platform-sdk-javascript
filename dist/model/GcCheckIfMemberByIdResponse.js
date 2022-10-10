@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcCheckIfMemberByIdResponse model module.
  * @module model/GcCheckIfMemberByIdResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var GcCheckIfMemberByIdResponse = /*#__PURE__*/function () {
   /**

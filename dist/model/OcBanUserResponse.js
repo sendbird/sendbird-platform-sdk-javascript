@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcBanUserResponse model module.
  * @module model/OcBanUserResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var OcBanUserResponse = /*#__PURE__*/function () {
   /**

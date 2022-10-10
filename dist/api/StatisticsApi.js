@@ -28,7 +28,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Statistics service.
 * @module api/StatisticsApi
-* @version 1.0.7
+* @version 0.0.13
 */
 var StatisticsApi = /*#__PURE__*/function () {
   /**

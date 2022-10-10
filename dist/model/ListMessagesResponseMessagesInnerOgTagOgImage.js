@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMessagesResponseMessagesInnerOgTagOgImage model module.
  * @module model/ListMessagesResponseMessagesInnerOgTagOgImage
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListMessagesResponseMessagesInnerOgTagOgImage = /*#__PURE__*/function () {
   /**

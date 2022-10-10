@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChooseWhichEventsToSubscribeToData model module.
  * @module model/ChooseWhichEventsToSubscribeToData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ChooseWhichEventsToSubscribeToData = /*#__PURE__*/function () {
   /**

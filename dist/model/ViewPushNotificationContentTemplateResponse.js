@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewPushNotificationContentTemplateResponse model module.
  * @module model/ViewPushNotificationContentTemplateResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ViewPushNotificationContentTemplateResponse = /*#__PURE__*/function () {
   /**

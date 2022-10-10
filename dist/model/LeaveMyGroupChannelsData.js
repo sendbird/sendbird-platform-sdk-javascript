@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LeaveMyGroupChannelsData model module.
  * @module model/LeaveMyGroupChannelsData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var LeaveMyGroupChannelsData = /*#__PURE__*/function () {
   /**

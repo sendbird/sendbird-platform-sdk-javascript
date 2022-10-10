@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RegisterAndScheduleDataExportResponse model module.
  * @module model/RegisterAndScheduleDataExportResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var RegisterAndScheduleDataExportResponse = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcCreateChannelData model module.
  * @module model/OcCreateChannelData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var OcCreateChannelData = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListGdprRequestsResponseRequestsInner model module.
  * @module model/ListGdprRequestsResponseRequestsInner
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListGdprRequestsResponseRequestsInner = /*#__PURE__*/function () {
   /**

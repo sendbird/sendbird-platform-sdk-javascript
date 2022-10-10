@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SetDomainFilterData model module.
  * @module model/SetDomainFilterData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SetDomainFilterData = /*#__PURE__*/function () {
   /**

@@ -7,8 +7,6 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _SBObject = _interopRequireDefault(require("./SBObject"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdUser model module.
  * @module model/SendBirdUser
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdUser = /*#__PURE__*/function () {
   /**
@@ -94,7 +92,7 @@ var SendBirdUser = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('session_tokens')) {
-          obj['session_tokens'] = _ApiClient["default"].convertToType(data['session_tokens'], ['String']);
+          obj['session_tokens'] = _ApiClient["default"].convertToType(data['session_tokens'], [Object]);
         }
 
         if (data.hasOwnProperty('preferred_languages')) {
@@ -134,7 +132,7 @@ var SendBirdUser = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('metadata')) {
-          obj['metadata'] = _SBObject["default"].constructFromObject(data['metadata']);
+          obj['metadata'] = _ApiClient["default"].convertToType(data['metadata'], Object);
         }
 
         if (data.hasOwnProperty('description')) {
@@ -203,7 +201,7 @@ SendBirdUser.prototype['nickname'] = undefined;
 
 SendBirdUser.prototype['discovery_keys'] = undefined;
 /**
- * @member {Array.<String>} session_tokens
+ * @member {Array.<Object>} session_tokens
  */
 
 SendBirdUser.prototype['session_tokens'] = undefined;
@@ -253,7 +251,7 @@ SendBirdUser.prototype['is_shadow_blocked'] = undefined;
 
 SendBirdUser.prototype['is_created'] = undefined;
 /**
- * @member {module:model/SBObject} metadata
+ * @member {Object} metadata
  */
 
 SendBirdUser.prototype['metadata'] = undefined;

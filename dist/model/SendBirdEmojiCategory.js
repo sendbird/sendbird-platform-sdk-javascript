@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdEmojiCategory model module.
  * @module model/SendBirdEmojiCategory
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdEmojiCategory = /*#__PURE__*/function () {
   /**

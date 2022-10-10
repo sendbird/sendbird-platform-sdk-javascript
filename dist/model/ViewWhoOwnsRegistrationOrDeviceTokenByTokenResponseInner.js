@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner model module.
  * @module model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner = /*#__PURE__*/function () {
   /**

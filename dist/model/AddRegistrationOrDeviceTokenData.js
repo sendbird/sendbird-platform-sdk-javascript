@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddRegistrationOrDeviceTokenData model module.
  * @module model/AddRegistrationOrDeviceTokenData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var AddRegistrationOrDeviceTokenData = /*#__PURE__*/function () {
   /**

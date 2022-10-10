@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RetrieveListOfSubscribedEventsResponseWebhook model module.
  * @module model/RetrieveListOfSubscribedEventsResponseWebhook
- * @version 1.0.7
+ * @version 0.0.13
  */
 var RetrieveListOfSubscribedEventsResponseWebhook = /*#__PURE__*/function () {
   /**

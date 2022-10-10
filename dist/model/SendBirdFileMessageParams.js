@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdFileMessageParams model module.
  * @module model/SendBirdFileMessageParams
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdFileMessageParams = /*#__PURE__*/function () {
   /**

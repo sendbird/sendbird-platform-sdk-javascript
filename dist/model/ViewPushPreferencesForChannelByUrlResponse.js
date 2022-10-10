@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewPushPreferencesForChannelByUrlResponse model module.
  * @module model/ViewPushPreferencesForChannelByUrlResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ViewPushPreferencesForChannelByUrlResponse = /*#__PURE__*/function () {
   /**

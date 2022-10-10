@@ -15,6 +15,10 @@ var _ChoosePushNotificationContentTemplateResponse = _interopRequireDefault(requ
 
 var _CreateUserData = _interopRequireDefault(require("../model/CreateUserData"));
 
+var _CreateUserTokenData = _interopRequireDefault(require("../model/CreateUserTokenData"));
+
+var _CreateUserTokenResponse = _interopRequireDefault(require("../model/CreateUserTokenResponse"));
+
 var _LeaveMyGroupChannelsData = _interopRequireDefault(require("../model/LeaveMyGroupChannelsData"));
 
 var _ListMyGroupChannelsResponse = _interopRequireDefault(require("../model/ListMyGroupChannelsResponse"));
@@ -84,7 +88,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * User service.
 * @module api/UserApi
-* @version 1.0.7
+* @version 0.0.13
 */
 var UserApi = /*#__PURE__*/function () {
   /**
@@ -264,6 +268,62 @@ var UserApi = /*#__PURE__*/function () {
     key: "createUser",
     value: function createUser(apiToken, opts) {
       return this.createUserWithHttpInfo(apiToken, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Create user token
+     * ## Create user token
+     * @param {String} apiToken 
+     * @param {String} userId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateUserTokenData} opts.createUserTokenData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateUserTokenResponse} and HTTP response
+     */
+
+  }, {
+    key: "createUserTokenWithHttpInfo",
+    value: function createUserTokenWithHttpInfo(apiToken, userId, opts) {
+      opts = opts || {};
+      var postBody = opts['createUserTokenData']; // verify the required parameter 'apiToken' is set
+
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling createUserToken");
+      } // verify the required parameter 'userId' is set
+
+
+      if (userId === undefined || userId === null) {
+        throw new Error("Missing the required parameter 'userId' when calling createUserToken");
+      }
+
+      var pathParams = {
+        'user_id': userId
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Api-Token': apiToken
+      };
+      var formParams = {};
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _CreateUserTokenResponse["default"];
+      return this.apiClient.callApi('/v3/users/{user_id}/token', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Create user token
+     * ## Create user token
+     * @param {String} apiToken 
+     * @param {String} userId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateUserTokenData} opts.createUserTokenData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateUserTokenResponse}
+     */
+
+  }, {
+    key: "createUserToken",
+    value: function createUserToken(apiToken, userId, opts) {
+      return this.createUserTokenWithHttpInfo(apiToken, userId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

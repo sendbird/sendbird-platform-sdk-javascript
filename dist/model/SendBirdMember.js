@@ -7,8 +7,6 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _SBObject = _interopRequireDefault(require("./SBObject"));
-
 var _SendBirdRestrictionInfo = _interopRequireDefault(require("./SendBirdRestrictionInfo"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -22,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdMember model module.
  * @module model/SendBirdMember
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdMember = /*#__PURE__*/function () {
   /**
@@ -80,10 +78,6 @@ var SendBirdMember = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('last_seen_at')) {
           obj['last_seen_at'] = _ApiClient["default"].convertToType(data['last_seen_at'], 'Number');
-        }
-
-        if (data.hasOwnProperty('meta_data')) {
-          obj['meta_data'] = _SBObject["default"].constructFromObject(data['meta_data']);
         }
 
         if (data.hasOwnProperty('nickname')) {
@@ -181,11 +175,6 @@ SendBirdMember.prototype['is_muted'] = undefined;
 
 SendBirdMember.prototype['last_seen_at'] = undefined;
 /**
- * @member {module:model/SBObject} meta_data
- */
-
-SendBirdMember.prototype['meta_data'] = undefined;
-/**
  * @member {String} nickname
  */
 
@@ -263,6 +252,12 @@ SendBirdMember.prototype['user_id'] = undefined;
 
 SendBirdMember['RoleEnum'] = {
   /**
+   * value: ""
+   * @const
+   */
+  "empty": "",
+
+  /**
    * value: "none"
    * @const
    */
@@ -281,6 +276,12 @@ SendBirdMember['RoleEnum'] = {
  */
 
 SendBirdMember['StateEnum'] = {
+  /**
+   * value: ""
+   * @const
+   */
+  "empty": "",
+
   /**
    * value: "invited"
    * @const

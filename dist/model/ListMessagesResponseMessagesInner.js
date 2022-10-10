@@ -26,12 +26,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMessagesResponseMessagesInner model module.
  * @module model/ListMessagesResponseMessagesInner
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListMessagesResponseMessagesInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListMessagesResponseMessagesInner</code>.
    * @alias module:model/ListMessagesResponseMessagesInner
+   * @extends Object
    */
   function ListMessagesResponseMessagesInner() {
     _classCallCheck(this, ListMessagesResponseMessagesInner);
@@ -61,6 +62,8 @@ var ListMessagesResponseMessagesInner = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ListMessagesResponseMessagesInner();
+
+        _ApiClient["default"].constructFromObject(data, obj, 'Object');
 
         if (data.hasOwnProperty('message_survival_seconds')) {
           obj['message_survival_seconds'] = _ApiClient["default"].convertToType(data['message_survival_seconds'], 'Number');

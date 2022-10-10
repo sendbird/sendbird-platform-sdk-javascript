@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddExtraDataToMessageData model module.
  * @module model/AddExtraDataToMessageData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var AddExtraDataToMessageData = /*#__PURE__*/function () {
   /**

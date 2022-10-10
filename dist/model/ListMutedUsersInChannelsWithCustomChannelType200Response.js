@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMutedUsersInChannelsWithCustomChannelType200Response model module.
  * @module model/ListMutedUsersInChannelsWithCustomChannelType200Response
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListMutedUsersInChannelsWithCustomChannelType200Response = /*#__PURE__*/function () {
   /**

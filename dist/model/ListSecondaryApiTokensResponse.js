@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListSecondaryApiTokensResponse model module.
  * @module model/ListSecondaryApiTokensResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListSecondaryApiTokensResponse = /*#__PURE__*/function () {
   /**

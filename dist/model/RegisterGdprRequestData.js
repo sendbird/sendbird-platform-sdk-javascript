@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RegisterGdprRequestData model module.
  * @module model/RegisterGdprRequestData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var RegisterGdprRequestData = /*#__PURE__*/function () {
   /**

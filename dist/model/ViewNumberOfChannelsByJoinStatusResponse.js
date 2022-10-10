@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewNumberOfChannelsByJoinStatusResponse model module.
  * @module model/ViewNumberOfChannelsByJoinStatusResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ViewNumberOfChannelsByJoinStatusResponse = /*#__PURE__*/function () {
   /**

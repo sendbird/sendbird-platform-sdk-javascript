@@ -38,7 +38,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Bot service.
 * @module api/BotApi
-* @version 1.0.7
+* @version 0.0.13
 */
 var BotApi = /*#__PURE__*/function () {
   /**

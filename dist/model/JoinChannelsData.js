@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The JoinChannelsData model module.
  * @module model/JoinChannelsData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var JoinChannelsData = /*#__PURE__*/function () {
   /**

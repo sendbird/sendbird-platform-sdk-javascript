@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The MuteUsersInChannelsWithCustomChannelTypeData model module.
  * @module model/MuteUsersInChannelsWithCustomChannelTypeData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var MuteUsersInChannelsWithCustomChannelTypeData = /*#__PURE__*/function () {
   /**

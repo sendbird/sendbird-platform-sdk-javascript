@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * DataExport service.
 * @module api/DataExportApi
-* @version 1.0.7
+* @version 0.0.13
 */
 var DataExportApi = /*#__PURE__*/function () {
   /**

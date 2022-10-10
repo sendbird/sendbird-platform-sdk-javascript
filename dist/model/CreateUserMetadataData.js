@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateUserMetadataData model module.
  * @module model/CreateUserMetadataData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var CreateUserMetadataData = /*#__PURE__*/function () {
   /**

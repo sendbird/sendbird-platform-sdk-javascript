@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SBObject model module.
  * @module model/SBObject
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SBObject = /*#__PURE__*/function () {
   /**

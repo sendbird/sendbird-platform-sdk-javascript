@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewGdprRequestByIdResponse model module.
  * @module model/ViewGdprRequestByIdResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ViewGdprRequestByIdResponse = /*#__PURE__*/function () {
   /**

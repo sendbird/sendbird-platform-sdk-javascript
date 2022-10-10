@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RevokeSecondaryApiTokenByTokenResponse model module.
  * @module model/RevokeSecondaryApiTokenByTokenResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var RevokeSecondaryApiTokenByTokenResponse = /*#__PURE__*/function () {
   /**

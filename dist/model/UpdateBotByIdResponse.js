@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateBotByIdResponse model module.
  * @module model/UpdateBotByIdResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var UpdateBotByIdResponse = /*#__PURE__*/function () {
   /**

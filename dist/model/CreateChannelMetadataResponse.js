@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateChannelMetadataResponse model module.
  * @module model/CreateChannelMetadataResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var CreateChannelMetadataResponse = /*#__PURE__*/function () {
   /**

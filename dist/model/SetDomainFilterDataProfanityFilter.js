@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SetDomainFilterDataProfanityFilter model module.
  * @module model/SetDomainFilterDataProfanityFilter
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SetDomainFilterDataProfanityFilter = /*#__PURE__*/function () {
   /**

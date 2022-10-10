@@ -54,7 +54,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * GroupChannel service.
 * @module api/GroupChannelApi
-* @version 1.0.7
+* @version 0.0.13
 */
 var GroupChannelApi = /*#__PURE__*/function () {
   /**

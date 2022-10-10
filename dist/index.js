@@ -267,6 +267,18 @@ Object.defineProperty(exports, "CreateUserMetadataResponse", {
     return _CreateUserMetadataResponse["default"];
   }
 });
+Object.defineProperty(exports, "CreateUserTokenData", {
+  enumerable: true,
+  get: function get() {
+    return _CreateUserTokenData["default"];
+  }
+});
+Object.defineProperty(exports, "CreateUserTokenResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CreateUserTokenResponse["default"];
+  }
+});
 Object.defineProperty(exports, "CustomTypeListBannedUsersResponse", {
   enumerable: true,
   get: function get() {
@@ -1227,6 +1239,18 @@ Object.defineProperty(exports, "SendBirdGroupChannelDisappearingMessage", {
     return _SendBirdGroupChannelDisappearingMessage["default"];
   }
 });
+Object.defineProperty(exports, "SendBirdGroupChannelInviter", {
+  enumerable: true,
+  get: function get() {
+    return _SendBirdGroupChannelInviter["default"];
+  }
+});
+Object.defineProperty(exports, "SendBirdGroupChannelLastMessage", {
+  enumerable: true,
+  get: function get() {
+    return _SendBirdGroupChannelLastMessage["default"];
+  }
+});
 Object.defineProperty(exports, "SendBirdGroupChannelSmsFallback", {
   enumerable: true,
   get: function get() {
@@ -1886,6 +1910,10 @@ var _CreateUserMetadataData = _interopRequireDefault(require("./model/CreateUser
 
 var _CreateUserMetadataResponse = _interopRequireDefault(require("./model/CreateUserMetadataResponse"));
 
+var _CreateUserTokenData = _interopRequireDefault(require("./model/CreateUserTokenData"));
+
+var _CreateUserTokenResponse = _interopRequireDefault(require("./model/CreateUserTokenResponse"));
+
 var _CustomTypeListBannedUsersResponse = _interopRequireDefault(require("./model/CustomTypeListBannedUsersResponse"));
 
 var _DeleteAllowedIpsFromWhitelistResponse = _interopRequireDefault(require("./model/DeleteAllowedIpsFromWhitelistResponse"));
@@ -2189,6 +2217,10 @@ var _SendBirdGroupChannelCollection = _interopRequireDefault(require("./model/Se
 var _SendBirdGroupChannelCreatedBy = _interopRequireDefault(require("./model/SendBirdGroupChannelCreatedBy"));
 
 var _SendBirdGroupChannelDisappearingMessage = _interopRequireDefault(require("./model/SendBirdGroupChannelDisappearingMessage"));
+
+var _SendBirdGroupChannelInviter = _interopRequireDefault(require("./model/SendBirdGroupChannelInviter"));
+
+var _SendBirdGroupChannelLastMessage = _interopRequireDefault(require("./model/SendBirdGroupChannelLastMessage"));
 
 var _SendBirdGroupChannelSmsFallback = _interopRequireDefault(require("./model/SendBirdGroupChannelSmsFallback"));
 

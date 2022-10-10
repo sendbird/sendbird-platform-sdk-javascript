@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GetStatisticsMonthlyResponse model module.
  * @module model/GetStatisticsMonthlyResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var GetStatisticsMonthlyResponse = /*#__PURE__*/function () {
   /**

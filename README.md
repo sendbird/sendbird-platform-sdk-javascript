@@ -37,12 +37,6 @@ createUser();
 
 ```
 
-# ⚠️ Warnings
-
- 1. This package is not currently in npm. Please see  the Local development section for installation instructions.
-
- 2. This library is intended for server to server requests. **Do not use in a browser environment**. This SDK uses the Master API Token, which should never be exposed to the outside world like in a webpage or app.
-
 # ⚒️ Prerequisite
 
 In order to make requests with this SDK you will need you master API token. This can be found through the [Sendbird dashboard](https://dashboard.sendbird.com/).  Each app you create in Sendbird has its own master api token. These tokens can be found in Settings > Application > General.

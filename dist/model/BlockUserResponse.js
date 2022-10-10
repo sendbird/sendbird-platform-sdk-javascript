@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BlockUserResponse model module.
  * @module model/BlockUserResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var BlockUserResponse = /*#__PURE__*/function () {
   /**

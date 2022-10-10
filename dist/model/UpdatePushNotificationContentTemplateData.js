@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdatePushNotificationContentTemplateData model module.
  * @module model/UpdatePushNotificationContentTemplateData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var UpdatePushNotificationContentTemplateData = /*#__PURE__*/function () {
   /**

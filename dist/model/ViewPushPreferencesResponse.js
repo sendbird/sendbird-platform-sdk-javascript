@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewPushPreferencesResponse model module.
  * @module model/ViewPushPreferencesResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ViewPushPreferencesResponse = /*#__PURE__*/function () {
   /**

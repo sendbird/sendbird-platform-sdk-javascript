@@ -1039,7 +1039,7 @@ let apiToken = {{API_TOKEN}}; // String |
 let channelType = "channelType_example"; // String | 
 let channelUrl = "channelUrl_example"; // String | 
 let opts = {
-  'messageTs': 56, // Number | 
+  'messageTs': "messageTs_example", // String | 
   'messageId': 56, // Number | 
   'prevLimit': 56, // Number | 
   'nextLimit': 56, // Number | 
@@ -1074,7 +1074,7 @@ Name | Type | Description  | Notes
  **apiToken** | **String**|  | 
  **channelType** | **String**|  | 
  **channelUrl** | **String**|  | 
- **messageTs** | **Number**|  | [optional] 
+ **messageTs** | **String**|  | [optional] 
  **messageId** | **Number**|  | [optional] 
  **prevLimit** | **Number**|  | [optional] 
  **nextLimit** | **Number**|  | [optional] 

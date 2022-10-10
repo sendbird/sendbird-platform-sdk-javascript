@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcListMutedUsersResponse model module.
  * @module model/OcListMutedUsersResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var OcListMutedUsersResponse = /*#__PURE__*/function () {
   /**

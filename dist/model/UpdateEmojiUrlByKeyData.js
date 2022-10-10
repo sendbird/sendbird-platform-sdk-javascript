@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateEmojiUrlByKeyData model module.
  * @module model/UpdateEmojiUrlByKeyData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var UpdateEmojiUrlByKeyData = /*#__PURE__*/function () {
   /**

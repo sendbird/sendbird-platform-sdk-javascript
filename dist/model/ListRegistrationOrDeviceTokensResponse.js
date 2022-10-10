@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListRegistrationOrDeviceTokensResponse model module.
  * @module model/ListRegistrationOrDeviceTokensResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListRegistrationOrDeviceTokensResponse = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdThreadInfo model module.
  * @module model/SendBirdThreadInfo
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdThreadInfo = /*#__PURE__*/function () {
   /**

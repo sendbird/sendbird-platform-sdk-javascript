@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListSecondaryApiTokensResponseApiTokensInner model module.
  * @module model/ListSecondaryApiTokensResponseApiTokensInner
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListSecondaryApiTokensResponseApiTokensInner = /*#__PURE__*/function () {
   /**

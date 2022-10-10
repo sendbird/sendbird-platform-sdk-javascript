@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewSecondaryApiTokenByTokenResponse model module.
  * @module model/ViewSecondaryApiTokenByTokenResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ViewSecondaryApiTokenByTokenResponse = /*#__PURE__*/function () {
   /**

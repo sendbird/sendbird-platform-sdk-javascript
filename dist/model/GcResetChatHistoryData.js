@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcResetChatHistoryData model module.
  * @module model/GcResetChatHistoryData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var GcResetChatHistoryData = /*#__PURE__*/function () {
   /**

@@ -38,7 +38,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Metadata service.
 * @module api/MetadataApi
-* @version 1.0.7
+* @version 0.0.13
 */
 var MetadataApi = /*#__PURE__*/function () {
   /**
@@ -687,7 +687,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
 
   }, {
@@ -728,7 +728,9 @@ var MetadataApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = {
+        'String': 'String'
+      };
       return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/metacounter/{key}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -740,7 +742,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
 
   }, {
@@ -758,7 +760,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateChannelMetadataData} opts.updateChannelMetadataData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
 
   }, {
@@ -793,7 +795,9 @@ var MetadataApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = {
+        'String': 'String'
+      };
       return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/metadata', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -804,7 +808,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateChannelMetadataData} opts.updateChannelMetadataData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
 
   }, {
@@ -823,7 +827,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
 
   }, {
@@ -864,7 +868,9 @@ var MetadataApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = {
+        'String': 'String'
+      };
       return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/metadata/{key}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -876,7 +882,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
 
   }, {
@@ -950,7 +956,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
 
   }, {
@@ -985,7 +991,9 @@ var MetadataApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = {
+        'String': 'String'
+      };
       return this.apiClient.callApi('/v3/users/{user_id}/metadata/{key}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -996,7 +1004,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {String} key 
      * @param {Object} opts Optional parameters
      * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
 
   }, {
@@ -1015,7 +1023,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
 
   }, {
@@ -1053,7 +1061,9 @@ var MetadataApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = {
+        'String': 'String'
+      };
       return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/metacounter', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -1065,7 +1075,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
 
   }, {
@@ -1151,7 +1161,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
 
   }, {
@@ -1189,7 +1199,9 @@ var MetadataApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = {
+        'String': 'String'
+      };
       return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/metadata', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -1201,7 +1213,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {Object} opts Optional parameters
      * @param {String} opts.key 
      * @param {Array.<String>} opts.keys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
 
   }, {
@@ -1218,7 +1230,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} key 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
 
   }, {
@@ -1258,7 +1270,9 @@ var MetadataApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = {
+        'String': 'String'
+      };
       return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/metadata/{key}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -1268,7 +1282,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {String} key 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
 
   }, {
@@ -1345,7 +1359,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {String} apiToken 
      * @param {String} userId 
      * @param {String} key 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, {String: String}>} and HTTP response
      */
 
   }, {
@@ -1379,7 +1393,9 @@ var MetadataApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = {
+        'String': 'String'
+      };
       return this.apiClient.callApi('/v3/users/{user_id}/metadata/{key}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -1388,7 +1404,7 @@ var MetadataApi = /*#__PURE__*/function () {
      * @param {String} apiToken 
      * @param {String} userId 
      * @param {String} key 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object.<String, {String: String}>}
      */
 
   }, {

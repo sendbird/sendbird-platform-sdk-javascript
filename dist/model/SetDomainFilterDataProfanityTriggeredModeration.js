@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SetDomainFilterDataProfanityTriggeredModeration model module.
  * @module model/SetDomainFilterDataProfanityTriggeredModeration
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SetDomainFilterDataProfanityTriggeredModeration = /*#__PURE__*/function () {
   /**

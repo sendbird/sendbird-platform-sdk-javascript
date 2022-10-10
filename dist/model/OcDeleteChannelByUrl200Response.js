@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcDeleteChannelByUrl200Response model module.
  * @module model/OcDeleteChannelByUrl200Response
- * @version 1.0.7
+ * @version 0.0.13
  */
 var OcDeleteChannelByUrl200Response = /*#__PURE__*/function () {
   /**

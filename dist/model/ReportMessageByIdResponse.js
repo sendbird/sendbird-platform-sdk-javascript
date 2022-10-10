@@ -24,12 +24,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportMessageByIdResponse model module.
  * @module model/ReportMessageByIdResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ReportMessageByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ReportMessageByIdResponse</code>.
    * @alias module:model/ReportMessageByIdResponse
+   * @extends Object
    */
   function ReportMessageByIdResponse() {
     _classCallCheck(this, ReportMessageByIdResponse);
@@ -59,6 +60,8 @@ var ReportMessageByIdResponse = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ReportMessageByIdResponse();
+
+        _ApiClient["default"].constructFromObject(data, obj, 'Object');
 
         if (data.hasOwnProperty('report_type')) {
           obj['report_type'] = _ApiClient["default"].convertToType(data['report_type'], 'String');

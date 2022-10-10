@@ -534,7 +534,7 @@ No authorization required
 
 ## updateChannelMetacounterByKey
 
-> Object updateChannelMetacounterByKey(apiToken, channelType, channelUrl, key, opts)
+> {String: String} updateChannelMetacounterByKey(apiToken, channelType, channelUrl, key, opts)
 
 Update a channel metacounter - When updating a specific item of a channel metacounter by its key
 
@@ -574,7 +574,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**{String: String}**
 
 ### Authorization
 
@@ -588,7 +588,7 @@ No authorization required
 
 ## updateChannelMetadata
 
-> Object updateChannelMetadata(apiToken, channelType, channelUrl, opts)
+> {String: String} updateChannelMetadata(apiToken, channelType, channelUrl, opts)
 
 Update a channel metadata - When updating existing items of a channel metadata by their keys or adding new items to the metadata
 
@@ -626,7 +626,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**{String: String}**
 
 ### Authorization
 
@@ -640,7 +640,7 @@ No authorization required
 
 ## updateChannelMetadataByKey
 
-> Object updateChannelMetadataByKey(apiToken, channelType, channelUrl, key, opts)
+> {String: String} updateChannelMetadataByKey(apiToken, channelType, channelUrl, key, opts)
 
 Update a channel metadata - When updating a specific item of a channel metadata by its key
 
@@ -680,7 +680,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**{String: String}**
 
 ### Authorization
 
@@ -744,7 +744,7 @@ No authorization required
 
 ## updateUserMetadataByKey
 
-> Object updateUserMetadataByKey(apiToken, userId, key, opts)
+> {String: String} updateUserMetadataByKey(apiToken, userId, key, opts)
 
 Update a user metadata - When updating a specific item of a user metadata by its key
 
@@ -782,7 +782,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**{String: String}**
 
 ### Authorization
 
@@ -796,7 +796,7 @@ No authorization required
 
 ## viewChannelMetacounter
 
-> Object viewChannelMetacounter(apiToken, channelType, channelUrl, opts)
+> {String: String} viewChannelMetacounter(apiToken, channelType, channelUrl, opts)
 
 View a channel metacounter - When retrieving all items of a channel metacounter
 
@@ -836,7 +836,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**{String: String}**
 
 ### Authorization
 
@@ -900,7 +900,7 @@ No authorization required
 
 ## viewChannelMetadata
 
-> Object viewChannelMetadata(apiToken, channelType, channelUrl, opts)
+> {String: String} viewChannelMetadata(apiToken, channelType, channelUrl, opts)
 
 View a channel metadata - When retrieving all items of a channel metadata
 
@@ -940,7 +940,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**{String: String}**
 
 ### Authorization
 
@@ -954,7 +954,7 @@ No authorization required
 
 ## viewChannelMetadataByKey
 
-> Object viewChannelMetadataByKey(apiToken, channelType, channelUrl, key)
+> {String: String} viewChannelMetadataByKey(apiToken, channelType, channelUrl, key)
 
 View a channel metadata - When retrieving a specific item of a channel metadata by its key
 
@@ -990,7 +990,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**{String: String}**
 
 ### Authorization
 
@@ -1056,7 +1056,7 @@ No authorization required
 
 ## viewUserMetadataByKey
 
-> Object viewUserMetadataByKey(apiToken, userId, key)
+> {String: String} viewUserMetadataByKey(apiToken, userId, key)
 
 View a user metadata - When retrieving a specific item of a user metadata by its key
 
@@ -1090,7 +1090,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**{String: String}**
 
 ### Authorization
 

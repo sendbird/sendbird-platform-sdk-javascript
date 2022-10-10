@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListReportsOnChannelByUrlResponse model module.
  * @module model/ListReportsOnChannelByUrlResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListReportsOnChannelByUrlResponse = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateCountPreferenceOfChannelByUrlResponse model module.
  * @module model/UpdateCountPreferenceOfChannelByUrlResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var UpdateCountPreferenceOfChannelByUrlResponse = /*#__PURE__*/function () {
   /**

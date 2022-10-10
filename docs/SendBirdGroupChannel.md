@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **ignoreProfanityFilter** | **Boolean** |  | [optional] 
 **hiddenState** | **String** |  | [optional] 
 **invitedAt** | **Number** |  | [optional] 
-**inviter** | [**SendBirdUser**](SendBirdUser.md) |  | [optional] 
+**inviter** | [**SendBirdGroupChannelInviter**](SendBirdGroupChannelInviter.md) |  | [optional] 
 **isAccessCodeRequired** | **Boolean** |  | [optional] 
 **isBroadcast** | **Boolean** |  | [optional] 
 **isCreated** | **Boolean** |  | [optional] 
@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 **isSuper** | **Boolean** |  | [optional] 
 **joinedAt** | **Number** |  | [optional] 
 **joinedMemberCount** | **Number** |  | [optional] 
-**lastMessage** | [**SendBirdMessageResponse**](SendBirdMessageResponse.md) |  | [optional] 
+**lastMessage** | [**SendBirdGroupChannelLastMessage**](SendBirdGroupChannelLastMessage.md) |  | [optional] 
 **maxLengthMessage** | **Number** |  | [optional] 
 **memberCount** | **Number** |  | [optional] 
 **members** | [**[SendBirdMember]**](SendBirdMember.md) |  | [optional] 
@@ -43,7 +43,7 @@ Name | Type | Description | Notes
 **myPushTriggerOption** | **String** |  | [optional] 
 **myRole** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
-**operators** | **[String]** |  | [optional] 
+**operators** | **[Object]** |  | [optional] 
 **smsFallback** | [**SendBirdGroupChannelSmsFallback**](SendBirdGroupChannelSmsFallback.md) |  | [optional] 
 **unreadMentionCount** | **Number** |  | [optional] 
 **unreadMessageCount** | **Number** |  | [optional] 
@@ -105,6 +105,8 @@ Name | Type | Description | Notes
 
 ## Enum: MyRoleEnum
 
+
+* `empty` (value: `""`)
 
 * `none` (value: `"none"`)
 

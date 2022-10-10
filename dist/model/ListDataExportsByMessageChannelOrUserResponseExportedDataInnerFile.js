@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile model module.
  * @module model/ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile = /*#__PURE__*/function () {
   /**

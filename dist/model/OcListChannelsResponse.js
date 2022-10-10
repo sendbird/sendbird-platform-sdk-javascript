@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcListChannelsResponse model module.
  * @module model/OcListChannelsResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var OcListChannelsResponse = /*#__PURE__*/function () {
   /**

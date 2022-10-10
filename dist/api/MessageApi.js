@@ -98,7 +98,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Message service.
 * @module api/MessageApi
-* @version 1.0.7
+* @version 0.0.13
 */
 var MessageApi = /*#__PURE__*/function () {
   /**
@@ -1225,7 +1225,7 @@ var MessageApi = /*#__PURE__*/function () {
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.messageTs 
+     * @param {String} opts.messageTs 
      * @param {Number} opts.messageId 
      * @param {Number} opts.prevLimit 
      * @param {Number} opts.nextLimit 
@@ -1307,7 +1307,7 @@ var MessageApi = /*#__PURE__*/function () {
      * @param {String} channelType 
      * @param {String} channelUrl 
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.messageTs 
+     * @param {String} opts.messageTs 
      * @param {Number} opts.messageId 
      * @param {Number} opts.prevLimit 
      * @param {Number} opts.nextLimit 

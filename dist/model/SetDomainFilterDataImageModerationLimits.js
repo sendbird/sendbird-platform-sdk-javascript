@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SetDomainFilterDataImageModerationLimits model module.
  * @module model/SetDomainFilterDataImageModerationLimits
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SetDomainFilterDataImageModerationLimits = /*#__PURE__*/function () {
   /**

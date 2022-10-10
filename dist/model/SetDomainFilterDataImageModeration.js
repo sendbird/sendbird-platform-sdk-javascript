@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SetDomainFilterDataImageModeration model module.
  * @module model/SetDomainFilterDataImageModeration
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SetDomainFilterDataImageModeration = /*#__PURE__*/function () {
   /**

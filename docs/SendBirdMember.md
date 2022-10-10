@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **isActive** | **Boolean** |  | [optional] 
 **isMuted** | **Boolean** |  | [optional] 
 **lastSeenAt** | **Number** |  | [optional] 
-**metaData** | [**SBObject**](SBObject.md) |  | [optional] 
 **nickname** | **String** |  | [optional] 
 **plainProfileUrl** | **String** |  | [optional] 
 **preferredLanguages** | **[String]** |  | [optional] 
@@ -31,6 +30,8 @@ Name | Type | Description | Notes
 ## Enum: RoleEnum
 
 
+* `empty` (value: `""`)
+
 * `none` (value: `"none"`)
 
 * `operator` (value: `"operator"`)
@@ -41,6 +42,8 @@ Name | Type | Description | Notes
 
 ## Enum: StateEnum
 
+
+* `empty` (value: `""`)
 
 * `invited` (value: `"invited"`)
 

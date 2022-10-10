@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddApnsPushConfigurationData model module.
  * @module model/AddApnsPushConfigurationData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var AddApnsPushConfigurationData = /*#__PURE__*/function () {
   /**

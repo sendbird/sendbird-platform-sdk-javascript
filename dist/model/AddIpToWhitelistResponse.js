@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddIpToWhitelistResponse model module.
  * @module model/AddIpToWhitelistResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var AddIpToWhitelistResponse = /*#__PURE__*/function () {
   /**

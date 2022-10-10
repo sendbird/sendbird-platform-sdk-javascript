@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcViewMuteByIdResponse model module.
  * @module model/OcViewMuteByIdResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var OcViewMuteByIdResponse = /*#__PURE__*/function () {
   /**

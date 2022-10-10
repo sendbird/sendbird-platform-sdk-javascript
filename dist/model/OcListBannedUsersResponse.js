@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcListBannedUsersResponse model module.
  * @module model/OcListBannedUsersResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var OcListBannedUsersResponse = /*#__PURE__*/function () {
   /**

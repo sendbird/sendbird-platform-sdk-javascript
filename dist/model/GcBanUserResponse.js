@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcBanUserResponse model module.
  * @module model/GcBanUserResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var GcBanUserResponse = /*#__PURE__*/function () {
   /**

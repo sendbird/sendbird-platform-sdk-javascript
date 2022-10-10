@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcUpdateChannelByUrlData model module.
  * @module model/OcUpdateChannelByUrlData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var OcUpdateChannelByUrlData = /*#__PURE__*/function () {
   /**

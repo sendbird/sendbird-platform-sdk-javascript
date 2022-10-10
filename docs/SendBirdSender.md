@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **isActive** | **Boolean** |  | [optional] 
 **isBlockedByMe** | **Boolean** |  | [optional] 
 **lastSeenAt** | **Number** |  | [optional] 
-**metaData** | [**SBObject**](SBObject.md) |  | [optional] 
+**metadata** | **Object** |  | [optional] 
 **nickname** | **String** |  | [optional] 
 **plainProfileUrl** | **String** |  | [optional] 
 **preferredLanguages** | **[String]** |  | [optional] 

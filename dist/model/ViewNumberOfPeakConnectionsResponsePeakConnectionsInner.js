@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewNumberOfPeakConnectionsResponsePeakConnectionsInner model module.
  * @module model/ViewNumberOfPeakConnectionsResponsePeakConnectionsInner
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ViewNumberOfPeakConnectionsResponsePeakConnectionsInner = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListUsersResponse model module.
  * @module model/ListUsersResponse
- * @version 1.0.7
+ * @version 0.0.13
  */
 var ListUsersResponse = /*#__PURE__*/function () {
   /**

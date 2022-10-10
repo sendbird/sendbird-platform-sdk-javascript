@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdThumbnailSBObject model module.
  * @module model/SendBirdThumbnailSBObject
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdThumbnailSBObject = /*#__PURE__*/function () {
   /**

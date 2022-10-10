@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SetDomainFilterDataProfanityFilterRegexFiltersInner model module.
  * @module model/SetDomainFilterDataProfanityFilterRegexFiltersInner
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SetDomainFilterDataProfanityFilterRegexFiltersInner = /*#__PURE__*/function () {
   /**

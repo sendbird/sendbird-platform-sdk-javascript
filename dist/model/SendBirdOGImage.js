@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdOGImage model module.
  * @module model/SendBirdOGImage
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdOGImage = /*#__PURE__*/function () {
   /**

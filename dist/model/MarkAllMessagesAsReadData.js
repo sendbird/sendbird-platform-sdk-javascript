@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The MarkAllMessagesAsReadData model module.
  * @module model/MarkAllMessagesAsReadData
- * @version 1.0.7
+ * @version 0.0.13
  */
 var MarkAllMessagesAsReadData = /*#__PURE__*/function () {
   /**

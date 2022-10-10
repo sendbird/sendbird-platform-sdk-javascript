@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdGroupChannelDisappearingMessage model module.
  * @module model/SendBirdGroupChannelDisappearingMessage
- * @version 1.0.7
+ * @version 0.0.13
  */
 var SendBirdGroupChannelDisappearingMessage = /*#__PURE__*/function () {
   /**
