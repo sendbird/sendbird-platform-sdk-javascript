@@ -16,17 +16,18 @@ import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 const userId = "1234";
 const name = "bob";
 const profileUrl = "https://picsum.photos/200";
+const apiToken = "YOUR_API_TOKEN";
+const appId = "YOUR_APP_ID";
 
 const opts = {
-    'apiToken': 'YOUR_MASTER_API_KEY',
     'createUserData': new SendbirdPlatformSdk.CreateUserData(userId, name, profileUrl),
 };
 
 async function createUser() {
     const userApiInstance = new SendbirdPlatformSdk.UserApi();
-    userApiInstance.apiClient.basePath = `https://api-${"YOUR_APP_ID"}.sendbird.com`;
+    userApiInstance.apiClient.basePath = `https://api-${appId}.sendbird.com`;
     try {
-        const data = await userApiInstance.createUser(opts);
+        const data = await userApiInstance.createUser(apiToken, opts);
         console.log(data);
     } catch (e) {
         console.log(e);
