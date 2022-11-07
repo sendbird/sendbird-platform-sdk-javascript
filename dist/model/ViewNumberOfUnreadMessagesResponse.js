@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewNumberOfUnreadMessagesResponse model module.
  * @module model/ViewNumberOfUnreadMessagesResponse
- * @version 0.0.14
- */var ViewNumberOfUnreadMessagesResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewNumberOfUnreadMessagesResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewNumberOfUnreadMessagesResponse</code>.
    * @alias module:model/ViewNumberOfUnreadMessagesResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewNumberOfUnreadMessagesResponse;
-}(); /**
-      * @member {Number} unread_count
-      */
+}();
+/**
+ * @member {Number} unread_count
+ */
 ViewNumberOfUnreadMessagesResponse.prototype['unread_count'] = undefined;
 var _default = ViewNumberOfUnreadMessagesResponse;
 exports["default"] = _default;

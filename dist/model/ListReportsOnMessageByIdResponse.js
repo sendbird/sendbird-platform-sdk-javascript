@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListReportsOnMessageByIdResponse model module.
  * @module model/ListReportsOnMessageByIdResponse
- * @version 0.0.14
- */var ListReportsOnMessageByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListReportsOnMessageByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListReportsOnMessageByIdResponse</code>.
    * @alias module:model/ListReportsOnMessageByIdResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListReportsOnMessageByIdResponse;
-}(); /**
-      * @member {Array.<module:model/ListReportsOnMessageByIdResponseReportLogsInner>} report_logs
-      */
+}();
+/**
+ * @member {Array.<module:model/ListReportsOnMessageByIdResponseReportLogsInner>} report_logs
+ */
 ListReportsOnMessageByIdResponse.prototype['report_logs'] = undefined;
 
 /**

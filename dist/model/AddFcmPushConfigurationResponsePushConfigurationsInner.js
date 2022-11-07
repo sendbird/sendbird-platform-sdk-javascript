@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddFcmPushConfigurationResponsePushConfigurationsInner model module.
  * @module model/AddFcmPushConfigurationResponsePushConfigurationsInner
- * @version 0.0.14
- */var AddFcmPushConfigurationResponsePushConfigurationsInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddFcmPushConfigurationResponsePushConfigurationsInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddFcmPushConfigurationResponsePushConfigurationsInner</code>.
    * @alias module:model/AddFcmPushConfigurationResponsePushConfigurationsInner
@@ -61,9 +62,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddFcmPushConfigurationResponsePushConfigurationsInner;
-}(); /**
-      * @member {String} id
-      */
+}();
+/**
+ * @member {String} id
+ */
 AddFcmPushConfigurationResponsePushConfigurationsInner.prototype['id'] = undefined;
 
 /**

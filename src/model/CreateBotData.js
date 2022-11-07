@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateBotData model module.
  * @module model/CreateBotData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class CreateBotData {
     /**

@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListBotsResponseBotsInner model module.
  * @module model/ListBotsResponseBotsInner
- * @version 0.0.14
- */var ListBotsResponseBotsInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListBotsResponseBotsInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListBotsResponseBotsInner</code>.
    * @alias module:model/ListBotsResponseBotsInner
@@ -68,9 +69,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListBotsResponseBotsInner;
-}(); /**
-      * @member {module:model/CreateBotResponseBot} bot
-      */
+}();
+/**
+ * @member {module:model/CreateBotResponseBot} bot
+ */
 ListBotsResponseBotsInner.prototype['bot'] = undefined;
 
 /**

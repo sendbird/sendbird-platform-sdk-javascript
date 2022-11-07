@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdEmojiCategory model module.
  * @module model/SendBirdEmojiCategory
- * @version 0.0.14
- */var SendBirdEmojiCategory = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdEmojiCategory = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdEmojiCategory</code>.
    * @alias module:model/SendBirdEmojiCategory
@@ -62,9 +63,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdEmojiCategory;
-}(); /**
-      * @member {Array.<module:model/SendBirdEmoji>} emojis
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdEmoji>} emojis
+ */
 SendBirdEmojiCategory.prototype['emojis'] = undefined;
 
 /**

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListPushConfigurationsResponsePushConfigurationsInner model module.
  * @module model/ListPushConfigurationsResponsePushConfigurationsInner
- * @version 0.0.14
- */var ListPushConfigurationsResponsePushConfigurationsInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListPushConfigurationsResponsePushConfigurationsInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListPushConfigurationsResponsePushConfigurationsInner</code>.
    * @alias module:model/ListPushConfigurationsResponsePushConfigurationsInner
@@ -67,9 +68,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListPushConfigurationsResponsePushConfigurationsInner;
-}(); /**
-      * @member {String} id
-      */
+}();
+/**
+ * @member {String} id
+ */
 ListPushConfigurationsResponsePushConfigurationsInner.prototype['id'] = undefined;
 
 /**

@@ -17,7 +17,7 @@ import ListAnnouncementsResponseAnnouncementsInner from './ListAnnouncementsResp
 /**
  * The ListAnnouncementsResponse model module.
  * @module model/ListAnnouncementsResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class ListAnnouncementsResponse {
     /**

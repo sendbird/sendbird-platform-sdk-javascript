@@ -17,7 +17,7 @@ import ListMessagesResponseMessagesInnerSortedMetaarrayInner from './ListMessage
 /**
  * The AddExtraDataToMessageResponse model module.
  * @module model/AddExtraDataToMessageResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class AddExtraDataToMessageResponse {
     /**

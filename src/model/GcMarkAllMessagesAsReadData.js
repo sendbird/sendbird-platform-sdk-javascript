@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcMarkAllMessagesAsReadData model module.
  * @module model/GcMarkAllMessagesAsReadData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class GcMarkAllMessagesAsReadData {
     /**

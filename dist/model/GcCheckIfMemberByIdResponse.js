@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcCheckIfMemberByIdResponse model module.
  * @module model/GcCheckIfMemberByIdResponse
- * @version 0.0.14
- */var GcCheckIfMemberByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcCheckIfMemberByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcCheckIfMemberByIdResponse</code>.
    * @alias module:model/GcCheckIfMemberByIdResponse
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcCheckIfMemberByIdResponse;
-}(); /**
-      * @member {Boolean} is_member
-      */
+}();
+/**
+ * @member {Boolean} is_member
+ */
 GcCheckIfMemberByIdResponse.prototype['is_member'] = undefined;
 
 /**

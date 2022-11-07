@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewNumberOfConcurrentConnectionsResponse model module.
  * @module model/ViewNumberOfConcurrentConnectionsResponse
- * @version 0.0.14
- */var ViewNumberOfConcurrentConnectionsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewNumberOfConcurrentConnectionsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewNumberOfConcurrentConnectionsResponse</code>.
    * @alias module:model/ViewNumberOfConcurrentConnectionsResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewNumberOfConcurrentConnectionsResponse;
-}(); /**
-      * @member {Number} ccu
-      */
+}();
+/**
+ * @member {Number} ccu
+ */
 ViewNumberOfConcurrentConnectionsResponse.prototype['ccu'] = undefined;
 var _default = ViewNumberOfConcurrentConnectionsResponse;
 exports["default"] = _default;

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcRegisterOperatorsResponse model module.
  * @module model/GcRegisterOperatorsResponse
- * @version 0.0.14
- */var GcRegisterOperatorsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcRegisterOperatorsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcRegisterOperatorsResponse</code>.
    * @alias module:model/GcRegisterOperatorsResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcRegisterOperatorsResponse;
-}(); /**
-      * @member {Array.<String>} operator_ids
-      */
+}();
+/**
+ * @member {Array.<String>} operator_ids
+ */
 GcRegisterOperatorsResponse.prototype['operator_ids'] = undefined;
 var _default = GcRegisterOperatorsResponse;
 exports["default"] = _default;

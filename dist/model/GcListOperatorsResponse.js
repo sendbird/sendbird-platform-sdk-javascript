@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcListOperatorsResponse model module.
  * @module model/GcListOperatorsResponse
- * @version 0.0.14
- */var GcListOperatorsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcListOperatorsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcListOperatorsResponse</code>.
    * @alias module:model/GcListOperatorsResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcListOperatorsResponse;
-}(); /**
-      * @member {Array.<module:model/SendBirdUser>} operators
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdUser>} operators
+ */
 GcListOperatorsResponse.prototype['operators'] = undefined;
 
 /**

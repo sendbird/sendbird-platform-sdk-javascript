@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListBannedChannelsResponse model module.
  * @module model/ListBannedChannelsResponse
- * @version 0.0.14
- */var ListBannedChannelsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListBannedChannelsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListBannedChannelsResponse</code>.
    * @alias module:model/ListBannedChannelsResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListBannedChannelsResponse;
-}(); /**
-      * @member {Array.<module:model/ListBannedChannelsResponseBannedChannelsInner>} banned_channels
-      */
+}();
+/**
+ * @member {Array.<module:model/ListBannedChannelsResponseBannedChannelsInner>} banned_channels
+ */
 ListBannedChannelsResponse.prototype['banned_channels'] = undefined;
 
 /**

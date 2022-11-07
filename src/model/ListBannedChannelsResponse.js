@@ -17,7 +17,7 @@ import ListBannedChannelsResponseBannedChannelsInner from './ListBannedChannelsR
 /**
  * The ListBannedChannelsResponse model module.
  * @module model/ListBannedChannelsResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class ListBannedChannelsResponse {
     /**

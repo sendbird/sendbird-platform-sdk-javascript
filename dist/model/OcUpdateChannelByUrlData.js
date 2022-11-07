@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcUpdateChannelByUrlData model module.
  * @module model/OcUpdateChannelByUrlData
- * @version 0.0.14
- */var OcUpdateChannelByUrlData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcUpdateChannelByUrlData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcUpdateChannelByUrlData</code>.
    * @alias module:model/OcUpdateChannelByUrlData
@@ -90,10 +91,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcUpdateChannelByUrlData;
-}(); /**
-      * Specifies the URL of the channel to update.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the channel to update.
+ * @member {String} channel_url
+ */
 OcUpdateChannelByUrlData.prototype['channel_url'] = undefined;
 
 /**

@@ -17,7 +17,7 @@ import SendBirdRestrictionInfo from './SendBirdRestrictionInfo';
 /**
  * The SendBirdMember model module.
  * @module model/SendBirdMember
- * @version 0.0.14
+ * @version 0.0.16
  */
 class SendBirdMember {
     /**

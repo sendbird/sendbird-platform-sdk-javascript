@@ -9,9 +9,11 @@ Method | HTTP request | Description
 [**addHmsPushConfiguration**](ApplicationApi.md#addHmsPushConfiguration) | **POST** /v3/applications/push/hms | Add an HMS push configuration
 [**addIpToWhitelist**](ApplicationApi.md#addIpToWhitelist) | **PUT** /v3/applications/settings/ip_whitelist | Add an IP to a whitelist
 [**banUsersInChannelsWithCustomChannelType**](ApplicationApi.md#banUsersInChannelsWithCustomChannelType) | **POST** /v3/applications/settings_by_channel_custom_type/{custom_type}/ban | Ban users in channels with a custom channel type
+[**configureAutoEventMessages**](ApplicationApi.md#configureAutoEventMessages) | **PUT** /v3/applications/settings/auto_event_message | Configure auto event message settings
 [**deleteAllowedIpsFromWhitelist**](ApplicationApi.md#deleteAllowedIpsFromWhitelist) | **DELETE** /v3/applications/settings/ip_whitelist | Delete allowed IPs from a whitelist
 [**deleteApnsCertificateById**](ApplicationApi.md#deleteApnsCertificateById) | **DELETE** /v3/applications/push/apns/cert/{provider_id} | Delete an APNs certificate
 [**generateSecondaryApiToken**](ApplicationApi.md#generateSecondaryApiToken) | **POST** /v3/applications/api_tokens | Generate a secondary API token
+[**listAutoEventMessages**](ApplicationApi.md#listAutoEventMessages) | **GET** /v3/applications/settings/auto_event_message | List auto event messages
 [**listBannedUsersInChannelsWithCustomChannelType**](ApplicationApi.md#listBannedUsersInChannelsWithCustomChannelType) | **GET** /v3/applications/settings_by_channel_custom_type/{custom_type}/ban | List banned users in channels with a custom channel type
 [**listMutedUsersInChannelsWithCustomChannelType**](ApplicationApi.md#listMutedUsersInChannelsWithCustomChannelType) | **GET** /v3/applications/settings_by_channel_custom_type/{custom_type}/mute | List muted users in channels with a custom channel type
 [**listPushConfigurations**](ApplicationApi.md#listPushConfigurations) | **GET** /v3/applications/push/{push_type} | List push configurations
@@ -278,6 +280,54 @@ No authorization required
 - **Accept**: application/json
 
 
+## configureAutoEventMessages
+
+> SendBirdAutoEventMessageSettings configureAutoEventMessages(apiToken, opts)
+
+Configure auto event message settings
+
+## Configure auto event message settings  Determines whether to automatically send event messages to group channels when events take place in an application. You can choose which auto event message to receive on the Sendbird Dashboard  https://sendbird.com/docs/chat/v3/platform-api/application/managing-auto-event-messages/configure-auto-event-message-settings ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let opts = {
+  'configureAutoEventData': new SendbirdPlatformSdk.ConfigureAutoEventData() // ConfigureAutoEventData | 
+};
+apiInstance.configureAutoEventMessages(apiToken, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **configureAutoEventData** | [**ConfigureAutoEventData**](ConfigureAutoEventData.md)|  | [optional] 
+
+### Return type
+
+[**SendBirdAutoEventMessageSettings**](SendBirdAutoEventMessageSettings.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## deleteAllowedIpsFromWhitelist
 
 > DeleteAllowedIpsFromWhitelistResponse deleteAllowedIpsFromWhitelist(apiToken, ipWhitelistAddresses)
@@ -415,6 +465,50 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## listAutoEventMessages
+
+> SendBirdAutoEventMessageSettings listAutoEventMessages(apiToken)
+
+List auto event messages
+
+## List auto event messages  Retrieves a list of auto event messages that are sent in a specified application and indicates which ones are in use. Auto event messages are Admin messages that are automatically generated when a specific event occurs.  https://sendbird.com/docs/chat/v3/platform-api/application/managing-auto-event-messages/list-auto-event-messages ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.ApplicationApi();
+let apiToken = {{API_TOKEN}}; // String | 
+apiInstance.listAutoEventMessages(apiToken).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+
+### Return type
+
+[**SendBirdAutoEventMessageSettings**](SendBirdAutoEventMessageSettings.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

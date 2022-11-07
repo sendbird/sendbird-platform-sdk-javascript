@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UseDefaultEmojisResponse model module.
  * @module model/UseDefaultEmojisResponse
- * @version 0.0.14
- */var UseDefaultEmojisResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UseDefaultEmojisResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UseDefaultEmojisResponse</code>.
    * @alias module:model/UseDefaultEmojisResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UseDefaultEmojisResponse;
-}(); /**
-      * @member {Boolean} use_default_emoji
-      */
+}();
+/**
+ * @member {Boolean} use_default_emoji
+ */
 UseDefaultEmojisResponse.prototype['use_default_emoji'] = undefined;
 var _default = UseDefaultEmojisResponse;
 exports["default"] = _default;

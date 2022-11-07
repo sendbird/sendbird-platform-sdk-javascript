@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RetrieveAdvancedAnalyticsMetricsResponse model module.
  * @module model/RetrieveAdvancedAnalyticsMetricsResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class RetrieveAdvancedAnalyticsMetricsResponse {
     /**

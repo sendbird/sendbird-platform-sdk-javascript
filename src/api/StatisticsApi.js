@@ -13,6 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import GetDetailedOpenRateOfAnnouncementByIdResponse from '../model/GetDetailedOpenRateOfAnnouncementByIdResponse';
+import GetDetailedOpenStatusOfAnnouncementByIdResponse from '../model/GetDetailedOpenStatusOfAnnouncementByIdResponse';
 import RetrieveAdvancedAnalyticsMetricsResponse from '../model/RetrieveAdvancedAnalyticsMetricsResponse';
 import ViewNumberOfConcurrentConnectionsResponse from '../model/ViewNumberOfConcurrentConnectionsResponse';
 import ViewNumberOfDailyActiveUsersResponse from '../model/ViewNumberOfDailyActiveUsersResponse';
@@ -22,7 +24,7 @@ import ViewNumberOfPeakConnectionsResponse from '../model/ViewNumberOfPeakConnec
 /**
 * Statistics service.
 * @module api/StatisticsApi
-* @version 0.0.14
+* @version 0.0.16
 */
 export default class StatisticsApi {
 
@@ -37,6 +39,134 @@ export default class StatisticsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+
+    /**
+     * Get detailed open rate of an announcement
+     * ## Get detailed open rate of an announcement  Retrieves the detailed open rate information of an announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-rate-of-an-announcement ----------------------------   `unique_id`      Type: string      Description: Specifies the unique ID of the announcement to get its open rate.
+     * @param {String} apiToken 
+     * @param {String} uniqueId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetDetailedOpenRateOfAnnouncementByIdResponse} and HTTP response
+     */
+    getDetailedOpenRateOfAnnouncementByIdWithHttpInfo(apiToken, uniqueId) {
+      let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling getDetailedOpenRateOfAnnouncementById");
+      }
+      // verify the required parameter 'uniqueId' is set
+      if (uniqueId === undefined || uniqueId === null) {
+        throw new Error("Missing the required parameter 'uniqueId' when calling getDetailedOpenRateOfAnnouncementById");
+      }
+
+      let pathParams = {
+        'unique_id': uniqueId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Api-Token': apiToken
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GetDetailedOpenRateOfAnnouncementByIdResponse;
+      return this.apiClient.callApi(
+        '/v3/announcement_open_rate/{unique_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Get detailed open rate of an announcement
+     * ## Get detailed open rate of an announcement  Retrieves the detailed open rate information of an announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-rate-of-an-announcement ----------------------------   `unique_id`      Type: string      Description: Specifies the unique ID of the announcement to get its open rate.
+     * @param {String} apiToken 
+     * @param {String} uniqueId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetDetailedOpenRateOfAnnouncementByIdResponse}
+     */
+    getDetailedOpenRateOfAnnouncementById(apiToken, uniqueId) {
+      return this.getDetailedOpenRateOfAnnouncementByIdWithHttpInfo(apiToken, uniqueId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get detailed open status of an announcement
+     * ## Get detailed open status of an announcement  Retrieves the detailed open status information of a specific announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-status-of-an-announcement ----------------------------
+     * @param {String} apiToken 
+     * @param {String} uniqueId 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit 
+     * @param {String} opts.next 
+     * @param {Array.<String>} opts.uniqueIds 
+     * @param {Array.<String>} opts.channelUrls 
+     * @param {Boolean} opts.hasOpened 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetDetailedOpenStatusOfAnnouncementByIdResponse} and HTTP response
+     */
+    getDetailedOpenStatusOfAnnouncementByIdWithHttpInfo(apiToken, uniqueId, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling getDetailedOpenStatusOfAnnouncementById");
+      }
+      // verify the required parameter 'uniqueId' is set
+      if (uniqueId === undefined || uniqueId === null) {
+        throw new Error("Missing the required parameter 'uniqueId' when calling getDetailedOpenStatusOfAnnouncementById");
+      }
+
+      let pathParams = {
+        'unique_id': uniqueId
+      };
+      let queryParams = {
+        'limit': opts['limit'],
+        'next': opts['next'],
+        'unique_ids': this.apiClient.buildCollectionParam(opts['uniqueIds'], 'multi'),
+        'channel_urls': this.apiClient.buildCollectionParam(opts['channelUrls'], 'multi'),
+        'has_opened': opts['hasOpened']
+      };
+      let headerParams = {
+        'Api-Token': apiToken
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GetDetailedOpenStatusOfAnnouncementByIdResponse;
+      return this.apiClient.callApi(
+        '/v3/announcement_open_status/{unique_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Get detailed open status of an announcement
+     * ## Get detailed open status of an announcement  Retrieves the detailed open status information of a specific announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-status-of-an-announcement ----------------------------
+     * @param {String} apiToken 
+     * @param {String} uniqueId 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit 
+     * @param {String} opts.next 
+     * @param {Array.<String>} opts.uniqueIds 
+     * @param {Array.<String>} opts.channelUrls 
+     * @param {Boolean} opts.hasOpened 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetDetailedOpenStatusOfAnnouncementByIdResponse}
+     */
+    getDetailedOpenStatusOfAnnouncementById(apiToken, uniqueId, opts) {
+      return this.getDetailedOpenStatusOfAnnouncementByIdWithHttpInfo(apiToken, uniqueId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**

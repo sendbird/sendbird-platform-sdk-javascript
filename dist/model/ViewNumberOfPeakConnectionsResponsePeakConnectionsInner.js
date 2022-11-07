@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewNumberOfPeakConnectionsResponsePeakConnectionsInner model module.
  * @module model/ViewNumberOfPeakConnectionsResponsePeakConnectionsInner
- * @version 0.0.14
- */var ViewNumberOfPeakConnectionsResponsePeakConnectionsInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewNumberOfPeakConnectionsResponsePeakConnectionsInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewNumberOfPeakConnectionsResponsePeakConnectionsInner</code>.
    * @alias module:model/ViewNumberOfPeakConnectionsResponsePeakConnectionsInner
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewNumberOfPeakConnectionsResponsePeakConnectionsInner;
-}(); /**
-      * @member {String} date
-      */
+}();
+/**
+ * @member {String} date
+ */
 ViewNumberOfPeakConnectionsResponsePeakConnectionsInner.prototype['date'] = undefined;
 
 /**

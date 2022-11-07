@@ -178,50 +178,10 @@
         done();
       });
     });
-    describe('getStatistics', function() {
-      it('should call getStatistics successfully', function(done) {
-        //uncomment below and update the code to test getStatistics
-        //instance.getStatistics(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getStatisticsDaily', function() {
-      it('should call getStatisticsDaily successfully', function(done) {
-        //uncomment below and update the code to test getStatisticsDaily
-        //instance.getStatisticsDaily(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getStatisticsMonthly', function() {
-      it('should call getStatisticsMonthly successfully', function(done) {
-        //uncomment below and update the code to test getStatisticsMonthly
-        //instance.getStatisticsMonthly(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('listAllEmojisAndEmojiCategories', function() {
       it('should call listAllEmojisAndEmojiCategories successfully', function(done) {
         //uncomment below and update the code to test listAllEmojisAndEmojiCategories
         //instance.listAllEmojisAndEmojiCategories(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listAnnouncementGroups', function() {
-      it('should call listAnnouncementGroups successfully', function(done) {
-        //uncomment below and update the code to test listAnnouncementGroups
-        //instance.listAnnouncementGroups(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -298,16 +258,6 @@
         done();
       });
     });
-    describe('scheduleAnnouncement', function() {
-      it('should call scheduleAnnouncement successfully', function(done) {
-        //uncomment below and update the code to test scheduleAnnouncement
-        //instance.scheduleAnnouncement(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('sendMessage', function() {
       it('should call sendMessage successfully', function(done) {
         //uncomment below and update the code to test sendMessage
@@ -322,16 +272,6 @@
       it('should call translateMessageIntoOtherLanguages successfully', function(done) {
         //uncomment below and update the code to test translateMessageIntoOtherLanguages
         //instance.translateMessageIntoOtherLanguages(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateAnnouncementById', function() {
-      it('should call updateAnnouncementById successfully', function(done) {
-        //uncomment below and update the code to test updateAnnouncementById
-        //instance.updateAnnouncementById(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

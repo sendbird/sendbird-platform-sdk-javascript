@@ -44,6 +44,8 @@ import ChoosePushNotificationContentTemplateResponse from './model/ChoosePushNot
 import ChooseWhichEventsToSubscribeToData from './model/ChooseWhichEventsToSubscribeToData';
 import ChooseWhichEventsToSubscribeToResponse from './model/ChooseWhichEventsToSubscribeToResponse';
 import ChooseWhichEventsToSubscribeToResponseWebhook from './model/ChooseWhichEventsToSubscribeToResponseWebhook';
+import ConfigureAutoEventData from './model/ConfigureAutoEventData';
+import ConfigureAutoEventDataAutoEventMessage from './model/ConfigureAutoEventDataAutoEventMessage';
 import CreateBotData from './model/CreateBotData';
 import CreateBotResponse from './model/CreateBotResponse';
 import CreateBotResponseBot from './model/CreateBotResponseBot';
@@ -191,11 +193,13 @@ import RetrieveListOfSubscribedEventsResponseWebhook from './model/RetrieveListO
 import RevokeSecondaryApiTokenByTokenResponse from './model/RevokeSecondaryApiTokenByTokenResponse';
 import SBObject from './model/SBObject';
 import ScheduleAnnouncementData from './model/ScheduleAnnouncementData';
+import ScheduleAnnouncementDataMessage from './model/ScheduleAnnouncementDataMessage';
 import ScheduleAnnouncementResponse from './model/ScheduleAnnouncementResponse';
 import ScheduleAnnouncementResponseCreateChannelOptions from './model/ScheduleAnnouncementResponseCreateChannelOptions';
 import ScheduleAnnouncementResponseMessage from './model/ScheduleAnnouncementResponseMessage';
 import SendBirdAdminMessage from './model/SendBirdAdminMessage';
 import SendBirdAppleCriticalAlertOptions from './model/SendBirdAppleCriticalAlertOptions';
+import SendBirdAutoEventMessageSettings from './model/SendBirdAutoEventMessageSettings';
 import SendBirdBaseChannel from './model/SendBirdBaseChannel';
 import SendBirdBaseMessageInstance from './model/SendBirdBaseMessageInstance';
 import SendBirdChannelResponse from './model/SendBirdChannelResponse';
@@ -347,7 +351,7 @@ import WebhookApi from './api/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 0.0.14
+* @version 0.0.16
 */
 export {
     /**
@@ -541,6 +545,18 @@ export {
      * @property {module:model/ChooseWhichEventsToSubscribeToResponseWebhook}
      */
     ChooseWhichEventsToSubscribeToResponseWebhook,
+
+    /**
+     * The ConfigureAutoEventData model constructor.
+     * @property {module:model/ConfigureAutoEventData}
+     */
+    ConfigureAutoEventData,
+
+    /**
+     * The ConfigureAutoEventDataAutoEventMessage model constructor.
+     * @property {module:model/ConfigureAutoEventDataAutoEventMessage}
+     */
+    ConfigureAutoEventDataAutoEventMessage,
 
     /**
      * The CreateBotData model constructor.
@@ -1425,6 +1441,12 @@ export {
     ScheduleAnnouncementData,
 
     /**
+     * The ScheduleAnnouncementDataMessage model constructor.
+     * @property {module:model/ScheduleAnnouncementDataMessage}
+     */
+    ScheduleAnnouncementDataMessage,
+
+    /**
      * The ScheduleAnnouncementResponse model constructor.
      * @property {module:model/ScheduleAnnouncementResponse}
      */
@@ -1453,6 +1475,12 @@ export {
      * @property {module:model/SendBirdAppleCriticalAlertOptions}
      */
     SendBirdAppleCriticalAlertOptions,
+
+    /**
+     * The SendBirdAutoEventMessageSettings model constructor.
+     * @property {module:model/SendBirdAutoEventMessageSettings}
+     */
+    SendBirdAutoEventMessageSettings,
 
     /**
      * The SendBirdBaseChannel model constructor.

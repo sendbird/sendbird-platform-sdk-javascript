@@ -4,12 +4,118 @@ All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getDetailedOpenRateOfAnnouncementById**](StatisticsApi.md#getDetailedOpenRateOfAnnouncementById) | **GET** /v3/announcement_open_rate/{unique_id} | Get detailed open rate of an announcement
+[**getDetailedOpenStatusOfAnnouncementById**](StatisticsApi.md#getDetailedOpenStatusOfAnnouncementById) | **GET** /v3/announcement_open_status/{unique_id} | Get detailed open status of an announcement
 [**retrieveAdvancedAnalyticsMetrics**](StatisticsApi.md#retrieveAdvancedAnalyticsMetrics) | **GET** /v3/statistics/metric | Retrieve Advanced analytics metrics
 [**viewNumberOfConcurrentConnections**](StatisticsApi.md#viewNumberOfConcurrentConnections) | **GET** /v3/applications/ccu | View number of concurrent connections
 [**viewNumberOfDailyActiveUsers**](StatisticsApi.md#viewNumberOfDailyActiveUsers) | **GET** /v3/applications/dau | View number of daily active users
 [**viewNumberOfMonthlyActiveUsers**](StatisticsApi.md#viewNumberOfMonthlyActiveUsers) | **GET** /v3/applications/mau | View number of monthly active users
 [**viewNumberOfPeakConnections**](StatisticsApi.md#viewNumberOfPeakConnections) | **GET** /v3/applications/peak_connections | View number of peak connections
 
+
+
+## getDetailedOpenRateOfAnnouncementById
+
+> GetDetailedOpenRateOfAnnouncementByIdResponse getDetailedOpenRateOfAnnouncementById(apiToken, uniqueId)
+
+Get detailed open rate of an announcement
+
+## Get detailed open rate of an announcement  Retrieves the detailed open rate information of an announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-rate-of-an-announcement ----------------------------   &#x60;unique_id&#x60;      Type: string      Description: Specifies the unique ID of the announcement to get its open rate.
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.StatisticsApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let uniqueId = "uniqueId_example"; // String | 
+apiInstance.getDetailedOpenRateOfAnnouncementById(apiToken, uniqueId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **uniqueId** | **String**|  | 
+
+### Return type
+
+[**GetDetailedOpenRateOfAnnouncementByIdResponse**](GetDetailedOpenRateOfAnnouncementByIdResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getDetailedOpenStatusOfAnnouncementById
+
+> GetDetailedOpenStatusOfAnnouncementByIdResponse getDetailedOpenStatusOfAnnouncementById(apiToken, uniqueId, opts)
+
+Get detailed open status of an announcement
+
+## Get detailed open status of an announcement  Retrieves the detailed open status information of a specific announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-status-of-an-announcement ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.StatisticsApi();
+let apiToken = {{API_TOKEN}}; // String | 
+let uniqueId = "uniqueId_example"; // String | 
+let opts = {
+  'limit': 56, // Number | 
+  'next': "next_example", // String | 
+  'uniqueIds': ["null"], // [String] | 
+  'channelUrls': ["null"], // [String] | 
+  'hasOpened': true // Boolean | 
+};
+apiInstance.getDetailedOpenStatusOfAnnouncementById(apiToken, uniqueId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiToken** | **String**|  | 
+ **uniqueId** | **String**|  | 
+ **limit** | **Number**|  | [optional] 
+ **next** | **String**|  | [optional] 
+ **uniqueIds** | [**[String]**](String.md)|  | [optional] 
+ **channelUrls** | [**[String]**](String.md)|  | [optional] 
+ **hasOpened** | **Boolean**|  | [optional] 
+
+### Return type
+
+[**GetDetailedOpenStatusOfAnnouncementByIdResponse**](GetDetailedOpenStatusOfAnnouncementByIdResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## retrieveAdvancedAnalyticsMetrics

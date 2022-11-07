@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateFcmPushConfigurationByIdData model module.
  * @module model/UpdateFcmPushConfigurationByIdData
- * @version 0.0.14
- */var UpdateFcmPushConfigurationByIdData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateFcmPushConfigurationByIdData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateFcmPushConfigurationByIdData</code>.
    * @alias module:model/UpdateFcmPushConfigurationByIdData
@@ -65,10 +66,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateFcmPushConfigurationByIdData;
-}(); /**
-      * Specifies the provider ID of the push configuration to update.
-      * @member {String} provider_id
-      */
+}();
+/**
+ * Specifies the provider ID of the push configuration to update.
+ * @member {String} provider_id
+ */
 UpdateFcmPushConfigurationByIdData.prototype['provider_id'] = undefined;
 
 /**

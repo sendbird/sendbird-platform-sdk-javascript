@@ -15,8 +15,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListReportsResponseReportLogsInner model module.
  * @module model/ListReportsResponseReportLogsInner
- * @version 0.0.14
- */var ListReportsResponseReportLogsInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListReportsResponseReportLogsInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListReportsResponseReportLogsInner</code>.
    * @alias module:model/ListReportsResponseReportLogsInner
@@ -76,9 +77,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListReportsResponseReportLogsInner;
-}(); /**
-      * @member {module:model/SendBirdUser} reporting_user
-      */
+}();
+/**
+ * @member {module:model/SendBirdUser} reporting_user
+ */
 ListReportsResponseReportLogsInner.prototype['reporting_user'] = undefined;
 
 /**

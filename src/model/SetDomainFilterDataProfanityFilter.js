@@ -17,7 +17,7 @@ import SetDomainFilterDataProfanityFilterRegexFiltersInner from './SetDomainFilt
 /**
  * The SetDomainFilterDataProfanityFilter model module.
  * @module model/SetDomainFilterDataProfanityFilter
- * @version 0.0.14
+ * @version 0.0.16
  */
 class SetDomainFilterDataProfanityFilter {
     /**

@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcListMutedUsersResponse model module.
  * @module model/OcListMutedUsersResponse
- * @version 0.0.14
- */var OcListMutedUsersResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcListMutedUsersResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcListMutedUsersResponse</code>.
    * @alias module:model/OcListMutedUsersResponse
@@ -59,9 +60,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcListMutedUsersResponse;
-}(); /**
-      * @member {Array.<module:model/SendBirdUser>} muted_list
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdUser>} muted_list
+ */
 OcListMutedUsersResponse.prototype['muted_list'] = undefined;
 
 /**

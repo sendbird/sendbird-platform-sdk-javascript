@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChooseWhichEventsToSubscribeToResponse model module.
  * @module model/ChooseWhichEventsToSubscribeToResponse
- * @version 0.0.14
- */var ChooseWhichEventsToSubscribeToResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ChooseWhichEventsToSubscribeToResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ChooseWhichEventsToSubscribeToResponse</code>.
    * @alias module:model/ChooseWhichEventsToSubscribeToResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ChooseWhichEventsToSubscribeToResponse;
-}(); /**
-      * @member {module:model/ChooseWhichEventsToSubscribeToResponseWebhook} webhook
-      */
+}();
+/**
+ * @member {module:model/ChooseWhichEventsToSubscribeToResponseWebhook} webhook
+ */
 ChooseWhichEventsToSubscribeToResponse.prototype['webhook'] = undefined;
 var _default = ChooseWhichEventsToSubscribeToResponse;
 exports["default"] = _default;

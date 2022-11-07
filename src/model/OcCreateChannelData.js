@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OcCreateChannelData model module.
  * @module model/OcCreateChannelData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class OcCreateChannelData {
     /**

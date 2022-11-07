@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RemoveRegistrationOrDeviceTokenByTokenResponse model module.
  * @module model/RemoveRegistrationOrDeviceTokenByTokenResponse
- * @version 0.0.14
- */var RemoveRegistrationOrDeviceTokenByTokenResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var RemoveRegistrationOrDeviceTokenByTokenResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RemoveRegistrationOrDeviceTokenByTokenResponse</code>.
    * @alias module:model/RemoveRegistrationOrDeviceTokenByTokenResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return RemoveRegistrationOrDeviceTokenByTokenResponse;
-}(); /**
-      * @member {Array.<String>} token
-      */
+}();
+/**
+ * @member {Array.<String>} token
+ */
 RemoveRegistrationOrDeviceTokenByTokenResponse.prototype['token'] = undefined;
 
 /**

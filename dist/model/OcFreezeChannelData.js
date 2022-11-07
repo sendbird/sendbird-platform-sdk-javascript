@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcFreezeChannelData model module.
  * @module model/OcFreezeChannelData
- * @version 0.0.14
- */var OcFreezeChannelData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcFreezeChannelData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcFreezeChannelData</code>.
    * @alias module:model/OcFreezeChannelData
@@ -60,10 +61,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcFreezeChannelData;
-}(); /**
-      * Specifies the URL of the channel to freeze.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the channel to freeze.
+ * @member {String} channel_url
+ */
 OcFreezeChannelData.prototype['channel_url'] = undefined;
 
 /**

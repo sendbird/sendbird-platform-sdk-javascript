@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdMessageResponseMentionedUsersInner model module.
  * @module model/SendBirdMessageResponseMentionedUsersInner
- * @version 0.0.14
- */var SendBirdMessageResponseMentionedUsersInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdMessageResponseMentionedUsersInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdMessageResponseMentionedUsersInner</code>.
    * @alias module:model/SendBirdMessageResponseMentionedUsersInner
@@ -62,9 +63,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdMessageResponseMentionedUsersInner;
-}(); /**
-      * @member {String} user_id
-      */
+}();
+/**
+ * @member {String} user_id
+ */
 SendBirdMessageResponseMentionedUsersInner.prototype['user_id'] = undefined;
 
 /**

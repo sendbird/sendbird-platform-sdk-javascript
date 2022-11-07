@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The JoinChannelsResponse model module.
  * @module model/JoinChannelsResponse
- * @version 0.0.14
- */var JoinChannelsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var JoinChannelsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>JoinChannelsResponse</code>.
    * @alias module:model/JoinChannelsResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return JoinChannelsResponse;
-}(); /**
-      * @member {Array.<module:model/SendBirdGroupChannel>} channels
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdGroupChannel>} channels
+ */
 JoinChannelsResponse.prototype['channels'] = undefined;
 var _default = JoinChannelsResponse;
 exports["default"] = _default;

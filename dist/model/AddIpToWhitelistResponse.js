@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddIpToWhitelistResponse model module.
  * @module model/AddIpToWhitelistResponse
- * @version 0.0.14
- */var AddIpToWhitelistResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddIpToWhitelistResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddIpToWhitelistResponse</code>.
    * @alias module:model/AddIpToWhitelistResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddIpToWhitelistResponse;
-}(); /**
-      * @member {Array.<String>} ip_whitelist_addresses
-      */
+}();
+/**
+ * @member {Array.<String>} ip_whitelist_addresses
+ */
 AddIpToWhitelistResponse.prototype['ip_whitelist_addresses'] = undefined;
 var _default = AddIpToWhitelistResponse;
 exports["default"] = _default;

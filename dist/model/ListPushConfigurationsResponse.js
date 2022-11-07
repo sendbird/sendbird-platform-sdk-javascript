@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListPushConfigurationsResponse model module.
  * @module model/ListPushConfigurationsResponse
- * @version 0.0.14
- */var ListPushConfigurationsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListPushConfigurationsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListPushConfigurationsResponse</code>.
    * @alias module:model/ListPushConfigurationsResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListPushConfigurationsResponse;
-}(); /**
-      * @member {Array.<module:model/ListPushConfigurationsResponsePushConfigurationsInner>} push_configurations
-      */
+}();
+/**
+ * @member {Array.<module:model/ListPushConfigurationsResponsePushConfigurationsInner>} push_configurations
+ */
 ListPushConfigurationsResponse.prototype['push_configurations'] = undefined;
 var _default = ListPushConfigurationsResponse;
 exports["default"] = _default;

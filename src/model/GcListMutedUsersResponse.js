@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The GcListMutedUsersResponse model module.
  * @module model/GcListMutedUsersResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class GcListMutedUsersResponse {
     /**

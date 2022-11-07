@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcListMembersResponse model module.
  * @module model/GcListMembersResponse
- * @version 0.0.14
- */var GcListMembersResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcListMembersResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcListMembersResponse</code>.
    * @alias module:model/GcListMembersResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcListMembersResponse;
-}(); /**
-      * @member {Array.<module:model/SendBirdUser>} members
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdUser>} members
+ */
 GcListMembersResponse.prototype['members'] = undefined;
 
 /**

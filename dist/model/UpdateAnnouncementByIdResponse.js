@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateAnnouncementByIdResponse model module.
  * @module model/UpdateAnnouncementByIdResponse
- * @version 0.0.14
- */var UpdateAnnouncementByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateAnnouncementByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateAnnouncementByIdResponse</code>.
    * @alias module:model/UpdateAnnouncementByIdResponse
@@ -59,9 +60,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateAnnouncementByIdResponse;
-}(); /**
-      * @member {String} unique_id
-      */
+}();
+/**
+ * @member {String} unique_id
+ */
 UpdateAnnouncementByIdResponse.prototype['unique_id'] = undefined;
 
 /**

@@ -17,7 +17,7 @@ import ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner fr
 /**
  * The AddEmojisResponse model module.
  * @module model/AddEmojisResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class AddEmojisResponse {
     /**

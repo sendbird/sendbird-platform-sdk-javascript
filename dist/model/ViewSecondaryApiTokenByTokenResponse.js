@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewSecondaryApiTokenByTokenResponse model module.
  * @module model/ViewSecondaryApiTokenByTokenResponse
- * @version 0.0.14
- */var ViewSecondaryApiTokenByTokenResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewSecondaryApiTokenByTokenResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewSecondaryApiTokenByTokenResponse</code>.
    * @alias module:model/ViewSecondaryApiTokenByTokenResponse
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewSecondaryApiTokenByTokenResponse;
-}(); /**
-      * @member {String} token
-      */
+}();
+/**
+ * @member {String} token
+ */
 ViewSecondaryApiTokenByTokenResponse.prototype['token'] = undefined;
 
 /**

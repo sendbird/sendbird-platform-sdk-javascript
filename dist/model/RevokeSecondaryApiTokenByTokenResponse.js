@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RevokeSecondaryApiTokenByTokenResponse model module.
  * @module model/RevokeSecondaryApiTokenByTokenResponse
- * @version 0.0.14
- */var RevokeSecondaryApiTokenByTokenResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var RevokeSecondaryApiTokenByTokenResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RevokeSecondaryApiTokenByTokenResponse</code>.
    * @alias module:model/RevokeSecondaryApiTokenByTokenResponse
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return RevokeSecondaryApiTokenByTokenResponse;
-}(); /**
-      * @member {String} token
-      */
+}();
+/**
+ * @member {String} token
+ */
 RevokeSecondaryApiTokenByTokenResponse.prototype['token'] = undefined;
 
 /**

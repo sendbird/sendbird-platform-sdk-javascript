@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateApnsPushConfigurationByIdResponse model module.
  * @module model/UpdateApnsPushConfigurationByIdResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class UpdateApnsPushConfigurationByIdResponse {
     /**

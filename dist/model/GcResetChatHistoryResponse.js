@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcResetChatHistoryResponse model module.
  * @module model/GcResetChatHistoryResponse
- * @version 0.0.14
- */var GcResetChatHistoryResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcResetChatHistoryResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcResetChatHistoryResponse</code>.
    * @alias module:model/GcResetChatHistoryResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcResetChatHistoryResponse;
-}(); /**
-      * @member {Number} ts_message_offset
-      */
+}();
+/**
+ * @member {Number} ts_message_offset
+ */
 GcResetChatHistoryResponse.prototype['ts_message_offset'] = undefined;
 var _default = GcResetChatHistoryResponse;
 exports["default"] = _default;

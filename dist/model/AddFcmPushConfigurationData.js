@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddFcmPushConfigurationData model module.
  * @module model/AddFcmPushConfigurationData
- * @version 0.0.14
- */var AddFcmPushConfigurationData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddFcmPushConfigurationData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddFcmPushConfigurationData</code>.
    * @alias module:model/AddFcmPushConfigurationData
@@ -60,10 +61,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddFcmPushConfigurationData;
-}(); /**
-      * Specifies the FCM server key to register.
-      * @member {String} api_key
-      */
+}();
+/**
+ * Specifies the FCM server key to register.
+ * @member {String} api_key
+ */
 AddFcmPushConfigurationData.prototype['api_key'] = undefined;
 
 /**

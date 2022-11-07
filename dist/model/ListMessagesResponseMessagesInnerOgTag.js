@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMessagesResponseMessagesInnerOgTag model module.
  * @module model/ListMessagesResponseMessagesInnerOgTag
- * @version 0.0.14
- */var ListMessagesResponseMessagesInnerOgTag = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListMessagesResponseMessagesInnerOgTag = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListMessagesResponseMessagesInnerOgTag</code>.
    * @alias module:model/ListMessagesResponseMessagesInnerOgTag
@@ -62,9 +63,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListMessagesResponseMessagesInnerOgTag;
-}(); /**
-      * @member {String} og:url
-      */
+}();
+/**
+ * @member {String} og:url
+ */
 ListMessagesResponseMessagesInnerOgTag.prototype['og:url'] = undefined;
 
 /**

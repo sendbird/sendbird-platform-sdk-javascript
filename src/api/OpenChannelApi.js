@@ -25,7 +25,7 @@ import SendBirdOpenChannel from '../model/SendBirdOpenChannel';
 /**
 * OpenChannel service.
 * @module api/OpenChannelApi
-* @version 0.0.14
+* @version 0.0.16
 */
 export default class OpenChannelApi {
 

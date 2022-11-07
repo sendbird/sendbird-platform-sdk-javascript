@@ -14,8 +14,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcBanUserResponse model module.
  * @module model/GcBanUserResponse
- * @version 0.0.14
- */var GcBanUserResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcBanUserResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcBanUserResponse</code>.
    * @alias module:model/GcBanUserResponse
@@ -81,9 +82,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcBanUserResponse;
-}(); /**
-      * @member {module:model/SendBirdUser} user
-      */
+}();
+/**
+ * @member {module:model/SendBirdUser} user
+ */
 GcBanUserResponse.prototype['user'] = undefined;
 
 /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner model module.
  * @module model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner
- * @version 0.0.14
+ * @version 0.0.16
  */
 class ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner {
     /**

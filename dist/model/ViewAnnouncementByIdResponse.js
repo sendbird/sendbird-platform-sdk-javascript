@@ -14,8 +14,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewAnnouncementByIdResponse model module.
  * @module model/ViewAnnouncementByIdResponse
- * @version 0.0.14
- */var ViewAnnouncementByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewAnnouncementByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewAnnouncementByIdResponse</code>.
    * @alias module:model/ViewAnnouncementByIdResponse
@@ -117,9 +118,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewAnnouncementByIdResponse;
-}(); /**
-      * @member {String} unique_id
-      */
+}();
+/**
+ * @member {String} unique_id
+ */
 ViewAnnouncementByIdResponse.prototype['unique_id'] = undefined;
 
 /**

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcUpdateBanByIdData model module.
  * @module model/GcUpdateBanByIdData
- * @version 0.0.14
- */var GcUpdateBanByIdData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcUpdateBanByIdData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcUpdateBanByIdData</code>.
    * @alias module:model/GcUpdateBanByIdData
@@ -70,10 +71,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcUpdateBanByIdData;
-}(); /**
-      * Specifies the URL of the target channel.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the target channel.
+ * @member {String} channel_url
+ */
 GcUpdateBanByIdData.prototype['channel_url'] = undefined;
 
 /**

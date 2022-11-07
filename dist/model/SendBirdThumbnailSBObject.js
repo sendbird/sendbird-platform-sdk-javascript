@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdThumbnailSBObject model module.
  * @module model/SendBirdThumbnailSBObject
- * @version 0.0.14
- */var SendBirdThumbnailSBObject = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdThumbnailSBObject = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdThumbnailSBObject</code>.
    * @alias module:model/SendBirdThumbnailSBObject
@@ -67,9 +68,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdThumbnailSBObject;
-}(); /**
-      * @member {Number} height
-      */
+}();
+/**
+ * @member {Number} height
+ */
 SendBirdThumbnailSBObject.prototype['height'] = undefined;
 
 /**

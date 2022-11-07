@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcRegisterOperatorsData model module.
  * @module model/OcRegisterOperatorsData
- * @version 0.0.14
- */var OcRegisterOperatorsData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcRegisterOperatorsData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcRegisterOperatorsData</code>.
    * @alias module:model/OcRegisterOperatorsData
@@ -60,10 +61,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcRegisterOperatorsData;
-}(); /**
-      * Specifies the URL of the channel to register operators to.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the channel to register operators to.
+ * @member {String} channel_url
+ */
 OcRegisterOperatorsData.prototype['channel_url'] = undefined;
 
 /**

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BlockUserData model module.
  * @module model/BlockUserData
- * @version 0.0.14
- */var BlockUserData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var BlockUserData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>BlockUserData</code>.
    * @alias module:model/BlockUserData
@@ -70,10 +71,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return BlockUserData;
-}(); /**
-      * Specifies the unique ID of the user to block.
-      * @member {String} user_id
-      */
+}();
+/**
+ * Specifies the unique ID of the user to block.
+ * @member {String} user_id
+ */
 BlockUserData.prototype['user_id'] = undefined;
 
 /**

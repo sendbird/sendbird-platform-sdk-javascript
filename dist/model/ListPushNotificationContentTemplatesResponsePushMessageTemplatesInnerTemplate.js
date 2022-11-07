@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate model module.
  * @module model/ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate
- * @version 0.0.14
- */var ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate</code>.
    * @alias module:model/ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate
@@ -58,9 +59,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate;
-}(); /**
-      * @member {String} MESG
-      */
+}();
+/**
+ * @member {String} MESG
+ */
 ListPushNotificationContentTemplatesResponsePushMessageTemplatesInnerTemplate.prototype['MESG'] = undefined;
 
 /**

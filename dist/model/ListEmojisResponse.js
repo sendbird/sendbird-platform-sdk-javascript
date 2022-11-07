@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListEmojisResponse model module.
  * @module model/ListEmojisResponse
- * @version 0.0.14
- */var ListEmojisResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListEmojisResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListEmojisResponse</code>.
    * @alias module:model/ListEmojisResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListEmojisResponse;
-}(); /**
-      * @member {Array.<module:model/SendBirdEmoji>} emojis
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdEmoji>} emojis
+ */
 ListEmojisResponse.prototype['emojis'] = undefined;
 var _default = ListEmojisResponse;
 exports["default"] = _default;

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddReactionToAMessageResponse model module.
  * @module model/AddReactionToAMessageResponse
- * @version 0.0.14
- */var AddReactionToAMessageResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddReactionToAMessageResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddReactionToAMessageResponse</code>.
    * @alias module:model/AddReactionToAMessageResponse
@@ -67,9 +68,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddReactionToAMessageResponse;
-}(); /**
-      * @member {String} user_id
-      */
+}();
+/**
+ * @member {String} user_id
+ */
 AddReactionToAMessageResponse.prototype['user_id'] = undefined;
 
 /**

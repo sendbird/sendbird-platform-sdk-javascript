@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcFreezeChannelData model module.
  * @module model/GcFreezeChannelData
- * @version 0.0.14
- */var GcFreezeChannelData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcFreezeChannelData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcFreezeChannelData</code>.
    * @alias module:model/GcFreezeChannelData
@@ -60,10 +61,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcFreezeChannelData;
-}(); /**
-      * Specifies the URL of the channel to freeze.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the channel to freeze.
+ * @member {String} channel_url
+ */
 GcFreezeChannelData.prototype['channel_url'] = undefined;
 
 /**

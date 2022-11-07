@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RegisterAndScheduleDataExportData model module.
  * @module model/RegisterAndScheduleDataExportData
- * @version 0.0.14
- */var RegisterAndScheduleDataExportData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var RegisterAndScheduleDataExportData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RegisterAndScheduleDataExportData</code>.
    * @alias module:model/RegisterAndScheduleDataExportData
@@ -93,10 +94,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return RegisterAndScheduleDataExportData;
-}(); /**
-      * Specifies the starting timestamp of a period for target objects' creation date, in [Unix milliseconds](/docs/chat/v3/platform-api/guides/miscellaneous#2-timestamps) format. The creation time of messages, channels, and users will be in-between the start_ts and end_ts.
-      * @member {Number} start_ts
-      */
+}();
+/**
+ * Specifies the starting timestamp of a period for target objects' creation date, in [Unix milliseconds](/docs/chat/v3/platform-api/guides/miscellaneous#2-timestamps) format. The creation time of messages, channels, and users will be in-between the start_ts and end_ts.
+ * @member {Number} start_ts
+ */
 RegisterAndScheduleDataExportData.prototype['start_ts'] = undefined;
 
 /**

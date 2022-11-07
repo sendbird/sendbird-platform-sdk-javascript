@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportUserByIdData model module.
  * @module model/ReportUserByIdData
- * @version 0.0.14
- */var ReportUserByIdData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ReportUserByIdData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ReportUserByIdData</code>.
    * @alias module:model/ReportUserByIdData
@@ -72,10 +73,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ReportUserByIdData;
-}(); /**
-      * Specifies the unique ID of the user to report for using offensive or abusive language such as sending explicit messages or inappropriate comments.
-      * @member {String} offending_user_id
-      */
+}();
+/**
+ * Specifies the unique ID of the user to report for using offensive or abusive language such as sending explicit messages or inappropriate comments.
+ * @member {String} offending_user_id
+ */
 ReportUserByIdData.prototype['offending_user_id'] = undefined;
 
 /**

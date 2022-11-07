@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RegisterAsOperatorToChannelsWithCustomChannelTypesData model module.
  * @module model/RegisterAsOperatorToChannelsWithCustomChannelTypesData
- * @version 0.0.14
- */var RegisterAsOperatorToChannelsWithCustomChannelTypesData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var RegisterAsOperatorToChannelsWithCustomChannelTypesData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RegisterAsOperatorToChannelsWithCustomChannelTypesData</code>.
    * @alias module:model/RegisterAsOperatorToChannelsWithCustomChannelTypesData
@@ -55,10 +56,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return RegisterAsOperatorToChannelsWithCustomChannelTypesData;
-}(); /**
-      * Specifies an array of one or more custom channel types, in order to register the user as an operator to channels with the channel types.
-      * @member {Array.<String>} channel_custom_types
-      */
+}();
+/**
+ * Specifies an array of one or more custom channel types, in order to register the user as an operator to channels with the channel types.
+ * @member {Array.<String>} channel_custom_types
+ */
 RegisterAsOperatorToChannelsWithCustomChannelTypesData.prototype['channel_custom_types'] = undefined;
 var _default = RegisterAsOperatorToChannelsWithCustomChannelTypesData;
 exports["default"] = _default;

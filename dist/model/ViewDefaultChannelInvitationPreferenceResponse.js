@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewDefaultChannelInvitationPreferenceResponse model module.
  * @module model/ViewDefaultChannelInvitationPreferenceResponse
- * @version 0.0.14
- */var ViewDefaultChannelInvitationPreferenceResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewDefaultChannelInvitationPreferenceResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewDefaultChannelInvitationPreferenceResponse</code>.
    * @alias module:model/ViewDefaultChannelInvitationPreferenceResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewDefaultChannelInvitationPreferenceResponse;
-}(); /**
-      * @member {Boolean} auto_accept
-      */
+}();
+/**
+ * @member {Boolean} auto_accept
+ */
 ViewDefaultChannelInvitationPreferenceResponse.prototype['auto_accept'] = undefined;
 var _default = ViewDefaultChannelInvitationPreferenceResponse;
 exports["default"] = _default;

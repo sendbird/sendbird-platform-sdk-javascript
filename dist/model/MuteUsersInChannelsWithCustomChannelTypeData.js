@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The MuteUsersInChannelsWithCustomChannelTypeData model module.
  * @module model/MuteUsersInChannelsWithCustomChannelTypeData
- * @version 0.0.14
- */var MuteUsersInChannelsWithCustomChannelTypeData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var MuteUsersInChannelsWithCustomChannelTypeData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>MuteUsersInChannelsWithCustomChannelTypeData</code>.
    * @alias module:model/MuteUsersInChannelsWithCustomChannelTypeData
@@ -64,9 +65,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return MuteUsersInChannelsWithCustomChannelTypeData;
-}(); /**
-      * @member {Array.<String>} user_ids
-      */
+}();
+/**
+ * @member {Array.<String>} user_ids
+ */
 MuteUsersInChannelsWithCustomChannelTypeData.prototype['user_ids'] = undefined;
 
 /**

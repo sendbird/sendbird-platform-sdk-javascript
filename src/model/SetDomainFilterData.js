@@ -20,7 +20,7 @@ import SetDomainFilterDataProfanityTriggeredModeration from './SetDomainFilterDa
 /**
  * The SetDomainFilterData model module.
  * @module model/SetDomainFilterData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class SetDomainFilterData {
     /**

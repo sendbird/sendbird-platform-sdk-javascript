@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddHmsPushConfigurationData model module.
  * @module model/AddHmsPushConfigurationData
- * @version 0.0.14
- */var AddHmsPushConfigurationData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddHmsPushConfigurationData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddHmsPushConfigurationData</code>.
    * @alias module:model/AddHmsPushConfigurationData
@@ -65,10 +66,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddHmsPushConfigurationData;
-}(); /**
-      * Specifies the unique ID of application registered to the HMS server.
-      * @member {String} huawei_app_id
-      */
+}();
+/**
+ * Specifies the unique ID of application registered to the HMS server.
+ * @member {String} huawei_app_id
+ */
 AddHmsPushConfigurationData.prototype['huawei_app_id'] = undefined;
 
 /**

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateEmojiUrlByKeyData model module.
  * @module model/UpdateEmojiUrlByKeyData
- * @version 0.0.14
- */var UpdateEmojiUrlByKeyData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateEmojiUrlByKeyData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateEmojiUrlByKeyData</code>.
    * @alias module:model/UpdateEmojiUrlByKeyData
@@ -60,10 +61,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateEmojiUrlByKeyData;
-}(); /**
-      * Specifies the key of the emoji to update.
-      * @member {String} emoji_key
-      */
+}();
+/**
+ * Specifies the key of the emoji to update.
+ * @member {String} emoji_key
+ */
 UpdateEmojiUrlByKeyData.prototype['emoji_key'] = undefined;
 
 /**

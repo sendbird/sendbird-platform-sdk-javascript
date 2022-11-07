@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdGroupChannelDisappearingMessage model module.
  * @module model/SendBirdGroupChannelDisappearingMessage
- * @version 0.0.14
- */var SendBirdGroupChannelDisappearingMessage = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdGroupChannelDisappearingMessage = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdGroupChannelDisappearingMessage</code>.
    * @alias module:model/SendBirdGroupChannelDisappearingMessage
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdGroupChannelDisappearingMessage;
-}(); /**
-      * @member {Number} message_survival_seconds
-      */
+}();
+/**
+ * @member {Number} message_survival_seconds
+ */
 SendBirdGroupChannelDisappearingMessage.prototype['message_survival_seconds'] = undefined;
 
 /**

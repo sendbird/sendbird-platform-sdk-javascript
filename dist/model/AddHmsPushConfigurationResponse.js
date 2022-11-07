@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddHmsPushConfigurationResponse model module.
  * @module model/AddHmsPushConfigurationResponse
- * @version 0.0.14
- */var AddHmsPushConfigurationResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddHmsPushConfigurationResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddHmsPushConfigurationResponse</code>.
    * @alias module:model/AddHmsPushConfigurationResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddHmsPushConfigurationResponse;
-}(); /**
-      * @member {Array.<module:model/AddHmsPushConfigurationResponsePushConfigurationsInner>} push_configurations
-      */
+}();
+/**
+ * @member {Array.<module:model/AddHmsPushConfigurationResponsePushConfigurationsInner>} push_configurations
+ */
 AddHmsPushConfigurationResponse.prototype['push_configurations'] = undefined;
 var _default = AddHmsPushConfigurationResponse;
 exports["default"] = _default;

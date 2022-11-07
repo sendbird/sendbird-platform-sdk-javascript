@@ -14,8 +14,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScheduleAnnouncementResponse model module.
  * @module model/ScheduleAnnouncementResponse
- * @version 0.0.14
- */var ScheduleAnnouncementResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ScheduleAnnouncementResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ScheduleAnnouncementResponse</code>.
    * @alias module:model/ScheduleAnnouncementResponse
@@ -105,9 +106,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ScheduleAnnouncementResponse;
-}(); /**
-      * @member {String} unique_id
-      */
+}();
+/**
+ * @member {String} unique_id
+ */
 ScheduleAnnouncementResponse.prototype['unique_id'] = undefined;
 
 /**

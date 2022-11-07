@@ -17,7 +17,7 @@ import SetDomainFilterDataImageModerationLimits from './SetDomainFilterDataImage
 /**
  * The SetDomainFilterDataImageModeration model module.
  * @module model/SetDomainFilterDataImageModeration
- * @version 0.0.14
+ * @version 0.0.16
  */
 class SetDomainFilterDataImageModeration {
     /**

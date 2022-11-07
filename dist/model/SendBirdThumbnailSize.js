@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdThumbnailSize model module.
  * @module model/SendBirdThumbnailSize
- * @version 0.0.14
- */var SendBirdThumbnailSize = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdThumbnailSize = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdThumbnailSize</code>.
    * @alias module:model/SendBirdThumbnailSize
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdThumbnailSize;
-}(); /**
-      * @member {Number} max_height
-      */
+}();
+/**
+ * @member {Number} max_height
+ */
 SendBirdThumbnailSize.prototype['max_height'] = undefined;
 
 /**

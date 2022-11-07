@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcDeleteChannelByUrl200Response model module.
  * @module model/OcDeleteChannelByUrl200Response
- * @version 0.0.14
- */var OcDeleteChannelByUrl200Response = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcDeleteChannelByUrl200Response = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcDeleteChannelByUrl200Response</code>.
    * @alias module:model/OcDeleteChannelByUrl200Response
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcDeleteChannelByUrl200Response;
-}(); /**
-      * @member {String} anyOf
-      */
+}();
+/**
+ * @member {String} anyOf
+ */
 OcDeleteChannelByUrl200Response.prototype['anyOf'] = undefined;
 var _default = OcDeleteChannelByUrl200Response;
 exports["default"] = _default;

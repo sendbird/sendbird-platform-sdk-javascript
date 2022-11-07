@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScheduleAnnouncementResponseMessage model module.
  * @module model/ScheduleAnnouncementResponseMessage
- * @version 0.0.14
- */var ScheduleAnnouncementResponseMessage = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ScheduleAnnouncementResponseMessage = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ScheduleAnnouncementResponseMessage</code>.
    * @alias module:model/ScheduleAnnouncementResponseMessage
@@ -64,9 +65,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ScheduleAnnouncementResponseMessage;
-}(); /**
-      * @member {String} type
-      */
+}();
+/**
+ * @member {String} type
+ */
 ScheduleAnnouncementResponseMessage.prototype['type'] = undefined;
 
 /**

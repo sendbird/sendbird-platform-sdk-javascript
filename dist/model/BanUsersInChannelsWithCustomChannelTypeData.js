@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BanUsersInChannelsWithCustomChannelTypeData model module.
  * @module model/BanUsersInChannelsWithCustomChannelTypeData
- * @version 0.0.14
- */var BanUsersInChannelsWithCustomChannelTypeData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var BanUsersInChannelsWithCustomChannelTypeData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>BanUsersInChannelsWithCustomChannelTypeData</code>.
    * @alias module:model/BanUsersInChannelsWithCustomChannelTypeData
@@ -59,9 +60,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return BanUsersInChannelsWithCustomChannelTypeData;
-}(); /**
-      * @member {Array.<module:model/BanUsersInChannelsWithCustomChannelTypeDataBannedListInner>} banned_list
-      */
+}();
+/**
+ * @member {Array.<module:model/BanUsersInChannelsWithCustomChannelTypeDataBannedListInner>} banned_list
+ */
 BanUsersInChannelsWithCustomChannelTypeData.prototype['banned_list'] = undefined;
 
 /**

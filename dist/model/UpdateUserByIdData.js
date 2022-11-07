@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateUserByIdData model module.
  * @module model/UpdateUserByIdData
- * @version 0.0.14
- */var UpdateUserByIdData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateUserByIdData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateUserByIdData</code>.
    * @alias module:model/UpdateUserByIdData
@@ -92,10 +93,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateUserByIdData;
-}(); /**
-      * Specifies the unique ID of the user to update.
-      * @member {String} user_id
-      */
+}();
+/**
+ * Specifies the unique ID of the user to update.
+ * @member {String} user_id
+ */
 UpdateUserByIdData.prototype['user_id'] = undefined;
 
 /**

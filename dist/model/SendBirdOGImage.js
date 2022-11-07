@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdOGImage model module.
  * @module model/SendBirdOGImage
- * @version 0.0.14
- */var SendBirdOGImage = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdOGImage = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdOGImage</code>.
    * @alias module:model/SendBirdOGImage
@@ -67,9 +68,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdOGImage;
-}(); /**
-      * @member {String} alt
-      */
+}();
+/**
+ * @member {String} alt
+ */
 SendBirdOGImage.prototype['alt'] = undefined;
 
 /**

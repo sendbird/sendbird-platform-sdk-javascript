@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RemoveReactionFromAMessageResponse model module.
  * @module model/RemoveReactionFromAMessageResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class RemoveReactionFromAMessageResponse {
     /**

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateUserTokenResponse model module.
  * @module model/CreateUserTokenResponse
- * @version 0.0.14
- */var CreateUserTokenResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var CreateUserTokenResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>CreateUserTokenResponse</code>.
    * @alias module:model/CreateUserTokenResponse
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return CreateUserTokenResponse;
-}(); /**
-      * @member {String} token
-      */
+}();
+/**
+ * @member {String} token
+ */
 CreateUserTokenResponse.prototype['token'] = undefined;
 
 /**

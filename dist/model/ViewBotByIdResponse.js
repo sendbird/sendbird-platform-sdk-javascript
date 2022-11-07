@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewBotByIdResponse model module.
  * @module model/ViewBotByIdResponse
- * @version 0.0.14
- */var ViewBotByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewBotByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewBotByIdResponse</code>.
    * @alias module:model/ViewBotByIdResponse
@@ -68,9 +69,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewBotByIdResponse;
-}(); /**
-      * @member {module:model/CreateBotResponseBot} bot
-      */
+}();
+/**
+ * @member {module:model/CreateBotResponseBot} bot
+ */
 ViewBotByIdResponse.prototype['bot'] = undefined;
 
 /**

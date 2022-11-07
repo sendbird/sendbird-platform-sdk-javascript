@@ -47,7 +47,7 @@ import SendBirdOpenChannel from '../model/SendBirdOpenChannel';
 /**
 * Moderation service.
 * @module api/ModerationApi
-* @version 0.0.14
+* @version 0.0.16
 */
 export default class ModerationApi {
 

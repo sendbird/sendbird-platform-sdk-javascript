@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SetDomainFilterDataImageModeration model module.
  * @module model/SetDomainFilterDataImageModeration
- * @version 0.0.14
- */var SetDomainFilterDataImageModeration = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SetDomainFilterDataImageModeration = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SetDomainFilterDataImageModeration</code>.
    * @alias module:model/SetDomainFilterDataImageModeration
@@ -62,9 +63,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SetDomainFilterDataImageModeration;
-}(); /**
-      * @member {Number} type
-      */
+}();
+/**
+ * @member {Number} type
+ */
 SetDomainFilterDataImageModeration.prototype['type'] = undefined;
 
 /**

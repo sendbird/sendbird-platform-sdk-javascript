@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The SendBirdOpenChannel model module.
  * @module model/SendBirdOpenChannel
- * @version 0.0.14
+ * @version 0.0.16
  */
 class SendBirdOpenChannel {
     /**

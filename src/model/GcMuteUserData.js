@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcMuteUserData model module.
  * @module model/GcMuteUserData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class GcMuteUserData {
     /**

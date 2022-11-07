@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BanFromChannelsWithCustomChannelTypesData model module.
  * @module model/BanFromChannelsWithCustomChannelTypesData
- * @version 0.0.14
- */var BanFromChannelsWithCustomChannelTypesData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var BanFromChannelsWithCustomChannelTypesData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>BanFromChannelsWithCustomChannelTypesData</code>.
    * @alias module:model/BanFromChannelsWithCustomChannelTypesData
@@ -55,10 +56,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return BanFromChannelsWithCustomChannelTypesData;
-}(); /**
-      * Specifies an array of one or more custom channel types, in order to ban the user from channels with the channel types. The user is permanently banned unless unbanned (10 years, technically).
-      * @member {Array.<String>} channel_custom_types
-      */
+}();
+/**
+ * Specifies an array of one or more custom channel types, in order to ban the user from channels with the channel types. The user is permanently banned unless unbanned (10 years, technically).
+ * @member {Array.<String>} channel_custom_types
+ */
 BanFromChannelsWithCustomChannelTypesData.prototype['channel_custom_types'] = undefined;
 var _default = BanFromChannelsWithCustomChannelTypesData;
 exports["default"] = _default;

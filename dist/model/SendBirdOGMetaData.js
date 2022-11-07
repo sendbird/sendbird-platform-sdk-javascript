@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdOGMetaData model module.
  * @module model/SendBirdOGMetaData
- * @version 0.0.14
- */var SendBirdOGMetaData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdOGMetaData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdOGMetaData</code>.
    * @alias module:model/SendBirdOGMetaData
@@ -62,9 +63,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdOGMetaData;
-}(); /**
-      * @member {module:model/SendBirdOGImage} default_image
-      */
+}();
+/**
+ * @member {module:model/SendBirdOGImage} default_image
+ */
 SendBirdOGMetaData.prototype['default_image'] = undefined;
 
 /**

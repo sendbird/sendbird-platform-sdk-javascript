@@ -17,7 +17,7 @@ import SendBirdPollDetails from './SendBirdPollDetails';
 /**
  * The SendBirdPoll model module.
  * @module model/SendBirdPoll
- * @version 0.0.14
+ * @version 0.0.16
  */
 class SendBirdPoll {
     /**

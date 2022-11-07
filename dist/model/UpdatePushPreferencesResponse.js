@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdatePushPreferencesResponse model module.
  * @module model/UpdatePushPreferencesResponse
- * @version 0.0.14
- */var UpdatePushPreferencesResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdatePushPreferencesResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdatePushPreferencesResponse</code>.
    * @alias module:model/UpdatePushPreferencesResponse
@@ -91,9 +92,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdatePushPreferencesResponse;
-}(); /**
-      * @member {Boolean} block_push_from_bots
-      */
+}();
+/**
+ * @member {Boolean} block_push_from_bots
+ */
 UpdatePushPreferencesResponse.prototype['block_push_from_bots'] = undefined;
 
 /**

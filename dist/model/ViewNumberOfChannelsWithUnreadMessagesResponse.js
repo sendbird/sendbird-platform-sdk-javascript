@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewNumberOfChannelsWithUnreadMessagesResponse model module.
  * @module model/ViewNumberOfChannelsWithUnreadMessagesResponse
- * @version 0.0.14
- */var ViewNumberOfChannelsWithUnreadMessagesResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewNumberOfChannelsWithUnreadMessagesResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewNumberOfChannelsWithUnreadMessagesResponse</code>.
    * @alias module:model/ViewNumberOfChannelsWithUnreadMessagesResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewNumberOfChannelsWithUnreadMessagesResponse;
-}(); /**
-      * @member {Number} unread_count
-      */
+}();
+/**
+ * @member {Number} unread_count
+ */
 ViewNumberOfChannelsWithUnreadMessagesResponse.prototype['unread_count'] = undefined;
 var _default = ViewNumberOfChannelsWithUnreadMessagesResponse;
 exports["default"] = _default;

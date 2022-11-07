@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdOpenChannel model module.
  * @module model/SendBirdOpenChannel
- * @version 0.0.14
- */var SendBirdOpenChannel = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdOpenChannel = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdOpenChannel</code>.
    * @alias module:model/SendBirdOpenChannel
@@ -92,9 +93,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdOpenChannel;
-}(); /**
-      * @member {String} name
-      */
+}();
+/**
+ * @member {String} name
+ */
 SendBirdOpenChannel.prototype['name'] = undefined;
 
 /**

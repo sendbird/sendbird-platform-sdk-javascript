@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EnableReactionsResponse model module.
  * @module model/EnableReactionsResponse
- * @version 0.0.14
- */var EnableReactionsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var EnableReactionsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>EnableReactionsResponse</code>.
    * @alias module:model/EnableReactionsResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return EnableReactionsResponse;
-}(); /**
-      * @member {Boolean} reactions
-      */
+}();
+/**
+ * @member {Boolean} reactions
+ */
 EnableReactionsResponse.prototype['reactions'] = undefined;
 var _default = EnableReactionsResponse;
 exports["default"] = _default;

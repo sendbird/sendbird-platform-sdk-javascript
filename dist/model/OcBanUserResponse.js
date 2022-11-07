@@ -14,8 +14,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcBanUserResponse model module.
  * @module model/OcBanUserResponse
- * @version 0.0.14
- */var OcBanUserResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcBanUserResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcBanUserResponse</code>.
    * @alias module:model/OcBanUserResponse
@@ -81,9 +82,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcBanUserResponse;
-}(); /**
-      * @member {Number} start_at
-      */
+}();
+/**
+ * @member {Number} start_at
+ */
 OcBanUserResponse.prototype['start_at'] = undefined;
 
 /**

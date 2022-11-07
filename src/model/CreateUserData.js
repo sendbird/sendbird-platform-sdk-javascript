@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateUserData model module.
  * @module model/CreateUserData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class CreateUserData {
     /**

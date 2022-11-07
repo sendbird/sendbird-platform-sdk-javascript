@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewNumberOfPeakConnectionsResponse model module.
  * @module model/ViewNumberOfPeakConnectionsResponse
- * @version 0.0.14
- */var ViewNumberOfPeakConnectionsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewNumberOfPeakConnectionsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewNumberOfPeakConnectionsResponse</code>.
    * @alias module:model/ViewNumberOfPeakConnectionsResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewNumberOfPeakConnectionsResponse;
-}(); /**
-      * @member {Array.<module:model/ViewNumberOfPeakConnectionsResponsePeakConnectionsInner>} peak_connections
-      */
+}();
+/**
+ * @member {Array.<module:model/ViewNumberOfPeakConnectionsResponsePeakConnectionsInner>} peak_connections
+ */
 ViewNumberOfPeakConnectionsResponse.prototype['peak_connections'] = undefined;
 var _default = ViewNumberOfPeakConnectionsResponse;
 exports["default"] = _default;

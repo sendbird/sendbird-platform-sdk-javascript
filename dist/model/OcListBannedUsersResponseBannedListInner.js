@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcListBannedUsersResponseBannedListInner model module.
  * @module model/OcListBannedUsersResponseBannedListInner
- * @version 0.0.14
- */var OcListBannedUsersResponseBannedListInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcListBannedUsersResponseBannedListInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcListBannedUsersResponseBannedListInner</code>.
    * @alias module:model/OcListBannedUsersResponseBannedListInner
@@ -62,9 +63,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcListBannedUsersResponseBannedListInner;
-}(); /**
-      * @member {module:model/SendBirdUser} user
-      */
+}();
+/**
+ * @member {module:model/SendBirdUser} user
+ */
 OcListBannedUsersResponseBannedListInner.prototype['user'] = undefined;
 
 /**

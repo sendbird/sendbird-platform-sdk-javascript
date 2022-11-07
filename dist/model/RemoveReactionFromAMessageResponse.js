@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RemoveReactionFromAMessageResponse model module.
  * @module model/RemoveReactionFromAMessageResponse
- * @version 0.0.14
- */var RemoveReactionFromAMessageResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var RemoveReactionFromAMessageResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RemoveReactionFromAMessageResponse</code>.
    * @alias module:model/RemoveReactionFromAMessageResponse
@@ -67,9 +68,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return RemoveReactionFromAMessageResponse;
-}(); /**
-      * @member {String} reaction
-      */
+}();
+/**
+ * @member {String} reaction
+ */
 RemoveReactionFromAMessageResponse.prototype['reaction'] = undefined;
 
 /**

@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateExtraDataInMessageResponse model module.
  * @module model/UpdateExtraDataInMessageResponse
- * @version 0.0.14
- */var UpdateExtraDataInMessageResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateExtraDataInMessageResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateExtraDataInMessageResponse</code>.
    * @alias module:model/UpdateExtraDataInMessageResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateExtraDataInMessageResponse;
-}(); /**
-      * @member {Array.<module:model/UpdateExtraDataInMessageResponseSortedMetaarrayInner>} sorted_metaarray
-      */
+}();
+/**
+ * @member {Array.<module:model/UpdateExtraDataInMessageResponseSortedMetaarrayInner>} sorted_metaarray
+ */
 UpdateExtraDataInMessageResponse.prototype['sorted_metaarray'] = undefined;
 var _default = UpdateExtraDataInMessageResponse;
 exports["default"] = _default;

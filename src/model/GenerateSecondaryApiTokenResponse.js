@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GenerateSecondaryApiTokenResponse model module.
  * @module model/GenerateSecondaryApiTokenResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class GenerateSecondaryApiTokenResponse {
     /**

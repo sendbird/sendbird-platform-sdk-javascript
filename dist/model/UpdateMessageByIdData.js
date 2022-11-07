@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateMessageByIdData model module.
  * @module model/UpdateMessageByIdData
- * @version 0.0.14
- */var UpdateMessageByIdData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateMessageByIdData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateMessageByIdData</code>.
    * @alias module:model/UpdateMessageByIdData
@@ -79,10 +80,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateMessageByIdData;
-}(); /**
-      * Specifies the type of the channel. Either open_channels or group_channels.
-      * @member {String} channel_type
-      */
+}();
+/**
+ * Specifies the type of the channel. Either open_channels or group_channels.
+ * @member {String} channel_type
+ */
 UpdateMessageByIdData.prototype['channel_type'] = undefined;
 
 /**

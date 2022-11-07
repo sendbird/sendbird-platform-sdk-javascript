@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdGroupChannelCollection model module.
  * @module model/SendBirdGroupChannelCollection
- * @version 0.0.14
- */var SendBirdGroupChannelCollection = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdGroupChannelCollection = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdGroupChannelCollection</code>.
    * @alias module:model/SendBirdGroupChannelCollection
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdGroupChannelCollection;
-}(); /**
-      * @member {Array.<module:model/SendBirdGroupChannel>} channel_list
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdGroupChannel>} channel_list
+ */
 SendBirdGroupChannelCollection.prototype['channel_list'] = undefined;
 
 /**

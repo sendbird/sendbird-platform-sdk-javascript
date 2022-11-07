@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcCreateChannelData model module.
  * @module model/GcCreateChannelData
- * @version 0.0.14
- */var GcCreateChannelData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcCreateChannelData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcCreateChannelData</code>.
    * @alias module:model/GcCreateChannelData
@@ -110,10 +111,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcCreateChannelData;
-}(); /**
-      * Specifies an array of one or more IDs of users to invite to the channel. The maximum number of users to be invited at once is 100. The users below and this property can be used interchangeably.
-      * @member {Array.<String>} user_ids
-      */
+}();
+/**
+ * Specifies an array of one or more IDs of users to invite to the channel. The maximum number of users to be invited at once is 100. The users below and this property can be used interchangeably.
+ * @member {Array.<String>} user_ids
+ */
 GcCreateChannelData.prototype['user_ids'] = undefined;
 
 /**

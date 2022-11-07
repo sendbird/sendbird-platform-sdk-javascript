@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcListMutedUsersResponse model module.
  * @module model/GcListMutedUsersResponse
- * @version 0.0.14
- */var GcListMutedUsersResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcListMutedUsersResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcListMutedUsersResponse</code>.
    * @alias module:model/GcListMutedUsersResponse
@@ -59,9 +60,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcListMutedUsersResponse;
-}(); /**
-      * @member {Array.<module:model/SendBirdUser>} muted_list
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdUser>} muted_list
+ */
 GcListMutedUsersResponse.prototype['muted_list'] = undefined;
 
 /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateMessageByIdData model module.
  * @module model/UpdateMessageByIdData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class UpdateMessageByIdData {
     /**

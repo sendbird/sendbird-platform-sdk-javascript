@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateChannelMetadataData model module.
  * @module model/CreateChannelMetadataData
- * @version 0.0.14
- */var CreateChannelMetadataData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var CreateChannelMetadataData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>CreateChannelMetadataData</code>.
    * @alias module:model/CreateChannelMetadataData
@@ -68,10 +69,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return CreateChannelMetadataData;
-}(); /**
-      * Specifies the type of the channel. Either open_channels or group_channels.
-      * @member {String} channel_type
-      */
+}();
+/**
+ * Specifies the type of the channel. Either open_channels or group_channels.
+ * @member {String} channel_type
+ */
 CreateChannelMetadataData.prototype['channel_type'] = undefined;
 
 /**

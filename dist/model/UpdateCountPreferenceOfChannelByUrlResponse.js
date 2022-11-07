@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateCountPreferenceOfChannelByUrlResponse model module.
  * @module model/UpdateCountPreferenceOfChannelByUrlResponse
- * @version 0.0.14
- */var UpdateCountPreferenceOfChannelByUrlResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateCountPreferenceOfChannelByUrlResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateCountPreferenceOfChannelByUrlResponse</code>.
    * @alias module:model/UpdateCountPreferenceOfChannelByUrlResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateCountPreferenceOfChannelByUrlResponse;
-}(); /**
-      * @member {String} count_preference
-      */
+}();
+/**
+ * @member {String} count_preference
+ */
 UpdateCountPreferenceOfChannelByUrlResponse.prototype['count_preference'] = undefined;
 var _default = UpdateCountPreferenceOfChannelByUrlResponse;
 exports["default"] = _default;

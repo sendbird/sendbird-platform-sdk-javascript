@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SBObject model module.
  * @module model/SBObject
- * @version 0.0.14
- */var SBObject = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SBObject = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SBObject</code>.
    * @alias module:model/SBObject
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SBObject;
-}(); /**
-      * @member {module:model/Function} constructor
-      */
+}();
+/**
+ * @member {module:model/Function} constructor
+ */
 SBObject.prototype['constructor'] = undefined;
 var _default = SBObject;
 exports["default"] = _default;

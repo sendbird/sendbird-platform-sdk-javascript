@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListGdprRequestsResponse model module.
  * @module model/ListGdprRequestsResponse
- * @version 0.0.14
- */var ListGdprRequestsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListGdprRequestsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListGdprRequestsResponse</code>.
    * @alias module:model/ListGdprRequestsResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListGdprRequestsResponse;
-}(); /**
-      * @member {Array.<module:model/ListGdprRequestsResponseRequestsInner>} requests
-      */
+}();
+/**
+ * @member {Array.<module:model/ListGdprRequestsResponseRequestsInner>} requests
+ */
 ListGdprRequestsResponse.prototype['requests'] = undefined;
 
 /**

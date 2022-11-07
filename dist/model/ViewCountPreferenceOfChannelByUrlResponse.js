@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewCountPreferenceOfChannelByUrlResponse model module.
  * @module model/ViewCountPreferenceOfChannelByUrlResponse
- * @version 0.0.14
- */var ViewCountPreferenceOfChannelByUrlResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewCountPreferenceOfChannelByUrlResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewCountPreferenceOfChannelByUrlResponse</code>.
    * @alias module:model/ViewCountPreferenceOfChannelByUrlResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewCountPreferenceOfChannelByUrlResponse;
-}(); /**
-      * @member {String} count_preference
-      */
+}();
+/**
+ * @member {String} count_preference
+ */
 ViewCountPreferenceOfChannelByUrlResponse.prototype['count_preference'] = undefined;
 var _default = ViewCountPreferenceOfChannelByUrlResponse;
 exports["default"] = _default;

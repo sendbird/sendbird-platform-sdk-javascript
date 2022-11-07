@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListReportsOnChannelByUrlResponse model module.
  * @module model/ListReportsOnChannelByUrlResponse
- * @version 0.0.14
- */var ListReportsOnChannelByUrlResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListReportsOnChannelByUrlResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListReportsOnChannelByUrlResponse</code>.
    * @alias module:model/ListReportsOnChannelByUrlResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListReportsOnChannelByUrlResponse;
-}(); /**
-      * @member {Array.<module:model/ListReportsOnMessageByIdResponseReportLogsInner>} report_logs
-      */
+}();
+/**
+ * @member {Array.<module:model/ListReportsOnMessageByIdResponseReportLogsInner>} report_logs
+ */
 ListReportsOnChannelByUrlResponse.prototype['report_logs'] = undefined;
 
 /**

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListAnnouncementGroupsResponse model module.
  * @module model/ListAnnouncementGroupsResponse
- * @version 0.0.14
- */var ListAnnouncementGroupsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListAnnouncementGroupsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListAnnouncementGroupsResponse</code>.
    * @alias module:model/ListAnnouncementGroupsResponse
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListAnnouncementGroupsResponse;
-}(); /**
-      * @member {Array.<String>} announcement_groups
-      */
+}();
+/**
+ * @member {Array.<String>} announcement_groups
+ */
 ListAnnouncementGroupsResponse.prototype['announcement_groups'] = undefined;
 
 /**

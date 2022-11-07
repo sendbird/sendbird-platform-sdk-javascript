@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SetDomainFilterDataProfanityTriggeredModeration model module.
  * @module model/SetDomainFilterDataProfanityTriggeredModeration
- * @version 0.0.14
+ * @version 0.0.16
  */
 class SetDomainFilterDataProfanityTriggeredModeration {
     /**

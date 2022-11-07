@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomTypeListBannedUsersResponse model module.
  * @module model/CustomTypeListBannedUsersResponse
- * @version 0.0.14
- */var CustomTypeListBannedUsersResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var CustomTypeListBannedUsersResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>CustomTypeListBannedUsersResponse</code>.
    * @alias module:model/CustomTypeListBannedUsersResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return CustomTypeListBannedUsersResponse;
-}(); /**
-      * @member {Array.<module:model/OcListBannedUsersResponseBannedListInner>} banned_list
-      */
+}();
+/**
+ * @member {Array.<module:model/OcListBannedUsersResponseBannedListInner>} banned_list
+ */
 CustomTypeListBannedUsersResponse.prototype['banned_list'] = undefined;
 
 /**

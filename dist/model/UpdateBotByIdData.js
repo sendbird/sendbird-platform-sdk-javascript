@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateBotByIdData model module.
  * @module model/UpdateBotByIdData
- * @version 0.0.14
- */var UpdateBotByIdData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateBotByIdData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateBotByIdData</code>.
    * @alias module:model/UpdateBotByIdData
@@ -90,10 +91,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateBotByIdData;
-}(); /**
-      * Specifies the ID of the bot to update.
-      * @member {String} bot_userid
-      */
+}();
+/**
+ * Specifies the ID of the bot to update.
+ * @member {String} bot_userid
+ */
 UpdateBotByIdData.prototype['bot_userid'] = undefined;
 
 /**

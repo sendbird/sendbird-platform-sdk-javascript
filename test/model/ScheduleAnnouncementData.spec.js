@@ -60,20 +60,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property messageType (base name: "message.type")', function() {
+    it('should have the property messageType (base name: "message_type")', function() {
       // uncomment below and update the code to test the property messageType
       //var instance = new SendbirdPlatformSdk.ScheduleAnnouncementData();
       //expect(instance).to.be();
     });
 
-    it('should have the property messageUserId (base name: "message.user_id")', function() {
-      // uncomment below and update the code to test the property messageUserId
+    it('should have the property userId (base name: "user_id")', function() {
+      // uncomment below and update the code to test the property userId
       //var instance = new SendbirdPlatformSdk.ScheduleAnnouncementData();
       //expect(instance).to.be();
     });
 
-    it('should have the property messageContent (base name: "message.content")', function() {
-      // uncomment below and update the code to test the property messageContent
+    it('should have the property content (base name: "content")', function() {
+      // uncomment below and update the code to test the property content
       //var instance = new SendbirdPlatformSdk.ScheduleAnnouncementData();
       //expect(instance).to.be();
     });

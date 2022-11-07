@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewPushPreferencesForChannelByUrlResponse model module.
  * @module model/ViewPushPreferencesForChannelByUrlResponse
- * @version 0.0.14
- */var ViewPushPreferencesForChannelByUrlResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewPushPreferencesForChannelByUrlResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewPushPreferencesForChannelByUrlResponse</code>.
    * @alias module:model/ViewPushPreferencesForChannelByUrlResponse
@@ -85,9 +86,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewPushPreferencesForChannelByUrlResponse;
-}(); /**
-      * @member {String} push_trigger_option
-      */
+}();
+/**
+ * @member {String} push_trigger_option
+ */
 ViewPushPreferencesForChannelByUrlResponse.prototype['push_trigger_option'] = undefined;
 
 /**

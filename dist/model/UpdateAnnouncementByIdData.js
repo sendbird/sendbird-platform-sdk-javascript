@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateAnnouncementByIdData model module.
  * @module model/UpdateAnnouncementByIdData
- * @version 0.0.14
- */var UpdateAnnouncementByIdData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateAnnouncementByIdData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateAnnouncementByIdData</code>.
    * @alias module:model/UpdateAnnouncementByIdData
@@ -103,10 +104,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateAnnouncementByIdData;
-}(); /**
-      * Specifies the unique ID of the announcement to update.
-      * @member {String} unique_id
-      */
+}();
+/**
+ * Specifies the unique ID of the announcement to update.
+ * @member {String} unique_id
+ */
 UpdateAnnouncementByIdData.prototype['unique_id'] = undefined;
 
 /**

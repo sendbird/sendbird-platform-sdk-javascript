@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddExtraDataToMessageResponse model module.
  * @module model/AddExtraDataToMessageResponse
- * @version 0.0.14
- */var AddExtraDataToMessageResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddExtraDataToMessageResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddExtraDataToMessageResponse</code>.
    * @alias module:model/AddExtraDataToMessageResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddExtraDataToMessageResponse;
-}(); /**
-      * @member {Array.<module:model/ListMessagesResponseMessagesInnerSortedMetaarrayInner>} sorted_metaarray
-      */
+}();
+/**
+ * @member {Array.<module:model/ListMessagesResponseMessagesInnerSortedMetaarrayInner>} sorted_metaarray
+ */
 AddExtraDataToMessageResponse.prototype['sorted_metaarray'] = undefined;
 var _default = AddExtraDataToMessageResponse;
 exports["default"] = _default;

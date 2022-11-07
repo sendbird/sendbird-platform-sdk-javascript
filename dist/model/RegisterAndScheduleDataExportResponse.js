@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RegisterAndScheduleDataExportResponse model module.
  * @module model/RegisterAndScheduleDataExportResponse
- * @version 0.0.14
- */var RegisterAndScheduleDataExportResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var RegisterAndScheduleDataExportResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RegisterAndScheduleDataExportResponse</code>.
    * @alias module:model/RegisterAndScheduleDataExportResponse
@@ -92,9 +93,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return RegisterAndScheduleDataExportResponse;
-}(); /**
-      * @member {Array.<String>} channel_custom_types
-      */
+}();
+/**
+ * @member {Array.<String>} channel_custom_types
+ */
 RegisterAndScheduleDataExportResponse.prototype['channel_custom_types'] = undefined;
 
 /**

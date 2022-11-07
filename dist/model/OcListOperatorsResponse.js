@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcListOperatorsResponse model module.
  * @module model/OcListOperatorsResponse
- * @version 0.0.14
- */var OcListOperatorsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcListOperatorsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcListOperatorsResponse</code>.
    * @alias module:model/OcListOperatorsResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcListOperatorsResponse;
-}(); /**
-      * @member {Array.<module:model/SendBirdUser>} operators
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdUser>} operators
+ */
 OcListOperatorsResponse.prototype['operators'] = undefined;
 
 /**

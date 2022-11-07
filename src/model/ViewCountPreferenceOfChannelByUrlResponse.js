@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ViewCountPreferenceOfChannelByUrlResponse model module.
  * @module model/ViewCountPreferenceOfChannelByUrlResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class ViewCountPreferenceOfChannelByUrlResponse {
     /**

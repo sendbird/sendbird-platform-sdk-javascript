@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BlockUserData model module.
  * @module model/BlockUserData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class BlockUserData {
     /**

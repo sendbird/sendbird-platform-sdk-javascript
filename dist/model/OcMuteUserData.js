@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcMuteUserData model module.
  * @module model/OcMuteUserData
- * @version 0.0.14
- */var OcMuteUserData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcMuteUserData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcMuteUserData</code>.
    * @alias module:model/OcMuteUserData
@@ -65,10 +66,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcMuteUserData;
-}(); /**
-      * Specifies the ID of the target user to mute.
-      * @member {String} user_id
-      */
+}();
+/**
+ * Specifies the ID of the target user to mute.
+ * @member {String} user_id
+ */
 OcMuteUserData.prototype['user_id'] = undefined;
 
 /**

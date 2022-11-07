@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateFcmPushConfigurationByIdResponse model module.
  * @module model/UpdateFcmPushConfigurationByIdResponse
- * @version 0.0.14
- */var UpdateFcmPushConfigurationByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateFcmPushConfigurationByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateFcmPushConfigurationByIdResponse</code>.
    * @alias module:model/UpdateFcmPushConfigurationByIdResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateFcmPushConfigurationByIdResponse;
-}(); /**
-      * @member {String} push_configurations
-      */
+}();
+/**
+ * @member {String} push_configurations
+ */
 UpdateFcmPushConfigurationByIdResponse.prototype['push_configurations'] = undefined;
 var _default = UpdateFcmPushConfigurationByIdResponse;
 exports["default"] = _default;

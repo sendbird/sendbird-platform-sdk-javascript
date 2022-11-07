@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateAnnouncementByIdData model module.
  * @module model/UpdateAnnouncementByIdData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class UpdateAnnouncementByIdData {
     /**

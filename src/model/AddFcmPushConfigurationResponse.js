@@ -17,7 +17,7 @@ import AddFcmPushConfigurationResponsePushConfigurationsInner from './AddFcmPush
 /**
  * The AddFcmPushConfigurationResponse model module.
  * @module model/AddFcmPushConfigurationResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class AddFcmPushConfigurationResponse {
     /**

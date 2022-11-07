@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The ListBlockedUsersResponse model module.
  * @module model/ListBlockedUsersResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class ListBlockedUsersResponse {
     /**

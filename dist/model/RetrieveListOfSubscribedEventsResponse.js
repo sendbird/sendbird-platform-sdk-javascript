@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RetrieveListOfSubscribedEventsResponse model module.
  * @module model/RetrieveListOfSubscribedEventsResponse
- * @version 0.0.14
- */var RetrieveListOfSubscribedEventsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var RetrieveListOfSubscribedEventsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RetrieveListOfSubscribedEventsResponse</code>.
    * @alias module:model/RetrieveListOfSubscribedEventsResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return RetrieveListOfSubscribedEventsResponse;
-}(); /**
-      * @member {module:model/RetrieveListOfSubscribedEventsResponseWebhook} webhook
-      */
+}();
+/**
+ * @member {module:model/RetrieveListOfSubscribedEventsResponseWebhook} webhook
+ */
 RetrieveListOfSubscribedEventsResponse.prototype['webhook'] = undefined;
 var _default = RetrieveListOfSubscribedEventsResponse;
 exports["default"] = _default;

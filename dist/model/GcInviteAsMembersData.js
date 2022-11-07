@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcInviteAsMembersData model module.
  * @module model/GcInviteAsMembersData
- * @version 0.0.14
- */var GcInviteAsMembersData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcInviteAsMembersData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcInviteAsMembersData</code>.
    * @alias module:model/GcInviteAsMembersData
@@ -75,10 +76,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcInviteAsMembersData;
-}(); /**
-      * Specifies the URL of the channel to invite into.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the channel to invite into.
+ * @member {String} channel_url
+ */
 GcInviteAsMembersData.prototype['channel_url'] = undefined;
 
 /**

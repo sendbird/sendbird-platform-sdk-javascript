@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GenerateSecondaryApiTokenData model module.
  * @module model/GenerateSecondaryApiTokenData
- * @version 0.0.14
- */var GenerateSecondaryApiTokenData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GenerateSecondaryApiTokenData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GenerateSecondaryApiTokenData</code>.
    * @alias module:model/GenerateSecondaryApiTokenData
@@ -55,10 +56,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GenerateSecondaryApiTokenData;
-}(); /**
-      * Specifies the master API token of the application.
-      * @member {String} HTTP_API_TOKEN
-      */
+}();
+/**
+ * Specifies the master API token of the application.
+ * @member {String} HTTP_API_TOKEN
+ */
 GenerateSecondaryApiTokenData.prototype['HTTP_API_TOKEN'] = undefined;
 var _default = GenerateSecondaryApiTokenData;
 exports["default"] = _default;

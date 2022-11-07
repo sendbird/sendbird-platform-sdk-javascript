@@ -20,8 +20,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * OpenChannel service.
 * @module api/OpenChannelApi
-* @version 0.0.14
-*/var OpenChannelApi = /*#__PURE__*/function () {
+* @version 0.0.16
+*/
+var OpenChannelApi = /*#__PURE__*/function () {
   /**
   * Constructs a new OpenChannelApi. 
   * @alias module:api/OpenChannelApi

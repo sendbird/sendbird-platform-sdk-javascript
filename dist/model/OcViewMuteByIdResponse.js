@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcViewMuteByIdResponse model module.
  * @module model/OcViewMuteByIdResponse
- * @version 0.0.14
- */var OcViewMuteByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcViewMuteByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcViewMuteByIdResponse</code>.
    * @alias module:model/OcViewMuteByIdResponse
@@ -64,9 +65,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcViewMuteByIdResponse;
-}(); /**
-      * @member {Boolean} is_muted
-      */
+}();
+/**
+ * @member {Boolean} is_muted
+ */
 OcViewMuteByIdResponse.prototype['is_muted'] = undefined;
 
 /**

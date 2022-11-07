@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The GcListMembersResponse model module.
  * @module model/GcListMembersResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class GcListMembersResponse {
     /**

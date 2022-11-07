@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateChannelMetacounterData model module.
  * @module model/UpdateChannelMetacounterData
- * @version 0.0.14
- */var UpdateChannelMetacounterData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateChannelMetacounterData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateChannelMetacounterData</code>.
    * @alias module:model/UpdateChannelMetacounterData
@@ -61,10 +62,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateChannelMetacounterData;
-}(); /**
-      * Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be an integer. This property can have up to 5 items.
-      * @member {String} metacounter
-      */
+}();
+/**
+ * Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be an integer. This property can have up to 5 items.
+ * @member {String} metacounter
+ */
 UpdateChannelMetacounterData.prototype['metacounter'] = undefined;
 
 /**

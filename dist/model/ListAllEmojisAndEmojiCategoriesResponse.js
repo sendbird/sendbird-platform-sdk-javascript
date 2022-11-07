@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListAllEmojisAndEmojiCategoriesResponse model module.
  * @module model/ListAllEmojisAndEmojiCategoriesResponse
- * @version 0.0.14
- */var ListAllEmojisAndEmojiCategoriesResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListAllEmojisAndEmojiCategoriesResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListAllEmojisAndEmojiCategoriesResponse</code>.
    * @alias module:model/ListAllEmojisAndEmojiCategoriesResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListAllEmojisAndEmojiCategoriesResponse;
-}(); /**
-      * @member {String} emoji_hash
-      */
+}();
+/**
+ * @member {String} emoji_hash
+ */
 ListAllEmojisAndEmojiCategoriesResponse.prototype['emoji_hash'] = undefined;
 
 /**

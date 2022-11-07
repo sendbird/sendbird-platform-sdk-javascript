@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SetDomainFilterDataDomainFilter model module.
  * @module model/SetDomainFilterDataDomainFilter
- * @version 0.0.14
- */var SetDomainFilterDataDomainFilter = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SetDomainFilterDataDomainFilter = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SetDomainFilterDataDomainFilter</code>.
    * @alias module:model/SetDomainFilterDataDomainFilter
@@ -58,9 +59,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SetDomainFilterDataDomainFilter;
-}(); /**
-      * @member {Array.<String>} domains
-      */
+}();
+/**
+ * @member {Array.<String>} domains
+ */
 SetDomainFilterDataDomainFilter.prototype['domains'] = undefined;
 
 /**

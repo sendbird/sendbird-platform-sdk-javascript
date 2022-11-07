@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdatePushNotificationContentTemplateData model module.
  * @module model/UpdatePushNotificationContentTemplateData
- * @version 0.0.14
- */var UpdatePushNotificationContentTemplateData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdatePushNotificationContentTemplateData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdatePushNotificationContentTemplateData</code>.
    * @alias module:model/UpdatePushNotificationContentTemplateData
@@ -75,10 +76,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdatePushNotificationContentTemplateData;
-}(); /**
-      * Specifies the name of a push notification content template to update. Acceptable values are default and alternative.
-      * @member {String} template_name
-      */
+}();
+/**
+ * Specifies the name of a push notification content template to update. Acceptable values are default and alternative.
+ * @member {String} template_name
+ */
 UpdatePushNotificationContentTemplateData.prototype['template_name'] = undefined;
 
 /**

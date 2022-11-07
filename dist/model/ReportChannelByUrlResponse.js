@@ -15,8 +15,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportChannelByUrlResponse model module.
  * @module model/ReportChannelByUrlResponse
- * @version 0.0.14
- */var ReportChannelByUrlResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ReportChannelByUrlResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ReportChannelByUrlResponse</code>.
    * @alias module:model/ReportChannelByUrlResponse
@@ -76,9 +77,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ReportChannelByUrlResponse;
-}(); /**
-      * @member {String} report_type
-      */
+}();
+/**
+ * @member {String} report_type
+ */
 ReportChannelByUrlResponse.prototype['report_type'] = undefined;
 
 /**

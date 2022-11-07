@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _ScheduleAnnouncementDataMessage = _interopRequireDefault(require("./ScheduleAnnouncementDataMessage"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -12,22 +13,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScheduleAnnouncementData model module.
  * @module model/ScheduleAnnouncementData
- * @version 0.0.14
- */var ScheduleAnnouncementData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ScheduleAnnouncementData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ScheduleAnnouncementData</code>.
    * @alias module:model/ScheduleAnnouncementData
-   * @param message {String} The [message](/docs/chat/v3/platform-api/guides/messages#-3-resource-representation) of a new announcement.
-   * @param messageType {String} Specifies the type of the message, which can be either MESG for a text message and ADMM for an admin message.
-   * @param messageUserId {String} Specifies the unique ID of the sender when the message.type is MESG. When the message.type value is ADMM, this property is not effective.
-   * @param messageContent {String} Specifies the content of the message.
+   * @param message {module:model/ScheduleAnnouncementDataMessage} 
    * @param targetAt {String} Specifies the target channels to send the announcement to. Acceptable values are the following: <br/> - sender_all_channels (Default): sends the announcement to all of the sender's group channels.<br />- target_channels: sends the announcement to all target group channels. When the `message.type` of the announcement is ADMM, this is the only valid option. <br /> - target_users_included_channels: sends the announcement to group channels consisting of the sender, target users, and other members. <br/> - target_users_only_channels: sends the announcement to group channels consisting of the sender and target users only.
    * @param targetList {Array.<String>} Specifies an array of one or more target user IDs or target channel URLs to send the announcement to when the target_at is  target_channels, target_users_only_channels, or target_users_included_channels.<br /><br />  When the target_at value is sender_all_channels, this property is not effective.
    * @param targetChannelType {String} Determines which type of group channel to send the announcement to, based on the target_at and target_list. This property is effective only when the target_at is either target_users_only_channels or target_users_included_channels and the target_list is specified. Acceptable values are limited to the following:<br/>- all: send the announcement to all channels that have all target users and the sender in them, regardless of channel type.<br/>- distinct (default): sends this announcement to the distinct channels. Distinct channels continue to use the same existing channels whenever someone attempts to create a new channel with the same members.<br/>- non-distinct: sends this announcement to the non-distinct channels. Non-distinct channels always create a new channel even if there is an existing channel with the same members.<br/><br/> The distinct and non-distinct channels are a subtype of group channels, determined by the [is_distinct](/docs/chat/v3/platform-api/guides/group-channel#2-types-of-a-channel-3-resource-representation) property.
    */
-  function ScheduleAnnouncementData(message, messageType, messageUserId, messageContent, targetAt, targetList, targetChannelType) {
+  function ScheduleAnnouncementData(message, targetAt, targetList, targetChannelType) {
     _classCallCheck(this, ScheduleAnnouncementData);
-    ScheduleAnnouncementData.initialize(this, message, messageType, messageUserId, messageContent, targetAt, targetList, targetChannelType);
+    ScheduleAnnouncementData.initialize(this, message, targetAt, targetList, targetChannelType);
   }
 
   /**
@@ -37,11 +36,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
    */
   _createClass(ScheduleAnnouncementData, null, [{
     key: "initialize",
-    value: function initialize(obj, message, messageType, messageUserId, messageContent, targetAt, targetList, targetChannelType) {
+    value: function initialize(obj, message, targetAt, targetList, targetChannelType) {
       obj['message'] = message;
-      obj['message.type'] = messageType;
-      obj['message.user_id'] = messageUserId;
-      obj['message.content'] = messageContent;
       obj['target_at'] = targetAt;
       obj['target_list'] = targetList;
       obj['target_channel_type'] = targetChannelType;
@@ -60,16 +56,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       if (data) {
         obj = obj || new ScheduleAnnouncementData();
         if (data.hasOwnProperty('message')) {
-          obj['message'] = _ApiClient["default"].convertToType(data['message'], 'String');
+          obj['message'] = _ScheduleAnnouncementDataMessage["default"].constructFromObject(data['message']);
         }
-        if (data.hasOwnProperty('message.type')) {
-          obj['message.type'] = _ApiClient["default"].convertToType(data['message.type'], 'String');
+        if (data.hasOwnProperty('message_type')) {
+          obj['message_type'] = _ApiClient["default"].convertToType(data['message_type'], 'String');
         }
-        if (data.hasOwnProperty('message.user_id')) {
-          obj['message.user_id'] = _ApiClient["default"].convertToType(data['message.user_id'], 'String');
+        if (data.hasOwnProperty('user_id')) {
+          obj['user_id'] = _ApiClient["default"].convertToType(data['user_id'], 'String');
         }
-        if (data.hasOwnProperty('message.content')) {
-          obj['message.content'] = _ApiClient["default"].convertToType(data['message.content'], 'String');
+        if (data.hasOwnProperty('content')) {
+          obj['content'] = _ApiClient["default"].convertToType(data['content'], 'String');
         }
         if (data.hasOwnProperty('target_at')) {
           obj['target_at'] = _ApiClient["default"].convertToType(data['target_at'], 'String');
@@ -136,29 +132,29 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ScheduleAnnouncementData;
-}(); /**
-      * The [message](/docs/chat/v3/platform-api/guides/messages#-3-resource-representation) of a new announcement.
-      * @member {String} message
-      */
+}();
+/**
+ * @member {module:model/ScheduleAnnouncementDataMessage} message
+ */
 ScheduleAnnouncementData.prototype['message'] = undefined;
 
 /**
  * Specifies the type of the message, which can be either MESG for a text message and ADMM for an admin message.
- * @member {String} message.type
+ * @member {String} message_type
  */
-ScheduleAnnouncementData.prototype['message.type'] = undefined;
+ScheduleAnnouncementData.prototype['message_type'] = undefined;
 
 /**
  * Specifies the unique ID of the sender when the message.type is MESG. When the message.type value is ADMM, this property is not effective.
- * @member {String} message.user_id
+ * @member {String} user_id
  */
-ScheduleAnnouncementData.prototype['message.user_id'] = undefined;
+ScheduleAnnouncementData.prototype['user_id'] = undefined;
 
 /**
  * Specifies the content of the message.
- * @member {String} message.content
+ * @member {String} content
  */
-ScheduleAnnouncementData.prototype['message.content'] = undefined;
+ScheduleAnnouncementData.prototype['content'] = undefined;
 
 /**
  * Specifies the target channels to send the announcement to. Acceptable values are the following: <br/> - sender_all_channels (Default): sends the announcement to all of the sender's group channels.<br />- target_channels: sends the announcement to all target group channels. When the `message.type` of the announcement is ADMM, this is the only valid option. <br /> - target_users_included_channels: sends the announcement to group channels consisting of the sender, target users, and other members. <br/> - target_users_only_channels: sends the announcement to group channels consisting of the sender and target users only.

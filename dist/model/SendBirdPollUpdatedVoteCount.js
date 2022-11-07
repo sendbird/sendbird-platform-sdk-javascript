@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdPollUpdatedVoteCount model module.
  * @module model/SendBirdPollUpdatedVoteCount
- * @version 0.0.14
- */var SendBirdPollUpdatedVoteCount = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdPollUpdatedVoteCount = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdPollUpdatedVoteCount</code>.
    * @alias module:model/SendBirdPollUpdatedVoteCount
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdPollUpdatedVoteCount;
-}(); /**
-      * @member {Number} option_id
-      */
+}();
+/**
+ * @member {Number} option_id
+ */
 SendBirdPollUpdatedVoteCount.prototype['option_id'] = undefined;
 
 /**

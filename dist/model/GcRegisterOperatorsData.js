@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcRegisterOperatorsData model module.
  * @module model/GcRegisterOperatorsData
- * @version 0.0.14
- */var GcRegisterOperatorsData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcRegisterOperatorsData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcRegisterOperatorsData</code>.
    * @alias module:model/GcRegisterOperatorsData
@@ -60,10 +61,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcRegisterOperatorsData;
-}(); /**
-      * Specifies the URL of the channel to register operators to.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the channel to register operators to.
+ * @member {String} channel_url
+ */
 GcRegisterOperatorsData.prototype['channel_url'] = undefined;
 
 /**

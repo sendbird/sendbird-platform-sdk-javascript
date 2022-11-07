@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateBotResponse model module.
  * @module model/CreateBotResponse
- * @version 0.0.14
- */var CreateBotResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var CreateBotResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>CreateBotResponse</code>.
    * @alias module:model/CreateBotResponse
@@ -68,9 +69,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return CreateBotResponse;
-}(); /**
-      * @member {module:model/CreateBotResponseBot} bot
-      */
+}();
+/**
+ * @member {module:model/CreateBotResponseBot} bot
+ */
 CreateBotResponse.prototype['bot'] = undefined;
 
 /**

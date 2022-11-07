@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdPollDetails model module.
  * @module model/SendBirdPollDetails
- * @version 0.0.14
- */var SendBirdPollDetails = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdPollDetails = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdPollDetails</code>.
    * @alias module:model/SendBirdPollDetails
@@ -80,9 +81,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdPollDetails;
-}(); /**
-      * @member {Boolean} allow_multiple_votes
-      */
+}();
+/**
+ * @member {Boolean} allow_multiple_votes
+ */
 SendBirdPollDetails.prototype['allow_multiple_votes'] = undefined;
 
 /**

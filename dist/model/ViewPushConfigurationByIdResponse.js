@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewPushConfigurationByIdResponse model module.
  * @module model/ViewPushConfigurationByIdResponse
- * @version 0.0.14
- */var ViewPushConfigurationByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewPushConfigurationByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewPushConfigurationByIdResponse</code>.
    * @alias module:model/ViewPushConfigurationByIdResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewPushConfigurationByIdResponse;
-}(); /**
-      * @member {Array.<module:model/ListPushConfigurationsResponsePushConfigurationsInner>} push_configurations
-      */
+}();
+/**
+ * @member {Array.<module:model/ListPushConfigurationsResponsePushConfigurationsInner>} push_configurations
+ */
 ViewPushConfigurationByIdResponse.prototype['push_configurations'] = undefined;
 var _default = ViewPushConfigurationByIdResponse;
 exports["default"] = _default;

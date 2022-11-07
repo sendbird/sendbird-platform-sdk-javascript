@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BlockUserResponse model module.
  * @module model/BlockUserResponse
- * @version 0.0.14
- */var BlockUserResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var BlockUserResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>BlockUserResponse</code>.
    * @alias module:model/BlockUserResponse
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return BlockUserResponse;
-}(); /**
-      * @member {Array.<String>} users
-      */
+}();
+/**
+ * @member {Array.<String>} users
+ */
 BlockUserResponse.prototype['users'] = undefined;
 
 /**

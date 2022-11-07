@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListSecondaryApiTokensResponseApiTokensInner model module.
  * @module model/ListSecondaryApiTokensResponseApiTokensInner
- * @version 0.0.14
- */var ListSecondaryApiTokensResponseApiTokensInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListSecondaryApiTokensResponseApiTokensInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListSecondaryApiTokensResponseApiTokensInner</code>.
    * @alias module:model/ListSecondaryApiTokensResponseApiTokensInner
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListSecondaryApiTokensResponseApiTokensInner;
-}(); /**
-      * @member {String} token
-      */
+}();
+/**
+ * @member {String} token
+ */
 ListSecondaryApiTokensResponseApiTokensInner.prototype['token'] = undefined;
 
 /**

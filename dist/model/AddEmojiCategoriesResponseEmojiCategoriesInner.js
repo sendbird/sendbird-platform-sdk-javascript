@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddEmojiCategoriesResponseEmojiCategoriesInner model module.
  * @module model/AddEmojiCategoriesResponseEmojiCategoriesInner
- * @version 0.0.14
- */var AddEmojiCategoriesResponseEmojiCategoriesInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddEmojiCategoriesResponseEmojiCategoriesInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddEmojiCategoriesResponseEmojiCategoriesInner</code>.
    * @alias module:model/AddEmojiCategoriesResponseEmojiCategoriesInner
@@ -58,9 +59,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddEmojiCategoriesResponseEmojiCategoriesInner;
-}(); /**
-      * @member {Number} id
-      */
+}();
+/**
+ * @member {Number} id
+ */
 AddEmojiCategoriesResponseEmojiCategoriesInner.prototype['id'] = undefined;
 
 /**

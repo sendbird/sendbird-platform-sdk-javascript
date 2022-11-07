@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The DeleteApnsCertificateByIdResponse model module.
  * @module model/DeleteApnsCertificateByIdResponse
- * @version 0.0.14
- */var DeleteApnsCertificateByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var DeleteApnsCertificateByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>DeleteApnsCertificateByIdResponse</code>.
    * @alias module:model/DeleteApnsCertificateByIdResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return DeleteApnsCertificateByIdResponse;
-}(); /**
-      * @member {Array.<String>} push_configurations
-      */
+}();
+/**
+ * @member {Array.<String>} push_configurations
+ */
 DeleteApnsCertificateByIdResponse.prototype['push_configurations'] = undefined;
 var _default = DeleteApnsCertificateByIdResponse;
 exports["default"] = _default;

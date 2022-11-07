@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewPushNotificationContentTemplateResponse model module.
  * @module model/ViewPushNotificationContentTemplateResponse
- * @version 0.0.14
- */var ViewPushNotificationContentTemplateResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewPushNotificationContentTemplateResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewPushNotificationContentTemplateResponse</code>.
    * @alias module:model/ViewPushNotificationContentTemplateResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewPushNotificationContentTemplateResponse;
-}(); /**
-      * @member {Array.<module:model/ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner>} push_message_templates
-      */
+}();
+/**
+ * @member {Array.<module:model/ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner>} push_message_templates
+ */
 ViewPushNotificationContentTemplateResponse.prototype['push_message_templates'] = undefined;
 var _default = ViewPushNotificationContentTemplateResponse;
 exports["default"] = _default;

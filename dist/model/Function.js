@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Function model module.
  * @module model/Function
- * @version 0.0.14
- */var Function = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var Function = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Function</code>.
    * @alias module:model/Function
@@ -61,9 +62,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return Function;
-}(); /**
-      * @member {Object} arguments
-      */
+}();
+/**
+ * @member {Object} arguments
+ */
 Function.prototype['arguments'] = undefined;
 
 /**

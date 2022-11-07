@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListGdprRequestsResponseRequestsInner model module.
  * @module model/ListGdprRequestsResponseRequestsInner
- * @version 0.0.14
- */var ListGdprRequestsResponseRequestsInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListGdprRequestsResponseRequestsInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListGdprRequestsResponseRequestsInner</code>.
    * @alias module:model/ListGdprRequestsResponseRequestsInner
@@ -74,9 +75,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListGdprRequestsResponseRequestsInner;
-}(); /**
-      * @member {String} request_id
-      */
+}();
+/**
+ * @member {String} request_id
+ */
 ListGdprRequestsResponseRequestsInner.prototype['request_id'] = undefined;
 
 /**

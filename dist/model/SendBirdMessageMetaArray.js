@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdMessageMetaArray model module.
  * @module model/SendBirdMessageMetaArray
- * @version 0.0.14
- */var SendBirdMessageMetaArray = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdMessageMetaArray = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdMessageMetaArray</code>.
    * @alias module:model/SendBirdMessageMetaArray
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdMessageMetaArray;
-}(); /**
-      * @member {String} key
-      */
+}();
+/**
+ * @member {String} key
+ */
 SendBirdMessageMetaArray.prototype['key'] = undefined;
 
 /**

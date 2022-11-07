@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddReactionToAMessageData model module.
  * @module model/AddReactionToAMessageData
- * @version 0.0.14
- */var AddReactionToAMessageData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddReactionToAMessageData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddReactionToAMessageData</code>.
    * @alias module:model/AddReactionToAMessageData
@@ -75,10 +76,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddReactionToAMessageData;
-}(); /**
-      * Specifies the type of the channel. Currently, a value of group_channels is only available for the parameter.
-      * @member {String} channel_type
-      */
+}();
+/**
+ * Specifies the type of the channel. Currently, a value of group_channels is only available for the parameter.
+ * @member {String} channel_type
+ */
 AddReactionToAMessageData.prototype['channel_type'] = undefined;
 
 /**

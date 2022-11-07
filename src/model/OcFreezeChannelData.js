@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OcFreezeChannelData model module.
  * @module model/OcFreezeChannelData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class OcFreezeChannelData {
     /**

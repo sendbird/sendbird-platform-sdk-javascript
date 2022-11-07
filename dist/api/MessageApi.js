@@ -18,25 +18,17 @@ var _GcMarkAllMessagesAsDeliveredData = _interopRequireDefault(require("../model
 var _GcMarkAllMessagesAsDeliveredResponse = _interopRequireDefault(require("../model/GcMarkAllMessagesAsDeliveredResponse"));
 var _GcMarkAllMessagesAsReadData = _interopRequireDefault(require("../model/GcMarkAllMessagesAsReadData"));
 var _GcViewNumberOfEachMembersUnreadMessagesResponse = _interopRequireDefault(require("../model/GcViewNumberOfEachMembersUnreadMessagesResponse"));
-var _GetStatisticsDailyResponse = _interopRequireDefault(require("../model/GetStatisticsDailyResponse"));
-var _GetStatisticsMonthlyResponse = _interopRequireDefault(require("../model/GetStatisticsMonthlyResponse"));
-var _GetStatisticsResponse = _interopRequireDefault(require("../model/GetStatisticsResponse"));
 var _ListAllEmojisAndEmojiCategoriesResponse = _interopRequireDefault(require("../model/ListAllEmojisAndEmojiCategoriesResponse"));
-var _ListAnnouncementGroupsResponse = _interopRequireDefault(require("../model/ListAnnouncementGroupsResponse"));
 var _ListAnnouncementsResponse = _interopRequireDefault(require("../model/ListAnnouncementsResponse"));
 var _ListEmojisResponse = _interopRequireDefault(require("../model/ListEmojisResponse"));
 var _ListMessagesResponse = _interopRequireDefault(require("../model/ListMessagesResponse"));
 var _ListReactionsOfMessageResponse = _interopRequireDefault(require("../model/ListReactionsOfMessageResponse"));
 var _RemoveReactionFromAMessageResponse = _interopRequireDefault(require("../model/RemoveReactionFromAMessageResponse"));
-var _ScheduleAnnouncementData = _interopRequireDefault(require("../model/ScheduleAnnouncementData"));
-var _ScheduleAnnouncementResponse = _interopRequireDefault(require("../model/ScheduleAnnouncementResponse"));
 var _SendBirdEmoji = _interopRequireDefault(require("../model/SendBirdEmoji"));
 var _SendBirdEmojiCategory = _interopRequireDefault(require("../model/SendBirdEmojiCategory"));
 var _SendBirdMessageResponse = _interopRequireDefault(require("../model/SendBirdMessageResponse"));
 var _SendMessageData = _interopRequireDefault(require("../model/SendMessageData"));
 var _TranslateMessageIntoOtherLanguagesData = _interopRequireDefault(require("../model/TranslateMessageIntoOtherLanguagesData"));
-var _UpdateAnnouncementByIdData = _interopRequireDefault(require("../model/UpdateAnnouncementByIdData"));
-var _UpdateAnnouncementByIdResponse = _interopRequireDefault(require("../model/UpdateAnnouncementByIdResponse"));
 var _UpdateEmojiCategoryUrlByIdData = _interopRequireDefault(require("../model/UpdateEmojiCategoryUrlByIdData"));
 var _UpdateEmojiUrlByKeyData = _interopRequireDefault(require("../model/UpdateEmojiUrlByKeyData"));
 var _UpdateExtraDataInMessageData = _interopRequireDefault(require("../model/UpdateExtraDataInMessageData"));
@@ -52,8 +44,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Message service.
 * @module api/MessageApi
-* @version 0.0.14
-*/var MessageApi = /*#__PURE__*/function () {
+* @version 0.0.16
+*/
+var MessageApi = /*#__PURE__*/function () {
   /**
   * Constructs a new MessageApi. 
   * @alias module:api/MessageApi
@@ -764,178 +757,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
 
     /**
-     * Get statistics - weekly
-     * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
-     * @param {String} apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetStatisticsResponse} and HTTP response
-     */
-  }, {
-    key: "getStatisticsWithHttpInfo",
-    value: function getStatisticsWithHttpInfo(apiToken) {
-      var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling getStatistics");
-      }
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _GetStatisticsResponse["default"];
-      return this.apiClient.callApi('/v3/announcement_stats/weekly', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Get statistics - weekly
-     * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
-     * @param {String} apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetStatisticsResponse}
-     */
-  }, {
-    key: "getStatistics",
-    value: function getStatistics(apiToken) {
-      return this.getStatisticsWithHttpInfo(apiToken).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Get statistics - daily
-     * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
-     * @param {String} apiToken 
-     * @param {String} startDate 
-     * @param {String} endDate 
-     * @param {String} startWeek 
-     * @param {String} endWeek 
-     * @param {String} startMonth 
-     * @param {String} endMonth 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.announcementGroup 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetStatisticsDailyResponse} and HTTP response
-     */
-  }, {
-    key: "getStatisticsDailyWithHttpInfo",
-    value: function getStatisticsDailyWithHttpInfo(apiToken, startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts) {
-      opts = opts || {};
-      var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling getStatisticsDaily");
-      }
-      // verify the required parameter 'startDate' is set
-      if (startDate === undefined || startDate === null) {
-        throw new Error("Missing the required parameter 'startDate' when calling getStatisticsDaily");
-      }
-      // verify the required parameter 'endDate' is set
-      if (endDate === undefined || endDate === null) {
-        throw new Error("Missing the required parameter 'endDate' when calling getStatisticsDaily");
-      }
-      // verify the required parameter 'startWeek' is set
-      if (startWeek === undefined || startWeek === null) {
-        throw new Error("Missing the required parameter 'startWeek' when calling getStatisticsDaily");
-      }
-      // verify the required parameter 'endWeek' is set
-      if (endWeek === undefined || endWeek === null) {
-        throw new Error("Missing the required parameter 'endWeek' when calling getStatisticsDaily");
-      }
-      // verify the required parameter 'startMonth' is set
-      if (startMonth === undefined || startMonth === null) {
-        throw new Error("Missing the required parameter 'startMonth' when calling getStatisticsDaily");
-      }
-      // verify the required parameter 'endMonth' is set
-      if (endMonth === undefined || endMonth === null) {
-        throw new Error("Missing the required parameter 'endMonth' when calling getStatisticsDaily");
-      }
-      var pathParams = {};
-      var queryParams = {
-        'start_date': startDate,
-        'end_date': endDate,
-        'start_week': startWeek,
-        'end_week': endWeek,
-        'start_month': startMonth,
-        'end_month': endMonth,
-        'announcement_group': opts['announcementGroup']
-      };
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _GetStatisticsDailyResponse["default"];
-      return this.apiClient.callApi('/v3/announcement_stats/daily', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Get statistics - daily
-     * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
-     * @param {String} apiToken 
-     * @param {String} startDate 
-     * @param {String} endDate 
-     * @param {String} startWeek 
-     * @param {String} endWeek 
-     * @param {String} startMonth 
-     * @param {String} endMonth 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.announcementGroup 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetStatisticsDailyResponse}
-     */
-  }, {
-    key: "getStatisticsDaily",
-    value: function getStatisticsDaily(apiToken, startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts) {
-      return this.getStatisticsDailyWithHttpInfo(apiToken, startDate, endDate, startWeek, endWeek, startMonth, endMonth, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Get statistics - monthly
-     * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
-     * @param {String} apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetStatisticsMonthlyResponse} and HTTP response
-     */
-  }, {
-    key: "getStatisticsMonthlyWithHttpInfo",
-    value: function getStatisticsMonthlyWithHttpInfo(apiToken) {
-      var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling getStatisticsMonthly");
-      }
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _GetStatisticsMonthlyResponse["default"];
-      return this.apiClient.callApi('/v3/announcement_stats/monthly', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Get statistics - monthly
-     * ## Get statistics  Retrieves the daily, weekly or monthly statistics of an announcement or an announcement group.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-statistics ----------------------------
-     * @param {String} apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetStatisticsMonthlyResponse}
-     */
-  }, {
-    key: "getStatisticsMonthly",
-    value: function getStatisticsMonthly(apiToken) {
-      return this.getStatisticsMonthlyWithHttpInfo(apiToken).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
      * List all emojis and emoji categories
      * ## List all emojis and emoji categories  Retrieves a list of all emoji categories registered to the application, including their emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-all-emojis-and-emoji-categories
      * @param {String} apiToken 
@@ -972,57 +793,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     key: "listAllEmojisAndEmojiCategories",
     value: function listAllEmojisAndEmojiCategories(apiToken) {
       return this.listAllEmojisAndEmojiCategoriesWithHttpInfo(apiToken).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * List announcement groups
-     * ## List announcement groups  Retrieves a list of announcement groups.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-list-announcement-groups ----------------------------
-     * @param {String} apiToken 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListAnnouncementGroupsResponse} and HTTP response
-     */
-  }, {
-    key: "listAnnouncementGroupsWithHttpInfo",
-    value: function listAnnouncementGroupsWithHttpInfo(apiToken, opts) {
-      opts = opts || {};
-      var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling listAnnouncementGroups");
-      }
-      var pathParams = {};
-      var queryParams = {
-        'token': opts['token'],
-        'limit': opts['limit']
-      };
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _ListAnnouncementGroupsResponse["default"];
-      return this.apiClient.callApi('/v3/announcement_group', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * List announcement groups
-     * ## List announcement groups  Retrieves a list of announcement groups.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-list-announcement-groups ----------------------------
-     * @param {String} apiToken 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListAnnouncementGroupsResponse}
-     */
-  }, {
-    key: "listAnnouncementGroups",
-    value: function listAnnouncementGroups(apiToken, opts) {
-      return this.listAnnouncementGroupsWithHttpInfo(apiToken, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -1510,52 +1280,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
 
     /**
-     * Schedule an announcement
-     * ## Schedule an announcement  Schedules a new announcement. You can also schedule an announcement in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-schedule-an-announcement
-     * @param {String} apiToken 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/ScheduleAnnouncementData} opts.scheduleAnnouncementData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ScheduleAnnouncementResponse} and HTTP response
-     */
-  }, {
-    key: "scheduleAnnouncementWithHttpInfo",
-    value: function scheduleAnnouncementWithHttpInfo(apiToken, opts) {
-      opts = opts || {};
-      var postBody = opts['scheduleAnnouncementData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling scheduleAnnouncement");
-      }
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = _ScheduleAnnouncementResponse["default"];
-      return this.apiClient.callApi('/v3/announcements', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Schedule an announcement
-     * ## Schedule an announcement  Schedules a new announcement. You can also schedule an announcement in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-schedule-an-announcement
-     * @param {String} apiToken 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/ScheduleAnnouncementData} opts.scheduleAnnouncementData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ScheduleAnnouncementResponse}
-     */
-  }, {
-    key: "scheduleAnnouncement",
-    value: function scheduleAnnouncement(apiToken, opts) {
-      return this.scheduleAnnouncementWithHttpInfo(apiToken, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
      * Send a message
      * ## Send a message  Sends a message to a channel. You can send a text message, a file message, and an admin message.  >__Note__: With Sendbird Chat SDKs and the platform API, any type of files in messages can be uploaded to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-send-a-message ----------------------------
      * @param {String} apiToken 
@@ -1680,60 +1404,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     key: "translateMessageIntoOtherLanguages",
     value: function translateMessageIntoOtherLanguages(apiToken, channelType, channelUrl, messageId, opts) {
       return this.translateMessageIntoOtherLanguagesWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Update an announcement
-     * ## Update an announcement  Updates information of a specific announcement before it starts or changes the status of a specific announcement after it starts. For the 2 different applications, refer to the request body below.  >__Note__: Updating information of an announcement is possible only when the announcement status is scheduled, indicating it hasn't started yet.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-update-an-announcement ----------------------------
-     * @param {String} apiToken 
-     * @param {String} uniqueId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateAnnouncementByIdData} opts.updateAnnouncementByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateAnnouncementByIdResponse} and HTTP response
-     */
-  }, {
-    key: "updateAnnouncementByIdWithHttpInfo",
-    value: function updateAnnouncementByIdWithHttpInfo(apiToken, uniqueId, opts) {
-      opts = opts || {};
-      var postBody = opts['updateAnnouncementByIdData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling updateAnnouncementById");
-      }
-      // verify the required parameter 'uniqueId' is set
-      if (uniqueId === undefined || uniqueId === null) {
-        throw new Error("Missing the required parameter 'uniqueId' when calling updateAnnouncementById");
-      }
-      var pathParams = {
-        'unique_id': uniqueId
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = _UpdateAnnouncementByIdResponse["default"];
-      return this.apiClient.callApi('/v3/announcements/{unique_id}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Update an announcement
-     * ## Update an announcement  Updates information of a specific announcement before it starts or changes the status of a specific announcement after it starts. For the 2 different applications, refer to the request body below.  >__Note__: Updating information of an announcement is possible only when the announcement status is scheduled, indicating it hasn't started yet.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-update-an-announcement ----------------------------
-     * @param {String} apiToken 
-     * @param {String} uniqueId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateAnnouncementByIdData} opts.updateAnnouncementByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateAnnouncementByIdResponse}
-     */
-  }, {
-    key: "updateAnnouncementById",
-    value: function updateAnnouncementById(apiToken, uniqueId, opts) {
-      return this.updateAnnouncementByIdWithHttpInfo(apiToken, uniqueId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

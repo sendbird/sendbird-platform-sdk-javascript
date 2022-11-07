@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SetDomainFilterDataProfanityTriggeredModeration model module.
  * @module model/SetDomainFilterDataProfanityTriggeredModeration
- * @version 0.0.14
- */var SetDomainFilterDataProfanityTriggeredModeration = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SetDomainFilterDataProfanityTriggeredModeration = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SetDomainFilterDataProfanityTriggeredModeration</code>.
    * @alias module:model/SetDomainFilterDataProfanityTriggeredModeration
@@ -58,9 +59,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SetDomainFilterDataProfanityTriggeredModeration;
-}(); /**
-      * @member {Number} count
-      */
+}();
+/**
+ * @member {Number} count
+ */
 SetDomainFilterDataProfanityTriggeredModeration.prototype['count'] = undefined;
 
 /**

@@ -14,8 +14,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdMessageResponse model module.
  * @module model/SendBirdMessageResponse
- * @version 0.0.14
- */var SendBirdMessageResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdMessageResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdMessageResponse</code>.
    * @alias module:model/SendBirdMessageResponse
@@ -132,9 +133,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdMessageResponse;
-}(); /**
-      * @member {Boolean} require_auth
-      */
+}();
+/**
+ * @member {Boolean} require_auth
+ */
 SendBirdMessageResponse.prototype['require_auth'] = undefined;
 
 /**

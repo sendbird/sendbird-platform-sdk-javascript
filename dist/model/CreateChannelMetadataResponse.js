@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateChannelMetadataResponse model module.
  * @module model/CreateChannelMetadataResponse
- * @version 0.0.14
- */var CreateChannelMetadataResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var CreateChannelMetadataResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>CreateChannelMetadataResponse</code>.
    * @alias module:model/CreateChannelMetadataResponse
@@ -57,9 +58,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return CreateChannelMetadataResponse;
-}(); /**
-      * @member {Object.<String, String>} metadata
-      */
+}();
+/**
+ * @member {Object.<String, String>} metadata
+ */
 CreateChannelMetadataResponse.prototype['metadata'] = undefined;
 
 /**

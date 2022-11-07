@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddEmojisResponse model module.
  * @module model/AddEmojisResponse
- * @version 0.0.14
- */var AddEmojisResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddEmojisResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddEmojisResponse</code>.
    * @alias module:model/AddEmojisResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddEmojisResponse;
-}(); /**
-      * @member {Array.<module:model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner>} emojis
-      */
+}();
+/**
+ * @member {Array.<module:model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInnerEmojisInner>} emojis
+ */
 AddEmojisResponse.prototype['emojis'] = undefined;
 var _default = AddEmojisResponse;
 exports["default"] = _default;

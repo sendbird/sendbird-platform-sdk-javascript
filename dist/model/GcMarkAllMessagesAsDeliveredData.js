@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcMarkAllMessagesAsDeliveredData model module.
  * @module model/GcMarkAllMessagesAsDeliveredData
- * @version 0.0.14
- */var GcMarkAllMessagesAsDeliveredData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcMarkAllMessagesAsDeliveredData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcMarkAllMessagesAsDeliveredData</code>.
    * @alias module:model/GcMarkAllMessagesAsDeliveredData
@@ -65,10 +66,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcMarkAllMessagesAsDeliveredData;
-}(); /**
-      * Specifies the unique ID of your application.
-      * @member {String} application_id
-      */
+}();
+/**
+ * Specifies the unique ID of your application.
+ * @member {String} application_id
+ */
 GcMarkAllMessagesAsDeliveredData.prototype['application_id'] = undefined;
 
 /**

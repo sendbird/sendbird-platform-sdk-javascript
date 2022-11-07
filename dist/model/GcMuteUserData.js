@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcMuteUserData model module.
  * @module model/GcMuteUserData
- * @version 0.0.14
- */var GcMuteUserData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcMuteUserData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcMuteUserData</code>.
    * @alias module:model/GcMuteUserData
@@ -70,10 +71,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcMuteUserData;
-}(); /**
-      * Specifies the URL of the target channel.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the target channel.
+ * @member {String} channel_url
+ */
 GcMuteUserData.prototype['channel_url'] = undefined;
 
 /**

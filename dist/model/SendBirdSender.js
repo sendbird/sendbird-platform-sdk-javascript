@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdSender model module.
  * @module model/SendBirdSender
- * @version 0.0.14
- */var SendBirdSender = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdSender = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdSender</code>.
    * @alias module:model/SendBirdSender
@@ -88,9 +89,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdSender;
-}(); /**
-      * @member {String} connection_status
-      */
+}();
+/**
+ * @member {String} connection_status
+ */
 SendBirdSender.prototype['connection_status'] = undefined;
 
 /**

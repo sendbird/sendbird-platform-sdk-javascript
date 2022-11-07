@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateEmojiUrlByKeyData model module.
  * @module model/UpdateEmojiUrlByKeyData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class UpdateEmojiUrlByKeyData {
     /**

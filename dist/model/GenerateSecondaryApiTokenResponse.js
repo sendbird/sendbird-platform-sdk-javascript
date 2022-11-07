@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GenerateSecondaryApiTokenResponse model module.
  * @module model/GenerateSecondaryApiTokenResponse
- * @version 0.0.14
- */var GenerateSecondaryApiTokenResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GenerateSecondaryApiTokenResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GenerateSecondaryApiTokenResponse</code>.
    * @alias module:model/GenerateSecondaryApiTokenResponse
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GenerateSecondaryApiTokenResponse;
-}(); /**
-      * @member {String} token
-      */
+}();
+/**
+ * @member {String} token
+ */
 GenerateSecondaryApiTokenResponse.prototype['token'] = undefined;
 
 /**

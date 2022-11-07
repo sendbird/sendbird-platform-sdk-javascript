@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcListParticipantsResponse model module.
  * @module model/OcListParticipantsResponse
- * @version 0.0.14
- */var OcListParticipantsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcListParticipantsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcListParticipantsResponse</code>.
    * @alias module:model/OcListParticipantsResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcListParticipantsResponse;
-}(); /**
-      * @member {Array.<module:model/SendBirdUser>} participants
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdUser>} participants
+ */
 OcListParticipantsResponse.prototype['participants'] = undefined;
 
 /**

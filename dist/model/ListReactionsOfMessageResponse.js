@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListReactionsOfMessageResponse model module.
  * @module model/ListReactionsOfMessageResponse
- * @version 0.0.14
- */var ListReactionsOfMessageResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListReactionsOfMessageResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListReactionsOfMessageResponse</code>.
    * @alias module:model/ListReactionsOfMessageResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListReactionsOfMessageResponse;
-}(); /**
-      * @member {Array.<String>} key
-      */
+}();
+/**
+ * @member {Array.<String>} key
+ */
 ListReactionsOfMessageResponse.prototype['key'] = undefined;
 var _default = ListReactionsOfMessageResponse;
 exports["default"] = _default;

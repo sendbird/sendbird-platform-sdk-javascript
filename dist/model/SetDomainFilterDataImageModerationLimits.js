@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SetDomainFilterDataImageModerationLimits model module.
  * @module model/SetDomainFilterDataImageModerationLimits
- * @version 0.0.14
- */var SetDomainFilterDataImageModerationLimits = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SetDomainFilterDataImageModerationLimits = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SetDomainFilterDataImageModerationLimits</code>.
    * @alias module:model/SetDomainFilterDataImageModerationLimits
@@ -64,9 +65,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SetDomainFilterDataImageModerationLimits;
-}(); /**
-      * @member {Number} adult
-      */
+}();
+/**
+ * @member {Number} adult
+ */
 SetDomainFilterDataImageModerationLimits.prototype['adult'] = undefined;
 
 /**

@@ -16,8 +16,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdFileMessageParams model module.
  * @module model/SendBirdFileMessageParams
- * @version 0.0.14
- */var SendBirdFileMessageParams = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdFileMessageParams = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdFileMessageParams</code>.
    * @alias module:model/SendBirdFileMessageParams
@@ -104,9 +105,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdFileMessageParams;
-}(); /**
-      * @member {module:model/SendBirdAppleCriticalAlertOptions} apple_critical_alert_options
-      */
+}();
+/**
+ * @member {module:model/SendBirdAppleCriticalAlertOptions} apple_critical_alert_options
+ */
 SendBirdFileMessageParams.prototype['apple_critical_alert_options'] = undefined;
 
 /**

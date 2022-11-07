@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListSecondaryApiTokensResponse model module.
  * @module model/ListSecondaryApiTokensResponse
- * @version 0.0.14
- */var ListSecondaryApiTokensResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListSecondaryApiTokensResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListSecondaryApiTokensResponse</code>.
    * @alias module:model/ListSecondaryApiTokensResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListSecondaryApiTokensResponse;
-}(); /**
-      * @member {Array.<module:model/ListSecondaryApiTokensResponseApiTokensInner>} api_tokens
-      */
+}();
+/**
+ * @member {Array.<module:model/ListSecondaryApiTokensResponseApiTokensInner>} api_tokens
+ */
 ListSecondaryApiTokensResponse.prototype['api_tokens'] = undefined;
 var _default = ListSecondaryApiTokensResponse;
 exports["default"] = _default;

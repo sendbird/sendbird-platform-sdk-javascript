@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportMessageByIdData model module.
  * @module model/ReportMessageByIdData
- * @version 0.0.14
- */var ReportMessageByIdData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ReportMessageByIdData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ReportMessageByIdData</code>.
    * @alias module:model/ReportMessageByIdData
@@ -75,10 +76,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ReportMessageByIdData;
-}(); /**
-      * Specifies the type of the channel. Either open_channels or group_channels.
-      * @member {String} channel_type
-      */
+}();
+/**
+ * Specifies the type of the channel. Either open_channels or group_channels.
+ * @member {String} channel_type
+ */
 ReportMessageByIdData.prototype['channel_type'] = undefined;
 
 /**

@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner model module.
  * @module model/ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner
- * @version 0.0.14
- */var ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner</code>.
    * @alias module:model/ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner
@@ -59,9 +60,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner;
-}(); /**
-      * @member {String} template_name
-      */
+}();
+/**
+ * @member {String} template_name
+ */
 ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner.prototype['template_name'] = undefined;
 
 /**

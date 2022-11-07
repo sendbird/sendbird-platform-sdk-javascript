@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RemovePushConfigurationByIdResponse model module.
  * @module model/RemovePushConfigurationByIdResponse
- * @version 0.0.14
- */var RemovePushConfigurationByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var RemovePushConfigurationByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RemovePushConfigurationByIdResponse</code>.
    * @alias module:model/RemovePushConfigurationByIdResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return RemovePushConfigurationByIdResponse;
-}(); /**
-      * @member {Array.<String>} push_configurations
-      */
+}();
+/**
+ * @member {Array.<String>} push_configurations
+ */
 RemovePushConfigurationByIdResponse.prototype['push_configurations'] = undefined;
 var _default = RemovePushConfigurationByIdResponse;
 exports["default"] = _default;

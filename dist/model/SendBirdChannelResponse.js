@@ -22,8 +22,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdChannelResponse model module.
  * @module model/SendBirdChannelResponse
- * @version 0.0.14
- */var SendBirdChannelResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdChannelResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdChannelResponse</code>.
    * @alias module:model/SendBirdChannelResponse
@@ -203,9 +204,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdChannelResponse;
-}(); /**
-      * @member {String} channel_url
-      */
+}();
+/**
+ * @member {String} channel_url
+ */
 SendBirdChannelResponse.prototype['channel_url'] = undefined;
 
 /**

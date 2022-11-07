@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateEmojiCategoryUrlByIdData model module.
  * @module model/UpdateEmojiCategoryUrlByIdData
- * @version 0.0.14
- */var UpdateEmojiCategoryUrlByIdData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateEmojiCategoryUrlByIdData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateEmojiCategoryUrlByIdData</code>.
    * @alias module:model/UpdateEmojiCategoryUrlByIdData
@@ -60,10 +61,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateEmojiCategoryUrlByIdData;
-}(); /**
-      * Specifies the unique ID of the emoji category to update.
-      * @member {Number} emoji_category_id
-      */
+}();
+/**
+ * Specifies the unique ID of the emoji category to update.
+ * @member {Number} emoji_category_id
+ */
 UpdateEmojiCategoryUrlByIdData.prototype['emoji_category_id'] = undefined;
 
 /**

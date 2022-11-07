@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcUpdateBanByIdResponse model module.
  * @module model/GcUpdateBanByIdResponse
- * @version 0.0.14
- */var GcUpdateBanByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcUpdateBanByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcUpdateBanByIdResponse</code>.
    * @alias module:model/GcUpdateBanByIdResponse
@@ -62,9 +63,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcUpdateBanByIdResponse;
-}(); /**
-      * @member {module:model/SendBirdUser} user
-      */
+}();
+/**
+ * @member {module:model/SendBirdUser} user
+ */
 GcUpdateBanByIdResponse.prototype['user'] = undefined;
 
 /**

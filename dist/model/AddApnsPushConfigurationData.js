@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddApnsPushConfigurationData model module.
  * @module model/AddApnsPushConfigurationData
- * @version 0.0.14
- */var AddApnsPushConfigurationData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddApnsPushConfigurationData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddApnsPushConfigurationData</code>.
    * @alias module:model/AddApnsPushConfigurationData
@@ -90,10 +91,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddApnsPushConfigurationData;
-}(); /**
-      * In a form of the `multipart/form-data` content type, specifies a [.p12](/docs/chat/v3/ios/guides/push-notifications#2-step-3-export-a-p12-file-and-upload-to-sendbird-dashboard) file of which type is either development or production. Sendbird server scans the content of the file, finds out the certificate type, and then registers the file as the corresponding type. If you upload a wrong file, you will receive an error.
-      * @member {File} apns_cert
-      */
+}();
+/**
+ * In a form of the `multipart/form-data` content type, specifies a [.p12](/docs/chat/v3/ios/guides/push-notifications#2-step-3-export-a-p12-file-and-upload-to-sendbird-dashboard) file of which type is either development or production. Sendbird server scans the content of the file, finds out the certificate type, and then registers the file as the corresponding type. If you upload a wrong file, you will receive an error.
+ * @member {File} apns_cert
+ */
 AddApnsPushConfigurationData.prototype['apns_cert'] = undefined;
 
 /**

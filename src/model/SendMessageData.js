@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendMessageData model module.
  * @module model/SendMessageData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class SendMessageData {
     /**
@@ -103,6 +103,33 @@ class SendMessageData {
             }
             if (data.hasOwnProperty('volume')) {
                 obj['volume'] = ApiClient.convertToType(data['volume'], 'Number');
+            }
+            if (data.hasOwnProperty('url')) {
+                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            }
+            if (data.hasOwnProperty('file')) {
+                obj['file'] = ApiClient.convertToType(data['file'], 'String');
+            }
+            if (data.hasOwnProperty('file_name')) {
+                obj['file_name'] = ApiClient.convertToType(data['file_name'], 'String');
+            }
+            if (data.hasOwnProperty('file_size')) {
+                obj['file_size'] = ApiClient.convertToType(data['file_size'], 'Number');
+            }
+            if (data.hasOwnProperty('file_type')) {
+                obj['file_type'] = ApiClient.convertToType(data['file_type'], 'String');
+            }
+            if (data.hasOwnProperty('thumbnails')) {
+                obj['thumbnails'] = ApiClient.convertToType(data['thumbnails'], ['String']);
+            }
+            if (data.hasOwnProperty('thumbnail1')) {
+                obj['thumbnail1'] = ApiClient.convertToType(data['thumbnail1'], 'String');
+            }
+            if (data.hasOwnProperty('thumbnail2')) {
+                obj['thumbnail2'] = ApiClient.convertToType(data['thumbnail2'], 'String');
+            }
+            if (data.hasOwnProperty('thumbnail3')) {
+                obj['thumbnail3'] = ApiClient.convertToType(data['thumbnail3'], 'String');
             }
         }
         return obj;
@@ -212,6 +239,51 @@ SendMessageData.prototype['sound'] = undefined;
  * @member {Number} volume
  */
 SendMessageData.prototype['volume'] = undefined;
+
+/**
+ * @member {String} url
+ */
+SendMessageData.prototype['url'] = undefined;
+
+/**
+ * @member {String} file
+ */
+SendMessageData.prototype['file'] = undefined;
+
+/**
+ * @member {String} file_name
+ */
+SendMessageData.prototype['file_name'] = undefined;
+
+/**
+ * @member {Number} file_size
+ */
+SendMessageData.prototype['file_size'] = undefined;
+
+/**
+ * @member {String} file_type
+ */
+SendMessageData.prototype['file_type'] = undefined;
+
+/**
+ * @member {Array.<String>} thumbnails
+ */
+SendMessageData.prototype['thumbnails'] = undefined;
+
+/**
+ * @member {String} thumbnail1
+ */
+SendMessageData.prototype['thumbnail1'] = undefined;
+
+/**
+ * @member {String} thumbnail2
+ */
+SendMessageData.prototype['thumbnail2'] = undefined;
+
+/**
+ * @member {String} thumbnail3
+ */
+SendMessageData.prototype['thumbnail3'] = undefined;
 
 
 

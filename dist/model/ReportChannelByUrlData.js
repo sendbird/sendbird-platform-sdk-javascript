@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportChannelByUrlData model module.
  * @module model/ReportChannelByUrlData
- * @version 0.0.14
- */var ReportChannelByUrlData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ReportChannelByUrlData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ReportChannelByUrlData</code>.
    * @alias module:model/ReportChannelByUrlData
@@ -67,10 +68,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ReportChannelByUrlData;
-}(); /**
-      * Specifies the type of the channel. Either open_channels or group_channels.
-      * @member {String} channel_type
-      */
+}();
+/**
+ * Specifies the type of the channel. Either open_channels or group_channels.
+ * @member {String} channel_type
+ */
 ReportChannelByUrlData.prototype['channel_type'] = undefined;
 
 /**

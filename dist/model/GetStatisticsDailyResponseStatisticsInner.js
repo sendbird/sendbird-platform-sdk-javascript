@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GetStatisticsDailyResponseStatisticsInner model module.
  * @module model/GetStatisticsDailyResponseStatisticsInner
- * @version 0.0.14
- */var GetStatisticsDailyResponseStatisticsInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GetStatisticsDailyResponseStatisticsInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GetStatisticsDailyResponseStatisticsInner</code>.
    * @alias module:model/GetStatisticsDailyResponseStatisticsInner
@@ -82,9 +83,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GetStatisticsDailyResponseStatisticsInner;
-}(); /**
-      * @member {String} date_range
-      */
+}();
+/**
+ * @member {String} date_range
+ */
 GetStatisticsDailyResponseStatisticsInner.prototype['date_range'] = undefined;
 
 /**

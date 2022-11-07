@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMessagesResponseMessagesInnerOgTagOgImage model module.
  * @module model/ListMessagesResponseMessagesInnerOgTagOgImage
- * @version 0.0.14
- */var ListMessagesResponseMessagesInnerOgTagOgImage = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListMessagesResponseMessagesInnerOgTagOgImage = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListMessagesResponseMessagesInnerOgTagOgImage</code>.
    * @alias module:model/ListMessagesResponseMessagesInnerOgTagOgImage
@@ -61,9 +62,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListMessagesResponseMessagesInnerOgTagOgImage;
-}(); /**
-      * @member {String} url
-      */
+}();
+/**
+ * @member {String} url
+ */
 ListMessagesResponseMessagesInnerOgTagOgImage.prototype['url'] = undefined;
 
 /**

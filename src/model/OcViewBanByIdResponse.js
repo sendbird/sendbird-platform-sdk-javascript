@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The OcViewBanByIdResponse model module.
  * @module model/OcViewBanByIdResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class OcViewBanByIdResponse {
     /**

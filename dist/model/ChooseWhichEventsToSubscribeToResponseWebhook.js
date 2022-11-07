@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChooseWhichEventsToSubscribeToResponseWebhook model module.
  * @module model/ChooseWhichEventsToSubscribeToResponseWebhook
- * @version 0.0.14
- */var ChooseWhichEventsToSubscribeToResponseWebhook = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ChooseWhichEventsToSubscribeToResponseWebhook = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ChooseWhichEventsToSubscribeToResponseWebhook</code>.
    * @alias module:model/ChooseWhichEventsToSubscribeToResponseWebhook
@@ -64,9 +65,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ChooseWhichEventsToSubscribeToResponseWebhook;
-}(); /**
-      * @member {Boolean} enabled
-      */
+}();
+/**
+ * @member {Boolean} enabled
+ */
 ChooseWhichEventsToSubscribeToResponseWebhook.prototype['enabled'] = undefined;
 
 /**

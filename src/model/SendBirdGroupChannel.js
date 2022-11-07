@@ -24,7 +24,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The SendBirdGroupChannel model module.
  * @module model/SendBirdGroupChannel
- * @version 0.0.14
+ * @version 0.0.16
  */
 class SendBirdGroupChannel {
     /**

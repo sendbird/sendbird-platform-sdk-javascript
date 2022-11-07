@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcJoinChannelData model module.
  * @module model/GcJoinChannelData
- * @version 0.0.14
- */var GcJoinChannelData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcJoinChannelData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcJoinChannelData</code>.
    * @alias module:model/GcJoinChannelData
@@ -65,10 +66,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcJoinChannelData;
-}(); /**
-      * Specifies the URL of the channel to join.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the channel to join.
+ * @member {String} channel_url
+ */
 GcJoinChannelData.prototype['channel_url'] = undefined;
 
 /**

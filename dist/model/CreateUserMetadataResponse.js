@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateUserMetadataResponse model module.
  * @module model/CreateUserMetadataResponse
- * @version 0.0.14
- */var CreateUserMetadataResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var CreateUserMetadataResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>CreateUserMetadataResponse</code>.
    * @alias module:model/CreateUserMetadataResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return CreateUserMetadataResponse;
-}(); /**
-      * @member {String} anyOf
-      */
+}();
+/**
+ * @member {String} anyOf
+ */
 CreateUserMetadataResponse.prototype['anyOf'] = undefined;
 var _default = CreateUserMetadataResponse;
 exports["default"] = _default;

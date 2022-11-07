@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcUpdateChannelByUrlData model module.
  * @module model/GcUpdateChannelByUrlData
- * @version 0.0.14
- */var GcUpdateChannelByUrlData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcUpdateChannelByUrlData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcUpdateChannelByUrlData</code>.
    * @alias module:model/GcUpdateChannelByUrlData
@@ -100,10 +101,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcUpdateChannelByUrlData;
-}(); /**
-      * Specifies the URL of the channel to update.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the channel to update.
+ * @member {String} channel_url
+ */
 GcUpdateChannelByUrlData.prototype['channel_url'] = undefined;
 
 /**

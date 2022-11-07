@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListRegistrationOrDeviceTokensResponse model module.
  * @module model/ListRegistrationOrDeviceTokensResponse
- * @version 0.0.14
- */var ListRegistrationOrDeviceTokensResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListRegistrationOrDeviceTokensResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListRegistrationOrDeviceTokensResponse</code>.
    * @alias module:model/ListRegistrationOrDeviceTokensResponse
@@ -62,9 +63,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListRegistrationOrDeviceTokensResponse;
-}(); /**
-      * @member {Array.<String>} token
-      */
+}();
+/**
+ * @member {Array.<String>} token
+ */
 ListRegistrationOrDeviceTokensResponse.prototype['token'] = undefined;
 
 /**

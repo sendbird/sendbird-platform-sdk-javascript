@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateUserData model module.
  * @module model/CreateUserData
- * @version 0.0.14
- */var CreateUserData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var CreateUserData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>CreateUserData</code>.
    * @alias module:model/CreateUserData
@@ -77,10 +78,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return CreateUserData;
-}(); /**
-      * Specifies a user's unique ID, which is used to sign into the Sendbird service. The length is limited to 80 characters.<br /><br /> Do not use PII (Personally Identifiable Information) of your service, such as user email address, legal name or phone number.
-      * @member {String} user_id
-      */
+}();
+/**
+ * Specifies a user's unique ID, which is used to sign into the Sendbird service. The length is limited to 80 characters.<br /><br /> Do not use PII (Personally Identifiable Information) of your service, such as user email address, legal name or phone number.
+ * @member {String} user_id
+ */
 CreateUserData.prototype['user_id'] = undefined;
 
 /**

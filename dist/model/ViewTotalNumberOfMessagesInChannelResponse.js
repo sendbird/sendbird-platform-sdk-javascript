@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewTotalNumberOfMessagesInChannelResponse model module.
  * @module model/ViewTotalNumberOfMessagesInChannelResponse
- * @version 0.0.14
- */var ViewTotalNumberOfMessagesInChannelResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewTotalNumberOfMessagesInChannelResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewTotalNumberOfMessagesInChannelResponse</code>.
    * @alias module:model/ViewTotalNumberOfMessagesInChannelResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewTotalNumberOfMessagesInChannelResponse;
-}(); /**
-      * @member {Number} total
-      */
+}();
+/**
+ * @member {Number} total
+ */
 ViewTotalNumberOfMessagesInChannelResponse.prototype['total'] = undefined;
 var _default = ViewTotalNumberOfMessagesInChannelResponse;
 exports["default"] = _default;

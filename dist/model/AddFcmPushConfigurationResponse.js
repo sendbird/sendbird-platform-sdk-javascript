@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddFcmPushConfigurationResponse model module.
  * @module model/AddFcmPushConfigurationResponse
- * @version 0.0.14
- */var AddFcmPushConfigurationResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddFcmPushConfigurationResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddFcmPushConfigurationResponse</code>.
    * @alias module:model/AddFcmPushConfigurationResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddFcmPushConfigurationResponse;
-}(); /**
-      * @member {Array.<module:model/AddFcmPushConfigurationResponsePushConfigurationsInner>} push_configurations
-      */
+}();
+/**
+ * @member {Array.<module:model/AddFcmPushConfigurationResponsePushConfigurationsInner>} push_configurations
+ */
 AddFcmPushConfigurationResponse.prototype['push_configurations'] = undefined;
 var _default = AddFcmPushConfigurationResponse;
 exports["default"] = _default;

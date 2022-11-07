@@ -14,6 +14,7 @@ var _AddHmsPushConfigurationResponse = _interopRequireDefault(require("../model/
 var _AddIpToWhitelistData = _interopRequireDefault(require("../model/AddIpToWhitelistData"));
 var _AddIpToWhitelistResponse = _interopRequireDefault(require("../model/AddIpToWhitelistResponse"));
 var _BanUsersInChannelsWithCustomChannelTypeData = _interopRequireDefault(require("../model/BanUsersInChannelsWithCustomChannelTypeData"));
+var _ConfigureAutoEventData = _interopRequireDefault(require("../model/ConfigureAutoEventData"));
 var _CustomTypeListBannedUsersResponse = _interopRequireDefault(require("../model/CustomTypeListBannedUsersResponse"));
 var _DeleteAllowedIpsFromWhitelistResponse = _interopRequireDefault(require("../model/DeleteAllowedIpsFromWhitelistResponse"));
 var _DeleteApnsCertificateByIdResponse = _interopRequireDefault(require("../model/DeleteApnsCertificateByIdResponse"));
@@ -27,6 +28,7 @@ var _MuteUsersInChannelsWithCustomChannelTypeData = _interopRequireDefault(requi
 var _RemovePushConfigurationByIdResponse = _interopRequireDefault(require("../model/RemovePushConfigurationByIdResponse"));
 var _RetrieveIpWhitelistResponse = _interopRequireDefault(require("../model/RetrieveIpWhitelistResponse"));
 var _RevokeSecondaryApiTokenByTokenResponse = _interopRequireDefault(require("../model/RevokeSecondaryApiTokenByTokenResponse"));
+var _SendBirdAutoEventMessageSettings = _interopRequireDefault(require("../model/SendBirdAutoEventMessageSettings"));
 var _SendBirdChannelResponse = _interopRequireDefault(require("../model/SendBirdChannelResponse"));
 var _SetDomainFilterData = _interopRequireDefault(require("../model/SetDomainFilterData"));
 var _UpdateApnsPushConfigurationByIdData = _interopRequireDefault(require("../model/UpdateApnsPushConfigurationByIdData"));
@@ -50,8 +52,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Application service.
 * @module api/ApplicationApi
-* @version 0.0.14
-*/var ApplicationApi = /*#__PURE__*/function () {
+* @version 0.0.16
+*/
+var ApplicationApi = /*#__PURE__*/function () {
   /**
   * Constructs a new ApplicationApi. 
   * @alias module:api/ApplicationApi
@@ -303,6 +306,52 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
 
     /**
+     * Configure auto event message settings
+     * ## Configure auto event message settings  Determines whether to automatically send event messages to group channels when events take place in an application. You can choose which auto event message to receive on the Sendbird Dashboard  https://sendbird.com/docs/chat/v3/platform-api/application/managing-auto-event-messages/configure-auto-event-message-settings ----------------------------
+     * @param {String} apiToken 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ConfigureAutoEventData} opts.configureAutoEventData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdAutoEventMessageSettings} and HTTP response
+     */
+  }, {
+    key: "configureAutoEventMessagesWithHttpInfo",
+    value: function configureAutoEventMessagesWithHttpInfo(apiToken, opts) {
+      opts = opts || {};
+      var postBody = opts['configureAutoEventData'];
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling configureAutoEventMessages");
+      }
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Api-Token': apiToken
+      };
+      var formParams = {};
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _SendBirdAutoEventMessageSettings["default"];
+      return this.apiClient.callApi('/v3/applications/settings/auto_event_message', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+
+    /**
+     * Configure auto event message settings
+     * ## Configure auto event message settings  Determines whether to automatically send event messages to group channels when events take place in an application. You can choose which auto event message to receive on the Sendbird Dashboard  https://sendbird.com/docs/chat/v3/platform-api/application/managing-auto-event-messages/configure-auto-event-message-settings ----------------------------
+     * @param {String} apiToken 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ConfigureAutoEventData} opts.configureAutoEventData 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdAutoEventMessageSettings}
+     */
+  }, {
+    key: "configureAutoEventMessages",
+    value: function configureAutoEventMessages(apiToken, opts) {
+      return this.configureAutoEventMessagesWithHttpInfo(apiToken, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
      * Delete allowed IPs from a whitelist
      * ## Delete allowed IPs from a whitelist  Deletes allowed IPs from the whitelist by specifying their IP addresses or ranges. You can configure the IP whitelist under Settings > Security > Allowed IPs in the [Sendbird Dashboard](https://dashboard.sendbird.com).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-delete-allowed-ips-from-a-whitelist
      * @param {String} apiToken 
@@ -442,6 +491,47 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     key: "generateSecondaryApiToken",
     value: function generateSecondaryApiToken(apiToken, opts) {
       return this.generateSecondaryApiTokenWithHttpInfo(apiToken, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * List auto event messages
+     * ## List auto event messages  Retrieves a list of auto event messages that are sent in a specified application and indicates which ones are in use. Auto event messages are Admin messages that are automatically generated when a specific event occurs.  https://sendbird.com/docs/chat/v3/platform-api/application/managing-auto-event-messages/list-auto-event-messages ----------------------------
+     * @param {String} apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdAutoEventMessageSettings} and HTTP response
+     */
+  }, {
+    key: "listAutoEventMessagesWithHttpInfo",
+    value: function listAutoEventMessagesWithHttpInfo(apiToken) {
+      var postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling listAutoEventMessages");
+      }
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {
+        'Api-Token': apiToken
+      };
+      var formParams = {};
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _SendBirdAutoEventMessageSettings["default"];
+      return this.apiClient.callApi('/v3/applications/settings/auto_event_message', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+
+    /**
+     * List auto event messages
+     * ## List auto event messages  Retrieves a list of auto event messages that are sent in a specified application and indicates which ones are in use. Auto event messages are Admin messages that are automatically generated when a specific event occurs.  https://sendbird.com/docs/chat/v3/platform-api/application/managing-auto-event-messages/list-auto-event-messages ----------------------------
+     * @param {String} apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdAutoEventMessageSettings}
+     */
+  }, {
+    key: "listAutoEventMessages",
+    value: function listAutoEventMessages(apiToken) {
+      return this.listAutoEventMessagesWithHttpInfo(apiToken).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

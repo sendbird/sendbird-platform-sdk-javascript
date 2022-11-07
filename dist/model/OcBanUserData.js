@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcBanUserData model module.
  * @module model/OcBanUserData
- * @version 0.0.14
- */var OcBanUserData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcBanUserData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcBanUserData</code>.
    * @alias module:model/OcBanUserData
@@ -75,10 +76,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcBanUserData;
-}(); /**
-      * Specifies the URL of the channel where to ban the specified user.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the channel where to ban the specified user.
+ * @member {String} channel_url
+ */
 OcBanUserData.prototype['channel_url'] = undefined;
 
 /**

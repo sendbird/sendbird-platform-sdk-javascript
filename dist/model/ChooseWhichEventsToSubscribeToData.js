@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChooseWhichEventsToSubscribeToData model module.
  * @module model/ChooseWhichEventsToSubscribeToData
- * @version 0.0.14
- */var ChooseWhichEventsToSubscribeToData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ChooseWhichEventsToSubscribeToData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ChooseWhichEventsToSubscribeToData</code>.
    * @alias module:model/ChooseWhichEventsToSubscribeToData
@@ -66,10 +67,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ChooseWhichEventsToSubscribeToData;
-}(); /**
-      * Determines whether webhooks are turned on in your Sendbird application or not. (Default: false)
-      * @member {Boolean} enabled
-      */
+}();
+/**
+ * Determines whether webhooks are turned on in your Sendbird application or not. (Default: false)
+ * @member {Boolean} enabled
+ */
 ChooseWhichEventsToSubscribeToData.prototype['enabled'] = undefined;
 
 /**

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdGroupChannelSmsFallback model module.
  * @module model/SendBirdGroupChannelSmsFallback
- * @version 0.0.14
- */var SendBirdGroupChannelSmsFallback = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdGroupChannelSmsFallback = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdGroupChannelSmsFallback</code>.
    * @alias module:model/SendBirdGroupChannelSmsFallback
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdGroupChannelSmsFallback;
-}(); /**
-      * @member {Number} wait_seconds
-      */
+}();
+/**
+ * @member {Number} wait_seconds
+ */
 SendBirdGroupChannelSmsFallback.prototype['wait_seconds'] = undefined;
 
 /**

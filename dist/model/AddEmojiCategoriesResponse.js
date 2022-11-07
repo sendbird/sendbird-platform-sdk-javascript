@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddEmojiCategoriesResponse model module.
  * @module model/AddEmojiCategoriesResponse
- * @version 0.0.14
- */var AddEmojiCategoriesResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddEmojiCategoriesResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddEmojiCategoriesResponse</code>.
    * @alias module:model/AddEmojiCategoriesResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddEmojiCategoriesResponse;
-}(); /**
-      * @member {Array.<module:model/AddEmojiCategoriesResponseEmojiCategoriesInner>} emoji_categories
-      */
+}();
+/**
+ * @member {Array.<module:model/AddEmojiCategoriesResponseEmojiCategoriesInner>} emoji_categories
+ */
 AddEmojiCategoriesResponse.prototype['emoji_categories'] = undefined;
 var _default = AddEmojiCategoriesResponse;
 exports["default"] = _default;

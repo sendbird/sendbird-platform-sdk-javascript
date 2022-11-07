@@ -15,8 +15,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListReportsOnMessageByIdResponseReportLogsInner model module.
  * @module model/ListReportsOnMessageByIdResponseReportLogsInner
- * @version 0.0.14
- */var ListReportsOnMessageByIdResponseReportLogsInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListReportsOnMessageByIdResponseReportLogsInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListReportsOnMessageByIdResponseReportLogsInner</code>.
    * @alias module:model/ListReportsOnMessageByIdResponseReportLogsInner
@@ -76,9 +77,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListReportsOnMessageByIdResponseReportLogsInner;
-}(); /**
-      * @member {String} report_type
-      */
+}();
+/**
+ * @member {String} report_type
+ */
 ListReportsOnMessageByIdResponseReportLogsInner.prototype['report_type'] = undefined;
 
 /**

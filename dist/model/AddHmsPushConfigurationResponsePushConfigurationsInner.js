@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddHmsPushConfigurationResponsePushConfigurationsInner model module.
  * @module model/AddHmsPushConfigurationResponsePushConfigurationsInner
- * @version 0.0.14
- */var AddHmsPushConfigurationResponsePushConfigurationsInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddHmsPushConfigurationResponsePushConfigurationsInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddHmsPushConfigurationResponsePushConfigurationsInner</code>.
    * @alias module:model/AddHmsPushConfigurationResponsePushConfigurationsInner
@@ -64,9 +65,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddHmsPushConfigurationResponsePushConfigurationsInner;
-}(); /**
-      * @member {String} id
-      */
+}();
+/**
+ * @member {String} id
+ */
 AddHmsPushConfigurationResponsePushConfigurationsInner.prototype['id'] = undefined;
 
 /**

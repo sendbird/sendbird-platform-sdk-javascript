@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The JoinChannelsData model module.
  * @module model/JoinChannelsData
- * @version 0.0.14
- */var JoinChannelsData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var JoinChannelsData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>JoinChannelsData</code>.
    * @alias module:model/JoinChannelsData
@@ -60,10 +61,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return JoinChannelsData;
-}(); /**
-      * Specifies the ID of the bot to join the channels.
-      * @member {String} bot_userid
-      */
+}();
+/**
+ * Specifies the ID of the bot to join the channels.
+ * @member {String} bot_userid
+ */
 JoinChannelsData.prototype['bot_userid'] = undefined;
 
 /**

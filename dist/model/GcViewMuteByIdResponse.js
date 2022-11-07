@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcViewMuteByIdResponse model module.
  * @module model/GcViewMuteByIdResponse
- * @version 0.0.14
- */var GcViewMuteByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcViewMuteByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcViewMuteByIdResponse</code>.
    * @alias module:model/GcViewMuteByIdResponse
@@ -64,9 +65,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcViewMuteByIdResponse;
-}(); /**
-      * @member {Boolean} is_muted
-      */
+}();
+/**
+ * @member {Boolean} is_muted
+ */
 GcViewMuteByIdResponse.prototype['is_muted'] = undefined;
 
 /**

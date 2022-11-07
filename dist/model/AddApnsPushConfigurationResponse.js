@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddApnsPushConfigurationResponse model module.
  * @module model/AddApnsPushConfigurationResponse
- * @version 0.0.14
- */var AddApnsPushConfigurationResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddApnsPushConfigurationResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddApnsPushConfigurationResponse</code>.
    * @alias module:model/AddApnsPushConfigurationResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddApnsPushConfigurationResponse;
-}(); /**
-      * @member {Array.<module:model/AddApnsPushConfigurationResponsePushConfigurationsInner>} push_configurations
-      */
+}();
+/**
+ * @member {Array.<module:model/AddApnsPushConfigurationResponsePushConfigurationsInner>} push_configurations
+ */
 AddApnsPushConfigurationResponse.prototype['push_configurations'] = undefined;
 var _default = AddApnsPushConfigurationResponse;
 exports["default"] = _default;

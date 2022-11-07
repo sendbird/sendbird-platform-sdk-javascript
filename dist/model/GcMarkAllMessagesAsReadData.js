@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcMarkAllMessagesAsReadData model module.
  * @module model/GcMarkAllMessagesAsReadData
- * @version 0.0.14
- */var GcMarkAllMessagesAsReadData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcMarkAllMessagesAsReadData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcMarkAllMessagesAsReadData</code>.
    * @alias module:model/GcMarkAllMessagesAsReadData
@@ -65,10 +66,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcMarkAllMessagesAsReadData;
-}(); /**
-      * Specifies the URL of the target channel.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the target channel.
+ * @member {String} channel_url
+ */
 GcMarkAllMessagesAsReadData.prototype['channel_url'] = undefined;
 
 /**

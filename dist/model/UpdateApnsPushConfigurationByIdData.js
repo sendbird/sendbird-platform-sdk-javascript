@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateApnsPushConfigurationByIdData model module.
  * @module model/UpdateApnsPushConfigurationByIdData
- * @version 0.0.14
- */var UpdateApnsPushConfigurationByIdData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateApnsPushConfigurationByIdData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateApnsPushConfigurationByIdData</code>.
    * @alias module:model/UpdateApnsPushConfigurationByIdData
@@ -95,10 +96,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateApnsPushConfigurationByIdData;
-}(); /**
-      * Specifies the provider ID of the push configuration to update.
-      * @member {String} provider_id
-      */
+}();
+/**
+ * Specifies the provider ID of the push configuration to update.
+ * @member {String} provider_id
+ */
 UpdateApnsPushConfigurationByIdData.prototype['provider_id'] = undefined;
 
 /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddReactionToAMessageData model module.
  * @module model/AddReactionToAMessageData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class AddReactionToAMessageData {
     /**

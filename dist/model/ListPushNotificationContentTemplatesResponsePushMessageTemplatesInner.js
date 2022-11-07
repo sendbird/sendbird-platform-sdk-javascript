@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner model module.
  * @module model/ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner
- * @version 0.0.14
- */var ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner</code>.
    * @alias module:model/ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner;
-}(); /**
-      * @member {String} template_name
-      */
+}();
+/**
+ * @member {String} template_name
+ */
 ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner.prototype['template_name'] = undefined;
 
 /**

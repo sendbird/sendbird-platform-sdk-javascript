@@ -17,7 +17,7 @@ import GetStatisticsDailyResponseStatisticsInner from './GetStatisticsDailyRespo
 /**
  * The GetStatisticsDailyResponse model module.
  * @module model/GetStatisticsDailyResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class GetStatisticsDailyResponse {
     /**

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LeaveMyGroupChannelsData model module.
  * @module model/LeaveMyGroupChannelsData
- * @version 0.0.14
- */var LeaveMyGroupChannelsData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var LeaveMyGroupChannelsData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>LeaveMyGroupChannelsData</code>.
    * @alias module:model/LeaveMyGroupChannelsData
@@ -55,10 +56,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return LeaveMyGroupChannelsData;
-}(); /**
-      * Specifies the custom channel type to make the user leave joined group channels with the corresponding type.
-      * @member {String} custom_type
-      */
+}();
+/**
+ * Specifies the custom channel type to make the user leave joined group channels with the corresponding type.
+ * @member {String} custom_type
+ */
 LeaveMyGroupChannelsData.prototype['custom_type'] = undefined;
 var _default = LeaveMyGroupChannelsData;
 exports["default"] = _default;

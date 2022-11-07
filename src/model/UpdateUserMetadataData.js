@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateUserMetadataData model module.
  * @module model/UpdateUserMetadataData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class UpdateUserMetadataData {
     /**

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddEmojisData model module.
  * @module model/AddEmojisData
- * @version 0.0.14
- */var AddEmojisData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddEmojisData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddEmojisData</code>.
    * @alias module:model/AddEmojisData
@@ -60,10 +61,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddEmojisData;
-}(); /**
-      * Specifies the unique ID of the emoji category that a list of new emojis belong to.
-      * @member {Number} emoji_category_id
-      */
+}();
+/**
+ * Specifies the unique ID of the emoji category that a list of new emojis belong to.
+ * @member {Number} emoji_category_id
+ */
 AddEmojisData.prototype['emoji_category_id'] = undefined;
 
 /**

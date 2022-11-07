@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateDefaultChannelInvitationPreferenceResponse model module.
  * @module model/UpdateDefaultChannelInvitationPreferenceResponse
- * @version 0.0.14
- */var UpdateDefaultChannelInvitationPreferenceResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateDefaultChannelInvitationPreferenceResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateDefaultChannelInvitationPreferenceResponse</code>.
    * @alias module:model/UpdateDefaultChannelInvitationPreferenceResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateDefaultChannelInvitationPreferenceResponse;
-}(); /**
-      * @member {Boolean} auto_accept
-      */
+}();
+/**
+ * @member {Boolean} auto_accept
+ */
 UpdateDefaultChannelInvitationPreferenceResponse.prototype['auto_accept'] = undefined;
 var _default = UpdateDefaultChannelInvitationPreferenceResponse;
 exports["default"] = _default;

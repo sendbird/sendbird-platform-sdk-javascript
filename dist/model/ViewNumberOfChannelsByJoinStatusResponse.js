@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewNumberOfChannelsByJoinStatusResponse model module.
  * @module model/ViewNumberOfChannelsByJoinStatusResponse
- * @version 0.0.14
- */var ViewNumberOfChannelsByJoinStatusResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewNumberOfChannelsByJoinStatusResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewNumberOfChannelsByJoinStatusResponse</code>.
    * @alias module:model/ViewNumberOfChannelsByJoinStatusResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewNumberOfChannelsByJoinStatusResponse;
-}(); /**
-      * @member {Number} group_channel_count
-      */
+}();
+/**
+ * @member {Number} group_channel_count
+ */
 ViewNumberOfChannelsByJoinStatusResponse.prototype['group_channel_count'] = undefined;
 var _default = ViewNumberOfChannelsByJoinStatusResponse;
 exports["default"] = _default;

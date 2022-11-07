@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcCreateChannelData model module.
  * @module model/OcCreateChannelData
- * @version 0.0.14
- */var OcCreateChannelData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcCreateChannelData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcCreateChannelData</code>.
    * @alias module:model/OcCreateChannelData
@@ -79,10 +80,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcCreateChannelData;
-}(); /**
-      * Specifies the channel topic, or the name of the channel. The length is limited to 191 characters. (Default: open channel)
-      * @member {String} name
-      */
+}();
+/**
+ * Specifies the channel topic, or the name of the channel. The length is limited to 191 characters. (Default: open channel)
+ * @member {String} name
+ */
 OcCreateChannelData.prototype['name'] = undefined;
 
 /**

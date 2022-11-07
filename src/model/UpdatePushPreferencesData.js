@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdatePushPreferencesData model module.
  * @module model/UpdatePushPreferencesData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class UpdatePushPreferencesData {
     /**

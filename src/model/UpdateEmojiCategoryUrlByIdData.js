@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateEmojiCategoryUrlByIdData model module.
  * @module model/UpdateEmojiCategoryUrlByIdData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class UpdateEmojiCategoryUrlByIdData {
     /**

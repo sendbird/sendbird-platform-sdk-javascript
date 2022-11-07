@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GetStatisticsResponse model module.
  * @module model/GetStatisticsResponse
- * @version 0.0.14
- */var GetStatisticsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GetStatisticsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GetStatisticsResponse</code>.
    * @alias module:model/GetStatisticsResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GetStatisticsResponse;
-}(); /**
-      * @member {Array.<module:model/GetStatisticsDailyResponseStatisticsInner>} statistics
-      */
+}();
+/**
+ * @member {Array.<module:model/GetStatisticsDailyResponseStatisticsInner>} statistics
+ */
 GetStatisticsResponse.prototype['statistics'] = undefined;
 
 /**

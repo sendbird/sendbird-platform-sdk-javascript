@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse model module.
  * @module model/RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse
- * @version 0.0.14
- */var RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse</code>.
    * @alias module:model/RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse;
-}(); /**
-      * @member {String} user_id
-      */
+}();
+/**
+ * @member {String} user_id
+ */
 RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse.prototype['user_id'] = undefined;
 var _default = RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse;
 exports["default"] = _default;

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateChannelMetadataData model module.
  * @module model/UpdateChannelMetadataData
- * @version 0.0.14
- */var UpdateChannelMetadataData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateChannelMetadataData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateChannelMetadataData</code>.
    * @alias module:model/UpdateChannelMetadataData
@@ -60,10 +61,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateChannelMetadataData;
-}(); /**
-      * Specifies a `JSON` object which has key-value items to update. A key can't contain a comma (,) and its length is limited to 128 characters. A value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
-      * @member {Object} metadata
-      */
+}();
+/**
+ * Specifies a `JSON` object which has key-value items to update. A key can't contain a comma (,) and its length is limited to 128 characters. A value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
+ * @member {Object} metadata
+ */
 UpdateChannelMetadataData.prototype['metadata'] = undefined;
 
 /**

@@ -213,6 +213,18 @@ Object.defineProperty(exports, "ChooseWhichEventsToSubscribeToResponseWebhook", 
     return _ChooseWhichEventsToSubscribeToResponseWebhook["default"];
   }
 });
+Object.defineProperty(exports, "ConfigureAutoEventData", {
+  enumerable: true,
+  get: function get() {
+    return _ConfigureAutoEventData["default"];
+  }
+});
+Object.defineProperty(exports, "ConfigureAutoEventDataAutoEventMessage", {
+  enumerable: true,
+  get: function get() {
+    return _ConfigureAutoEventDataAutoEventMessage["default"];
+  }
+});
 Object.defineProperty(exports, "CreateBotData", {
   enumerable: true,
   get: function get() {
@@ -1143,6 +1155,12 @@ Object.defineProperty(exports, "ScheduleAnnouncementData", {
     return _ScheduleAnnouncementData["default"];
   }
 });
+Object.defineProperty(exports, "ScheduleAnnouncementDataMessage", {
+  enumerable: true,
+  get: function get() {
+    return _ScheduleAnnouncementDataMessage["default"];
+  }
+});
 Object.defineProperty(exports, "ScheduleAnnouncementResponse", {
   enumerable: true,
   get: function get() {
@@ -1171,6 +1189,12 @@ Object.defineProperty(exports, "SendBirdAppleCriticalAlertOptions", {
   enumerable: true,
   get: function get() {
     return _SendBirdAppleCriticalAlertOptions["default"];
+  }
+});
+Object.defineProperty(exports, "SendBirdAutoEventMessageSettings", {
+  enumerable: true,
+  get: function get() {
+    return _SendBirdAutoEventMessageSettings["default"];
   }
 });
 Object.defineProperty(exports, "SendBirdBaseChannel", {
@@ -1859,6 +1883,8 @@ var _ChoosePushNotificationContentTemplateResponse = _interopRequireDefault(requ
 var _ChooseWhichEventsToSubscribeToData = _interopRequireDefault(require("./model/ChooseWhichEventsToSubscribeToData"));
 var _ChooseWhichEventsToSubscribeToResponse = _interopRequireDefault(require("./model/ChooseWhichEventsToSubscribeToResponse"));
 var _ChooseWhichEventsToSubscribeToResponseWebhook = _interopRequireDefault(require("./model/ChooseWhichEventsToSubscribeToResponseWebhook"));
+var _ConfigureAutoEventData = _interopRequireDefault(require("./model/ConfigureAutoEventData"));
+var _ConfigureAutoEventDataAutoEventMessage = _interopRequireDefault(require("./model/ConfigureAutoEventDataAutoEventMessage"));
 var _CreateBotData = _interopRequireDefault(require("./model/CreateBotData"));
 var _CreateBotResponse = _interopRequireDefault(require("./model/CreateBotResponse"));
 var _CreateBotResponseBot = _interopRequireDefault(require("./model/CreateBotResponseBot"));
@@ -2006,11 +2032,13 @@ var _RetrieveListOfSubscribedEventsResponseWebhook = _interopRequireDefault(requ
 var _RevokeSecondaryApiTokenByTokenResponse = _interopRequireDefault(require("./model/RevokeSecondaryApiTokenByTokenResponse"));
 var _SBObject = _interopRequireDefault(require("./model/SBObject"));
 var _ScheduleAnnouncementData = _interopRequireDefault(require("./model/ScheduleAnnouncementData"));
+var _ScheduleAnnouncementDataMessage = _interopRequireDefault(require("./model/ScheduleAnnouncementDataMessage"));
 var _ScheduleAnnouncementResponse = _interopRequireDefault(require("./model/ScheduleAnnouncementResponse"));
 var _ScheduleAnnouncementResponseCreateChannelOptions = _interopRequireDefault(require("./model/ScheduleAnnouncementResponseCreateChannelOptions"));
 var _ScheduleAnnouncementResponseMessage = _interopRequireDefault(require("./model/ScheduleAnnouncementResponseMessage"));
 var _SendBirdAdminMessage = _interopRequireDefault(require("./model/SendBirdAdminMessage"));
 var _SendBirdAppleCriticalAlertOptions = _interopRequireDefault(require("./model/SendBirdAppleCriticalAlertOptions"));
+var _SendBirdAutoEventMessageSettings = _interopRequireDefault(require("./model/SendBirdAutoEventMessageSettings"));
 var _SendBirdBaseChannel = _interopRequireDefault(require("./model/SendBirdBaseChannel"));
 var _SendBirdBaseMessageInstance = _interopRequireDefault(require("./model/SendBirdBaseMessageInstance"));
 var _SendBirdChannelResponse = _interopRequireDefault(require("./model/SendBirdChannelResponse"));

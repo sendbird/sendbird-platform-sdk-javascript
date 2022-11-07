@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile model module.
  * @module model/ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile
- * @version 0.0.14
- */var ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile</code>.
    * @alias module:model/ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile;
-}(); /**
-      * @member {String} url
-      */
+}();
+/**
+ * @member {String} url
+ */
 ListDataExportsByMessageChannelOrUserResponseExportedDataInnerFile.prototype['url'] = undefined;
 
 /**

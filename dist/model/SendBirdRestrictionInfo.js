@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdRestrictionInfo model module.
  * @module model/SendBirdRestrictionInfo
- * @version 0.0.14
- */var SendBirdRestrictionInfo = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdRestrictionInfo = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdRestrictionInfo</code>.
    * @alias module:model/SendBirdRestrictionInfo
@@ -58,9 +59,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdRestrictionInfo;
-}(); /**
-      * @member {String} description
-      */
+}();
+/**
+ * @member {String} description
+ */
 SendBirdRestrictionInfo.prototype['description'] = undefined;
 
 /**

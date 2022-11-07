@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcBanUserData model module.
  * @module model/GcBanUserData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class GcBanUserData {
     /**

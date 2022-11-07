@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RetrieveIpWhitelistResponse model module.
  * @module model/RetrieveIpWhitelistResponse
- * @version 0.0.14
- */var RetrieveIpWhitelistResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var RetrieveIpWhitelistResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RetrieveIpWhitelistResponse</code>.
    * @alias module:model/RetrieveIpWhitelistResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return RetrieveIpWhitelistResponse;
-}(); /**
-      * @member {Array.<String>} ip_whitelist_addresses
-      */
+}();
+/**
+ * @member {Array.<String>} ip_whitelist_addresses
+ */
 RetrieveIpWhitelistResponse.prototype['ip_whitelist_addresses'] = undefined;
 var _default = RetrieveIpWhitelistResponse;
 exports["default"] = _default;

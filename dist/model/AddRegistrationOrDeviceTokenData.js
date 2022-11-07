@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddRegistrationOrDeviceTokenData model module.
  * @module model/AddRegistrationOrDeviceTokenData
- * @version 0.0.14
- */var AddRegistrationOrDeviceTokenData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddRegistrationOrDeviceTokenData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddRegistrationOrDeviceTokenData</code>.
    * @alias module:model/AddRegistrationOrDeviceTokenData
@@ -65,10 +66,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddRegistrationOrDeviceTokenData;
-}(); /**
-      * Specifies a registration token for Firebase Cloud Messaging (formerly [Google Cloud Messaging](https://developers.google.com/cloud-messaging/)).
-      * @member {String} gcm_reg_token
-      */
+}();
+/**
+ * Specifies a registration token for Firebase Cloud Messaging (formerly [Google Cloud Messaging](https://developers.google.com/cloud-messaging/)).
+ * @member {String} gcm_reg_token
+ */
 AddRegistrationOrDeviceTokenData.prototype['gcm_reg_token'] = undefined;
 
 /**

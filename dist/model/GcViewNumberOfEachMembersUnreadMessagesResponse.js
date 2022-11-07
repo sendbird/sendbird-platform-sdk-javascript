@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcViewNumberOfEachMembersUnreadMessagesResponse model module.
  * @module model/GcViewNumberOfEachMembersUnreadMessagesResponse
- * @version 0.0.14
- */var GcViewNumberOfEachMembersUnreadMessagesResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcViewNumberOfEachMembersUnreadMessagesResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcViewNumberOfEachMembersUnreadMessagesResponse</code>.
    * @alias module:model/GcViewNumberOfEachMembersUnreadMessagesResponse
@@ -54,9 +55,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcViewNumberOfEachMembersUnreadMessagesResponse;
-}(); /**
-      * @member {Object.<String, Number>} unread
-      */
+}();
+/**
+ * @member {Object.<String, Number>} unread
+ */
 GcViewNumberOfEachMembersUnreadMessagesResponse.prototype['unread'] = undefined;
 var _default = GcViewNumberOfEachMembersUnreadMessagesResponse;
 exports["default"] = _default;

@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddRegistrationOrDeviceTokenResponse model module.
  * @module model/AddRegistrationOrDeviceTokenResponse
- * @version 0.0.14
- */var AddRegistrationOrDeviceTokenResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddRegistrationOrDeviceTokenResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddRegistrationOrDeviceTokenResponse</code>.
    * @alias module:model/AddRegistrationOrDeviceTokenResponse
@@ -45,11 +46,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new AddRegistrationOrDeviceTokenResponse();
-        if (data.hasOwnProperty('tokens')) {
-          obj['tokens'] = _ApiClient["default"].convertToType(data['tokens'], ['String']);
-        }
         if (data.hasOwnProperty('token')) {
-          obj['token'] = _ApiClient["default"].convertToType(data['token'], ['String']);
+          obj['token'] = _ApiClient["default"].convertToType(data['token'], 'String');
         }
         if (data.hasOwnProperty('type')) {
           obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
@@ -62,13 +60,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddRegistrationOrDeviceTokenResponse;
-}(); /**
-      * @member {Array.<String>} tokens
-      */
-AddRegistrationOrDeviceTokenResponse.prototype['tokens'] = undefined;
-
+}();
 /**
- * @member {Array.<String>} token
+ * @member {String} token
  */
 AddRegistrationOrDeviceTokenResponse.prototype['token'] = undefined;
 

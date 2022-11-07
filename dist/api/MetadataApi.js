@@ -22,8 +22,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Metadata service.
 * @module api/MetadataApi
-* @version 0.0.14
-*/var MetadataApi = /*#__PURE__*/function () {
+* @version 0.0.16
+*/
+var MetadataApi = /*#__PURE__*/function () {
   /**
   * Constructs a new MetadataApi. 
   * @alias module:api/MetadataApi

@@ -17,7 +17,7 @@ import SendBirdUser from './SendBirdUser';
 /**
  * The RemoveRegistrationOrDeviceTokenByTokenResponse model module.
  * @module model/RemoveRegistrationOrDeviceTokenByTokenResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class RemoveRegistrationOrDeviceTokenByTokenResponse {
     /**

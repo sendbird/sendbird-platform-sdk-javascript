@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SetDomainFilterDataProfanityFilterRegexFiltersInner model module.
  * @module model/SetDomainFilterDataProfanityFilterRegexFiltersInner
- * @version 0.0.14
- */var SetDomainFilterDataProfanityFilterRegexFiltersInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SetDomainFilterDataProfanityFilterRegexFiltersInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SetDomainFilterDataProfanityFilterRegexFiltersInner</code>.
    * @alias module:model/SetDomainFilterDataProfanityFilterRegexFiltersInner
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SetDomainFilterDataProfanityFilterRegexFiltersInner;
-}(); /**
-      * @member {String} regex
-      */
+}();
+/**
+ * @member {String} regex
+ */
 SetDomainFilterDataProfanityFilterRegexFiltersInner.prototype['regex'] = undefined;
 var _default = SetDomainFilterDataProfanityFilterRegexFiltersInner;
 exports["default"] = _default;

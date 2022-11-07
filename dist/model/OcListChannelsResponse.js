@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcListChannelsResponse model module.
  * @module model/OcListChannelsResponse
- * @version 0.0.14
- */var OcListChannelsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcListChannelsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcListChannelsResponse</code>.
    * @alias module:model/OcListChannelsResponse
@@ -59,9 +60,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcListChannelsResponse;
-}(); /**
-      * @member {Array.<module:model/SendBirdOpenChannel>} channels
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdOpenChannel>} channels
+ */
 OcListChannelsResponse.prototype['channels'] = undefined;
 
 /**

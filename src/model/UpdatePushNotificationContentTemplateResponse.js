@@ -17,7 +17,7 @@ import ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner from
 /**
  * The UpdatePushNotificationContentTemplateResponse model module.
  * @module model/UpdatePushNotificationContentTemplateResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class UpdatePushNotificationContentTemplateResponse {
     /**

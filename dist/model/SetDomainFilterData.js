@@ -16,8 +16,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SetDomainFilterData model module.
  * @module model/SetDomainFilterData
- * @version 0.0.14
- */var SetDomainFilterData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SetDomainFilterData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SetDomainFilterData</code>.
    * @alias module:model/SetDomainFilterData
@@ -65,9 +66,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SetDomainFilterData;
-}(); /**
-      * @member {module:model/SetDomainFilterDataDomainFilter} domain_filter
-      */
+}();
+/**
+ * @member {module:model/SetDomainFilterDataDomainFilter} domain_filter
+ */
 SetDomainFilterData.prototype['domain_filter'] = undefined;
 
 /**

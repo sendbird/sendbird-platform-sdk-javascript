@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdReaction model module.
  * @module model/SendBirdReaction
- * @version 0.0.14
- */var SendBirdReaction = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdReaction = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdReaction</code>.
    * @alias module:model/SendBirdReaction
@@ -58,9 +59,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdReaction;
-}(); /**
-      * @member {String} key
-      */
+}();
+/**
+ * @member {String} key
+ */
 SendBirdReaction.prototype['key'] = undefined;
 
 /**

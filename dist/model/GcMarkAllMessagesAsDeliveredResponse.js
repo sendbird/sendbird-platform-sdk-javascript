@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcMarkAllMessagesAsDeliveredResponse model module.
  * @module model/GcMarkAllMessagesAsDeliveredResponse
- * @version 0.0.14
- */var GcMarkAllMessagesAsDeliveredResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcMarkAllMessagesAsDeliveredResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcMarkAllMessagesAsDeliveredResponse</code>.
    * @alias module:model/GcMarkAllMessagesAsDeliveredResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcMarkAllMessagesAsDeliveredResponse;
-}(); /**
-      * @member {Number} ts
-      */
+}();
+/**
+ * @member {Number} ts
+ */
 GcMarkAllMessagesAsDeliveredResponse.prototype['ts'] = undefined;
 var _default = GcMarkAllMessagesAsDeliveredResponse;
 exports["default"] = _default;

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateApnsPushConfigurationByIdResponse model module.
  * @module model/UpdateApnsPushConfigurationByIdResponse
- * @version 0.0.14
- */var UpdateApnsPushConfigurationByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateApnsPushConfigurationByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateApnsPushConfigurationByIdResponse</code>.
    * @alias module:model/UpdateApnsPushConfigurationByIdResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateApnsPushConfigurationByIdResponse;
-}(); /**
-      * @member {String} push_configurations
-      */
+}();
+/**
+ * @member {String} push_configurations
+ */
 UpdateApnsPushConfigurationByIdResponse.prototype['push_configurations'] = undefined;
 var _default = UpdateApnsPushConfigurationByIdResponse;
 exports["default"] = _default;

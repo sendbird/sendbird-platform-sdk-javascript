@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GetDetailedOpenStatusOfAnnouncementByIdResponse model module.
  * @module model/GetDetailedOpenStatusOfAnnouncementByIdResponse
- * @version 0.0.14
- */var GetDetailedOpenStatusOfAnnouncementByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GetDetailedOpenStatusOfAnnouncementByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GetDetailedOpenStatusOfAnnouncementByIdResponse</code>.
    * @alias module:model/GetDetailedOpenStatusOfAnnouncementByIdResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GetDetailedOpenStatusOfAnnouncementByIdResponse;
-}(); /**
-      * @member {Array.<module:model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner>} open_status
-      */
+}();
+/**
+ * @member {Array.<module:model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner>} open_status
+ */
 GetDetailedOpenStatusOfAnnouncementByIdResponse.prototype['open_status'] = undefined;
 
 /**

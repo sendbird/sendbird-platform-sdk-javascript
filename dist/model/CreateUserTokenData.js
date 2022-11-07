@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateUserTokenData model module.
  * @module model/CreateUserTokenData
- * @version 0.0.14
- */var CreateUserTokenData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var CreateUserTokenData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>CreateUserTokenData</code>.
    * @alias module:model/CreateUserTokenData
@@ -52,10 +53,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return CreateUserTokenData;
-}(); /**
-      * Specifies the expiration time of the new session token in Unix milliseconds format. By default, the expiration time of a session token is seven days from the timestamp when the token was issued.
-      * @member {Number} expires_at
-      */
+}();
+/**
+ * Specifies the expiration time of the new session token in Unix milliseconds format. By default, the expiration time of a session token is seven days from the timestamp when the token was issued.
+ * @member {Number} expires_at
+ */
 CreateUserTokenData.prototype['expires_at'] = undefined;
 var _default = CreateUserTokenData;
 exports["default"] = _default;

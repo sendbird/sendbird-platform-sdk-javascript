@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdatePushPreferencesForChannelByUrlResponse model module.
  * @module model/UpdatePushPreferencesForChannelByUrlResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class UpdatePushPreferencesForChannelByUrlResponse {
     /**

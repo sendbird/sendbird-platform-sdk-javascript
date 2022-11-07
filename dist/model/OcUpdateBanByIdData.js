@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcUpdateBanByIdData model module.
  * @module model/OcUpdateBanByIdData
- * @version 0.0.14
- */var OcUpdateBanByIdData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcUpdateBanByIdData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcUpdateBanByIdData</code>.
    * @alias module:model/OcUpdateBanByIdData
@@ -70,10 +71,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcUpdateBanByIdData;
-}(); /**
-      * Specifies the URL of the target channel.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the target channel.
+ * @member {String} channel_url
+ */
 OcUpdateBanByIdData.prototype['channel_url'] = undefined;
 
 /**

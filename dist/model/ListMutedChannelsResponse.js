@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMutedChannelsResponse model module.
  * @module model/ListMutedChannelsResponse
- * @version 0.0.14
- */var ListMutedChannelsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListMutedChannelsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListMutedChannelsResponse</code>.
    * @alias module:model/ListMutedChannelsResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListMutedChannelsResponse;
-}(); /**
-      * @member {Array.<module:model/SendBirdChannelResponse>} muted_channels
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdChannelResponse>} muted_channels
+ */
 ListMutedChannelsResponse.prototype['muted_channels'] = undefined;
 
 /**

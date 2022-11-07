@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GetDetailedOpenRateOfAnnouncementGroupResponse model module.
  * @module model/GetDetailedOpenRateOfAnnouncementGroupResponse
- * @version 0.0.14
- */var GetDetailedOpenRateOfAnnouncementGroupResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GetDetailedOpenRateOfAnnouncementGroupResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GetDetailedOpenRateOfAnnouncementGroupResponse</code>.
    * @alias module:model/GetDetailedOpenRateOfAnnouncementGroupResponse
@@ -67,9 +68,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GetDetailedOpenRateOfAnnouncementGroupResponse;
-}(); /**
-      * @member {String} unique_id
-      */
+}();
+/**
+ * @member {String} unique_id
+ */
 GetDetailedOpenRateOfAnnouncementGroupResponse.prototype['unique_id'] = undefined;
 
 /**

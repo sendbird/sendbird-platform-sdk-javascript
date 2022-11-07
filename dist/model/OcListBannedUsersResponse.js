@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcListBannedUsersResponse model module.
  * @module model/OcListBannedUsersResponse
- * @version 0.0.14
- */var OcListBannedUsersResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcListBannedUsersResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcListBannedUsersResponse</code>.
    * @alias module:model/OcListBannedUsersResponse
@@ -59,9 +60,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcListBannedUsersResponse;
-}(); /**
-      * @member {Array.<module:model/OcListBannedUsersResponseBannedListInner>} banned_list
-      */
+}();
+/**
+ * @member {Array.<module:model/OcListBannedUsersResponseBannedListInner>} banned_list
+ */
 OcListBannedUsersResponse.prototype['banned_list'] = undefined;
 
 /**

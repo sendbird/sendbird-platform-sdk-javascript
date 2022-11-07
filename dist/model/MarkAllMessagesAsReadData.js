@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The MarkAllMessagesAsReadData model module.
  * @module model/MarkAllMessagesAsReadData
- * @version 0.0.14
- */var MarkAllMessagesAsReadData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var MarkAllMessagesAsReadData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>MarkAllMessagesAsReadData</code>.
    * @alias module:model/MarkAllMessagesAsReadData
@@ -55,10 +56,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return MarkAllMessagesAsReadData;
-}(); /**
-      * Specifies an array of one or more group channel URLs to mark all of the unread messages in as read. If not specified, all of the unread messages in the joined group channels are marked as read.
-      * @member {Array.<String>} channel_urls
-      */
+}();
+/**
+ * Specifies an array of one or more group channel URLs to mark all of the unread messages in as read. If not specified, all of the unread messages in the joined group channels are marked as read.
+ * @member {Array.<String>} channel_urls
+ */
 MarkAllMessagesAsReadData.prototype['channel_urls'] = undefined;
 var _default = MarkAllMessagesAsReadData;
 exports["default"] = _default;

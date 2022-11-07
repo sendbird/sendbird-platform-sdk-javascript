@@ -17,7 +17,7 @@ import ListPushConfigurationsResponsePushConfigurationsInner from './ListPushCon
 /**
  * The ListPushConfigurationsResponse model module.
  * @module model/ListPushConfigurationsResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class ListPushConfigurationsResponse {
     /**

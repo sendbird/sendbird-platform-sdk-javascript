@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateBotByIdData model module.
  * @module model/UpdateBotByIdData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class UpdateBotByIdData {
     /**

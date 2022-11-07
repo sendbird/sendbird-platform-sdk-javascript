@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateChannelInvitationPreferenceData model module.
  * @module model/UpdateChannelInvitationPreferenceData
- * @version 0.0.14
- */var UpdateChannelInvitationPreferenceData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateChannelInvitationPreferenceData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateChannelInvitationPreferenceData</code>.
    * @alias module:model/UpdateChannelInvitationPreferenceData
@@ -55,10 +56,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateChannelInvitationPreferenceData;
-}(); /**
-      * Determines for the user whether or not to automatically join a [private](/docs/chat/v3/platform-api/guides/group-channel#-3-private-vs-public) group channel promptly from an invitation without having to accept it. (Default: true)
-      * @member {Boolean} auto_accept
-      */
+}();
+/**
+ * Determines for the user whether or not to automatically join a [private](/docs/chat/v3/platform-api/guides/group-channel#-3-private-vs-public) group channel promptly from an invitation without having to accept it. (Default: true)
+ * @member {Boolean} auto_accept
+ */
 UpdateChannelInvitationPreferenceData.prototype['auto_accept'] = undefined;
 var _default = UpdateChannelInvitationPreferenceData;
 exports["default"] = _default;

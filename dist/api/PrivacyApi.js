@@ -16,8 +16,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Privacy service.
 * @module api/PrivacyApi
-* @version 0.0.14
-*/var PrivacyApi = /*#__PURE__*/function () {
+* @version 0.0.16
+*/
+var PrivacyApi = /*#__PURE__*/function () {
   /**
   * Constructs a new PrivacyApi. 
   * @alias module:api/PrivacyApi

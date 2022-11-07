@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListPushNotificationContentTemplatesResponse model module.
  * @module model/ListPushNotificationContentTemplatesResponse
- * @version 0.0.14
- */var ListPushNotificationContentTemplatesResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListPushNotificationContentTemplatesResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListPushNotificationContentTemplatesResponse</code>.
    * @alias module:model/ListPushNotificationContentTemplatesResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListPushNotificationContentTemplatesResponse;
-}(); /**
-      * @member {Array.<module:model/ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner>} push_message_templates
-      */
+}();
+/**
+ * @member {Array.<module:model/ListPushNotificationContentTemplatesResponsePushMessageTemplatesInner>} push_message_templates
+ */
 ListPushNotificationContentTemplatesResponse.prototype['push_message_templates'] = undefined;
 var _default = ListPushNotificationContentTemplatesResponse;
 exports["default"] = _default;

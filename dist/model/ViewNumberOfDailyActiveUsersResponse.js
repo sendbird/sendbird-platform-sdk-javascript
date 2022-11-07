@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewNumberOfDailyActiveUsersResponse model module.
  * @module model/ViewNumberOfDailyActiveUsersResponse
- * @version 0.0.14
- */var ViewNumberOfDailyActiveUsersResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewNumberOfDailyActiveUsersResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewNumberOfDailyActiveUsersResponse</code>.
    * @alias module:model/ViewNumberOfDailyActiveUsersResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewNumberOfDailyActiveUsersResponse;
-}(); /**
-      * @member {Number} dau
-      */
+}();
+/**
+ * @member {Number} dau
+ */
 ViewNumberOfDailyActiveUsersResponse.prototype['dau'] = undefined;
 var _default = ViewNumberOfDailyActiveUsersResponse;
 exports["default"] = _default;

@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListUsersResponse model module.
  * @module model/ListUsersResponse
- * @version 0.0.14
- */var ListUsersResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListUsersResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListUsersResponse</code>.
    * @alias module:model/ListUsersResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListUsersResponse;
-}(); /**
-      * @member {Array.<module:model/SendBirdUser>} users
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdUser>} users
+ */
 ListUsersResponse.prototype['users'] = undefined;
 
 /**

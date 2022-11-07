@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcHideOrArchiveChannelData model module.
  * @module model/GcHideOrArchiveChannelData
- * @version 0.0.14
- */var GcHideOrArchiveChannelData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcHideOrArchiveChannelData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcHideOrArchiveChannelData</code>.
    * @alias module:model/GcHideOrArchiveChannelData
@@ -75,10 +76,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcHideOrArchiveChannelData;
-}(); /**
-      * Specifies the URL of the channel to hide or archive.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the channel to hide or archive.
+ * @member {String} channel_url
+ */
 GcHideOrArchiveChannelData.prototype['channel_url'] = undefined;
 
 /**

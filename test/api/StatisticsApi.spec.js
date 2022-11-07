@@ -48,6 +48,26 @@
   }
 
   describe('StatisticsApi', function() {
+    describe('getDetailedOpenRateOfAnnouncementById', function() {
+      it('should call getDetailedOpenRateOfAnnouncementById successfully', function(done) {
+        //uncomment below and update the code to test getDetailedOpenRateOfAnnouncementById
+        //instance.getDetailedOpenRateOfAnnouncementById(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getDetailedOpenStatusOfAnnouncementById', function() {
+      it('should call getDetailedOpenStatusOfAnnouncementById successfully', function(done) {
+        //uncomment below and update the code to test getDetailedOpenStatusOfAnnouncementById
+        //instance.getDetailedOpenStatusOfAnnouncementById(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('retrieveAdvancedAnalyticsMetrics', function() {
       it('should call retrieveAdvancedAnalyticsMetrics successfully', function(done) {
         //uncomment below and update the code to test retrieveAdvancedAnalyticsMetrics

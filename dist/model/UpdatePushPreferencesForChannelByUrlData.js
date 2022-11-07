@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdatePushPreferencesForChannelByUrlData model module.
  * @module model/UpdatePushPreferencesForChannelByUrlData
- * @version 0.0.14
- */var UpdatePushPreferencesForChannelByUrlData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdatePushPreferencesForChannelByUrlData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdatePushPreferencesForChannelByUrlData</code>.
    * @alias module:model/UpdatePushPreferencesForChannelByUrlData
@@ -65,10 +66,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdatePushPreferencesForChannelByUrlData;
-}(); /**
-      * Determines the type of push notification trigger to apply to the speficied channel. Acceptable values are limited to the following:<br />- default: the user's push notification trigger setting automatically applies to the channel. This is the default setting.<br />- all: when disconnected from Sendbird server, the user receives notifications for all new messages in the channel including messages the user has been mentioned in.<br />- mention_only: when disconnected from Sendbird server, the user only receives notifications for messages in the channel the user has been mentioned in.<br />- off: the user doesn't receive any notifications in the channel.
-      * @member {String} push_trigger_option
-      */
+}();
+/**
+ * Determines the type of push notification trigger to apply to the speficied channel. Acceptable values are limited to the following:<br />- default: the user's push notification trigger setting automatically applies to the channel. This is the default setting.<br />- all: when disconnected from Sendbird server, the user receives notifications for all new messages in the channel including messages the user has been mentioned in.<br />- mention_only: when disconnected from Sendbird server, the user only receives notifications for messages in the channel the user has been mentioned in.<br />- off: the user doesn't receive any notifications in the channel.
+ * @member {String} push_trigger_option
+ */
 UpdatePushPreferencesForChannelByUrlData.prototype['push_trigger_option'] = undefined;
 
 /**

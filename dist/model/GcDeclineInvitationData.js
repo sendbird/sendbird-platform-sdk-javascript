@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcDeclineInvitationData model module.
  * @module model/GcDeclineInvitationData
- * @version 0.0.14
- */var GcDeclineInvitationData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcDeclineInvitationData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcDeclineInvitationData</code>.
    * @alias module:model/GcDeclineInvitationData
@@ -60,10 +61,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcDeclineInvitationData;
-}(); /**
-      * Specifies the URL of the private group channel to decline an invitation from.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the private group channel to decline an invitation from.
+ * @member {String} channel_url
+ */
 GcDeclineInvitationData.prototype['channel_url'] = undefined;
 
 /**

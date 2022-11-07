@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewPushPreferencesResponse model module.
  * @module model/ViewPushPreferencesResponse
- * @version 0.0.14
- */var ViewPushPreferencesResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewPushPreferencesResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewPushPreferencesResponse</code>.
    * @alias module:model/ViewPushPreferencesResponse
@@ -91,9 +92,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewPushPreferencesResponse;
-}(); /**
-      * @member {String} snooze_start_ts
-      */
+}();
+/**
+ * @member {String} snooze_start_ts
+ */
 ViewPushPreferencesResponse.prototype['snooze_start_ts'] = undefined;
 
 /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateBotResponseBot model module.
  * @module model/CreateBotResponseBot
- * @version 0.0.14
+ * @version 0.0.16
  */
 class CreateBotResponseBot {
     /**

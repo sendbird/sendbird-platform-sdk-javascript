@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMutedUsersInChannelsWithCustomChannelType200Response model module.
  * @module model/ListMutedUsersInChannelsWithCustomChannelType200Response
- * @version 0.0.14
- */var ListMutedUsersInChannelsWithCustomChannelType200Response = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListMutedUsersInChannelsWithCustomChannelType200Response = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListMutedUsersInChannelsWithCustomChannelType200Response</code>.
    * @alias module:model/ListMutedUsersInChannelsWithCustomChannelType200Response
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListMutedUsersInChannelsWithCustomChannelType200Response;
-}(); /**
-      * @member {Array.<module:model/SendBirdUser>} muted_list
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdUser>} muted_list
+ */
 ListMutedUsersInChannelsWithCustomChannelType200Response.prototype['muted_list'] = undefined;
 
 /**

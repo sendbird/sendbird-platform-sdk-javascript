@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner model module.
  * @module model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner
- * @version 0.0.14
- */var ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner</code>.
    * @alias module:model/ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner
@@ -62,9 +63,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner;
-}(); /**
-      * @member {Number} id
-      */
+}();
+/**
+ * @member {Number} id
+ */
 ListAllEmojisAndEmojiCategoriesResponseEmojiCategoriesInner.prototype['id'] = undefined;
 
 /**

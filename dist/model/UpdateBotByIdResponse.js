@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateBotByIdResponse model module.
  * @module model/UpdateBotByIdResponse
- * @version 0.0.14
- */var UpdateBotByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateBotByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateBotByIdResponse</code>.
    * @alias module:model/UpdateBotByIdResponse
@@ -68,9 +69,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateBotByIdResponse;
-}(); /**
-      * @member {module:model/CreateBotResponseBot} bot
-      */
+}();
+/**
+ * @member {module:model/CreateBotResponseBot} bot
+ */
 UpdateBotByIdResponse.prototype['bot'] = undefined;
 
 /**

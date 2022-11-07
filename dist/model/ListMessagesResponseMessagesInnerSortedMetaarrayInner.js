@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMessagesResponseMessagesInnerSortedMetaarrayInner model module.
  * @module model/ListMessagesResponseMessagesInnerSortedMetaarrayInner
- * @version 0.0.14
- */var ListMessagesResponseMessagesInnerSortedMetaarrayInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListMessagesResponseMessagesInnerSortedMetaarrayInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListMessagesResponseMessagesInnerSortedMetaarrayInner</code>.
    * @alias module:model/ListMessagesResponseMessagesInnerSortedMetaarrayInner
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListMessagesResponseMessagesInnerSortedMetaarrayInner;
-}(); /**
-      * @member {String} key
-      */
+}();
+/**
+ * @member {String} key
+ */
 ListMessagesResponseMessagesInnerSortedMetaarrayInner.prototype['key'] = undefined;
 
 /**

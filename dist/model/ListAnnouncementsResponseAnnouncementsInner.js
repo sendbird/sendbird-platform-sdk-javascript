@@ -14,8 +14,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListAnnouncementsResponseAnnouncementsInner model module.
  * @module model/ListAnnouncementsResponseAnnouncementsInner
- * @version 0.0.14
- */var ListAnnouncementsResponseAnnouncementsInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListAnnouncementsResponseAnnouncementsInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListAnnouncementsResponseAnnouncementsInner</code>.
    * @alias module:model/ListAnnouncementsResponseAnnouncementsInner
@@ -117,9 +118,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListAnnouncementsResponseAnnouncementsInner;
-}(); /**
-      * @member {String} unique_id
-      */
+}();
+/**
+ * @member {String} unique_id
+ */
 ListAnnouncementsResponseAnnouncementsInner.prototype['unique_id'] = undefined;
 
 /**

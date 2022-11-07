@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RetrieveAdvancedAnalyticsMetricsResponse model module.
  * @module model/RetrieveAdvancedAnalyticsMetricsResponse
- * @version 0.0.14
- */var RetrieveAdvancedAnalyticsMetricsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var RetrieveAdvancedAnalyticsMetricsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RetrieveAdvancedAnalyticsMetricsResponse</code>.
    * @alias module:model/RetrieveAdvancedAnalyticsMetricsResponse
@@ -67,9 +68,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return RetrieveAdvancedAnalyticsMetricsResponse;
-}(); /**
-      * @member {String} segments
-      */
+}();
+/**
+ * @member {String} segments
+ */
 RetrieveAdvancedAnalyticsMetricsResponse.prototype['segments'] = undefined;
 
 /**

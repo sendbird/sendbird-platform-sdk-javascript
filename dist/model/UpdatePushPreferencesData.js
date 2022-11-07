@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdatePushPreferencesData model module.
  * @module model/UpdatePushPreferencesData
- * @version 0.0.14
- */var UpdatePushPreferencesData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdatePushPreferencesData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdatePushPreferencesData</code>.
    * @alias module:model/UpdatePushPreferencesData
@@ -115,10 +116,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdatePushPreferencesData;
-}(); /**
-      * Determines the type of push notification trigger to apply to the user's joined group channels. Valid values are the following:<br />- all (default): when disconnected from Sendbird server, the user receives notifications for all new messages including mentioned messages the user has been mentioned in.<br />- mention_only: when disconnected from Sendbird server, the user only receives notifications for messages the user has been mentioned in.<br />- off: the user doesn't receive any notifications.
-      * @member {String} push_trigger_option
-      */
+}();
+/**
+ * Determines the type of push notification trigger to apply to the user's joined group channels. Valid values are the following:<br />- all (default): when disconnected from Sendbird server, the user receives notifications for all new messages including mentioned messages the user has been mentioned in.<br />- mention_only: when disconnected from Sendbird server, the user only receives notifications for messages the user has been mentioned in.<br />- off: the user doesn't receive any notifications.
+ * @member {String} push_trigger_option
+ */
 UpdatePushPreferencesData.prototype['push_trigger_option'] = undefined;
 
 /**

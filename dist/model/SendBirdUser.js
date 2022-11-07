@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdUser model module.
  * @module model/SendBirdUser
- * @version 0.0.14
- */var SendBirdUser = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdUser = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdUser</code>.
    * User
@@ -119,9 +120,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdUser;
-}(); /**
-      * @member {Boolean} require_auth_for_profile_image
-      */
+}();
+/**
+ * @member {Boolean} require_auth_for_profile_image
+ */
 SendBirdUser.prototype['require_auth_for_profile_image'] = undefined;
 
 /**

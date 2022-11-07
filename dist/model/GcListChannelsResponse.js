@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcListChannelsResponse model module.
  * @module model/GcListChannelsResponse
- * @version 0.0.14
- */var GcListChannelsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcListChannelsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcListChannelsResponse</code>.
    * @alias module:model/GcListChannelsResponse
@@ -59,9 +60,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcListChannelsResponse;
-}(); /**
-      * @member {Array.<module:model/SendBirdGroupChannel>} channels
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdGroupChannel>} channels
+ */
 GcListChannelsResponse.prototype['channels'] = undefined;
 
 /**

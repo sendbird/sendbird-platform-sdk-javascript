@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBotSMessageData model module.
  * @module model/SendBotSMessageData
- * @version 0.0.14
- */var SendBotSMessageData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBotSMessageData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBotSMessageData</code>.
    * @alias module:model/SendBotSMessageData
@@ -81,10 +82,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBotSMessageData;
-}(); /**
-      * Specifies the content of the message sent by the bot.
-      * @member {String} message
-      */
+}();
+/**
+ * Specifies the content of the message sent by the bot.
+ * @member {String} message
+ */
 SendBotSMessageData.prototype['message'] = undefined;
 
 /**

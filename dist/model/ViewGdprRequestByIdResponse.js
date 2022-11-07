@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewGdprRequestByIdResponse model module.
  * @module model/ViewGdprRequestByIdResponse
- * @version 0.0.14
- */var ViewGdprRequestByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewGdprRequestByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewGdprRequestByIdResponse</code>.
    * @alias module:model/ViewGdprRequestByIdResponse
@@ -74,9 +75,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewGdprRequestByIdResponse;
-}(); /**
-      * @member {String} request_id
-      */
+}();
+/**
+ * @member {String} request_id
+ */
 ViewGdprRequestByIdResponse.prototype['request_id'] = undefined;
 
 /**

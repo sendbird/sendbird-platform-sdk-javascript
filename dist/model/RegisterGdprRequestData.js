@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RegisterGdprRequestData model module.
  * @module model/RegisterGdprRequestData
- * @version 0.0.14
- */var RegisterGdprRequestData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var RegisterGdprRequestData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RegisterGdprRequestData</code>.
    * @alias module:model/RegisterGdprRequestData
@@ -70,10 +71,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return RegisterGdprRequestData;
-}(); /**
-      * Determines the type of a GDPR request. Acceptable values are limited to access and delete. If set to access, Sendbird server generates a downloadable zip file containing the data of the specified user with the user_id property to comply with GDPR's [right to access](https://gdpr-info.eu/art-15-gdpr/) of the data subject. If set to delete, the specified users with the user_ids property will be permanently deleted from your Sendbird application to comply with GDPR's [right to erasure](https://gdpr-info.eu/art-17-gdpr/) of the data subject. (Default: delete)
-      * @member {String} action
-      */
+}();
+/**
+ * Determines the type of a GDPR request. Acceptable values are limited to access and delete. If set to access, Sendbird server generates a downloadable zip file containing the data of the specified user with the user_id property to comply with GDPR's [right to access](https://gdpr-info.eu/art-15-gdpr/) of the data subject. If set to delete, the specified users with the user_ids property will be permanently deleted from your Sendbird application to comply with GDPR's [right to erasure](https://gdpr-info.eu/art-17-gdpr/) of the data subject. (Default: delete)
+ * @member {String} action
+ */
 RegisterGdprRequestData.prototype['action'] = undefined;
 
 /**

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Blob model module.
  * @module model/Blob
- * @version 0.0.14
- */var Blob = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var Blob = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Blob</code>.
    * @alias module:model/Blob
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return Blob;
-}(); /**
-      * @member {Number} size
-      */
+}();
+/**
+ * @member {Number} size
+ */
 Blob.prototype['size'] = undefined;
 
 /**

@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewDataExportByIdResponse model module.
  * @module model/ViewDataExportByIdResponse
- * @version 0.0.14
- */var ViewDataExportByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewDataExportByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewDataExportByIdResponse</code>.
    * @alias module:model/ViewDataExportByIdResponse
@@ -92,9 +93,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewDataExportByIdResponse;
-}(); /**
-      * @member {String} request_id
-      */
+}();
+/**
+ * @member {String} request_id
+ */
 ViewDataExportByIdResponse.prototype['request_id'] = undefined;
 
 /**

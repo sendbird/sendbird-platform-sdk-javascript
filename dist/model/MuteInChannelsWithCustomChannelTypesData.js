@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The MuteInChannelsWithCustomChannelTypesData model module.
  * @module model/MuteInChannelsWithCustomChannelTypesData
- * @version 0.0.14
- */var MuteInChannelsWithCustomChannelTypesData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var MuteInChannelsWithCustomChannelTypesData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>MuteInChannelsWithCustomChannelTypesData</code>.
    * @alias module:model/MuteInChannelsWithCustomChannelTypesData
@@ -55,10 +56,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return MuteInChannelsWithCustomChannelTypesData;
-}(); /**
-      * Specifies an array of one or more custom channel types, in order to mute the user in channels with the channel types. The user is permanently muted unless unmuted (10 years, technically).
-      * @member {Array.<String>} channel_custom_types
-      */
+}();
+/**
+ * Specifies an array of one or more custom channel types, in order to mute the user in channels with the channel types. The user is permanently muted unless unmuted (10 years, technically).
+ * @member {Array.<String>} channel_custom_types
+ */
 MuteInChannelsWithCustomChannelTypesData.prototype['channel_custom_types'] = undefined;
 var _default = MuteInChannelsWithCustomChannelTypesData;
 exports["default"] = _default;

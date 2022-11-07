@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _GetDetailedOpenRateOfAnnouncementByIdResponse = _interopRequireDefault(require("../model/GetDetailedOpenRateOfAnnouncementByIdResponse"));
+var _GetDetailedOpenStatusOfAnnouncementByIdResponse = _interopRequireDefault(require("../model/GetDetailedOpenStatusOfAnnouncementByIdResponse"));
 var _RetrieveAdvancedAnalyticsMetricsResponse = _interopRequireDefault(require("../model/RetrieveAdvancedAnalyticsMetricsResponse"));
 var _ViewNumberOfConcurrentConnectionsResponse = _interopRequireDefault(require("../model/ViewNumberOfConcurrentConnectionsResponse"));
 var _ViewNumberOfDailyActiveUsersResponse = _interopRequireDefault(require("../model/ViewNumberOfDailyActiveUsersResponse"));
@@ -17,8 +19,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Statistics service.
 * @module api/StatisticsApi
-* @version 0.0.14
-*/var StatisticsApi = /*#__PURE__*/function () {
+* @version 0.0.16
+*/
+var StatisticsApi = /*#__PURE__*/function () {
   /**
   * Constructs a new StatisticsApi. 
   * @alias module:api/StatisticsApi
@@ -32,12 +35,129 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   }
 
   /**
-   * Retrieve Advanced analytics metrics
-   * ## Retrieve Advanced analytics metrics  Retrieves Advanced analytics metrics based on the specified parameters. You can retrieve either daily or monthly metrics using the time_dimension parameter.  >__Note__: Daily metrics are calculated and updated every three hours, starting at 1 a.m. in UTC. Meanwhile, monthly metrics are calculated after the last day of the month.  https://sendbird.com/docs/chat/v3/platform-api/guides/advanced-analytics#2-retrieve-advanced-analytics-metrics ----------------------------
+   * Get detailed open rate of an announcement
+   * ## Get detailed open rate of an announcement  Retrieves the detailed open rate information of an announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-rate-of-an-announcement ----------------------------   `unique_id`      Type: string      Description: Specifies the unique ID of the announcement to get its open rate.
    * @param {String} apiToken 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RetrieveAdvancedAnalyticsMetricsResponse} and HTTP response
+   * @param {String} uniqueId 
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetDetailedOpenRateOfAnnouncementByIdResponse} and HTTP response
    */
   _createClass(StatisticsApi, [{
+    key: "getDetailedOpenRateOfAnnouncementByIdWithHttpInfo",
+    value: function getDetailedOpenRateOfAnnouncementByIdWithHttpInfo(apiToken, uniqueId) {
+      var postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling getDetailedOpenRateOfAnnouncementById");
+      }
+      // verify the required parameter 'uniqueId' is set
+      if (uniqueId === undefined || uniqueId === null) {
+        throw new Error("Missing the required parameter 'uniqueId' when calling getDetailedOpenRateOfAnnouncementById");
+      }
+      var pathParams = {
+        'unique_id': uniqueId
+      };
+      var queryParams = {};
+      var headerParams = {
+        'Api-Token': apiToken
+      };
+      var formParams = {};
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _GetDetailedOpenRateOfAnnouncementByIdResponse["default"];
+      return this.apiClient.callApi('/v3/announcement_open_rate/{unique_id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+
+    /**
+     * Get detailed open rate of an announcement
+     * ## Get detailed open rate of an announcement  Retrieves the detailed open rate information of an announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-rate-of-an-announcement ----------------------------   `unique_id`      Type: string      Description: Specifies the unique ID of the announcement to get its open rate.
+     * @param {String} apiToken 
+     * @param {String} uniqueId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetDetailedOpenRateOfAnnouncementByIdResponse}
+     */
+  }, {
+    key: "getDetailedOpenRateOfAnnouncementById",
+    value: function getDetailedOpenRateOfAnnouncementById(apiToken, uniqueId) {
+      return this.getDetailedOpenRateOfAnnouncementByIdWithHttpInfo(apiToken, uniqueId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Get detailed open status of an announcement
+     * ## Get detailed open status of an announcement  Retrieves the detailed open status information of a specific announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-status-of-an-announcement ----------------------------
+     * @param {String} apiToken 
+     * @param {String} uniqueId 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit 
+     * @param {String} opts.next 
+     * @param {Array.<String>} opts.uniqueIds 
+     * @param {Array.<String>} opts.channelUrls 
+     * @param {Boolean} opts.hasOpened 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetDetailedOpenStatusOfAnnouncementByIdResponse} and HTTP response
+     */
+  }, {
+    key: "getDetailedOpenStatusOfAnnouncementByIdWithHttpInfo",
+    value: function getDetailedOpenStatusOfAnnouncementByIdWithHttpInfo(apiToken, uniqueId, opts) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling getDetailedOpenStatusOfAnnouncementById");
+      }
+      // verify the required parameter 'uniqueId' is set
+      if (uniqueId === undefined || uniqueId === null) {
+        throw new Error("Missing the required parameter 'uniqueId' when calling getDetailedOpenStatusOfAnnouncementById");
+      }
+      var pathParams = {
+        'unique_id': uniqueId
+      };
+      var queryParams = {
+        'limit': opts['limit'],
+        'next': opts['next'],
+        'unique_ids': this.apiClient.buildCollectionParam(opts['uniqueIds'], 'multi'),
+        'channel_urls': this.apiClient.buildCollectionParam(opts['channelUrls'], 'multi'),
+        'has_opened': opts['hasOpened']
+      };
+      var headerParams = {
+        'Api-Token': apiToken
+      };
+      var formParams = {};
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _GetDetailedOpenStatusOfAnnouncementByIdResponse["default"];
+      return this.apiClient.callApi('/v3/announcement_open_status/{unique_id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+
+    /**
+     * Get detailed open status of an announcement
+     * ## Get detailed open status of an announcement  Retrieves the detailed open status information of a specific announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-status-of-an-announcement ----------------------------
+     * @param {String} apiToken 
+     * @param {String} uniqueId 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit 
+     * @param {String} opts.next 
+     * @param {Array.<String>} opts.uniqueIds 
+     * @param {Array.<String>} opts.channelUrls 
+     * @param {Boolean} opts.hasOpened 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetDetailedOpenStatusOfAnnouncementByIdResponse}
+     */
+  }, {
+    key: "getDetailedOpenStatusOfAnnouncementById",
+    value: function getDetailedOpenStatusOfAnnouncementById(apiToken, uniqueId, opts) {
+      return this.getDetailedOpenStatusOfAnnouncementByIdWithHttpInfo(apiToken, uniqueId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+
+    /**
+     * Retrieve Advanced analytics metrics
+     * ## Retrieve Advanced analytics metrics  Retrieves Advanced analytics metrics based on the specified parameters. You can retrieve either daily or monthly metrics using the time_dimension parameter.  >__Note__: Daily metrics are calculated and updated every three hours, starting at 1 a.m. in UTC. Meanwhile, monthly metrics are calculated after the last day of the month.  https://sendbird.com/docs/chat/v3/platform-api/guides/advanced-analytics#2-retrieve-advanced-analytics-metrics ----------------------------
+     * @param {String} apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RetrieveAdvancedAnalyticsMetricsResponse} and HTTP response
+     */
+  }, {
     key: "retrieveAdvancedAnalyticsMetricsWithHttpInfo",
     value: function retrieveAdvancedAnalyticsMetricsWithHttpInfo(apiToken) {
       var postBody = null;

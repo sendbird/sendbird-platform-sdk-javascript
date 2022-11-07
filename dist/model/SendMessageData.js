@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendMessageData model module.
  * @module model/SendMessageData
- * @version 0.0.14
- */var SendMessageData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendMessageData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendMessageData</code>.
    * @alias module:model/SendMessageData
@@ -102,15 +103,43 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         if (data.hasOwnProperty('volume')) {
           obj['volume'] = _ApiClient["default"].convertToType(data['volume'], 'Number');
         }
+        if (data.hasOwnProperty('url')) {
+          obj['url'] = _ApiClient["default"].convertToType(data['url'], 'String');
+        }
+        if (data.hasOwnProperty('file')) {
+          obj['file'] = _ApiClient["default"].convertToType(data['file'], 'String');
+        }
+        if (data.hasOwnProperty('file_name')) {
+          obj['file_name'] = _ApiClient["default"].convertToType(data['file_name'], 'String');
+        }
+        if (data.hasOwnProperty('file_size')) {
+          obj['file_size'] = _ApiClient["default"].convertToType(data['file_size'], 'Number');
+        }
+        if (data.hasOwnProperty('file_type')) {
+          obj['file_type'] = _ApiClient["default"].convertToType(data['file_type'], 'String');
+        }
+        if (data.hasOwnProperty('thumbnails')) {
+          obj['thumbnails'] = _ApiClient["default"].convertToType(data['thumbnails'], ['String']);
+        }
+        if (data.hasOwnProperty('thumbnail1')) {
+          obj['thumbnail1'] = _ApiClient["default"].convertToType(data['thumbnail1'], 'String');
+        }
+        if (data.hasOwnProperty('thumbnail2')) {
+          obj['thumbnail2'] = _ApiClient["default"].convertToType(data['thumbnail2'], 'String');
+        }
+        if (data.hasOwnProperty('thumbnail3')) {
+          obj['thumbnail3'] = _ApiClient["default"].convertToType(data['thumbnail3'], 'String');
+        }
       }
       return obj;
     }
   }]);
   return SendMessageData;
-}(); /**
-      * Specifies the user ID of the sender.
-      * @member {String} user_id
-      */
+}();
+/**
+ * Specifies the user ID of the sender.
+ * @member {String} user_id
+ */
 SendMessageData.prototype['user_id'] = undefined;
 
 /**
@@ -208,5 +237,50 @@ SendMessageData.prototype['sound'] = undefined;
  * @member {Number} volume
  */
 SendMessageData.prototype['volume'] = undefined;
+
+/**
+ * @member {String} url
+ */
+SendMessageData.prototype['url'] = undefined;
+
+/**
+ * @member {String} file
+ */
+SendMessageData.prototype['file'] = undefined;
+
+/**
+ * @member {String} file_name
+ */
+SendMessageData.prototype['file_name'] = undefined;
+
+/**
+ * @member {Number} file_size
+ */
+SendMessageData.prototype['file_size'] = undefined;
+
+/**
+ * @member {String} file_type
+ */
+SendMessageData.prototype['file_type'] = undefined;
+
+/**
+ * @member {Array.<String>} thumbnails
+ */
+SendMessageData.prototype['thumbnails'] = undefined;
+
+/**
+ * @member {String} thumbnail1
+ */
+SendMessageData.prototype['thumbnail1'] = undefined;
+
+/**
+ * @member {String} thumbnail2
+ */
+SendMessageData.prototype['thumbnail2'] = undefined;
+
+/**
+ * @member {String} thumbnail3
+ */
+SendMessageData.prototype['thumbnail3'] = undefined;
 var _default = SendMessageData;
 exports["default"] = _default;

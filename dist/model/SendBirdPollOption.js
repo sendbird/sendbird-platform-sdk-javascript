@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdPollOption model module.
  * @module model/SendBirdPollOption
- * @version 0.0.14
- */var SendBirdPollOption = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdPollOption = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdPollOption</code>.
    * @alias module:model/SendBirdPollOption
@@ -74,9 +75,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdPollOption;
-}(); /**
-      * @member {Number} created_at
-      */
+}();
+/**
+ * @member {Number} created_at
+ */
 SendBirdPollOption.prototype['created_at'] = undefined;
 
 /**

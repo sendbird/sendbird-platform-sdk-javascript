@@ -20,8 +20,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdAdminMessage model module.
  * @module model/SendBirdAdminMessage
- * @version 0.0.14
- */var SendBirdAdminMessage = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdAdminMessage = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdAdminMessage</code>.
    * @alias module:model/SendBirdAdminMessage
@@ -129,9 +130,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdAdminMessage;
-}(); /**
-      * @member {module:model/SendBirdAppleCriticalAlertOptions} apple_critical_alert_options
-      */
+}();
+/**
+ * @member {module:model/SendBirdAppleCriticalAlertOptions} apple_critical_alert_options
+ */
 SendBirdAdminMessage.prototype['apple_critical_alert_options'] = undefined;
 
 /**

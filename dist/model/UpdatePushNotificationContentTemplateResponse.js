@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdatePushNotificationContentTemplateResponse model module.
  * @module model/UpdatePushNotificationContentTemplateResponse
- * @version 0.0.14
- */var UpdatePushNotificationContentTemplateResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdatePushNotificationContentTemplateResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdatePushNotificationContentTemplateResponse</code>.
    * @alias module:model/UpdatePushNotificationContentTemplateResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdatePushNotificationContentTemplateResponse;
-}(); /**
-      * @member {Array.<module:model/ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner>} push_message_templates
-      */
+}();
+/**
+ * @member {Array.<module:model/ViewPushNotificationContentTemplateResponsePushMessageTemplatesInner>} push_message_templates
+ */
 UpdatePushNotificationContentTemplateResponse.prototype['push_message_templates'] = undefined;
 var _default = UpdatePushNotificationContentTemplateResponse;
 exports["default"] = _default;

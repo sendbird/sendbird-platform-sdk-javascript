@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListDataExportsByMessageChannelOrUserResponse model module.
  * @module model/ListDataExportsByMessageChannelOrUserResponse
- * @version 0.0.14
- */var ListDataExportsByMessageChannelOrUserResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListDataExportsByMessageChannelOrUserResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListDataExportsByMessageChannelOrUserResponse</code>.
    * @alias module:model/ListDataExportsByMessageChannelOrUserResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListDataExportsByMessageChannelOrUserResponse;
-}(); /**
-      * @member {Array.<module:model/ListDataExportsByMessageChannelOrUserResponseExportedDataInner>} exported_data
-      */
+}();
+/**
+ * @member {Array.<module:model/ListDataExportsByMessageChannelOrUserResponseExportedDataInner>} exported_data
+ */
 ListDataExportsByMessageChannelOrUserResponse.prototype['exported_data'] = undefined;
 
 /**

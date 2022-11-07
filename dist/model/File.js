@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The File model module.
  * @module model/File
- * @version 0.0.14
- */var File = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var File = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>File</code>.
    * @alias module:model/File
@@ -64,9 +65,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return File;
-}(); /**
-      * @member {Number} last_modified
-      */
+}();
+/**
+ * @member {Number} last_modified
+ */
 File.prototype['last_modified'] = undefined;
 
 /**

@@ -17,7 +17,7 @@ import ListMessagesResponseMessagesInner from './ListMessagesResponseMessagesInn
 /**
  * The ListMessagesResponse model module.
  * @module model/ListMessagesResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class ListMessagesResponse {
     /**

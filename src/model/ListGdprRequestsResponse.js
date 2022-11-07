@@ -17,7 +17,7 @@ import ListGdprRequestsResponseRequestsInner from './ListGdprRequestsResponseReq
 /**
  * The ListGdprRequestsResponse model module.
  * @module model/ListGdprRequestsResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class ListGdprRequestsResponse {
     /**

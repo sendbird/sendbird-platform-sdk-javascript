@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddIpToWhitelistData model module.
  * @module model/AddIpToWhitelistData
- * @version 0.0.14
- */var AddIpToWhitelistData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddIpToWhitelistData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddIpToWhitelistData</code>.
    * @alias module:model/AddIpToWhitelistData
@@ -55,10 +56,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddIpToWhitelistData;
-}(); /**
-      * Specifies an array of one or more IP ranges and addresses to add to a whitelist.
-      * @member {Array.<String>} ip_whitelist_addresses
-      */
+}();
+/**
+ * Specifies an array of one or more IP ranges and addresses to add to a whitelist.
+ * @member {Array.<String>} ip_whitelist_addresses
+ */
 AddIpToWhitelistData.prototype['ip_whitelist_addresses'] = undefined;
 var _default = AddIpToWhitelistData;
 exports["default"] = _default;

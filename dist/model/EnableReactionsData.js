@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EnableReactionsData model module.
  * @module model/EnableReactionsData
- * @version 0.0.14
- */var EnableReactionsData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var EnableReactionsData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>EnableReactionsData</code>.
    * @alias module:model/EnableReactionsData
@@ -55,10 +56,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return EnableReactionsData;
-}(); /**
-      * Determines whether to turn on the message reaction feature. (Default: false)
-      * @member {Boolean} enabled
-      */
+}();
+/**
+ * Determines whether to turn on the message reaction feature. (Default: false)
+ * @member {Boolean} enabled
+ */
 EnableReactionsData.prototype['enabled'] = undefined;
 var _default = EnableReactionsData;
 exports["default"] = _default;

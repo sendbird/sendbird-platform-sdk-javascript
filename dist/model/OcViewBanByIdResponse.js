@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OcViewBanByIdResponse model module.
  * @module model/OcViewBanByIdResponse
- * @version 0.0.14
- */var OcViewBanByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var OcViewBanByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>OcViewBanByIdResponse</code>.
    * @alias module:model/OcViewBanByIdResponse
@@ -62,9 +63,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return OcViewBanByIdResponse;
-}(); /**
-      * @member {module:model/SendBirdUser} user
-      */
+}();
+/**
+ * @member {module:model/SendBirdUser} user
+ */
 OcViewBanByIdResponse.prototype['user'] = undefined;
 
 /**

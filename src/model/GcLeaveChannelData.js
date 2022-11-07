@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcLeaveChannelData model module.
  * @module model/GcLeaveChannelData
- * @version 0.0.14
+ * @version 0.0.16
  */
 class GcLeaveChannelData {
     /**

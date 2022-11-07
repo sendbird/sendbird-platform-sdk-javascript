@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OcDeleteChannelByUrl200Response model module.
  * @module model/OcDeleteChannelByUrl200Response
- * @version 0.0.14
+ * @version 0.0.16
  */
 class OcDeleteChannelByUrl200Response {
     /**

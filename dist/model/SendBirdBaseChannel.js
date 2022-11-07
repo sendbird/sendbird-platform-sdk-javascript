@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdBaseChannel model module.
  * @module model/SendBirdBaseChannel
- * @version 0.0.14
- */var SendBirdBaseChannel = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdBaseChannel = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdBaseChannel</code>.
    * @alias module:model/SendBirdBaseChannel
@@ -77,9 +78,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdBaseChannel;
-}(); /**
-      * @member {String} cover_url
-      */
+}();
+/**
+ * @member {String} cover_url
+ */
 SendBirdBaseChannel.prototype['cover_url'] = undefined;
 
 /**

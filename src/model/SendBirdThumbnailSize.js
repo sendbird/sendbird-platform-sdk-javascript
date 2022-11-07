@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendBirdThumbnailSize model module.
  * @module model/SendBirdThumbnailSize
- * @version 0.0.14
+ * @version 0.0.16
  */
 class SendBirdThumbnailSize {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GcCheckIfMemberByIdResponse model module.
  * @module model/GcCheckIfMemberByIdResponse
- * @version 0.0.14
+ * @version 0.0.16
  */
 class GcCheckIfMemberByIdResponse {
     /**

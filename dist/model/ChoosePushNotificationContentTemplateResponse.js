@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChoosePushNotificationContentTemplateResponse model module.
  * @module model/ChoosePushNotificationContentTemplateResponse
- * @version 0.0.14
- */var ChoosePushNotificationContentTemplateResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ChoosePushNotificationContentTemplateResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ChoosePushNotificationContentTemplateResponse</code>.
    * @alias module:model/ChoosePushNotificationContentTemplateResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ChoosePushNotificationContentTemplateResponse;
-}(); /**
-      * @member {String} name
-      */
+}();
+/**
+ * @member {String} name
+ */
 ChoosePushNotificationContentTemplateResponse.prototype['name'] = undefined;
 var _default = ChoosePushNotificationContentTemplateResponse;
 exports["default"] = _default;

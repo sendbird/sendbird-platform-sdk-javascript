@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdEmoji model module.
  * @module model/SendBirdEmoji
- * @version 0.0.14
- */var SendBirdEmoji = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdEmoji = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdEmoji</code>.
    * @alias module:model/SendBirdEmoji
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdEmoji;
-}(); /**
-      * @member {String} key
-      */
+}();
+/**
+ * @member {String} key
+ */
 SendBirdEmoji.prototype['key'] = undefined;
 
 /**

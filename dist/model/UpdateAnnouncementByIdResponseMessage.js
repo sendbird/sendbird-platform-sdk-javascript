@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateAnnouncementByIdResponseMessage model module.
  * @module model/UpdateAnnouncementByIdResponseMessage
- * @version 0.0.14
- */var UpdateAnnouncementByIdResponseMessage = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateAnnouncementByIdResponseMessage = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateAnnouncementByIdResponseMessage</code>.
    * @alias module:model/UpdateAnnouncementByIdResponseMessage
@@ -94,9 +95,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateAnnouncementByIdResponseMessage;
-}(); /**
-      * @member {String} type
-      */
+}();
+/**
+ * @member {String} type
+ */
 UpdateAnnouncementByIdResponseMessage.prototype['type'] = undefined;
 
 /**

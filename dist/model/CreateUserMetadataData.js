@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateUserMetadataData model module.
  * @module model/CreateUserMetadataData
- * @version 0.0.14
- */var CreateUserMetadataData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var CreateUserMetadataData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>CreateUserMetadataData</code>.
    * @alias module:model/CreateUserMetadataData
@@ -55,10 +56,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return CreateUserMetadataData;
-}(); /**
-      * Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
-      * @member {Object} metadata
-      */
+}();
+/**
+ * Specifies a `JSON` object that stores key-value items. The key must not have a comma (,) and its length is limited to 128 characters. The value must be a string and its length is limited to 190 characters. This property can have up to 5 items.
+ * @member {Object} metadata
+ */
 CreateUserMetadataData.prototype['metadata'] = undefined;
 var _default = CreateUserMetadataData;
 exports["default"] = _default;

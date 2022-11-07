@@ -15,8 +15,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdGroupChannelLastMessage model module.
  * @module model/SendBirdGroupChannelLastMessage
- * @version 0.0.14
- */var SendBirdGroupChannelLastMessage = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdGroupChannelLastMessage = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdGroupChannelLastMessage</code>.
    * @alias module:model/SendBirdGroupChannelLastMessage
@@ -136,9 +137,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdGroupChannelLastMessage;
-}(); /**
-      * @member {Boolean} require_auth
-      */
+}();
+/**
+ * @member {Boolean} require_auth
+ */
 SendBirdGroupChannelLastMessage.prototype['require_auth'] = undefined;
 
 /**

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner model module.
  * @module model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner
- * @version 0.0.14
- */var GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner</code>.
    * @alias module:model/GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner
@@ -64,9 +65,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner;
-}(); /**
-      * @member {String} user_id
-      */
+}();
+/**
+ * @member {String} user_id
+ */
 GetDetailedOpenStatusOfAnnouncementByIdResponseOpenStatusInner.prototype['user_id'] = undefined;
 
 /**

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScheduleAnnouncementResponseCreateChannelOptions model module.
  * @module model/ScheduleAnnouncementResponseCreateChannelOptions
- * @version 0.0.14
- */var ScheduleAnnouncementResponseCreateChannelOptions = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ScheduleAnnouncementResponseCreateChannelOptions = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ScheduleAnnouncementResponseCreateChannelOptions</code>.
    * @alias module:model/ScheduleAnnouncementResponseCreateChannelOptions
@@ -64,9 +65,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ScheduleAnnouncementResponseCreateChannelOptions;
-}(); /**
-      * @member {Boolean} distinct
-      */
+}();
+/**
+ * @member {Boolean} distinct
+ */
 ScheduleAnnouncementResponseCreateChannelOptions.prototype['distinct'] = undefined;
 
 /**

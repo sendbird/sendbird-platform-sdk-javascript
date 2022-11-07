@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdGroupChannelCreatedBy model module.
  * @module model/SendBirdGroupChannelCreatedBy
- * @version 0.0.14
- */var SendBirdGroupChannelCreatedBy = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdGroupChannelCreatedBy = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdGroupChannelCreatedBy</code>.
    * @alias module:model/SendBirdGroupChannelCreatedBy
@@ -61,9 +62,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdGroupChannelCreatedBy;
-}(); /**
-      * @member {Boolean} require_auth_for_profile_image
-      */
+}();
+/**
+ * @member {Boolean} require_auth_for_profile_image
+ */
 SendBirdGroupChannelCreatedBy.prototype['require_auth_for_profile_image'] = undefined;
 
 /**

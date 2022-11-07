@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateExtraDataInMessageResponseSortedMetaarrayInner model module.
  * @module model/UpdateExtraDataInMessageResponseSortedMetaarrayInner
- * @version 0.0.14
- */var UpdateExtraDataInMessageResponseSortedMetaarrayInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateExtraDataInMessageResponseSortedMetaarrayInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateExtraDataInMessageResponseSortedMetaarrayInner</code>.
    * @alias module:model/UpdateExtraDataInMessageResponseSortedMetaarrayInner
@@ -55,9 +56,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateExtraDataInMessageResponseSortedMetaarrayInner;
-}(); /**
-      * @member {Array.<String>} value
-      */
+}();
+/**
+ * @member {Array.<String>} value
+ */
 UpdateExtraDataInMessageResponseSortedMetaarrayInner.prototype['value'] = undefined;
 
 /**

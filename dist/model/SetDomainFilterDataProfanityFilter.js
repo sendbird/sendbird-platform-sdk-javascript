@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SetDomainFilterDataProfanityFilter model module.
  * @module model/SetDomainFilterDataProfanityFilter
- * @version 0.0.14
- */var SetDomainFilterDataProfanityFilter = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SetDomainFilterDataProfanityFilter = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SetDomainFilterDataProfanityFilter</code>.
    * @alias module:model/SetDomainFilterDataProfanityFilter
@@ -62,9 +63,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SetDomainFilterDataProfanityFilter;
-}(); /**
-      * @member {Array.<String>} keywords
-      */
+}();
+/**
+ * @member {Array.<String>} keywords
+ */
 SetDomainFilterDataProfanityFilter.prototype['keywords'] = undefined;
 
 /**

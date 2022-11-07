@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AddExtraDataToMessageData model module.
  * @module model/AddExtraDataToMessageData
- * @version 0.0.14
- */var AddExtraDataToMessageData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var AddExtraDataToMessageData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AddExtraDataToMessageData</code>.
    * @alias module:model/AddExtraDataToMessageData
@@ -70,10 +71,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return AddExtraDataToMessageData;
-}(); /**
-      * Specifies the type of the channel. Either open_channels or group_channels.
-      * @member {String} channel_type
-      */
+}();
+/**
+ * Specifies the type of the channel. Either open_channels or group_channels.
+ * @member {String} channel_type
+ */
 AddExtraDataToMessageData.prototype['channel_type'] = undefined;
 
 /**

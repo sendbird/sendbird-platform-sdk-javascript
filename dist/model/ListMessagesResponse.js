@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMessagesResponse model module.
  * @module model/ListMessagesResponse
- * @version 0.0.14
- */var ListMessagesResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListMessagesResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListMessagesResponse</code>.
    * @alias module:model/ListMessagesResponse
@@ -53,9 +54,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListMessagesResponse;
-}(); /**
-      * @member {Array.<module:model/ListMessagesResponseMessagesInner>} messages
-      */
+}();
+/**
+ * @member {Array.<module:model/ListMessagesResponseMessagesInner>} messages
+ */
 ListMessagesResponse.prototype['messages'] = undefined;
 var _default = ListMessagesResponse;
 exports["default"] = _default;

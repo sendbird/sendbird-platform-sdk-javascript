@@ -15,8 +15,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportUserByIdResponse model module.
  * @module model/ReportUserByIdResponse
- * @version 0.0.14
- */var ReportUserByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ReportUserByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ReportUserByIdResponse</code>.
    * @alias module:model/ReportUserByIdResponse
@@ -76,9 +77,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ReportUserByIdResponse;
-}(); /**
-      * @member {String} report_type
-      */
+}();
+/**
+ * @member {String} report_type
+ */
 ReportUserByIdResponse.prototype['report_type'] = undefined;
 
 /**

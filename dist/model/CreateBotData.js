@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CreateBotData model module.
  * @module model/CreateBotData
- * @version 0.0.14
- */var CreateBotData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var CreateBotData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>CreateBotData</code>.
    * @alias module:model/CreateBotData
@@ -89,10 +90,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return CreateBotData;
-}(); /**
-      * Specifies the unique ID of the bot. The length is limited to 80 characters.
-      * @member {String} bot_userid
-      */
+}();
+/**
+ * Specifies the unique ID of the bot. The length is limited to 80 characters.
+ * @member {String} bot_userid
+ */
 CreateBotData.prototype['bot_userid'] = undefined;
 
 /**

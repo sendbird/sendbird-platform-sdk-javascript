@@ -156,6 +156,60 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property url (base name: "url")', function() {
+      // uncomment below and update the code to test the property url
+      //var instance = new SendbirdPlatformSdk.SendMessageData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property file (base name: "file")', function() {
+      // uncomment below and update the code to test the property file
+      //var instance = new SendbirdPlatformSdk.SendMessageData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property fileName (base name: "file_name")', function() {
+      // uncomment below and update the code to test the property fileName
+      //var instance = new SendbirdPlatformSdk.SendMessageData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property fileSize (base name: "file_size")', function() {
+      // uncomment below and update the code to test the property fileSize
+      //var instance = new SendbirdPlatformSdk.SendMessageData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property fileType (base name: "file_type")', function() {
+      // uncomment below and update the code to test the property fileType
+      //var instance = new SendbirdPlatformSdk.SendMessageData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property thumbnails (base name: "thumbnails")', function() {
+      // uncomment below and update the code to test the property thumbnails
+      //var instance = new SendbirdPlatformSdk.SendMessageData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property thumbnail1 (base name: "thumbnail1")', function() {
+      // uncomment below and update the code to test the property thumbnail1
+      //var instance = new SendbirdPlatformSdk.SendMessageData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property thumbnail2 (base name: "thumbnail2")', function() {
+      // uncomment below and update the code to test the property thumbnail2
+      //var instance = new SendbirdPlatformSdk.SendMessageData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property thumbnail3 (base name: "thumbnail3")', function() {
+      // uncomment below and update the code to test the property thumbnail3
+      //var instance = new SendbirdPlatformSdk.SendMessageData();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

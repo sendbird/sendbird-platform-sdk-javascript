@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateHmsPushConfigurationByIdData model module.
  * @module model/UpdateHmsPushConfigurationByIdData
- * @version 0.0.14
- */var UpdateHmsPushConfigurationByIdData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateHmsPushConfigurationByIdData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateHmsPushConfigurationByIdData</code>.
    * @alias module:model/UpdateHmsPushConfigurationByIdData
@@ -70,10 +71,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateHmsPushConfigurationByIdData;
-}(); /**
-      * Specifies the provider ID of the push configuration to update.
-      * @member {String} provider_id
-      */
+}();
+/**
+ * Specifies the provider ID of the push configuration to update.
+ * @member {String} provider_id
+ */
 UpdateHmsPushConfigurationByIdData.prototype['provider_id'] = undefined;
 
 /**

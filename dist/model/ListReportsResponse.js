@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListReportsResponse model module.
  * @module model/ListReportsResponse
- * @version 0.0.14
- */var ListReportsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListReportsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListReportsResponse</code>.
    * @alias module:model/ListReportsResponse
@@ -56,9 +57,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListReportsResponse;
-}(); /**
-      * @member {Array.<module:model/ListReportsResponseReportLogsInner>} report_logs
-      */
+}();
+/**
+ * @member {Array.<module:model/ListReportsResponseReportLogsInner>} report_logs
+ */
 ListReportsResponse.prototype['report_logs'] = undefined;
 
 /**

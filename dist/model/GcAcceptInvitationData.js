@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GcAcceptInvitationData model module.
  * @module model/GcAcceptInvitationData
- * @version 0.0.14
- */var GcAcceptInvitationData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var GcAcceptInvitationData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>GcAcceptInvitationData</code>.
    * @alias module:model/GcAcceptInvitationData
@@ -65,10 +66,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return GcAcceptInvitationData;
-}(); /**
-      * Specifies the URL of the private group channel to join through accepting an invitation.
-      * @member {String} channel_url
-      */
+}();
+/**
+ * Specifies the URL of the private group channel to join through accepting an invitation.
+ * @member {String} channel_url
+ */
 GcAcceptInvitationData.prototype['channel_url'] = undefined;
 
 /**

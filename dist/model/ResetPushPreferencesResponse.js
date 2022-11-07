@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ResetPushPreferencesResponse model module.
  * @module model/ResetPushPreferencesResponse
- * @version 0.0.14
- */var ResetPushPreferencesResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ResetPushPreferencesResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ResetPushPreferencesResponse</code>.
    * @alias module:model/ResetPushPreferencesResponse
@@ -91,9 +92,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ResetPushPreferencesResponse;
-}(); /**
-      * @member {String} snooze_start_ts
-      */
+}();
+/**
+ * @member {String} snooze_start_ts
+ */
 ResetPushPreferencesResponse.prototype['snooze_start_ts'] = undefined;
 
 /**

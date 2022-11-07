@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UpdateHmsPushConfigurationByIdResponse model module.
  * @module model/UpdateHmsPushConfigurationByIdResponse
- * @version 0.0.14
- */var UpdateHmsPushConfigurationByIdResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var UpdateHmsPushConfigurationByIdResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>UpdateHmsPushConfigurationByIdResponse</code>.
    * @alias module:model/UpdateHmsPushConfigurationByIdResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return UpdateHmsPushConfigurationByIdResponse;
-}(); /**
-      * @member {String} push_configurations
-      */
+}();
+/**
+ * @member {String} push_configurations
+ */
 UpdateHmsPushConfigurationByIdResponse.prototype['push_configurations'] = undefined;
 var _default = UpdateHmsPushConfigurationByIdResponse;
 exports["default"] = _default;

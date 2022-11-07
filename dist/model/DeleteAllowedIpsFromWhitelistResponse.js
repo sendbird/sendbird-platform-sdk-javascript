@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The DeleteAllowedIpsFromWhitelistResponse model module.
  * @module model/DeleteAllowedIpsFromWhitelistResponse
- * @version 0.0.14
- */var DeleteAllowedIpsFromWhitelistResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var DeleteAllowedIpsFromWhitelistResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>DeleteAllowedIpsFromWhitelistResponse</code>.
    * @alias module:model/DeleteAllowedIpsFromWhitelistResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return DeleteAllowedIpsFromWhitelistResponse;
-}(); /**
-      * @member {Array.<String>} ip_whitelist_addresses
-      */
+}();
+/**
+ * @member {Array.<String>} ip_whitelist_addresses
+ */
 DeleteAllowedIpsFromWhitelistResponse.prototype['ip_whitelist_addresses'] = undefined;
 var _default = DeleteAllowedIpsFromWhitelistResponse;
 exports["default"] = _default;

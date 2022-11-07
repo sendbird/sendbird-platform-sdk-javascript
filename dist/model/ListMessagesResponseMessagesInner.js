@@ -16,8 +16,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMessagesResponseMessagesInner model module.
  * @module model/ListMessagesResponseMessagesInner
- * @version 0.0.14
- */var ListMessagesResponseMessagesInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListMessagesResponseMessagesInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListMessagesResponseMessagesInner</code>.
    * @alias module:model/ListMessagesResponseMessagesInner
@@ -119,9 +120,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListMessagesResponseMessagesInner;
-}(); /**
-      * @member {Number} message_survival_seconds
-      */
+}();
+/**
+ * @member {Number} message_survival_seconds
+ */
 ListMessagesResponseMessagesInner.prototype['message_survival_seconds'] = undefined;
 
 /**

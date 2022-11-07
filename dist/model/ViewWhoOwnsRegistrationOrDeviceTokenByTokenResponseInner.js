@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner model module.
  * @module model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner
- * @version 0.0.14
- */var ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner</code>.
    * @alias module:model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner;
-}(); /**
-      * @member {String} user_id
-      */
+}();
+/**
+ * @member {String} user_id
+ */
 ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner.prototype['user_id'] = undefined;
 var _default = ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner;
 exports["default"] = _default;

@@ -98,6 +98,16 @@
         done();
       });
     });
+    describe('configureAutoEventMessages', function() {
+      it('should call configureAutoEventMessages successfully', function(done) {
+        //uncomment below and update the code to test configureAutoEventMessages
+        //instance.configureAutoEventMessages(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deleteAllowedIpsFromWhitelist', function() {
       it('should call deleteAllowedIpsFromWhitelist successfully', function(done) {
         //uncomment below and update the code to test deleteAllowedIpsFromWhitelist
@@ -122,6 +132,16 @@
       it('should call generateSecondaryApiToken successfully', function(done) {
         //uncomment below and update the code to test generateSecondaryApiToken
         //instance.generateSecondaryApiToken(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listAutoEventMessages', function() {
+      it('should call listAutoEventMessages successfully', function(done) {
+        //uncomment below and update the code to test listAutoEventMessages
+        //instance.listAutoEventMessages(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

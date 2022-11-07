@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddEmojiCategoriesResponseEmojiCategoriesInner model module.
  * @module model/AddEmojiCategoriesResponseEmojiCategoriesInner
- * @version 0.0.14
+ * @version 0.0.16
  */
 class AddEmojiCategoriesResponseEmojiCategoriesInner {
     /**

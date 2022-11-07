@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RegisterGdprRequestResponse model module.
  * @module model/RegisterGdprRequestResponse
- * @version 0.0.14
- */var RegisterGdprRequestResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var RegisterGdprRequestResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RegisterGdprRequestResponse</code>.
    * @alias module:model/RegisterGdprRequestResponse
@@ -70,9 +71,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return RegisterGdprRequestResponse;
-}(); /**
-      * @member {String} request_id
-      */
+}();
+/**
+ * @member {String} request_id
+ */
 RegisterGdprRequestResponse.prototype['request_id'] = undefined;
 
 /**

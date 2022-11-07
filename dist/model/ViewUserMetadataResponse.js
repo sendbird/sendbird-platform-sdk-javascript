@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ViewUserMetadataResponse model module.
  * @module model/ViewUserMetadataResponse
- * @version 0.0.14
- */var ViewUserMetadataResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ViewUserMetadataResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ViewUserMetadataResponse</code>.
    * @alias module:model/ViewUserMetadataResponse
@@ -52,9 +53,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ViewUserMetadataResponse;
-}(); /**
-      * @member {String} anyOf
-      */
+}();
+/**
+ * @member {String} anyOf
+ */
 ViewUserMetadataResponse.prototype['anyOf'] = undefined;
 var _default = ViewUserMetadataResponse;
 exports["default"] = _default;

@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SendBirdPlugin model module.
  * @module model/SendBirdPlugin
- * @version 0.0.14
- */var SendBirdPlugin = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var SendBirdPlugin = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SendBirdPlugin</code>.
    * @alias module:model/SendBirdPlugin
@@ -58,9 +59,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return SendBirdPlugin;
-}(); /**
-      * @member {Object} detail
-      */
+}();
+/**
+ * @member {Object} detail
+ */
 SendBirdPlugin.prototype['detail'] = undefined;
 
 /**

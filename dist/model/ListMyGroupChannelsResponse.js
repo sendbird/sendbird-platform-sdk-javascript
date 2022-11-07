@@ -13,8 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ListMyGroupChannelsResponse model module.
  * @module model/ListMyGroupChannelsResponse
- * @version 0.0.14
- */var ListMyGroupChannelsResponse = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var ListMyGroupChannelsResponse = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ListMyGroupChannelsResponse</code>.
    * @alias module:model/ListMyGroupChannelsResponse
@@ -59,9 +60,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return ListMyGroupChannelsResponse;
-}(); /**
-      * @member {Array.<module:model/SendBirdGroupChannel>} channels
-      */
+}();
+/**
+ * @member {Array.<module:model/SendBirdGroupChannel>} channels
+ */
 ListMyGroupChannelsResponse.prototype['channels'] = undefined;
 
 /**

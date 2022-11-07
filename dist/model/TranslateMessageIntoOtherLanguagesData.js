@@ -12,8 +12,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TranslateMessageIntoOtherLanguagesData model module.
  * @module model/TranslateMessageIntoOtherLanguagesData
- * @version 0.0.14
- */var TranslateMessageIntoOtherLanguagesData = /*#__PURE__*/function () {
+ * @version 0.0.16
+ */
+var TranslateMessageIntoOtherLanguagesData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>TranslateMessageIntoOtherLanguagesData</code>.
    * @alias module:model/TranslateMessageIntoOtherLanguagesData
@@ -52,10 +53,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
   }]);
   return TranslateMessageIntoOtherLanguagesData;
-}(); /**
-      * Specifies an array of one or more codes of [translation](/docs/chat/v3/platform-api/message/translations/translation-engine) to translate the message.
-      * @member {Array.<String>} target_langs
-      */
+}();
+/**
+ * Specifies an array of one or more codes of [translation](/docs/chat/v3/platform-api/message/translations/translation-engine) to translate the message.
+ * @member {Array.<String>} target_langs
+ */
 TranslateMessageIntoOtherLanguagesData.prototype['target_langs'] = undefined;
 var _default = TranslateMessageIntoOtherLanguagesData;
 exports["default"] = _default;
