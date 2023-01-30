@@ -56,8 +56,8 @@ Please follow these steps:
 
 ##### Terminal 1
 
-1. Clone this repo to your machine  ```git clone git@github.com:sendbird/sendbird-platform-sdk```
-2. Move into the newly cloned repo  ```cd sendbird-platform-sdk```
+1. Clone this repo to your machine  ```git clone git@github.com:sendbird/sendbird-platform-sdk-javascript```
+2. Move into the newly cloned repo  ```cd sendbird-platform-sdk-javascript```
 3. Install node modules  ```npm install```
 4. Build the bundled JS   ```npm run build```
 5. Link the package   ```npm link```
@@ -66,7 +66,7 @@ Please follow these steps:
 
 1. Create a new npm package or move into and existing one  ```mkdir app-using-sendbird-chat```
 ```npm init -y```
-2. Link package to sendbird-platform-sdk ```npm link path/to/sdk/sendbird-platform-sdk```
+2. Link package to sendbird-platform-sdk ```npm link path/to/sdk/sendbird-platform-sdk-javascript```
 
 The linking step is demonstrated visually here.
 
