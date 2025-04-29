@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**messages** | [**[ListMessagesResponseMessagesInner]**](ListMessagesResponseMessagesInner.md) |  | [optional] 
+**messages** | [**[SendbirdMessageResponse]**](SendbirdMessageResponse.md) |  | [optional] 
 
 

@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -48,30 +48,30 @@
   }
 
   describe('UserApi', function() {
-    describe('addRegistrationOrDeviceToken', function() {
-      it('should call addRegistrationOrDeviceToken successfully', function(done) {
-        //uncomment below and update the code to test addRegistrationOrDeviceToken
-        //instance.addRegistrationOrDeviceToken(function(error) {
+    describe('addARegistrationOrDeviceToken', function() {
+      it('should call addARegistrationOrDeviceToken successfully', function(done) {
+        //uncomment below and update the code to test addARegistrationOrDeviceToken
+        //instance.addARegistrationOrDeviceToken(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('choosePushNotificationContentTemplate', function() {
-      it('should call choosePushNotificationContentTemplate successfully', function(done) {
-        //uncomment below and update the code to test choosePushNotificationContentTemplate
-        //instance.choosePushNotificationContentTemplate(function(error) {
+    describe('chooseAPushNotificationContentTemplate', function() {
+      it('should call chooseAPushNotificationContentTemplate successfully', function(done) {
+        //uncomment below and update the code to test chooseAPushNotificationContentTemplate
+        //instance.chooseAPushNotificationContentTemplate(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('createUser', function() {
-      it('should call createUser successfully', function(done) {
-        //uncomment below and update the code to test createUser
-        //instance.createUser(function(error) {
+    describe('createAUser', function() {
+      it('should call createAUser successfully', function(done) {
+        //uncomment below and update the code to test createAUser
+        //instance.createAUser(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -88,10 +88,20 @@
         done();
       });
     });
-    describe('deleteUserById', function() {
-      it('should call deleteUserById successfully', function(done) {
-        //uncomment below and update the code to test deleteUserById
-        //instance.deleteUserById(function(error) {
+    describe('deleteAUser', function() {
+      it('should call deleteAUser successfully', function(done) {
+        //uncomment below and update the code to test deleteAUser
+        //instance.deleteAUser(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getChannelInvitationPreference', function() {
+      it('should call getChannelInvitationPreference successfully', function(done) {
+        //uncomment below and update the code to test getChannelInvitationPreference
+        //instance.getChannelInvitationPreference(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -148,40 +158,30 @@
         done();
       });
     });
-    describe('registerAsOperatorToChannelsWithCustomChannelTypes', function() {
-      it('should call registerAsOperatorToChannelsWithCustomChannelTypes successfully', function(done) {
-        //uncomment below and update the code to test registerAsOperatorToChannelsWithCustomChannelTypes
-        //instance.registerAsOperatorToChannelsWithCustomChannelTypes(function(error) {
+    describe('removeARegistrationOrDeviceToken', function() {
+      it('should call removeARegistrationOrDeviceToken successfully', function(done) {
+        //uncomment below and update the code to test removeARegistrationOrDeviceToken
+        //instance.removeARegistrationOrDeviceToken(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('removeRegistrationOrDeviceToken', function() {
-      it('should call removeRegistrationOrDeviceToken successfully', function(done) {
-        //uncomment below and update the code to test removeRegistrationOrDeviceToken
-        //instance.removeRegistrationOrDeviceToken(function(error) {
+    describe('removeARegistrationOrDeviceTokenFromAnOwner', function() {
+      it('should call removeARegistrationOrDeviceTokenFromAnOwner successfully', function(done) {
+        //uncomment below and update the code to test removeARegistrationOrDeviceTokenFromAnOwner
+        //instance.removeARegistrationOrDeviceTokenFromAnOwner(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('removeRegistrationOrDeviceTokenByToken', function() {
-      it('should call removeRegistrationOrDeviceTokenByToken successfully', function(done) {
-        //uncomment below and update the code to test removeRegistrationOrDeviceTokenByToken
-        //instance.removeRegistrationOrDeviceTokenByToken(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('removeRegistrationOrDeviceTokenFromOwnerByToken', function() {
-      it('should call removeRegistrationOrDeviceTokenFromOwnerByToken successfully', function(done) {
-        //uncomment below and update the code to test removeRegistrationOrDeviceTokenFromOwnerByToken
-        //instance.removeRegistrationOrDeviceTokenFromOwnerByToken(function(error) {
+    describe('removeAllRegistrationOrDeviceToken', function() {
+      it('should call removeAllRegistrationOrDeviceToken successfully', function(done) {
+        //uncomment below and update the code to test removeAllRegistrationOrDeviceToken
+        //instance.removeAllRegistrationOrDeviceToken(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -198,6 +198,16 @@
         done();
       });
     });
+    describe('updateAUser', function() {
+      it('should call updateAUser successfully', function(done) {
+        //uncomment below and update the code to test updateAUser
+        //instance.updateAUser(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('updateChannelInvitationPreference', function() {
       it('should call updateChannelInvitationPreference successfully', function(done) {
         //uncomment below and update the code to test updateChannelInvitationPreference
@@ -208,10 +218,10 @@
         done();
       });
     });
-    describe('updateCountPreferenceOfChannelByUrl', function() {
-      it('should call updateCountPreferenceOfChannelByUrl successfully', function(done) {
-        //uncomment below and update the code to test updateCountPreferenceOfChannelByUrl
-        //instance.updateCountPreferenceOfChannelByUrl(function(error) {
+    describe('updateCountPreferenceOfAChannel', function() {
+      it('should call updateCountPreferenceOfAChannel successfully', function(done) {
+        //uncomment below and update the code to test updateCountPreferenceOfAChannel
+        //instance.updateCountPreferenceOfAChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -228,50 +238,30 @@
         done();
       });
     });
-    describe('updatePushPreferencesForChannelByUrl', function() {
-      it('should call updatePushPreferencesForChannelByUrl successfully', function(done) {
-        //uncomment below and update the code to test updatePushPreferencesForChannelByUrl
-        //instance.updatePushPreferencesForChannelByUrl(function(error) {
+    describe('updatePushPreferencesForAChannel', function() {
+      it('should call updatePushPreferencesForAChannel successfully', function(done) {
+        //uncomment below and update the code to test updatePushPreferencesForAChannel
+        //instance.updatePushPreferencesForAChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('updateUserById', function() {
-      it('should call updateUserById successfully', function(done) {
-        //uncomment below and update the code to test updateUserById
-        //instance.updateUserById(function(error) {
+    describe('viewAUser', function() {
+      it('should call viewAUser successfully', function(done) {
+        //uncomment below and update the code to test viewAUser
+        //instance.viewAUser(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('viewChannelInvitationPreference', function() {
-      it('should call viewChannelInvitationPreference successfully', function(done) {
-        //uncomment below and update the code to test viewChannelInvitationPreference
-        //instance.viewChannelInvitationPreference(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewCountPreferenceOfChannelByUrl', function() {
-      it('should call viewCountPreferenceOfChannelByUrl successfully', function(done) {
-        //uncomment below and update the code to test viewCountPreferenceOfChannelByUrl
-        //instance.viewCountPreferenceOfChannelByUrl(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewNumberOfChannelsByJoinStatus', function() {
-      it('should call viewNumberOfChannelsByJoinStatus successfully', function(done) {
-        //uncomment below and update the code to test viewNumberOfChannelsByJoinStatus
-        //instance.viewNumberOfChannelsByJoinStatus(function(error) {
+    describe('viewCountPreferenceOfAChannel', function() {
+      it('should call viewCountPreferenceOfAChannel successfully', function(done) {
+        //uncomment below and update the code to test viewCountPreferenceOfAChannel
+        //instance.viewCountPreferenceOfAChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -282,16 +272,6 @@
       it('should call viewNumberOfChannelsWithUnreadMessages successfully', function(done) {
         //uncomment below and update the code to test viewNumberOfChannelsWithUnreadMessages
         //instance.viewNumberOfChannelsWithUnreadMessages(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewNumberOfUnreadItems', function() {
-      it('should call viewNumberOfUnreadItems successfully', function(done) {
-        //uncomment below and update the code to test viewNumberOfUnreadItems
-        //instance.viewNumberOfUnreadItems(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -318,30 +298,20 @@
         done();
       });
     });
-    describe('viewPushPreferencesForChannelByUrl', function() {
-      it('should call viewPushPreferencesForChannelByUrl successfully', function(done) {
-        //uncomment below and update the code to test viewPushPreferencesForChannelByUrl
-        //instance.viewPushPreferencesForChannelByUrl(function(error) {
+    describe('viewPushPreferencesForAChannel', function() {
+      it('should call viewPushPreferencesForAChannel successfully', function(done) {
+        //uncomment below and update the code to test viewPushPreferencesForAChannel
+        //instance.viewPushPreferencesForAChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('viewUserById', function() {
-      it('should call viewUserById successfully', function(done) {
-        //uncomment below and update the code to test viewUserById
-        //instance.viewUserById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewWhoOwnsRegistrationOrDeviceTokenByToken', function() {
-      it('should call viewWhoOwnsRegistrationOrDeviceTokenByToken successfully', function(done) {
-        //uncomment below and update the code to test viewWhoOwnsRegistrationOrDeviceTokenByToken
-        //instance.viewWhoOwnsRegistrationOrDeviceTokenByToken(function(error) {
+    describe('viewWhoOwnsARegistrationOrDeviceToken', function() {
+      it('should call viewWhoOwnsARegistrationOrDeviceToken successfully', function(done) {
+        //uncomment below and update the code to test viewWhoOwnsARegistrationOrDeviceToken
+        //instance.viewWhoOwnsARegistrationOrDeviceToken(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

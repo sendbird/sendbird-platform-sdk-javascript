@@ -5,48 +5,40 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _AddEmojiCategoriesResponse = _interopRequireDefault(require("../model/AddEmojiCategoriesResponse"));
-var _AddEmojisData = _interopRequireDefault(require("../model/AddEmojisData"));
-var _AddEmojisResponse = _interopRequireDefault(require("../model/AddEmojisResponse"));
-var _AddExtraDataToMessageData = _interopRequireDefault(require("../model/AddExtraDataToMessageData"));
-var _AddExtraDataToMessageResponse = _interopRequireDefault(require("../model/AddExtraDataToMessageResponse"));
-var _AddReactionToAMessageData = _interopRequireDefault(require("../model/AddReactionToAMessageData"));
-var _AddReactionToAMessageResponse = _interopRequireDefault(require("../model/AddReactionToAMessageResponse"));
-var _EnableReactionsData = _interopRequireDefault(require("../model/EnableReactionsData"));
-var _EnableReactionsResponse = _interopRequireDefault(require("../model/EnableReactionsResponse"));
-var _GcMarkAllMessagesAsDeliveredData = _interopRequireDefault(require("../model/GcMarkAllMessagesAsDeliveredData"));
-var _GcMarkAllMessagesAsDeliveredResponse = _interopRequireDefault(require("../model/GcMarkAllMessagesAsDeliveredResponse"));
-var _GcMarkAllMessagesAsReadData = _interopRequireDefault(require("../model/GcMarkAllMessagesAsReadData"));
-var _GcViewNumberOfEachMembersUnreadMessagesResponse = _interopRequireDefault(require("../model/GcViewNumberOfEachMembersUnreadMessagesResponse"));
-var _ListAllEmojisAndEmojiCategoriesResponse = _interopRequireDefault(require("../model/ListAllEmojisAndEmojiCategoriesResponse"));
-var _ListAnnouncementsResponse = _interopRequireDefault(require("../model/ListAnnouncementsResponse"));
-var _ListEmojisResponse = _interopRequireDefault(require("../model/ListEmojisResponse"));
+var _AddExtraDataToAMessageRequest = _interopRequireDefault(require("../model/AddExtraDataToAMessageRequest"));
+var _AddExtraDataToAMessageResponse = _interopRequireDefault(require("../model/AddExtraDataToAMessageResponse"));
+var _GetTotalNumberOfMessagesInAChannelResponse = _interopRequireDefault(require("../model/GetTotalNumberOfMessagesInAChannelResponse"));
 var _ListMessagesResponse = _interopRequireDefault(require("../model/ListMessagesResponse"));
-var _ListReactionsOfMessageResponse = _interopRequireDefault(require("../model/ListReactionsOfMessageResponse"));
-var _RemoveReactionFromAMessageResponse = _interopRequireDefault(require("../model/RemoveReactionFromAMessageResponse"));
-var _SendBirdEmoji = _interopRequireDefault(require("../model/SendBirdEmoji"));
-var _SendBirdEmojiCategory = _interopRequireDefault(require("../model/SendBirdEmojiCategory"));
-var _SendBirdMessageResponse = _interopRequireDefault(require("../model/SendBirdMessageResponse"));
-var _SendMessageData = _interopRequireDefault(require("../model/SendMessageData"));
-var _TranslateMessageIntoOtherLanguagesData = _interopRequireDefault(require("../model/TranslateMessageIntoOtherLanguagesData"));
-var _UpdateEmojiCategoryUrlByIdData = _interopRequireDefault(require("../model/UpdateEmojiCategoryUrlByIdData"));
-var _UpdateEmojiUrlByKeyData = _interopRequireDefault(require("../model/UpdateEmojiUrlByKeyData"));
-var _UpdateExtraDataInMessageData = _interopRequireDefault(require("../model/UpdateExtraDataInMessageData"));
-var _UpdateExtraDataInMessageResponse = _interopRequireDefault(require("../model/UpdateExtraDataInMessageResponse"));
-var _UpdateMessageByIdData = _interopRequireDefault(require("../model/UpdateMessageByIdData"));
-var _UseDefaultEmojisData = _interopRequireDefault(require("../model/UseDefaultEmojisData"));
-var _UseDefaultEmojisResponse = _interopRequireDefault(require("../model/UseDefaultEmojisResponse"));
-var _ViewTotalNumberOfMessagesInChannelResponse = _interopRequireDefault(require("../model/ViewTotalNumberOfMessagesInChannelResponse"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+var _MarkChannelMessagesAsReadRequest = _interopRequireDefault(require("../model/MarkChannelMessagesAsReadRequest"));
+var _SendAMessageRequest = _interopRequireDefault(require("../model/SendAMessageRequest"));
+var _SendbirdMessageResponse = _interopRequireDefault(require("../model/SendbirdMessageResponse"));
+var _UpdateAMessageRequest = _interopRequireDefault(require("../model/UpdateAMessageRequest"));
+var _UpdateExtraDataInAMessageRequest = _interopRequireDefault(require("../model/UpdateExtraDataInAMessageRequest"));
+var _UpdateExtraDataInAMessageResponse = _interopRequireDefault(require("../model/UpdateExtraDataInAMessageResponse"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); } /**
+ * Sendbird Platform SDK
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
+ *
+ * The version of the OpenAPI document: 1.0.0
+ * Contact: support@sendbird.com
+ *
+ * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
+ * https://openapi-generator.tech
+ * Do not edit the class manually.
+ *
+ */
 /**
 * Message service.
 * @module api/MessageApi
-* @version 0.0.16
+* @version 2.0.0
 */
-var MessageApi = /*#__PURE__*/function () {
+var MessageApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new MessageApi. 
   * @alias module:api/MessageApi
@@ -60,128 +52,32 @@ var MessageApi = /*#__PURE__*/function () {
   }
 
   /**
-   * Add emoji categories
-   * ## Add emoji categories  Adds a list of one or more new emoji categories to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-add-emoji-categories
-   * @param {String} apiToken 
+   * Add extra data to a message
+   * ## Add extra data to a message  Adds one or more key-values items which store additional information for a message.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/message-add-metadata#1-add-metadata ----------------------------
+   * @param {module:model/String} channelType (Required) 
+   * @param {String} channelUrl (Required) 
+   * @param {String} messageId (Required) 
    * @param {Object} opts Optional parameters
-   * @param {Object.<String, Object>} opts.body 
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddEmojiCategoriesResponse} and HTTP response
+   * @param {String} opts.apiToken 
+   * @param {module:model/AddExtraDataToAMessageRequest} opts.addExtraDataToAMessageRequest 
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddExtraDataToAMessageResponse} and HTTP response
    */
-  _createClass(MessageApi, [{
-    key: "addEmojiCategoriesWithHttpInfo",
-    value: function addEmojiCategoriesWithHttpInfo(apiToken, opts) {
+  return _createClass(MessageApi, [{
+    key: "addExtraDataToAMessageWithHttpInfo",
+    value: function addExtraDataToAMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
-      var postBody = opts['body'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling addEmojiCategories");
-      }
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = _AddEmojiCategoriesResponse["default"];
-      return this.apiClient.callApi('/v3/emoji_categories', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Add emoji categories
-     * ## Add emoji categories  Adds a list of one or more new emoji categories to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-add-emoji-categories
-     * @param {String} apiToken 
-     * @param {Object} opts Optional parameters
-     * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddEmojiCategoriesResponse}
-     */
-  }, {
-    key: "addEmojiCategories",
-    value: function addEmojiCategories(apiToken, opts) {
-      return this.addEmojiCategoriesWithHttpInfo(apiToken, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Add emojis
-     * ## Add emojis  Adds a list of one or more new emojis to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-add-emojis
-     * @param {String} apiToken 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/AddEmojisData} opts.addEmojisData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddEmojisResponse} and HTTP response
-     */
-  }, {
-    key: "addEmojisWithHttpInfo",
-    value: function addEmojisWithHttpInfo(apiToken, opts) {
-      opts = opts || {};
-      var postBody = opts['addEmojisData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling addEmojis");
-      }
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = _AddEmojisResponse["default"];
-      return this.apiClient.callApi('/v3/emojis', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Add emojis
-     * ## Add emojis  Adds a list of one or more new emojis to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-add-emojis
-     * @param {String} apiToken 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/AddEmojisData} opts.addEmojisData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddEmojisResponse}
-     */
-  }, {
-    key: "addEmojis",
-    value: function addEmojis(apiToken, opts) {
-      return this.addEmojisWithHttpInfo(apiToken, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Add extra data to a message
-     * ## Add extra data to a message  Adds one or more key-values items which store additional information for a message.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-add-extra-data-to-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/AddExtraDataToMessageData} opts.addExtraDataToMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddExtraDataToMessageResponse} and HTTP response
-     */
-  }, {
-    key: "addExtraDataToMessageWithHttpInfo",
-    value: function addExtraDataToMessageWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts) {
-      opts = opts || {};
-      var postBody = opts['addExtraDataToMessageData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling addExtraDataToMessage");
-      }
+      var postBody = opts['addExtraDataToAMessageRequest'];
       // verify the required parameter 'channelType' is set
       if (channelType === undefined || channelType === null) {
-        throw new Error("Missing the required parameter 'channelType' when calling addExtraDataToMessage");
+        throw new Error("Missing the required parameter 'channelType' when calling addExtraDataToAMessage");
       }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling addExtraDataToMessage");
+        throw new Error("Missing the required parameter 'channelUrl' when calling addExtraDataToAMessage");
       }
       // verify the required parameter 'messageId' is set
       if (messageId === undefined || messageId === null) {
-        throw new Error("Missing the required parameter 'messageId' when calling addExtraDataToMessage");
+        throw new Error("Missing the required parameter 'messageId' when calling addExtraDataToAMessage");
       }
       var pathParams = {
         'channel_type': channelType,
@@ -190,229 +86,61 @@ var MessageApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       var formParams = {};
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _AddExtraDataToMessageResponse["default"];
+      var returnType = _AddExtraDataToAMessageResponse["default"];
       return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
 
     /**
      * Add extra data to a message
-     * ## Add extra data to a message  Adds one or more key-values items which store additional information for a message.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-add-extra-data-to-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
+     * ## Add extra data to a message  Adds one or more key-values items which store additional information for a message.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/message-add-metadata#1-add-metadata ----------------------------
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {String} messageId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/AddExtraDataToMessageData} opts.addExtraDataToMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddExtraDataToMessageResponse}
+     * @param {String} opts.apiToken 
+     * @param {module:model/AddExtraDataToAMessageRequest} opts.addExtraDataToAMessageRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddExtraDataToAMessageResponse}
      */
   }, {
-    key: "addExtraDataToMessage",
-    value: function addExtraDataToMessage(apiToken, channelType, channelUrl, messageId, opts) {
-      return this.addExtraDataToMessageWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Add a reaction to a message
-     * ## Add a reaction to a message  Adds a specific reaction to a message.  > __Note__: Currently, this action is only available in group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-add-a-reaction-to-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/AddReactionToAMessageData} opts.addReactionToAMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddReactionToAMessageResponse} and HTTP response
-     */
-  }, {
-    key: "addReactionToAMessageWithHttpInfo",
-    value: function addReactionToAMessageWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts) {
-      opts = opts || {};
-      var postBody = opts['addReactionToAMessageData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling addReactionToAMessage");
-      }
-      // verify the required parameter 'channelType' is set
-      if (channelType === undefined || channelType === null) {
-        throw new Error("Missing the required parameter 'channelType' when calling addReactionToAMessage");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling addReactionToAMessage");
-      }
-      // verify the required parameter 'messageId' is set
-      if (messageId === undefined || messageId === null) {
-        throw new Error("Missing the required parameter 'messageId' when calling addReactionToAMessage");
-      }
-      var pathParams = {
-        'channel_type': channelType,
-        'channel_url': channelUrl,
-        'message_id': messageId
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = _AddReactionToAMessageResponse["default"];
-      return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/messages/{message_id}/reactions', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Add a reaction to a message
-     * ## Add a reaction to a message  Adds a specific reaction to a message.  > __Note__: Currently, this action is only available in group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-add-a-reaction-to-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/AddReactionToAMessageData} opts.addReactionToAMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddReactionToAMessageResponse}
-     */
-  }, {
-    key: "addReactionToAMessage",
-    value: function addReactionToAMessage(apiToken, channelType, channelUrl, messageId, opts) {
-      return this.addReactionToAMessageWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Delete an emoji
-     * ## Delete an emoji  Deletes an emoji from the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-delete-an-emoji ----------------------------
-     * @param {String} apiToken 
-     * @param {String} emojiKey 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-  }, {
-    key: "deleteEmojiByKeyWithHttpInfo",
-    value: function deleteEmojiByKeyWithHttpInfo(apiToken, emojiKey) {
-      var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling deleteEmojiByKey");
-      }
-      // verify the required parameter 'emojiKey' is set
-      if (emojiKey === undefined || emojiKey === null) {
-        throw new Error("Missing the required parameter 'emojiKey' when calling deleteEmojiByKey");
-      }
-      var pathParams = {
-        'emoji_key': emojiKey
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = [];
-      var returnType = null;
-      return this.apiClient.callApi('/v3/emojis/{emoji_key}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Delete an emoji
-     * ## Delete an emoji  Deletes an emoji from the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-delete-an-emoji ----------------------------
-     * @param {String} apiToken 
-     * @param {String} emojiKey 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-  }, {
-    key: "deleteEmojiByKey",
-    value: function deleteEmojiByKey(apiToken, emojiKey) {
-      return this.deleteEmojiByKeyWithHttpInfo(apiToken, emojiKey).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Delete an emoji category
-     * ## Delete an emoji category  Deletes an emoji category with the specified ID.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-delete-an-emoji-category ----------------------------
-     * @param {String} apiToken 
-     * @param {String} emojiCategoryId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
-     */
-  }, {
-    key: "deleteEmojiCategoryByIdWithHttpInfo",
-    value: function deleteEmojiCategoryByIdWithHttpInfo(apiToken, emojiCategoryId) {
-      var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling deleteEmojiCategoryById");
-      }
-      // verify the required parameter 'emojiCategoryId' is set
-      if (emojiCategoryId === undefined || emojiCategoryId === null) {
-        throw new Error("Missing the required parameter 'emojiCategoryId' when calling deleteEmojiCategoryById");
-      }
-      var pathParams = {
-        'emoji_category_id': emojiCategoryId
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = Object;
-      return this.apiClient.callApi('/v3/emoji_categories/{emoji_category_id}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Delete an emoji category
-     * ## Delete an emoji category  Deletes an emoji category with the specified ID.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-delete-an-emoji-category ----------------------------
-     * @param {String} apiToken 
-     * @param {String} emojiCategoryId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
-     */
-  }, {
-    key: "deleteEmojiCategoryById",
-    value: function deleteEmojiCategoryById(apiToken, emojiCategoryId) {
-      return this.deleteEmojiCategoryByIdWithHttpInfo(apiToken, emojiCategoryId).then(function (response_and_data) {
+    key: "addExtraDataToAMessage",
+    value: function addExtraDataToAMessage(channelType, channelUrl, messageId, opts) {
+      return this.addExtraDataToAMessageWithHttpInfo(channelType, channelUrl, messageId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * Delete a message
-     * ## Delete a message  Deletes a message from a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-delete-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
+     * ## Delete a message  Deletes a message from a channel.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/delete-a-message#1-delete-a-message ----------------------------
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {String} messageId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
   }, {
-    key: "deleteMessageByIdWithHttpInfo",
-    value: function deleteMessageByIdWithHttpInfo(apiToken, channelType, channelUrl, messageId) {
+    key: "deleteAMessageWithHttpInfo",
+    value: function deleteAMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
+      opts = opts || {};
       var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling deleteMessageById");
-      }
       // verify the required parameter 'channelType' is set
       if (channelType === undefined || channelType === null) {
-        throw new Error("Missing the required parameter 'channelType' when calling deleteMessageById");
+        throw new Error("Missing the required parameter 'channelType' when calling deleteAMessage");
       }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling deleteMessageById");
+        throw new Error("Missing the required parameter 'channelUrl' when calling deleteAMessage");
       }
       // verify the required parameter 'messageId' is set
       if (messageId === undefined || messageId === null) {
-        throw new Error("Missing the required parameter 'messageId' when calling deleteMessageById");
+        throw new Error("Missing the required parameter 'messageId' when calling deleteAMessage");
       }
       var pathParams = {
         'channel_type': channelType,
@@ -421,7 +149,7 @@ var MessageApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       var formParams = {};
       var authNames = [];
@@ -433,507 +161,189 @@ var MessageApi = /*#__PURE__*/function () {
 
     /**
      * Delete a message
-     * ## Delete a message  Deletes a message from a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-delete-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
+     * ## Delete a message  Deletes a message from a channel.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/delete-a-message#1-delete-a-message ----------------------------
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {String} messageId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
   }, {
-    key: "deleteMessageById",
-    value: function deleteMessageById(apiToken, channelType, channelUrl, messageId) {
-      return this.deleteMessageByIdWithHttpInfo(apiToken, channelType, channelUrl, messageId).then(function (response_and_data) {
+    key: "deleteAMessage",
+    value: function deleteAMessage(channelType, channelUrl, messageId, opts) {
+      return this.deleteAMessageWithHttpInfo(channelType, channelUrl, messageId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
-     * Enable reactions
-     * ## Enable reactions  Turn on or off reactions in a Sendbird application.  > __Note__: This action also allows reactions in UIKit.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-enable-reactions
-     * @param {String} apiToken 
+     * Get a message
+     * ## Get a message  Retrieves information on a specific message.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/get-a-message#1-get-a-message ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.  `message_id`      Type: long      Description: Specifies the unique ID of the message to retrieve.
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {String} messageId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/EnableReactionsData} opts.enableReactionsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EnableReactionsResponse} and HTTP response
+     * @param {Boolean} opts.includeReactions 
+     * @param {Boolean} opts.includeThreadInfo 
+     * @param {Boolean} opts.includeParentMessageInfo 
+     * @param {Boolean} opts.includePollDetails Determines whether to include all properties of a poll resource with a full list of options in the results. If set to false, a selection of poll resource properties consisting of id, title, close_at, created_at, updated_at, status, and message_id are returned. (Default: false) * To use this property, the polls feature should be turned on in Settings > Chat > Features on Sendbird Dashboard.
+     * @param {Boolean} opts.withSortedMetaArray 
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendbirdMessageResponse} and HTTP response
      */
   }, {
-    key: "enableReactionsWithHttpInfo",
-    value: function enableReactionsWithHttpInfo(apiToken, opts) {
-      opts = opts || {};
-      var postBody = opts['enableReactionsData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling enableReactions");
-      }
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = _EnableReactionsResponse["default"];
-      return this.apiClient.callApi('/v3/applications/settings/reactions', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Enable reactions
-     * ## Enable reactions  Turn on or off reactions in a Sendbird application.  > __Note__: This action also allows reactions in UIKit.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-enable-reactions
-     * @param {String} apiToken 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/EnableReactionsData} opts.enableReactionsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EnableReactionsResponse}
-     */
-  }, {
-    key: "enableReactions",
-    value: function enableReactions(apiToken, opts) {
-      return this.enableReactionsWithHttpInfo(apiToken, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Mark all messages as delivered
-     * ## Mark all messages as delivered  Marks all messages in a group channel as delivered for a given user. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-mark-all-messages-as-delivered ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/GcMarkAllMessagesAsDeliveredData} opts.gcMarkAllMessagesAsDeliveredData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcMarkAllMessagesAsDeliveredResponse} and HTTP response
-     */
-  }, {
-    key: "gcMarkAllMessagesAsDeliveredWithHttpInfo",
-    value: function gcMarkAllMessagesAsDeliveredWithHttpInfo(apiToken, channelUrl, opts) {
-      opts = opts || {};
-      var postBody = opts['gcMarkAllMessagesAsDeliveredData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling gcMarkAllMessagesAsDelivered");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling gcMarkAllMessagesAsDelivered");
-      }
-      var pathParams = {
-        'channel_url': channelUrl
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = _GcMarkAllMessagesAsDeliveredResponse["default"];
-      return this.apiClient.callApi('/v3/group_channels/{channel_url}/messages/mark_as_delivered', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Mark all messages as delivered
-     * ## Mark all messages as delivered  Marks all messages in a group channel as delivered for a given user. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-mark-all-messages-as-delivered ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/GcMarkAllMessagesAsDeliveredData} opts.gcMarkAllMessagesAsDeliveredData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcMarkAllMessagesAsDeliveredResponse}
-     */
-  }, {
-    key: "gcMarkAllMessagesAsDelivered",
-    value: function gcMarkAllMessagesAsDelivered(apiToken, channelUrl, opts) {
-      return this.gcMarkAllMessagesAsDeliveredWithHttpInfo(apiToken, channelUrl, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Mark all messages as read
-     * ## Mark all messages as read  Marks all messages in a group channel as read for a given user. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-mark-all-messages-as-read ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/GcMarkAllMessagesAsReadData} opts.gcMarkAllMessagesAsReadData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
-     */
-  }, {
-    key: "gcMarkAllMessagesAsReadWithHttpInfo",
-    value: function gcMarkAllMessagesAsReadWithHttpInfo(apiToken, channelUrl, opts) {
-      opts = opts || {};
-      var postBody = opts['gcMarkAllMessagesAsReadData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling gcMarkAllMessagesAsRead");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling gcMarkAllMessagesAsRead");
-      }
-      var pathParams = {
-        'channel_url': channelUrl
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = Object;
-      return this.apiClient.callApi('/v3/group_channels/{channel_url}/messages/mark_as_read', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Mark all messages as read
-     * ## Mark all messages as read  Marks all messages in a group channel as read for a given user. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-mark-all-messages-as-read ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/GcMarkAllMessagesAsReadData} opts.gcMarkAllMessagesAsReadData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
-     */
-  }, {
-    key: "gcMarkAllMessagesAsRead",
-    value: function gcMarkAllMessagesAsRead(apiToken, channelUrl, opts) {
-      return this.gcMarkAllMessagesAsReadWithHttpInfo(apiToken, channelUrl, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * View number of each member's unread messages
-     * ## View number of each member's unread messages  Retrieves the total number of each member's unread messages in a group channel. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-view-number-of-each-member-s-unread-messages ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.userIds 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcViewNumberOfEachMembersUnreadMessagesResponse} and HTTP response
-     */
-  }, {
-    key: "gcViewNumberOfEachMembersUnreadMessagesWithHttpInfo",
-    value: function gcViewNumberOfEachMembersUnreadMessagesWithHttpInfo(apiToken, channelUrl, opts) {
+    key: "getAMessageWithHttpInfo",
+    value: function getAMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
       var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling gcViewNumberOfEachMembersUnreadMessages");
+      // verify the required parameter 'channelType' is set
+      if (channelType === undefined || channelType === null) {
+        throw new Error("Missing the required parameter 'channelType' when calling getAMessage");
       }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling gcViewNumberOfEachMembersUnreadMessages");
+        throw new Error("Missing the required parameter 'channelUrl' when calling getAMessage");
+      }
+      // verify the required parameter 'messageId' is set
+      if (messageId === undefined || messageId === null) {
+        throw new Error("Missing the required parameter 'messageId' when calling getAMessage");
       }
       var pathParams = {
-        'channel_url': channelUrl
+        'channel_type': channelType,
+        'channel_url': channelUrl,
+        'message_id': messageId
       };
       var queryParams = {
-        'user_ids': opts['userIds']
+        'include_reactions': opts['includeReactions'],
+        'include_thread_info': opts['includeThreadInfo'],
+        'include_parent_message_info': opts['includeParentMessageInfo'],
+        'include_poll_details': opts['includePollDetails'],
+        'with_sorted_meta_array': opts['withSortedMetaArray']
       };
       var headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       var formParams = {};
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _GcViewNumberOfEachMembersUnreadMessagesResponse["default"];
-      return this.apiClient.callApi('/v3/group_channels/{channel_url}/messages/unread_count', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      var returnType = _SendbirdMessageResponse["default"];
+      return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/messages/{message_id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
 
     /**
-     * View number of each member's unread messages
-     * ## View number of each member's unread messages  Retrieves the total number of each member's unread messages in a group channel. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-view-number-of-each-member-s-unread-messages ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
+     * Get a message
+     * ## Get a message  Retrieves information on a specific message.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/get-a-message#1-get-a-message ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.  `message_id`      Type: long      Description: Specifies the unique ID of the message to retrieve.
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {String} messageId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.userIds 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcViewNumberOfEachMembersUnreadMessagesResponse}
+     * @param {Boolean} opts.includeReactions 
+     * @param {Boolean} opts.includeThreadInfo 
+     * @param {Boolean} opts.includeParentMessageInfo 
+     * @param {Boolean} opts.includePollDetails Determines whether to include all properties of a poll resource with a full list of options in the results. If set to false, a selection of poll resource properties consisting of id, title, close_at, created_at, updated_at, status, and message_id are returned. (Default: false) * To use this property, the polls feature should be turned on in Settings > Chat > Features on Sendbird Dashboard.
+     * @param {Boolean} opts.withSortedMetaArray 
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendbirdMessageResponse}
      */
   }, {
-    key: "gcViewNumberOfEachMembersUnreadMessages",
-    value: function gcViewNumberOfEachMembersUnreadMessages(apiToken, channelUrl, opts) {
-      return this.gcViewNumberOfEachMembersUnreadMessagesWithHttpInfo(apiToken, channelUrl, opts).then(function (response_and_data) {
+    key: "getAMessage",
+    value: function getAMessage(channelType, channelUrl, messageId, opts) {
+      return this.getAMessageWithHttpInfo(channelType, channelUrl, messageId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
-     * Get an emoji
-     * ## Get an emoji  Retrieves an emoji with the specified key.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-get-an-emoji ----------------------------
-     * @param {String} apiToken 
-     * @param {String} emojiKey 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdEmoji} and HTTP response
-     */
-  }, {
-    key: "getEmojiByKeyWithHttpInfo",
-    value: function getEmojiByKeyWithHttpInfo(apiToken, emojiKey) {
-      var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling getEmojiByKey");
-      }
-      // verify the required parameter 'emojiKey' is set
-      if (emojiKey === undefined || emojiKey === null) {
-        throw new Error("Missing the required parameter 'emojiKey' when calling getEmojiByKey");
-      }
-      var pathParams = {
-        'emoji_key': emojiKey
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _SendBirdEmoji["default"];
-      return this.apiClient.callApi('/v3/emojis/{emoji_key}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Get an emoji
-     * ## Get an emoji  Retrieves an emoji with the specified key.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-get-an-emoji ----------------------------
-     * @param {String} apiToken 
-     * @param {String} emojiKey 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdEmoji}
-     */
-  }, {
-    key: "getEmojiByKey",
-    value: function getEmojiByKey(apiToken, emojiKey) {
-      return this.getEmojiByKeyWithHttpInfo(apiToken, emojiKey).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Get an emoji category
-     * ## Get an emoji category  Retrieves an emoji category with the specified ID, including its emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-get-an-emoji-category ----------------------------   `emoji_category_id`      Type: int      Description: Specifies the unique ID of the emoji category to retrieve.
-     * @param {String} apiToken 
-     * @param {String} emojiCategoryId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdEmojiCategory} and HTTP response
-     */
-  }, {
-    key: "getEmojiCategoryByIdWithHttpInfo",
-    value: function getEmojiCategoryByIdWithHttpInfo(apiToken, emojiCategoryId) {
-      var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling getEmojiCategoryById");
-      }
-      // verify the required parameter 'emojiCategoryId' is set
-      if (emojiCategoryId === undefined || emojiCategoryId === null) {
-        throw new Error("Missing the required parameter 'emojiCategoryId' when calling getEmojiCategoryById");
-      }
-      var pathParams = {
-        'emoji_category_id': emojiCategoryId
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _SendBirdEmojiCategory["default"];
-      return this.apiClient.callApi('/v3/emoji_categories/{emoji_category_id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Get an emoji category
-     * ## Get an emoji category  Retrieves an emoji category with the specified ID, including its emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-get-an-emoji-category ----------------------------   `emoji_category_id`      Type: int      Description: Specifies the unique ID of the emoji category to retrieve.
-     * @param {String} apiToken 
-     * @param {String} emojiCategoryId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdEmojiCategory}
-     */
-  }, {
-    key: "getEmojiCategoryById",
-    value: function getEmojiCategoryById(apiToken, emojiCategoryId) {
-      return this.getEmojiCategoryByIdWithHttpInfo(apiToken, emojiCategoryId).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * List all emojis and emoji categories
-     * ## List all emojis and emoji categories  Retrieves a list of all emoji categories registered to the application, including their emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-all-emojis-and-emoji-categories
-     * @param {String} apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListAllEmojisAndEmojiCategoriesResponse} and HTTP response
-     */
-  }, {
-    key: "listAllEmojisAndEmojiCategoriesWithHttpInfo",
-    value: function listAllEmojisAndEmojiCategoriesWithHttpInfo(apiToken) {
-      var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling listAllEmojisAndEmojiCategories");
-      }
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _ListAllEmojisAndEmojiCategoriesResponse["default"];
-      return this.apiClient.callApi('/v3/emoji_categories', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * List all emojis and emoji categories
-     * ## List all emojis and emoji categories  Retrieves a list of all emoji categories registered to the application, including their emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-all-emojis-and-emoji-categories
-     * @param {String} apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListAllEmojisAndEmojiCategoriesResponse}
-     */
-  }, {
-    key: "listAllEmojisAndEmojiCategories",
-    value: function listAllEmojisAndEmojiCategories(apiToken) {
-      return this.listAllEmojisAndEmojiCategoriesWithHttpInfo(apiToken).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * List announcements
-     * ## List announcements  Retrieves a list of announcements.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-list-announcements ----------------------------
-     * @param {String} apiToken 
+     * Get total number of messages in a channel
+     * ## Get total number of messages in a channel  Retrieves the total number of messages in a specific channel.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/get-total-number-of-messages-in-a-channel#1-get-total-number-of-messages-in-a-channel ----------------------------
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @param {String} opts.order 
-     * @param {String} opts.status 
-     * @param {String} opts.announcementGroup 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListAnnouncementsResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetTotalNumberOfMessagesInAChannelResponse} and HTTP response
      */
   }, {
-    key: "listAnnouncementsWithHttpInfo",
-    value: function listAnnouncementsWithHttpInfo(apiToken, opts) {
+    key: "getTotalNumberOfMessagesInAChannelWithHttpInfo",
+    value: function getTotalNumberOfMessagesInAChannelWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
       var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling listAnnouncements");
+      // verify the required parameter 'channelType' is set
+      if (channelType === undefined || channelType === null) {
+        throw new Error("Missing the required parameter 'channelType' when calling getTotalNumberOfMessagesInAChannel");
       }
-      var pathParams = {};
-      var queryParams = {
-        'token': opts['token'],
-        'limit': opts['limit'],
-        'order': opts['order'],
-        'status': opts['status'],
-        'announcement_group': opts['announcementGroup']
-      };
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _ListAnnouncementsResponse["default"];
-      return this.apiClient.callApi('/v3/announcements', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * List announcements
-     * ## List announcements  Retrieves a list of announcements.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-list-announcements ----------------------------
-     * @param {String} apiToken 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @param {String} opts.order 
-     * @param {String} opts.status 
-     * @param {String} opts.announcementGroup 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListAnnouncementsResponse}
-     */
-  }, {
-    key: "listAnnouncements",
-    value: function listAnnouncements(apiToken, opts) {
-      return this.listAnnouncementsWithHttpInfo(apiToken, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * List emojis
-     * ## List emojis  Retrieves a list of all emojis registered to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-emojis
-     * @param {String} apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListEmojisResponse} and HTTP response
-     */
-  }, {
-    key: "listEmojisWithHttpInfo",
-    value: function listEmojisWithHttpInfo(apiToken) {
-      var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling listEmojis");
+      // verify the required parameter 'channelUrl' is set
+      if (channelUrl === undefined || channelUrl === null) {
+        throw new Error("Missing the required parameter 'channelUrl' when calling getTotalNumberOfMessagesInAChannel");
       }
-      var pathParams = {};
+      var pathParams = {
+        'channel_type': channelType,
+        'channel_url': channelUrl
+      };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       var formParams = {};
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _ListEmojisResponse["default"];
-      return this.apiClient.callApi('/v3/emojis', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      var returnType = _GetTotalNumberOfMessagesInAChannelResponse["default"];
+      return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/messages/total_count', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
 
     /**
-     * List emojis
-     * ## List emojis  Retrieves a list of all emojis registered to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-emojis
-     * @param {String} apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListEmojisResponse}
+     * Get total number of messages in a channel
+     * ## Get total number of messages in a channel  Retrieves the total number of messages in a specific channel.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/get-total-number-of-messages-in-a-channel#1-get-total-number-of-messages-in-a-channel ----------------------------
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetTotalNumberOfMessagesInAChannelResponse}
      */
   }, {
-    key: "listEmojis",
-    value: function listEmojis(apiToken) {
-      return this.listEmojisWithHttpInfo(apiToken).then(function (response_and_data) {
+    key: "getTotalNumberOfMessagesInAChannel",
+    value: function getTotalNumberOfMessagesInAChannel(channelType, channelUrl, opts) {
+      return this.getTotalNumberOfMessagesInAChannelWithHttpInfo(channelType, channelUrl, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * List messages
-     * ## List messages  Retrieves a list of past messages of a channel.  > This message retrieval is one of Sendbird's [premium features](https://sendbird.com/docs/chat/v3/platform-api/guides/application#-3-sendbird-s-premium-features). Contact our [sales team](https://get.sendbird.com/talk-to-sales.html) for further assistance.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-list-messages ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of past messages.
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
+     * ## List messages  You can retrieve a list of past messages of a specific channel with this API.  By default, this action returns a list of messages in the order they were created. Replies in threaded messages are also listed in the chronological order of their creation like other messages, not grouped with their parent messages.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/list-messages#1-list-messages  `channel_type`   Type: string   Description: Specifies the type of the channel. Either open_channels or group_channels.   `channel_url`   Type: string   Description: Specifies the URL of the channel to retrieve a list of past messages.
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {Number} messageTs Specifies the timestamp to be the reference point of the query in Unix milliseconds. Either this or the message_id parameter below should be specified in your query URL to retrieve a list. It fetches messages that were sent prior to and after the specified message_ts and the default value for both prev_limit and next_limit is 15.
+     * @param {Number} messageId Specifies the unique ID of the message to be the reference point of the query. Either this or the message_ts parameter above should be specified in your query URL to retrieve a list. It fetches messages that were sent prior to and after the specified message_id and the default value for both prev_limit and next_limit is 15.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.messageTs 
-     * @param {Number} opts.messageId 
-     * @param {Number} opts.prevLimit 
-     * @param {Number} opts.nextLimit 
-     * @param {Boolean} opts.include 
-     * @param {Boolean} opts.reverse 
-     * @param {String} opts.senderId 
-     * @param {String} opts.senderIds 
-     * @param {String} opts.operatorFilter 
-     * @param {String} opts.customTypes 
-     * @param {String} opts.messageType 
+     * @param {Number} opts.prevLimit Specifies the number of previously sent messages to retrieve before message_ts. For example, if message_ts=1484202848298, then prev_limit=50 returns 50 messages sent by 1484202848297 (message_ts - 1). Acceptable values range from 0 to 200. (Default: 15)
+     * @param {Number} opts.nextLimit Specifies the number of sent messages to retrieve after message_ts. For example, if message_ts=1484202848298, then next_limit=50 returns 50 messages sent from 1484202848299 (message_ts + 1). Acceptable values range from 0 to 200. (Default: 15)
+     * @param {Boolean} opts.include Determines whether to include messages sent exactly on the specified message_ts in the results. (Default: true)
+     * @param {Boolean} opts.reverse Determines whether to sort the results in reverse chronological order. If set to true, messages appear in reverse chronological order where the newest comes first and the oldest last. (Default: false)
+     * @param {String} opts.senderId Restricts the search scope to only retrieve messages sent by the user with the specified ID.
+     * @param {String} opts.senderIds Restricts the search scope to only retrieve messages sent by one or more users with the specified IDs listed in a comma-separated string.
+     * @param {module:model/String} opts.operatorFilter 
+     * @param {String} opts.customTypes Specifies a comma-separated string of one or more custom message types to retrieve. The value set to this parameter can serve as a filter as follows: - A string of specific custom types: Messages with the corresponding custom types are returned. - Empty like &custom_types=&...: Messages whose custom_type property is empty or has a value of null are returned. - An asterisk (\\*) (default): All messages are returned regardless of their custom_type.
+     * @param {module:model/String} opts.messageType 
      * @param {Boolean} opts.includingRemoved 
      * @param {Boolean} opts.includeReactions 
-     * @param {Boolean} opts.withSortedMetaArray 
+     * @param {module:model/String} opts.includeReplyType One of following values: NONE, ALL, ONLY_REPLY_TO_CHANNEL
+     * @param {Boolean} opts.includeParentMessageInfo 
+     * @param {Boolean} opts.includeThreadInfo 
+     * @param {Boolean} opts.includePollDetails Determines whether to include all properties of a poll resource with a full list of options in the results. If set to false, a selection of poll resource properties consisting of id, title, close_at, created_at, updated_at, status, and message_id are returned. (Default: false) * To use this property, the polls feature should be turned on in Settings > Chat > Features on Sendbird Dashboard.
+     * @param {Boolean} opts.withSortedMetaArray Determines whether to include the sorted_metaarray property in the response. (Default: false)
      * @param {Boolean} opts.showSubchannelMessagesOnly 
      * @param {String} opts.userId 
-     * @param {String} opts.customType 
-     * @param {Boolean} opts.withMetaArray 
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListMessagesResponse} and HTTP response
      */
   }, {
     key: "listMessagesWithHttpInfo",
-    value: function listMessagesWithHttpInfo(apiToken, channelType, channelUrl, opts) {
+    value: function listMessagesWithHttpInfo(channelType, channelUrl, messageTs, messageId, opts) {
       opts = opts || {};
       var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling listMessages");
-      }
       // verify the required parameter 'channelType' is set
       if (channelType === undefined || channelType === null) {
         throw new Error("Missing the required parameter 'channelType' when calling listMessages");
@@ -942,13 +352,21 @@ var MessageApi = /*#__PURE__*/function () {
       if (channelUrl === undefined || channelUrl === null) {
         throw new Error("Missing the required parameter 'channelUrl' when calling listMessages");
       }
+      // verify the required parameter 'messageTs' is set
+      if (messageTs === undefined || messageTs === null) {
+        throw new Error("Missing the required parameter 'messageTs' when calling listMessages");
+      }
+      // verify the required parameter 'messageId' is set
+      if (messageId === undefined || messageId === null) {
+        throw new Error("Missing the required parameter 'messageId' when calling listMessages");
+      }
       var pathParams = {
         'channel_type': channelType,
         'channel_url': channelUrl
       };
       var queryParams = {
-        'message_ts': opts['messageTs'],
-        'message_id': opts['messageId'],
+        'message_ts': messageTs,
+        'message_id': messageId,
         'prev_limit': opts['prevLimit'],
         'next_limit': opts['nextLimit'],
         'include': opts['include'],
@@ -960,14 +378,16 @@ var MessageApi = /*#__PURE__*/function () {
         'message_type': opts['messageType'],
         'including_removed': opts['includingRemoved'],
         'include_reactions': opts['includeReactions'],
+        'include_reply_type': opts['includeReplyType'],
+        'include_parent_message_info': opts['includeParentMessageInfo'],
+        'include_thread_info': opts['includeThreadInfo'],
+        'include_poll_details': opts['includePollDetails'],
         'with_sorted_meta_array': opts['withSortedMetaArray'],
         'show_subchannel_messages_only': opts['showSubchannelMessagesOnly'],
-        'user_id': opts['userId'],
-        'custom_type': opts['customType'],
-        'with_meta_array': opts['withMetaArray']
+        'user_id': opts['userId']
       };
       var headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       var formParams = {};
       var authNames = [];
@@ -979,194 +399,168 @@ var MessageApi = /*#__PURE__*/function () {
 
     /**
      * List messages
-     * ## List messages  Retrieves a list of past messages of a channel.  > This message retrieval is one of Sendbird's [premium features](https://sendbird.com/docs/chat/v3/platform-api/guides/application#-3-sendbird-s-premium-features). Contact our [sales team](https://get.sendbird.com/talk-to-sales.html) for further assistance.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-list-messages ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of past messages.
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
+     * ## List messages  You can retrieve a list of past messages of a specific channel with this API.  By default, this action returns a list of messages in the order they were created. Replies in threaded messages are also listed in the chronological order of their creation like other messages, not grouped with their parent messages.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/list-messages#1-list-messages  `channel_type`   Type: string   Description: Specifies the type of the channel. Either open_channels or group_channels.   `channel_url`   Type: string   Description: Specifies the URL of the channel to retrieve a list of past messages.
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {Number} messageTs Specifies the timestamp to be the reference point of the query in Unix milliseconds. Either this or the message_id parameter below should be specified in your query URL to retrieve a list. It fetches messages that were sent prior to and after the specified message_ts and the default value for both prev_limit and next_limit is 15.
+     * @param {Number} messageId Specifies the unique ID of the message to be the reference point of the query. Either this or the message_ts parameter above should be specified in your query URL to retrieve a list. It fetches messages that were sent prior to and after the specified message_id and the default value for both prev_limit and next_limit is 15.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.messageTs 
-     * @param {Number} opts.messageId 
-     * @param {Number} opts.prevLimit 
-     * @param {Number} opts.nextLimit 
-     * @param {Boolean} opts.include 
-     * @param {Boolean} opts.reverse 
-     * @param {String} opts.senderId 
-     * @param {String} opts.senderIds 
-     * @param {String} opts.operatorFilter 
-     * @param {String} opts.customTypes 
-     * @param {String} opts.messageType 
+     * @param {Number} opts.prevLimit Specifies the number of previously sent messages to retrieve before message_ts. For example, if message_ts=1484202848298, then prev_limit=50 returns 50 messages sent by 1484202848297 (message_ts - 1). Acceptable values range from 0 to 200. (Default: 15)
+     * @param {Number} opts.nextLimit Specifies the number of sent messages to retrieve after message_ts. For example, if message_ts=1484202848298, then next_limit=50 returns 50 messages sent from 1484202848299 (message_ts + 1). Acceptable values range from 0 to 200. (Default: 15)
+     * @param {Boolean} opts.include Determines whether to include messages sent exactly on the specified message_ts in the results. (Default: true)
+     * @param {Boolean} opts.reverse Determines whether to sort the results in reverse chronological order. If set to true, messages appear in reverse chronological order where the newest comes first and the oldest last. (Default: false)
+     * @param {String} opts.senderId Restricts the search scope to only retrieve messages sent by the user with the specified ID.
+     * @param {String} opts.senderIds Restricts the search scope to only retrieve messages sent by one or more users with the specified IDs listed in a comma-separated string.
+     * @param {module:model/String} opts.operatorFilter 
+     * @param {String} opts.customTypes Specifies a comma-separated string of one or more custom message types to retrieve. The value set to this parameter can serve as a filter as follows: - A string of specific custom types: Messages with the corresponding custom types are returned. - Empty like &custom_types=&...: Messages whose custom_type property is empty or has a value of null are returned. - An asterisk (\\*) (default): All messages are returned regardless of their custom_type.
+     * @param {module:model/String} opts.messageType 
      * @param {Boolean} opts.includingRemoved 
      * @param {Boolean} opts.includeReactions 
-     * @param {Boolean} opts.withSortedMetaArray 
+     * @param {module:model/String} opts.includeReplyType One of following values: NONE, ALL, ONLY_REPLY_TO_CHANNEL
+     * @param {Boolean} opts.includeParentMessageInfo 
+     * @param {Boolean} opts.includeThreadInfo 
+     * @param {Boolean} opts.includePollDetails Determines whether to include all properties of a poll resource with a full list of options in the results. If set to false, a selection of poll resource properties consisting of id, title, close_at, created_at, updated_at, status, and message_id are returned. (Default: false) * To use this property, the polls feature should be turned on in Settings > Chat > Features on Sendbird Dashboard.
+     * @param {Boolean} opts.withSortedMetaArray Determines whether to include the sorted_metaarray property in the response. (Default: false)
      * @param {Boolean} opts.showSubchannelMessagesOnly 
      * @param {String} opts.userId 
-     * @param {String} opts.customType 
-     * @param {Boolean} opts.withMetaArray 
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListMessagesResponse}
      */
   }, {
     key: "listMessages",
-    value: function listMessages(apiToken, channelType, channelUrl, opts) {
-      return this.listMessagesWithHttpInfo(apiToken, channelType, channelUrl, opts).then(function (response_and_data) {
+    value: function listMessages(channelType, channelUrl, messageTs, messageId, opts) {
+      return this.listMessagesWithHttpInfo(channelType, channelUrl, messageTs, messageId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
-     * List reactions of a message
-     * ## List reactions of a message  Retrieves a list of reactions made to a message.  > __Note__: Currently, this action is only available in group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-list-reactions-of-a-message ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.  `message_id`      Type: long      Description: Specifies the unique ID of the message to add a reaction to.
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
+     * Mark all messages as read
+     * ## Mark all messages as read  Marks all messages in a group channel as read for a specific user. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/platform-api/v3/message/read-receipts/mark-all-messages-as-read-message#1-mark-all-messages-as-read
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.listUsers 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListReactionsOfMessageResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @param {module:model/MarkChannelMessagesAsReadRequest} opts.markChannelMessagesAsReadRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
   }, {
-    key: "listReactionsOfMessageWithHttpInfo",
-    value: function listReactionsOfMessageWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts) {
+    key: "markChannelMessagesAsReadWithHttpInfo",
+    value: function markChannelMessagesAsReadWithHttpInfo(channelUrl, opts) {
       opts = opts || {};
-      var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling listReactionsOfMessage");
-      }
-      // verify the required parameter 'channelType' is set
-      if (channelType === undefined || channelType === null) {
-        throw new Error("Missing the required parameter 'channelType' when calling listReactionsOfMessage");
-      }
+      var postBody = opts['markChannelMessagesAsReadRequest'];
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling listReactionsOfMessage");
-      }
-      // verify the required parameter 'messageId' is set
-      if (messageId === undefined || messageId === null) {
-        throw new Error("Missing the required parameter 'messageId' when calling listReactionsOfMessage");
+        throw new Error("Missing the required parameter 'channelUrl' when calling markChannelMessagesAsRead");
       }
       var pathParams = {
-        'channel_type': channelType,
-        'channel_url': channelUrl,
-        'message_id': messageId
+        'channel_url': channelUrl
       };
-      var queryParams = {
-        'list_users': opts['listUsers']
-      };
+      var queryParams = {};
       var headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       var formParams = {};
       var authNames = [];
-      var contentTypes = [];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _ListReactionsOfMessageResponse["default"];
-      return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/messages/{message_id}/reactions', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      var returnType = Object;
+      return this.apiClient.callApi('/v3/group_channels/{channel_url}/messages/mark_as_read', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
 
     /**
-     * List reactions of a message
-     * ## List reactions of a message  Retrieves a list of reactions made to a message.  > __Note__: Currently, this action is only available in group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-list-reactions-of-a-message ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.  `message_id`      Type: long      Description: Specifies the unique ID of the message to add a reaction to.
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
+     * Mark all messages as read
+     * ## Mark all messages as read  Marks all messages in a group channel as read for a specific user. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/platform-api/v3/message/read-receipts/mark-all-messages-as-read-message#1-mark-all-messages-as-read
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.listUsers 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListReactionsOfMessageResponse}
+     * @param {String} opts.apiToken 
+     * @param {module:model/MarkChannelMessagesAsReadRequest} opts.markChannelMessagesAsReadRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
   }, {
-    key: "listReactionsOfMessage",
-    value: function listReactionsOfMessage(apiToken, channelType, channelUrl, messageId, opts) {
-      return this.listReactionsOfMessageWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts).then(function (response_and_data) {
+    key: "markChannelMessagesAsRead",
+    value: function markChannelMessagesAsRead(channelUrl, opts) {
+      return this.markChannelMessagesAsReadWithHttpInfo(channelUrl, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * Migrate messages
-     * ## Migrate messages  Using our migration API, you can migrate the messages from another system into a Sendbird system's [channel](https://sendbird.com/docs/chat/v3/platform-api/guides/channel-types) which consists of users, messages, and other chat-related data.  > To turn on this feature, [contact our support team](https://dashboard.sendbird.com/settings/contact_us).  There are three things to do in advance before the migration. Follow the instructions below:  1. Register the users of your current chat solution to your Sendbird application. You can migrate the users into the Sendbird system using the [user creation API](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-create-a-user). 2. Create either an [open](https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-create-a-channel) or a [group](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-create-a-channel) channel to migrate the messages of your chat solution. The Sendbird system doesn't create a channel for your migration automatically. 3. The maximum number of migrated messages per call is 100. To avoid the failure during your migration, you must adjust the number of messages to process at once via the API.  https://sendbird.com/docs/chat/v3/platform-api/guides/migration#2-migrate-messages ----------------------------
-     * @param {String} apiToken 
-     * @param {String} targetChannelUrl 
+     * ## Migrate messages  Using our migration API, you can migrate the messages from another system into a Sendbird system's [channel](https://sendbird.com/docs/chat/v3/platform-api/guides/channel-types) which consists of users, messages, and other chat-related data.  > To turn on this feature, [contact our support team](https://dashboard.sendbird.com/settings/contact_us).      There are three things to do in advance before the migration. Follow the instructions below:  1. Register the users of your current chat solution to your Sendbird application. You can migrate the users into the Sendbird system using the [user creation API](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-create-a-user).      2. Create either an [open](https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-create-a-channel) or a [group](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-create-a-channel) channel to migrate the messages of your chat solution. The Sendbird system doesn't create a channel for your migration automatically.      3. The maximum number of migrated messages per call is 100. To avoid the failure during your migration, you must adjust the number of messages to process at once via the API.       https://sendbird.com/docs/chat/platform-api/v3/message/migration/migrate-messages#1-migrate-messages
+     * @param {String} targetChannelUrl (Required) 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
   }, {
-    key: "migrateMessagesByUrlWithHttpInfo",
-    value: function migrateMessagesByUrlWithHttpInfo(apiToken, targetChannelUrl, opts) {
+    key: "migrateMessagesWithHttpInfo",
+    value: function migrateMessagesWithHttpInfo(targetChannelUrl, opts) {
       opts = opts || {};
       var postBody = opts['body'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling migrateMessagesByUrl");
-      }
       // verify the required parameter 'targetChannelUrl' is set
       if (targetChannelUrl === undefined || targetChannelUrl === null) {
-        throw new Error("Missing the required parameter 'targetChannelUrl' when calling migrateMessagesByUrl");
+        throw new Error("Missing the required parameter 'targetChannelUrl' when calling migrateMessages");
       }
       var pathParams = {
         'target_channel_url': targetChannelUrl
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       var formParams = {};
       var authNames = [];
       var contentTypes = ['application/json'];
-      var accepts = [];
-      var returnType = null;
+      var accepts = ['application/json'];
+      var returnType = Object;
       return this.apiClient.callApi('/v3/migration/{target_channel_url}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
 
     /**
      * Migrate messages
-     * ## Migrate messages  Using our migration API, you can migrate the messages from another system into a Sendbird system's [channel](https://sendbird.com/docs/chat/v3/platform-api/guides/channel-types) which consists of users, messages, and other chat-related data.  > To turn on this feature, [contact our support team](https://dashboard.sendbird.com/settings/contact_us).  There are three things to do in advance before the migration. Follow the instructions below:  1. Register the users of your current chat solution to your Sendbird application. You can migrate the users into the Sendbird system using the [user creation API](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-create-a-user). 2. Create either an [open](https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-create-a-channel) or a [group](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-create-a-channel) channel to migrate the messages of your chat solution. The Sendbird system doesn't create a channel for your migration automatically. 3. The maximum number of migrated messages per call is 100. To avoid the failure during your migration, you must adjust the number of messages to process at once via the API.  https://sendbird.com/docs/chat/v3/platform-api/guides/migration#2-migrate-messages ----------------------------
-     * @param {String} apiToken 
-     * @param {String} targetChannelUrl 
+     * ## Migrate messages  Using our migration API, you can migrate the messages from another system into a Sendbird system's [channel](https://sendbird.com/docs/chat/v3/platform-api/guides/channel-types) which consists of users, messages, and other chat-related data.  > To turn on this feature, [contact our support team](https://dashboard.sendbird.com/settings/contact_us).      There are three things to do in advance before the migration. Follow the instructions below:  1. Register the users of your current chat solution to your Sendbird application. You can migrate the users into the Sendbird system using the [user creation API](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-create-a-user).      2. Create either an [open](https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-create-a-channel) or a [group](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-create-a-channel) channel to migrate the messages of your chat solution. The Sendbird system doesn't create a channel for your migration automatically.      3. The maximum number of migrated messages per call is 100. To avoid the failure during your migration, you must adjust the number of messages to process at once via the API.       https://sendbird.com/docs/chat/platform-api/v3/message/migration/migrate-messages#1-migrate-messages
+     * @param {String} targetChannelUrl (Required) 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
      * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
   }, {
-    key: "migrateMessagesByUrl",
-    value: function migrateMessagesByUrl(apiToken, targetChannelUrl, opts) {
-      return this.migrateMessagesByUrlWithHttpInfo(apiToken, targetChannelUrl, opts).then(function (response_and_data) {
+    key: "migrateMessages",
+    value: function migrateMessages(targetChannelUrl, opts) {
+      return this.migrateMessagesWithHttpInfo(targetChannelUrl, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * Remove extra data from a message
-     * ## Remove extra data from a message  Removes specific items from a message by their keys.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-remove-extra-data-from-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
+     * ## Remove extra data from a message  Removes specific items from a message by their keys.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/message-remove-metadata#1-remove-metadata ----------------------------
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {String} messageId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.keys 
+     * @param {String} opts.keys 
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
   }, {
-    key: "removeExtraDataFromMessageWithHttpInfo",
-    value: function removeExtraDataFromMessageWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts) {
+    key: "removeExtraDataFromAMessageWithHttpInfo",
+    value: function removeExtraDataFromAMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
       var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling removeExtraDataFromMessage");
-      }
       // verify the required parameter 'channelType' is set
       if (channelType === undefined || channelType === null) {
-        throw new Error("Missing the required parameter 'channelType' when calling removeExtraDataFromMessage");
+        throw new Error("Missing the required parameter 'channelType' when calling removeExtraDataFromAMessage");
       }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling removeExtraDataFromMessage");
+        throw new Error("Missing the required parameter 'channelUrl' when calling removeExtraDataFromAMessage");
       }
       // verify the required parameter 'messageId' is set
       if (messageId === undefined || messageId === null) {
-        throw new Error("Missing the required parameter 'messageId' when calling removeExtraDataFromMessage");
+        throw new Error("Missing the required parameter 'messageId' when calling removeExtraDataFromAMessage");
       }
       var pathParams = {
         'channel_type': channelType,
@@ -1174,10 +568,10 @@ var MessageApi = /*#__PURE__*/function () {
         'message_id': messageId
       };
       var queryParams = {
-        'keys': this.apiClient.buildCollectionParam(opts['keys'], 'multi')
+        'keys': opts['keys']
       };
       var headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       var formParams = {};
       var authNames = [];
@@ -1189,122 +583,45 @@ var MessageApi = /*#__PURE__*/function () {
 
     /**
      * Remove extra data from a message
-     * ## Remove extra data from a message  Removes specific items from a message by their keys.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-remove-extra-data-from-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
+     * ## Remove extra data from a message  Removes specific items from a message by their keys.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/message-remove-metadata#1-remove-metadata ----------------------------
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {String} messageId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.keys 
+     * @param {String} opts.keys 
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
   }, {
-    key: "removeExtraDataFromMessage",
-    value: function removeExtraDataFromMessage(apiToken, channelType, channelUrl, messageId, opts) {
-      return this.removeExtraDataFromMessageWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Remove a reaction from a message
-     * ## Remove a reaction from a message  Removes a specific reaction from a message.  > __Note__: Currently, this action is only available in group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-remove-a-reaction-from-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.userId 
-     * @param {String} opts.reaction 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemoveReactionFromAMessageResponse} and HTTP response
-     */
-  }, {
-    key: "removeReactionFromAMessageWithHttpInfo",
-    value: function removeReactionFromAMessageWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts) {
-      opts = opts || {};
-      var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling removeReactionFromAMessage");
-      }
-      // verify the required parameter 'channelType' is set
-      if (channelType === undefined || channelType === null) {
-        throw new Error("Missing the required parameter 'channelType' when calling removeReactionFromAMessage");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling removeReactionFromAMessage");
-      }
-      // verify the required parameter 'messageId' is set
-      if (messageId === undefined || messageId === null) {
-        throw new Error("Missing the required parameter 'messageId' when calling removeReactionFromAMessage");
-      }
-      var pathParams = {
-        'channel_type': channelType,
-        'channel_url': channelUrl,
-        'message_id': messageId
-      };
-      var queryParams = {
-        'user_id': opts['userId'],
-        'reaction': opts['reaction']
-      };
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _RemoveReactionFromAMessageResponse["default"];
-      return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/messages/{message_id}/reactions', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Remove a reaction from a message
-     * ## Remove a reaction from a message  Removes a specific reaction from a message.  > __Note__: Currently, this action is only available in group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-remove-a-reaction-from-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.userId 
-     * @param {String} opts.reaction 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemoveReactionFromAMessageResponse}
-     */
-  }, {
-    key: "removeReactionFromAMessage",
-    value: function removeReactionFromAMessage(apiToken, channelType, channelUrl, messageId, opts) {
-      return this.removeReactionFromAMessageWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts).then(function (response_and_data) {
+    key: "removeExtraDataFromAMessage",
+    value: function removeExtraDataFromAMessage(channelType, channelUrl, messageId, opts) {
+      return this.removeExtraDataFromAMessageWithHttpInfo(channelType, channelUrl, messageId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * Send a message
-     * ## Send a message  Sends a message to a channel. You can send a text message, a file message, and an admin message.  >__Note__: With Sendbird Chat SDKs and the platform API, any type of files in messages can be uploaded to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-send-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
+     * ## Send a message  You can use this action to send a text message, a file message, or an admin message to a specific channel. Sendbird Chat SDKs and the platform API allows you to upload any type of files in messages to the Sendbird server. See [Message Overview](https://sendbird.com/docs/chat/platform-api/v3/message/message-overview) for more information on each message type. Messages are sent between client devices running the Sendbird Chat SDK or UIKit as well as programmatically from businesses to their customers. For instance, a delivery app can automatically send a message like \"Arriving in one minute!\" on behalf of a delivery driver.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/send-a-message#1-send-a-message ----------------------------
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/SendMessageData} opts.sendMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdMessageResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @param {module:model/SendAMessageRequest} opts.sendAMessageRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendbirdMessageResponse} and HTTP response
      */
   }, {
-    key: "sendMessageWithHttpInfo",
-    value: function sendMessageWithHttpInfo(apiToken, channelType, channelUrl, opts) {
+    key: "sendAMessageWithHttpInfo",
+    value: function sendAMessageWithHttpInfo(channelType, channelUrl, opts) {
       opts = opts || {};
-      var postBody = opts['sendMessageData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling sendMessage");
-      }
+      var postBody = opts['sendAMessageRequest'];
       // verify the required parameter 'channelType' is set
       if (channelType === undefined || channelType === null) {
-        throw new Error("Missing the required parameter 'channelType' when calling sendMessage");
+        throw new Error("Missing the required parameter 'channelType' when calling sendAMessage");
       }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling sendMessage");
+        throw new Error("Missing the required parameter 'channelUrl' when calling sendAMessage");
       }
       var pathParams = {
         'channel_type': channelType,
@@ -1312,309 +629,61 @@ var MessageApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       var formParams = {};
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _SendBirdMessageResponse["default"];
+      var returnType = _SendbirdMessageResponse["default"];
       return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/messages', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
 
     /**
      * Send a message
-     * ## Send a message  Sends a message to a channel. You can send a text message, a file message, and an admin message.  >__Note__: With Sendbird Chat SDKs and the platform API, any type of files in messages can be uploaded to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-send-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
+     * ## Send a message  You can use this action to send a text message, a file message, or an admin message to a specific channel. Sendbird Chat SDKs and the platform API allows you to upload any type of files in messages to the Sendbird server. See [Message Overview](https://sendbird.com/docs/chat/platform-api/v3/message/message-overview) for more information on each message type. Messages are sent between client devices running the Sendbird Chat SDK or UIKit as well as programmatically from businesses to their customers. For instance, a delivery app can automatically send a message like \"Arriving in one minute!\" on behalf of a delivery driver.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/send-a-message#1-send-a-message ----------------------------
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/SendMessageData} opts.sendMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdMessageResponse}
+     * @param {String} opts.apiToken 
+     * @param {module:model/SendAMessageRequest} opts.sendAMessageRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendbirdMessageResponse}
      */
   }, {
-    key: "sendMessage",
-    value: function sendMessage(apiToken, channelType, channelUrl, opts) {
-      return this.sendMessageWithHttpInfo(apiToken, channelType, channelUrl, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Translate a message into other languages
-     * ## Translate a message into other languages  Translates a message into specific languages. Only text messages of which type is MESG can be translated into other languages.  > __Note__: Message translation is powered by [Google Cloud Translation API recognition engine](https://cloud.google.com/translate/). Find language codes supported by the engine in the [Miscellaneous](https://sendbird.com/docs/chat/v3/platform-api/guides/Miscellaneous) page or visit the [Language Support](https://cloud.google.com/translate/docs/languages) for Google Cloud Translation.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-translate-a-message-into-other-languages ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/TranslateMessageIntoOtherLanguagesData} opts.translateMessageIntoOtherLanguagesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdMessageResponse} and HTTP response
-     */
-  }, {
-    key: "translateMessageIntoOtherLanguagesWithHttpInfo",
-    value: function translateMessageIntoOtherLanguagesWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts) {
-      opts = opts || {};
-      var postBody = opts['translateMessageIntoOtherLanguagesData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling translateMessageIntoOtherLanguages");
-      }
-      // verify the required parameter 'channelType' is set
-      if (channelType === undefined || channelType === null) {
-        throw new Error("Missing the required parameter 'channelType' when calling translateMessageIntoOtherLanguages");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling translateMessageIntoOtherLanguages");
-      }
-      // verify the required parameter 'messageId' is set
-      if (messageId === undefined || messageId === null) {
-        throw new Error("Missing the required parameter 'messageId' when calling translateMessageIntoOtherLanguages");
-      }
-      var pathParams = {
-        'channel_type': channelType,
-        'channel_url': channelUrl,
-        'message_id': messageId
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = _SendBirdMessageResponse["default"];
-      return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/messages/{message_id}/translation', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Translate a message into other languages
-     * ## Translate a message into other languages  Translates a message into specific languages. Only text messages of which type is MESG can be translated into other languages.  > __Note__: Message translation is powered by [Google Cloud Translation API recognition engine](https://cloud.google.com/translate/). Find language codes supported by the engine in the [Miscellaneous](https://sendbird.com/docs/chat/v3/platform-api/guides/Miscellaneous) page or visit the [Language Support](https://cloud.google.com/translate/docs/languages) for Google Cloud Translation.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-translate-a-message-into-other-languages ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/TranslateMessageIntoOtherLanguagesData} opts.translateMessageIntoOtherLanguagesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdMessageResponse}
-     */
-  }, {
-    key: "translateMessageIntoOtherLanguages",
-    value: function translateMessageIntoOtherLanguages(apiToken, channelType, channelUrl, messageId, opts) {
-      return this.translateMessageIntoOtherLanguagesWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Update an emoji category URL
-     * ## Update an emoji category URL  Updates the URL of an emoji category with the specified ID.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-update-an-emoji-category-url ----------------------------
-     * @param {String} apiToken 
-     * @param {String} emojiCategoryId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateEmojiCategoryUrlByIdData} opts.updateEmojiCategoryUrlByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdEmojiCategory} and HTTP response
-     */
-  }, {
-    key: "updateEmojiCategoryUrlByIdWithHttpInfo",
-    value: function updateEmojiCategoryUrlByIdWithHttpInfo(apiToken, emojiCategoryId, opts) {
-      opts = opts || {};
-      var postBody = opts['updateEmojiCategoryUrlByIdData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling updateEmojiCategoryUrlById");
-      }
-      // verify the required parameter 'emojiCategoryId' is set
-      if (emojiCategoryId === undefined || emojiCategoryId === null) {
-        throw new Error("Missing the required parameter 'emojiCategoryId' when calling updateEmojiCategoryUrlById");
-      }
-      var pathParams = {
-        'emoji_category_id': emojiCategoryId
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = _SendBirdEmojiCategory["default"];
-      return this.apiClient.callApi('/v3/emoji_categories/{emoji_category_id}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Update an emoji category URL
-     * ## Update an emoji category URL  Updates the URL of an emoji category with the specified ID.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-update-an-emoji-category-url ----------------------------
-     * @param {String} apiToken 
-     * @param {String} emojiCategoryId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateEmojiCategoryUrlByIdData} opts.updateEmojiCategoryUrlByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdEmojiCategory}
-     */
-  }, {
-    key: "updateEmojiCategoryUrlById",
-    value: function updateEmojiCategoryUrlById(apiToken, emojiCategoryId, opts) {
-      return this.updateEmojiCategoryUrlByIdWithHttpInfo(apiToken, emojiCategoryId, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Update an emoji URL
-     * ## Update an emoji URL  Updates the image URL of an emoji with the specified key.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-update-an-emoji-url ----------------------------
-     * @param {String} apiToken 
-     * @param {String} emojiKey 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateEmojiUrlByKeyData} opts.updateEmojiUrlByKeyData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdEmoji} and HTTP response
-     */
-  }, {
-    key: "updateEmojiUrlByKeyWithHttpInfo",
-    value: function updateEmojiUrlByKeyWithHttpInfo(apiToken, emojiKey, opts) {
-      opts = opts || {};
-      var postBody = opts['updateEmojiUrlByKeyData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling updateEmojiUrlByKey");
-      }
-      // verify the required parameter 'emojiKey' is set
-      if (emojiKey === undefined || emojiKey === null) {
-        throw new Error("Missing the required parameter 'emojiKey' when calling updateEmojiUrlByKey");
-      }
-      var pathParams = {
-        'emoji_key': emojiKey
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = _SendBirdEmoji["default"];
-      return this.apiClient.callApi('/v3/emojis/{emoji_key}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Update an emoji URL
-     * ## Update an emoji URL  Updates the image URL of an emoji with the specified key.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-update-an-emoji-url ----------------------------
-     * @param {String} apiToken 
-     * @param {String} emojiKey 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateEmojiUrlByKeyData} opts.updateEmojiUrlByKeyData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdEmoji}
-     */
-  }, {
-    key: "updateEmojiUrlByKey",
-    value: function updateEmojiUrlByKey(apiToken, emojiKey, opts) {
-      return this.updateEmojiUrlByKeyWithHttpInfo(apiToken, emojiKey, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * Update extra data in a message
-     * ## Update extra data in a message  Updates the values of specific items by their keys.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-update-extra-data-in-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateExtraDataInMessageData} opts.updateExtraDataInMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateExtraDataInMessageResponse} and HTTP response
-     */
-  }, {
-    key: "updateExtraDataInMessageWithHttpInfo",
-    value: function updateExtraDataInMessageWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts) {
-      opts = opts || {};
-      var postBody = opts['updateExtraDataInMessageData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling updateExtraDataInMessage");
-      }
-      // verify the required parameter 'channelType' is set
-      if (channelType === undefined || channelType === null) {
-        throw new Error("Missing the required parameter 'channelType' when calling updateExtraDataInMessage");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling updateExtraDataInMessage");
-      }
-      // verify the required parameter 'messageId' is set
-      if (messageId === undefined || messageId === null) {
-        throw new Error("Missing the required parameter 'messageId' when calling updateExtraDataInMessage");
-      }
-      var pathParams = {
-        'channel_type': channelType,
-        'channel_url': channelUrl,
-        'message_id': messageId
-      };
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = _UpdateExtraDataInMessageResponse["default"];
-      return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Update extra data in a message
-     * ## Update extra data in a message  Updates the values of specific items by their keys.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-update-extra-data-in-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateExtraDataInMessageData} opts.updateExtraDataInMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateExtraDataInMessageResponse}
-     */
-  }, {
-    key: "updateExtraDataInMessage",
-    value: function updateExtraDataInMessage(apiToken, channelType, channelUrl, messageId, opts) {
-      return this.updateExtraDataInMessageWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts).then(function (response_and_data) {
+    key: "sendAMessage",
+    value: function sendAMessage(channelType, channelUrl, opts) {
+      return this.sendAMessageWithHttpInfo(channelType, channelUrl, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
      * Update a message
-     * ## Update a message  Updates information on a message in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-update-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
+     * ## Update a message  Updates specific information on a message.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/update-a-message#1-update-a-message ----------------------------
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {String} messageId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateMessageByIdData} opts.updateMessageByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdMessageResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateAMessageRequest} opts.updateAMessageRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendbirdMessageResponse} and HTTP response
      */
   }, {
-    key: "updateMessageByIdWithHttpInfo",
-    value: function updateMessageByIdWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts) {
+    key: "updateAMessageWithHttpInfo",
+    value: function updateAMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
-      var postBody = opts['updateMessageByIdData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling updateMessageById");
-      }
+      var postBody = opts['updateAMessageRequest'];
       // verify the required parameter 'channelType' is set
       if (channelType === undefined || channelType === null) {
-        throw new Error("Missing the required parameter 'channelType' when calling updateMessageById");
+        throw new Error("Missing the required parameter 'channelType' when calling updateAMessage");
       }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling updateMessageById");
+        throw new Error("Missing the required parameter 'channelUrl' when calling updateAMessage");
       }
       // verify the required parameter 'messageId' is set
       if (messageId === undefined || messageId === null) {
-        throw new Error("Missing the required parameter 'messageId' when calling updateMessageById");
+        throw new Error("Missing the required parameter 'messageId' when calling updateAMessage");
       }
       var pathParams = {
         'channel_type': channelType,
@@ -1623,210 +692,97 @@ var MessageApi = /*#__PURE__*/function () {
       };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       var formParams = {};
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _SendBirdMessageResponse["default"];
+      var returnType = _SendbirdMessageResponse["default"];
       return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/messages/{message_id}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
 
     /**
      * Update a message
-     * ## Update a message  Updates information on a message in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-update-a-message ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
+     * ## Update a message  Updates specific information on a message.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/update-a-message#1-update-a-message ----------------------------
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {String} messageId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateMessageByIdData} opts.updateMessageByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdMessageResponse}
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateAMessageRequest} opts.updateAMessageRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendbirdMessageResponse}
      */
   }, {
-    key: "updateMessageById",
-    value: function updateMessageById(apiToken, channelType, channelUrl, messageId, opts) {
-      return this.updateMessageByIdWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts).then(function (response_and_data) {
+    key: "updateAMessage",
+    value: function updateAMessage(channelType, channelUrl, messageId, opts) {
+      return this.updateAMessageWithHttpInfo(channelType, channelUrl, messageId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
 
     /**
-     * Use default emojis
-     * ## Use default emojis  Determines whether to use the 7 default emojis initially provided.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-use-default-emojis
-     * @param {String} apiToken 
+     * Update extra data in a message
+     * ## Update extra data in a message  Updates the values of specific items by their keys.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/message-update-metadata#1-update-metadata ----------------------------
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {String} messageId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UseDefaultEmojisData} opts.useDefaultEmojisData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UseDefaultEmojisResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateExtraDataInAMessageRequest} opts.updateExtraDataInAMessageRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateExtraDataInAMessageResponse} and HTTP response
      */
   }, {
-    key: "useDefaultEmojisWithHttpInfo",
-    value: function useDefaultEmojisWithHttpInfo(apiToken, opts) {
+    key: "updateExtraDataInAMessageWithHttpInfo",
+    value: function updateExtraDataInAMessageWithHttpInfo(channelType, channelUrl, messageId, opts) {
       opts = opts || {};
-      var postBody = opts['useDefaultEmojisData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling useDefaultEmojis");
-      }
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = _UseDefaultEmojisResponse["default"];
-      return this.apiClient.callApi('/v3/applications/settings/use_default_emoji', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * Use default emojis
-     * ## Use default emojis  Determines whether to use the 7 default emojis initially provided.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-use-default-emojis
-     * @param {String} apiToken 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UseDefaultEmojisData} opts.useDefaultEmojisData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UseDefaultEmojisResponse}
-     */
-  }, {
-    key: "useDefaultEmojis",
-    value: function useDefaultEmojis(apiToken, opts) {
-      return this.useDefaultEmojisWithHttpInfo(apiToken, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * View a message
-     * ## View a message  Retrieves information on a message.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-view-a-message ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.  `message_id`      Type: long      Description: Specifies the unique ID of the message to retrieve.
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.withSortedMetaArray 
-     * @param {Boolean} opts.withMetaArray 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdMessageResponse} and HTTP response
-     */
-  }, {
-    key: "viewMessageByIdWithHttpInfo",
-    value: function viewMessageByIdWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts) {
-      opts = opts || {};
-      var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewMessageById");
-      }
+      var postBody = opts['updateExtraDataInAMessageRequest'];
       // verify the required parameter 'channelType' is set
       if (channelType === undefined || channelType === null) {
-        throw new Error("Missing the required parameter 'channelType' when calling viewMessageById");
+        throw new Error("Missing the required parameter 'channelType' when calling updateExtraDataInAMessage");
       }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling viewMessageById");
+        throw new Error("Missing the required parameter 'channelUrl' when calling updateExtraDataInAMessage");
       }
       // verify the required parameter 'messageId' is set
       if (messageId === undefined || messageId === null) {
-        throw new Error("Missing the required parameter 'messageId' when calling viewMessageById");
+        throw new Error("Missing the required parameter 'messageId' when calling updateExtraDataInAMessage");
       }
       var pathParams = {
         'channel_type': channelType,
         'channel_url': channelUrl,
         'message_id': messageId
       };
-      var queryParams = {
-        'with_sorted_meta_array': opts['withSortedMetaArray'],
-        'with_meta_array': opts['withMetaArray']
-      };
-      var headerParams = {
-        'Api-Token': apiToken
-      };
-      var formParams = {};
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _SendBirdMessageResponse["default"];
-      return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/messages/{message_id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-
-    /**
-     * View a message
-     * ## View a message  Retrieves information on a message.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-view-a-message ----------------------------   `channel_type`      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  `channel_url`      Type: string      Description: Specifies the URL of the target channel.  `message_id`      Type: long      Description: Specifies the unique ID of the message to retrieve.
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @param {String} messageId 
-     * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.withSortedMetaArray 
-     * @param {Boolean} opts.withMetaArray 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdMessageResponse}
-     */
-  }, {
-    key: "viewMessageById",
-    value: function viewMessageById(apiToken, channelType, channelUrl, messageId, opts) {
-      return this.viewMessageByIdWithHttpInfo(apiToken, channelType, channelUrl, messageId, opts).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-
-    /**
-     * View total number of messages in a channel
-     * ## View total number of messages in a channel  Retrieves the total number of messages in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-view-total-number-of-messages-in-a-channel ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewTotalNumberOfMessagesInChannelResponse} and HTTP response
-     */
-  }, {
-    key: "viewTotalNumberOfMessagesInChannelWithHttpInfo",
-    value: function viewTotalNumberOfMessagesInChannelWithHttpInfo(apiToken, channelType, channelUrl) {
-      var postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewTotalNumberOfMessagesInChannel");
-      }
-      // verify the required parameter 'channelType' is set
-      if (channelType === undefined || channelType === null) {
-        throw new Error("Missing the required parameter 'channelType' when calling viewTotalNumberOfMessagesInChannel");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling viewTotalNumberOfMessagesInChannel");
-      }
-      var pathParams = {
-        'channel_type': channelType,
-        'channel_url': channelUrl
-      };
       var queryParams = {};
       var headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       var formParams = {};
       var authNames = [];
-      var contentTypes = [];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _ViewTotalNumberOfMessagesInChannelResponse["default"];
-      return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/messages/total_count', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      var returnType = _UpdateExtraDataInAMessageResponse["default"];
+      return this.apiClient.callApi('/v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
 
     /**
-     * View total number of messages in a channel
-     * ## View total number of messages in a channel  Retrieves the total number of messages in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-view-total-number-of-messages-in-a-channel ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelType 
-     * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewTotalNumberOfMessagesInChannelResponse}
+     * Update extra data in a message
+     * ## Update extra data in a message  Updates the values of specific items by their keys.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/message-update-metadata#1-update-metadata ----------------------------
+     * @param {module:model/String} channelType (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {String} messageId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateExtraDataInAMessageRequest} opts.updateExtraDataInAMessageRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateExtraDataInAMessageResponse}
      */
   }, {
-    key: "viewTotalNumberOfMessagesInChannel",
-    value: function viewTotalNumberOfMessagesInChannel(apiToken, channelType, channelUrl) {
-      return this.viewTotalNumberOfMessagesInChannelWithHttpInfo(apiToken, channelType, channelUrl).then(function (response_and_data) {
+    key: "updateExtraDataInAMessage",
+    value: function updateExtraDataInAMessage(channelType, channelUrl, messageId, opts) {
+      return this.updateExtraDataInAMessageWithHttpInfo(channelType, channelUrl, messageId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
   }]);
-  return MessageApi;
 }();
-exports["default"] = MessageApi;

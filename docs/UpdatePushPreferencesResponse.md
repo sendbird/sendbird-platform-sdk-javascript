@@ -5,18 +5,18 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **blockPushFromBots** | **Boolean** |  | [optional] 
-**enablePushForReplies** | **Boolean** |  | [optional] 
-**pushBlockedBotIds** | **[String]** |  | [optional] 
-**pushTriggerOption** | **String** |  | [optional] 
 **doNotDisturb** | **Boolean** |  | [optional] 
-**startHour** | **Number** |  | [optional] 
-**startMin** | **Number** |  | [optional] 
+**enablePushForReplies** | **Boolean** |  | [optional] 
 **endHour** | **Number** |  | [optional] 
 **endMin** | **Number** |  | [optional] 
-**snoozeEnabled** | **Boolean** |  | [optional] 
-**snoozeStartTs** | **Number** |  | [optional] 
-**snoozeEndTs** | **Number** |  | [optional] 
-**timezone** | **String** |  | [optional] 
+**pushBlockedBotIds** | **[String]** |  | [optional] 
 **pushSound** | **String** |  | [optional] 
+**pushTriggerOption** | [**SendbirdPushTriggerOption**](SendbirdPushTriggerOption.md) |  | [optional] 
+**snoozeEnabled** | **Boolean** |  | [optional] 
+**snoozeEndTs** | **Number** |  | [optional] 
+**snoozeStartTs** | **Number** |  | [optional] 
+**startHour** | **Number** |  | [optional] 
+**startMin** | **Number** |  | [optional] 
+**timezone** | **String** |  | [optional] 
 
 

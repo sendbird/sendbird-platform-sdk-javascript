@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -12,12 +12,16 @@
  */
 
 import ApiClient from '../ApiClient';
-import CreateBotResponseBot from './CreateBotResponseBot';
+import ListBotsResponseBotsInnerAi from './ListBotsResponseBotsInnerAi';
+import ListBotsResponseBotsInnerBot from './ListBotsResponseBotsInnerBot';
+import ListBotsResponseBotsInnerBotStyle from './ListBotsResponseBotsInnerBotStyle';
+import ListBotsResponseBotsInnerFirstMessagesInner from './ListBotsResponseBotsInnerFirstMessagesInner';
+import ListBotsResponseBotsInnerSafeguard from './ListBotsResponseBotsInnerSafeguard';
 
 /**
  * The ListBotsResponseBotsInner model module.
  * @module model/ListBotsResponseBotsInner
- * @version 0.0.16
+ * @version 2.0.0
  */
 class ListBotsResponseBotsInner {
     /**
@@ -48,23 +52,38 @@ class ListBotsResponseBotsInner {
         if (data) {
             obj = obj || new ListBotsResponseBotsInner();
 
+            if (data.hasOwnProperty('ai')) {
+                obj['ai'] = ListBotsResponseBotsInnerAi.constructFromObject(data['ai']);
+            }
             if (data.hasOwnProperty('bot')) {
-                obj['bot'] = CreateBotResponseBot.constructFromObject(data['bot']);
+                obj['bot'] = ListBotsResponseBotsInnerBot.constructFromObject(data['bot']);
             }
             if (data.hasOwnProperty('bot_callback_url')) {
                 obj['bot_callback_url'] = ApiClient.convertToType(data['bot_callback_url'], 'String');
             }
+            if (data.hasOwnProperty('bot_style')) {
+                obj['bot_style'] = ListBotsResponseBotsInnerBotStyle.constructFromObject(data['bot_style']);
+            }
+            if (data.hasOwnProperty('channel_invitation_preference')) {
+                obj['channel_invitation_preference'] = ApiClient.convertToType(data['channel_invitation_preference'], 'Number');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Number');
+            }
             if (data.hasOwnProperty('enable_mark_as_read')) {
                 obj['enable_mark_as_read'] = ApiClient.convertToType(data['enable_mark_as_read'], 'Boolean');
+            }
+            if (data.hasOwnProperty('first_messages')) {
+                obj['first_messages'] = ApiClient.convertToType(data['first_messages'], [ListBotsResponseBotsInnerFirstMessagesInner]);
             }
             if (data.hasOwnProperty('is_privacy_mode')) {
                 obj['is_privacy_mode'] = ApiClient.convertToType(data['is_privacy_mode'], 'Boolean');
             }
+            if (data.hasOwnProperty('safeguard')) {
+                obj['safeguard'] = ListBotsResponseBotsInnerSafeguard.constructFromObject(data['safeguard']);
+            }
             if (data.hasOwnProperty('show_member')) {
                 obj['show_member'] = ApiClient.convertToType(data['show_member'], 'Boolean');
-            }
-            if (data.hasOwnProperty('channel_invitation_preference')) {
-                obj['channel_invitation_preference'] = ApiClient.convertToType(data['channel_invitation_preference'], 'Number');
             }
         }
         return obj;
@@ -74,7 +93,12 @@ class ListBotsResponseBotsInner {
 }
 
 /**
- * @member {module:model/CreateBotResponseBot} bot
+ * @member {module:model/ListBotsResponseBotsInnerAi} ai
+ */
+ListBotsResponseBotsInner.prototype['ai'] = undefined;
+
+/**
+ * @member {module:model/ListBotsResponseBotsInnerBot} bot
  */
 ListBotsResponseBotsInner.prototype['bot'] = undefined;
 
@@ -84,9 +108,29 @@ ListBotsResponseBotsInner.prototype['bot'] = undefined;
 ListBotsResponseBotsInner.prototype['bot_callback_url'] = undefined;
 
 /**
+ * @member {module:model/ListBotsResponseBotsInnerBotStyle} bot_style
+ */
+ListBotsResponseBotsInner.prototype['bot_style'] = undefined;
+
+/**
+ * @member {Number} channel_invitation_preference
+ */
+ListBotsResponseBotsInner.prototype['channel_invitation_preference'] = undefined;
+
+/**
+ * @member {Number} created_at
+ */
+ListBotsResponseBotsInner.prototype['created_at'] = undefined;
+
+/**
  * @member {Boolean} enable_mark_as_read
  */
 ListBotsResponseBotsInner.prototype['enable_mark_as_read'] = undefined;
+
+/**
+ * @member {Array.<module:model/ListBotsResponseBotsInnerFirstMessagesInner>} first_messages
+ */
+ListBotsResponseBotsInner.prototype['first_messages'] = undefined;
 
 /**
  * @member {Boolean} is_privacy_mode
@@ -94,14 +138,14 @@ ListBotsResponseBotsInner.prototype['enable_mark_as_read'] = undefined;
 ListBotsResponseBotsInner.prototype['is_privacy_mode'] = undefined;
 
 /**
+ * @member {module:model/ListBotsResponseBotsInnerSafeguard} safeguard
+ */
+ListBotsResponseBotsInner.prototype['safeguard'] = undefined;
+
+/**
  * @member {Boolean} show_member
  */
 ListBotsResponseBotsInner.prototype['show_member'] = undefined;
-
-/**
- * @member {Number} channel_invitation_preference
- */
-ListBotsResponseBotsInner.prototype['channel_invitation_preference'] = undefined;
 
 
 

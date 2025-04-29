@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -48,180 +48,190 @@
   }
 
   describe('GroupChannelApi', function() {
-    describe('gcAcceptInvitation', function() {
-      it('should call gcAcceptInvitation successfully', function(done) {
-        //uncomment below and update the code to test gcAcceptInvitation
-        //instance.gcAcceptInvitation(function(error) {
+    describe('acceptAnInvitation', function() {
+      it('should call acceptAnInvitation successfully', function(done) {
+        //uncomment below and update the code to test acceptAnInvitation
+        //instance.acceptAnInvitation(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcCancelTheRegistrationOfOperators', function() {
-      it('should call gcCancelTheRegistrationOfOperators successfully', function(done) {
-        //uncomment below and update the code to test gcCancelTheRegistrationOfOperators
-        //instance.gcCancelTheRegistrationOfOperators(function(error) {
+    describe('cancelTheRegistrationOfOperators', function() {
+      it('should call cancelTheRegistrationOfOperators successfully', function(done) {
+        //uncomment below and update the code to test cancelTheRegistrationOfOperators
+        //instance.cancelTheRegistrationOfOperators(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcCheckIfMemberById', function() {
-      it('should call gcCheckIfMemberById successfully', function(done) {
-        //uncomment below and update the code to test gcCheckIfMemberById
-        //instance.gcCheckIfMemberById(function(error) {
+    describe('checkIfMember', function() {
+      it('should call checkIfMember successfully', function(done) {
+        //uncomment below and update the code to test checkIfMember
+        //instance.checkIfMember(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcCreateChannel', function() {
-      it('should call gcCreateChannel successfully', function(done) {
-        //uncomment below and update the code to test gcCreateChannel
-        //instance.gcCreateChannel(function(error) {
+    describe('createAGroupChannel', function() {
+      it('should call createAGroupChannel successfully', function(done) {
+        //uncomment below and update the code to test createAGroupChannel
+        //instance.createAGroupChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcDeclineInvitation', function() {
-      it('should call gcDeclineInvitation successfully', function(done) {
-        //uncomment below and update the code to test gcDeclineInvitation
-        //instance.gcDeclineInvitation(function(error) {
+    describe('deleteAGroupChannel', function() {
+      it('should call deleteAGroupChannel successfully', function(done) {
+        //uncomment below and update the code to test deleteAGroupChannel
+        //instance.deleteAGroupChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcDeleteChannelByUrl', function() {
-      it('should call gcDeleteChannelByUrl successfully', function(done) {
-        //uncomment below and update the code to test gcDeleteChannelByUrl
-        //instance.gcDeleteChannelByUrl(function(error) {
+    describe('getAGroupChannel', function() {
+      it('should call getAGroupChannel successfully', function(done) {
+        //uncomment below and update the code to test getAGroupChannel
+        //instance.getAGroupChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcHideOrArchiveChannel', function() {
-      it('should call gcHideOrArchiveChannel successfully', function(done) {
-        //uncomment below and update the code to test gcHideOrArchiveChannel
-        //instance.gcHideOrArchiveChannel(function(error) {
+    describe('hideAChannel', function() {
+      it('should call hideAChannel successfully', function(done) {
+        //uncomment below and update the code to test hideAChannel
+        //instance.hideAChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcInviteAsMembers', function() {
-      it('should call gcInviteAsMembers successfully', function(done) {
-        //uncomment below and update the code to test gcInviteAsMembers
-        //instance.gcInviteAsMembers(function(error) {
+    describe('inviteAsMembers', function() {
+      it('should call inviteAsMembers successfully', function(done) {
+        //uncomment below and update the code to test inviteAsMembers
+        //instance.inviteAsMembers(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcJoinChannel', function() {
-      it('should call gcJoinChannel successfully', function(done) {
-        //uncomment below and update the code to test gcJoinChannel
-        //instance.gcJoinChannel(function(error) {
+    describe('joinAChannel', function() {
+      it('should call joinAChannel successfully', function(done) {
+        //uncomment below and update the code to test joinAChannel
+        //instance.joinAChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcLeaveChannel', function() {
-      it('should call gcLeaveChannel successfully', function(done) {
-        //uncomment below and update the code to test gcLeaveChannel
-        //instance.gcLeaveChannel(function(error) {
+    describe('leaveAChannel', function() {
+      it('should call leaveAChannel successfully', function(done) {
+        //uncomment below and update the code to test leaveAChannel
+        //instance.leaveAChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcListChannels', function() {
-      it('should call gcListChannels successfully', function(done) {
-        //uncomment below and update the code to test gcListChannels
-        //instance.gcListChannels(function(error) {
+    describe('listChannels', function() {
+      it('should call listChannels successfully', function(done) {
+        //uncomment below and update the code to test listChannels
+        //instance.listChannels(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcListMembers', function() {
-      it('should call gcListMembers successfully', function(done) {
-        //uncomment below and update the code to test gcListMembers
-        //instance.gcListMembers(function(error) {
+    describe('listMembers', function() {
+      it('should call listMembers successfully', function(done) {
+        //uncomment below and update the code to test listMembers
+        //instance.listMembers(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcListOperators', function() {
-      it('should call gcListOperators successfully', function(done) {
-        //uncomment below and update the code to test gcListOperators
-        //instance.gcListOperators(function(error) {
+    describe('listOperators', function() {
+      it('should call listOperators successfully', function(done) {
+        //uncomment below and update the code to test listOperators
+        //instance.listOperators(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcRegisterOperators', function() {
-      it('should call gcRegisterOperators successfully', function(done) {
-        //uncomment below and update the code to test gcRegisterOperators
-        //instance.gcRegisterOperators(function(error) {
+    describe('registerOperatorsToAGroupChannel', function() {
+      it('should call registerOperatorsToAGroupChannel successfully', function(done) {
+        //uncomment below and update the code to test registerOperatorsToAGroupChannel
+        //instance.registerOperatorsToAGroupChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcResetChatHistory', function() {
-      it('should call gcResetChatHistory successfully', function(done) {
-        //uncomment below and update the code to test gcResetChatHistory
-        //instance.gcResetChatHistory(function(error) {
+    describe('resetChatHistory', function() {
+      it('should call resetChatHistory successfully', function(done) {
+        //uncomment below and update the code to test resetChatHistory
+        //instance.resetChatHistory(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcUnhideOrUnarchiveChannel', function() {
-      it('should call gcUnhideOrUnarchiveChannel successfully', function(done) {
-        //uncomment below and update the code to test gcUnhideOrUnarchiveChannel
-        //instance.gcUnhideOrUnarchiveChannel(function(error) {
+    describe('startTypingIndicators', function() {
+      it('should call startTypingIndicators successfully', function(done) {
+        //uncomment below and update the code to test startTypingIndicators
+        //instance.startTypingIndicators(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcUpdateChannelByUrl', function() {
-      it('should call gcUpdateChannelByUrl successfully', function(done) {
-        //uncomment below and update the code to test gcUpdateChannelByUrl
-        //instance.gcUpdateChannelByUrl(function(error) {
+    describe('stopTypingIndicators', function() {
+      it('should call stopTypingIndicators successfully', function(done) {
+        //uncomment below and update the code to test stopTypingIndicators
+        //instance.stopTypingIndicators(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('gcViewChannelByUrl', function() {
-      it('should call gcViewChannelByUrl successfully', function(done) {
-        //uncomment below and update the code to test gcViewChannelByUrl
-        //instance.gcViewChannelByUrl(function(error) {
+    describe('unhideAChannel', function() {
+      it('should call unhideAChannel successfully', function(done) {
+        //uncomment below and update the code to test unhideAChannel
+        //instance.unhideAChannel(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateAGroupChannel', function() {
+      it('should call updateAGroupChannel successfully', function(done) {
+        //uncomment below and update the code to test updateAGroupChannel
+        //instance.updateAGroupChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -48,210 +48,40 @@
   }
 
   describe('MetadataApi', function() {
-    describe('createChannelMetacounter', function() {
-      it('should call createChannelMetacounter successfully', function(done) {
-        //uncomment below and update the code to test createChannelMetacounter
-        //instance.createChannelMetacounter(function(error) {
+    describe('createAChannelMetadata', function() {
+      it('should call createAChannelMetadata successfully', function(done) {
+        //uncomment below and update the code to test createAChannelMetadata
+        //instance.createAChannelMetadata(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('createChannelMetadata', function() {
-      it('should call createChannelMetadata successfully', function(done) {
-        //uncomment below and update the code to test createChannelMetadata
-        //instance.createChannelMetadata(function(error) {
+    describe('deleteAChannelMetadataWhenDeletingAllItemsOfAChannelMetadata', function() {
+      it('should call deleteAChannelMetadataWhenDeletingAllItemsOfAChannelMetadata successfully', function(done) {
+        //uncomment below and update the code to test deleteAChannelMetadataWhenDeletingAllItemsOfAChannelMetadata
+        //instance.deleteAChannelMetadataWhenDeletingAllItemsOfAChannelMetadata(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('createUserMetadata', function() {
-      it('should call createUserMetadata successfully', function(done) {
-        //uncomment below and update the code to test createUserMetadata
-        //instance.createUserMetadata(function(error) {
+    describe('updateAChannelMetadata', function() {
+      it('should call updateAChannelMetadata successfully', function(done) {
+        //uncomment below and update the code to test updateAChannelMetadata
+        //instance.updateAChannelMetadata(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('deleteChannelMetacounter', function() {
-      it('should call deleteChannelMetacounter successfully', function(done) {
-        //uncomment below and update the code to test deleteChannelMetacounter
-        //instance.deleteChannelMetacounter(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('deleteChannelMetacounterByKey', function() {
-      it('should call deleteChannelMetacounterByKey successfully', function(done) {
-        //uncomment below and update the code to test deleteChannelMetacounterByKey
-        //instance.deleteChannelMetacounterByKey(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('deleteChannelMetadata', function() {
-      it('should call deleteChannelMetadata successfully', function(done) {
-        //uncomment below and update the code to test deleteChannelMetadata
-        //instance.deleteChannelMetadata(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('deleteChannelMetadataByKey', function() {
-      it('should call deleteChannelMetadataByKey successfully', function(done) {
-        //uncomment below and update the code to test deleteChannelMetadataByKey
-        //instance.deleteChannelMetadataByKey(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('deleteUserMetadata', function() {
-      it('should call deleteUserMetadata successfully', function(done) {
-        //uncomment below and update the code to test deleteUserMetadata
-        //instance.deleteUserMetadata(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('deleteUserMetadataByKey', function() {
-      it('should call deleteUserMetadataByKey successfully', function(done) {
-        //uncomment below and update the code to test deleteUserMetadataByKey
-        //instance.deleteUserMetadataByKey(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateChannelMetacounter', function() {
-      it('should call updateChannelMetacounter successfully', function(done) {
-        //uncomment below and update the code to test updateChannelMetacounter
-        //instance.updateChannelMetacounter(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateChannelMetacounterByKey', function() {
-      it('should call updateChannelMetacounterByKey successfully', function(done) {
-        //uncomment below and update the code to test updateChannelMetacounterByKey
-        //instance.updateChannelMetacounterByKey(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateChannelMetadata', function() {
-      it('should call updateChannelMetadata successfully', function(done) {
-        //uncomment below and update the code to test updateChannelMetadata
-        //instance.updateChannelMetadata(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateChannelMetadataByKey', function() {
-      it('should call updateChannelMetadataByKey successfully', function(done) {
-        //uncomment below and update the code to test updateChannelMetadataByKey
-        //instance.updateChannelMetadataByKey(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateUserMetadata', function() {
-      it('should call updateUserMetadata successfully', function(done) {
-        //uncomment below and update the code to test updateUserMetadata
-        //instance.updateUserMetadata(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateUserMetadataByKey', function() {
-      it('should call updateUserMetadataByKey successfully', function(done) {
-        //uncomment below and update the code to test updateUserMetadataByKey
-        //instance.updateUserMetadataByKey(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewChannelMetacounter', function() {
-      it('should call viewChannelMetacounter successfully', function(done) {
-        //uncomment below and update the code to test viewChannelMetacounter
-        //instance.viewChannelMetacounter(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewChannelMetacounterByKey', function() {
-      it('should call viewChannelMetacounterByKey successfully', function(done) {
-        //uncomment below and update the code to test viewChannelMetacounterByKey
-        //instance.viewChannelMetacounterByKey(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewChannelMetadata', function() {
-      it('should call viewChannelMetadata successfully', function(done) {
-        //uncomment below and update the code to test viewChannelMetadata
-        //instance.viewChannelMetadata(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewChannelMetadataByKey', function() {
-      it('should call viewChannelMetadataByKey successfully', function(done) {
-        //uncomment below and update the code to test viewChannelMetadataByKey
-        //instance.viewChannelMetadataByKey(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewUserMetadata', function() {
-      it('should call viewUserMetadata successfully', function(done) {
-        //uncomment below and update the code to test viewUserMetadata
-        //instance.viewUserMetadata(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewUserMetadataByKey', function() {
-      it('should call viewUserMetadataByKey successfully', function(done) {
-        //uncomment below and update the code to test viewUserMetadataByKey
-        //instance.viewUserMetadataByKey(function(error) {
+    describe('viewAChannelMetadataWhenRetrievingAllItemsOfAChannelMetadata', function() {
+      it('should call viewAChannelMetadataWhenRetrievingAllItemsOfAChannelMetadata successfully', function(done) {
+        //uncomment below and update the code to test viewAChannelMetadataWhenRetrievingAllItemsOfAChannelMetadata
+        //instance.viewAChannelMetadataWhenRetrievingAllItemsOfAChannelMetadata(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

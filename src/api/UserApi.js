@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -13,46 +13,42 @@
 
 
 import ApiClient from "../ApiClient";
-import AddRegistrationOrDeviceTokenData from '../model/AddRegistrationOrDeviceTokenData';
-import AddRegistrationOrDeviceTokenResponse from '../model/AddRegistrationOrDeviceTokenResponse';
-import ChoosePushNotificationContentTemplateResponse from '../model/ChoosePushNotificationContentTemplateResponse';
-import CreateUserData from '../model/CreateUserData';
-import CreateUserTokenData from '../model/CreateUserTokenData';
+import AddARegistrationOrDeviceTokenRequest from '../model/AddARegistrationOrDeviceTokenRequest';
+import AddARegistrationOrDeviceTokenResponse from '../model/AddARegistrationOrDeviceTokenResponse';
+import ChooseAPushNotificationContentTemplateRequest from '../model/ChooseAPushNotificationContentTemplateRequest';
+import ChooseAPushNotificationContentTemplateResponse from '../model/ChooseAPushNotificationContentTemplateResponse';
+import CreateAUserRequest from '../model/CreateAUserRequest';
+import CreateUserTokenRequest from '../model/CreateUserTokenRequest';
 import CreateUserTokenResponse from '../model/CreateUserTokenResponse';
-import LeaveMyGroupChannelsData from '../model/LeaveMyGroupChannelsData';
+import GetChannelInvitationPreferenceResponse from '../model/GetChannelInvitationPreferenceResponse';
+import LeaveMyGroupChannelsRequest from '../model/LeaveMyGroupChannelsRequest';
 import ListMyGroupChannelsResponse from '../model/ListMyGroupChannelsResponse';
 import ListRegistrationOrDeviceTokensResponse from '../model/ListRegistrationOrDeviceTokensResponse';
 import ListUsersResponse from '../model/ListUsersResponse';
-import MarkAllMessagesAsReadData from '../model/MarkAllMessagesAsReadData';
-import RegisterAsOperatorToChannelsWithCustomChannelTypesData from '../model/RegisterAsOperatorToChannelsWithCustomChannelTypesData';
-import RemoveRegistrationOrDeviceTokenByTokenResponse from '../model/RemoveRegistrationOrDeviceTokenByTokenResponse';
-import RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse from '../model/RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse';
-import RemoveRegistrationOrDeviceTokenResponse from '../model/RemoveRegistrationOrDeviceTokenResponse';
-import ResetPushPreferencesResponse from '../model/ResetPushPreferencesResponse';
-import SendBirdUser from '../model/SendBirdUser';
-import UpdateChannelInvitationPreferenceData from '../model/UpdateChannelInvitationPreferenceData';
+import MarkAllMessagesAsReadRequest from '../model/MarkAllMessagesAsReadRequest';
+import MarkChannelMessagesAsReadRequest from '../model/MarkChannelMessagesAsReadRequest';
+import RemoveARegistrationOrDeviceTokenResponse from '../model/RemoveARegistrationOrDeviceTokenResponse';
+import RemoveAllRegistrationOrDeviceTokenResponse from '../model/RemoveAllRegistrationOrDeviceTokenResponse';
+import SendbirdUser from '../model/SendbirdUser';
+import UpdateAUserRequest from '../model/UpdateAUserRequest';
+import UpdateChannelInvitationPreferenceRequest from '../model/UpdateChannelInvitationPreferenceRequest';
 import UpdateChannelInvitationPreferenceResponse from '../model/UpdateChannelInvitationPreferenceResponse';
-import UpdateCountPreferenceOfChannelByUrlData from '../model/UpdateCountPreferenceOfChannelByUrlData';
+import UpdateCountPreferenceOfAChannelRequest from '../model/UpdateCountPreferenceOfAChannelRequest';
 import UpdateCountPreferenceOfChannelByUrlResponse from '../model/UpdateCountPreferenceOfChannelByUrlResponse';
-import UpdatePushPreferencesData from '../model/UpdatePushPreferencesData';
-import UpdatePushPreferencesForChannelByUrlData from '../model/UpdatePushPreferencesForChannelByUrlData';
-import UpdatePushPreferencesForChannelByUrlResponse from '../model/UpdatePushPreferencesForChannelByUrlResponse';
+import UpdatePushPreferencesForAChannelRequest from '../model/UpdatePushPreferencesForAChannelRequest';
+import UpdatePushPreferencesForAChannelResponse from '../model/UpdatePushPreferencesForAChannelResponse';
+import UpdatePushPreferencesRequest from '../model/UpdatePushPreferencesRequest';
 import UpdatePushPreferencesResponse from '../model/UpdatePushPreferencesResponse';
-import UpdateUserByIdData from '../model/UpdateUserByIdData';
-import ViewChannelInvitationPreferenceResponse from '../model/ViewChannelInvitationPreferenceResponse';
-import ViewCountPreferenceOfChannelByUrlResponse from '../model/ViewCountPreferenceOfChannelByUrlResponse';
-import ViewNumberOfChannelsByJoinStatusResponse from '../model/ViewNumberOfChannelsByJoinStatusResponse';
+import ViewCountPreferenceOfAChannelResponse from '../model/ViewCountPreferenceOfAChannelResponse';
 import ViewNumberOfChannelsWithUnreadMessagesResponse from '../model/ViewNumberOfChannelsWithUnreadMessagesResponse';
-import ViewNumberOfUnreadItemsResponse from '../model/ViewNumberOfUnreadItemsResponse';
 import ViewNumberOfUnreadMessagesResponse from '../model/ViewNumberOfUnreadMessagesResponse';
-import ViewPushPreferencesForChannelByUrlResponse from '../model/ViewPushPreferencesForChannelByUrlResponse';
+import ViewPushPreferencesForAChannelResponse from '../model/ViewPushPreferencesForAChannelResponse';
 import ViewPushPreferencesResponse from '../model/ViewPushPreferencesResponse';
-import ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner from '../model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner';
 
 /**
 * User service.
 * @module api/UserApi
-* @version 0.0.16
+* @version 2.0.0
 */
 export default class UserApi {
 
@@ -72,27 +68,23 @@ export default class UserApi {
     /**
      * Add a registration or device token
      * ## Add a registration or device token  > __Note__: A user can have up to 20 FCM registration tokens, 20 HMS device tokens, and 20 APNs device tokens each. The oldest token will be deleted before a new token is added for a user who already has 20 registration or device tokens. Only the 20 newest tokens will be maintained for users who already have more than 20 of each token type.  To send notification requests to push notification services on behalf of your server, adds a specific user's FCM registration token, HMS device token, or APNs device token to Sendbird server. Depending on which push service you are using, you can pass one of two values in `token_type`: `gcm`, `huawei`, or `apns`.  A FCM registration token and an APNs device token allow identification of each client app instance on each device, and are generated and registered by Android and iOS apps through the corresponding SDKs. Use this method if you need to register a token via your own server.  > __Note__: For more information on the registration token and device token, visit the Google's [FCM](https://firebase.google.com/docs/auth/admin/verify-id-tokens) page, Huawei's [Push kit](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/service-introduction-0000001050040060) and Apple's [APNs](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) page.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-add-a-registration-or-device-token ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} tokenType 
+     * @param {String} userId (Required) 
+     * @param {module:model/String} tokenType (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/AddRegistrationOrDeviceTokenData} opts.addRegistrationOrDeviceTokenData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddRegistrationOrDeviceTokenResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @param {module:model/AddARegistrationOrDeviceTokenRequest} opts.addARegistrationOrDeviceTokenRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddARegistrationOrDeviceTokenResponse} and HTTP response
      */
-    addRegistrationOrDeviceTokenWithHttpInfo(apiToken, userId, tokenType, opts) {
+    addARegistrationOrDeviceTokenWithHttpInfo(userId, tokenType, opts) {
       opts = opts || {};
-      let postBody = opts['addRegistrationOrDeviceTokenData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling addRegistrationOrDeviceToken");
-      }
+      let postBody = opts['addARegistrationOrDeviceTokenRequest'];
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling addRegistrationOrDeviceToken");
+        throw new Error("Missing the required parameter 'userId' when calling addARegistrationOrDeviceToken");
       }
       // verify the required parameter 'tokenType' is set
       if (tokenType === undefined || tokenType === null) {
-        throw new Error("Missing the required parameter 'tokenType' when calling addRegistrationOrDeviceToken");
+        throw new Error("Missing the required parameter 'tokenType' when calling addARegistrationOrDeviceToken");
       }
 
       let pathParams = {
@@ -102,7 +94,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -110,7 +102,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = AddRegistrationOrDeviceTokenResponse;
+      let returnType = AddARegistrationOrDeviceTokenResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/{token_type}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -121,15 +113,15 @@ export default class UserApi {
     /**
      * Add a registration or device token
      * ## Add a registration or device token  > __Note__: A user can have up to 20 FCM registration tokens, 20 HMS device tokens, and 20 APNs device tokens each. The oldest token will be deleted before a new token is added for a user who already has 20 registration or device tokens. Only the 20 newest tokens will be maintained for users who already have more than 20 of each token type.  To send notification requests to push notification services on behalf of your server, adds a specific user's FCM registration token, HMS device token, or APNs device token to Sendbird server. Depending on which push service you are using, you can pass one of two values in `token_type`: `gcm`, `huawei`, or `apns`.  A FCM registration token and an APNs device token allow identification of each client app instance on each device, and are generated and registered by Android and iOS apps through the corresponding SDKs. Use this method if you need to register a token via your own server.  > __Note__: For more information on the registration token and device token, visit the Google's [FCM](https://firebase.google.com/docs/auth/admin/verify-id-tokens) page, Huawei's [Push kit](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/service-introduction-0000001050040060) and Apple's [APNs](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) page.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-add-a-registration-or-device-token ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} tokenType 
+     * @param {String} userId (Required) 
+     * @param {module:model/String} tokenType (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/AddRegistrationOrDeviceTokenData} opts.addRegistrationOrDeviceTokenData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddRegistrationOrDeviceTokenResponse}
+     * @param {String} opts.apiToken 
+     * @param {module:model/AddARegistrationOrDeviceTokenRequest} opts.addARegistrationOrDeviceTokenRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddARegistrationOrDeviceTokenResponse}
      */
-    addRegistrationOrDeviceToken(apiToken, userId, tokenType, opts) {
-      return this.addRegistrationOrDeviceTokenWithHttpInfo(apiToken, userId, tokenType, opts)
+    addARegistrationOrDeviceToken(userId, tokenType, opts) {
+      return this.addARegistrationOrDeviceTokenWithHttpInfo(userId, tokenType, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -138,23 +130,19 @@ export default class UserApi {
 
     /**
      * Choose a push notification content template
-     * ## Choose a push notification content template  Chooses a push notification content template of a user's own. The push notifications feature is only available for group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-choose-a-push-notification-content-template ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Choose a push notification content template  Users can choose a template to determine how push notifications appear to them. Push notification content templates are pre-formatted forms that can be customized to display your own push notification messages on a user's device. Sendbird provides two types: `default` and `alternative`. Go to **Settings** > **Chat** > **Push notifications** > **Push notification content templates** on [Sendbird Dashboard](https://dashboard.sendbird.com/auth/signin) to customize the templates.  If the `push_message_template` property is specified when [sending a message](https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/send-a-message), the content template customized for the message takes precedence over the user's choice.  > **Note**: Push notifications are only available for group channels.      https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/choose-a-push-notification-content-template#1-choose-a-push-notification-content-template
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChoosePushNotificationContentTemplateResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @param {module:model/ChooseAPushNotificationContentTemplateRequest} opts.chooseAPushNotificationContentTemplateRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChooseAPushNotificationContentTemplateResponse} and HTTP response
      */
-    choosePushNotificationContentTemplateWithHttpInfo(apiToken, userId, opts) {
+    chooseAPushNotificationContentTemplateWithHttpInfo(userId, opts) {
       opts = opts || {};
-      let postBody = opts['body'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling choosePushNotificationContentTemplate");
-      }
+      let postBody = opts['chooseAPushNotificationContentTemplateRequest'];
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling choosePushNotificationContentTemplate");
+        throw new Error("Missing the required parameter 'userId' when calling chooseAPushNotificationContentTemplate");
       }
 
       let pathParams = {
@@ -163,7 +151,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -171,7 +159,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ChoosePushNotificationContentTemplateResponse;
+      let returnType = ChooseAPushNotificationContentTemplateResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/template', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -181,15 +169,15 @@ export default class UserApi {
 
     /**
      * Choose a push notification content template
-     * ## Choose a push notification content template  Chooses a push notification content template of a user's own. The push notifications feature is only available for group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-choose-a-push-notification-content-template ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Choose a push notification content template  Users can choose a template to determine how push notifications appear to them. Push notification content templates are pre-formatted forms that can be customized to display your own push notification messages on a user's device. Sendbird provides two types: `default` and `alternative`. Go to **Settings** > **Chat** > **Push notifications** > **Push notification content templates** on [Sendbird Dashboard](https://dashboard.sendbird.com/auth/signin) to customize the templates.  If the `push_message_template` property is specified when [sending a message](https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/send-a-message), the content template customized for the message takes precedence over the user's choice.  > **Note**: Push notifications are only available for group channels.      https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/choose-a-push-notification-content-template#1-choose-a-push-notification-content-template
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {Object.<String, Object>} opts.body 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChoosePushNotificationContentTemplateResponse}
+     * @param {String} opts.apiToken 
+     * @param {module:model/ChooseAPushNotificationContentTemplateRequest} opts.chooseAPushNotificationContentTemplateRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChooseAPushNotificationContentTemplateResponse}
      */
-    choosePushNotificationContentTemplate(apiToken, userId, opts) {
-      return this.choosePushNotificationContentTemplateWithHttpInfo(apiToken, userId, opts)
+    chooseAPushNotificationContentTemplate(userId, opts) {
+      return this.chooseAPushNotificationContentTemplateWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -198,26 +186,22 @@ export default class UserApi {
 
     /**
      * Create a user
-     * ## Create a user  Creates a new user in the application. A user is identified by its unique user ID, and additionally have a changeable nickname, profile image, and so on.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-create-a-user
-     * @param {String} apiToken 
+     * ## Create a user  You should create a user in your Sendbird application to initiate conversations in channels. A user is identified by its unique user ID, and additionally have a changeable nickname, profile image, and so on. Users are at the core of all conversations. Sendbird applications are made up of users who chat in either Open Channels or Group Channels. Using this API, it is possible to have fine grained control over your users and what those users can do. To learn more about users, see [User overview](https://sendbird.com/docs/chat/platform-api/v3/user/user-overview#2-resource-representation).  https://sendbird.com/docs/chat/platform-api/v3/user/creating-users/create-a-user#1-create-a-user
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateUserData} opts.createUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
+     * @param {String} opts.apiToken 
+     * @param {module:model/CreateAUserRequest} opts.createAUserRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendbirdUser} and HTTP response
      */
-    createUserWithHttpInfo(apiToken, opts) {
+    createAUserWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['createUserData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling createUser");
-      }
+      let postBody = opts['createAUserRequest'];
 
       let pathParams = {
       };
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -225,7 +209,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = SendBirdUser;
+      let returnType = SendbirdUser;
       return this.apiClient.callApi(
         '/v3/users', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -235,14 +219,14 @@ export default class UserApi {
 
     /**
      * Create a user
-     * ## Create a user  Creates a new user in the application. A user is identified by its unique user ID, and additionally have a changeable nickname, profile image, and so on.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-create-a-user
-     * @param {String} apiToken 
+     * ## Create a user  You should create a user in your Sendbird application to initiate conversations in channels. A user is identified by its unique user ID, and additionally have a changeable nickname, profile image, and so on. Users are at the core of all conversations. Sendbird applications are made up of users who chat in either Open Channels or Group Channels. Using this API, it is possible to have fine grained control over your users and what those users can do. To learn more about users, see [User overview](https://sendbird.com/docs/chat/platform-api/v3/user/user-overview#2-resource-representation).  https://sendbird.com/docs/chat/platform-api/v3/user/creating-users/create-a-user#1-create-a-user
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateUserData} opts.createUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
+     * @param {String} opts.apiToken 
+     * @param {module:model/CreateAUserRequest} opts.createAUserRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendbirdUser}
      */
-    createUser(apiToken, opts) {
-      return this.createUserWithHttpInfo(apiToken, opts)
+    createAUser(opts) {
+      return this.createAUserWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -251,20 +235,16 @@ export default class UserApi {
 
     /**
      * Create user token
-     * ## Create user token
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Create user token  This action issues a session token for user authentication. Session tokens provide an efficient stateless authentication method by not storing the tokens in the Sendbird database, and thus improving the server's performance. See [access token vs. session token](https://sendbird.com/docs/chat/platform-api/v3/user/creating-users/create-a-user#2-access-token-vs-session-token) to learn more about authenticating users.  > **Note**: The endpoint `/users/{user_id}` is deprecated. Use `/users/{user_id}/token` for greater efficiency.      https://sendbird.com/docs/chat/platform-api/v3/user/managing-session-tokens/issue-a-session-token#1-issue-a-session-token
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateUserTokenData} opts.createUserTokenData 
+     * @param {String} opts.apiToken 
+     * @param {module:model/CreateUserTokenRequest} opts.createUserTokenRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateUserTokenResponse} and HTTP response
      */
-    createUserTokenWithHttpInfo(apiToken, userId, opts) {
+    createUserTokenWithHttpInfo(userId, opts) {
       opts = opts || {};
-      let postBody = opts['createUserTokenData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling createUserToken");
-      }
+      let postBody = opts['createUserTokenRequest'];
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling createUserToken");
@@ -276,7 +256,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -294,15 +274,15 @@ export default class UserApi {
 
     /**
      * Create user token
-     * ## Create user token
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Create user token  This action issues a session token for user authentication. Session tokens provide an efficient stateless authentication method by not storing the tokens in the Sendbird database, and thus improving the server's performance. See [access token vs. session token](https://sendbird.com/docs/chat/platform-api/v3/user/creating-users/create-a-user#2-access-token-vs-session-token) to learn more about authenticating users.  > **Note**: The endpoint `/users/{user_id}` is deprecated. Use `/users/{user_id}/token` for greater efficiency.      https://sendbird.com/docs/chat/platform-api/v3/user/managing-session-tokens/issue-a-session-token#1-issue-a-session-token
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateUserTokenData} opts.createUserTokenData 
+     * @param {String} opts.apiToken 
+     * @param {module:model/CreateUserTokenRequest} opts.createUserTokenRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateUserTokenResponse}
      */
-    createUserToken(apiToken, userId, opts) {
-      return this.createUserTokenWithHttpInfo(apiToken, userId, opts)
+    createUserToken(userId, opts) {
+      return this.createUserTokenWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -311,20 +291,18 @@ export default class UserApi {
 
     /**
      * Delete a user
-     * ## Delete a user  Deletes a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-delete-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Delete a user  You can delete a user from your Sendbird application using this API.  > **Note**: This API deletes user data and metadata, except for their messages. If you wish to delete user data including their messages, use the [GDPR request](https://sendbird.com/docs/chat/platform-api/v3/privacy/privacy-overview).      [https://sendbird.com/docs/chat/platform-api/v3/user/managing-users/delete-a-user#1-delete-a-user](https://sendbird.com/docs/chat/platform-api/v3/user/managing-users/delete-a-user#1-delete-a-user)
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
-    deleteUserByIdWithHttpInfo(apiToken, userId) {
+    deleteAUserWithHttpInfo(userId, opts) {
+      opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling deleteUserById");
-      }
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling deleteUserById");
+        throw new Error("Missing the required parameter 'userId' when calling deleteAUser");
       }
 
       let pathParams = {
@@ -333,7 +311,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -351,13 +329,68 @@ export default class UserApi {
 
     /**
      * Delete a user
-     * ## Delete a user  Deletes a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-delete-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Delete a user  You can delete a user from your Sendbird application using this API.  > **Note**: This API deletes user data and metadata, except for their messages. If you wish to delete user data including their messages, use the [GDPR request](https://sendbird.com/docs/chat/platform-api/v3/privacy/privacy-overview).      [https://sendbird.com/docs/chat/platform-api/v3/user/managing-users/delete-a-user#1-delete-a-user](https://sendbird.com/docs/chat/platform-api/v3/user/managing-users/delete-a-user#1-delete-a-user)
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
-    deleteUserById(apiToken, userId) {
-      return this.deleteUserByIdWithHttpInfo(apiToken, userId)
+    deleteAUser(userId, opts) {
+      return this.deleteAUserWithHttpInfo(userId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get channel invitation preference
+     * ## Get channel invitation preference  This action retrieves a user's [group channel](https://sendbird.com/docs/chat/platform-api/v3/channel/channel-overview#2-channel-types-3-group-channel) invitation preference. Users are subject to both user-specific and application-wide invitation preferences. Of the two, the invitation preference set for a specific user takes precedence over [the default channel invitation preference](https://sendbird.com/docs/chat/platform-api/v3/channel/setting-up-channels/get-default-invitation-preference).  [https://sendbird.com/docs/chat/platform-api/v3/channel/managing-a-channel/get-channel-invitation-preference#1-get-channel-invitation-preference](https://sendbird.com/docs/chat/platform-api/v3/channel/managing-a-channel/get-channel-invitation-preference#1-get-channel-invitation-preference)
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetChannelInvitationPreferenceResponse} and HTTP response
+     */
+    getChannelInvitationPreferenceWithHttpInfo(userId, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'userId' is set
+      if (userId === undefined || userId === null) {
+        throw new Error("Missing the required parameter 'userId' when calling getChannelInvitationPreference");
+      }
+
+      let pathParams = {
+        'user_id': userId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-token': opts['apiToken']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GetChannelInvitationPreferenceResponse;
+      return this.apiClient.callApi(
+        '/v3/users/{user_id}/channel_invitation_preference', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Get channel invitation preference
+     * ## Get channel invitation preference  This action retrieves a user's [group channel](https://sendbird.com/docs/chat/platform-api/v3/channel/channel-overview#2-channel-types-3-group-channel) invitation preference. Users are subject to both user-specific and application-wide invitation preferences. Of the two, the invitation preference set for a specific user takes precedence over [the default channel invitation preference](https://sendbird.com/docs/chat/platform-api/v3/channel/setting-up-channels/get-default-invitation-preference).  [https://sendbird.com/docs/chat/platform-api/v3/channel/managing-a-channel/get-channel-invitation-preference#1-get-channel-invitation-preference](https://sendbird.com/docs/chat/platform-api/v3/channel/managing-a-channel/get-channel-invitation-preference#1-get-channel-invitation-preference)
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetChannelInvitationPreferenceResponse}
+     */
+    getChannelInvitationPreference(userId, opts) {
+      return this.getChannelInvitationPreferenceWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -366,20 +399,16 @@ export default class UserApi {
 
     /**
      * Leave my group channels
-     * ## Leave my group channels  Makes a user leave all joined group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-leave-my-group-channels ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the user to leave all joined group channels.
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Leave my group channels  This action allows a user to leave all group channels or channels with a specific custom type. This API is useful if you want to let a user leave a set of channels at once. To let a user leave only one of their group channels, use the [leave a channel API](https://sendbird.com/docs/chat/platform-api/v3/channel/managing-a-channel/leave-a-channel) instead.  Since this API can't be called for a deactivated user, ensure that the [<code>leave_all_when_deactivated</code>](https://sendbird.com/docs/chat/platform-api/v3/user/managing-users/update-a-user#2-request-body) property of the user is set to its default value of `true` to let the user leave all joined group channels upon deactivation.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-joined-group-channels/leave-group-channels#1-leave-group-channels  `user_id`   Type: string   Description: Specifies the unique ID of the user to leave all joined group channels.
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/LeaveMyGroupChannelsData} opts.leaveMyGroupChannelsData 
+     * @param {String} opts.apiToken 
+     * @param {module:model/LeaveMyGroupChannelsRequest} opts.leaveMyGroupChannelsRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
-    leaveMyGroupChannelsWithHttpInfo(apiToken, userId, opts) {
+    leaveMyGroupChannelsWithHttpInfo(userId, opts) {
       opts = opts || {};
-      let postBody = opts['leaveMyGroupChannelsData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling leaveMyGroupChannels");
-      }
+      let postBody = opts['leaveMyGroupChannelsRequest'];
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling leaveMyGroupChannels");
@@ -391,7 +420,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -409,15 +438,15 @@ export default class UserApi {
 
     /**
      * Leave my group channels
-     * ## Leave my group channels  Makes a user leave all joined group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-leave-my-group-channels ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the user to leave all joined group channels.
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Leave my group channels  This action allows a user to leave all group channels or channels with a specific custom type. This API is useful if you want to let a user leave a set of channels at once. To let a user leave only one of their group channels, use the [leave a channel API](https://sendbird.com/docs/chat/platform-api/v3/channel/managing-a-channel/leave-a-channel) instead.  Since this API can't be called for a deactivated user, ensure that the [<code>leave_all_when_deactivated</code>](https://sendbird.com/docs/chat/platform-api/v3/user/managing-users/update-a-user#2-request-body) property of the user is set to its default value of `true` to let the user leave all joined group channels upon deactivation.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-joined-group-channels/leave-group-channels#1-leave-group-channels  `user_id`   Type: string   Description: Specifies the unique ID of the user to leave all joined group channels.
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/LeaveMyGroupChannelsData} opts.leaveMyGroupChannelsData 
+     * @param {String} opts.apiToken 
+     * @param {module:model/LeaveMyGroupChannelsRequest} opts.leaveMyGroupChannelsRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
-    leaveMyGroupChannels(apiToken, userId, opts) {
-      return this.leaveMyGroupChannelsWithHttpInfo(apiToken, userId, opts)
+    leaveMyGroupChannels(userId, opts) {
+      return this.leaveMyGroupChannelsWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -426,62 +455,64 @@ export default class UserApi {
 
     /**
      * List my group channels
-     * ## List my group channels  Retrieves all group channels that the user has joined. You can create a request based on various query parameters.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-my-group-channels ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the target user.
+     * ## List my group channels  This action retrieves a list of [group channels](https://sendbird.com/docs/chat/platform-api/v3/channel/channel-overview#2-channel-types-3-group-channel) that a specific user has joined. You can use various query parameters to determine the search scope and select what kind of information you want to receive about the queried channels.  If you're looking to retrieve a list of group channels in a specific application, visit the [list group channels](https://sendbird.com/docs/chat/platform-api/v3/channel/listing-channels-in-an-application/list-group-channels) page under the Channel section.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-joined-group-channels/list-group-channels-by-user#1-list-group-channels-by-user  `user_id`   Type: string   Description: Specifies the unique ID of the target user.
+     * @param {String} userId (Required) 
      * @param {String} apiToken 
-     * @param {String} userId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @param {String} opts.distinctMode 
-     * @param {String} opts.publicMode 
-     * @param {String} opts.superMode 
-     * @param {String} opts.hiddenMode 
-     * @param {String} opts.memberStateFilter 
-     * @param {String} opts.unreadFilter 
-     * @param {Number} opts.createdAfter 
-     * @param {Number} opts.createdBefore 
+     * @param {String} opts.token Specifies a page token that indicates the starting index of a chunk of results. If not specified, the index is set as 0.
+     * @param {Number} opts.limit Specifies the number of results to return per page. Acceptable values are 1 to 100, inclusive. (Default: 10)
+     * @param {module:model/String} opts.distinctMode 
+     * @param {module:model/String} opts.publicMode 
+     * @param {module:model/String} opts.superMode 
+     * @param {Number} opts.createdAfter Restricts the search scope to only retrieve group channels which have been created after the specified time, in Unix milliseconds format.
+     * @param {Number} opts.createdBefore Restricts the search scope to only retrieve group channels which have been created before the specified time, in Unix milliseconds format.
      * @param {Boolean} opts.showEmpty 
-     * @param {Boolean} opts.showFrozen 
      * @param {Boolean} opts.showMember 
      * @param {Boolean} opts.showDeliveryReceipt 
      * @param {Boolean} opts.showReadReceipt 
-     * @param {String} opts.order 
-     * @param {String} opts.metadataOrderKey 
-     * @param {String} opts.customTypes 
-     * @param {String} opts.customTypeStartswith 
-     * @param {String} opts.channelUrls 
-     * @param {String} opts.name 
-     * @param {String} opts.nameContains 
-     * @param {String} opts.nameStartswith 
-     * @param {String} opts.membersExactlyIn 
-     * @param {String} opts.membersIncludeIn 
-     * @param {String} opts.queryType 
-     * @param {String} opts.membersNickname 
-     * @param {String} opts.membersNicknameContains 
-     * @param {String} opts.searchQuery 
-     * @param {String} opts.searchFields 
-     * @param {String} opts.metadataKey 
-     * @param {String} opts.metadataValues 
-     * @param {String} opts.metadataValueStartswith 
-     * @param {String} opts.metacounterKey 
-     * @param {String} opts.metacounterValues 
-     * @param {String} opts.metacounterValueGt 
-     * @param {String} opts.metacounterValueGte 
-     * @param {String} opts.metacounterValueLt 
-     * @param {String} opts.metacounterValueLte 
-     * @param {String} opts.customType 
+     * @param {Boolean} opts.showMetadata 
+     * @param {Boolean} opts.showFrozen 
+     * @param {module:model/String} opts.order 
+     * @param {String} opts.metadataOrderKey Specifies the key of an item in metadata. When a value of the order parameter is set to metadata_value_alphabetical, the results are alphabetically sorted by the value of the item specified by the key.
+     * @param {String} opts.customTypes Specifies a comma-separated string of one or more custom types to filter group channels. URL encoding each type is recommended. If not specified, all channels are returned, regardless of their custom type.
+     * @param {String} opts.customTypeStartswith Searches for group channels with the custom type which starts with the specified value. URL encoding the value is recommended.
+     * @param {String} opts.channelUrls Specifies a comma-separated string of one or more group channel URLs to restrict the search scope. URL encoding each channel URL is recommended.
+     * @param {String} opts.name Specifies one or more group channel names.
+     * @param {String} opts.nameContains Searches for group channels whose names contain the specified value. Note that this parameter is case-insensitive. URL encoding the value is recommended.
+     * @param {String} opts.nameStartswith Searches for group channels whose names start with the specified value. Note that this parameter is case-insensitive. URL encoding the value is recommended.
+     * @param {String} opts.membersExactlyIn Searches for group channels with all the specified users as members. The parameter value should consist of user IDs separated by commas.  Only user IDs that match those of existing users are used for channel search. URL encoding each ID is recommended.
+     * @param {String} opts.membersIncludeIn Searches for group channels that include one or more users as members among the specified users. The value should consist of user IDs separated by commas or %2C. You can specify up to 60 user IDs.  Only user IDs that match those of existing users are used for channel search. URL encoding each ID is recommended.
+     * @param {String} opts.queryType Specifies a logical condition applied to the members_include_in parameter. Acceptable values are either AND or OR. For example, if you specify three members, A, B, and C, in members_include_in, the value of AND returns all channels that include every one of {A. B, C} as members. The value of OR returns channels that include {A}, plus those that include {B}, plus those that include {C}. (Default: AND)
+     * @param {String} opts.membersNickname Searches for group channels with members whose nicknames match the specified value. URL encoding the value is recommended.
+     * @param {String} opts.membersNicknameContains Searches for group channels with members whose nicknames contain the specified value. Note that this parameter is case-insensitive. URL encoding the value is recommended.  * We recommend using at least three characters for the parameter value for better search efficiency when you design and implement related features. If you would like to allow one or two characters for searching, use members_nickname instead to prevent performance issues.
+     * @param {String} opts.metadataKey Searches for group channels with metadata containing an item with the specified value as its key. To use this parameter, either the metadata_values parameter or the metadata_value_startswith parameter should be specified.
+     * @param {String} opts.metadataValues Searches for group channels with metadata containing an item with the key specified by the metadata_key parameter, and the value of that item matches one or more values specified by this parameter. The string should be specified with multiple values separated by commas. URL encoding each value is recommended. To use this parameter, the metadata_key parameter should be specified.
+     * @param {String} opts.metadataValueStartswith Searches for group channels with metadata containing an item with the key specified by the metadata_key parameter, and the values of that item that start with the specified value of this parameter. URL encoding the value is recommended. To use this parameter, the metadata_key parameter should be specified.
+     * @param {String} opts.metacounterKey Searches for group channels with metacounter containing an item with the specified value as its key. To use this parameter, either the metacounter_values parameter or one of the metacounter_value_gt, metacounter_value_gte, metacounter_value_lt, and metacounter_value_lte parameters should be specified.
+     * @param {String} opts.metacounterValues Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is equal to one or more values specified by this parameter. The string should be specified with multiple values separated by commas. To use this parameter, the metacounter_key parameter should be specified.
+     * @param {String} opts.metacounterValueGt Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is greater than the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
+     * @param {String} opts.metacounterValueGte Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is greater than or equal to the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
+     * @param {String} opts.metacounterValueLt Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
+     * @param {String} opts.metacounterValueLte Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than or equal to the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
+     * @param {Boolean} opts.includeSortedMetaarrayInLastMessage Determines whether to include the sorted_metaarray as one of the last_message’s properties in the response.
+     * @param {String} opts.customType (Deprecated) Returns channels whose custom_type matches the given value. If this field is not specified, all channels are returned, regardless of their custom type. The string passed here must be urlencoded.
+     * @param {Boolean} opts.readReceipt (Deprecated) Superseded by show_read_receipt.
+     * @param {Boolean} opts.member (Deprecated) Superseded by show_member.
+     * @param {Boolean} opts.isDistinct (Deprecated) Superseded by distinct_mode.
+     * @param {String} opts.membersIn (Deprecated) Superseded by members_exactly_in.
+     * @param {String} opts.userId2 (Deprecated) Restricts the search scope to only retrieve the target user's group channels. It's recommended to use the list group channels by user action instead.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListMyGroupChannelsResponse} and HTTP response
      */
-    listMyGroupChannelsWithHttpInfo(apiToken, userId, opts) {
+    listMyGroupChannelsWithHttpInfo(userId, apiToken, opts) {
       opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling listMyGroupChannels");
-      }
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling listMyGroupChannels");
+      }
+      // verify the required parameter 'apiToken' is set
+      if (apiToken === undefined || apiToken === null) {
+        throw new Error("Missing the required parameter 'apiToken' when calling listMyGroupChannels");
       }
 
       let pathParams = {
@@ -493,16 +524,14 @@ export default class UserApi {
         'distinct_mode': opts['distinctMode'],
         'public_mode': opts['publicMode'],
         'super_mode': opts['superMode'],
-        'hidden_mode': opts['hiddenMode'],
-        'member_state_filter': opts['memberStateFilter'],
-        'unread_filter': opts['unreadFilter'],
         'created_after': opts['createdAfter'],
         'created_before': opts['createdBefore'],
         'show_empty': opts['showEmpty'],
-        'show_frozen': opts['showFrozen'],
         'show_member': opts['showMember'],
         'show_delivery_receipt': opts['showDeliveryReceipt'],
         'show_read_receipt': opts['showReadReceipt'],
+        'show_metadata': opts['showMetadata'],
+        'show_frozen': opts['showFrozen'],
         'order': opts['order'],
         'metadata_order_key': opts['metadataOrderKey'],
         'custom_types': opts['customTypes'],
@@ -516,8 +545,6 @@ export default class UserApi {
         'query_type': opts['queryType'],
         'members_nickname': opts['membersNickname'],
         'members_nickname_contains': opts['membersNicknameContains'],
-        'search_query': opts['searchQuery'],
-        'search_fields': opts['searchFields'],
         'metadata_key': opts['metadataKey'],
         'metadata_values': opts['metadataValues'],
         'metadata_value_startswith': opts['metadataValueStartswith'],
@@ -527,10 +554,16 @@ export default class UserApi {
         'metacounter_value_gte': opts['metacounterValueGte'],
         'metacounter_value_lt': opts['metacounterValueLt'],
         'metacounter_value_lte': opts['metacounterValueLte'],
-        'custom_type': opts['customType']
+        'include_sorted_metaarray_in_last_message': opts['includeSortedMetaarrayInLastMessage'],
+        'custom_type': opts['customType'],
+        'read_receipt': opts['readReceipt'],
+        'member': opts['member'],
+        'is_distinct': opts['isDistinct'],
+        'members_in': opts['membersIn'],
+        'user_id': opts['userId2']
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': apiToken
       };
       let formParams = {
       };
@@ -548,54 +581,56 @@ export default class UserApi {
 
     /**
      * List my group channels
-     * ## List my group channels  Retrieves all group channels that the user has joined. You can create a request based on various query parameters.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-my-group-channels ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the target user.
+     * ## List my group channels  This action retrieves a list of [group channels](https://sendbird.com/docs/chat/platform-api/v3/channel/channel-overview#2-channel-types-3-group-channel) that a specific user has joined. You can use various query parameters to determine the search scope and select what kind of information you want to receive about the queried channels.  If you're looking to retrieve a list of group channels in a specific application, visit the [list group channels](https://sendbird.com/docs/chat/platform-api/v3/channel/listing-channels-in-an-application/list-group-channels) page under the Channel section.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-joined-group-channels/list-group-channels-by-user#1-list-group-channels-by-user  `user_id`   Type: string   Description: Specifies the unique ID of the target user.
+     * @param {String} userId (Required) 
      * @param {String} apiToken 
-     * @param {String} userId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @param {String} opts.distinctMode 
-     * @param {String} opts.publicMode 
-     * @param {String} opts.superMode 
-     * @param {String} opts.hiddenMode 
-     * @param {String} opts.memberStateFilter 
-     * @param {String} opts.unreadFilter 
-     * @param {Number} opts.createdAfter 
-     * @param {Number} opts.createdBefore 
+     * @param {String} opts.token Specifies a page token that indicates the starting index of a chunk of results. If not specified, the index is set as 0.
+     * @param {Number} opts.limit Specifies the number of results to return per page. Acceptable values are 1 to 100, inclusive. (Default: 10)
+     * @param {module:model/String} opts.distinctMode 
+     * @param {module:model/String} opts.publicMode 
+     * @param {module:model/String} opts.superMode 
+     * @param {Number} opts.createdAfter Restricts the search scope to only retrieve group channels which have been created after the specified time, in Unix milliseconds format.
+     * @param {Number} opts.createdBefore Restricts the search scope to only retrieve group channels which have been created before the specified time, in Unix milliseconds format.
      * @param {Boolean} opts.showEmpty 
-     * @param {Boolean} opts.showFrozen 
      * @param {Boolean} opts.showMember 
      * @param {Boolean} opts.showDeliveryReceipt 
      * @param {Boolean} opts.showReadReceipt 
-     * @param {String} opts.order 
-     * @param {String} opts.metadataOrderKey 
-     * @param {String} opts.customTypes 
-     * @param {String} opts.customTypeStartswith 
-     * @param {String} opts.channelUrls 
-     * @param {String} opts.name 
-     * @param {String} opts.nameContains 
-     * @param {String} opts.nameStartswith 
-     * @param {String} opts.membersExactlyIn 
-     * @param {String} opts.membersIncludeIn 
-     * @param {String} opts.queryType 
-     * @param {String} opts.membersNickname 
-     * @param {String} opts.membersNicknameContains 
-     * @param {String} opts.searchQuery 
-     * @param {String} opts.searchFields 
-     * @param {String} opts.metadataKey 
-     * @param {String} opts.metadataValues 
-     * @param {String} opts.metadataValueStartswith 
-     * @param {String} opts.metacounterKey 
-     * @param {String} opts.metacounterValues 
-     * @param {String} opts.metacounterValueGt 
-     * @param {String} opts.metacounterValueGte 
-     * @param {String} opts.metacounterValueLt 
-     * @param {String} opts.metacounterValueLte 
-     * @param {String} opts.customType 
+     * @param {Boolean} opts.showMetadata 
+     * @param {Boolean} opts.showFrozen 
+     * @param {module:model/String} opts.order 
+     * @param {String} opts.metadataOrderKey Specifies the key of an item in metadata. When a value of the order parameter is set to metadata_value_alphabetical, the results are alphabetically sorted by the value of the item specified by the key.
+     * @param {String} opts.customTypes Specifies a comma-separated string of one or more custom types to filter group channels. URL encoding each type is recommended. If not specified, all channels are returned, regardless of their custom type.
+     * @param {String} opts.customTypeStartswith Searches for group channels with the custom type which starts with the specified value. URL encoding the value is recommended.
+     * @param {String} opts.channelUrls Specifies a comma-separated string of one or more group channel URLs to restrict the search scope. URL encoding each channel URL is recommended.
+     * @param {String} opts.name Specifies one or more group channel names.
+     * @param {String} opts.nameContains Searches for group channels whose names contain the specified value. Note that this parameter is case-insensitive. URL encoding the value is recommended.
+     * @param {String} opts.nameStartswith Searches for group channels whose names start with the specified value. Note that this parameter is case-insensitive. URL encoding the value is recommended.
+     * @param {String} opts.membersExactlyIn Searches for group channels with all the specified users as members. The parameter value should consist of user IDs separated by commas.  Only user IDs that match those of existing users are used for channel search. URL encoding each ID is recommended.
+     * @param {String} opts.membersIncludeIn Searches for group channels that include one or more users as members among the specified users. The value should consist of user IDs separated by commas or %2C. You can specify up to 60 user IDs.  Only user IDs that match those of existing users are used for channel search. URL encoding each ID is recommended.
+     * @param {String} opts.queryType Specifies a logical condition applied to the members_include_in parameter. Acceptable values are either AND or OR. For example, if you specify three members, A, B, and C, in members_include_in, the value of AND returns all channels that include every one of {A. B, C} as members. The value of OR returns channels that include {A}, plus those that include {B}, plus those that include {C}. (Default: AND)
+     * @param {String} opts.membersNickname Searches for group channels with members whose nicknames match the specified value. URL encoding the value is recommended.
+     * @param {String} opts.membersNicknameContains Searches for group channels with members whose nicknames contain the specified value. Note that this parameter is case-insensitive. URL encoding the value is recommended.  * We recommend using at least three characters for the parameter value for better search efficiency when you design and implement related features. If you would like to allow one or two characters for searching, use members_nickname instead to prevent performance issues.
+     * @param {String} opts.metadataKey Searches for group channels with metadata containing an item with the specified value as its key. To use this parameter, either the metadata_values parameter or the metadata_value_startswith parameter should be specified.
+     * @param {String} opts.metadataValues Searches for group channels with metadata containing an item with the key specified by the metadata_key parameter, and the value of that item matches one or more values specified by this parameter. The string should be specified with multiple values separated by commas. URL encoding each value is recommended. To use this parameter, the metadata_key parameter should be specified.
+     * @param {String} opts.metadataValueStartswith Searches for group channels with metadata containing an item with the key specified by the metadata_key parameter, and the values of that item that start with the specified value of this parameter. URL encoding the value is recommended. To use this parameter, the metadata_key parameter should be specified.
+     * @param {String} opts.metacounterKey Searches for group channels with metacounter containing an item with the specified value as its key. To use this parameter, either the metacounter_values parameter or one of the metacounter_value_gt, metacounter_value_gte, metacounter_value_lt, and metacounter_value_lte parameters should be specified.
+     * @param {String} opts.metacounterValues Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is equal to one or more values specified by this parameter. The string should be specified with multiple values separated by commas. To use this parameter, the metacounter_key parameter should be specified.
+     * @param {String} opts.metacounterValueGt Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is greater than the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
+     * @param {String} opts.metacounterValueGte Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is greater than or equal to the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
+     * @param {String} opts.metacounterValueLt Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
+     * @param {String} opts.metacounterValueLte Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than or equal to the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
+     * @param {Boolean} opts.includeSortedMetaarrayInLastMessage Determines whether to include the sorted_metaarray as one of the last_message’s properties in the response.
+     * @param {String} opts.customType (Deprecated) Returns channels whose custom_type matches the given value. If this field is not specified, all channels are returned, regardless of their custom type. The string passed here must be urlencoded.
+     * @param {Boolean} opts.readReceipt (Deprecated) Superseded by show_read_receipt.
+     * @param {Boolean} opts.member (Deprecated) Superseded by show_member.
+     * @param {Boolean} opts.isDistinct (Deprecated) Superseded by distinct_mode.
+     * @param {String} opts.membersIn (Deprecated) Superseded by members_exactly_in.
+     * @param {String} opts.userId2 (Deprecated) Restricts the search scope to only retrieve the target user's group channels. It's recommended to use the list group channels by user action instead.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListMyGroupChannelsResponse}
      */
-    listMyGroupChannels(apiToken, userId, opts) {
-      return this.listMyGroupChannelsWithHttpInfo(apiToken, userId, opts)
+    listMyGroupChannels(userId, apiToken, opts) {
+      return this.listMyGroupChannelsWithHttpInfo(userId, apiToken, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -604,18 +639,16 @@ export default class UserApi {
 
     /**
      * List registration or device tokens
-     * ## List registration or device tokens  Retrieves a list of a specific user's FCM registration tokens, HMS device tokens, or APNs device tokens. You can specify either `gcm`, `huawei`, or `apns` in the `token_type` parameter, depending on which push notification service you are using.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-registration-or-device-tokens ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} tokenType 
+     * ## List registration or device tokens  Retrieves a list of a user's registration or device tokens. You can pass `gcm`, `huawei`, or `apns` for FCM registration token, HMS device token, or APNs device token, respectively, in the `token_type` parameter for the push notification service you are using.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-device-tokens/list-registration-or-device-tokens#1-list-registration-or-device-tokens
+     * @param {String} userId (Required) 
+     * @param {module:model/String} tokenType (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListRegistrationOrDeviceTokensResponse} and HTTP response
      */
-    listRegistrationOrDeviceTokensWithHttpInfo(apiToken, userId, tokenType) {
+    listRegistrationOrDeviceTokensWithHttpInfo(userId, tokenType, opts) {
+      opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling listRegistrationOrDeviceTokens");
-      }
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling listRegistrationOrDeviceTokens");
@@ -632,7 +665,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -650,14 +683,15 @@ export default class UserApi {
 
     /**
      * List registration or device tokens
-     * ## List registration or device tokens  Retrieves a list of a specific user's FCM registration tokens, HMS device tokens, or APNs device tokens. You can specify either `gcm`, `huawei`, or `apns` in the `token_type` parameter, depending on which push notification service you are using.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-registration-or-device-tokens ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} tokenType 
+     * ## List registration or device tokens  Retrieves a list of a user's registration or device tokens. You can pass `gcm`, `huawei`, or `apns` for FCM registration token, HMS device token, or APNs device token, respectively, in the `token_type` parameter for the push notification service you are using.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-device-tokens/list-registration-or-device-tokens#1-list-registration-or-device-tokens
+     * @param {String} userId (Required) 
+     * @param {module:model/String} tokenType (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListRegistrationOrDeviceTokensResponse}
      */
-    listRegistrationOrDeviceTokens(apiToken, userId, tokenType) {
-      return this.listRegistrationOrDeviceTokensWithHttpInfo(apiToken, userId, tokenType)
+    listRegistrationOrDeviceTokens(userId, tokenType, opts) {
+      return this.listRegistrationOrDeviceTokensWithHttpInfo(userId, tokenType, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -666,27 +700,23 @@ export default class UserApi {
 
     /**
      * List users
-     * ## List users  Retrieves a list of users in your application. You can query the list using various parameters.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-users ----------------------------
-     * @param {String} apiToken 
+     * ## List users  You can retrieve a list of users in your Sendbird application using this API. You can generate a customized list using various parameter combinations.  https://sendbird.com/docs/chat/platform-api/v3/user/listing-users/list-users#1-list-users
      * @param {Object} opts Optional parameters
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @param {String} opts.activeMode 
-     * @param {Boolean} opts.showBot 
-     * @param {String} opts.userIds 
+     * @param {module:model/String} opts.activeMode Specifies the activation status of the users in the list. Acceptable values are `activated`, `deactivated`, and `all`. (Default: `activated`)
+     * @param {Boolean} opts.showBot Determines whether to include bots in the list. (Default: true)
+     * @param {String} opts.userIds Specifies the user IDs. The value should be a comma-separated string that consists of multiple urlencoded user IDs. An example of a urlencoded string is ?user_ids=urlencoded_id_1,urlencoded_id_2. * The maximum number of user IDs in this parameter is 250. If you exceed the maximum number, your request may receive an HTTP 414 error indicating that the request URL is longer than what Sendbird server can interpret.
      * @param {String} opts.nickname 
      * @param {String} opts.nicknameStartswith 
      * @param {String} opts.metadatakey 
-     * @param {String} opts.metadatavaluesIn 
+     * @param {String} opts.metadatavaluesIn Searches for blocked users with metadata containing an item with the key specified by the metadatakey parameter above, and the value of that item matches one or more values specified by this parameter. The string should be specified with multiple urlencoded metadata values separated by commas (for example, `?metadatavalues_in=urlencoded_value_1, urlencoded_value_2`). This parameter should be specified in conjunction with the `metadatakey` above.
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListUsersResponse} and HTTP response
      */
-    listUsersWithHttpInfo(apiToken, opts) {
+    listUsersWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling listUsers");
-      }
 
       let pathParams = {
       };
@@ -702,7 +732,7 @@ export default class UserApi {
         'metadatavalues_in': opts['metadatavaluesIn']
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -720,22 +750,22 @@ export default class UserApi {
 
     /**
      * List users
-     * ## List users  Retrieves a list of users in your application. You can query the list using various parameters.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-users ----------------------------
-     * @param {String} apiToken 
+     * ## List users  You can retrieve a list of users in your Sendbird application using this API. You can generate a customized list using various parameter combinations.  https://sendbird.com/docs/chat/platform-api/v3/user/listing-users/list-users#1-list-users
      * @param {Object} opts Optional parameters
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @param {String} opts.activeMode 
-     * @param {Boolean} opts.showBot 
-     * @param {String} opts.userIds 
+     * @param {module:model/String} opts.activeMode Specifies the activation status of the users in the list. Acceptable values are `activated`, `deactivated`, and `all`. (Default: `activated`)
+     * @param {Boolean} opts.showBot Determines whether to include bots in the list. (Default: true)
+     * @param {String} opts.userIds Specifies the user IDs. The value should be a comma-separated string that consists of multiple urlencoded user IDs. An example of a urlencoded string is ?user_ids=urlencoded_id_1,urlencoded_id_2. * The maximum number of user IDs in this parameter is 250. If you exceed the maximum number, your request may receive an HTTP 414 error indicating that the request URL is longer than what Sendbird server can interpret.
      * @param {String} opts.nickname 
      * @param {String} opts.nicknameStartswith 
      * @param {String} opts.metadatakey 
-     * @param {String} opts.metadatavaluesIn 
+     * @param {String} opts.metadatavaluesIn Searches for blocked users with metadata containing an item with the key specified by the metadatakey parameter above, and the value of that item matches one or more values specified by this parameter. The string should be specified with multiple urlencoded metadata values separated by commas (for example, `?metadatavalues_in=urlencoded_value_1, urlencoded_value_2`). This parameter should be specified in conjunction with the `metadatakey` above.
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListUsersResponse}
      */
-    listUsers(apiToken, opts) {
-      return this.listUsersWithHttpInfo(apiToken, opts)
+    listUsers(opts) {
+      return this.listUsersWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -744,20 +774,16 @@ export default class UserApi {
 
     /**
      * Mark all messages as read
-     * ## Mark all messages as read  Marks all of a user's unread messages as read in the joined group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-mark-all-messages-as-read ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Mark all messages as read  This action marks all of a user's unread messages as read in certain group channels. If channels aren't specified, the user's unread messages in all group channels are marked as read.  https://sendbird.com/docs/chat/platform-api/v3/user/marking-messages-as-read/mark-all-of-a-users-messages-as-read#1-mark-all-of-a-user-s-messages-as-read
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/MarkAllMessagesAsReadData} opts.markAllMessagesAsReadData 
+     * @param {String} opts.apiToken 
+     * @param {module:model/MarkAllMessagesAsReadRequest} opts.markAllMessagesAsReadRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
-    markAllMessagesAsReadWithHttpInfo(apiToken, userId, opts) {
+    markAllMessagesAsReadWithHttpInfo(userId, opts) {
       opts = opts || {};
-      let postBody = opts['markAllMessagesAsReadData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling markAllMessagesAsRead");
-      }
+      let postBody = opts['markAllMessagesAsReadRequest'];
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling markAllMessagesAsRead");
@@ -769,7 +795,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -787,130 +813,15 @@ export default class UserApi {
 
     /**
      * Mark all messages as read
-     * ## Mark all messages as read  Marks all of a user's unread messages as read in the joined group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-mark-all-messages-as-read ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Mark all messages as read  This action marks all of a user's unread messages as read in certain group channels. If channels aren't specified, the user's unread messages in all group channels are marked as read.  https://sendbird.com/docs/chat/platform-api/v3/user/marking-messages-as-read/mark-all-of-a-users-messages-as-read#1-mark-all-of-a-user-s-messages-as-read
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/MarkAllMessagesAsReadData} opts.markAllMessagesAsReadData 
+     * @param {String} opts.apiToken 
+     * @param {module:model/MarkAllMessagesAsReadRequest} opts.markAllMessagesAsReadRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
-    markAllMessagesAsRead(apiToken, userId, opts) {
-      return this.markAllMessagesAsReadWithHttpInfo(apiToken, userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Register as an operator to channels with custom channel types
-     * ## Register as an operator to channels with custom channel types  Registers a user as an operator to channels with particular custom channel types.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-register-as-an-operator-to-channels-with-custom-channel-types ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/RegisterAsOperatorToChannelsWithCustomChannelTypesData} opts.registerAsOperatorToChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
-     */
-    registerAsOperatorToChannelsWithCustomChannelTypesWithHttpInfo(apiToken, userId, opts) {
-      opts = opts || {};
-      let postBody = opts['registerAsOperatorToChannelsWithCustomChannelTypesData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling registerAsOperatorToChannelsWithCustomChannelTypes");
-      }
-      // verify the required parameter 'userId' is set
-      if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling registerAsOperatorToChannelsWithCustomChannelTypes");
-      }
-
-      let pathParams = {
-        'user_id': userId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = Object;
-      return this.apiClient.callApi(
-        '/v3/users/{user_id}/operating_channel_custom_types', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Register as an operator to channels with custom channel types
-     * ## Register as an operator to channels with custom channel types  Registers a user as an operator to channels with particular custom channel types.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-register-as-an-operator-to-channels-with-custom-channel-types ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/RegisterAsOperatorToChannelsWithCustomChannelTypesData} opts.registerAsOperatorToChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
-     */
-    registerAsOperatorToChannelsWithCustomChannelTypes(apiToken, userId, opts) {
-      return this.registerAsOperatorToChannelsWithCustomChannelTypesWithHttpInfo(apiToken, userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Remove a registration or device token - When unregistering all device tokens
-     * ## Remove a registration or device token  Removes a specific user's one or more FCM registration tokens, HMS device tokens, or APNs device tokens.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-remove-a-registration-or-device-token ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemoveRegistrationOrDeviceTokenResponse} and HTTP response
-     */
-    removeRegistrationOrDeviceTokenWithHttpInfo(apiToken, userId) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling removeRegistrationOrDeviceToken");
-      }
-      // verify the required parameter 'userId' is set
-      if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling removeRegistrationOrDeviceToken");
-      }
-
-      let pathParams = {
-        'user_id': userId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = RemoveRegistrationOrDeviceTokenResponse;
-      return this.apiClient.callApi(
-        '/v3/users/{user_id}/push', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Remove a registration or device token - When unregistering all device tokens
-     * ## Remove a registration or device token  Removes a specific user's one or more FCM registration tokens, HMS device tokens, or APNs device tokens.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-remove-a-registration-or-device-token ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemoveRegistrationOrDeviceTokenResponse}
-     */
-    removeRegistrationOrDeviceToken(apiToken, userId) {
-      return this.removeRegistrationOrDeviceTokenWithHttpInfo(apiToken, userId)
+    markAllMessagesAsRead(userId, opts) {
+      return this.markAllMessagesAsReadWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -919,30 +830,28 @@ export default class UserApi {
 
     /**
      * Remove a registration or device token - When unregistering a specific token
-     * ## Remove a registration or device token  Removes a specific user's one or more FCM registration tokens, HMS device tokens, or APNs device tokens.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-remove-a-registration-or-device-token ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} tokenType 
-     * @param {String} token 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemoveRegistrationOrDeviceTokenByTokenResponse} and HTTP response
+     * ## Remove a registration or device token  Removes a user's specific registration or device token or all tokens. You can pass `gcm`, `huawei`, or `apns` for FCM registration token, HMS device token, or APNs device token, respectively, in the `token_type` parameter for the push notification service you are using.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-device-tokens/remove-a-registration-or-device-token#1-remove-a-registration-or-device-token
+     * @param {String} userId (Required) 
+     * @param {module:model/String} tokenType (Required) 
+     * @param {String} token (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemoveARegistrationOrDeviceTokenResponse} and HTTP response
      */
-    removeRegistrationOrDeviceTokenByTokenWithHttpInfo(apiToken, userId, tokenType, token) {
+    removeARegistrationOrDeviceTokenWithHttpInfo(userId, tokenType, token, opts) {
+      opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling removeRegistrationOrDeviceTokenByToken");
-      }
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling removeRegistrationOrDeviceTokenByToken");
+        throw new Error("Missing the required parameter 'userId' when calling removeARegistrationOrDeviceToken");
       }
       // verify the required parameter 'tokenType' is set
       if (tokenType === undefined || tokenType === null) {
-        throw new Error("Missing the required parameter 'tokenType' when calling removeRegistrationOrDeviceTokenByToken");
+        throw new Error("Missing the required parameter 'tokenType' when calling removeARegistrationOrDeviceToken");
       }
       // verify the required parameter 'token' is set
       if (token === undefined || token === null) {
-        throw new Error("Missing the required parameter 'token' when calling removeRegistrationOrDeviceTokenByToken");
+        throw new Error("Missing the required parameter 'token' when calling removeARegistrationOrDeviceToken");
       }
 
       let pathParams = {
@@ -953,7 +862,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -961,7 +870,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = RemoveRegistrationOrDeviceTokenByTokenResponse;
+      let returnType = RemoveARegistrationOrDeviceTokenResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push/{token_type}/{token}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -971,15 +880,16 @@ export default class UserApi {
 
     /**
      * Remove a registration or device token - When unregistering a specific token
-     * ## Remove a registration or device token  Removes a specific user's one or more FCM registration tokens, HMS device tokens, or APNs device tokens.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-remove-a-registration-or-device-token ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} tokenType 
-     * @param {String} token 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemoveRegistrationOrDeviceTokenByTokenResponse}
+     * ## Remove a registration or device token  Removes a user's specific registration or device token or all tokens. You can pass `gcm`, `huawei`, or `apns` for FCM registration token, HMS device token, or APNs device token, respectively, in the `token_type` parameter for the push notification service you are using.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-device-tokens/remove-a-registration-or-device-token#1-remove-a-registration-or-device-token
+     * @param {String} userId (Required) 
+     * @param {module:model/String} tokenType (Required) 
+     * @param {String} token (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemoveARegistrationOrDeviceTokenResponse}
      */
-    removeRegistrationOrDeviceTokenByToken(apiToken, userId, tokenType, token) {
-      return this.removeRegistrationOrDeviceTokenByTokenWithHttpInfo(apiToken, userId, tokenType, token)
+    removeARegistrationOrDeviceToken(userId, tokenType, token, opts) {
+      return this.removeARegistrationOrDeviceTokenWithHttpInfo(userId, tokenType, token, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -988,25 +898,23 @@ export default class UserApi {
 
     /**
      * Remove a registration or device token from an owner
-     * ## Remove a registration or device token from an owner  Removes a registration or device token from a user who owns it. You can pass one of two values in `token_type`: `gcm`, `huawei`, or `apns`, depending on which push service you are using.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-remove-a-registration-or-device-token-from-an-owner ----------------------------
-     * @param {String} apiToken 
-     * @param {String} tokenType 
-     * @param {String} token 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse} and HTTP response
+     * ## Remove a registration or device token from an owner  Removes a registration or device token from a user who is the owner of the token. You can pass `gcm`, `huawei`, or `apns` for FCM registration token, HMS device token, or APNs device token, respectively, in the `token_type` parameter for the push notification service you are using.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-device-tokens/remove-a-registration-or-device-token-from-an-owner#1-remove-a-registration-or-device-token-from-an-owner
+     * @param {String} tokenType (Required) 
+     * @param {String} token (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/MarkChannelMessagesAsReadRequest>} and HTTP response
      */
-    removeRegistrationOrDeviceTokenFromOwnerByTokenWithHttpInfo(apiToken, tokenType, token) {
+    removeARegistrationOrDeviceTokenFromAnOwnerWithHttpInfo(tokenType, token, opts) {
+      opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling removeRegistrationOrDeviceTokenFromOwnerByToken");
-      }
       // verify the required parameter 'tokenType' is set
       if (tokenType === undefined || tokenType === null) {
-        throw new Error("Missing the required parameter 'tokenType' when calling removeRegistrationOrDeviceTokenFromOwnerByToken");
+        throw new Error("Missing the required parameter 'tokenType' when calling removeARegistrationOrDeviceTokenFromAnOwner");
       }
       // verify the required parameter 'token' is set
       if (token === undefined || token === null) {
-        throw new Error("Missing the required parameter 'token' when calling removeRegistrationOrDeviceTokenFromOwnerByToken");
+        throw new Error("Missing the required parameter 'token' when calling removeARegistrationOrDeviceTokenFromAnOwner");
       }
 
       let pathParams = {
@@ -1016,7 +924,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -1024,7 +932,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse;
+      let returnType = [MarkChannelMessagesAsReadRequest];
       return this.apiClient.callApi(
         '/v3/push/device_tokens/{token_type}/{token}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1034,14 +942,69 @@ export default class UserApi {
 
     /**
      * Remove a registration or device token from an owner
-     * ## Remove a registration or device token from an owner  Removes a registration or device token from a user who owns it. You can pass one of two values in `token_type`: `gcm`, `huawei`, or `apns`, depending on which push service you are using.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-remove-a-registration-or-device-token-from-an-owner ----------------------------
-     * @param {String} apiToken 
-     * @param {String} tokenType 
-     * @param {String} token 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemoveRegistrationOrDeviceTokenFromOwnerByTokenResponse}
+     * ## Remove a registration or device token from an owner  Removes a registration or device token from a user who is the owner of the token. You can pass `gcm`, `huawei`, or `apns` for FCM registration token, HMS device token, or APNs device token, respectively, in the `token_type` parameter for the push notification service you are using.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-device-tokens/remove-a-registration-or-device-token-from-an-owner#1-remove-a-registration-or-device-token-from-an-owner
+     * @param {String} tokenType (Required) 
+     * @param {String} token (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/MarkChannelMessagesAsReadRequest>}
      */
-    removeRegistrationOrDeviceTokenFromOwnerByToken(apiToken, tokenType, token) {
-      return this.removeRegistrationOrDeviceTokenFromOwnerByTokenWithHttpInfo(apiToken, tokenType, token)
+    removeARegistrationOrDeviceTokenFromAnOwner(tokenType, token, opts) {
+      return this.removeARegistrationOrDeviceTokenFromAnOwnerWithHttpInfo(tokenType, token, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Remove a registration or device token - When unregistering all device tokens
+     * ## Remove a registration or device token  Removes a user's specific registration or device token or all tokens. You can pass `gcm`, `huawei`, or `apns` for FCM registration token, HMS device token, or APNs device token, respectively, in the `token_type` parameter for the push notification service you are using.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-device-tokens/remove-a-registration-or-device-token#1-remove-a-registration-or-device-token
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RemoveAllRegistrationOrDeviceTokenResponse} and HTTP response
+     */
+    removeAllRegistrationOrDeviceTokenWithHttpInfo(userId, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'userId' is set
+      if (userId === undefined || userId === null) {
+        throw new Error("Missing the required parameter 'userId' when calling removeAllRegistrationOrDeviceToken");
+      }
+
+      let pathParams = {
+        'user_id': userId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-token': opts['apiToken']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = RemoveAllRegistrationOrDeviceTokenResponse;
+      return this.apiClient.callApi(
+        '/v3/users/{user_id}/push', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Remove a registration or device token - When unregistering all device tokens
+     * ## Remove a registration or device token  Removes a user's specific registration or device token or all tokens. You can pass `gcm`, `huawei`, or `apns` for FCM registration token, HMS device token, or APNs device token, respectively, in the `token_type` parameter for the push notification service you are using.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-device-tokens/remove-a-registration-or-device-token#1-remove-a-registration-or-device-token
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RemoveAllRegistrationOrDeviceTokenResponse}
+     */
+    removeAllRegistrationOrDeviceToken(userId, opts) {
+      return this.removeAllRegistrationOrDeviceTokenWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1050,17 +1013,15 @@ export default class UserApi {
 
     /**
      * Reset push preferences
-     * ## Reset push preferences  Resets a user's push preferences. After performing this action,   `do_not_disturb` and `snooze_enabled` are set to false.  The values of the parameters associated with the time frame are all set to 0.  `timezone` is reset to `UTC`.  `push_sound` is reset to `default`.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-reset-push-preferences ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResetPushPreferencesResponse} and HTTP response
+     * ## Reset push preferences  You can reset a user's notifications preferences. The values are reset to the default as the following.  - The values for the `do_not_disturb` and `snooze_enabled` properties are set to `false`.      - The values of the parameters associated with the time frame are all set to `0`.      - The value for the `timezone` property is set to `UTC`.      - The value for the `push_sound` property is set to `default`.       > **Note**: Push notifications are only available for group channels.      [https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/reset-push-notification-preferences#1-reset-push-notification-preferences](https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/reset-push-notification-preferences#1-reset-push-notification-preferences)
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
-    resetPushPreferencesWithHttpInfo(apiToken, userId) {
+    resetPushPreferencesWithHttpInfo(userId, opts) {
+      opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling resetPushPreferences");
-      }
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling resetPushPreferences");
@@ -1072,7 +1033,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -1080,7 +1041,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ResetPushPreferencesResponse;
+      let returnType = Object;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1090,13 +1051,70 @@ export default class UserApi {
 
     /**
      * Reset push preferences
-     * ## Reset push preferences  Resets a user's push preferences. After performing this action,   `do_not_disturb` and `snooze_enabled` are set to false.  The values of the parameters associated with the time frame are all set to 0.  `timezone` is reset to `UTC`.  `push_sound` is reset to `default`.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-reset-push-preferences ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResetPushPreferencesResponse}
+     * ## Reset push preferences  You can reset a user's notifications preferences. The values are reset to the default as the following.  - The values for the `do_not_disturb` and `snooze_enabled` properties are set to `false`.      - The values of the parameters associated with the time frame are all set to `0`.      - The value for the `timezone` property is set to `UTC`.      - The value for the `push_sound` property is set to `default`.       > **Note**: Push notifications are only available for group channels.      [https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/reset-push-notification-preferences#1-reset-push-notification-preferences](https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/reset-push-notification-preferences#1-reset-push-notification-preferences)
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
-    resetPushPreferences(apiToken, userId) {
-      return this.resetPushPreferencesWithHttpInfo(apiToken, userId)
+    resetPushPreferences(userId, opts) {
+      return this.resetPushPreferencesWithHttpInfo(userId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Update a user
+     * ## Update a user  You can update information about a user using this API. In addition to changing a user's nickname or profile image, you can issue a new access token for the user. The new access token replaces the previous one as the necessary token for authentication.  You can also deactivate or reactivate a user using this API request. If the `leave_all_when_deactivated` is set to `true`, a user leaves all joined group channels and becomes deactivated.  > **Note**: Issuing session tokens through the `/users/{user_id}` endpoint is now deprecated and it&apos;s replaced with [&lt;code&gt;/users/{user_id}/token&lt;/code&gt;](https://sendbird.com/docs/chat/platform-api/v3/user/managing-session-tokens/issue-a-session-token) endpoint for greater efficiency. For those who are currently using the old endpoint, you can start issuing tokens using the new endpoint.      [https://sendbird.com/docs/chat/platform-api/v3/user/managing-users/update-a-user#1-update-a-user](https://sendbird.com/docs/chat/platform-api/v3/user/managing-users/update-a-user#1-update-a-user)
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateAUserRequest} opts.updateAUserRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendbirdUser} and HTTP response
+     */
+    updateAUserWithHttpInfo(userId, opts) {
+      opts = opts || {};
+      let postBody = opts['updateAUserRequest'];
+      // verify the required parameter 'userId' is set
+      if (userId === undefined || userId === null) {
+        throw new Error("Missing the required parameter 'userId' when calling updateAUser");
+      }
+
+      let pathParams = {
+        'user_id': userId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-token': opts['apiToken']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SendbirdUser;
+      return this.apiClient.callApi(
+        '/v3/users/{user_id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Update a user
+     * ## Update a user  You can update information about a user using this API. In addition to changing a user's nickname or profile image, you can issue a new access token for the user. The new access token replaces the previous one as the necessary token for authentication.  You can also deactivate or reactivate a user using this API request. If the `leave_all_when_deactivated` is set to `true`, a user leaves all joined group channels and becomes deactivated.  > **Note**: Issuing session tokens through the `/users/{user_id}` endpoint is now deprecated and it&apos;s replaced with [&lt;code&gt;/users/{user_id}/token&lt;/code&gt;](https://sendbird.com/docs/chat/platform-api/v3/user/managing-session-tokens/issue-a-session-token) endpoint for greater efficiency. For those who are currently using the old endpoint, you can start issuing tokens using the new endpoint.      [https://sendbird.com/docs/chat/platform-api/v3/user/managing-users/update-a-user#1-update-a-user](https://sendbird.com/docs/chat/platform-api/v3/user/managing-users/update-a-user#1-update-a-user)
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateAUserRequest} opts.updateAUserRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendbirdUser}
+     */
+    updateAUser(userId, opts) {
+      return this.updateAUserWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1105,20 +1123,16 @@ export default class UserApi {
 
     /**
      * Update channel invitation preference
-     * ## Update channel invitation preference  Updates the channel invitation preference for a user's [private](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#-3-private-vs-public) group channels.  > __Note__: Using the [update default channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-default-channel-invitation-preference) action, you can update the value of channel invitation preference which is globally applied to all users within the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-channel-invitation-preference
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Update channel invitation preference  This action updates a user's [group channel](https://sendbird.com/docs/chat/platform-api/v3/channel/channel-overview#2-channel-types-3-group-channel) invitation preference. Updating the [application's default channel invitation preference](https://sendbird.com/docs/chat/platform-api/v3/channel/setting-up-channels/update-default-invitation-preference) won't override existing users' individual channel invitation preferences. The changed preference only affects the users created after the update.  https://sendbird.com/docs/chat/platform-api/v3/channel/managing-a-channel/update-channel-invitation-preference#1-update-channel-invitation-preference
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateChannelInvitationPreferenceData} opts.updateChannelInvitationPreferenceData 
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateChannelInvitationPreferenceRequest} opts.updateChannelInvitationPreferenceRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateChannelInvitationPreferenceResponse} and HTTP response
      */
-    updateChannelInvitationPreferenceWithHttpInfo(apiToken, userId, opts) {
+    updateChannelInvitationPreferenceWithHttpInfo(userId, opts) {
       opts = opts || {};
-      let postBody = opts['updateChannelInvitationPreferenceData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling updateChannelInvitationPreference");
-      }
+      let postBody = opts['updateChannelInvitationPreferenceRequest'];
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling updateChannelInvitationPreference");
@@ -1130,7 +1144,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -1148,15 +1162,15 @@ export default class UserApi {
 
     /**
      * Update channel invitation preference
-     * ## Update channel invitation preference  Updates the channel invitation preference for a user's [private](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#-3-private-vs-public) group channels.  > __Note__: Using the [update default channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-update-default-channel-invitation-preference) action, you can update the value of channel invitation preference which is globally applied to all users within the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-channel-invitation-preference
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Update channel invitation preference  This action updates a user's [group channel](https://sendbird.com/docs/chat/platform-api/v3/channel/channel-overview#2-channel-types-3-group-channel) invitation preference. Updating the [application's default channel invitation preference](https://sendbird.com/docs/chat/platform-api/v3/channel/setting-up-channels/update-default-invitation-preference) won't override existing users' individual channel invitation preferences. The changed preference only affects the users created after the update.  https://sendbird.com/docs/chat/platform-api/v3/channel/managing-a-channel/update-channel-invitation-preference#1-update-channel-invitation-preference
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateChannelInvitationPreferenceData} opts.updateChannelInvitationPreferenceData 
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateChannelInvitationPreferenceRequest} opts.updateChannelInvitationPreferenceRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateChannelInvitationPreferenceResponse}
      */
-    updateChannelInvitationPreference(apiToken, userId, opts) {
-      return this.updateChannelInvitationPreferenceWithHttpInfo(apiToken, userId, opts)
+    updateChannelInvitationPreference(userId, opts) {
+      return this.updateChannelInvitationPreferenceWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1165,28 +1179,24 @@ export default class UserApi {
 
     /**
      * Update count preference of a channel
-     * ## Update count preference of a channel  Updates count preference of a specific group channel of a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-count-preference-of-a-channel ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} channelUrl 
+     * ## Update count preference of a channel  This action updates a user's count preference of a specific group channel. The count preference allows a user to either update the number of unread messages or the number of unread mentioned messages, or both in a specific group channel.  If you want to retrieve the total number count of a specific group channel, go to the [get count preference of a channel](https://sendbird.com/docs/chat/platform-api/v3/user/managing-unread-count/get-count-preference-of-a-channel) page.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-unread-count/update-count-preference-of-a-channel#1-update-count-preference-of-a-channel
+     * @param {String} userId (Required) 
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateCountPreferenceOfChannelByUrlData} opts.updateCountPreferenceOfChannelByUrlData 
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateCountPreferenceOfAChannelRequest} opts.updateCountPreferenceOfAChannelRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateCountPreferenceOfChannelByUrlResponse} and HTTP response
      */
-    updateCountPreferenceOfChannelByUrlWithHttpInfo(apiToken, userId, channelUrl, opts) {
+    updateCountPreferenceOfAChannelWithHttpInfo(userId, channelUrl, opts) {
       opts = opts || {};
-      let postBody = opts['updateCountPreferenceOfChannelByUrlData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling updateCountPreferenceOfChannelByUrl");
-      }
+      let postBody = opts['updateCountPreferenceOfAChannelRequest'];
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling updateCountPreferenceOfChannelByUrl");
+        throw new Error("Missing the required parameter 'userId' when calling updateCountPreferenceOfAChannel");
       }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling updateCountPreferenceOfChannelByUrl");
+        throw new Error("Missing the required parameter 'channelUrl' when calling updateCountPreferenceOfAChannel");
       }
 
       let pathParams = {
@@ -1196,7 +1206,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -1214,16 +1224,16 @@ export default class UserApi {
 
     /**
      * Update count preference of a channel
-     * ## Update count preference of a channel  Updates count preference of a specific group channel of a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-count-preference-of-a-channel ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} channelUrl 
+     * ## Update count preference of a channel  This action updates a user's count preference of a specific group channel. The count preference allows a user to either update the number of unread messages or the number of unread mentioned messages, or both in a specific group channel.  If you want to retrieve the total number count of a specific group channel, go to the [get count preference of a channel](https://sendbird.com/docs/chat/platform-api/v3/user/managing-unread-count/get-count-preference-of-a-channel) page.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-unread-count/update-count-preference-of-a-channel#1-update-count-preference-of-a-channel
+     * @param {String} userId (Required) 
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateCountPreferenceOfChannelByUrlData} opts.updateCountPreferenceOfChannelByUrlData 
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateCountPreferenceOfAChannelRequest} opts.updateCountPreferenceOfAChannelRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateCountPreferenceOfChannelByUrlResponse}
      */
-    updateCountPreferenceOfChannelByUrl(apiToken, userId, channelUrl, opts) {
-      return this.updateCountPreferenceOfChannelByUrlWithHttpInfo(apiToken, userId, channelUrl, opts)
+    updateCountPreferenceOfAChannel(userId, channelUrl, opts) {
+      return this.updateCountPreferenceOfAChannelWithHttpInfo(userId, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1232,20 +1242,16 @@ export default class UserApi {
 
     /**
      * Update push preferences
-     * ## Update push preferences  Updates a user's push preferences. Through this action, you can set `do_not_disturb` for a user, and update the time frame in which the setting applies.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-push-preferences ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Update push preferences  You can update a user's notifications preferences. A push notification is a message that is immediately delivered to a user's device when the device is either idle or running the client app in the background.  > **Note**: Push notifications are only available for group channels.      [https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/update-push-notification-preferences#1-update-push-notification-preferences](https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/update-push-notification-preferences#1-update-push-notification-preferences)
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdatePushPreferencesData} opts.updatePushPreferencesData 
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdatePushPreferencesRequest} opts.updatePushPreferencesRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdatePushPreferencesResponse} and HTTP response
      */
-    updatePushPreferencesWithHttpInfo(apiToken, userId, opts) {
+    updatePushPreferencesWithHttpInfo(userId, opts) {
       opts = opts || {};
-      let postBody = opts['updatePushPreferencesData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling updatePushPreferences");
-      }
+      let postBody = opts['updatePushPreferencesRequest'];
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling updatePushPreferences");
@@ -1257,7 +1263,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -1275,15 +1281,15 @@ export default class UserApi {
 
     /**
      * Update push preferences
-     * ## Update push preferences  Updates a user's push preferences. Through this action, you can set `do_not_disturb` for a user, and update the time frame in which the setting applies.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-push-preferences ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Update push preferences  You can update a user's notifications preferences. A push notification is a message that is immediately delivered to a user's device when the device is either idle or running the client app in the background.  > **Note**: Push notifications are only available for group channels.      [https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/update-push-notification-preferences#1-update-push-notification-preferences](https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/update-push-notification-preferences#1-update-push-notification-preferences)
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdatePushPreferencesData} opts.updatePushPreferencesData 
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdatePushPreferencesRequest} opts.updatePushPreferencesRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdatePushPreferencesResponse}
      */
-    updatePushPreferences(apiToken, userId, opts) {
-      return this.updatePushPreferencesWithHttpInfo(apiToken, userId, opts)
+    updatePushPreferences(userId, opts) {
+      return this.updatePushPreferencesWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1292,28 +1298,24 @@ export default class UserApi {
 
     /**
      * Update push preferences for a channel
-     * ## Update push preferences for a channel  Updates push preferences for a user's specific group channel. The push notifications feature is only available for group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-push-preferences-for-a-channel ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} channelUrl 
+     * ## Update push preferences for a channel  You can update a user's notifications preferences for a specific channel. A push notification is a message that is immediately delivered to a user's device when the device is either idle or running the client app in the background.  > **Note**: Push notifications are only available for group channels.      [https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/update-push-notification-preferences-for-a-channel#1-update-push-notification-preferences-for-a-channel](https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/update-push-notification-preferences-for-a-channel#1-update-push-notification-preferences-for-a-channel)
+     * @param {String} userId (Required) 
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdatePushPreferencesForChannelByUrlData} opts.updatePushPreferencesForChannelByUrlData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdatePushPreferencesForChannelByUrlResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdatePushPreferencesForAChannelRequest} opts.updatePushPreferencesForAChannelRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdatePushPreferencesForAChannelResponse} and HTTP response
      */
-    updatePushPreferencesForChannelByUrlWithHttpInfo(apiToken, userId, channelUrl, opts) {
+    updatePushPreferencesForAChannelWithHttpInfo(userId, channelUrl, opts) {
       opts = opts || {};
-      let postBody = opts['updatePushPreferencesForChannelByUrlData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling updatePushPreferencesForChannelByUrl");
-      }
+      let postBody = opts['updatePushPreferencesForAChannelRequest'];
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling updatePushPreferencesForChannelByUrl");
+        throw new Error("Missing the required parameter 'userId' when calling updatePushPreferencesForAChannel");
       }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling updatePushPreferencesForChannelByUrl");
+        throw new Error("Missing the required parameter 'channelUrl' when calling updatePushPreferencesForAChannel");
       }
 
       let pathParams = {
@@ -1323,7 +1325,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -1331,7 +1333,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = UpdatePushPreferencesForChannelByUrlResponse;
+      let returnType = UpdatePushPreferencesForAChannelResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference/{channel_url}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1341,16 +1343,16 @@ export default class UserApi {
 
     /**
      * Update push preferences for a channel
-     * ## Update push preferences for a channel  Updates push preferences for a user's specific group channel. The push notifications feature is only available for group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-push-preferences-for-a-channel ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} channelUrl 
+     * ## Update push preferences for a channel  You can update a user's notifications preferences for a specific channel. A push notification is a message that is immediately delivered to a user's device when the device is either idle or running the client app in the background.  > **Note**: Push notifications are only available for group channels.      [https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/update-push-notification-preferences-for-a-channel#1-update-push-notification-preferences-for-a-channel](https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/update-push-notification-preferences-for-a-channel#1-update-push-notification-preferences-for-a-channel)
+     * @param {String} userId (Required) 
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdatePushPreferencesForChannelByUrlData} opts.updatePushPreferencesForChannelByUrlData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdatePushPreferencesForChannelByUrlResponse}
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdatePushPreferencesForAChannelRequest} opts.updatePushPreferencesForAChannelRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdatePushPreferencesForAChannelResponse}
      */
-    updatePushPreferencesForChannelByUrl(apiToken, userId, channelUrl, opts) {
-      return this.updatePushPreferencesForChannelByUrlWithHttpInfo(apiToken, userId, channelUrl, opts)
+    updatePushPreferencesForAChannel(userId, channelUrl, opts) {
+      return this.updatePushPreferencesForAChannelWithHttpInfo(userId, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1358,90 +1360,34 @@ export default class UserApi {
 
 
     /**
-     * Update a user
-     * ## Update a user  Updates information on a user. In addition to changing a user's nickname or profile image, you can issue a new access token for the user. The new access token replaces the previous one as the necessary token for authentication.  You can also deactivate or reactivate a user. If the `leave_all_when_deactivated` is true (which it is by default), a user leaves all joined group channels when deactivated.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * View a user
+     * ## View a user  You can retrieve information about a user using this API.  https://sendbird.com/docs/chat/platform-api/v3/user/listing-users/get-a-user#1-get-a-user  `user_id`   Type: string   Description: Specifies the unique ID of the user to retrieve.
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateUserByIdData} opts.updateUserByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
+     * @param {Boolean} opts.includeUnreadCount 
+     * @param {String} opts.customTypes 
+     * @param {module:model/String} opts.superMode Restricts the search scope to retrieve only Supergroup or non-Supergroup channels. Acceptable values are `all`, `super`, and `nonsuper`. This parameter should be specified in conjunction with `include_unread_count` above. (Default: `all`)
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendbirdUser} and HTTP response
      */
-    updateUserByIdWithHttpInfo(apiToken, userId, opts) {
+    viewAUserWithHttpInfo(userId, opts) {
       opts = opts || {};
-      let postBody = opts['updateUserByIdData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling updateUserById");
-      }
-      // verify the required parameter 'userId' is set
-      if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling updateUserById");
-      }
-
-      let pathParams = {
-        'user_id': userId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = SendBirdUser;
-      return this.apiClient.callApi(
-        '/v3/users/{user_id}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Update a user
-     * ## Update a user  Updates information on a user. In addition to changing a user's nickname or profile image, you can issue a new access token for the user. The new access token replaces the previous one as the necessary token for authentication.  You can also deactivate or reactivate a user. If the `leave_all_when_deactivated` is true (which it is by default), a user leaves all joined group channels when deactivated.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-update-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateUserByIdData} opts.updateUserByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
-     */
-    updateUserById(apiToken, userId, opts) {
-      return this.updateUserByIdWithHttpInfo(apiToken, userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View channel invitation preference
-     * ## View channel invitation preference  Retrieves channel invitation preference for a user's [private](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#-3-private-vs-public) group channels.  > __Note__: Using the [view default channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-default-channel-invitation-preference) action, you can retrieve the value of channel invitation preference which is globally applied to all users within the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-channel-invitation-preference
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewChannelInvitationPreferenceResponse} and HTTP response
-     */
-    viewChannelInvitationPreferenceWithHttpInfo(apiToken, userId) {
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewChannelInvitationPreference");
-      }
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling viewChannelInvitationPreference");
+        throw new Error("Missing the required parameter 'userId' when calling viewAUser");
       }
 
       let pathParams = {
         'user_id': userId
       };
       let queryParams = {
+        'include_unread_count': opts['includeUnreadCount'],
+        'custom_types': opts['customTypes'],
+        'super_mode': opts['superMode']
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -1449,23 +1395,27 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ViewChannelInvitationPreferenceResponse;
+      let returnType = SendbirdUser;
       return this.apiClient.callApi(
-        '/v3/users/{user_id}/channel_invitation_preference', 'GET',
+        '/v3/users/{user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * View channel invitation preference
-     * ## View channel invitation preference  Retrieves channel invitation preference for a user's [private](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#-3-private-vs-public) group channels.  > __Note__: Using the [view default channel invitation preference](https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-default-channel-invitation-preference) action, you can retrieve the value of channel invitation preference which is globally applied to all users within the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-channel-invitation-preference
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewChannelInvitationPreferenceResponse}
+     * View a user
+     * ## View a user  You can retrieve information about a user using this API.  https://sendbird.com/docs/chat/platform-api/v3/user/listing-users/get-a-user#1-get-a-user  `user_id`   Type: string   Description: Specifies the unique ID of the user to retrieve.
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.includeUnreadCount 
+     * @param {String} opts.customTypes 
+     * @param {module:model/String} opts.superMode Restricts the search scope to retrieve only Supergroup or non-Supergroup channels. Acceptable values are `all`, `super`, and `nonsuper`. This parameter should be specified in conjunction with `include_unread_count` above. (Default: `all`)
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendbirdUser}
      */
-    viewChannelInvitationPreference(apiToken, userId) {
-      return this.viewChannelInvitationPreferenceWithHttpInfo(apiToken, userId)
+    viewAUser(userId, opts) {
+      return this.viewAUserWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1474,25 +1424,23 @@ export default class UserApi {
 
     /**
      * View count preference of a channel
-     * ## View count preference of a channel  Retrieves count preference of a specific group channel of a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-count-preference-of-a-channel ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewCountPreferenceOfChannelByUrlResponse} and HTTP response
+     * ## View count preference of a channel  This action retrieves a user's count preference of a specific group channel. The count preference allows a user to either retrieve the number of unread messages or unread mentioned messages, or both in a specific group channel.  If you want to update the total number count of a specific group channel, visit the [update count preference of a channel](https://sendbird.com/docs/chat/platform-api/v3/user/managing-unread-count/update-count-preference-of-a-channel).  https://sendbird.com/docs/chat/platform-api/v3/user/managing-unread-count/get-count-preference-of-a-channel#1-get-count-preference-of-a-channel
+     * @param {String} userId (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewCountPreferenceOfAChannelResponse} and HTTP response
      */
-    viewCountPreferenceOfChannelByUrlWithHttpInfo(apiToken, userId, channelUrl) {
+    viewCountPreferenceOfAChannelWithHttpInfo(userId, channelUrl, opts) {
+      opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewCountPreferenceOfChannelByUrl");
-      }
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling viewCountPreferenceOfChannelByUrl");
+        throw new Error("Missing the required parameter 'userId' when calling viewCountPreferenceOfAChannel");
       }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling viewCountPreferenceOfChannelByUrl");
+        throw new Error("Missing the required parameter 'channelUrl' when calling viewCountPreferenceOfAChannel");
       }
 
       let pathParams = {
@@ -1502,7 +1450,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -1510,7 +1458,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ViewCountPreferenceOfChannelByUrlResponse;
+      let returnType = ViewCountPreferenceOfAChannelResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/count_preference/{channel_url}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1520,75 +1468,15 @@ export default class UserApi {
 
     /**
      * View count preference of a channel
-     * ## View count preference of a channel  Retrieves count preference of a specific group channel of a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-count-preference-of-a-channel ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewCountPreferenceOfChannelByUrlResponse}
-     */
-    viewCountPreferenceOfChannelByUrl(apiToken, userId, channelUrl) {
-      return this.viewCountPreferenceOfChannelByUrlWithHttpInfo(apiToken, userId, channelUrl)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View number of channels by join status
-     * ## View number of channels by join status  Retrieves the number of a user's group channels by their join status.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-channels-by-join-status ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the user to retrieve the number.
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## View count preference of a channel  This action retrieves a user's count preference of a specific group channel. The count preference allows a user to either retrieve the number of unread messages or unread mentioned messages, or both in a specific group channel.  If you want to update the total number count of a specific group channel, visit the [update count preference of a channel](https://sendbird.com/docs/chat/platform-api/v3/user/managing-unread-count/update-count-preference-of-a-channel).  https://sendbird.com/docs/chat/platform-api/v3/user/managing-unread-count/get-count-preference-of-a-channel#1-get-count-preference-of-a-channel
+     * @param {String} userId (Required) 
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.state 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfChannelsByJoinStatusResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewCountPreferenceOfAChannelResponse}
      */
-    viewNumberOfChannelsByJoinStatusWithHttpInfo(apiToken, userId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewNumberOfChannelsByJoinStatus");
-      }
-      // verify the required parameter 'userId' is set
-      if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling viewNumberOfChannelsByJoinStatus");
-      }
-
-      let pathParams = {
-        'user_id': userId
-      };
-      let queryParams = {
-        'state': opts['state']
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ViewNumberOfChannelsByJoinStatusResponse;
-      return this.apiClient.callApi(
-        '/v3/users/{user_id}/group_channel_count', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * View number of channels by join status
-     * ## View number of channels by join status  Retrieves the number of a user's group channels by their join status.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-channels-by-join-status ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the user to retrieve the number.
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.state 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfChannelsByJoinStatusResponse}
-     */
-    viewNumberOfChannelsByJoinStatus(apiToken, userId, opts) {
-      return this.viewNumberOfChannelsByJoinStatusWithHttpInfo(apiToken, userId, opts)
+    viewCountPreferenceOfAChannel(userId, channelUrl, opts) {
+      return this.viewCountPreferenceOfAChannelWithHttpInfo(userId, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1597,21 +1485,17 @@ export default class UserApi {
 
     /**
      * View number of channels with unread messages
-     * ## View number of channels with unread messages  Retrieves the total number of a user's group channels with unread messages.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-channels-with-unread-messages ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## View number of channels with unread messages  This action retrieves the total number of group channels in which a user has unread messages. You can use various query parameters to determine the search scope of group channels.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-unread-count/get-number-of-channels-with-unread-messages#1-get-number-of-channels-with-unread-messages
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.customTypes 
-     * @param {String} opts.superMode 
+     * @param {String} opts.customTypes 
+     * @param {module:model/String} opts.superMode Restricts the search scope to either Supergroup channels or non-Supergroup channels or both. Acceptable values are all, super, and nonsuper. (Default: all)
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfChannelsWithUnreadMessagesResponse} and HTTP response
      */
-    viewNumberOfChannelsWithUnreadMessagesWithHttpInfo(apiToken, userId, opts) {
+    viewNumberOfChannelsWithUnreadMessagesWithHttpInfo(userId, opts) {
       opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewNumberOfChannelsWithUnreadMessages");
-      }
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling viewNumberOfChannelsWithUnreadMessages");
@@ -1621,11 +1505,11 @@ export default class UserApi {
         'user_id': userId
       };
       let queryParams = {
-        'custom_types': this.apiClient.buildCollectionParam(opts['customTypes'], 'multi'),
+        'custom_types': opts['customTypes'],
         'super_mode': opts['superMode']
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -1643,80 +1527,16 @@ export default class UserApi {
 
     /**
      * View number of channels with unread messages
-     * ## View number of channels with unread messages  Retrieves the total number of a user's group channels with unread messages.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-channels-with-unread-messages ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## View number of channels with unread messages  This action retrieves the total number of group channels in which a user has unread messages. You can use various query parameters to determine the search scope of group channels.  https://sendbird.com/docs/chat/platform-api/v3/user/managing-unread-count/get-number-of-channels-with-unread-messages#1-get-number-of-channels-with-unread-messages
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.customTypes 
-     * @param {String} opts.superMode 
+     * @param {String} opts.customTypes 
+     * @param {module:model/String} opts.superMode Restricts the search scope to either Supergroup channels or non-Supergroup channels or both. Acceptable values are all, super, and nonsuper. (Default: all)
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfChannelsWithUnreadMessagesResponse}
      */
-    viewNumberOfChannelsWithUnreadMessages(apiToken, userId, opts) {
-      return this.viewNumberOfChannelsWithUnreadMessagesWithHttpInfo(apiToken, userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View number of unread items
-     * ## View number of unread items  Retrieves a set of total numbers of a user's unread messages, unread mentioned messages, or received invitations in either super or non-super group channels. This action is only available for the group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-unread-items ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.customType 
-     * @param {String} opts.itemKeys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfUnreadItemsResponse} and HTTP response
-     */
-    viewNumberOfUnreadItemsWithHttpInfo(apiToken, userId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewNumberOfUnreadItems");
-      }
-      // verify the required parameter 'userId' is set
-      if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling viewNumberOfUnreadItems");
-      }
-
-      let pathParams = {
-        'user_id': userId
-      };
-      let queryParams = {
-        'custom_type': opts['customType'],
-        'item_keys': opts['itemKeys']
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ViewNumberOfUnreadItemsResponse;
-      return this.apiClient.callApi(
-        '/v3/users/{user_id}/unread_item_count', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * View number of unread items
-     * ## View number of unread items  Retrieves a set of total numbers of a user's unread messages, unread mentioned messages, or received invitations in either super or non-super group channels. This action is only available for the group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-unread-items ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.customType 
-     * @param {String} opts.itemKeys 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfUnreadItemsResponse}
-     */
-    viewNumberOfUnreadItems(apiToken, userId, opts) {
-      return this.viewNumberOfUnreadItemsWithHttpInfo(apiToken, userId, opts)
+    viewNumberOfChannelsWithUnreadMessages(userId, opts) {
+      return this.viewNumberOfChannelsWithUnreadMessagesWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1725,21 +1545,17 @@ export default class UserApi {
 
     /**
      * View number of unread messages
-     * ## View number of unread messages  Retrieves the total number of a user's currently unread messages in the group channels. The unread counts feature is only available for the group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-unread-messages ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the user to retrieve the number.
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## View number of unread messages  This action retrieves a user's total number of unread messages in group channels.  > **Note**: The unread count feature is only available for group channels.      [https://sendbird.com/docs/chat/platform-api/v3/user/managing-unread-count/get-number-of-unread-messages#1-get-number-of-unread-messages](https://sendbird.com/docs/chat/platform-api/v3/user/managing-unread-count/get-number-of-unread-messages#1-get-number-of-unread-messages)  `user_id`   Type: string   Description: Specifies the unique ID of a user.
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.customTypes 
-     * @param {String} opts.superMode 
+     * @param {String} opts.customTypes Specifies a comma-separated string of one or more custom types to filter group channels. URL encoding each type is recommended. If not specified, all channels are returned, regardless of their custom type.
+     * @param {String} opts.superMode Restricts the search scope to either Supergroup channels or non-Supergroup channels or both. Acceptable values are `all`, `super`, and `nonsuper`. (Default: `all`)
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfUnreadMessagesResponse} and HTTP response
      */
-    viewNumberOfUnreadMessagesWithHttpInfo(apiToken, userId, opts) {
+    viewNumberOfUnreadMessagesWithHttpInfo(userId, opts) {
       opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewNumberOfUnreadMessages");
-      }
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling viewNumberOfUnreadMessages");
@@ -1753,7 +1569,7 @@ export default class UserApi {
         'super_mode': opts['superMode']
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -1771,16 +1587,16 @@ export default class UserApi {
 
     /**
      * View number of unread messages
-     * ## View number of unread messages  Retrieves the total number of a user's currently unread messages in the group channels. The unread counts feature is only available for the group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-number-of-unread-messages ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the user to retrieve the number.
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## View number of unread messages  This action retrieves a user's total number of unread messages in group channels.  > **Note**: The unread count feature is only available for group channels.      [https://sendbird.com/docs/chat/platform-api/v3/user/managing-unread-count/get-number-of-unread-messages#1-get-number-of-unread-messages](https://sendbird.com/docs/chat/platform-api/v3/user/managing-unread-count/get-number-of-unread-messages#1-get-number-of-unread-messages)  `user_id`   Type: string   Description: Specifies the unique ID of a user.
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.customTypes 
-     * @param {String} opts.superMode 
+     * @param {String} opts.customTypes Specifies a comma-separated string of one or more custom types to filter group channels. URL encoding each type is recommended. If not specified, all channels are returned, regardless of their custom type.
+     * @param {String} opts.superMode Restricts the search scope to either Supergroup channels or non-Supergroup channels or both. Acceptable values are `all`, `super`, and `nonsuper`. (Default: `all`)
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfUnreadMessagesResponse}
      */
-    viewNumberOfUnreadMessages(apiToken, userId, opts) {
-      return this.viewNumberOfUnreadMessagesWithHttpInfo(apiToken, userId, opts)
+    viewNumberOfUnreadMessages(userId, opts) {
+      return this.viewNumberOfUnreadMessagesWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1789,17 +1605,15 @@ export default class UserApi {
 
     /**
      * View push preferences
-     * ## View push preferences  Retrieves a user's push preferences about whether the user has set `do_not_disturb` to pause notifications for a certain period of time, and the time frame in which the user has applied the setting.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-push-preferences ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## View push preferences  You can retrieves a user's notifications preferences. A push notification is a message that is immediately delivered to a user's device when the device is either idle or running the client app in the background.  > **Note**: Push notifications are only available for group channels.      [https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/get-push-notification-preferences#1-get-push-notification-preferences](https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/get-push-notification-preferences#1-get-push-notification-preferences)
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewPushPreferencesResponse} and HTTP response
      */
-    viewPushPreferencesWithHttpInfo(apiToken, userId) {
+    viewPushPreferencesWithHttpInfo(userId, opts) {
+      opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewPushPreferences");
-      }
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling viewPushPreferences");
@@ -1811,7 +1625,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -1829,13 +1643,14 @@ export default class UserApi {
 
     /**
      * View push preferences
-     * ## View push preferences  Retrieves a user's push preferences about whether the user has set `do_not_disturb` to pause notifications for a certain period of time, and the time frame in which the user has applied the setting.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-push-preferences ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## View push preferences  You can retrieves a user's notifications preferences. A push notification is a message that is immediately delivered to a user's device when the device is either idle or running the client app in the background.  > **Note**: Push notifications are only available for group channels.      [https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/get-push-notification-preferences#1-get-push-notification-preferences](https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/get-push-notification-preferences#1-get-push-notification-preferences)
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewPushPreferencesResponse}
      */
-    viewPushPreferences(apiToken, userId) {
-      return this.viewPushPreferencesWithHttpInfo(apiToken, userId)
+    viewPushPreferences(userId, opts) {
+      return this.viewPushPreferencesWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1844,25 +1659,23 @@ export default class UserApi {
 
     /**
      * View push preferences for a channel
-     * ## View push preferences for a channel  Retrieves whether a user has turned on notification messages for a specific channel. The push notifications feature is only available for group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-push-preferences-for-a-channel ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewPushPreferencesForChannelByUrlResponse} and HTTP response
+     * ## View push preferences for a channel  You can retrieve a user's notifications preferences for a specific channel. A push notification is a message that is immediately delivered to a user's device when the device is either idle or running the client app in the background. These notifications preferences can be configured.  > **Note**: Push notifications are only available for group channels.      [https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/get-push-notification-preferences-for-a-channel#1-get-push-notification-preferences-for-a-channel](https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/get-push-notification-preferences-for-a-channel#1-get-push-notification-preferences-for-a-channel)
+     * @param {String} userId (Required) 
+     * @param {String} channelUrl (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewPushPreferencesForAChannelResponse} and HTTP response
      */
-    viewPushPreferencesForChannelByUrlWithHttpInfo(apiToken, userId, channelUrl) {
+    viewPushPreferencesForAChannelWithHttpInfo(userId, channelUrl, opts) {
+      opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewPushPreferencesForChannelByUrl");
-      }
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling viewPushPreferencesForChannelByUrl");
+        throw new Error("Missing the required parameter 'userId' when calling viewPushPreferencesForAChannel");
       }
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling viewPushPreferencesForChannelByUrl");
+        throw new Error("Missing the required parameter 'channelUrl' when calling viewPushPreferencesForAChannel");
       }
 
       let pathParams = {
@@ -1872,7 +1685,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -1880,7 +1693,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ViewPushPreferencesForChannelByUrlResponse;
+      let returnType = ViewPushPreferencesForAChannelResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/push_preference/{channel_url}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1890,81 +1703,15 @@ export default class UserApi {
 
     /**
      * View push preferences for a channel
-     * ## View push preferences for a channel  Retrieves whether a user has turned on notification messages for a specific channel. The push notifications feature is only available for group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-push-preferences-for-a-channel ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewPushPreferencesForChannelByUrlResponse}
-     */
-    viewPushPreferencesForChannelByUrl(apiToken, userId, channelUrl) {
-      return this.viewPushPreferencesForChannelByUrlWithHttpInfo(apiToken, userId, channelUrl)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View a user
-     * ## View a user  Retrieves information on a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-a-user ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the user to retrieve.
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## View push preferences for a channel  You can retrieve a user's notifications preferences for a specific channel. A push notification is a message that is immediately delivered to a user's device when the device is either idle or running the client app in the background. These notifications preferences can be configured.  > **Note**: Push notifications are only available for group channels.      [https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/get-push-notification-preferences-for-a-channel#1-get-push-notification-preferences-for-a-channel](https://sendbird.com/docs/chat/platform-api/v3/user/configuring-notification-preferences/get-push-notification-preferences-for-a-channel#1-get-push-notification-preferences-for-a-channel)
+     * @param {String} userId (Required) 
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.includeUnreadCount 
-     * @param {String} opts.customTypes 
-     * @param {String} opts.superMode 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdUser} and HTTP response
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewPushPreferencesForAChannelResponse}
      */
-    viewUserByIdWithHttpInfo(apiToken, userId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewUserById");
-      }
-      // verify the required parameter 'userId' is set
-      if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling viewUserById");
-      }
-
-      let pathParams = {
-        'user_id': userId
-      };
-      let queryParams = {
-        'include_unread_count': opts['includeUnreadCount'],
-        'custom_types': opts['customTypes'],
-        'super_mode': opts['superMode']
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = SendBirdUser;
-      return this.apiClient.callApi(
-        '/v3/users/{user_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * View a user
-     * ## View a user  Retrieves information on a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-a-user ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the user to retrieve.
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.includeUnreadCount 
-     * @param {String} opts.customTypes 
-     * @param {String} opts.superMode 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdUser}
-     */
-    viewUserById(apiToken, userId, opts) {
-      return this.viewUserByIdWithHttpInfo(apiToken, userId, opts)
+    viewPushPreferencesForAChannel(userId, channelUrl, opts) {
+      return this.viewPushPreferencesForAChannelWithHttpInfo(userId, channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1974,24 +1721,22 @@ export default class UserApi {
     /**
      * View who owns a registration or device token
      * ## View who owns a registration or device token  Retrieves a user who owns a FCM registration token, HMS device token, or APNs device token. You can pass one of two values in `token_type`: `gcm`, `huawei`, or `apns`, depending on which push service you are using.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-who-owns-a-registration-or-device-token ----------------------------
-     * @param {String} apiToken 
-     * @param {String} tokenType 
-     * @param {String} token 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner>} and HTTP response
+     * @param {String} tokenType (Required) 
+     * @param {String} token (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/MarkChannelMessagesAsReadRequest>} and HTTP response
      */
-    viewWhoOwnsRegistrationOrDeviceTokenByTokenWithHttpInfo(apiToken, tokenType, token) {
+    viewWhoOwnsARegistrationOrDeviceTokenWithHttpInfo(tokenType, token, opts) {
+      opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewWhoOwnsRegistrationOrDeviceTokenByToken");
-      }
       // verify the required parameter 'tokenType' is set
       if (tokenType === undefined || tokenType === null) {
-        throw new Error("Missing the required parameter 'tokenType' when calling viewWhoOwnsRegistrationOrDeviceTokenByToken");
+        throw new Error("Missing the required parameter 'tokenType' when calling viewWhoOwnsARegistrationOrDeviceToken");
       }
       // verify the required parameter 'token' is set
       if (token === undefined || token === null) {
-        throw new Error("Missing the required parameter 'token' when calling viewWhoOwnsRegistrationOrDeviceTokenByToken");
+        throw new Error("Missing the required parameter 'token' when calling viewWhoOwnsARegistrationOrDeviceToken");
       }
 
       let pathParams = {
@@ -2001,7 +1746,7 @@ export default class UserApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -2009,7 +1754,7 @@ export default class UserApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner];
+      let returnType = [MarkChannelMessagesAsReadRequest];
       return this.apiClient.callApi(
         '/v3/push/device_tokens/{token_type}/{token}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -2020,13 +1765,14 @@ export default class UserApi {
     /**
      * View who owns a registration or device token
      * ## View who owns a registration or device token  Retrieves a user who owns a FCM registration token, HMS device token, or APNs device token. You can pass one of two values in `token_type`: `gcm`, `huawei`, or `apns`, depending on which push service you are using.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-view-who-owns-a-registration-or-device-token ----------------------------
-     * @param {String} apiToken 
-     * @param {String} tokenType 
-     * @param {String} token 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ViewWhoOwnsRegistrationOrDeviceTokenByTokenResponseInner>}
+     * @param {String} tokenType (Required) 
+     * @param {String} token (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/MarkChannelMessagesAsReadRequest>}
      */
-    viewWhoOwnsRegistrationOrDeviceTokenByToken(apiToken, tokenType, token) {
-      return this.viewWhoOwnsRegistrationOrDeviceTokenByTokenWithHttpInfo(apiToken, tokenType, token)
+    viewWhoOwnsARegistrationOrDeviceToken(tokenType, token, opts) {
+      return this.viewWhoOwnsARegistrationOrDeviceTokenWithHttpInfo(tokenType, token, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

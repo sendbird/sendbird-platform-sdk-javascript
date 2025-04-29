@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.CreateUserTokenResponse);
     });
 
-    it('should have the property token (base name: "token")', function() {
-      // uncomment below and update the code to test the property token
+    it('should have the property expiresAt (base name: "expires_at")', function() {
+      // uncomment below and update the code to test the property expiresAt
       //var instance = new SendbirdPlatformSdk.CreateUserTokenResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property expiresAt (base name: "expires_at")', function() {
-      // uncomment below and update the code to test the property expiresAt
+    it('should have the property token (base name: "token")', function() {
+      // uncomment below and update the code to test the property token
       //var instance = new SendbirdPlatformSdk.CreateUserTokenResponse();
       //expect(instance).to.be();
     });

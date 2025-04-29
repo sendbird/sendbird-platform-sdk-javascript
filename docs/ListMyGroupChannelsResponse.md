@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**channels** | [**[SendBirdGroupChannel]**](SendBirdGroupChannel.md) |  | [optional] 
+**channels** | [**[SendbirdGroupChannel]**](SendbirdGroupChannel.md) |  | [optional] 
 **next** | **String** |  | [optional] 
 **ts** | **Number** |  | [optional] 
 

@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import SendBirdGroupChannel from './SendBirdGroupChannel';
+import SendbirdGroupChannel from './SendbirdGroupChannel';
 
 /**
  * The ListMyGroupChannelsResponse model module.
  * @module model/ListMyGroupChannelsResponse
- * @version 0.0.16
+ * @version 2.0.0
  */
 class ListMyGroupChannelsResponse {
     /**
@@ -49,7 +49,7 @@ class ListMyGroupChannelsResponse {
             obj = obj || new ListMyGroupChannelsResponse();
 
             if (data.hasOwnProperty('channels')) {
-                obj['channels'] = ApiClient.convertToType(data['channels'], [SendBirdGroupChannel]);
+                obj['channels'] = ApiClient.convertToType(data['channels'], [SendbirdGroupChannel]);
             }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
@@ -65,7 +65,7 @@ class ListMyGroupChannelsResponse {
 }
 
 /**
- * @member {Array.<module:model/SendBirdGroupChannel>} channels
+ * @member {Array.<module:model/SendbirdGroupChannel>} channels
  */
 ListMyGroupChannelsResponse.prototype['channels'] = undefined;
 

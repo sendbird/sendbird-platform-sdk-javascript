@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -48,160 +48,40 @@
   }
 
   describe('MessageApi', function() {
-    describe('addEmojiCategories', function() {
-      it('should call addEmojiCategories successfully', function(done) {
-        //uncomment below and update the code to test addEmojiCategories
-        //instance.addEmojiCategories(function(error) {
+    describe('addExtraDataToAMessage', function() {
+      it('should call addExtraDataToAMessage successfully', function(done) {
+        //uncomment below and update the code to test addExtraDataToAMessage
+        //instance.addExtraDataToAMessage(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('addEmojis', function() {
-      it('should call addEmojis successfully', function(done) {
-        //uncomment below and update the code to test addEmojis
-        //instance.addEmojis(function(error) {
+    describe('deleteAMessage', function() {
+      it('should call deleteAMessage successfully', function(done) {
+        //uncomment below and update the code to test deleteAMessage
+        //instance.deleteAMessage(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('addExtraDataToMessage', function() {
-      it('should call addExtraDataToMessage successfully', function(done) {
-        //uncomment below and update the code to test addExtraDataToMessage
-        //instance.addExtraDataToMessage(function(error) {
+    describe('getAMessage', function() {
+      it('should call getAMessage successfully', function(done) {
+        //uncomment below and update the code to test getAMessage
+        //instance.getAMessage(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('addReactionToAMessage', function() {
-      it('should call addReactionToAMessage successfully', function(done) {
-        //uncomment below and update the code to test addReactionToAMessage
-        //instance.addReactionToAMessage(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('deleteEmojiByKey', function() {
-      it('should call deleteEmojiByKey successfully', function(done) {
-        //uncomment below and update the code to test deleteEmojiByKey
-        //instance.deleteEmojiByKey(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('deleteEmojiCategoryById', function() {
-      it('should call deleteEmojiCategoryById successfully', function(done) {
-        //uncomment below and update the code to test deleteEmojiCategoryById
-        //instance.deleteEmojiCategoryById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('deleteMessageById', function() {
-      it('should call deleteMessageById successfully', function(done) {
-        //uncomment below and update the code to test deleteMessageById
-        //instance.deleteMessageById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('enableReactions', function() {
-      it('should call enableReactions successfully', function(done) {
-        //uncomment below and update the code to test enableReactions
-        //instance.enableReactions(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('gcMarkAllMessagesAsDelivered', function() {
-      it('should call gcMarkAllMessagesAsDelivered successfully', function(done) {
-        //uncomment below and update the code to test gcMarkAllMessagesAsDelivered
-        //instance.gcMarkAllMessagesAsDelivered(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('gcMarkAllMessagesAsRead', function() {
-      it('should call gcMarkAllMessagesAsRead successfully', function(done) {
-        //uncomment below and update the code to test gcMarkAllMessagesAsRead
-        //instance.gcMarkAllMessagesAsRead(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('gcViewNumberOfEachMembersUnreadMessages', function() {
-      it('should call gcViewNumberOfEachMembersUnreadMessages successfully', function(done) {
-        //uncomment below and update the code to test gcViewNumberOfEachMembersUnreadMessages
-        //instance.gcViewNumberOfEachMembersUnreadMessages(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getEmojiByKey', function() {
-      it('should call getEmojiByKey successfully', function(done) {
-        //uncomment below and update the code to test getEmojiByKey
-        //instance.getEmojiByKey(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getEmojiCategoryById', function() {
-      it('should call getEmojiCategoryById successfully', function(done) {
-        //uncomment below and update the code to test getEmojiCategoryById
-        //instance.getEmojiCategoryById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listAllEmojisAndEmojiCategories', function() {
-      it('should call listAllEmojisAndEmojiCategories successfully', function(done) {
-        //uncomment below and update the code to test listAllEmojisAndEmojiCategories
-        //instance.listAllEmojisAndEmojiCategories(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listAnnouncements', function() {
-      it('should call listAnnouncements successfully', function(done) {
-        //uncomment below and update the code to test listAnnouncements
-        //instance.listAnnouncements(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listEmojis', function() {
-      it('should call listEmojis successfully', function(done) {
-        //uncomment below and update the code to test listEmojis
-        //instance.listEmojis(function(error) {
+    describe('getTotalNumberOfMessagesInAChannel', function() {
+      it('should call getTotalNumberOfMessagesInAChannel successfully', function(done) {
+        //uncomment below and update the code to test getTotalNumberOfMessagesInAChannel
+        //instance.getTotalNumberOfMessagesInAChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -218,130 +98,60 @@
         done();
       });
     });
-    describe('listReactionsOfMessage', function() {
-      it('should call listReactionsOfMessage successfully', function(done) {
-        //uncomment below and update the code to test listReactionsOfMessage
-        //instance.listReactionsOfMessage(function(error) {
+    describe('markChannelMessagesAsRead', function() {
+      it('should call markChannelMessagesAsRead successfully', function(done) {
+        //uncomment below and update the code to test markChannelMessagesAsRead
+        //instance.markChannelMessagesAsRead(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('migrateMessagesByUrl', function() {
-      it('should call migrateMessagesByUrl successfully', function(done) {
-        //uncomment below and update the code to test migrateMessagesByUrl
-        //instance.migrateMessagesByUrl(function(error) {
+    describe('migrateMessages', function() {
+      it('should call migrateMessages successfully', function(done) {
+        //uncomment below and update the code to test migrateMessages
+        //instance.migrateMessages(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('removeExtraDataFromMessage', function() {
-      it('should call removeExtraDataFromMessage successfully', function(done) {
-        //uncomment below and update the code to test removeExtraDataFromMessage
-        //instance.removeExtraDataFromMessage(function(error) {
+    describe('removeExtraDataFromAMessage', function() {
+      it('should call removeExtraDataFromAMessage successfully', function(done) {
+        //uncomment below and update the code to test removeExtraDataFromAMessage
+        //instance.removeExtraDataFromAMessage(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('removeReactionFromAMessage', function() {
-      it('should call removeReactionFromAMessage successfully', function(done) {
-        //uncomment below and update the code to test removeReactionFromAMessage
-        //instance.removeReactionFromAMessage(function(error) {
+    describe('sendAMessage', function() {
+      it('should call sendAMessage successfully', function(done) {
+        //uncomment below and update the code to test sendAMessage
+        //instance.sendAMessage(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('sendMessage', function() {
-      it('should call sendMessage successfully', function(done) {
-        //uncomment below and update the code to test sendMessage
-        //instance.sendMessage(function(error) {
+    describe('updateAMessage', function() {
+      it('should call updateAMessage successfully', function(done) {
+        //uncomment below and update the code to test updateAMessage
+        //instance.updateAMessage(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('translateMessageIntoOtherLanguages', function() {
-      it('should call translateMessageIntoOtherLanguages successfully', function(done) {
-        //uncomment below and update the code to test translateMessageIntoOtherLanguages
-        //instance.translateMessageIntoOtherLanguages(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateEmojiCategoryUrlById', function() {
-      it('should call updateEmojiCategoryUrlById successfully', function(done) {
-        //uncomment below and update the code to test updateEmojiCategoryUrlById
-        //instance.updateEmojiCategoryUrlById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateEmojiUrlByKey', function() {
-      it('should call updateEmojiUrlByKey successfully', function(done) {
-        //uncomment below and update the code to test updateEmojiUrlByKey
-        //instance.updateEmojiUrlByKey(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateExtraDataInMessage', function() {
-      it('should call updateExtraDataInMessage successfully', function(done) {
-        //uncomment below and update the code to test updateExtraDataInMessage
-        //instance.updateExtraDataInMessage(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateMessageById', function() {
-      it('should call updateMessageById successfully', function(done) {
-        //uncomment below and update the code to test updateMessageById
-        //instance.updateMessageById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('useDefaultEmojis', function() {
-      it('should call useDefaultEmojis successfully', function(done) {
-        //uncomment below and update the code to test useDefaultEmojis
-        //instance.useDefaultEmojis(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewMessageById', function() {
-      it('should call viewMessageById successfully', function(done) {
-        //uncomment below and update the code to test viewMessageById
-        //instance.viewMessageById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewTotalNumberOfMessagesInChannel', function() {
-      it('should call viewTotalNumberOfMessagesInChannel successfully', function(done) {
-        //uncomment below and update the code to test viewTotalNumberOfMessagesInChannel
-        //instance.viewTotalNumberOfMessagesInChannel(function(error) {
+    describe('updateExtraDataInAMessage', function() {
+      it('should call updateExtraDataInAMessage successfully', function(done) {
+        //uncomment below and update the code to test updateExtraDataInAMessage
+        //instance.updateExtraDataInAMessage(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

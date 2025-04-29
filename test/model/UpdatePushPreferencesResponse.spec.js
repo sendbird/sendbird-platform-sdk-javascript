@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -60,38 +60,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property enablePushForReplies (base name: "enable_push_for_replies")', function() {
-      // uncomment below and update the code to test the property enablePushForReplies
-      //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property pushBlockedBotIds (base name: "push_blocked_bot_ids")', function() {
-      // uncomment below and update the code to test the property pushBlockedBotIds
-      //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property pushTriggerOption (base name: "push_trigger_option")', function() {
-      // uncomment below and update the code to test the property pushTriggerOption
-      //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property doNotDisturb (base name: "do_not_disturb")', function() {
       // uncomment below and update the code to test the property doNotDisturb
       //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property startHour (base name: "start_hour")', function() {
-      // uncomment below and update the code to test the property startHour
-      //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property startMin (base name: "start_min")', function() {
-      // uncomment below and update the code to test the property startMin
+    it('should have the property enablePushForReplies (base name: "enable_push_for_replies")', function() {
+      // uncomment below and update the code to test the property enablePushForReplies
       //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
       //expect(instance).to.be();
     });
@@ -108,14 +84,26 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property snoozeEnabled (base name: "snooze_enabled")', function() {
-      // uncomment below and update the code to test the property snoozeEnabled
+    it('should have the property pushBlockedBotIds (base name: "push_blocked_bot_ids")', function() {
+      // uncomment below and update the code to test the property pushBlockedBotIds
       //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property snoozeStartTs (base name: "snooze_start_ts")', function() {
-      // uncomment below and update the code to test the property snoozeStartTs
+    it('should have the property pushSound (base name: "push_sound")', function() {
+      // uncomment below and update the code to test the property pushSound
+      //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property pushTriggerOption (base name: "push_trigger_option")', function() {
+      // uncomment below and update the code to test the property pushTriggerOption
+      //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property snoozeEnabled (base name: "snooze_enabled")', function() {
+      // uncomment below and update the code to test the property snoozeEnabled
       //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
       //expect(instance).to.be();
     });
@@ -126,14 +114,26 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property timezone (base name: "timezone")', function() {
-      // uncomment below and update the code to test the property timezone
+    it('should have the property snoozeStartTs (base name: "snooze_start_ts")', function() {
+      // uncomment below and update the code to test the property snoozeStartTs
       //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property pushSound (base name: "push_sound")', function() {
-      // uncomment below and update the code to test the property pushSound
+    it('should have the property startHour (base name: "start_hour")', function() {
+      // uncomment below and update the code to test the property startHour
+      //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property startMin (base name: "start_min")', function() {
+      // uncomment below and update the code to test the property startMin
+      //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property timezone (base name: "timezone")', function() {
+      // uncomment below and update the code to test the property timezone
       //var instance = new SendbirdPlatformSdk.UpdatePushPreferencesResponse();
       //expect(instance).to.be();
     });

@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -13,41 +13,18 @@
 
 
 import ApiClient from "../ApiClient";
-import BanFromChannelsWithCustomChannelTypesData from '../model/BanFromChannelsWithCustomChannelTypesData';
-import BlockUserData from '../model/BlockUserData';
-import BlockUserResponse from '../model/BlockUserResponse';
-import GcBanUserData from '../model/GcBanUserData';
-import GcBanUserResponse from '../model/GcBanUserResponse';
-import GcFreezeChannelData from '../model/GcFreezeChannelData';
-import GcListBannedUsersResponse from '../model/GcListBannedUsersResponse';
-import GcListMutedUsersResponse from '../model/GcListMutedUsersResponse';
-import GcMuteUserData from '../model/GcMuteUserData';
-import GcUpdateBanByIdData from '../model/GcUpdateBanByIdData';
-import GcUpdateBanByIdResponse from '../model/GcUpdateBanByIdResponse';
-import GcViewBanByIdResponse from '../model/GcViewBanByIdResponse';
-import GcViewMuteByIdResponse from '../model/GcViewMuteByIdResponse';
-import ListBannedChannelsResponse from '../model/ListBannedChannelsResponse';
+import BlockAUserRequest from '../model/BlockAUserRequest';
+import BlockAUserResponse from '../model/BlockAUserResponse';
+import FreezeAGroupChannelRequest from '../model/FreezeAGroupChannelRequest';
+import FreezeAnOpenChannelRequest from '../model/FreezeAnOpenChannelRequest';
 import ListBlockedUsersResponse from '../model/ListBlockedUsersResponse';
-import ListMutedChannelsResponse from '../model/ListMutedChannelsResponse';
-import MuteInChannelsWithCustomChannelTypesData from '../model/MuteInChannelsWithCustomChannelTypesData';
-import OcBanUserData from '../model/OcBanUserData';
-import OcBanUserResponse from '../model/OcBanUserResponse';
-import OcDeleteChannelByUrl200Response from '../model/OcDeleteChannelByUrl200Response';
-import OcFreezeChannelData from '../model/OcFreezeChannelData';
-import OcListBannedUsersResponse from '../model/OcListBannedUsersResponse';
-import OcListMutedUsersResponse from '../model/OcListMutedUsersResponse';
-import OcMuteUserData from '../model/OcMuteUserData';
-import OcUpdateBanByIdData from '../model/OcUpdateBanByIdData';
-import OcUpdateBanByIdResponse from '../model/OcUpdateBanByIdResponse';
-import OcViewBanByIdResponse from '../model/OcViewBanByIdResponse';
-import OcViewMuteByIdResponse from '../model/OcViewMuteByIdResponse';
-import SendBirdGroupChannel from '../model/SendBirdGroupChannel';
-import SendBirdOpenChannel from '../model/SendBirdOpenChannel';
+import SendbirdGroupChannelDetail from '../model/SendbirdGroupChannelDetail';
+import SendbirdOpenChannel from '../model/SendbirdOpenChannel';
 
 /**
 * Moderation service.
 * @module api/ModerationApi
-* @version 0.0.16
+* @version 2.0.0
 */
 export default class ModerationApi {
 
@@ -65,84 +42,20 @@ export default class ModerationApi {
 
 
     /**
-     * Ban from channels with custom channel types
-     * ## Ban from channels with custom channel types  Bans a user from channels with particular custom channel types.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-ban-from-channels-with-custom-channel-types ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/BanFromChannelsWithCustomChannelTypesData} opts.banFromChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
-     */
-    banFromChannelsWithCustomChannelTypesWithHttpInfo(apiToken, userId, opts) {
-      opts = opts || {};
-      let postBody = opts['banFromChannelsWithCustomChannelTypesData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling banFromChannelsWithCustomChannelTypes");
-      }
-      // verify the required parameter 'userId' is set
-      if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling banFromChannelsWithCustomChannelTypes");
-      }
-
-      let pathParams = {
-        'user_id': userId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = Object;
-      return this.apiClient.callApi(
-        '/v3/users/{user_id}/banned_channel_custom_types', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Ban from channels with custom channel types
-     * ## Ban from channels with custom channel types  Bans a user from channels with particular custom channel types.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-ban-from-channels-with-custom-channel-types ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/BanFromChannelsWithCustomChannelTypesData} opts.banFromChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
-     */
-    banFromChannelsWithCustomChannelTypes(apiToken, userId, opts) {
-      return this.banFromChannelsWithCustomChannelTypesWithHttpInfo(apiToken, userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
      * Block a user
-     * ## Block a user  Allows a user to block another user. A user doesn't receive messages from someone they have blocked anymore. Also, blocking someone doesn't alert them that they have been blocked. Blocked users still can send messages as normal in the channel: however, they can't receive any messages from the users who have blocked them.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-block-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Block a user  A user can block another user if the user doesn't wish to receive any messages or notifications from the blocked user in a 1-to-1 group channel. In a 1-to-N group channel, the user can still receive messages from the blocked user, but this depends on the UI settings of the chat view. In any case, notifications from the blocked user won't be delivered to the 1-to-N group channel. You can choose whether or not the user can view [which users are blocked](https://sendbird.com/docs/chat/platform-api/v3/moderation/listing-blocked-and-blocking-users/list-blocked-and-blocking-users) in the channel UI.  Sendbird application provides two blocking options: include or exclude blocked users when sending invitations, and turn on or off notifications from blocked users. [Explicit and classic block modes](https://sendbird.com/docs/chat/platform-api/v3/deprecated#2-explicit-and-classic-block-modes) have been deprecated and are only supported for customers who started using them before they were deprecated.  - **Include or exclude blocked users when sending invitations**: Determines whether or not to automatically filter out blocked users when a user invites a group of users to a new group channel. By default, blocked users are included when sending invitations. The value of this option can be changed by Sendbird if your Sendbird application isn't integrated to the client app. If you want to change the value, [contact our sales team](https://get.sendbird.com/talk-to-sales.html).      - **Turn on or off notifications from blocked users**: Determines whether or not to receive message notifications from the blocked user in a specific 1-to-N group channel where they are both members. By default, a user doesn't receive notifications from blocked users. The value of this option can be set individually per channel. If you want to use this option, [contact our sales team](https://get.sendbird.com/talk-to-sales.html).       > **Note**: To learn more about other available moderation tools, see [Moderation Overview](https://sendbird.com/docs/chat/platform-api/v3/moderation/moderation-overview#2-actions).      The following tables explain what happens to a user's chat experience when the user blocks another user in a 1-to-1 or 1-to-N group channel. In the case of a 1-to-1 group channel, the block mode is only maintained with the original members. If other than the original members are added, the rules for 1-to-N group channel begin to apply.  [https://sendbird.com/docs/chat/platform-api/v3/moderation/blocking-users/block-users#1-block-users](https://sendbird.com/docs/chat/platform-api/v3/moderation/blocking-users/block-users#1-block-users)
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/BlockUserData} opts.blockUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BlockUserResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @param {module:model/BlockAUserRequest} opts.blockAUserRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BlockAUserResponse} and HTTP response
      */
-    blockUserWithHttpInfo(apiToken, userId, opts) {
+    blockAUserWithHttpInfo(userId, opts) {
       opts = opts || {};
-      let postBody = opts['blockUserData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling blockUser");
-      }
+      let postBody = opts['blockAUserRequest'];
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling blockUser");
+        throw new Error("Missing the required parameter 'userId' when calling blockAUser");
       }
 
       let pathParams = {
@@ -151,7 +64,7 @@ export default class ModerationApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -159,7 +72,7 @@ export default class ModerationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = BlockUserResponse;
+      let returnType = BlockAUserResponse;
       return this.apiClient.callApi(
         '/v3/users/{user_id}/block', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -169,15 +82,15 @@ export default class ModerationApi {
 
     /**
      * Block a user
-     * ## Block a user  Allows a user to block another user. A user doesn't receive messages from someone they have blocked anymore. Also, blocking someone doesn't alert them that they have been blocked. Blocked users still can send messages as normal in the channel: however, they can't receive any messages from the users who have blocked them.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-block-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## Block a user  A user can block another user if the user doesn't wish to receive any messages or notifications from the blocked user in a 1-to-1 group channel. In a 1-to-N group channel, the user can still receive messages from the blocked user, but this depends on the UI settings of the chat view. In any case, notifications from the blocked user won't be delivered to the 1-to-N group channel. You can choose whether or not the user can view [which users are blocked](https://sendbird.com/docs/chat/platform-api/v3/moderation/listing-blocked-and-blocking-users/list-blocked-and-blocking-users) in the channel UI.  Sendbird application provides two blocking options: include or exclude blocked users when sending invitations, and turn on or off notifications from blocked users. [Explicit and classic block modes](https://sendbird.com/docs/chat/platform-api/v3/deprecated#2-explicit-and-classic-block-modes) have been deprecated and are only supported for customers who started using them before they were deprecated.  - **Include or exclude blocked users when sending invitations**: Determines whether or not to automatically filter out blocked users when a user invites a group of users to a new group channel. By default, blocked users are included when sending invitations. The value of this option can be changed by Sendbird if your Sendbird application isn't integrated to the client app. If you want to change the value, [contact our sales team](https://get.sendbird.com/talk-to-sales.html).      - **Turn on or off notifications from blocked users**: Determines whether or not to receive message notifications from the blocked user in a specific 1-to-N group channel where they are both members. By default, a user doesn't receive notifications from blocked users. The value of this option can be set individually per channel. If you want to use this option, [contact our sales team](https://get.sendbird.com/talk-to-sales.html).       > **Note**: To learn more about other available moderation tools, see [Moderation Overview](https://sendbird.com/docs/chat/platform-api/v3/moderation/moderation-overview#2-actions).      The following tables explain what happens to a user's chat experience when the user blocks another user in a 1-to-1 or 1-to-N group channel. In the case of a 1-to-1 group channel, the block mode is only maintained with the original members. If other than the original members are added, the rules for 1-to-N group channel begin to apply.  [https://sendbird.com/docs/chat/platform-api/v3/moderation/blocking-users/block-users#1-block-users](https://sendbird.com/docs/chat/platform-api/v3/moderation/blocking-users/block-users#1-block-users)
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/BlockUserData} opts.blockUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BlockUserResponse}
+     * @param {String} opts.apiToken 
+     * @param {module:model/BlockAUserRequest} opts.blockAUserRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BlockAUserResponse}
      */
-    blockUser(apiToken, userId, opts) {
-      return this.blockUserWithHttpInfo(apiToken, userId, opts)
+    blockAUser(userId, opts) {
+      return this.blockAUserWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -185,24 +98,20 @@ export default class ModerationApi {
 
 
     /**
-     * Ban a user
-     * ## Ban a user  Bans a user from a group channel. A banned user is immediately expelled from a channel and allowed to join the channel again after a set time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-ban-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
+     * Freeze a group channel
+     * ## Freeze a group channel  Freezes or unfreezes a group channel.  > **Note**: To learn more about other available moderation tools, see [Moderation Overview](https://sendbird.com/docs/chat/platform-api/v3/moderation/moderation-overview#2-actions).      [https://sendbird.com/docs/chat/platform-api/v3/moderation/freezing-a-channel/freeze-a-group-channel#1-freeze-a-group-channel](https://sendbird.com/docs/chat/platform-api/v3/moderation/freezing-a-channel/freeze-a-group-channel#1-freeze-a-group-channel)
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/GcBanUserData} opts.gcBanUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcBanUserResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @param {module:model/FreezeAGroupChannelRequest} opts.freezeAGroupChannelRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendbirdGroupChannelDetail} and HTTP response
      */
-    gcBanUserWithHttpInfo(apiToken, channelUrl, opts) {
+    freezeAGroupChannelWithHttpInfo(channelUrl, opts) {
       opts = opts || {};
-      let postBody = opts['gcBanUserData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling gcBanUser");
-      }
+      let postBody = opts['freezeAGroupChannelRequest'];
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling gcBanUser");
+        throw new Error("Missing the required parameter 'channelUrl' when calling freezeAGroupChannel");
       }
 
       let pathParams = {
@@ -211,7 +120,7 @@ export default class ModerationApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -219,67 +128,7 @@ export default class ModerationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = GcBanUserResponse;
-      return this.apiClient.callApi(
-        '/v3/group_channels/{channel_url}/ban', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Ban a user
-     * ## Ban a user  Bans a user from a group channel. A banned user is immediately expelled from a channel and allowed to join the channel again after a set time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-ban-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/GcBanUserData} opts.gcBanUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcBanUserResponse}
-     */
-    gcBanUser(apiToken, channelUrl, opts) {
-      return this.gcBanUserWithHttpInfo(apiToken, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Freeze a channel
-     * ## Freeze a channel  Freezes or unfreezes a group channel.  > __Note__: Only users designated as channel operators are allowed to talk when a channel is frozen.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-freeze-a-channel ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/GcFreezeChannelData} opts.gcFreezeChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdGroupChannel} and HTTP response
-     */
-    gcFreezeChannelWithHttpInfo(apiToken, channelUrl, opts) {
-      opts = opts || {};
-      let postBody = opts['gcFreezeChannelData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling gcFreezeChannel");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling gcFreezeChannel");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = SendBirdGroupChannel;
+      let returnType = SendbirdGroupChannelDetail;
       return this.apiClient.callApi(
         '/v3/group_channels/{channel_url}/freeze', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -288,16 +137,16 @@ export default class ModerationApi {
     }
 
     /**
-     * Freeze a channel
-     * ## Freeze a channel  Freezes or unfreezes a group channel.  > __Note__: Only users designated as channel operators are allowed to talk when a channel is frozen.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-freeze-a-channel ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
+     * Freeze a group channel
+     * ## Freeze a group channel  Freezes or unfreezes a group channel.  > **Note**: To learn more about other available moderation tools, see [Moderation Overview](https://sendbird.com/docs/chat/platform-api/v3/moderation/moderation-overview#2-actions).      [https://sendbird.com/docs/chat/platform-api/v3/moderation/freezing-a-channel/freeze-a-group-channel#1-freeze-a-group-channel](https://sendbird.com/docs/chat/platform-api/v3/moderation/freezing-a-channel/freeze-a-group-channel#1-freeze-a-group-channel)
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/GcFreezeChannelData} opts.gcFreezeChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdGroupChannel}
+     * @param {String} opts.apiToken 
+     * @param {module:model/FreezeAGroupChannelRequest} opts.freezeAGroupChannelRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendbirdGroupChannelDetail}
      */
-    gcFreezeChannel(apiToken, channelUrl, opts) {
-      return this.gcFreezeChannelWithHttpInfo(apiToken, channelUrl, opts)
+    freezeAGroupChannel(channelUrl, opts) {
+      return this.freezeAGroupChannelWithHttpInfo(channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -305,152 +154,20 @@ export default class ModerationApi {
 
 
     /**
-     * List banned users
-     * ## List banned users  Retrieves a list of the banned users from a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-list-banned-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel where to retrieve a list of banned users.
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
+     * Freeze an open channel
+     * ## Freeze an open channel  Freezes or unfreezes an open channel.  > **Note**: To learn more about other available moderation tools, see [Moderation Overview](https://sendbird.com/docs/chat/platform-api/v3/moderation/moderation-overview#2-actions).      [https://sendbird.com/docs/chat/platform-api/v3/moderation/freezing-a-channel/freeze-an-open-channel#1-freeze-an-open-channel](https://sendbird.com/docs/chat/platform-api/v3/moderation/freezing-a-channel/freeze-an-open-channel#1-freeze-an-open-channel)
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcListBannedUsersResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @param {module:model/FreezeAnOpenChannelRequest} opts.freezeAnOpenChannelRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendbirdOpenChannel} and HTTP response
      */
-    gcListBannedUsersWithHttpInfo(apiToken, channelUrl, opts) {
+    freezeAnOpenChannelWithHttpInfo(channelUrl, opts) {
       opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling gcListBannedUsers");
-      }
+      let postBody = opts['freezeAnOpenChannelRequest'];
       // verify the required parameter 'channelUrl' is set
       if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling gcListBannedUsers");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl
-      };
-      let queryParams = {
-        'token': opts['token'],
-        'limit': opts['limit']
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GcListBannedUsersResponse;
-      return this.apiClient.callApi(
-        '/v3/group_channels/{channel_url}/ban', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * List banned users
-     * ## List banned users  Retrieves a list of the banned users from a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-list-banned-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel where to retrieve a list of banned users.
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcListBannedUsersResponse}
-     */
-    gcListBannedUsers(apiToken, channelUrl, opts) {
-      return this.gcListBannedUsersWithHttpInfo(apiToken, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * List muted users
-     * ## List muted users  Retrieves a list of the muted users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-list-muted-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of muted users.
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcListMutedUsersResponse} and HTTP response
-     */
-    gcListMutedUsersWithHttpInfo(apiToken, channelUrl, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling gcListMutedUsers");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling gcListMutedUsers");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl
-      };
-      let queryParams = {
-        'token': opts['token'],
-        'limit': opts['limit']
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GcListMutedUsersResponse;
-      return this.apiClient.callApi(
-        '/v3/group_channels/{channel_url}/mute', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * List muted users
-     * ## List muted users  Retrieves a list of the muted users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-list-muted-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of muted users.
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcListMutedUsersResponse}
-     */
-    gcListMutedUsers(apiToken, channelUrl, opts) {
-      return this.gcListMutedUsersWithHttpInfo(apiToken, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Mute a user
-     * ## Mute a user  Mutes a user in a group channel. A muted user remains in the channel and is allowed to view the messages, but can't send any messages until unmuted.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-mute-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/GcMuteUserData} opts.gcMuteUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdGroupChannel} and HTTP response
-     */
-    gcMuteUserWithHttpInfo(apiToken, channelUrl, opts) {
-      opts = opts || {};
-      let postBody = opts['gcMuteUserData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling gcMuteUser");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling gcMuteUser");
+        throw new Error("Missing the required parameter 'channelUrl' when calling freezeAnOpenChannel");
       }
 
       let pathParams = {
@@ -459,7 +176,7 @@ export default class ModerationApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -467,404 +184,25 @@ export default class ModerationApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = SendBirdGroupChannel;
+      let returnType = SendbirdOpenChannel;
       return this.apiClient.callApi(
-        '/v3/group_channels/{channel_url}/mute', 'POST',
+        '/v3/open_channels/{channel_url}/freeze', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Mute a user
-     * ## Mute a user  Mutes a user in a group channel. A muted user remains in the channel and is allowed to view the messages, but can't send any messages until unmuted.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-mute-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
+     * Freeze an open channel
+     * ## Freeze an open channel  Freezes or unfreezes an open channel.  > **Note**: To learn more about other available moderation tools, see [Moderation Overview](https://sendbird.com/docs/chat/platform-api/v3/moderation/moderation-overview#2-actions).      [https://sendbird.com/docs/chat/platform-api/v3/moderation/freezing-a-channel/freeze-an-open-channel#1-freeze-an-open-channel](https://sendbird.com/docs/chat/platform-api/v3/moderation/freezing-a-channel/freeze-an-open-channel#1-freeze-an-open-channel)
+     * @param {String} channelUrl (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/GcMuteUserData} opts.gcMuteUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdGroupChannel}
+     * @param {String} opts.apiToken 
+     * @param {module:model/FreezeAnOpenChannelRequest} opts.freezeAnOpenChannelRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendbirdOpenChannel}
      */
-    gcMuteUser(apiToken, channelUrl, opts) {
-      return this.gcMuteUserWithHttpInfo(apiToken, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Unban a user
-     * ## Unban a user  Unbans a user from a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-unban-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
-     */
-    gcUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling gcUnbanUserById");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling gcUnbanUserById");
-      }
-      // verify the required parameter 'bannedUserId' is set
-      if (bannedUserId === undefined || bannedUserId === null) {
-        throw new Error("Missing the required parameter 'bannedUserId' when calling gcUnbanUserById");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl,
-        'banned_user_id': bannedUserId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = OcDeleteChannelByUrl200Response;
-      return this.apiClient.callApi(
-        '/v3/group_channels/{channel_url}/ban/{banned_user_id}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Unban a user
-     * ## Unban a user  Unbans a user from a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-unban-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
-     */
-    gcUnbanUserById(apiToken, channelUrl, bannedUserId) {
-      return this.gcUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Unmute a user
-     * ## Unmute a user  Unmutes a user within a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-unmute-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
-     */
-    gcUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling gcUnmuteUserById");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling gcUnmuteUserById");
-      }
-      // verify the required parameter 'mutedUserId' is set
-      if (mutedUserId === undefined || mutedUserId === null) {
-        throw new Error("Missing the required parameter 'mutedUserId' when calling gcUnmuteUserById");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl,
-        'muted_user_id': mutedUserId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = OcDeleteChannelByUrl200Response;
-      return this.apiClient.callApi(
-        '/v3/group_channels/{channel_url}/mute/{muted_user_id}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Unmute a user
-     * ## Unmute a user  Unmutes a user within a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-unmute-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
-     */
-    gcUnmuteUserById(apiToken, channelUrl, mutedUserId) {
-      return this.gcUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Update a ban
-     * ## Update a ban  Updates details of a ban imposed on a user. You can change the length of the ban with this action, and also provide an updated description.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-update-a-ban ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} bannedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/GcUpdateBanByIdData} opts.gcUpdateBanByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcUpdateBanByIdResponse} and HTTP response
-     */
-    gcUpdateBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId, opts) {
-      opts = opts || {};
-      let postBody = opts['gcUpdateBanByIdData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling gcUpdateBanById");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling gcUpdateBanById");
-      }
-      // verify the required parameter 'bannedUserId' is set
-      if (bannedUserId === undefined || bannedUserId === null) {
-        throw new Error("Missing the required parameter 'bannedUserId' when calling gcUpdateBanById");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl,
-        'banned_user_id': bannedUserId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GcUpdateBanByIdResponse;
-      return this.apiClient.callApi(
-        '/v3/group_channels/{channel_url}/ban/{banned_user_id}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Update a ban
-     * ## Update a ban  Updates details of a ban imposed on a user. You can change the length of the ban with this action, and also provide an updated description.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-update-a-ban ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} bannedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/GcUpdateBanByIdData} opts.gcUpdateBanByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcUpdateBanByIdResponse}
-     */
-    gcUpdateBanById(apiToken, channelUrl, bannedUserId, opts) {
-      return this.gcUpdateBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View a ban
-     * ## View a ban  Retrieves details of a ban imposed on a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-view-a-ban ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcViewBanByIdResponse} and HTTP response
-     */
-    gcViewBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling gcViewBanById");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling gcViewBanById");
-      }
-      // verify the required parameter 'bannedUserId' is set
-      if (bannedUserId === undefined || bannedUserId === null) {
-        throw new Error("Missing the required parameter 'bannedUserId' when calling gcViewBanById");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl,
-        'banned_user_id': bannedUserId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GcViewBanByIdResponse;
-      return this.apiClient.callApi(
-        '/v3/group_channels/{channel_url}/ban/{banned_user_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * View a ban
-     * ## View a ban  Retrieves details of a ban imposed on a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-view-a-ban ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcViewBanByIdResponse}
-     */
-    gcViewBanById(apiToken, channelUrl, bannedUserId) {
-      return this.gcViewBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View a mute
-     * ## View a mute  Checks if a user is muted in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-view-a-mute ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GcViewMuteByIdResponse} and HTTP response
-     */
-    gcViewMuteByIdWithHttpInfo(apiToken, channelUrl, mutedUserId) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling gcViewMuteById");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling gcViewMuteById");
-      }
-      // verify the required parameter 'mutedUserId' is set
-      if (mutedUserId === undefined || mutedUserId === null) {
-        throw new Error("Missing the required parameter 'mutedUserId' when calling gcViewMuteById");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl,
-        'muted_user_id': mutedUserId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GcViewMuteByIdResponse;
-      return this.apiClient.callApi(
-        '/v3/group_channels/{channel_url}/mute/{muted_user_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * View a mute
-     * ## View a mute  Checks if a user is muted in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-view-a-mute ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GcViewMuteByIdResponse}
-     */
-    gcViewMuteById(apiToken, channelUrl, mutedUserId) {
-      return this.gcViewMuteByIdWithHttpInfo(apiToken, channelUrl, mutedUserId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * List banned channels
-     * ## List banned channels  Retrieves a list of open and group channels with additional information where a user is banned.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-banned-channels ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the target user.
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListBannedChannelsResponse} and HTTP response
-     */
-    listBannedChannelsWithHttpInfo(apiToken, userId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling listBannedChannels");
-      }
-      // verify the required parameter 'userId' is set
-      if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling listBannedChannels");
-      }
-
-      let pathParams = {
-        'user_id': userId
-      };
-      let queryParams = {
-        'token': opts['token'],
-        'limit': opts['limit']
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ListBannedChannelsResponse;
-      return this.apiClient.callApi(
-        '/v3/users/{user_id}/ban', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * List banned channels
-     * ## List banned channels  Retrieves a list of open and group channels with additional information where a user is banned.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-banned-channels ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the target user.
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListBannedChannelsResponse}
-     */
-    listBannedChannels(apiToken, userId, opts) {
-      return this.listBannedChannelsWithHttpInfo(apiToken, userId, opts)
+    freezeAnOpenChannel(channelUrl, opts) {
+      return this.freezeAnOpenChannelWithHttpInfo(channelUrl, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -873,24 +211,21 @@ export default class ModerationApi {
 
     /**
      * List blocked users
-     * ## List blocked users  Retrieves a list of other users that a user has blocked.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-blocked-users ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the target user.
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## List blocked by and blocking users  This action retrieves a list of users who are either blocked by a specific user or a list of users who are blocking a specific user.  [https://sendbird.com/docs/chat/platform-api/v3/moderation/listing-blocked-and-blocking-users/list-blocked-and-blocking-users#1-list-blocked-by-and-blocking-users](https://sendbird.com/docs/chat/platform-api/v3/moderation/listing-blocked-and-blocking-users/list-blocked-and-blocking-users#1-list-blocked-by-and-blocking-users)  `user_id`   Type: string   Description: Specifies the unique ID of the target user.
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.list Specifies whether to retrieve a list of users who are blocked by the specified user or a list of users who are blocking the specified user. Acceptable values are blocked_by_me and blocking_me. The `me` in the values refers to the user specified in the parameter. (Default: blocked_by_me)
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @param {String} opts.userIds 
+     * @param {String} opts.userIds Specifies the user IDs of the blocked or blocking users to search for. The value should be a comma-separated string that consists of multiple URL encoded user IDs.
      * @param {String} opts.metadatakey 
      * @param {String} opts.metadatavaluesIn 
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListBlockedUsersResponse} and HTTP response
      */
-    listBlockedUsersWithHttpInfo(apiToken, userId, opts) {
+    listBlockedUsersWithHttpInfo(userId, opts) {
       opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling listBlockedUsers");
-      }
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling listBlockedUsers");
@@ -900,6 +235,7 @@ export default class ModerationApi {
         'user_id': userId
       };
       let queryParams = {
+        'list': opts['list'],
         'token': opts['token'],
         'limit': opts['limit'],
         'user_ids': opts['userIds'],
@@ -907,7 +243,7 @@ export default class ModerationApi {
         'metadatavalues_in': opts['metadatavaluesIn']
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -925,766 +261,20 @@ export default class ModerationApi {
 
     /**
      * List blocked users
-     * ## List blocked users  Retrieves a list of other users that a user has blocked.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-blocked-users ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the target user.
-     * @param {String} apiToken 
-     * @param {String} userId 
+     * ## List blocked by and blocking users  This action retrieves a list of users who are either blocked by a specific user or a list of users who are blocking a specific user.  [https://sendbird.com/docs/chat/platform-api/v3/moderation/listing-blocked-and-blocking-users/list-blocked-and-blocking-users#1-list-blocked-by-and-blocking-users](https://sendbird.com/docs/chat/platform-api/v3/moderation/listing-blocked-and-blocking-users/list-blocked-and-blocking-users#1-list-blocked-by-and-blocking-users)  `user_id`   Type: string   Description: Specifies the unique ID of the target user.
+     * @param {String} userId (Required) 
      * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.list Specifies whether to retrieve a list of users who are blocked by the specified user or a list of users who are blocking the specified user. Acceptable values are blocked_by_me and blocking_me. The `me` in the values refers to the user specified in the parameter. (Default: blocked_by_me)
      * @param {String} opts.token 
      * @param {Number} opts.limit 
-     * @param {String} opts.userIds 
+     * @param {String} opts.userIds Specifies the user IDs of the blocked or blocking users to search for. The value should be a comma-separated string that consists of multiple URL encoded user IDs.
      * @param {String} opts.metadatakey 
      * @param {String} opts.metadatavaluesIn 
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListBlockedUsersResponse}
      */
-    listBlockedUsers(apiToken, userId, opts) {
-      return this.listBlockedUsersWithHttpInfo(apiToken, userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * List muted channels
-     * ## List muted channels  Retrieves a list of open and group channels with additional information where a user is muted.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-muted-channels ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the target user.
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListMutedChannelsResponse} and HTTP response
-     */
-    listMutedChannelsWithHttpInfo(apiToken, userId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling listMutedChannels");
-      }
-      // verify the required parameter 'userId' is set
-      if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling listMutedChannels");
-      }
-
-      let pathParams = {
-        'user_id': userId
-      };
-      let queryParams = {
-        'token': opts['token'],
-        'limit': opts['limit']
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ListMutedChannelsResponse;
-      return this.apiClient.callApi(
-        '/v3/users/{user_id}/mute', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * List muted channels
-     * ## List muted channels  Retrieves a list of open and group channels with additional information where a user is muted.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-list-muted-channels ----------------------------   `user_id`      Type: string      Description: Specifies the unique ID of the target user.
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListMutedChannelsResponse}
-     */
-    listMutedChannels(apiToken, userId, opts) {
-      return this.listMutedChannelsWithHttpInfo(apiToken, userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Mute in channels with custom channel types
-     * ## Mute in channels with custom channel types  Mutes a user in channels with particular custom channel types.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-mute-in-channels-with-custom-channel-types ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/MuteInChannelsWithCustomChannelTypesData} opts.muteInChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
-     */
-    muteInChannelsWithCustomChannelTypesWithHttpInfo(apiToken, userId, opts) {
-      opts = opts || {};
-      let postBody = opts['muteInChannelsWithCustomChannelTypesData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling muteInChannelsWithCustomChannelTypes");
-      }
-      // verify the required parameter 'userId' is set
-      if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling muteInChannelsWithCustomChannelTypes");
-      }
-
-      let pathParams = {
-        'user_id': userId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = Object;
-      return this.apiClient.callApi(
-        '/v3/users/{user_id}/muted_channel_custom_types', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Mute in channels with custom channel types
-     * ## Mute in channels with custom channel types  Mutes a user in channels with particular custom channel types.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-mute-in-channels-with-custom-channel-types ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/MuteInChannelsWithCustomChannelTypesData} opts.muteInChannelsWithCustomChannelTypesData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
-     */
-    muteInChannelsWithCustomChannelTypes(apiToken, userId, opts) {
-      return this.muteInChannelsWithCustomChannelTypesWithHttpInfo(apiToken, userId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Ban a user
-     * ## Ban a user  Bans a user from an open channel. A banned user is immediately expelled from a channel and allowed to participate in the channel again after a set time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-ban-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/OcBanUserData} opts.ocBanUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcBanUserResponse} and HTTP response
-     */
-    ocBanUserWithHttpInfo(apiToken, channelUrl, opts) {
-      opts = opts || {};
-      let postBody = opts['ocBanUserData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling ocBanUser");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling ocBanUser");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = OcBanUserResponse;
-      return this.apiClient.callApi(
-        '/v3/open_channels/{channel_url}/ban', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Ban a user
-     * ## Ban a user  Bans a user from an open channel. A banned user is immediately expelled from a channel and allowed to participate in the channel again after a set time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-ban-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/OcBanUserData} opts.ocBanUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcBanUserResponse}
-     */
-    ocBanUser(apiToken, channelUrl, opts) {
-      return this.ocBanUserWithHttpInfo(apiToken, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Freeze a channel
-     * ## Freeze a channel  Freezes or unfreezes an open channel.  > __Note__: Only users designated as channel operators are allowed to talk when a channel is frozen.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-freeze-a-channel ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/OcFreezeChannelData} opts.ocFreezeChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdOpenChannel} and HTTP response
-     */
-    ocFreezeChannelWithHttpInfo(apiToken, channelUrl, opts) {
-      opts = opts || {};
-      let postBody = opts['ocFreezeChannelData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling ocFreezeChannel");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling ocFreezeChannel");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = SendBirdOpenChannel;
-      return this.apiClient.callApi(
-        '/v3/open_channels/{channel_url}/freeze', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Freeze a channel
-     * ## Freeze a channel  Freezes or unfreezes an open channel.  > __Note__: Only users designated as channel operators are allowed to talk when a channel is frozen.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-freeze-a-channel ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/OcFreezeChannelData} opts.ocFreezeChannelData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdOpenChannel}
-     */
-    ocFreezeChannel(apiToken, channelUrl, opts) {
-      return this.ocFreezeChannelWithHttpInfo(apiToken, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * List banned users
-     * ## List banned users  Retrieves a list of banned users from a specific open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-banned-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel where to retrieve a list of banned users.
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcListBannedUsersResponse} and HTTP response
-     */
-    ocListBannedUsersWithHttpInfo(apiToken, channelUrl, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling ocListBannedUsers");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling ocListBannedUsers");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl
-      };
-      let queryParams = {
-        'token': opts['token'],
-        'limit': opts['limit']
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = OcListBannedUsersResponse;
-      return this.apiClient.callApi(
-        '/v3/open_channels/{channel_url}/ban', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * List banned users
-     * ## List banned users  Retrieves a list of banned users from a specific open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-banned-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel where to retrieve a list of banned users.
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcListBannedUsersResponse}
-     */
-    ocListBannedUsers(apiToken, channelUrl, opts) {
-      return this.ocListBannedUsersWithHttpInfo(apiToken, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * List muted users
-     * ## List muted users  Retrieves a list of muted users in the channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-muted-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of muted users.
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcListMutedUsersResponse} and HTTP response
-     */
-    ocListMutedUsersWithHttpInfo(apiToken, channelUrl, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling ocListMutedUsers");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling ocListMutedUsers");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl
-      };
-      let queryParams = {
-        'token': opts['token'],
-        'limit': opts['limit']
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = OcListMutedUsersResponse;
-      return this.apiClient.callApi(
-        '/v3/open_channels/{channel_url}/mute', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * List muted users
-     * ## List muted users  Retrieves a list of muted users in the channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-list-muted-users ----------------------------   `channel_url`      Type: string      Description: Specifies the URL of the channel to retrieve a list of muted users.
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.token 
-     * @param {Number} opts.limit 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcListMutedUsersResponse}
-     */
-    ocListMutedUsers(apiToken, channelUrl, opts) {
-      return this.ocListMutedUsersWithHttpInfo(apiToken, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Mute a user
-     * ## Mute a user  Mutes a user in the channel. A muted user remains in the channel and is allowed to view the messages, but can't send any messages until unmuted.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-mute-a-user
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/OcMuteUserData} opts.ocMuteUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdOpenChannel} and HTTP response
-     */
-    ocMuteUserWithHttpInfo(apiToken, channelUrl, opts) {
-      opts = opts || {};
-      let postBody = opts['ocMuteUserData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling ocMuteUser");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling ocMuteUser");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = SendBirdOpenChannel;
-      return this.apiClient.callApi(
-        '/v3/open_channels/{channel_url}/mute', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Mute a user
-     * ## Mute a user  Mutes a user in the channel. A muted user remains in the channel and is allowed to view the messages, but can't send any messages until unmuted.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-mute-a-user
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/OcMuteUserData} opts.ocMuteUserData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdOpenChannel}
-     */
-    ocMuteUser(apiToken, channelUrl, opts) {
-      return this.ocMuteUserWithHttpInfo(apiToken, channelUrl, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Unban a user
-     * ## Unban a user  Unbans a user from an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-unban-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
-     */
-    ocUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling ocUnbanUserById");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling ocUnbanUserById");
-      }
-      // verify the required parameter 'bannedUserId' is set
-      if (bannedUserId === undefined || bannedUserId === null) {
-        throw new Error("Missing the required parameter 'bannedUserId' when calling ocUnbanUserById");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl,
-        'banned_user_id': bannedUserId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = OcDeleteChannelByUrl200Response;
-      return this.apiClient.callApi(
-        '/v3/open_channels/{channel_url}/ban/{banned_user_id}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Unban a user
-     * ## Unban a user  Unbans a user from an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-unban-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
-     */
-    ocUnbanUserById(apiToken, channelUrl, bannedUserId) {
-      return this.ocUnbanUserByIdWithHttpInfo(apiToken, channelUrl, bannedUserId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Unmute a user
-     * ## Unmute a user  Unmutes a user from an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-unmute-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcDeleteChannelByUrl200Response} and HTTP response
-     */
-    ocUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling ocUnmuteUserById");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling ocUnmuteUserById");
-      }
-      // verify the required parameter 'mutedUserId' is set
-      if (mutedUserId === undefined || mutedUserId === null) {
-        throw new Error("Missing the required parameter 'mutedUserId' when calling ocUnmuteUserById");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl,
-        'muted_user_id': mutedUserId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = OcDeleteChannelByUrl200Response;
-      return this.apiClient.callApi(
-        '/v3/open_channels/{channel_url}/mute/{muted_user_id}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Unmute a user
-     * ## Unmute a user  Unmutes a user from an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-unmute-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcDeleteChannelByUrl200Response}
-     */
-    ocUnmuteUserById(apiToken, channelUrl, mutedUserId) {
-      return this.ocUnmuteUserByIdWithHttpInfo(apiToken, channelUrl, mutedUserId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Update a ban
-     * ## Update a ban  Updates details of a ban imposed on a user. You can change the length of a ban with this action, and also provide an updated description.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-update-a-ban ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} bannedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/OcUpdateBanByIdData} opts.ocUpdateBanByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcUpdateBanByIdResponse} and HTTP response
-     */
-    ocUpdateBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId, opts) {
-      opts = opts || {};
-      let postBody = opts['ocUpdateBanByIdData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling ocUpdateBanById");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling ocUpdateBanById");
-      }
-      // verify the required parameter 'bannedUserId' is set
-      if (bannedUserId === undefined || bannedUserId === null) {
-        throw new Error("Missing the required parameter 'bannedUserId' when calling ocUpdateBanById");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl,
-        'banned_user_id': bannedUserId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = OcUpdateBanByIdResponse;
-      return this.apiClient.callApi(
-        '/v3/open_channels/{channel_url}/ban/{banned_user_id}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Update a ban
-     * ## Update a ban  Updates details of a ban imposed on a user. You can change the length of a ban with this action, and also provide an updated description.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-update-a-ban ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} bannedUserId 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/OcUpdateBanByIdData} opts.ocUpdateBanByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcUpdateBanByIdResponse}
-     */
-    ocUpdateBanById(apiToken, channelUrl, bannedUserId, opts) {
-      return this.ocUpdateBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View a ban
-     * ## View a ban  Retrieves details of a ban imposed on a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-view-a-ban ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcViewBanByIdResponse} and HTTP response
-     */
-    ocViewBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling ocViewBanById");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling ocViewBanById");
-      }
-      // verify the required parameter 'bannedUserId' is set
-      if (bannedUserId === undefined || bannedUserId === null) {
-        throw new Error("Missing the required parameter 'bannedUserId' when calling ocViewBanById");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl,
-        'banned_user_id': bannedUserId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = OcViewBanByIdResponse;
-      return this.apiClient.callApi(
-        '/v3/open_channels/{channel_url}/ban/{banned_user_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * View a ban
-     * ## View a ban  Retrieves details of a ban imposed on a user.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-view-a-ban ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} bannedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcViewBanByIdResponse}
-     */
-    ocViewBanById(apiToken, channelUrl, bannedUserId) {
-      return this.ocViewBanByIdWithHttpInfo(apiToken, channelUrl, bannedUserId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View a mute
-     * ## View a mute  Checks if a user is muted in an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-view-a-mute ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OcViewMuteByIdResponse} and HTTP response
-     */
-    ocViewMuteByIdWithHttpInfo(apiToken, channelUrl, mutedUserId) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling ocViewMuteById");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling ocViewMuteById");
-      }
-      // verify the required parameter 'mutedUserId' is set
-      if (mutedUserId === undefined || mutedUserId === null) {
-        throw new Error("Missing the required parameter 'mutedUserId' when calling ocViewMuteById");
-      }
-
-      let pathParams = {
-        'channel_url': channelUrl,
-        'muted_user_id': mutedUserId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = OcViewMuteByIdResponse;
-      return this.apiClient.callApi(
-        '/v3/open_channels/{channel_url}/mute/{muted_user_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * View a mute
-     * ## View a mute  Checks if a user is muted in an open channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-view-a-mute ----------------------------
-     * @param {String} apiToken 
-     * @param {String} channelUrl 
-     * @param {String} mutedUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OcViewMuteByIdResponse}
-     */
-    ocViewMuteById(apiToken, channelUrl, mutedUserId) {
-      return this.ocViewMuteByIdWithHttpInfo(apiToken, channelUrl, mutedUserId)
+    listBlockedUsers(userId, opts) {
+      return this.listBlockedUsersWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1693,25 +283,23 @@ export default class ModerationApi {
 
     /**
      * Unblock a user
-     * ## Unblock a user  Unblocks the user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-unblock-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} targetId 
+     * ## Unblock a user  Unblocks the user.  https://sendbird.com/docs/chat/platform-api/v3/moderation/blocking-users/unblock-a-user#1-unblock-a-user
+     * @param {String} userId (Required) 
+     * @param {String} targetId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
-    unblockUserByIdWithHttpInfo(apiToken, userId, targetId) {
+    unblockAUserWithHttpInfo(userId, targetId, opts) {
+      opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling unblockUserById");
-      }
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling unblockUserById");
+        throw new Error("Missing the required parameter 'userId' when calling unblockAUser");
       }
       // verify the required parameter 'targetId' is set
       if (targetId === undefined || targetId === null) {
-        throw new Error("Missing the required parameter 'targetId' when calling unblockUserById");
+        throw new Error("Missing the required parameter 'targetId' when calling unblockAUser");
       }
 
       let pathParams = {
@@ -1721,7 +309,7 @@ export default class ModerationApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -1739,14 +327,15 @@ export default class ModerationApi {
 
     /**
      * Unblock a user
-     * ## Unblock a user  Unblocks the user.  https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-unblock-a-user ----------------------------
-     * @param {String} apiToken 
-     * @param {String} userId 
-     * @param {String} targetId 
+     * ## Unblock a user  Unblocks the user.  https://sendbird.com/docs/chat/platform-api/v3/moderation/blocking-users/unblock-a-user#1-unblock-a-user
+     * @param {String} userId (Required) 
+     * @param {String} targetId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
-    unblockUserById(apiToken, userId, targetId) {
-      return this.unblockUserByIdWithHttpInfo(apiToken, userId, targetId)
+    unblockAUser(userId, targetId, opts) {
+      return this.unblockAUserWithHttpInfo(userId, targetId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

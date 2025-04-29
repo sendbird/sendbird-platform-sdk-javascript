@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateCountPreferenceOfChannelByUrlResponse model module.
  * @module model/UpdateCountPreferenceOfChannelByUrlResponse
- * @version 0.0.16
+ * @version 2.0.0
  */
 class UpdateCountPreferenceOfChannelByUrlResponse {
     /**
@@ -58,12 +58,45 @@ class UpdateCountPreferenceOfChannelByUrlResponse {
 }
 
 /**
- * @member {String} count_preference
+ * @member {module:model/UpdateCountPreferenceOfChannelByUrlResponse.CountPreferenceEnum} count_preference
  */
 UpdateCountPreferenceOfChannelByUrlResponse.prototype['count_preference'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>count_preference</code> property.
+ * @enum {String}
+ * @readonly
+ */
+UpdateCountPreferenceOfChannelByUrlResponse['CountPreferenceEnum'] = {
+
+    /**
+     * value: "false"
+     * @const
+     */
+    "false": "false",
+
+    /**
+     * value: "all"
+     * @const
+     */
+    "all": "all",
+
+    /**
+     * value: "unread_message_count_only"
+     * @const
+     */
+    "unread_message_count_only": "unread_message_count_only",
+
+    /**
+     * value: "unread_mentioned_count_only"
+     * @const
+     */
+    "unread_mentioned_count_only": "unread_mentioned_count_only"
+};
 
 
 
