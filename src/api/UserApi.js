@@ -485,6 +485,9 @@ export default class UserApi {
      * @param {String} opts.queryType Specifies a logical condition applied to the members_include_in parameter. Acceptable values are either AND or OR. For example, if you specify three members, A, B, and C, in members_include_in, the value of AND returns all channels that include every one of {A. B, C} as members. The value of OR returns channels that include {A}, plus those that include {B}, plus those that include {C}. (Default: AND)
      * @param {String} opts.membersNickname Searches for group channels with members whose nicknames match the specified value. URL encoding the value is recommended.
      * @param {String} opts.membersNicknameContains Searches for group channels with members whose nicknames contain the specified value. Note that this parameter is case-insensitive. URL encoding the value is recommended.  * We recommend using at least three characters for the parameter value for better search efficiency when you design and implement related features. If you would like to allow one or two characters for searching, use members_nickname instead to prevent performance issues.
+     * @param {String} opts.membersNicknameStartswith Searches for group channels with members whose nicknames begin with the specified value. This parameter isn't case-sensitive. URL encoding the value is recommended.
+     * @param {String} opts.searchQuery Searches for group channels where the specified query string matches the channel name or the nickname of the member. This parameter isn't case-sensitive and should be specified in conjunction with the search_fields parameter below. URL encoding the value is recommended.
+     * @param {String} opts.searchFields Specifies a comma-separated string of one or more search fields to apply to the query, which restricts the results within the specified fields (OR search condition). Acceptable values are channel_name and member_nickname. This is effective only when the search_query parameter above is specified. (Default: channel_name, member_nickname together)
      * @param {String} opts.metadataKey Searches for group channels with metadata containing an item with the specified value as its key. To use this parameter, either the metadata_values parameter or the metadata_value_startswith parameter should be specified.
      * @param {String} opts.metadataValues Searches for group channels with metadata containing an item with the key specified by the metadata_key parameter, and the value of that item matches one or more values specified by this parameter. The string should be specified with multiple values separated by commas. URL encoding each value is recommended. To use this parameter, the metadata_key parameter should be specified.
      * @param {String} opts.metadataValueStartswith Searches for group channels with metadata containing an item with the key specified by the metadata_key parameter, and the values of that item that start with the specified value of this parameter. URL encoding the value is recommended. To use this parameter, the metadata_key parameter should be specified.
@@ -495,12 +498,9 @@ export default class UserApi {
      * @param {String} opts.metacounterValueLt Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
      * @param {String} opts.metacounterValueLte Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than or equal to the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
      * @param {Boolean} opts.includeSortedMetaarrayInLastMessage Determines whether to include the sorted_metaarray as one of the last_message’s properties in the response.
-     * @param {String} opts.customType (Deprecated) Returns channels whose custom_type matches the given value. If this field is not specified, all channels are returned, regardless of their custom type. The string passed here must be urlencoded.
-     * @param {Boolean} opts.readReceipt (Deprecated) Superseded by show_read_receipt.
-     * @param {Boolean} opts.member (Deprecated) Superseded by show_member.
-     * @param {Boolean} opts.isDistinct (Deprecated) Superseded by distinct_mode.
-     * @param {String} opts.membersIn (Deprecated) Superseded by members_exactly_in.
-     * @param {String} opts.userId2 (Deprecated) Restricts the search scope to only retrieve the target user's group channels. It's recommended to use the list group channels by user action instead.
+     * @param {module:model/String} opts.hiddenMode Restricts the search scope to group channels that match a specific hidden_status and operating behavior
+     * @param {module:model/String} opts.unreadFilter Restricts the search scope to only retrieve group channels with one or more unread messages. This filter doesn't support Supergroup channels. Acceptable values are all and unread_message. (Default: all)
+     * @param {module:model/String} opts.memberStateFilter 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListMyGroupChannelsResponse} and HTTP response
      */
     listMyGroupChannelsWithHttpInfo(userId, apiToken, opts) {
@@ -545,6 +545,9 @@ export default class UserApi {
         'query_type': opts['queryType'],
         'members_nickname': opts['membersNickname'],
         'members_nickname_contains': opts['membersNicknameContains'],
+        'members_nickname_startswith': opts['membersNicknameStartswith'],
+        'search_query': opts['searchQuery'],
+        'search_fields': opts['searchFields'],
         'metadata_key': opts['metadataKey'],
         'metadata_values': opts['metadataValues'],
         'metadata_value_startswith': opts['metadataValueStartswith'],
@@ -555,12 +558,9 @@ export default class UserApi {
         'metacounter_value_lt': opts['metacounterValueLt'],
         'metacounter_value_lte': opts['metacounterValueLte'],
         'include_sorted_metaarray_in_last_message': opts['includeSortedMetaarrayInLastMessage'],
-        'custom_type': opts['customType'],
-        'read_receipt': opts['readReceipt'],
-        'member': opts['member'],
-        'is_distinct': opts['isDistinct'],
-        'members_in': opts['membersIn'],
-        'user_id': opts['userId2']
+        'hidden_mode': opts['hiddenMode'],
+        'unread_filter': opts['unreadFilter'],
+        'member_state_filter': opts['memberStateFilter']
       };
       let headerParams = {
         'api-token': apiToken
@@ -611,6 +611,9 @@ export default class UserApi {
      * @param {String} opts.queryType Specifies a logical condition applied to the members_include_in parameter. Acceptable values are either AND or OR. For example, if you specify three members, A, B, and C, in members_include_in, the value of AND returns all channels that include every one of {A. B, C} as members. The value of OR returns channels that include {A}, plus those that include {B}, plus those that include {C}. (Default: AND)
      * @param {String} opts.membersNickname Searches for group channels with members whose nicknames match the specified value. URL encoding the value is recommended.
      * @param {String} opts.membersNicknameContains Searches for group channels with members whose nicknames contain the specified value. Note that this parameter is case-insensitive. URL encoding the value is recommended.  * We recommend using at least three characters for the parameter value for better search efficiency when you design and implement related features. If you would like to allow one or two characters for searching, use members_nickname instead to prevent performance issues.
+     * @param {String} opts.membersNicknameStartswith Searches for group channels with members whose nicknames begin with the specified value. This parameter isn't case-sensitive. URL encoding the value is recommended.
+     * @param {String} opts.searchQuery Searches for group channels where the specified query string matches the channel name or the nickname of the member. This parameter isn't case-sensitive and should be specified in conjunction with the search_fields parameter below. URL encoding the value is recommended.
+     * @param {String} opts.searchFields Specifies a comma-separated string of one or more search fields to apply to the query, which restricts the results within the specified fields (OR search condition). Acceptable values are channel_name and member_nickname. This is effective only when the search_query parameter above is specified. (Default: channel_name, member_nickname together)
      * @param {String} opts.metadataKey Searches for group channels with metadata containing an item with the specified value as its key. To use this parameter, either the metadata_values parameter or the metadata_value_startswith parameter should be specified.
      * @param {String} opts.metadataValues Searches for group channels with metadata containing an item with the key specified by the metadata_key parameter, and the value of that item matches one or more values specified by this parameter. The string should be specified with multiple values separated by commas. URL encoding each value is recommended. To use this parameter, the metadata_key parameter should be specified.
      * @param {String} opts.metadataValueStartswith Searches for group channels with metadata containing an item with the key specified by the metadata_key parameter, and the values of that item that start with the specified value of this parameter. URL encoding the value is recommended. To use this parameter, the metadata_key parameter should be specified.
@@ -621,12 +624,9 @@ export default class UserApi {
      * @param {String} opts.metacounterValueLt Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
      * @param {String} opts.metacounterValueLte Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than or equal to the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
      * @param {Boolean} opts.includeSortedMetaarrayInLastMessage Determines whether to include the sorted_metaarray as one of the last_message’s properties in the response.
-     * @param {String} opts.customType (Deprecated) Returns channels whose custom_type matches the given value. If this field is not specified, all channels are returned, regardless of their custom type. The string passed here must be urlencoded.
-     * @param {Boolean} opts.readReceipt (Deprecated) Superseded by show_read_receipt.
-     * @param {Boolean} opts.member (Deprecated) Superseded by show_member.
-     * @param {Boolean} opts.isDistinct (Deprecated) Superseded by distinct_mode.
-     * @param {String} opts.membersIn (Deprecated) Superseded by members_exactly_in.
-     * @param {String} opts.userId2 (Deprecated) Restricts the search scope to only retrieve the target user's group channels. It's recommended to use the list group channels by user action instead.
+     * @param {module:model/String} opts.hiddenMode Restricts the search scope to group channels that match a specific hidden_status and operating behavior
+     * @param {module:model/String} opts.unreadFilter Restricts the search scope to only retrieve group channels with one or more unread messages. This filter doesn't support Supergroup channels. Acceptable values are all and unread_message. (Default: all)
+     * @param {module:model/String} opts.memberStateFilter 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListMyGroupChannelsResponse}
      */
     listMyGroupChannels(userId, apiToken, opts) {

@@ -583,13 +583,7 @@ let opts = {
   'metacounterValueGte': "metacounterValueGte_example", // String | Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is greater than or equal to the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
   'metacounterValueLt': "metacounterValueLt_example", // String | Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
   'metacounterValueLte': "metacounterValueLte_example", // String | Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than or equal to the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
-  'includeSortedMetaarrayInLastMessage': false, // Boolean | Determines whether to include the sorted_metaarray as one of the last_message’s properties in the response.
-  'customType': ANNOUNCEMENT, // String | (Deprecated) Returns channels whose custom_type matches the given value. If this field is not specified, all channels are returned, regardless of their custom type. The string passed here must be urlencoded.
-  'readReceipt': false, // Boolean | (Deprecated) Superseded by show_read_receipt.
-  'member': true, // Boolean | (Deprecated) Superseded by show_member.
-  'isDistinct': true, // Boolean | (Deprecated) Superseded by distinct_mode.
-  'membersIn': "membersIn_example", // String | (Deprecated) Superseded by members_exactly_in.
-  'userId': "userId_example" // String | (Deprecated) Restricts the search scope to only retrieve the target user's group channels. It's recommended to use the list group channels by user action instead.
+  'includeSortedMetaarrayInLastMessage': false // Boolean | Determines whether to include the sorted_metaarray as one of the last_message’s properties in the response.
 };
 apiInstance.listChannels(apiToken, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -641,12 +635,6 @@ Name | Type | Description  | Notes
  **metacounterValueLt** | **String**| Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified. | [optional] 
  **metacounterValueLte** | **String**| Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than or equal to the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified. | [optional] 
  **includeSortedMetaarrayInLastMessage** | **Boolean**| Determines whether to include the sorted_metaarray as one of the last_message’s properties in the response. | [optional] 
- **customType** | **String**| (Deprecated) Returns channels whose custom_type matches the given value. If this field is not specified, all channels are returned, regardless of their custom type. The string passed here must be urlencoded. | [optional] 
- **readReceipt** | **Boolean**| (Deprecated) Superseded by show_read_receipt. | [optional] 
- **member** | **Boolean**| (Deprecated) Superseded by show_member. | [optional] 
- **isDistinct** | **Boolean**| (Deprecated) Superseded by distinct_mode. | [optional] 
- **membersIn** | **String**| (Deprecated) Superseded by members_exactly_in. | [optional] 
- **userId** | **String**| (Deprecated) Restricts the search scope to only retrieve the target user&#39;s group channels. It&#39;s recommended to use the list group channels by user action instead. | [optional] 
 
 ### Return type
 

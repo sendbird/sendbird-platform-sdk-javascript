@@ -124,10 +124,10 @@ export default class MetadataApi {
 
       let pathParams = {
         'channel_type': channelType,
-        'channel_url': channelUrl
+        'channel_url': channelUrl,
+        'key': opts['key']
       };
       let queryParams = {
-        'key': opts['key']
       };
       let headerParams = {
         'api-token': opts['apiToken']

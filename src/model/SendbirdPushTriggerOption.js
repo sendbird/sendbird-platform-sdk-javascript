@@ -40,13 +40,6 @@ export default class SendbirdPushTriggerOption {
         "off" = "off";
 
     
-        /**
-         * value: "default"
-         * @const
-         */
-        "default" = "default";
-
-    
 
     /**
     * Returns a <code>SendbirdPushTriggerOption</code> enum value from a Javascript object name.

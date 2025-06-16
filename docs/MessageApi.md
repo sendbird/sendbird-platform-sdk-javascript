@@ -393,7 +393,7 @@ let apiInstance = new SendbirdPlatformSdk.MessageApi();
 let targetChannelUrl = "targetChannelUrl_example"; // String | (Required) 
 let opts = {
   'apiToken': {{API_TOKEN}}, // String | 
-  'body': {key: null} // Object | 
+  'migrateMessagesRequest': new SendbirdPlatformSdk.MigrateMessagesRequest() // MigrateMessagesRequest | 
 };
 apiInstance.migrateMessages(targetChannelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -410,7 +410,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **targetChannelUrl** | **String**| (Required)  | 
  **apiToken** | **String**|  | [optional] 
- **body** | **Object**|  | [optional] 
+ **migrateMessagesRequest** | [**MigrateMessagesRequest**](MigrateMessagesRequest.md)|  | [optional] 
 
 ### Return type
 

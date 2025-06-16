@@ -9,6 +9,4 @@
 
 * `off` (value: `"off"`)
 
-* `default` (value: `"default"`)
-
 

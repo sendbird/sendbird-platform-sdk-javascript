@@ -68,6 +68,12 @@ import ListRegistrationOrDeviceTokensResponse from './model/ListRegistrationOrDe
 import ListUsersResponse from './model/ListUsersResponse';
 import MarkAllMessagesAsReadRequest from './model/MarkAllMessagesAsReadRequest';
 import MarkChannelMessagesAsReadRequest from './model/MarkChannelMessagesAsReadRequest';
+import MigrateMessagesAdminMessageRequest from './model/MigrateMessagesAdminMessageRequest';
+import MigrateMessagesFileMessageRequest from './model/MigrateMessagesFileMessageRequest';
+import MigrateMessagesFileMessageRequestThumbnailsInner from './model/MigrateMessagesFileMessageRequestThumbnailsInner';
+import MigrateMessagesRequest from './model/MigrateMessagesRequest';
+import MigrateMessagesRequestMessagesInner from './model/MigrateMessagesRequestMessagesInner';
+import MigrateMessagesTextMessageRequest from './model/MigrateMessagesTextMessageRequest';
 import RegisterOperatorsToAGroupChannelRequest from './model/RegisterOperatorsToAGroupChannelRequest';
 import RemoveARegistrationOrDeviceTokenResponse from './model/RemoveARegistrationOrDeviceTokenResponse';
 import RemoveAllRegistrationOrDeviceTokenResponse from './model/RemoveAllRegistrationOrDeviceTokenResponse';
@@ -504,6 +510,42 @@ export {
      * @property {module:model/MarkChannelMessagesAsReadRequest}
      */
     MarkChannelMessagesAsReadRequest,
+
+    /**
+     * The MigrateMessagesAdminMessageRequest model constructor.
+     * @property {module:model/MigrateMessagesAdminMessageRequest}
+     */
+    MigrateMessagesAdminMessageRequest,
+
+    /**
+     * The MigrateMessagesFileMessageRequest model constructor.
+     * @property {module:model/MigrateMessagesFileMessageRequest}
+     */
+    MigrateMessagesFileMessageRequest,
+
+    /**
+     * The MigrateMessagesFileMessageRequestThumbnailsInner model constructor.
+     * @property {module:model/MigrateMessagesFileMessageRequestThumbnailsInner}
+     */
+    MigrateMessagesFileMessageRequestThumbnailsInner,
+
+    /**
+     * The MigrateMessagesRequest model constructor.
+     * @property {module:model/MigrateMessagesRequest}
+     */
+    MigrateMessagesRequest,
+
+    /**
+     * The MigrateMessagesRequestMessagesInner model constructor.
+     * @property {module:model/MigrateMessagesRequestMessagesInner}
+     */
+    MigrateMessagesRequestMessagesInner,
+
+    /**
+     * The MigrateMessagesTextMessageRequest model constructor.
+     * @property {module:model/MigrateMessagesTextMessageRequest}
+     */
+    MigrateMessagesTextMessageRequest,
 
     /**
      * The RegisterOperatorsToAGroupChannelRequest model constructor.

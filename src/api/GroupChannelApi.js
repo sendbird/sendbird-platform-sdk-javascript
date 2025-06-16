@@ -670,12 +670,6 @@ export default class GroupChannelApi {
      * @param {String} opts.metacounterValueLt Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
      * @param {String} opts.metacounterValueLte Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than or equal to the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
      * @param {Boolean} opts.includeSortedMetaarrayInLastMessage Determines whether to include the sorted_metaarray as one of the last_message’s properties in the response.
-     * @param {String} opts.customType (Deprecated) Returns channels whose custom_type matches the given value. If this field is not specified, all channels are returned, regardless of their custom type. The string passed here must be urlencoded.
-     * @param {Boolean} opts.readReceipt (Deprecated) Superseded by show_read_receipt.
-     * @param {Boolean} opts.member (Deprecated) Superseded by show_member.
-     * @param {Boolean} opts.isDistinct (Deprecated) Superseded by distinct_mode.
-     * @param {String} opts.membersIn (Deprecated) Superseded by members_exactly_in.
-     * @param {String} opts.userId (Deprecated) Restricts the search scope to only retrieve the target user's group channels. It's recommended to use the list group channels by user action instead.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GroupChatListChannelsResponse} and HTTP response
      */
     listChannelsWithHttpInfo(apiToken, opts) {
@@ -724,13 +718,7 @@ export default class GroupChannelApi {
         'metacounter_value_gte': opts['metacounterValueGte'],
         'metacounter_value_lt': opts['metacounterValueLt'],
         'metacounter_value_lte': opts['metacounterValueLte'],
-        'include_sorted_metaarray_in_last_message': opts['includeSortedMetaarrayInLastMessage'],
-        'custom_type': opts['customType'],
-        'read_receipt': opts['readReceipt'],
-        'member': opts['member'],
-        'is_distinct': opts['isDistinct'],
-        'members_in': opts['membersIn'],
-        'user_id': opts['userId']
+        'include_sorted_metaarray_in_last_message': opts['includeSortedMetaarrayInLastMessage']
       };
       let headerParams = {
         'api-token': apiToken
@@ -790,12 +778,6 @@ export default class GroupChannelApi {
      * @param {String} opts.metacounterValueLt Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
      * @param {String} opts.metacounterValueLte Searches for group channels with metacounter containing an item with the key specified by the metadata_key parameter, where the value of that item is lower than or equal to the value specified by this parameter. To use this parameter, the metacounter_key parameter should be specified.
      * @param {Boolean} opts.includeSortedMetaarrayInLastMessage Determines whether to include the sorted_metaarray as one of the last_message’s properties in the response.
-     * @param {String} opts.customType (Deprecated) Returns channels whose custom_type matches the given value. If this field is not specified, all channels are returned, regardless of their custom type. The string passed here must be urlencoded.
-     * @param {Boolean} opts.readReceipt (Deprecated) Superseded by show_read_receipt.
-     * @param {Boolean} opts.member (Deprecated) Superseded by show_member.
-     * @param {Boolean} opts.isDistinct (Deprecated) Superseded by distinct_mode.
-     * @param {String} opts.membersIn (Deprecated) Superseded by members_exactly_in.
-     * @param {String} opts.userId (Deprecated) Restricts the search scope to only retrieve the target user's group channels. It's recommended to use the list group channels by user action instead.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GroupChatListChannelsResponse}
      */
     listChannels(apiToken, opts) {

@@ -18,6 +18,7 @@ import AddExtraDataToAMessageResponse from '../model/AddExtraDataToAMessageRespo
 import GetTotalNumberOfMessagesInAChannelResponse from '../model/GetTotalNumberOfMessagesInAChannelResponse';
 import ListMessagesResponse from '../model/ListMessagesResponse';
 import MarkChannelMessagesAsReadRequest from '../model/MarkChannelMessagesAsReadRequest';
+import MigrateMessagesRequest from '../model/MigrateMessagesRequest';
 import SendAMessageRequest from '../model/SendAMessageRequest';
 import SendbirdMessageResponse from '../model/SendbirdMessageResponse';
 import UpdateAMessageRequest from '../model/UpdateAMessageRequest';
@@ -517,12 +518,12 @@ export default class MessageApi {
      * @param {String} targetChannelUrl (Required) 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {Object.<String, Object>} opts.body 
+     * @param {module:model/MigrateMessagesRequest} opts.migrateMessagesRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     migrateMessagesWithHttpInfo(targetChannelUrl, opts) {
       opts = opts || {};
-      let postBody = opts['body'];
+      let postBody = opts['migrateMessagesRequest'];
       // verify the required parameter 'targetChannelUrl' is set
       if (targetChannelUrl === undefined || targetChannelUrl === null) {
         throw new Error("Missing the required parameter 'targetChannelUrl' when calling migrateMessages");
@@ -556,7 +557,7 @@ export default class MessageApi {
      * @param {String} targetChannelUrl (Required) 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {Object.<String, Object>} opts.body 
+     * @param {module:model/MigrateMessagesRequest} opts.migrateMessagesRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     migrateMessages(targetChannelUrl, opts) {
