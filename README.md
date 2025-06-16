@@ -3,6 +3,7 @@
 # [Sendbird JavaScript Platform SDK](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)
 
 [![link to docs](https://img.shields.io/badge/SDK-docs-green)](/docs)
+[![NPM](https://img.shields.io/npm/v/sendbird-platform-sdk.svg)](https://www.npmjs.com/package/sendbird-platform-sdk)
 
 This is a Node.js package that makes talking to the [Sendbird Platform API](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api) easier. With this library you can extend your Sendbird integration to include advanced features like channel automation and user management.
 # Install
@@ -20,18 +21,22 @@ const apiToken = "YOUR_API_TOKEN";
 const appId = "YOUR_APP_ID";
 
 const opts = {
-    'createUserData': new SendbirdPlatformSdk.CreateUserData(userId, name, profileUrl),
+  createAUserRequest: new SendbirdPlatformSdk.CreateAUserRequest(
+    userId,
+    name,
+    profileUrl
+  ),
 };
 
 async function createUser() {
-    const userApiInstance = new SendbirdPlatformSdk.UserApi();
-    userApiInstance.apiClient.basePath = `https://api-${appId}.sendbird.com`;
-    try {
-        const data = await userApiInstance.createUser(apiToken, opts);
-        console.log(data);
-    } catch (e) {
-        console.log(e);
-    }
+  const userApiInstance = new SendbirdPlatformSdk.UserApi();
+  userApiInstance.apiClient.basePath = `https://api-${appId}.sendbird.com`;
+  try {
+    const data = await userApiInstance.createAUser({apiToken, ...opts});
+    console.log(data);
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 createUser();
@@ -47,6 +52,19 @@ In order to make requests with this SDK you will need you master API token. This
 # 💻 Requirements
 
 You will need [Node.js](https://nodejs.org/en/download/) installed. This has been developed and tested with NodeJS 17+.
+
+
+# 📦 Installation
+
+You can install the SDK directly from npm:
+```
+# Using npm
+npm install sendbird-platform-sdk
+
+# Using yarn
+yarn add sendbird-platform-sdk
+```
+> ⚠️ This SDK is intended for use in server-side environments only. Do not use it in browsers or frontend applications.
 
 # 🤓 Local Development
 
@@ -81,10 +99,8 @@ All the documentation for this project lives in the /docs directory of this repo
 |       | Documentation |
 | ----------- | ----------- |
 | Announcement   | [docs/AnnouncementApi.md](docs/AnnouncementApi.md)|
-| Application | [docs/ApplicationApi.md](docs/ApplicationApi.md)  |
 | Bot | [docs/BotApi.md](docs/BotApi.md)  |
 | GroupChannel | [docs/GroupChannelApi.md](docs/GroupChannelApi.md)  |
 | Message | [docs/MessageApi.md](docs/MessageApi.md)  |
 | OpenChannel | [docs/OpenChannelApi.md ](docs/OpenChannelApi.md)  |
 | User | [docs/UserApi.md](docs/UserApi.md)  |
-| Webhooks | [docs/WebhooksApi.md](docs/WebhooksApi.md)  |
