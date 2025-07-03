@@ -369,6 +369,42 @@ Object.defineProperty(exports, "MetadataApi", {
     return _MetadataApi["default"];
   }
 });
+Object.defineProperty(exports, "MigrateMessagesAdminMessageRequest", {
+  enumerable: true,
+  get: function get() {
+    return _MigrateMessagesAdminMessageRequest["default"];
+  }
+});
+Object.defineProperty(exports, "MigrateMessagesFileMessageRequest", {
+  enumerable: true,
+  get: function get() {
+    return _MigrateMessagesFileMessageRequest["default"];
+  }
+});
+Object.defineProperty(exports, "MigrateMessagesFileMessageRequestThumbnailsInner", {
+  enumerable: true,
+  get: function get() {
+    return _MigrateMessagesFileMessageRequestThumbnailsInner["default"];
+  }
+});
+Object.defineProperty(exports, "MigrateMessagesRequest", {
+  enumerable: true,
+  get: function get() {
+    return _MigrateMessagesRequest["default"];
+  }
+});
+Object.defineProperty(exports, "MigrateMessagesRequestMessagesInner", {
+  enumerable: true,
+  get: function get() {
+    return _MigrateMessagesRequestMessagesInner["default"];
+  }
+});
+Object.defineProperty(exports, "MigrateMessagesTextMessageRequest", {
+  enumerable: true,
+  get: function get() {
+    return _MigrateMessagesTextMessageRequest["default"];
+  }
+});
 Object.defineProperty(exports, "ModerationApi", {
   enumerable: true,
   get: function get() {
@@ -797,6 +833,12 @@ var _ListRegistrationOrDeviceTokensResponse = _interopRequireDefault(require("./
 var _ListUsersResponse = _interopRequireDefault(require("./model/ListUsersResponse"));
 var _MarkAllMessagesAsReadRequest = _interopRequireDefault(require("./model/MarkAllMessagesAsReadRequest"));
 var _MarkChannelMessagesAsReadRequest = _interopRequireDefault(require("./model/MarkChannelMessagesAsReadRequest"));
+var _MigrateMessagesAdminMessageRequest = _interopRequireDefault(require("./model/MigrateMessagesAdminMessageRequest"));
+var _MigrateMessagesFileMessageRequest = _interopRequireDefault(require("./model/MigrateMessagesFileMessageRequest"));
+var _MigrateMessagesFileMessageRequestThumbnailsInner = _interopRequireDefault(require("./model/MigrateMessagesFileMessageRequestThumbnailsInner"));
+var _MigrateMessagesRequest = _interopRequireDefault(require("./model/MigrateMessagesRequest"));
+var _MigrateMessagesRequestMessagesInner = _interopRequireDefault(require("./model/MigrateMessagesRequestMessagesInner"));
+var _MigrateMessagesTextMessageRequest = _interopRequireDefault(require("./model/MigrateMessagesTextMessageRequest"));
 var _RegisterOperatorsToAGroupChannelRequest = _interopRequireDefault(require("./model/RegisterOperatorsToAGroupChannelRequest"));
 var _RemoveARegistrationOrDeviceTokenResponse = _interopRequireDefault(require("./model/RemoveARegistrationOrDeviceTokenResponse"));
 var _RemoveAllRegistrationOrDeviceTokenResponse = _interopRequireDefault(require("./model/RemoveAllRegistrationOrDeviceTokenResponse"));

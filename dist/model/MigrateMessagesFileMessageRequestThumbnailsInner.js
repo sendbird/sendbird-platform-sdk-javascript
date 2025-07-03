@@ -10,7 +10,6 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
 function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
 function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
-function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); } /**
  * Sendbird Platform SDK
@@ -25,39 +24,44 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
  *
  */
 /**
-* Enum class SendbirdPushTriggerOption.
-* @enum {}
-* @readonly
-*/
-var SendbirdPushTriggerOption = exports["default"] = /*#__PURE__*/function () {
-  function SendbirdPushTriggerOption() {
-    _classCallCheck(this, SendbirdPushTriggerOption);
-    /**
-     * value: "all"
-     * @const
-     */
-    _defineProperty(this, "all", "all");
-    /**
-     * value: "mention_only"
-     * @const
-     */
-    _defineProperty(this, "mention_only", "mention_only");
-    /**
-     * value: "off"
-     * @const
-     */
-    _defineProperty(this, "off", "off");
+ * The MigrateMessagesFileMessageRequestThumbnailsInner model module.
+ * @module model/MigrateMessagesFileMessageRequestThumbnailsInner
+ * @version 2.0.0
+ */
+var MigrateMessagesFileMessageRequestThumbnailsInner = /*#__PURE__*/function () {
+  /**
+   * Constructs a new <code>MigrateMessagesFileMessageRequestThumbnailsInner</code>.
+   * @alias module:model/MigrateMessagesFileMessageRequestThumbnailsInner
+   */
+  function MigrateMessagesFileMessageRequestThumbnailsInner() {
+    _classCallCheck(this, MigrateMessagesFileMessageRequestThumbnailsInner);
+    MigrateMessagesFileMessageRequestThumbnailsInner.initialize(this);
   }
-  return _createClass(SendbirdPushTriggerOption, null, [{
-    key: "constructFromObject",
-    value:
+
+  /**
+   * Initializes the fields of this object.
+   * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+   * Only for internal use.
+   */
+  return _createClass(MigrateMessagesFileMessageRequestThumbnailsInner, null, [{
+    key: "initialize",
+    value: function initialize(obj) {}
+
     /**
-    * Returns a <code>SendbirdPushTriggerOption</code> enum value from a Javascript object name.
-    * @param {Object} data The plain JavaScript object containing the name of the enum value.
-    * @return {module:model/SendbirdPushTriggerOption} The enum <code>SendbirdPushTriggerOption</code> value.
-    */
-    function constructFromObject(object) {
-      return object;
+     * Constructs a <code>MigrateMessagesFileMessageRequestThumbnailsInner</code> from a plain JavaScript object, optionally creating a new instance.
+     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @param {module:model/MigrateMessagesFileMessageRequestThumbnailsInner} obj Optional instance to populate.
+     * @return {module:model/MigrateMessagesFileMessageRequestThumbnailsInner} The populated <code>MigrateMessagesFileMessageRequestThumbnailsInner</code> instance.
+     */
+  }, {
+    key: "constructFromObject",
+    value: function constructFromObject(data, obj) {
+      if (data) {
+        obj = obj || new MigrateMessagesFileMessageRequestThumbnailsInner();
+      }
+      return obj;
     }
   }]);
 }();
+var _default = exports["default"] = MigrateMessagesFileMessageRequestThumbnailsInner;
