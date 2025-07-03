@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -13,18 +13,13 @@
 
 
 import ApiClient from "../ApiClient";
-import GetDetailedOpenRateOfAnnouncementByIdResponse from '../model/GetDetailedOpenRateOfAnnouncementByIdResponse';
-import GetDetailedOpenStatusOfAnnouncementByIdResponse from '../model/GetDetailedOpenStatusOfAnnouncementByIdResponse';
-import RetrieveAdvancedAnalyticsMetricsResponse from '../model/RetrieveAdvancedAnalyticsMetricsResponse';
-import ViewNumberOfConcurrentConnectionsResponse from '../model/ViewNumberOfConcurrentConnectionsResponse';
 import ViewNumberOfDailyActiveUsersResponse from '../model/ViewNumberOfDailyActiveUsersResponse';
 import ViewNumberOfMonthlyActiveUsersResponse from '../model/ViewNumberOfMonthlyActiveUsersResponse';
-import ViewNumberOfPeakConnectionsResponse from '../model/ViewNumberOfPeakConnectionsResponse';
 
 /**
 * Statistics service.
 * @module api/StatisticsApi
-* @version 0.0.16
+* @version 2.0.0
 */
 export default class StatisticsApi {
 
@@ -42,244 +37,16 @@ export default class StatisticsApi {
 
 
     /**
-     * Get detailed open rate of an announcement
-     * ## Get detailed open rate of an announcement  Retrieves the detailed open rate information of an announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-rate-of-an-announcement ----------------------------   `unique_id`      Type: string      Description: Specifies the unique ID of the announcement to get its open rate.
-     * @param {String} apiToken 
-     * @param {String} uniqueId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetDetailedOpenRateOfAnnouncementByIdResponse} and HTTP response
-     */
-    getDetailedOpenRateOfAnnouncementByIdWithHttpInfo(apiToken, uniqueId) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling getDetailedOpenRateOfAnnouncementById");
-      }
-      // verify the required parameter 'uniqueId' is set
-      if (uniqueId === undefined || uniqueId === null) {
-        throw new Error("Missing the required parameter 'uniqueId' when calling getDetailedOpenRateOfAnnouncementById");
-      }
-
-      let pathParams = {
-        'unique_id': uniqueId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GetDetailedOpenRateOfAnnouncementByIdResponse;
-      return this.apiClient.callApi(
-        '/v3/announcement_open_rate/{unique_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Get detailed open rate of an announcement
-     * ## Get detailed open rate of an announcement  Retrieves the detailed open rate information of an announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-rate-of-an-announcement ----------------------------   `unique_id`      Type: string      Description: Specifies the unique ID of the announcement to get its open rate.
-     * @param {String} apiToken 
-     * @param {String} uniqueId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetDetailedOpenRateOfAnnouncementByIdResponse}
-     */
-    getDetailedOpenRateOfAnnouncementById(apiToken, uniqueId) {
-      return this.getDetailedOpenRateOfAnnouncementByIdWithHttpInfo(apiToken, uniqueId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Get detailed open status of an announcement
-     * ## Get detailed open status of an announcement  Retrieves the detailed open status information of a specific announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-status-of-an-announcement ----------------------------
-     * @param {String} apiToken 
-     * @param {String} uniqueId 
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit 
-     * @param {String} opts.next 
-     * @param {Array.<String>} opts.uniqueIds 
-     * @param {Array.<String>} opts.channelUrls 
-     * @param {Boolean} opts.hasOpened 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetDetailedOpenStatusOfAnnouncementByIdResponse} and HTTP response
-     */
-    getDetailedOpenStatusOfAnnouncementByIdWithHttpInfo(apiToken, uniqueId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling getDetailedOpenStatusOfAnnouncementById");
-      }
-      // verify the required parameter 'uniqueId' is set
-      if (uniqueId === undefined || uniqueId === null) {
-        throw new Error("Missing the required parameter 'uniqueId' when calling getDetailedOpenStatusOfAnnouncementById");
-      }
-
-      let pathParams = {
-        'unique_id': uniqueId
-      };
-      let queryParams = {
-        'limit': opts['limit'],
-        'next': opts['next'],
-        'unique_ids': this.apiClient.buildCollectionParam(opts['uniqueIds'], 'multi'),
-        'channel_urls': this.apiClient.buildCollectionParam(opts['channelUrls'], 'multi'),
-        'has_opened': opts['hasOpened']
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GetDetailedOpenStatusOfAnnouncementByIdResponse;
-      return this.apiClient.callApi(
-        '/v3/announcement_open_status/{unique_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Get detailed open status of an announcement
-     * ## Get detailed open status of an announcement  Retrieves the detailed open status information of a specific announcement.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-get-detailed-open-status-of-an-announcement ----------------------------
-     * @param {String} apiToken 
-     * @param {String} uniqueId 
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit 
-     * @param {String} opts.next 
-     * @param {Array.<String>} opts.uniqueIds 
-     * @param {Array.<String>} opts.channelUrls 
-     * @param {Boolean} opts.hasOpened 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetDetailedOpenStatusOfAnnouncementByIdResponse}
-     */
-    getDetailedOpenStatusOfAnnouncementById(apiToken, uniqueId, opts) {
-      return this.getDetailedOpenStatusOfAnnouncementByIdWithHttpInfo(apiToken, uniqueId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Retrieve Advanced analytics metrics
-     * ## Retrieve Advanced analytics metrics  Retrieves Advanced analytics metrics based on the specified parameters. You can retrieve either daily or monthly metrics using the time_dimension parameter.  >__Note__: Daily metrics are calculated and updated every three hours, starting at 1 a.m. in UTC. Meanwhile, monthly metrics are calculated after the last day of the month.  https://sendbird.com/docs/chat/v3/platform-api/guides/advanced-analytics#2-retrieve-advanced-analytics-metrics ----------------------------
-     * @param {String} apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RetrieveAdvancedAnalyticsMetricsResponse} and HTTP response
-     */
-    retrieveAdvancedAnalyticsMetricsWithHttpInfo(apiToken) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling retrieveAdvancedAnalyticsMetrics");
-      }
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = RetrieveAdvancedAnalyticsMetricsResponse;
-      return this.apiClient.callApi(
-        '/v3/statistics/metric', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Retrieve Advanced analytics metrics
-     * ## Retrieve Advanced analytics metrics  Retrieves Advanced analytics metrics based on the specified parameters. You can retrieve either daily or monthly metrics using the time_dimension parameter.  >__Note__: Daily metrics are calculated and updated every three hours, starting at 1 a.m. in UTC. Meanwhile, monthly metrics are calculated after the last day of the month.  https://sendbird.com/docs/chat/v3/platform-api/guides/advanced-analytics#2-retrieve-advanced-analytics-metrics ----------------------------
-     * @param {String} apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RetrieveAdvancedAnalyticsMetricsResponse}
-     */
-    retrieveAdvancedAnalyticsMetrics(apiToken) {
-      return this.retrieveAdvancedAnalyticsMetricsWithHttpInfo(apiToken)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View number of concurrent connections
-     * ## View number of concurrent connections  Retrieves the number of devices and opened browser tabs which are currently connected to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-concurrent-connections
-     * @param {String} apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfConcurrentConnectionsResponse} and HTTP response
-     */
-    viewNumberOfConcurrentConnectionsWithHttpInfo(apiToken) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewNumberOfConcurrentConnections");
-      }
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ViewNumberOfConcurrentConnectionsResponse;
-      return this.apiClient.callApi(
-        '/v3/applications/ccu', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * View number of concurrent connections
-     * ## View number of concurrent connections  Retrieves the number of devices and opened browser tabs which are currently connected to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-concurrent-connections
-     * @param {String} apiToken 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfConcurrentConnectionsResponse}
-     */
-    viewNumberOfConcurrentConnections(apiToken) {
-      return this.viewNumberOfConcurrentConnectionsWithHttpInfo(apiToken)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
      * View number of daily active users
-     * ## View number of daily active users  Retrieves the number of daily active users of the application (DAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-daily-active-users ----------------------------
-     * @param {String} apiToken 
+     * ## View number of daily active users  Retrieves the number of daily active users of an application.  > **Note**: This metric is scheduled to be calculated every 30 minutes, starting at 00:00 UTC, with the first update at 00:30 UTC.      [https://sendbird.com/docs/chat/platform-api/v3/statistics/daus-and-maus/get-number-of-daily-active-users#1-get-number-of-daily-active-users](https://sendbird.com/docs/chat/platform-api/v3/statistics/daus-and-maus/get-number-of-daily-active-users#1-get-number-of-daily-active-users)
      * @param {Object} opts Optional parameters
-     * @param {String} opts.date 
+     * @param {String} opts.date YYYY-MM-DD
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfDailyActiveUsersResponse} and HTTP response
      */
-    viewNumberOfDailyActiveUsersWithHttpInfo(apiToken, opts) {
+    viewNumberOfDailyActiveUsersWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewNumberOfDailyActiveUsers");
-      }
 
       let pathParams = {
       };
@@ -287,7 +54,7 @@ export default class StatisticsApi {
         'date': opts['date']
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -305,14 +72,14 @@ export default class StatisticsApi {
 
     /**
      * View number of daily active users
-     * ## View number of daily active users  Retrieves the number of daily active users of the application (DAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-daily-active-users ----------------------------
-     * @param {String} apiToken 
+     * ## View number of daily active users  Retrieves the number of daily active users of an application.  > **Note**: This metric is scheduled to be calculated every 30 minutes, starting at 00:00 UTC, with the first update at 00:30 UTC.      [https://sendbird.com/docs/chat/platform-api/v3/statistics/daus-and-maus/get-number-of-daily-active-users#1-get-number-of-daily-active-users](https://sendbird.com/docs/chat/platform-api/v3/statistics/daus-and-maus/get-number-of-daily-active-users#1-get-number-of-daily-active-users)
      * @param {Object} opts Optional parameters
-     * @param {String} opts.date 
+     * @param {String} opts.date YYYY-MM-DD
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfDailyActiveUsersResponse}
      */
-    viewNumberOfDailyActiveUsers(apiToken, opts) {
-      return this.viewNumberOfDailyActiveUsersWithHttpInfo(apiToken, opts)
+    viewNumberOfDailyActiveUsers(opts) {
+      return this.viewNumberOfDailyActiveUsersWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -321,19 +88,15 @@ export default class StatisticsApi {
 
     /**
      * View number of monthly active users
-     * ## View number of monthly active users  Retrieves the number of monthly active users of the application (MAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-monthly-active-users ----------------------------
-     * @param {String} apiToken 
+     * ## View number of monthly active users  Retrieves the number of monthly active users of an application.  > **Note**: This metric is scheduled to be calculated every 30 minutes, starting at 00:00 UTC, with the first update at 00:30 UTC.      [https://sendbird.com/docs/chat/platform-api/v3/statistics/daus-and-maus/get-number-of-monthly-active-users#1-get-number-of-monthly-active-users](https://sendbird.com/docs/chat/platform-api/v3/statistics/daus-and-maus/get-number-of-monthly-active-users#1-get-number-of-monthly-active-users)
      * @param {Object} opts Optional parameters
-     * @param {String} opts.date 
+     * @param {String} opts.date YYYY-MM-DD
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfMonthlyActiveUsersResponse} and HTTP response
      */
-    viewNumberOfMonthlyActiveUsersWithHttpInfo(apiToken, opts) {
+    viewNumberOfMonthlyActiveUsersWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewNumberOfMonthlyActiveUsers");
-      }
 
       let pathParams = {
       };
@@ -341,7 +104,7 @@ export default class StatisticsApi {
         'date': opts['date']
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -359,106 +122,14 @@ export default class StatisticsApi {
 
     /**
      * View number of monthly active users
-     * ## View number of monthly active users  Retrieves the number of monthly active users of the application (MAU).  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-monthly-active-users ----------------------------
-     * @param {String} apiToken 
+     * ## View number of monthly active users  Retrieves the number of monthly active users of an application.  > **Note**: This metric is scheduled to be calculated every 30 minutes, starting at 00:00 UTC, with the first update at 00:30 UTC.      [https://sendbird.com/docs/chat/platform-api/v3/statistics/daus-and-maus/get-number-of-monthly-active-users#1-get-number-of-monthly-active-users](https://sendbird.com/docs/chat/platform-api/v3/statistics/daus-and-maus/get-number-of-monthly-active-users#1-get-number-of-monthly-active-users)
      * @param {Object} opts Optional parameters
-     * @param {String} opts.date 
+     * @param {String} opts.date YYYY-MM-DD
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfMonthlyActiveUsersResponse}
      */
-    viewNumberOfMonthlyActiveUsers(apiToken, opts) {
-      return this.viewNumberOfMonthlyActiveUsersWithHttpInfo(apiToken, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View number of peak connections
-     * ## View number of peak connections  Retrieves the number of concurrently connected devices to Sendbird server during the requested time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-peak-connections ----------------------------
-     * @param {String} apiToken 
-     * @param {String} timeDimension 
-     * @param {Number} startYear 
-     * @param {Number} startMonth 
-     * @param {Number} endYear 
-     * @param {Number} endMonth 
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.startDay 
-     * @param {Number} opts.endDay 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewNumberOfPeakConnectionsResponse} and HTTP response
-     */
-    viewNumberOfPeakConnectionsWithHttpInfo(apiToken, timeDimension, startYear, startMonth, endYear, endMonth, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewNumberOfPeakConnections");
-      }
-      // verify the required parameter 'timeDimension' is set
-      if (timeDimension === undefined || timeDimension === null) {
-        throw new Error("Missing the required parameter 'timeDimension' when calling viewNumberOfPeakConnections");
-      }
-      // verify the required parameter 'startYear' is set
-      if (startYear === undefined || startYear === null) {
-        throw new Error("Missing the required parameter 'startYear' when calling viewNumberOfPeakConnections");
-      }
-      // verify the required parameter 'startMonth' is set
-      if (startMonth === undefined || startMonth === null) {
-        throw new Error("Missing the required parameter 'startMonth' when calling viewNumberOfPeakConnections");
-      }
-      // verify the required parameter 'endYear' is set
-      if (endYear === undefined || endYear === null) {
-        throw new Error("Missing the required parameter 'endYear' when calling viewNumberOfPeakConnections");
-      }
-      // verify the required parameter 'endMonth' is set
-      if (endMonth === undefined || endMonth === null) {
-        throw new Error("Missing the required parameter 'endMonth' when calling viewNumberOfPeakConnections");
-      }
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'time_dimension': timeDimension,
-        'start_year': startYear,
-        'start_month': startMonth,
-        'end_year': endYear,
-        'end_month': endMonth,
-        'start_day': opts['startDay'],
-        'end_day': opts['endDay']
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ViewNumberOfPeakConnectionsResponse;
-      return this.apiClient.callApi(
-        '/v3/applications/peak_connections', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * View number of peak connections
-     * ## View number of peak connections  Retrieves the number of concurrently connected devices to Sendbird server during the requested time period.  https://sendbird.com/docs/chat/v3/platform-api/guides/application#2-view-number-of-peak-connections ----------------------------
-     * @param {String} apiToken 
-     * @param {String} timeDimension 
-     * @param {Number} startYear 
-     * @param {Number} startMonth 
-     * @param {Number} endYear 
-     * @param {Number} endMonth 
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.startDay 
-     * @param {Number} opts.endDay 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewNumberOfPeakConnectionsResponse}
-     */
-    viewNumberOfPeakConnections(apiToken, timeDimension, startYear, startMonth, endYear, endMonth, opts) {
-      return this.viewNumberOfPeakConnectionsWithHttpInfo(apiToken, timeDimension, startYear, startMonth, endYear, endMonth, opts)
+    viewNumberOfMonthlyActiveUsers(opts) {
+      return this.viewNumberOfMonthlyActiveUsersWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

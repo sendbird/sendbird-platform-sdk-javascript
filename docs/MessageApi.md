@@ -4,142 +4,27 @@ All URIs are relative to *https://api-APP_ID.sendbird.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addEmojiCategories**](MessageApi.md#addEmojiCategories) | **POST** /v3/emoji_categories | Add emoji categories
-[**addEmojis**](MessageApi.md#addEmojis) | **POST** /v3/emojis | Add emojis
-[**addExtraDataToMessage**](MessageApi.md#addExtraDataToMessage) | **POST** /v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray | Add extra data to a message
-[**addReactionToAMessage**](MessageApi.md#addReactionToAMessage) | **POST** /v3/{channel_type}/{channel_url}/messages/{message_id}/reactions | Add a reaction to a message
-[**deleteEmojiByKey**](MessageApi.md#deleteEmojiByKey) | **DELETE** /v3/emojis/{emoji_key} | Delete an emoji
-[**deleteEmojiCategoryById**](MessageApi.md#deleteEmojiCategoryById) | **DELETE** /v3/emoji_categories/{emoji_category_id} | Delete an emoji category
-[**deleteMessageById**](MessageApi.md#deleteMessageById) | **DELETE** /v3/{channel_type}/{channel_url}/messages/{message_id} | Delete a message
-[**enableReactions**](MessageApi.md#enableReactions) | **PUT** /v3/applications/settings/reactions | Enable reactions
-[**gcMarkAllMessagesAsDelivered**](MessageApi.md#gcMarkAllMessagesAsDelivered) | **PUT** /v3/group_channels/{channel_url}/messages/mark_as_delivered | Mark all messages as delivered
-[**gcMarkAllMessagesAsRead**](MessageApi.md#gcMarkAllMessagesAsRead) | **PUT** /v3/group_channels/{channel_url}/messages/mark_as_read | Mark all messages as read
-[**gcViewNumberOfEachMembersUnreadMessages**](MessageApi.md#gcViewNumberOfEachMembersUnreadMessages) | **GET** /v3/group_channels/{channel_url}/messages/unread_count | View number of each member&#39;s unread messages
-[**getEmojiByKey**](MessageApi.md#getEmojiByKey) | **GET** /v3/emojis/{emoji_key} | Get an emoji
-[**getEmojiCategoryById**](MessageApi.md#getEmojiCategoryById) | **GET** /v3/emoji_categories/{emoji_category_id} | Get an emoji category
-[**listAllEmojisAndEmojiCategories**](MessageApi.md#listAllEmojisAndEmojiCategories) | **GET** /v3/emoji_categories | List all emojis and emoji categories
-[**listAnnouncements**](MessageApi.md#listAnnouncements) | **GET** /v3/announcements | List announcements
-[**listEmojis**](MessageApi.md#listEmojis) | **GET** /v3/emojis | List emojis
+[**addExtraDataToAMessage**](MessageApi.md#addExtraDataToAMessage) | **POST** /v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray | Add extra data to a message
+[**deleteAMessage**](MessageApi.md#deleteAMessage) | **DELETE** /v3/{channel_type}/{channel_url}/messages/{message_id} | Delete a message
+[**getAMessage**](MessageApi.md#getAMessage) | **GET** /v3/{channel_type}/{channel_url}/messages/{message_id} | Get a message
+[**getTotalNumberOfMessagesInAChannel**](MessageApi.md#getTotalNumberOfMessagesInAChannel) | **GET** /v3/{channel_type}/{channel_url}/messages/total_count | Get total number of messages in a channel
 [**listMessages**](MessageApi.md#listMessages) | **GET** /v3/{channel_type}/{channel_url}/messages | List messages
-[**listReactionsOfMessage**](MessageApi.md#listReactionsOfMessage) | **GET** /v3/{channel_type}/{channel_url}/messages/{message_id}/reactions | List reactions of a message
-[**migrateMessagesByUrl**](MessageApi.md#migrateMessagesByUrl) | **POST** /v3/migration/{target_channel_url} | Migrate messages
-[**removeExtraDataFromMessage**](MessageApi.md#removeExtraDataFromMessage) | **DELETE** /v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray | Remove extra data from a message
-[**removeReactionFromAMessage**](MessageApi.md#removeReactionFromAMessage) | **DELETE** /v3/{channel_type}/{channel_url}/messages/{message_id}/reactions | Remove a reaction from a message
-[**sendMessage**](MessageApi.md#sendMessage) | **POST** /v3/{channel_type}/{channel_url}/messages | Send a message
-[**translateMessageIntoOtherLanguages**](MessageApi.md#translateMessageIntoOtherLanguages) | **POST** /v3/{channel_type}/{channel_url}/messages/{message_id}/translation | Translate a message into other languages
-[**updateEmojiCategoryUrlById**](MessageApi.md#updateEmojiCategoryUrlById) | **PUT** /v3/emoji_categories/{emoji_category_id} | Update an emoji category URL
-[**updateEmojiUrlByKey**](MessageApi.md#updateEmojiUrlByKey) | **PUT** /v3/emojis/{emoji_key} | Update an emoji URL
-[**updateExtraDataInMessage**](MessageApi.md#updateExtraDataInMessage) | **PUT** /v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray | Update extra data in a message
-[**updateMessageById**](MessageApi.md#updateMessageById) | **PUT** /v3/{channel_type}/{channel_url}/messages/{message_id} | Update a message
-[**useDefaultEmojis**](MessageApi.md#useDefaultEmojis) | **PUT** /v3/applications/settings/use_default_emoji | Use default emojis
-[**viewMessageById**](MessageApi.md#viewMessageById) | **GET** /v3/{channel_type}/{channel_url}/messages/{message_id} | View a message
-[**viewTotalNumberOfMessagesInChannel**](MessageApi.md#viewTotalNumberOfMessagesInChannel) | **GET** /v3/{channel_type}/{channel_url}/messages/total_count | View total number of messages in a channel
+[**markChannelMessagesAsRead**](MessageApi.md#markChannelMessagesAsRead) | **PUT** /v3/group_channels/{channel_url}/messages/mark_as_read | Mark all messages as read
+[**migrateMessages**](MessageApi.md#migrateMessages) | **POST** /v3/migration/{target_channel_url} | Migrate messages
+[**removeExtraDataFromAMessage**](MessageApi.md#removeExtraDataFromAMessage) | **DELETE** /v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray | Remove extra data from a message
+[**sendAMessage**](MessageApi.md#sendAMessage) | **POST** /v3/{channel_type}/{channel_url}/messages | Send a message
+[**updateAMessage**](MessageApi.md#updateAMessage) | **PUT** /v3/{channel_type}/{channel_url}/messages/{message_id} | Update a message
+[**updateExtraDataInAMessage**](MessageApi.md#updateExtraDataInAMessage) | **PUT** /v3/{channel_type}/{channel_url}/messages/{message_id}/sorted_metaarray | Update extra data in a message
 
 
 
-## addEmojiCategories
+## addExtraDataToAMessage
 
-> AddEmojiCategoriesResponse addEmojiCategories(apiToken, opts)
-
-Add emoji categories
-
-## Add emoji categories  Adds a list of one or more new emoji categories to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-add-emoji-categories
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let opts = {
-  'body': {key: null} // Object | 
-};
-apiInstance.addEmojiCategories(apiToken, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**AddEmojiCategoriesResponse**](AddEmojiCategoriesResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## addEmojis
-
-> AddEmojisResponse addEmojis(apiToken, opts)
-
-Add emojis
-
-## Add emojis  Adds a list of one or more new emojis to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-add-emojis
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let opts = {
-  'addEmojisData': new SendbirdPlatformSdk.AddEmojisData() // AddEmojisData | 
-};
-apiInstance.addEmojis(apiToken, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **addEmojisData** | [**AddEmojisData**](AddEmojisData.md)|  | [optional] 
-
-### Return type
-
-[**AddEmojisResponse**](AddEmojisResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## addExtraDataToMessage
-
-> AddExtraDataToMessageResponse addExtraDataToMessage(apiToken, channelType, channelUrl, messageId, opts)
+> AddExtraDataToAMessageResponse addExtraDataToAMessage(channelType, channelUrl, messageId, opts)
 
 Add extra data to a message
 
-## Add extra data to a message  Adds one or more key-values items which store additional information for a message.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-add-extra-data-to-a-message ----------------------------
+## Add extra data to a message  Adds one or more key-values items which store additional information for a message.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/message-add-metadata#1-add-metadata ----------------------------
 
 ### Example
 
@@ -147,14 +32,14 @@ Add extra data to a message
 import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelType = "channelType_example"; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let messageId = "messageId_example"; // String | 
+let channelType = "channelType_example"; // String | (Required) 
+let channelUrl = "channelUrl_example"; // String | (Required) 
+let messageId = "messageId_example"; // String | (Required) 
 let opts = {
-  'addExtraDataToMessageData': new SendbirdPlatformSdk.AddExtraDataToMessageData() // AddExtraDataToMessageData | 
+  'apiToken': {{API_TOKEN}}, // String | 
+  'addExtraDataToAMessageRequest': new SendbirdPlatformSdk.AddExtraDataToAMessageRequest() // AddExtraDataToAMessageRequest | 
 };
-apiInstance.addExtraDataToMessage(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.addExtraDataToAMessage(channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -167,15 +52,15 @@ apiInstance.addExtraDataToMessage(apiToken, channelType, channelUrl, messageId, 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelType** | **String**|  | 
- **channelUrl** | **String**|  | 
- **messageId** | **String**|  | 
- **addExtraDataToMessageData** | [**AddExtraDataToMessageData**](AddExtraDataToMessageData.md)|  | [optional] 
+ **channelType** | **String**| (Required)  | 
+ **channelUrl** | **String**| (Required)  | 
+ **messageId** | **String**| (Required)  | 
+ **apiToken** | **String**|  | [optional] 
+ **addExtraDataToAMessageRequest** | [**AddExtraDataToAMessageRequest**](AddExtraDataToAMessageRequest.md)|  | [optional] 
 
 ### Return type
 
-[**AddExtraDataToMessageResponse**](AddExtraDataToMessageResponse.md)
+[**AddExtraDataToAMessageResponse**](AddExtraDataToAMessageResponse.md)
 
 ### Authorization
 
@@ -187,159 +72,13 @@ No authorization required
 - **Accept**: application/json
 
 
-## addReactionToAMessage
+## deleteAMessage
 
-> AddReactionToAMessageResponse addReactionToAMessage(apiToken, channelType, channelUrl, messageId, opts)
-
-Add a reaction to a message
-
-## Add a reaction to a message  Adds a specific reaction to a message.  &gt; __Note__: Currently, this action is only available in group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-add-a-reaction-to-a-message ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelType = "channelType_example"; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let messageId = "messageId_example"; // String | 
-let opts = {
-  'addReactionToAMessageData': new SendbirdPlatformSdk.AddReactionToAMessageData() // AddReactionToAMessageData | 
-};
-apiInstance.addReactionToAMessage(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelType** | **String**|  | 
- **channelUrl** | **String**|  | 
- **messageId** | **String**|  | 
- **addReactionToAMessageData** | [**AddReactionToAMessageData**](AddReactionToAMessageData.md)|  | [optional] 
-
-### Return type
-
-[**AddReactionToAMessageResponse**](AddReactionToAMessageResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## deleteEmojiByKey
-
-> deleteEmojiByKey(apiToken, emojiKey)
-
-Delete an emoji
-
-## Delete an emoji  Deletes an emoji from the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-delete-an-emoji ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let emojiKey = "emojiKey_example"; // String | 
-apiInstance.deleteEmojiByKey(apiToken, emojiKey).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **emojiKey** | **String**|  | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## deleteEmojiCategoryById
-
-> Object deleteEmojiCategoryById(apiToken, emojiCategoryId)
-
-Delete an emoji category
-
-## Delete an emoji category  Deletes an emoji category with the specified ID.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-delete-an-emoji-category ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let emojiCategoryId = "emojiCategoryId_example"; // String | 
-apiInstance.deleteEmojiCategoryById(apiToken, emojiCategoryId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **emojiCategoryId** | **String**|  | 
-
-### Return type
-
-**Object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## deleteMessageById
-
-> Object deleteMessageById(apiToken, channelType, channelUrl, messageId)
+> Object deleteAMessage(channelType, channelUrl, messageId, opts)
 
 Delete a message
 
-## Delete a message  Deletes a message from a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-delete-a-message ----------------------------
+## Delete a message  Deletes a message from a channel.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/delete-a-message#1-delete-a-message ----------------------------
 
 ### Example
 
@@ -347,11 +86,13 @@ Delete a message
 import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelType = "channelType_example"; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let messageId = "messageId_example"; // String | 
-apiInstance.deleteMessageById(apiToken, channelType, channelUrl, messageId).then((data) => {
+let channelType = "channelType_example"; // String | (Required) 
+let channelUrl = "channelUrl_example"; // String | (Required) 
+let messageId = "messageId_example"; // String | (Required) 
+let opts = {
+  'apiToken': {{API_TOKEN}} // String | 
+};
+apiInstance.deleteAMessage(channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -364,10 +105,10 @@ apiInstance.deleteMessageById(apiToken, channelType, channelUrl, messageId).then
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelType** | **String**|  | 
- **channelUrl** | **String**|  | 
- **messageId** | **String**|  | 
+ **channelType** | **String**| (Required)  | 
+ **channelUrl** | **String**| (Required)  | 
+ **messageId** | **String**| (Required)  | 
+ **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -383,13 +124,13 @@ No authorization required
 - **Accept**: application/json
 
 
-## enableReactions
+## getAMessage
 
-> EnableReactionsResponse enableReactions(apiToken, opts)
+> SendbirdMessageResponse getAMessage(channelType, channelUrl, messageId, opts)
 
-Enable reactions
+Get a message
 
-## Enable reactions  Turn on or off reactions in a Sendbird application.  &gt; __Note__: This action also allows reactions in UIKit.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-enable-reactions
+## Get a message  Retrieves information on a specific message.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/get-a-message#1-get-a-message ----------------------------   &#x60;channel_type&#x60;      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the target channel.  &#x60;message_id&#x60;      Type: long      Description: Specifies the unique ID of the message to retrieve.
 
 ### Example
 
@@ -397,11 +138,18 @@ Enable reactions
 import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
+let channelType = "channelType_example"; // String | (Required) 
+let channelUrl = "channelUrl_example"; // String | (Required) 
+let messageId = "messageId_example"; // String | (Required) 
 let opts = {
-  'enableReactionsData': new SendbirdPlatformSdk.EnableReactionsData() // EnableReactionsData | 
+  'includeReactions': true, // Boolean | 
+  'includeThreadInfo': true, // Boolean | 
+  'includeParentMessageInfo': true, // Boolean | 
+  'includePollDetails': true, // Boolean | Determines whether to include all properties of a poll resource with a full list of options in the results. If set to false, a selection of poll resource properties consisting of id, title, close_at, created_at, updated_at, status, and message_id are returned. (Default: false) * To use this property, the polls feature should be turned on in Settings > Chat > Features on Sendbird Dashboard.
+  'withSortedMetaArray': true, // Boolean | 
+  'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.enableReactions(apiToken, opts).then((data) => {
+apiInstance.getAMessage(channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -414,162 +162,19 @@ apiInstance.enableReactions(apiToken, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **enableReactionsData** | [**EnableReactionsData**](EnableReactionsData.md)|  | [optional] 
+ **channelType** | **String**| (Required)  | 
+ **channelUrl** | **String**| (Required)  | 
+ **messageId** | **String**| (Required)  | 
+ **includeReactions** | **Boolean**|  | [optional] 
+ **includeThreadInfo** | **Boolean**|  | [optional] 
+ **includeParentMessageInfo** | **Boolean**|  | [optional] 
+ **includePollDetails** | **Boolean**| Determines whether to include all properties of a poll resource with a full list of options in the results. If set to false, a selection of poll resource properties consisting of id, title, close_at, created_at, updated_at, status, and message_id are returned. (Default: false) * To use this property, the polls feature should be turned on in Settings &gt; Chat &gt; Features on Sendbird Dashboard. | [optional] 
+ **withSortedMetaArray** | **Boolean**|  | [optional] 
+ **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
-[**EnableReactionsResponse**](EnableReactionsResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## gcMarkAllMessagesAsDelivered
-
-> GcMarkAllMessagesAsDeliveredResponse gcMarkAllMessagesAsDelivered(apiToken, channelUrl, opts)
-
-Mark all messages as delivered
-
-## Mark all messages as delivered  Marks all messages in a group channel as delivered for a given user. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-mark-all-messages-as-delivered ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'gcMarkAllMessagesAsDeliveredData': new SendbirdPlatformSdk.GcMarkAllMessagesAsDeliveredData() // GcMarkAllMessagesAsDeliveredData | 
-};
-apiInstance.gcMarkAllMessagesAsDelivered(apiToken, channelUrl, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelUrl** | **String**|  | 
- **gcMarkAllMessagesAsDeliveredData** | [**GcMarkAllMessagesAsDeliveredData**](GcMarkAllMessagesAsDeliveredData.md)|  | [optional] 
-
-### Return type
-
-[**GcMarkAllMessagesAsDeliveredResponse**](GcMarkAllMessagesAsDeliveredResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## gcMarkAllMessagesAsRead
-
-> Object gcMarkAllMessagesAsRead(apiToken, channelUrl, opts)
-
-Mark all messages as read
-
-## Mark all messages as read  Marks all messages in a group channel as read for a given user. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-mark-all-messages-as-read ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'gcMarkAllMessagesAsReadData': new SendbirdPlatformSdk.GcMarkAllMessagesAsReadData() // GcMarkAllMessagesAsReadData | 
-};
-apiInstance.gcMarkAllMessagesAsRead(apiToken, channelUrl, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelUrl** | **String**|  | 
- **gcMarkAllMessagesAsReadData** | [**GcMarkAllMessagesAsReadData**](GcMarkAllMessagesAsReadData.md)|  | [optional] 
-
-### Return type
-
-**Object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## gcViewNumberOfEachMembersUnreadMessages
-
-> GcViewNumberOfEachMembersUnreadMessagesResponse gcViewNumberOfEachMembersUnreadMessages(apiToken, channelUrl, opts)
-
-View number of each member&#39;s unread messages
-
-## View number of each member&#39;s unread messages  Retrieves the total number of each member&#39;s unread messages in a group channel. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-view-number-of-each-member-s-unread-messages ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let opts = {
-  'userIds': "userIds_example" // String | 
-};
-apiInstance.gcViewNumberOfEachMembersUnreadMessages(apiToken, channelUrl, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelUrl** | **String**|  | 
- **userIds** | **String**|  | [optional] 
-
-### Return type
-
-[**GcViewNumberOfEachMembersUnreadMessagesResponse**](GcViewNumberOfEachMembersUnreadMessagesResponse.md)
+[**SendbirdMessageResponse**](SendbirdMessageResponse.md)
 
 ### Authorization
 
@@ -581,59 +186,13 @@ No authorization required
 - **Accept**: application/json
 
 
-## getEmojiByKey
+## getTotalNumberOfMessagesInAChannel
 
-> SendBirdEmoji getEmojiByKey(apiToken, emojiKey)
+> GetTotalNumberOfMessagesInAChannelResponse getTotalNumberOfMessagesInAChannel(channelType, channelUrl, opts)
 
-Get an emoji
+Get total number of messages in a channel
 
-## Get an emoji  Retrieves an emoji with the specified key.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-get-an-emoji ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let emojiKey = "emojiKey_example"; // String | 
-apiInstance.getEmojiByKey(apiToken, emojiKey).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **emojiKey** | **String**|  | 
-
-### Return type
-
-[**SendBirdEmoji**](SendBirdEmoji.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## getEmojiCategoryById
-
-> SendBirdEmojiCategory getEmojiCategoryById(apiToken, emojiCategoryId)
-
-Get an emoji category
-
-## Get an emoji category  Retrieves an emoji category with the specified ID, including its emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-get-an-emoji-category ----------------------------   &#x60;emoji_category_id&#x60;      Type: int      Description: Specifies the unique ID of the emoji category to retrieve.
+## Get total number of messages in a channel  Retrieves the total number of messages in a specific channel.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/get-total-number-of-messages-in-a-channel#1-get-total-number-of-messages-in-a-channel ----------------------------
 
 ### Example
 
@@ -641,105 +200,12 @@ Get an emoji category
 import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let emojiCategoryId = "emojiCategoryId_example"; // String | 
-apiInstance.getEmojiCategoryById(apiToken, emojiCategoryId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **emojiCategoryId** | **String**|  | 
-
-### Return type
-
-[**SendBirdEmojiCategory**](SendBirdEmojiCategory.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## listAllEmojisAndEmojiCategories
-
-> ListAllEmojisAndEmojiCategoriesResponse listAllEmojisAndEmojiCategories(apiToken)
-
-List all emojis and emoji categories
-
-## List all emojis and emoji categories  Retrieves a list of all emoji categories registered to the application, including their emojis.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-all-emojis-and-emoji-categories
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-apiInstance.listAllEmojisAndEmojiCategories(apiToken).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
-
-### Return type
-
-[**ListAllEmojisAndEmojiCategoriesResponse**](ListAllEmojisAndEmojiCategoriesResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## listAnnouncements
-
-> ListAnnouncementsResponse listAnnouncements(apiToken, opts)
-
-List announcements
-
-## List announcements  Retrieves a list of announcements.  https://sendbird.com/docs/chat/v3/platform-api/guides/announcements#2-list-announcements ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
+let channelType = "channelType_example"; // String | (Required) 
+let channelUrl = "channelUrl_example"; // String | (Required) 
 let opts = {
-  'token': "token_example", // String | 
-  'limit': 56, // Number | 
-  'order': "order_example", // String | 
-  'status': "status_example", // String | 
-  'announcementGroup': "announcementGroup_example" // String | 
+  'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.listAnnouncements(apiToken, opts).then((data) => {
+apiInstance.getTotalNumberOfMessagesInAChannel(channelType, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -752,60 +218,13 @@ apiInstance.listAnnouncements(apiToken, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **token** | **String**|  | [optional] 
- **limit** | **Number**|  | [optional] 
- **order** | **String**|  | [optional] 
- **status** | **String**|  | [optional] 
- **announcementGroup** | **String**|  | [optional] 
+ **channelType** | **String**| (Required)  | 
+ **channelUrl** | **String**| (Required)  | 
+ **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
-[**ListAnnouncementsResponse**](ListAnnouncementsResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## listEmojis
-
-> ListEmojisResponse listEmojis(apiToken)
-
-List emojis
-
-## List emojis  Retrieves a list of all emojis registered to the application.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-list-emojis
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-apiInstance.listEmojis(apiToken).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
-
-### Return type
-
-[**ListEmojisResponse**](ListEmojisResponse.md)
+[**GetTotalNumberOfMessagesInAChannelResponse**](GetTotalNumberOfMessagesInAChannelResponse.md)
 
 ### Authorization
 
@@ -819,11 +238,11 @@ No authorization required
 
 ## listMessages
 
-> ListMessagesResponse listMessages(apiToken, channelType, channelUrl, opts)
+> ListMessagesResponse listMessages(channelType, channelUrl, messageTs, messageId, opts)
 
 List messages
 
-## List messages  Retrieves a list of past messages of a channel.  &gt; This message retrieval is one of Sendbird&#39;s [premium features](https://sendbird.com/docs/chat/v3/platform-api/guides/application#-3-sendbird-s-premium-features). Contact our [sales team](https://get.sendbird.com/talk-to-sales.html) for further assistance.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-list-messages ----------------------------   &#x60;channel_type&#x60;      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the channel to retrieve a list of past messages.
+## List messages  You can retrieve a list of past messages of a specific channel with this API.  By default, this action returns a list of messages in the order they were created. Replies in threaded messages are also listed in the chronological order of their creation like other messages, not grouped with their parent messages.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/list-messages#1-list-messages  &#x60;channel_type&#x60;   Type: string   Description: Specifies the type of the channel. Either open_channels or group_channels.   &#x60;channel_url&#x60;   Type: string   Description: Specifies the URL of the channel to retrieve a list of past messages.
 
 ### Example
 
@@ -831,30 +250,32 @@ List messages
 import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelType = "channelType_example"; // String | 
-let channelUrl = "channelUrl_example"; // String | 
+let channelType = "channelType_example"; // String | (Required) 
+let channelUrl = "channelUrl_example"; // String | (Required) 
+let messageTs = 789; // Number | Specifies the timestamp to be the reference point of the query in Unix milliseconds. Either this or the message_id parameter below should be specified in your query URL to retrieve a list. It fetches messages that were sent prior to and after the specified message_ts and the default value for both prev_limit and next_limit is 15.
+let messageId = 789; // Number | Specifies the unique ID of the message to be the reference point of the query. Either this or the message_ts parameter above should be specified in your query URL to retrieve a list. It fetches messages that were sent prior to and after the specified message_id and the default value for both prev_limit and next_limit is 15.
 let opts = {
-  'messageTs': "messageTs_example", // String | 
-  'messageId': 56, // Number | 
-  'prevLimit': 56, // Number | 
-  'nextLimit': 56, // Number | 
-  'include': true, // Boolean | 
-  'reverse': true, // Boolean | 
-  'senderId': "senderId_example", // String | 
-  'senderIds': "senderIds_example", // String | 
+  'prevLimit': 56, // Number | Specifies the number of previously sent messages to retrieve before message_ts. For example, if message_ts=1484202848298, then prev_limit=50 returns 50 messages sent by 1484202848297 (message_ts - 1). Acceptable values range from 0 to 200. (Default: 15)
+  'nextLimit': 56, // Number | Specifies the number of sent messages to retrieve after message_ts. For example, if message_ts=1484202848298, then next_limit=50 returns 50 messages sent from 1484202848299 (message_ts + 1). Acceptable values range from 0 to 200. (Default: 15)
+  'include': true, // Boolean | Determines whether to include messages sent exactly on the specified message_ts in the results. (Default: true)
+  'reverse': true, // Boolean | Determines whether to sort the results in reverse chronological order. If set to true, messages appear in reverse chronological order where the newest comes first and the oldest last. (Default: false)
+  'senderId': "senderId_example", // String | Restricts the search scope to only retrieve messages sent by the user with the specified ID.
+  'senderIds': "senderIds_example", // String | Restricts the search scope to only retrieve messages sent by one or more users with the specified IDs listed in a comma-separated string.
   'operatorFilter': "operatorFilter_example", // String | 
-  'customTypes': "customTypes_example", // String | 
+  'customTypes': "customTypes_example", // String | Specifies a comma-separated string of one or more custom message types to retrieve. The value set to this parameter can serve as a filter as follows: - A string of specific custom types: Messages with the corresponding custom types are returned. - Empty like &custom_types=&...: Messages whose custom_type property is empty or has a value of null are returned. - An asterisk (\\*) (default): All messages are returned regardless of their custom_type.
   'messageType': "messageType_example", // String | 
   'includingRemoved': true, // Boolean | 
   'includeReactions': true, // Boolean | 
-  'withSortedMetaArray': true, // Boolean | 
+  'includeReplyType': "includeReplyType_example", // String | One of following values: NONE, ALL, ONLY_REPLY_TO_CHANNEL
+  'includeParentMessageInfo': true, // Boolean | 
+  'includeThreadInfo': true, // Boolean | 
+  'includePollDetails': true, // Boolean | Determines whether to include all properties of a poll resource with a full list of options in the results. If set to false, a selection of poll resource properties consisting of id, title, close_at, created_at, updated_at, status, and message_id are returned. (Default: false) * To use this property, the polls feature should be turned on in Settings > Chat > Features on Sendbird Dashboard.
+  'withSortedMetaArray': true, // Boolean | Determines whether to include the sorted_metaarray property in the response. (Default: false)
   'showSubchannelMessagesOnly': true, // Boolean | 
   'userId': "userId_example", // String | 
-  'customType': "customType_example", // String | 
-  'withMetaArray': true // Boolean | 
+  'apiToken': {{API_TOKEN}} // String | 
 };
-apiInstance.listMessages(apiToken, channelType, channelUrl, opts).then((data) => {
+apiInstance.listMessages(channelType, channelUrl, messageTs, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -867,27 +288,29 @@ apiInstance.listMessages(apiToken, channelType, channelUrl, opts).then((data) =>
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelType** | **String**|  | 
- **channelUrl** | **String**|  | 
- **messageTs** | **String**|  | [optional] 
- **messageId** | **Number**|  | [optional] 
- **prevLimit** | **Number**|  | [optional] 
- **nextLimit** | **Number**|  | [optional] 
- **include** | **Boolean**|  | [optional] 
- **reverse** | **Boolean**|  | [optional] 
- **senderId** | **String**|  | [optional] 
- **senderIds** | **String**|  | [optional] 
+ **channelType** | **String**| (Required)  | 
+ **channelUrl** | **String**| (Required)  | 
+ **messageTs** | **Number**| Specifies the timestamp to be the reference point of the query in Unix milliseconds. Either this or the message_id parameter below should be specified in your query URL to retrieve a list. It fetches messages that were sent prior to and after the specified message_ts and the default value for both prev_limit and next_limit is 15. | 
+ **messageId** | **Number**| Specifies the unique ID of the message to be the reference point of the query. Either this or the message_ts parameter above should be specified in your query URL to retrieve a list. It fetches messages that were sent prior to and after the specified message_id and the default value for both prev_limit and next_limit is 15. | 
+ **prevLimit** | **Number**| Specifies the number of previously sent messages to retrieve before message_ts. For example, if message_ts&#x3D;1484202848298, then prev_limit&#x3D;50 returns 50 messages sent by 1484202848297 (message_ts - 1). Acceptable values range from 0 to 200. (Default: 15) | [optional] 
+ **nextLimit** | **Number**| Specifies the number of sent messages to retrieve after message_ts. For example, if message_ts&#x3D;1484202848298, then next_limit&#x3D;50 returns 50 messages sent from 1484202848299 (message_ts + 1). Acceptable values range from 0 to 200. (Default: 15) | [optional] 
+ **include** | **Boolean**| Determines whether to include messages sent exactly on the specified message_ts in the results. (Default: true) | [optional] 
+ **reverse** | **Boolean**| Determines whether to sort the results in reverse chronological order. If set to true, messages appear in reverse chronological order where the newest comes first and the oldest last. (Default: false) | [optional] 
+ **senderId** | **String**| Restricts the search scope to only retrieve messages sent by the user with the specified ID. | [optional] 
+ **senderIds** | **String**| Restricts the search scope to only retrieve messages sent by one or more users with the specified IDs listed in a comma-separated string. | [optional] 
  **operatorFilter** | **String**|  | [optional] 
- **customTypes** | **String**|  | [optional] 
+ **customTypes** | **String**| Specifies a comma-separated string of one or more custom message types to retrieve. The value set to this parameter can serve as a filter as follows: - A string of specific custom types: Messages with the corresponding custom types are returned. - Empty like &amp;custom_types&#x3D;&amp;...: Messages whose custom_type property is empty or has a value of null are returned. - An asterisk (\\*) (default): All messages are returned regardless of their custom_type. | [optional] 
  **messageType** | **String**|  | [optional] 
  **includingRemoved** | **Boolean**|  | [optional] 
  **includeReactions** | **Boolean**|  | [optional] 
- **withSortedMetaArray** | **Boolean**|  | [optional] 
+ **includeReplyType** | **String**| One of following values: NONE, ALL, ONLY_REPLY_TO_CHANNEL | [optional] 
+ **includeParentMessageInfo** | **Boolean**|  | [optional] 
+ **includeThreadInfo** | **Boolean**|  | [optional] 
+ **includePollDetails** | **Boolean**| Determines whether to include all properties of a poll resource with a full list of options in the results. If set to false, a selection of poll resource properties consisting of id, title, close_at, created_at, updated_at, status, and message_id are returned. (Default: false) * To use this property, the polls feature should be turned on in Settings &gt; Chat &gt; Features on Sendbird Dashboard. | [optional] 
+ **withSortedMetaArray** | **Boolean**| Determines whether to include the sorted_metaarray property in the response. (Default: false) | [optional] 
  **showSubchannelMessagesOnly** | **Boolean**|  | [optional] 
  **userId** | **String**|  | [optional] 
- **customType** | **String**|  | [optional] 
- **withMetaArray** | **Boolean**|  | [optional] 
+ **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -903,13 +326,13 @@ No authorization required
 - **Accept**: application/json
 
 
-## listReactionsOfMessage
+## markChannelMessagesAsRead
 
-> ListReactionsOfMessageResponse listReactionsOfMessage(apiToken, channelType, channelUrl, messageId, opts)
+> Object markChannelMessagesAsRead(channelUrl, opts)
 
-List reactions of a message
+Mark all messages as read
 
-## List reactions of a message  Retrieves a list of reactions made to a message.  &gt; __Note__: Currently, this action is only available in group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-list-reactions-of-a-message ----------------------------   &#x60;channel_type&#x60;      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the target channel.  &#x60;message_id&#x60;      Type: long      Description: Specifies the unique ID of the message to add a reaction to.
+## Mark all messages as read  Marks all messages in a group channel as read for a specific user. This action is only applicable for users in a group channel.  https://sendbird.com/docs/chat/platform-api/v3/message/read-receipts/mark-all-messages-as-read-message#1-mark-all-messages-as-read
 
 ### Example
 
@@ -917,14 +340,12 @@ List reactions of a message
 import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelType = "channelType_example"; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let messageId = "messageId_example"; // String | 
+let channelUrl = "channelUrl_example"; // String | (Required) 
 let opts = {
-  'listUsers': true // Boolean | 
+  'apiToken': {{API_TOKEN}}, // String | 
+  'markChannelMessagesAsReadRequest': new SendbirdPlatformSdk.MarkChannelMessagesAsReadRequest() // MarkChannelMessagesAsReadRequest | 
 };
-apiInstance.listReactionsOfMessage(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.markChannelMessagesAsRead(channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -937,65 +358,13 @@ apiInstance.listReactionsOfMessage(apiToken, channelType, channelUrl, messageId,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelType** | **String**|  | 
- **channelUrl** | **String**|  | 
- **messageId** | **String**|  | 
- **listUsers** | **Boolean**|  | [optional] 
+ **channelUrl** | **String**| (Required)  | 
+ **apiToken** | **String**|  | [optional] 
+ **markChannelMessagesAsReadRequest** | [**MarkChannelMessagesAsReadRequest**](MarkChannelMessagesAsReadRequest.md)|  | [optional] 
 
 ### Return type
 
-[**ListReactionsOfMessageResponse**](ListReactionsOfMessageResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## migrateMessagesByUrl
-
-> migrateMessagesByUrl(apiToken, targetChannelUrl, opts)
-
-Migrate messages
-
-## Migrate messages  Using our migration API, you can migrate the messages from another system into a Sendbird system&#39;s [channel](https://sendbird.com/docs/chat/v3/platform-api/guides/channel-types) which consists of users, messages, and other chat-related data.  &gt; To turn on this feature, [contact our support team](https://dashboard.sendbird.com/settings/contact_us).  There are three things to do in advance before the migration. Follow the instructions below:  1. Register the users of your current chat solution to your Sendbird application. You can migrate the users into the Sendbird system using the [user creation API](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-create-a-user). 2. Create either an [open](https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-create-a-channel) or a [group](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-create-a-channel) channel to migrate the messages of your chat solution. The Sendbird system doesn&#39;t create a channel for your migration automatically. 3. The maximum number of migrated messages per call is 100. To avoid the failure during your migration, you must adjust the number of messages to process at once via the API.  https://sendbird.com/docs/chat/v3/platform-api/guides/migration#2-migrate-messages ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let targetChannelUrl = "targetChannelUrl_example"; // String | 
-let opts = {
-  'body': {key: null} // Object | 
-};
-apiInstance.migrateMessagesByUrl(apiToken, targetChannelUrl, opts).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **targetChannelUrl** | **String**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -1004,16 +373,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
-## removeExtraDataFromMessage
+## migrateMessages
 
-> Object removeExtraDataFromMessage(apiToken, channelType, channelUrl, messageId, opts)
+> Object migrateMessages(targetChannelUrl, opts)
 
-Remove extra data from a message
+Migrate messages
 
-## Remove extra data from a message  Removes specific items from a message by their keys.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-remove-extra-data-from-a-message ----------------------------
+## Migrate messages  Using our migration API, you can migrate the messages from another system into a Sendbird system&#39;s [channel](https://sendbird.com/docs/chat/v3/platform-api/guides/channel-types) which consists of users, messages, and other chat-related data.  &gt; To turn on this feature, [contact our support team](https://dashboard.sendbird.com/settings/contact_us).      There are three things to do in advance before the migration. Follow the instructions below:  1. Register the users of your current chat solution to your Sendbird application. You can migrate the users into the Sendbird system using the [user creation API](https://sendbird.com/docs/chat/v3/platform-api/guides/user#2-create-a-user).      2. Create either an [open](https://sendbird.com/docs/chat/v3/platform-api/guides/open-channel#2-create-a-channel) or a [group](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-create-a-channel) channel to migrate the messages of your chat solution. The Sendbird system doesn&#39;t create a channel for your migration automatically.      3. The maximum number of migrated messages per call is 100. To avoid the failure during your migration, you must adjust the number of messages to process at once via the API.       https://sendbird.com/docs/chat/platform-api/v3/message/migration/migrate-messages#1-migrate-messages
 
 ### Example
 
@@ -1021,14 +390,12 @@ Remove extra data from a message
 import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelType = "channelType_example"; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let messageId = "messageId_example"; // String | 
+let targetChannelUrl = "targetChannelUrl_example"; // String | (Required) 
 let opts = {
-  'keys': ["null"] // [String] | 
+  'apiToken': {{API_TOKEN}}, // String | 
+  'migrateMessagesRequest': new SendbirdPlatformSdk.MigrateMessagesRequest() // MigrateMessagesRequest | 
 };
-apiInstance.removeExtraDataFromMessage(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.migrateMessages(targetChannelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1041,11 +408,63 @@ apiInstance.removeExtraDataFromMessage(apiToken, channelType, channelUrl, messag
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelType** | **String**|  | 
- **channelUrl** | **String**|  | 
- **messageId** | **String**|  | 
- **keys** | [**[String]**](String.md)|  | [optional] 
+ **targetChannelUrl** | **String**| (Required)  | 
+ **apiToken** | **String**|  | [optional] 
+ **migrateMessagesRequest** | [**MigrateMessagesRequest**](MigrateMessagesRequest.md)|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## removeExtraDataFromAMessage
+
+> Object removeExtraDataFromAMessage(channelType, channelUrl, messageId, opts)
+
+Remove extra data from a message
+
+## Remove extra data from a message  Removes specific items from a message by their keys.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/message-remove-metadata#1-remove-metadata ----------------------------
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.MessageApi();
+let channelType = "channelType_example"; // String | (Required) 
+let channelUrl = "channelUrl_example"; // String | (Required) 
+let messageId = "messageId_example"; // String | (Required) 
+let opts = {
+  'keys': "keys_example", // String | 
+  'apiToken': {{API_TOKEN}} // String | 
+};
+apiInstance.removeExtraDataFromAMessage(channelType, channelUrl, messageId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **channelType** | **String**| (Required)  | 
+ **channelUrl** | **String**| (Required)  | 
+ **messageId** | **String**| (Required)  | 
+ **keys** | **String**|  | [optional] 
+ **apiToken** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1061,69 +480,13 @@ No authorization required
 - **Accept**: application/json
 
 
-## removeReactionFromAMessage
+## sendAMessage
 
-> RemoveReactionFromAMessageResponse removeReactionFromAMessage(apiToken, channelType, channelUrl, messageId, opts)
-
-Remove a reaction from a message
-
-## Remove a reaction from a message  Removes a specific reaction from a message.  &gt; __Note__: Currently, this action is only available in group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-remove-a-reaction-from-a-message ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelType = "channelType_example"; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let messageId = "messageId_example"; // String | 
-let opts = {
-  'userId': "userId_example", // String | 
-  'reaction': "reaction_example" // String | 
-};
-apiInstance.removeReactionFromAMessage(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelType** | **String**|  | 
- **channelUrl** | **String**|  | 
- **messageId** | **String**|  | 
- **userId** | **String**|  | [optional] 
- **reaction** | **String**|  | [optional] 
-
-### Return type
-
-[**RemoveReactionFromAMessageResponse**](RemoveReactionFromAMessageResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## sendMessage
-
-> SendBirdMessageResponse sendMessage(apiToken, channelType, channelUrl, opts)
+> SendbirdMessageResponse sendAMessage(channelType, channelUrl, opts)
 
 Send a message
 
-## Send a message  Sends a message to a channel. You can send a text message, a file message, and an admin message.  &gt;__Note__: With Sendbird Chat SDKs and the platform API, any type of files in messages can be uploaded to Sendbird server.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-send-a-message ----------------------------
+## Send a message  You can use this action to send a text message, a file message, or an admin message to a specific channel. Sendbird Chat SDKs and the platform API allows you to upload any type of files in messages to the Sendbird server. See [Message Overview](https://sendbird.com/docs/chat/platform-api/v3/message/message-overview) for more information on each message type. Messages are sent between client devices running the Sendbird Chat SDK or UIKit as well as programmatically from businesses to their customers. For instance, a delivery app can automatically send a message like \&quot;Arriving in one minute!\&quot; on behalf of a delivery driver.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/send-a-message#1-send-a-message ----------------------------
 
 ### Example
 
@@ -1131,13 +494,13 @@ Send a message
 import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelType = "channelType_example"; // String | 
-let channelUrl = "channelUrl_example"; // String | 
+let channelType = "channelType_example"; // String | (Required) 
+let channelUrl = "channelUrl_example"; // String | (Required) 
 let opts = {
-  'sendMessageData': new SendbirdPlatformSdk.SendMessageData() // SendMessageData | 
+  'apiToken': {{API_TOKEN}}, // String | 
+  'sendAMessageRequest': new SendbirdPlatformSdk.SendAMessageRequest() // SendAMessageRequest | 
 };
-apiInstance.sendMessage(apiToken, channelType, channelUrl, opts).then((data) => {
+apiInstance.sendAMessage(channelType, channelUrl, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1150,14 +513,14 @@ apiInstance.sendMessage(apiToken, channelType, channelUrl, opts).then((data) => 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelType** | **String**|  | 
- **channelUrl** | **String**|  | 
- **sendMessageData** | [**SendMessageData**](SendMessageData.md)|  | [optional] 
+ **channelType** | **String**| (Required)  | 
+ **channelUrl** | **String**| (Required)  | 
+ **apiToken** | **String**|  | [optional] 
+ **sendAMessageRequest** | [**SendAMessageRequest**](SendAMessageRequest.md)|  | [optional] 
 
 ### Return type
 
-[**SendBirdMessageResponse**](SendBirdMessageResponse.md)
+[**SendbirdMessageResponse**](SendbirdMessageResponse.md)
 
 ### Authorization
 
@@ -1169,221 +532,13 @@ No authorization required
 - **Accept**: application/json
 
 
-## translateMessageIntoOtherLanguages
+## updateAMessage
 
-> SendBirdMessageResponse translateMessageIntoOtherLanguages(apiToken, channelType, channelUrl, messageId, opts)
-
-Translate a message into other languages
-
-## Translate a message into other languages  Translates a message into specific languages. Only text messages of which type is MESG can be translated into other languages.  &gt; __Note__: Message translation is powered by [Google Cloud Translation API recognition engine](https://cloud.google.com/translate/). Find language codes supported by the engine in the [Miscellaneous](https://sendbird.com/docs/chat/v3/platform-api/guides/Miscellaneous) page or visit the [Language Support](https://cloud.google.com/translate/docs/languages) for Google Cloud Translation.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-translate-a-message-into-other-languages ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelType = "channelType_example"; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let messageId = "messageId_example"; // String | 
-let opts = {
-  'translateMessageIntoOtherLanguagesData': new SendbirdPlatformSdk.TranslateMessageIntoOtherLanguagesData() // TranslateMessageIntoOtherLanguagesData | 
-};
-apiInstance.translateMessageIntoOtherLanguages(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelType** | **String**|  | 
- **channelUrl** | **String**|  | 
- **messageId** | **String**|  | 
- **translateMessageIntoOtherLanguagesData** | [**TranslateMessageIntoOtherLanguagesData**](TranslateMessageIntoOtherLanguagesData.md)|  | [optional] 
-
-### Return type
-
-[**SendBirdMessageResponse**](SendBirdMessageResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## updateEmojiCategoryUrlById
-
-> SendBirdEmojiCategory updateEmojiCategoryUrlById(apiToken, emojiCategoryId, opts)
-
-Update an emoji category URL
-
-## Update an emoji category URL  Updates the URL of an emoji category with the specified ID.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-update-an-emoji-category-url ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let emojiCategoryId = "emojiCategoryId_example"; // String | 
-let opts = {
-  'updateEmojiCategoryUrlByIdData': new SendbirdPlatformSdk.UpdateEmojiCategoryUrlByIdData() // UpdateEmojiCategoryUrlByIdData | 
-};
-apiInstance.updateEmojiCategoryUrlById(apiToken, emojiCategoryId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **emojiCategoryId** | **String**|  | 
- **updateEmojiCategoryUrlByIdData** | [**UpdateEmojiCategoryUrlByIdData**](UpdateEmojiCategoryUrlByIdData.md)|  | [optional] 
-
-### Return type
-
-[**SendBirdEmojiCategory**](SendBirdEmojiCategory.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## updateEmojiUrlByKey
-
-> SendBirdEmoji updateEmojiUrlByKey(apiToken, emojiKey, opts)
-
-Update an emoji URL
-
-## Update an emoji URL  Updates the image URL of an emoji with the specified key.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-update-an-emoji-url ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let emojiKey = "emojiKey_example"; // String | 
-let opts = {
-  'updateEmojiUrlByKeyData': new SendbirdPlatformSdk.UpdateEmojiUrlByKeyData() // UpdateEmojiUrlByKeyData | 
-};
-apiInstance.updateEmojiUrlByKey(apiToken, emojiKey, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **emojiKey** | **String**|  | 
- **updateEmojiUrlByKeyData** | [**UpdateEmojiUrlByKeyData**](UpdateEmojiUrlByKeyData.md)|  | [optional] 
-
-### Return type
-
-[**SendBirdEmoji**](SendBirdEmoji.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## updateExtraDataInMessage
-
-> UpdateExtraDataInMessageResponse updateExtraDataInMessage(apiToken, channelType, channelUrl, messageId, opts)
-
-Update extra data in a message
-
-## Update extra data in a message  Updates the values of specific items by their keys.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-update-extra-data-in-a-message ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelType = "channelType_example"; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let messageId = "messageId_example"; // String | 
-let opts = {
-  'updateExtraDataInMessageData': new SendbirdPlatformSdk.UpdateExtraDataInMessageData() // UpdateExtraDataInMessageData | 
-};
-apiInstance.updateExtraDataInMessage(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelType** | **String**|  | 
- **channelUrl** | **String**|  | 
- **messageId** | **String**|  | 
- **updateExtraDataInMessageData** | [**UpdateExtraDataInMessageData**](UpdateExtraDataInMessageData.md)|  | [optional] 
-
-### Return type
-
-[**UpdateExtraDataInMessageResponse**](UpdateExtraDataInMessageResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## updateMessageById
-
-> SendBirdMessageResponse updateMessageById(apiToken, channelType, channelUrl, messageId, opts)
+> SendbirdMessageResponse updateAMessage(channelType, channelUrl, messageId, opts)
 
 Update a message
 
-## Update a message  Updates information on a message in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-update-a-message ----------------------------
+## Update a message  Updates specific information on a message.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/update-a-message#1-update-a-message ----------------------------
 
 ### Example
 
@@ -1391,14 +546,14 @@ Update a message
 import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelType = "channelType_example"; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let messageId = "messageId_example"; // String | 
+let channelType = "channelType_example"; // String | (Required) 
+let channelUrl = "channelUrl_example"; // String | (Required) 
+let messageId = "messageId_example"; // String | (Required) 
 let opts = {
-  'updateMessageByIdData': new SendbirdPlatformSdk.UpdateMessageByIdData() // UpdateMessageByIdData | 
+  'apiToken': {{API_TOKEN}}, // String | 
+  'updateAMessageRequest': new SendbirdPlatformSdk.UpdateAMessageRequest() // UpdateAMessageRequest | 
 };
-apiInstance.updateMessageById(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
+apiInstance.updateAMessage(channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1411,15 +566,15 @@ apiInstance.updateMessageById(apiToken, channelType, channelUrl, messageId, opts
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelType** | **String**|  | 
- **channelUrl** | **String**|  | 
- **messageId** | **String**|  | 
- **updateMessageByIdData** | [**UpdateMessageByIdData**](UpdateMessageByIdData.md)|  | [optional] 
+ **channelType** | **String**| (Required)  | 
+ **channelUrl** | **String**| (Required)  | 
+ **messageId** | **String**| (Required)  | 
+ **apiToken** | **String**|  | [optional] 
+ **updateAMessageRequest** | [**UpdateAMessageRequest**](UpdateAMessageRequest.md)|  | [optional] 
 
 ### Return type
 
-[**SendBirdMessageResponse**](SendBirdMessageResponse.md)
+[**SendbirdMessageResponse**](SendbirdMessageResponse.md)
 
 ### Authorization
 
@@ -1431,13 +586,13 @@ No authorization required
 - **Accept**: application/json
 
 
-## useDefaultEmojis
+## updateExtraDataInAMessage
 
-> UseDefaultEmojisResponse useDefaultEmojis(apiToken, opts)
+> UpdateExtraDataInAMessageResponse updateExtraDataInAMessage(channelType, channelUrl, messageId, opts)
 
-Use default emojis
+Update extra data in a message
 
-## Use default emojis  Determines whether to use the 7 default emojis initially provided.  https://sendbird.com/docs/chat/v3/platform-api/guides/emojis#2-use-default-emojis
+## Update extra data in a message  Updates the values of specific items by their keys.  https://sendbird.com/docs/chat/platform-api/v3/message/messaging-basics/message-update-metadata#1-update-metadata ----------------------------
 
 ### Example
 
@@ -1445,11 +600,14 @@ Use default emojis
 import SendbirdPlatformSdk from 'sendbird-platform-sdk';
 
 let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
+let channelType = "channelType_example"; // String | (Required) 
+let channelUrl = "channelUrl_example"; // String | (Required) 
+let messageId = "messageId_example"; // String | (Required) 
 let opts = {
-  'useDefaultEmojisData': new SendbirdPlatformSdk.UseDefaultEmojisData() // UseDefaultEmojisData | 
+  'apiToken': {{API_TOKEN}}, // String | 
+  'updateExtraDataInAMessageRequest': new SendbirdPlatformSdk.UpdateExtraDataInAMessageRequest() // UpdateExtraDataInAMessageRequest | 
 };
-apiInstance.useDefaultEmojis(apiToken, opts).then((data) => {
+apiInstance.updateExtraDataInAMessage(channelType, channelUrl, messageId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1462,12 +620,15 @@ apiInstance.useDefaultEmojis(apiToken, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **useDefaultEmojisData** | [**UseDefaultEmojisData**](UseDefaultEmojisData.md)|  | [optional] 
+ **channelType** | **String**| (Required)  | 
+ **channelUrl** | **String**| (Required)  | 
+ **messageId** | **String**| (Required)  | 
+ **apiToken** | **String**|  | [optional] 
+ **updateExtraDataInAMessageRequest** | [**UpdateExtraDataInAMessageRequest**](UpdateExtraDataInAMessageRequest.md)|  | [optional] 
 
 ### Return type
 
-[**UseDefaultEmojisResponse**](UseDefaultEmojisResponse.md)
+[**UpdateExtraDataInAMessageResponse**](UpdateExtraDataInAMessageResponse.md)
 
 ### Authorization
 
@@ -1476,109 +637,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## viewMessageById
-
-> SendBirdMessageResponse viewMessageById(apiToken, channelType, channelUrl, messageId, opts)
-
-View a message
-
-## View a message  Retrieves information on a message.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-view-a-message ----------------------------   &#x60;channel_type&#x60;      Type: string      Description: Specifies the type of the channel. Either open_channels or group_channels.  &#x60;channel_url&#x60;      Type: string      Description: Specifies the URL of the target channel.  &#x60;message_id&#x60;      Type: long      Description: Specifies the unique ID of the message to retrieve.
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelType = "channelType_example"; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-let messageId = "messageId_example"; // String | 
-let opts = {
-  'withSortedMetaArray': true, // Boolean | 
-  'withMetaArray': true // Boolean | 
-};
-apiInstance.viewMessageById(apiToken, channelType, channelUrl, messageId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelType** | **String**|  | 
- **channelUrl** | **String**|  | 
- **messageId** | **String**|  | 
- **withSortedMetaArray** | **Boolean**|  | [optional] 
- **withMetaArray** | **Boolean**|  | [optional] 
-
-### Return type
-
-[**SendBirdMessageResponse**](SendBirdMessageResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## viewTotalNumberOfMessagesInChannel
-
-> ViewTotalNumberOfMessagesInChannelResponse viewTotalNumberOfMessagesInChannel(apiToken, channelType, channelUrl)
-
-View total number of messages in a channel
-
-## View total number of messages in a channel  Retrieves the total number of messages in a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/messages#2-view-total-number-of-messages-in-a-channel ----------------------------
-
-### Example
-
-```javascript
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
-
-let apiInstance = new SendbirdPlatformSdk.MessageApi();
-let apiToken = {{API_TOKEN}}; // String | 
-let channelType = "channelType_example"; // String | 
-let channelUrl = "channelUrl_example"; // String | 
-apiInstance.viewTotalNumberOfMessagesInChannel(apiToken, channelType, channelUrl).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apiToken** | **String**|  | 
- **channelType** | **String**|  | 
- **channelUrl** | **String**|  | 
-
-### Return type
-
-[**ViewTotalNumberOfMessagesInChannelResponse**](ViewTotalNumberOfMessagesInChannelResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json
 

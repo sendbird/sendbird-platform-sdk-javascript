@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(SendbirdPlatformSdk.ListBotsResponseBotsInner);
     });
 
+    it('should have the property ai (base name: "ai")', function() {
+      // uncomment below and update the code to test the property ai
+      //var instance = new SendbirdPlatformSdk.ListBotsResponseBotsInner();
+      //expect(instance).to.be();
+    });
+
     it('should have the property bot (base name: "bot")', function() {
       // uncomment below and update the code to test the property bot
       //var instance = new SendbirdPlatformSdk.ListBotsResponseBotsInner();
@@ -66,8 +72,32 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property botStyle (base name: "bot_style")', function() {
+      // uncomment below and update the code to test the property botStyle
+      //var instance = new SendbirdPlatformSdk.ListBotsResponseBotsInner();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property channelInvitationPreference (base name: "channel_invitation_preference")', function() {
+      // uncomment below and update the code to test the property channelInvitationPreference
+      //var instance = new SendbirdPlatformSdk.ListBotsResponseBotsInner();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new SendbirdPlatformSdk.ListBotsResponseBotsInner();
+      //expect(instance).to.be();
+    });
+
     it('should have the property enableMarkAsRead (base name: "enable_mark_as_read")', function() {
       // uncomment below and update the code to test the property enableMarkAsRead
+      //var instance = new SendbirdPlatformSdk.ListBotsResponseBotsInner();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property firstMessages (base name: "first_messages")', function() {
+      // uncomment below and update the code to test the property firstMessages
       //var instance = new SendbirdPlatformSdk.ListBotsResponseBotsInner();
       //expect(instance).to.be();
     });
@@ -78,14 +108,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property showMember (base name: "show_member")', function() {
-      // uncomment below and update the code to test the property showMember
+    it('should have the property safeguard (base name: "safeguard")', function() {
+      // uncomment below and update the code to test the property safeguard
       //var instance = new SendbirdPlatformSdk.ListBotsResponseBotsInner();
       //expect(instance).to.be();
     });
 
-    it('should have the property channelInvitationPreference (base name: "channel_invitation_preference")', function() {
-      // uncomment below and update the code to test the property channelInvitationPreference
+    it('should have the property showMember (base name: "show_member")', function() {
+      // uncomment below and update the code to test the property showMember
       //var instance = new SendbirdPlatformSdk.ListBotsResponseBotsInner();
       //expect(instance).to.be();
     });

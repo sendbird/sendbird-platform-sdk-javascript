@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -48,80 +48,10 @@
   }
 
   describe('AnnouncementApi', function() {
-    describe('getDetailedOpenRateOfAnnouncementGroup', function() {
-      it('should call getDetailedOpenRateOfAnnouncementGroup successfully', function(done) {
-        //uncomment below and update the code to test getDetailedOpenRateOfAnnouncementGroup
-        //instance.getDetailedOpenRateOfAnnouncementGroup(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getStatistics', function() {
-      it('should call getStatistics successfully', function(done) {
-        //uncomment below and update the code to test getStatistics
-        //instance.getStatistics(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getStatisticsDaily', function() {
-      it('should call getStatisticsDaily successfully', function(done) {
-        //uncomment below and update the code to test getStatisticsDaily
-        //instance.getStatisticsDaily(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getStatisticsMonthly', function() {
-      it('should call getStatisticsMonthly successfully', function(done) {
-        //uncomment below and update the code to test getStatisticsMonthly
-        //instance.getStatisticsMonthly(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listAnnouncementGroups', function() {
-      it('should call listAnnouncementGroups successfully', function(done) {
-        //uncomment below and update the code to test listAnnouncementGroups
-        //instance.listAnnouncementGroups(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('scheduleAnnouncement', function() {
-      it('should call scheduleAnnouncement successfully', function(done) {
-        //uncomment below and update the code to test scheduleAnnouncement
-        //instance.scheduleAnnouncement(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateAnnouncementById', function() {
-      it('should call updateAnnouncementById successfully', function(done) {
-        //uncomment below and update the code to test updateAnnouncementById
-        //instance.updateAnnouncementById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewAnnouncementById', function() {
-      it('should call viewAnnouncementById successfully', function(done) {
-        //uncomment below and update the code to test viewAnnouncementById
-        //instance.viewAnnouncementById(function(error) {
+    describe('scheduleAnAnnouncement', function() {
+      it('should call scheduleAnAnnouncement successfully', function(done) {
+        //uncomment below and update the code to test scheduleAnAnnouncement
+        //instance.scheduleAnAnnouncement(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

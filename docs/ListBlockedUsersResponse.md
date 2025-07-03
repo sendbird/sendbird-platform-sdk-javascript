@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**users** | [**[SendBirdUser]**](SendBirdUser.md) |  | [optional] 
+**users** | [**[SendbirdUser]**](SendbirdUser.md) |  | [optional] 
 **next** | **String** |  | [optional] 
 
 

@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -13,21 +13,18 @@
 
 
 import ApiClient from "../ApiClient";
-import CreateBotData from '../model/CreateBotData';
-import CreateBotResponse from '../model/CreateBotResponse';
-import JoinChannelsData from '../model/JoinChannelsData';
-import JoinChannelsResponse from '../model/JoinChannelsResponse';
+import CreateABotRequest from '../model/CreateABotRequest';
+import CreateABotResponse from '../model/CreateABotResponse';
+import JoinChannelsRequest from '../model/JoinChannelsRequest';
 import ListBotsResponse from '../model/ListBotsResponse';
-import SendBirdMessageResponse from '../model/SendBirdMessageResponse';
-import SendBotSMessageData from '../model/SendBotSMessageData';
-import UpdateBotByIdData from '../model/UpdateBotByIdData';
-import UpdateBotByIdResponse from '../model/UpdateBotByIdResponse';
-import ViewBotByIdResponse from '../model/ViewBotByIdResponse';
+import SendABotMessageRequest from '../model/SendABotMessageRequest';
+import SendbirdGroupChannelDetail from '../model/SendbirdGroupChannelDetail';
+import SendbirdMessageResponse from '../model/SendbirdMessageResponse';
 
 /**
 * Bot service.
 * @module api/BotApi
-* @version 0.0.16
+* @version 2.0.0
 */
 export default class BotApi {
 
@@ -46,26 +43,22 @@ export default class BotApi {
 
     /**
      * Create a bot
-     * ## Create a bot  Creates a new bot within the application. Creating a bot is similar to creating a normal user, except that a callback URL is specified in order for the bot to receive events.  > __Note__: The bot must [join](#2-join-channels) a group channel first to interact with users. In group channels, you can invite a bot through the [invite as members](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-invite-as-members) action instead.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-create-a-bot
-     * @param {String} apiToken 
+     * ## Create a bot  Creates a new bot within an application. Creating a bot is similar to creating a normal user, except a callback URL should be specified for a bot to receive events.  > **Note**: The bot must first [join a group channel](https://sendbird.com/docs/chat/platform-api/v3/bot/managing-a-bot/join-channels) to interact with users. In group channels, you can also invite a bot through the [invite as members](https://sendbird.com/docs/chat/platform-api/v3/channel/inviting-a-user/invite-as-members-channel) action.      [https://sendbird.com/docs/chat/platform-api/v3/bot/creating-a-bot/create-a-bot#1-create-a-bot](https://sendbird.com/docs/chat/platform-api/v3/bot/creating-a-bot/create-a-bot#1-create-a-bot)
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateBotData} opts.createBotData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateBotResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @param {module:model/CreateABotRequest} opts.createABotRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateABotResponse} and HTTP response
      */
-    createBotWithHttpInfo(apiToken, opts) {
+    createABotWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['createBotData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling createBot");
-      }
+      let postBody = opts['createABotRequest'];
 
       let pathParams = {
       };
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -73,7 +66,7 @@ export default class BotApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CreateBotResponse;
+      let returnType = CreateABotResponse;
       return this.apiClient.callApi(
         '/v3/bots', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -83,69 +76,14 @@ export default class BotApi {
 
     /**
      * Create a bot
-     * ## Create a bot  Creates a new bot within the application. Creating a bot is similar to creating a normal user, except that a callback URL is specified in order for the bot to receive events.  > __Note__: The bot must [join](#2-join-channels) a group channel first to interact with users. In group channels, you can invite a bot through the [invite as members](https://sendbird.com/docs/chat/v3/platform-api/guides/group-channel#2-invite-as-members) action instead.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-create-a-bot
-     * @param {String} apiToken 
+     * ## Create a bot  Creates a new bot within an application. Creating a bot is similar to creating a normal user, except a callback URL should be specified for a bot to receive events.  > **Note**: The bot must first [join a group channel](https://sendbird.com/docs/chat/platform-api/v3/bot/managing-a-bot/join-channels) to interact with users. In group channels, you can also invite a bot through the [invite as members](https://sendbird.com/docs/chat/platform-api/v3/channel/inviting-a-user/invite-as-members-channel) action.      [https://sendbird.com/docs/chat/platform-api/v3/bot/creating-a-bot/create-a-bot#1-create-a-bot](https://sendbird.com/docs/chat/platform-api/v3/bot/creating-a-bot/create-a-bot#1-create-a-bot)
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateBotData} opts.createBotData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateBotResponse}
+     * @param {String} opts.apiToken 
+     * @param {module:model/CreateABotRequest} opts.createABotRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateABotResponse}
      */
-    createBot(apiToken, opts) {
-      return this.createBotWithHttpInfo(apiToken, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Delete a bot
-     * ## Delete a bot  Deletes a bot from an application.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-delete-a-bot ----------------------------
-     * @param {String} apiToken 
-     * @param {String} botUserid 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
-     */
-    deleteBotByIdWithHttpInfo(apiToken, botUserid) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling deleteBotById");
-      }
-      // verify the required parameter 'botUserid' is set
-      if (botUserid === undefined || botUserid === null) {
-        throw new Error("Missing the required parameter 'botUserid' when calling deleteBotById");
-      }
-
-      let pathParams = {
-        'bot_userid': botUserid
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = Object;
-      return this.apiClient.callApi(
-        '/v3/bots/{bot_userid}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Delete a bot
-     * ## Delete a bot  Deletes a bot from an application.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-delete-a-bot ----------------------------
-     * @param {String} apiToken 
-     * @param {String} botUserid 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
-     */
-    deleteBotById(apiToken, botUserid) {
-      return this.deleteBotByIdWithHttpInfo(apiToken, botUserid)
+    createABot(opts) {
+      return this.createABotWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -154,20 +92,16 @@ export default class BotApi {
 
     /**
      * Join channels
-     * ## Join channels  Makes a bot join one or more channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-join-channels ----------------------------
-     * @param {String} apiToken 
-     * @param {String} botUserid 
+     * ## Join channels  Makes a bot join one or more group channels.  [https://sendbird.com/docs/chat/platform-api/v3/bot/managing-a-bot/join-channels#1-join-channels](https://sendbird.com/docs/chat/platform-api/v3/bot/managing-a-bot/join-channels#1-join-channels)
+     * @param {String} botUserid (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/JoinChannelsData} opts.joinChannelsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/JoinChannelsResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @param {module:model/JoinChannelsRequest} opts.joinChannelsRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendbirdGroupChannelDetail} and HTTP response
      */
-    joinChannelsWithHttpInfo(apiToken, botUserid, opts) {
+    joinChannelsWithHttpInfo(botUserid, opts) {
       opts = opts || {};
-      let postBody = opts['joinChannelsData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling joinChannels");
-      }
+      let postBody = opts['joinChannelsRequest'];
       // verify the required parameter 'botUserid' is set
       if (botUserid === undefined || botUserid === null) {
         throw new Error("Missing the required parameter 'botUserid' when calling joinChannels");
@@ -179,7 +113,7 @@ export default class BotApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -187,7 +121,7 @@ export default class BotApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = JoinChannelsResponse;
+      let returnType = SendbirdGroupChannelDetail;
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}/channels', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -197,15 +131,15 @@ export default class BotApi {
 
     /**
      * Join channels
-     * ## Join channels  Makes a bot join one or more channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-join-channels ----------------------------
-     * @param {String} apiToken 
-     * @param {String} botUserid 
+     * ## Join channels  Makes a bot join one or more group channels.  [https://sendbird.com/docs/chat/platform-api/v3/bot/managing-a-bot/join-channels#1-join-channels](https://sendbird.com/docs/chat/platform-api/v3/bot/managing-a-bot/join-channels#1-join-channels)
+     * @param {String} botUserid (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/JoinChannelsData} opts.joinChannelsData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/JoinChannelsResponse}
+     * @param {String} opts.apiToken 
+     * @param {module:model/JoinChannelsRequest} opts.joinChannelsRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendbirdGroupChannelDetail}
      */
-    joinChannels(apiToken, botUserid, opts) {
-      return this.joinChannelsWithHttpInfo(apiToken, botUserid, opts)
+    joinChannels(botUserid, opts) {
+      return this.joinChannelsWithHttpInfo(botUserid, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -213,97 +147,34 @@ export default class BotApi {
 
 
     /**
-     * Leave channels - When leaving all channels
-     * ## Leave channels  Makes a bot leave one or more group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-leave-channels ----------------------------
-     * @param {String} apiToken 
-     * @param {String} botUserid 
+     * Leave channels - When leaving a specific channel
+     * ## Leave channels  Makes a bot leave a specific channel  [https://sendbird.com/docs/chat/platform-api/v3/bot/managing-a-bot/leave-channels#1-leave-channels](https://sendbird.com/docs/chat/platform-api/v3/bot/managing-a-bot/leave-channels#1-leave-channels)
+     * @param {String} channelUrl 
+     * @param {String} botUserid (Required) 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
-    leaveChannelsWithHttpInfo(apiToken, botUserid, opts) {
+    leaveAGroupChannelWithHttpInfo(channelUrl, botUserid, opts) {
       opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling leaveChannels");
+      // verify the required parameter 'channelUrl' is set
+      if (channelUrl === undefined || channelUrl === null) {
+        throw new Error("Missing the required parameter 'channelUrl' when calling leaveAGroupChannel");
       }
       // verify the required parameter 'botUserid' is set
       if (botUserid === undefined || botUserid === null) {
-        throw new Error("Missing the required parameter 'botUserid' when calling leaveChannels");
+        throw new Error("Missing the required parameter 'botUserid' when calling leaveAGroupChannel");
       }
 
       let pathParams = {
+        'channel_url': channelUrl,
         'bot_userid': botUserid
       };
       let queryParams = {
-        'channel_url': opts['channelUrl']
       };
       let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/v3/bots/{bot_userid}/channels', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Leave channels - When leaving all channels
-     * ## Leave channels  Makes a bot leave one or more group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-leave-channels ----------------------------
-     * @param {String} apiToken 
-     * @param {String} botUserid 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    leaveChannels(apiToken, botUserid, opts) {
-      return this.leaveChannelsWithHttpInfo(apiToken, botUserid, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Leave channels - When leaving a channel by its channel URL
-     * ## Leave channels  Makes a bot leave one or more group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-leave-channels ----------------------------
-     * @param {String} apiToken 
-     * @param {String} botUserid 
-     * @param {String} channelUrl 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
-     */
-    leaveChannelsByUrlWithHttpInfo(apiToken, botUserid, channelUrl) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling leaveChannelsByUrl");
-      }
-      // verify the required parameter 'botUserid' is set
-      if (botUserid === undefined || botUserid === null) {
-        throw new Error("Missing the required parameter 'botUserid' when calling leaveChannelsByUrl");
-      }
-      // verify the required parameter 'channelUrl' is set
-      if (channelUrl === undefined || channelUrl === null) {
-        throw new Error("Missing the required parameter 'channelUrl' when calling leaveChannelsByUrl");
-      }
-
-      let pathParams = {
-        'bot_userid': botUserid,
-        'channel_url': channelUrl
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -320,15 +191,70 @@ export default class BotApi {
     }
 
     /**
-     * Leave channels - When leaving a channel by its channel URL
-     * ## Leave channels  Makes a bot leave one or more group channels.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-leave-channels ----------------------------
-     * @param {String} apiToken 
-     * @param {String} botUserid 
+     * Leave channels - When leaving a specific channel
+     * ## Leave channels  Makes a bot leave a specific channel  [https://sendbird.com/docs/chat/platform-api/v3/bot/managing-a-bot/leave-channels#1-leave-channels](https://sendbird.com/docs/chat/platform-api/v3/bot/managing-a-bot/leave-channels#1-leave-channels)
      * @param {String} channelUrl 
+     * @param {String} botUserid (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
-    leaveChannelsByUrl(apiToken, botUserid, channelUrl) {
-      return this.leaveChannelsByUrlWithHttpInfo(apiToken, botUserid, channelUrl)
+    leaveAGroupChannel(channelUrl, botUserid, opts) {
+      return this.leaveAGroupChannelWithHttpInfo(channelUrl, botUserid, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Leave channels - When leaving all channels
+     * ## Leave channels  Makes a bot leave all group channels.  [https://sendbird.com/docs/chat/platform-api/v3/bot/managing-a-bot/leave-channels#1-leave-channels](https://sendbird.com/docs/chat/platform-api/v3/bot/managing-a-bot/leave-channels#1-leave-channels)
+     * @param {String} botUserid (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+    leaveGroupChannelsWithHttpInfo(botUserid, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'botUserid' is set
+      if (botUserid === undefined || botUserid === null) {
+        throw new Error("Missing the required parameter 'botUserid' when calling leaveGroupChannels");
+      }
+
+      let pathParams = {
+        'bot_userid': botUserid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-token': opts['apiToken']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/v3/bots/{bot_userid}/channels', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Leave channels - When leaving all channels
+     * ## Leave channels  Makes a bot leave all group channels.  [https://sendbird.com/docs/chat/platform-api/v3/bot/managing-a-bot/leave-channels#1-leave-channels](https://sendbird.com/docs/chat/platform-api/v3/bot/managing-a-bot/leave-channels#1-leave-channels)
+     * @param {String} botUserid (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+    leaveGroupChannels(botUserid, opts) {
+      return this.leaveGroupChannelsWithHttpInfo(botUserid, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -337,20 +263,16 @@ export default class BotApi {
 
     /**
      * List bots
-     * ## List bots  Retrieves a list of all bots within an application.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-list-bots ----------------------------
-     * @param {String} apiToken 
+     * ## List bots  Retrieves a list of all bots within an application.  https://sendbird.com/docs/chat/platform-api/v3/bot/listing-bots/list-bots#1-list-bots
      * @param {Object} opts Optional parameters
      * @param {String} opts.token 
      * @param {Number} opts.limit 
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListBotsResponse} and HTTP response
      */
-    listBotsWithHttpInfo(apiToken, opts) {
+    listBotsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling listBots");
-      }
 
       let pathParams = {
       };
@@ -359,7 +281,7 @@ export default class BotApi {
         'limit': opts['limit']
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -377,15 +299,15 @@ export default class BotApi {
 
     /**
      * List bots
-     * ## List bots  Retrieves a list of all bots within an application.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-list-bots ----------------------------
-     * @param {String} apiToken 
+     * ## List bots  Retrieves a list of all bots within an application.  https://sendbird.com/docs/chat/platform-api/v3/bot/listing-bots/list-bots#1-list-bots
      * @param {Object} opts Optional parameters
      * @param {String} opts.token 
      * @param {Number} opts.limit 
+     * @param {String} opts.apiToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListBotsResponse}
      */
-    listBots(apiToken, opts) {
-      return this.listBotsWithHttpInfo(apiToken, opts)
+    listBots(opts) {
+      return this.listBotsWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -394,23 +316,19 @@ export default class BotApi {
 
     /**
      * Send a bot's message
-     * ## Send a bot's message  Sends a bot's message to a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-send-a-bot-s-message ----------------------------   `bot_userid`      Type: string      Description: Specifies the ID of the bot to send a message.
-     * @param {String} apiToken 
-     * @param {String} botUserid 
+     * ## Send a bot message  Sends a bot message to a group channel.  [https://sendbird.com/docs/chat/platform-api/v3/bot/sending-a-bot-message/send-a-bot-message#1-send-a-bot-message](https://sendbird.com/docs/chat/platform-api/v3/bot/sending-a-bot-message/send-a-bot-message#1-send-a-bot-message)  `bot_userid`   Type: string   Description: Specifies the ID of the bot to send a message.
+     * @param {String} botUserid (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/SendBotSMessageData} opts.sendBotSMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendBirdMessageResponse} and HTTP response
+     * @param {String} opts.apiToken 
+     * @param {module:model/SendABotMessageRequest} opts.sendABotMessageRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendbirdMessageResponse} and HTTP response
      */
-    sendBotsMessageWithHttpInfo(apiToken, botUserid, opts) {
+    sendABotMessageWithHttpInfo(botUserid, opts) {
       opts = opts || {};
-      let postBody = opts['sendBotSMessageData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling sendBotsMessage");
-      }
+      let postBody = opts['sendABotMessageRequest'];
       // verify the required parameter 'botUserid' is set
       if (botUserid === undefined || botUserid === null) {
-        throw new Error("Missing the required parameter 'botUserid' when calling sendBotsMessage");
+        throw new Error("Missing the required parameter 'botUserid' when calling sendABotMessage");
       }
 
       let pathParams = {
@@ -419,7 +337,7 @@ export default class BotApi {
       let queryParams = {
       };
       let headerParams = {
-        'Api-Token': apiToken
+        'api-token': opts['apiToken']
       };
       let formParams = {
       };
@@ -427,7 +345,7 @@ export default class BotApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = SendBirdMessageResponse;
+      let returnType = SendbirdMessageResponse;
       return this.apiClient.callApi(
         '/v3/bots/{bot_userid}/send', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -437,130 +355,15 @@ export default class BotApi {
 
     /**
      * Send a bot's message
-     * ## Send a bot's message  Sends a bot's message to a channel.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-send-a-bot-s-message ----------------------------   `bot_userid`      Type: string      Description: Specifies the ID of the bot to send a message.
-     * @param {String} apiToken 
-     * @param {String} botUserid 
+     * ## Send a bot message  Sends a bot message to a group channel.  [https://sendbird.com/docs/chat/platform-api/v3/bot/sending-a-bot-message/send-a-bot-message#1-send-a-bot-message](https://sendbird.com/docs/chat/platform-api/v3/bot/sending-a-bot-message/send-a-bot-message#1-send-a-bot-message)  `bot_userid`   Type: string   Description: Specifies the ID of the bot to send a message.
+     * @param {String} botUserid (Required) 
      * @param {Object} opts Optional parameters
-     * @param {module:model/SendBotSMessageData} opts.sendBotSMessageData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendBirdMessageResponse}
+     * @param {String} opts.apiToken 
+     * @param {module:model/SendABotMessageRequest} opts.sendABotMessageRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendbirdMessageResponse}
      */
-    sendBotsMessage(apiToken, botUserid, opts) {
-      return this.sendBotsMessageWithHttpInfo(apiToken, botUserid, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Update a bot
-     * ## Update a bot  Updates information on a bot.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-update-a-bot ----------------------------
-     * @param {String} apiToken 
-     * @param {String} botUserid 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateBotByIdData} opts.updateBotByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateBotByIdResponse} and HTTP response
-     */
-    updateBotByIdWithHttpInfo(apiToken, botUserid, opts) {
-      opts = opts || {};
-      let postBody = opts['updateBotByIdData'];
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling updateBotById");
-      }
-      // verify the required parameter 'botUserid' is set
-      if (botUserid === undefined || botUserid === null) {
-        throw new Error("Missing the required parameter 'botUserid' when calling updateBotById");
-      }
-
-      let pathParams = {
-        'bot_userid': botUserid
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = UpdateBotByIdResponse;
-      return this.apiClient.callApi(
-        '/v3/bots/{bot_userid}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Update a bot
-     * ## Update a bot  Updates information on a bot.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-update-a-bot ----------------------------
-     * @param {String} apiToken 
-     * @param {String} botUserid 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateBotByIdData} opts.updateBotByIdData 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateBotByIdResponse}
-     */
-    updateBotById(apiToken, botUserid, opts) {
-      return this.updateBotByIdWithHttpInfo(apiToken, botUserid, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * View a bot
-     * ## View a bot  Retrieves information on a bot.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-view-a-bot ----------------------------
-     * @param {String} apiToken 
-     * @param {String} botUserid 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ViewBotByIdResponse} and HTTP response
-     */
-    viewBotByIdWithHttpInfo(apiToken, botUserid) {
-      let postBody = null;
-      // verify the required parameter 'apiToken' is set
-      if (apiToken === undefined || apiToken === null) {
-        throw new Error("Missing the required parameter 'apiToken' when calling viewBotById");
-      }
-      // verify the required parameter 'botUserid' is set
-      if (botUserid === undefined || botUserid === null) {
-        throw new Error("Missing the required parameter 'botUserid' when calling viewBotById");
-      }
-
-      let pathParams = {
-        'bot_userid': botUserid
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-        'Api-Token': apiToken
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ViewBotByIdResponse;
-      return this.apiClient.callApi(
-        '/v3/bots/{bot_userid}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * View a bot
-     * ## View a bot  Retrieves information on a bot.  https://sendbird.com/docs/chat/v3/platform-api/guides/bot-interface#2-view-a-bot ----------------------------
-     * @param {String} apiToken 
-     * @param {String} botUserid 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ViewBotByIdResponse}
-     */
-    viewBotById(apiToken, botUserid) {
-      return this.viewBotByIdWithHttpInfo(apiToken, botUserid)
+    sendABotMessage(botUserid, opts) {
+      return this.sendABotMessageWithHttpInfo(botUserid, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

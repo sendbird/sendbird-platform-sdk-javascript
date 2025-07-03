@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -48,90 +48,80 @@
   }
 
   describe('OpenChannelApi', function() {
-    describe('ocCancelTheRegistrationOfOperators', function() {
-      it('should call ocCancelTheRegistrationOfOperators successfully', function(done) {
-        //uncomment below and update the code to test ocCancelTheRegistrationOfOperators
-        //instance.ocCancelTheRegistrationOfOperators(function(error) {
+    describe('createAnOpenChannel', function() {
+      it('should call createAnOpenChannel successfully', function(done) {
+        //uncomment below and update the code to test createAnOpenChannel
+        //instance.createAnOpenChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('ocCreateChannel', function() {
-      it('should call ocCreateChannel successfully', function(done) {
-        //uncomment below and update the code to test ocCreateChannel
-        //instance.ocCreateChannel(function(error) {
+    describe('deleteAnOpenChannel', function() {
+      it('should call deleteAnOpenChannel successfully', function(done) {
+        //uncomment below and update the code to test deleteAnOpenChannel
+        //instance.deleteAnOpenChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('ocDeleteChannelByUrl', function() {
-      it('should call ocDeleteChannelByUrl successfully', function(done) {
-        //uncomment below and update the code to test ocDeleteChannelByUrl
-        //instance.ocDeleteChannelByUrl(function(error) {
+    describe('getAnOpenChannel', function() {
+      it('should call getAnOpenChannel successfully', function(done) {
+        //uncomment below and update the code to test getAnOpenChannel
+        //instance.getAnOpenChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('ocListChannels', function() {
-      it('should call ocListChannels successfully', function(done) {
-        //uncomment below and update the code to test ocListChannels
-        //instance.ocListChannels(function(error) {
+    describe('listChannelOperators', function() {
+      it('should call listChannelOperators successfully', function(done) {
+        //uncomment below and update the code to test listChannelOperators
+        //instance.listChannelOperators(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('ocListOperators', function() {
-      it('should call ocListOperators successfully', function(done) {
-        //uncomment below and update the code to test ocListOperators
-        //instance.ocListOperators(function(error) {
+    describe('listOpenChannels', function() {
+      it('should call listOpenChannels successfully', function(done) {
+        //uncomment below and update the code to test listOpenChannels
+        //instance.listOpenChannels(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('ocListParticipants', function() {
-      it('should call ocListParticipants successfully', function(done) {
-        //uncomment below and update the code to test ocListParticipants
-        //instance.ocListParticipants(function(error) {
+    describe('registerOperators', function() {
+      it('should call registerOperators successfully', function(done) {
+        //uncomment below and update the code to test registerOperators
+        //instance.registerOperators(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('ocRegisterOperators', function() {
-      it('should call ocRegisterOperators successfully', function(done) {
-        //uncomment below and update the code to test ocRegisterOperators
-        //instance.ocRegisterOperators(function(error) {
+    describe('unregisterOperators', function() {
+      it('should call unregisterOperators successfully', function(done) {
+        //uncomment below and update the code to test unregisterOperators
+        //instance.unregisterOperators(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('ocUpdateChannelByUrl', function() {
-      it('should call ocUpdateChannelByUrl successfully', function(done) {
-        //uncomment below and update the code to test ocUpdateChannelByUrl
-        //instance.ocUpdateChannelByUrl(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('ocViewChannelByUrl', function() {
-      it('should call ocViewChannelByUrl successfully', function(done) {
-        //uncomment below and update the code to test ocViewChannelByUrl
-        //instance.ocViewChannelByUrl(function(error) {
+    describe('updateAnOpenChannel', function() {
+      it('should call updateAnOpenChannel successfully', function(done) {
+        //uncomment below and update the code to test updateAnOpenChannel
+        //instance.updateAnOpenChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

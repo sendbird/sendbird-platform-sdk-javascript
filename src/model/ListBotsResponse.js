@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -17,7 +17,7 @@ import ListBotsResponseBotsInner from './ListBotsResponseBotsInner';
 /**
  * The ListBotsResponse model module.
  * @module model/ListBotsResponse
- * @version 0.0.16
+ * @version 2.0.0
  */
 class ListBotsResponse {
     /**

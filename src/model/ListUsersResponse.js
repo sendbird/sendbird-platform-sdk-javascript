@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import SendBirdUser from './SendBirdUser';
+import SendbirdUser from './SendbirdUser';
 
 /**
  * The ListUsersResponse model module.
  * @module model/ListUsersResponse
- * @version 0.0.16
+ * @version 2.0.0
  */
 class ListUsersResponse {
     /**
@@ -48,11 +48,11 @@ class ListUsersResponse {
         if (data) {
             obj = obj || new ListUsersResponse();
 
-            if (data.hasOwnProperty('users')) {
-                obj['users'] = ApiClient.convertToType(data['users'], [SendBirdUser]);
-            }
             if (data.hasOwnProperty('next')) {
                 obj['next'] = ApiClient.convertToType(data['next'], 'String');
+            }
+            if (data.hasOwnProperty('users')) {
+                obj['users'] = ApiClient.convertToType(data['users'], [SendbirdUser]);
             }
         }
         return obj;
@@ -62,14 +62,14 @@ class ListUsersResponse {
 }
 
 /**
- * @member {Array.<module:model/SendBirdUser>} users
- */
-ListUsersResponse.prototype['users'] = undefined;
-
-/**
  * @member {String} next
  */
 ListUsersResponse.prototype['next'] = undefined;
+
+/**
+ * @member {Array.<module:model/SendbirdUser>} users
+ */
+ListUsersResponse.prototype['users'] = undefined;
 
 
 

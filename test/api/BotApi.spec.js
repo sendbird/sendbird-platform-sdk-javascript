@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -48,20 +48,10 @@
   }
 
   describe('BotApi', function() {
-    describe('createBot', function() {
-      it('should call createBot successfully', function(done) {
-        //uncomment below and update the code to test createBot
-        //instance.createBot(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('deleteBotById', function() {
-      it('should call deleteBotById successfully', function(done) {
-        //uncomment below and update the code to test deleteBotById
-        //instance.deleteBotById(function(error) {
+    describe('createABot', function() {
+      it('should call createABot successfully', function(done) {
+        //uncomment below and update the code to test createABot
+        //instance.createABot(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -78,20 +68,20 @@
         done();
       });
     });
-    describe('leaveChannels', function() {
-      it('should call leaveChannels successfully', function(done) {
-        //uncomment below and update the code to test leaveChannels
-        //instance.leaveChannels(function(error) {
+    describe('leaveAGroupChannel', function() {
+      it('should call leaveAGroupChannel successfully', function(done) {
+        //uncomment below and update the code to test leaveAGroupChannel
+        //instance.leaveAGroupChannel(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('leaveChannelsByUrl', function() {
-      it('should call leaveChannelsByUrl successfully', function(done) {
-        //uncomment below and update the code to test leaveChannelsByUrl
-        //instance.leaveChannelsByUrl(function(error) {
+    describe('leaveGroupChannels', function() {
+      it('should call leaveGroupChannels successfully', function(done) {
+        //uncomment below and update the code to test leaveGroupChannels
+        //instance.leaveGroupChannels(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -108,30 +98,10 @@
         done();
       });
     });
-    describe('sendBotsMessage', function() {
-      it('should call sendBotsMessage successfully', function(done) {
-        //uncomment below and update the code to test sendBotsMessage
-        //instance.sendBotsMessage(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateBotById', function() {
-      it('should call updateBotById successfully', function(done) {
-        //uncomment below and update the code to test updateBotById
-        //instance.updateBotById(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('viewBotById', function() {
-      it('should call viewBotById successfully', function(done) {
-        //uncomment below and update the code to test viewBotById
-        //instance.viewBotById(function(error) {
+    describe('sendABotMessage', function() {
+      it('should call sendABotMessage successfully', function(done) {
+        //uncomment below and update the code to test sendABotMessage
+        //instance.sendABotMessage(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

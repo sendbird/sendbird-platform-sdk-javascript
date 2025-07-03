@@ -1,6 +1,6 @@
 /**
  * Sendbird Platform SDK
- * Sendbird Platform API SDK  https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api
+ * Sendbird Platform API SDK  [https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api)  Contact Support:   Name: Sendbird   Email: [support@sendbird.com](https://mailto:support@sendbird.com)
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@sendbird.com
@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import SendBirdUser from './SendBirdUser';
+import SendbirdBasicUserInfo from './SendbirdBasicUserInfo';
 
 /**
  * The ListRegistrationOrDeviceTokensResponse model module.
  * @module model/ListRegistrationOrDeviceTokensResponse
- * @version 0.0.16
+ * @version 2.0.0
  */
 class ListRegistrationOrDeviceTokensResponse {
     /**
@@ -58,7 +58,7 @@ class ListRegistrationOrDeviceTokensResponse {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
             if (data.hasOwnProperty('user')) {
-                obj['user'] = SendBirdUser.constructFromObject(data['user']);
+                obj['user'] = SendbirdBasicUserInfo.constructFromObject(data['user']);
             }
         }
         return obj;
@@ -83,7 +83,7 @@ ListRegistrationOrDeviceTokensResponse.prototype['tokens'] = undefined;
 ListRegistrationOrDeviceTokensResponse.prototype['type'] = undefined;
 
 /**
- * @member {module:model/SendBirdUser} user
+ * @member {module:model/SendbirdBasicUserInfo} user
  */
 ListRegistrationOrDeviceTokensResponse.prototype['user'] = undefined;
 
