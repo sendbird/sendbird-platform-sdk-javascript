@@ -6,13 +6,16 @@
 [![NPM](https://img.shields.io/npm/v/sendbird-platform-sdk.svg)](https://www.npmjs.com/package/sendbird-platform-sdk)
 
 This is a Node.js package that makes talking to the [Sendbird Platform API](https://sendbird.com/docs/chat/v3/platform-api/getting-started/prepare-to-use-api) easier. With this library you can extend your Sendbird integration to include advanced features like channel automation and user management.
+
+>__Note__: Platform API SDK v2 includes only the APIs that were actively used in v1. If you need help getting started with the new SDK, [contact us](https://dashboard-dev.sendbird.com/settings/contact_us).
+
 # Install
-```npm install sendbird-platform-sdk```
+```npm install @sendbird/sendbird-platform-sdk-javascript```
 
 # 🔥 Quick start
 
 ```javascript  
-import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+import SendbirdPlatformSdk from '@sendbird/sendbird-platform-sdk-javascript';
 
 const userId = "1234";
 const name = "bob";
@@ -59,10 +62,10 @@ You will need [Node.js](https://nodejs.org/en/download/) installed. This has bee
 You can install the SDK directly from npm:
 ```
 # Using npm
-npm install sendbird-platform-sdk
+npm install @sendbird/sendbird-platform-sdk-javascript
 
 # Using yarn
-yarn add sendbird-platform-sdk
+yarn add @sendbird/sendbird-platform-sdk-javascript
 ```
 > ⚠️ This SDK is intended for use in server-side environments only. Do not use it in browsers or frontend applications.
 

@@ -126,11 +126,10 @@ var MetadataApi = exports["default"] = /*#__PURE__*/function () {
       }
       var pathParams = {
         'channel_type': channelType,
-        'channel_url': channelUrl
-      };
-      var queryParams = {
+        'channel_url': channelUrl,
         'key': opts['key']
       };
+      var queryParams = {};
       var headerParams = {
         'api-token': opts['apiToken']
       };
