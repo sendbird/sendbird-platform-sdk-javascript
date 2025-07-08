@@ -10,6 +10,7 @@ var _AddExtraDataToAMessageResponse = _interopRequireDefault(require("../model/A
 var _GetTotalNumberOfMessagesInAChannelResponse = _interopRequireDefault(require("../model/GetTotalNumberOfMessagesInAChannelResponse"));
 var _ListMessagesResponse = _interopRequireDefault(require("../model/ListMessagesResponse"));
 var _MarkChannelMessagesAsReadRequest = _interopRequireDefault(require("../model/MarkChannelMessagesAsReadRequest"));
+var _MigrateMessagesRequest = _interopRequireDefault(require("../model/MigrateMessagesRequest"));
 var _SendAMessageRequest = _interopRequireDefault(require("../model/SendAMessageRequest"));
 var _SendbirdMessageResponse = _interopRequireDefault(require("../model/SendbirdMessageResponse"));
 var _UpdateAMessageRequest = _interopRequireDefault(require("../model/UpdateAMessageRequest"));
@@ -490,14 +491,14 @@ var MessageApi = exports["default"] = /*#__PURE__*/function () {
      * @param {String} targetChannelUrl (Required) 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {Object.<String, Object>} opts.body 
+     * @param {module:model/MigrateMessagesRequest} opts.migrateMessagesRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
   }, {
     key: "migrateMessagesWithHttpInfo",
     value: function migrateMessagesWithHttpInfo(targetChannelUrl, opts) {
       opts = opts || {};
-      var postBody = opts['body'];
+      var postBody = opts['migrateMessagesRequest'];
       // verify the required parameter 'targetChannelUrl' is set
       if (targetChannelUrl === undefined || targetChannelUrl === null) {
         throw new Error("Missing the required parameter 'targetChannelUrl' when calling migrateMessages");
@@ -523,7 +524,7 @@ var MessageApi = exports["default"] = /*#__PURE__*/function () {
      * @param {String} targetChannelUrl (Required) 
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiToken 
-     * @param {Object.<String, Object>} opts.body 
+     * @param {module:model/MigrateMessagesRequest} opts.migrateMessagesRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
   }, {
