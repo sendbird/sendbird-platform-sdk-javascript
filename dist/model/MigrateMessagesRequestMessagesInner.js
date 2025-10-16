@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The MigrateMessagesRequestMessagesInner model module.
  * @module model/MigrateMessagesRequestMessagesInner
- * @version 2.0.0
+ * @version 2.1.1
  */
 var MigrateMessagesRequestMessagesInner = /*#__PURE__*/function () {
   /**

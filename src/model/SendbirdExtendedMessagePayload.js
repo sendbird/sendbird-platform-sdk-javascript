@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendbirdExtendedMessagePayload model module.
  * @module model/SendbirdExtendedMessagePayload
- * @version 2.0.0
+ * @version 2.1.1
  */
 class SendbirdExtendedMessagePayload {
     /**

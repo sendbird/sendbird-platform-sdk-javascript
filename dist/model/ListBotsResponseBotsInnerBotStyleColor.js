@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListBotsResponseBotsInnerBotStyleColor model module.
  * @module model/ListBotsResponseBotsInnerBotStyleColor
- * @version 2.0.0
+ * @version 2.1.1
  */
 var ListBotsResponseBotsInnerBotStyleColor = /*#__PURE__*/function () {
   /**

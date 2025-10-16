@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CheckIfMemberResponse model module.
  * @module model/CheckIfMemberResponse
- * @version 2.0.0
+ * @version 2.1.1
  */
 var CheckIfMemberResponse = /*#__PURE__*/function () {
   /**

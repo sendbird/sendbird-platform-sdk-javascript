@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The UpdatePushPreferencesRequest model module.
  * @module model/UpdatePushPreferencesRequest
- * @version 2.0.0
+ * @version 2.1.1
  */
 var UpdatePushPreferencesRequest = /*#__PURE__*/function () {
   /**

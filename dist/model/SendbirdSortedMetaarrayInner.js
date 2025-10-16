@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SendbirdSortedMetaarrayInner model module.
  * @module model/SendbirdSortedMetaarrayInner
- * @version 2.0.0
+ * @version 2.1.1
  */
 var SendbirdSortedMetaarrayInner = /*#__PURE__*/function () {
   /**

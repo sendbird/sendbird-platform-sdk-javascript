@@ -1,7 +1,6 @@
 .babelrc
 .gitignore
 .travis.yml
-README.md
 docs/AcceptAnInvitationRequest.md
 docs/AddARegistrationOrDeviceTokenRequest.md
 docs/AddARegistrationOrDeviceTokenResponse.md
@@ -132,7 +131,6 @@ docs/ViewPushPreferencesForAChannelResponse.md
 docs/ViewPushPreferencesResponse.md
 git_push.sh
 mocha.opts
-package.json
 src/ApiClient.js
 src/api/AnnouncementApi.js
 src/api/BotApi.js
@@ -263,9 +261,3 @@ src/model/ViewNumberOfMonthlyActiveUsersResponse.js
 src/model/ViewNumberOfUnreadMessagesResponse.js
 src/model/ViewPushPreferencesForAChannelResponse.js
 src/model/ViewPushPreferencesResponse.js
-test/model/MigrateMessagesAdminMessageRequest.spec.js
-test/model/MigrateMessagesFileMessageRequest.spec.js
-test/model/MigrateMessagesFileMessageRequestThumbnailsInner.spec.js
-test/model/MigrateMessagesRequest.spec.js
-test/model/MigrateMessagesRequestMessagesInner.spec.js
-test/model/MigrateMessagesTextMessageRequest.spec.js

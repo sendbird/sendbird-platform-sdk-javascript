@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AcceptAnInvitationRequest model module.
  * @module model/AcceptAnInvitationRequest
- * @version 2.0.0
+ * @version 2.1.1
  */
 var AcceptAnInvitationRequest = /*#__PURE__*/function () {
   /**

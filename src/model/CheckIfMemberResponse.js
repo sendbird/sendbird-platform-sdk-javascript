@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CheckIfMemberResponse model module.
  * @module model/CheckIfMemberResponse
- * @version 2.0.0
+ * @version 2.1.1
  */
 class CheckIfMemberResponse {
     /**

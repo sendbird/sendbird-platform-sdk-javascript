@@ -17,7 +17,7 @@ import ListBotsResponseBotsInnerFirstMessagesInnerData from './ListBotsResponseB
 /**
  * The ListBotsResponseBotsInnerFirstMessagesInner model module.
  * @module model/ListBotsResponseBotsInnerFirstMessagesInner
- * @version 2.0.0
+ * @version 2.1.1
  */
 class ListBotsResponseBotsInnerFirstMessagesInner {
     /**

@@ -35,7 +35,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The InviteAsMembersResponse model module.
  * @module model/InviteAsMembersResponse
- * @version 2.0.0
+ * @version 2.1.1
  */
 var InviteAsMembersResponse = /*#__PURE__*/function () {
   /**

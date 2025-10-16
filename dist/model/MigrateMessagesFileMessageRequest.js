@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The MigrateMessagesFileMessageRequest model module.
  * @module model/MigrateMessagesFileMessageRequest
- * @version 2.0.0
+ * @version 2.1.1
  */
 var MigrateMessagesFileMessageRequest = /*#__PURE__*/function () {
   /**

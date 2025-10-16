@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AddARegistrationOrDeviceTokenRequest model module.
  * @module model/AddARegistrationOrDeviceTokenRequest
- * @version 2.0.0
+ * @version 2.1.1
  */
 var AddARegistrationOrDeviceTokenRequest = /*#__PURE__*/function () {
   /**

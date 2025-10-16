@@ -37,7 +37,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Message service.
 * @module api/MessageApi
-* @version 2.0.0
+* @version 2.1.1
 */
 var MessageApi = exports["default"] = /*#__PURE__*/function () {
   /**

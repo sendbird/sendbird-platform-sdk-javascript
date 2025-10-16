@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateCountPreferenceOfAChannelRequest model module.
  * @module model/UpdateCountPreferenceOfAChannelRequest
- * @version 2.0.0
+ * @version 2.1.1
  */
 class UpdateCountPreferenceOfAChannelRequest {
     /**

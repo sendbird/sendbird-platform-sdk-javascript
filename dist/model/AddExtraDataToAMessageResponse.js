@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AddExtraDataToAMessageResponse model module.
  * @module model/AddExtraDataToAMessageResponse
- * @version 2.0.0
+ * @version 2.1.1
  */
 var AddExtraDataToAMessageResponse = /*#__PURE__*/function () {
   /**
