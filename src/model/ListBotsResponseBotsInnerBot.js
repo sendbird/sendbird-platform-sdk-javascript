@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListBotsResponseBotsInnerBot model module.
  * @module model/ListBotsResponseBotsInnerBot
- * @version 2.0.0
+ * @version 2.1.1
  */
 class ListBotsResponseBotsInnerBot {
     /**

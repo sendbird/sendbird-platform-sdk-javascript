@@ -17,7 +17,7 @@ import SendbirdBasicUserInfo from './SendbirdBasicUserInfo';
 /**
  * The ListOperatorsResponse model module.
  * @module model/ListOperatorsResponse
- * @version 2.0.0
+ * @version 2.1.1
  */
 class ListOperatorsResponse {
     /**

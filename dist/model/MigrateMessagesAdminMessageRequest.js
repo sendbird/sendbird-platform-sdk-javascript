@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The MigrateMessagesAdminMessageRequest model module.
  * @module model/MigrateMessagesAdminMessageRequest
- * @version 2.0.0
+ * @version 2.1.1
  */
 var MigrateMessagesAdminMessageRequest = /*#__PURE__*/function () {
   /**

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListOpenChannelsResponse model module.
  * @module model/ListOpenChannelsResponse
- * @version 2.0.0
+ * @version 2.1.1
  */
 var ListOpenChannelsResponse = /*#__PURE__*/function () {
   /**

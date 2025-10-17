@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The UpdatePushPreferencesForAChannelResponse model module.
  * @module model/UpdatePushPreferencesForAChannelResponse
- * @version 2.0.0
+ * @version 2.1.1
  */
 var UpdatePushPreferencesForAChannelResponse = /*#__PURE__*/function () {
   /**

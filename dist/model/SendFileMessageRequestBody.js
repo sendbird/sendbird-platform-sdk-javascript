@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SendFileMessageRequestBody model module.
  * @module model/SendFileMessageRequestBody
- * @version 2.0.0
+ * @version 2.1.1
  */
 var SendFileMessageRequestBody = /*#__PURE__*/function () {
   /**

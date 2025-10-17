@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SendTextMessageRequestBody model module.
  * @module model/SendTextMessageRequestBody
- * @version 2.0.0
+ * @version 2.1.1
  */
 var SendTextMessageRequestBody = /*#__PURE__*/function () {
   /**

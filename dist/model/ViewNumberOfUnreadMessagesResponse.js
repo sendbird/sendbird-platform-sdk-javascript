@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ViewNumberOfUnreadMessagesResponse model module.
  * @module model/ViewNumberOfUnreadMessagesResponse
- * @version 2.0.0
+ * @version 2.1.1
  */
 var ViewNumberOfUnreadMessagesResponse = /*#__PURE__*/function () {
   /**

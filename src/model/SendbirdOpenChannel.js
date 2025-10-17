@@ -17,7 +17,7 @@ import SendbirdBasicUserInfo from './SendbirdBasicUserInfo';
 /**
  * The SendbirdOpenChannel model module.
  * @module model/SendbirdOpenChannel
- * @version 2.0.0
+ * @version 2.1.1
  */
 class SendbirdOpenChannel {
     /**

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The RemoveARegistrationOrDeviceTokenResponse model module.
  * @module model/RemoveARegistrationOrDeviceTokenResponse
- * @version 2.0.0
+ * @version 2.1.1
  */
 var RemoveARegistrationOrDeviceTokenResponse = /*#__PURE__*/function () {
   /**

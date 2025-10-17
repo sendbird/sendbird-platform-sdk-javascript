@@ -24,7 +24,7 @@ import SendbirdMessageResponse from '../model/SendbirdMessageResponse';
 /**
 * Bot service.
 * @module api/BotApi
-* @version 2.0.0
+* @version 2.1.1
 */
 export default class BotApi {
 

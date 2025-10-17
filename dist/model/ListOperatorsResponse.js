@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListOperatorsResponse model module.
  * @module model/ListOperatorsResponse
- * @version 2.0.0
+ * @version 2.1.1
  */
 var ListOperatorsResponse = /*#__PURE__*/function () {
   /**

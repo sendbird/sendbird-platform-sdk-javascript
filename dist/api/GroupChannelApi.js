@@ -44,7 +44,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * GroupChannel service.
 * @module api/GroupChannelApi
-* @version 2.0.0
+* @version 2.1.1
 */
 var GroupChannelApi = exports["default"] = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The JoinAChannelRequest model module.
  * @module model/JoinAChannelRequest
- * @version 2.0.0
+ * @version 2.1.1
  */
 class JoinAChannelRequest {
     /**

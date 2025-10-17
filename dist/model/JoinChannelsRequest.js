@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The JoinChannelsRequest model module.
  * @module model/JoinChannelsRequest
- * @version 2.0.0
+ * @version 2.1.1
  */
 var JoinChannelsRequest = /*#__PURE__*/function () {
   /**

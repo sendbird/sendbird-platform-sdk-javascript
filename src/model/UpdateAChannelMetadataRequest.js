@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateAChannelMetadataRequest model module.
  * @module model/UpdateAChannelMetadataRequest
- * @version 2.0.0
+ * @version 2.1.1
  */
 class UpdateAChannelMetadataRequest {
     /**

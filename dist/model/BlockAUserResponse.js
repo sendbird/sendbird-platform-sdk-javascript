@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The BlockAUserResponse model module.
  * @module model/BlockAUserResponse
- * @version 2.0.0
+ * @version 2.1.1
  */
 var BlockAUserResponse = /*#__PURE__*/function () {
   /**

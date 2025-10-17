@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The UpdateAnOpenChannelRequest model module.
  * @module model/UpdateAnOpenChannelRequest
- * @version 2.0.0
+ * @version 2.1.1
  */
 var UpdateAnOpenChannelRequest = /*#__PURE__*/function () {
   /**

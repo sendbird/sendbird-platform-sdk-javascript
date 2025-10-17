@@ -22,7 +22,7 @@ import SendbirdSmsFallback from './SendbirdSmsFallback';
 /**
  * The SendbirdGroupChannel model module.
  * @module model/SendbirdGroupChannel
- * @version 2.0.0
+ * @version 2.1.1
  */
 class SendbirdGroupChannel {
     /**

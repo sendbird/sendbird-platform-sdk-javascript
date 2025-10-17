@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SendbirdUser model module.
  * @module model/SendbirdUser
- * @version 2.0.0
+ * @version 2.1.1
  */
 var SendbirdUser = /*#__PURE__*/function () {
   /**

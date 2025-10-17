@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SendbirdSmsFallback model module.
  * @module model/SendbirdSmsFallback
- * @version 2.0.0
+ * @version 2.1.1
  */
 var SendbirdSmsFallback = /*#__PURE__*/function () {
   /**

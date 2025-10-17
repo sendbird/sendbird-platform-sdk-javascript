@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateAGroupChannelRequest model module.
  * @module model/UpdateAGroupChannelRequest
- * @version 2.0.0
+ * @version 2.1.1
  */
 class UpdateAGroupChannelRequest {
     /**

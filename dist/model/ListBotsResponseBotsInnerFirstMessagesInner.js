@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListBotsResponseBotsInnerFirstMessagesInner model module.
  * @module model/ListBotsResponseBotsInnerFirstMessagesInner
- * @version 2.0.0
+ * @version 2.1.1
  */
 var ListBotsResponseBotsInnerFirstMessagesInner = /*#__PURE__*/function () {
   /**
