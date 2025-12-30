@@ -18,7 +18,7 @@ import SendbirdSortedMetaarrayInner from './SendbirdSortedMetaarrayInner';
 /**
  * The SendTextMessageRequestBody model module.
  * @module model/SendTextMessageRequestBody
- * @version 2.1.1
+ * @version 2.1.2
  */
 class SendTextMessageRequestBody {
     /**

@@ -17,7 +17,7 @@ import SendbirdMessageResponse from './SendbirdMessageResponse';
 /**
  * The ListMessagesResponse model module.
  * @module model/ListMessagesResponse
- * @version 2.1.1
+ * @version 2.1.2
  */
 class ListMessagesResponse {
     /**

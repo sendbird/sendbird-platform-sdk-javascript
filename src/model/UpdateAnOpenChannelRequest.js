@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateAnOpenChannelRequest model module.
  * @module model/UpdateAnOpenChannelRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class UpdateAnOpenChannelRequest {
     /**

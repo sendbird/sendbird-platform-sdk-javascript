@@ -21,7 +21,7 @@ import ListBotsResponseBotsInnerSafeguard from './ListBotsResponseBotsInnerSafeg
 /**
  * The ListBotsResponseBotsInner model module.
  * @module model/ListBotsResponseBotsInner
- * @version 2.1.1
+ * @version 2.1.2
  */
 class ListBotsResponseBotsInner {
     /**

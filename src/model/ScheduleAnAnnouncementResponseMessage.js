@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScheduleAnAnnouncementResponseMessage model module.
  * @module model/ScheduleAnAnnouncementResponseMessage
- * @version 2.1.1
+ * @version 2.1.2
  */
 class ScheduleAnAnnouncementResponseMessage {
     /**

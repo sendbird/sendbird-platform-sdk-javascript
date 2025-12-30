@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendbirdMessageResponseMessageEvents model module.
  * @module model/SendbirdMessageResponseMessageEvents
- * @version 2.1.1
+ * @version 2.1.2
  */
 class SendbirdMessageResponseMessageEvents {
     /**

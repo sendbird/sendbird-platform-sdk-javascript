@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateCountPreferenceOfChannelByUrlResponse model module.
  * @module model/UpdateCountPreferenceOfChannelByUrlResponse
- * @version 2.1.1
+ * @version 2.1.2
  */
 class UpdateCountPreferenceOfChannelByUrlResponse {
     /**

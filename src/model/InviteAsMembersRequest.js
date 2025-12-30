@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InviteAsMembersRequest model module.
  * @module model/InviteAsMembersRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class InviteAsMembersRequest {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MigrateMessagesTextMessageRequest model module.
  * @module model/MigrateMessagesTextMessageRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class MigrateMessagesTextMessageRequest {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateABotRequest model module.
  * @module model/CreateABotRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class CreateABotRequest {
     /**

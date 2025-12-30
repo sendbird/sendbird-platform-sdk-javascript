@@ -1,6 +1,6 @@
 {
   "name": "@sendbird/sendbird-platform-sdk-javascript",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Server side JavaScript SDK for Sendbirds Platform API",
   "license": "MIT",
   "main": "dist/index.js",

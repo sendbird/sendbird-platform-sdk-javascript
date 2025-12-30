@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddARegistrationOrDeviceTokenRequest model module.
  * @module model/AddARegistrationOrDeviceTokenRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class AddARegistrationOrDeviceTokenRequest {
     /**

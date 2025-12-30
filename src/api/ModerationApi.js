@@ -24,7 +24,7 @@ import SendbirdOpenChannel from '../model/SendbirdOpenChannel';
 /**
 * Moderation service.
 * @module api/ModerationApi
-* @version 2.1.1
+* @version 2.1.2
 */
 export default class ModerationApi {
 

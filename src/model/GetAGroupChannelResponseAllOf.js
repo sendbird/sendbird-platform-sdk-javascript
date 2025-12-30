@@ -17,7 +17,7 @@ import SendbirdGroupChannelDetailChannel from './SendbirdGroupChannelDetailChann
 /**
  * The GetAGroupChannelResponseAllOf model module.
  * @module model/GetAGroupChannelResponseAllOf
- * @version 2.1.1
+ * @version 2.1.2
  */
 class GetAGroupChannelResponseAllOf {
     /**

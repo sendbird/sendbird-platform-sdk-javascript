@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateAUserRequest model module.
  * @module model/CreateAUserRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class CreateAUserRequest {
     /**

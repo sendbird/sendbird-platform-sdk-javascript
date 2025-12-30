@@ -20,7 +20,7 @@ import MigrateMessagesTextMessageRequest from './MigrateMessagesTextMessageReque
 /**
  * The MigrateMessagesRequestMessagesInner model module.
  * @module model/MigrateMessagesRequestMessagesInner
- * @version 2.1.1
+ * @version 2.1.2
  */
 class MigrateMessagesRequestMessagesInner {
     /**

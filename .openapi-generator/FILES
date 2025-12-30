@@ -22,6 +22,7 @@ docs/CreateAChannelMetadataResponse.md
 docs/CreateAGroupChannelRequest.md
 docs/CreateAUserRequest.md
 docs/CreateAnOpenChannelRequest.md
+docs/CreateUserMetadataRequest.md
 docs/CreateUserTokenRequest.md
 docs/CreateUserTokenResponse.md
 docs/FreezeAGroupChannelRequest.md
@@ -121,6 +122,8 @@ docs/UpdatePushPreferencesForAChannelRequest.md
 docs/UpdatePushPreferencesForAChannelResponse.md
 docs/UpdatePushPreferencesRequest.md
 docs/UpdatePushPreferencesResponse.md
+docs/UpdateSpecificUserMetadataRequest.md
+docs/UpdateUserMetadataRequest.md
 docs/UserApi.md
 docs/ViewCountPreferenceOfAChannelResponse.md
 docs/ViewNumberOfChannelsWithUnreadMessagesResponse.md
@@ -161,6 +164,7 @@ src/model/CreateAChannelMetadataResponse.js
 src/model/CreateAGroupChannelRequest.js
 src/model/CreateAUserRequest.js
 src/model/CreateAnOpenChannelRequest.js
+src/model/CreateUserMetadataRequest.js
 src/model/CreateUserTokenRequest.js
 src/model/CreateUserTokenResponse.js
 src/model/FreezeAGroupChannelRequest.js
@@ -254,6 +258,8 @@ src/model/UpdatePushPreferencesForAChannelRequest.js
 src/model/UpdatePushPreferencesForAChannelResponse.js
 src/model/UpdatePushPreferencesRequest.js
 src/model/UpdatePushPreferencesResponse.js
+src/model/UpdateSpecificUserMetadataRequest.js
+src/model/UpdateUserMetadataRequest.js
 src/model/ViewCountPreferenceOfAChannelResponse.js
 src/model/ViewNumberOfChannelsWithUnreadMessagesResponse.js
 src/model/ViewNumberOfDailyActiveUsersResponse.js

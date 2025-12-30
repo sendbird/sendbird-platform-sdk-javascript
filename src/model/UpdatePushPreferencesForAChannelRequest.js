@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdatePushPreferencesForAChannelRequest model module.
  * @module model/UpdatePushPreferencesForAChannelRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class UpdatePushPreferencesForAChannelRequest {
     /**

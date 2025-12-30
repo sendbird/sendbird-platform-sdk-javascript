@@ -18,7 +18,7 @@ import ScheduleAnAnnouncementRequestMessage from './ScheduleAnAnnouncementReques
 /**
  * The ScheduleAnAnnouncementRequest model module.
  * @module model/ScheduleAnAnnouncementRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class ScheduleAnAnnouncementRequest {
     /**

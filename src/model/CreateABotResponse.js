@@ -18,7 +18,7 @@ import CreateABotResponseBotStyle from './CreateABotResponseBotStyle';
 /**
  * The CreateABotResponse model module.
  * @module model/CreateABotResponse
- * @version 2.1.1
+ * @version 2.1.2
  */
 class CreateABotResponse {
     /**

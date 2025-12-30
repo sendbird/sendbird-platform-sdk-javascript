@@ -23,7 +23,7 @@ import UpdateAnOpenChannelRequest from '../model/UpdateAnOpenChannelRequest';
 /**
 * OpenChannel service.
 * @module api/OpenChannelApi
-* @version 2.1.1
+* @version 2.1.2
 */
 export default class OpenChannelApi {
 

@@ -22,7 +22,7 @@ import SendbirdSortedMetaarrayInner from './SendbirdSortedMetaarrayInner';
 /**
  * The SendAMessageRequest model module.
  * @module model/SendAMessageRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class SendAMessageRequest {
     /**

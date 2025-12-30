@@ -32,6 +32,7 @@ import CreateAChannelMetadataResponse from './model/CreateAChannelMetadataRespon
 import CreateAGroupChannelRequest from './model/CreateAGroupChannelRequest';
 import CreateAUserRequest from './model/CreateAUserRequest';
 import CreateAnOpenChannelRequest from './model/CreateAnOpenChannelRequest';
+import CreateUserMetadataRequest from './model/CreateUserMetadataRequest';
 import CreateUserTokenRequest from './model/CreateUserTokenRequest';
 import CreateUserTokenResponse from './model/CreateUserTokenResponse';
 import FreezeAGroupChannelRequest from './model/FreezeAGroupChannelRequest';
@@ -125,6 +126,8 @@ import UpdatePushPreferencesForAChannelRequest from './model/UpdatePushPreferenc
 import UpdatePushPreferencesForAChannelResponse from './model/UpdatePushPreferencesForAChannelResponse';
 import UpdatePushPreferencesRequest from './model/UpdatePushPreferencesRequest';
 import UpdatePushPreferencesResponse from './model/UpdatePushPreferencesResponse';
+import UpdateSpecificUserMetadataRequest from './model/UpdateSpecificUserMetadataRequest';
+import UpdateUserMetadataRequest from './model/UpdateUserMetadataRequest';
 import ViewCountPreferenceOfAChannelResponse from './model/ViewCountPreferenceOfAChannelResponse';
 import ViewNumberOfChannelsWithUnreadMessagesResponse from './model/ViewNumberOfChannelsWithUnreadMessagesResponse';
 import ViewNumberOfDailyActiveUsersResponse from './model/ViewNumberOfDailyActiveUsersResponse';
@@ -172,7 +175,7 @@ import UserApi from './api/UserApi';
 * </pre>
 * </p>
 * @module index
-* @version 2.1.1
+* @version 2.1.2
 */
 export {
     /**
@@ -294,6 +297,12 @@ export {
      * @property {module:model/CreateAnOpenChannelRequest}
      */
     CreateAnOpenChannelRequest,
+
+    /**
+     * The CreateUserMetadataRequest model constructor.
+     * @property {module:model/CreateUserMetadataRequest}
+     */
+    CreateUserMetadataRequest,
 
     /**
      * The CreateUserTokenRequest model constructor.
@@ -852,6 +861,18 @@ export {
      * @property {module:model/UpdatePushPreferencesResponse}
      */
     UpdatePushPreferencesResponse,
+
+    /**
+     * The UpdateSpecificUserMetadataRequest model constructor.
+     * @property {module:model/UpdateSpecificUserMetadataRequest}
+     */
+    UpdateSpecificUserMetadataRequest,
+
+    /**
+     * The UpdateUserMetadataRequest model constructor.
+     * @property {module:model/UpdateUserMetadataRequest}
+     */
+    UpdateUserMetadataRequest,
 
     /**
      * The ViewCountPreferenceOfAChannelResponse model constructor.

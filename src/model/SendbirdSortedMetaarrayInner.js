@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendbirdSortedMetaarrayInner model module.
  * @module model/SendbirdSortedMetaarrayInner
- * @version 2.1.1
+ * @version 2.1.2
  */
 class SendbirdSortedMetaarrayInner {
     /**
