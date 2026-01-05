@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MarkChannelMessagesAsReadRequest model module.
  * @module model/MarkChannelMessagesAsReadRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class MarkChannelMessagesAsReadRequest {
     /**

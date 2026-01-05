@@ -17,7 +17,7 @@ import SendbirdPushTriggerOption from './SendbirdPushTriggerOption';
 /**
  * The UpdatePushPreferencesResponse model module.
  * @module model/UpdatePushPreferencesResponse
- * @version 2.1.1
+ * @version 2.1.2
  */
 class UpdatePushPreferencesResponse {
     /**

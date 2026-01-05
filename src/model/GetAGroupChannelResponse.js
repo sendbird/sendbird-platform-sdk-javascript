@@ -25,7 +25,7 @@ import SendbirdSmsFallback from './SendbirdSmsFallback';
 /**
  * The GetAGroupChannelResponse model module.
  * @module model/GetAGroupChannelResponse
- * @version 2.1.1
+ * @version 2.1.2
  */
 class GetAGroupChannelResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateAChannelMetadataResponse model module.
  * @module model/CreateAChannelMetadataResponse
- * @version 2.1.1
+ * @version 2.1.2
  */
 class CreateAChannelMetadataResponse {
     /**

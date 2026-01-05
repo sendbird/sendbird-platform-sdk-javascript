@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MigrateMessagesAdminMessageRequest model module.
  * @module model/MigrateMessagesAdminMessageRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class MigrateMessagesAdminMessageRequest {
     /**

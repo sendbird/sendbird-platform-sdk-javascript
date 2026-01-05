@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateChannelInvitationPreferenceRequest model module.
  * @module model/UpdateChannelInvitationPreferenceRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class UpdateChannelInvitationPreferenceRequest {
     /**

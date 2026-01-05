@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ChooseAPushNotificationContentTemplateResponse model module.
  * @module model/ChooseAPushNotificationContentTemplateResponse
- * @version 2.1.1
+ * @version 2.1.2
  */
 class ChooseAPushNotificationContentTemplateResponse {
     /**

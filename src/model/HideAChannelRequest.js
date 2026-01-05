@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The HideAChannelRequest model module.
  * @module model/HideAChannelRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class HideAChannelRequest {
     /**

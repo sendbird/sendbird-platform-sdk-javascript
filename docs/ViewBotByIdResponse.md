@@ -1,0 +1,14 @@
+# SendbirdPlatformSdk.ViewBotByIdResponse
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**bot** | [**ViewBotByIdResponseBot**](ViewBotByIdResponseBot.md) |  | [optional] 
+**botCallbackUrl** | **String** |  | [optional] 
+**enableMarkAsRead** | **Boolean** |  | [optional] 
+**isPrivacyMode** | **Boolean** |  | [optional] 
+**showMember** | **Boolean** |  | [optional] 
+**channelInvitationPreference** | **Number** |  | [optional] 
+
+

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RegisterOperatorsToAGroupChannelRequest model module.
  * @module model/RegisterOperatorsToAGroupChannelRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class RegisterOperatorsToAGroupChannelRequest {
     /**

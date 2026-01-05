@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendTextMessageRequestBodyPushMessageTemplateOneOf model module.
  * @module model/SendTextMessageRequestBodyPushMessageTemplateOneOf
- * @version 2.1.1
+ * @version 2.1.2
  */
 class SendTextMessageRequestBodyPushMessageTemplateOneOf {
     /**

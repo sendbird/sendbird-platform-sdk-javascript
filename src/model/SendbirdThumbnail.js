@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendbirdThumbnail model module.
  * @module model/SendbirdThumbnail
- * @version 2.1.1
+ * @version 2.1.2
  */
 class SendbirdThumbnail {
     /**

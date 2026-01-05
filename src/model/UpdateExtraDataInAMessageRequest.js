@@ -17,7 +17,7 @@ import SendbirdSortedMetaarrayInner from './SendbirdSortedMetaarrayInner';
 /**
  * The UpdateExtraDataInAMessageRequest model module.
  * @module model/UpdateExtraDataInAMessageRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class UpdateExtraDataInAMessageRequest {
     /**

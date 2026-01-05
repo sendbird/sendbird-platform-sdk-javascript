@@ -7,8 +7,11 @@ Method | HTTP request | Description
 [**addARegistrationOrDeviceToken**](UserApi.md#addARegistrationOrDeviceToken) | **POST** /v3/users/{user_id}/push/{token_type} | Add a registration or device token
 [**chooseAPushNotificationContentTemplate**](UserApi.md#chooseAPushNotificationContentTemplate) | **PUT** /v3/users/{user_id}/push/template | Choose a push notification content template
 [**createAUser**](UserApi.md#createAUser) | **POST** /v3/users | Create a user
+[**createUserMetadata**](UserApi.md#createUserMetadata) | **POST** /v3/users/{user_id}/metadata | Create user metadata
 [**createUserToken**](UserApi.md#createUserToken) | **POST** /v3/users/{user_id}/token | Create user token
 [**deleteAUser**](UserApi.md#deleteAUser) | **DELETE** /v3/users/{user_id} | Delete a user
+[**deleteSpecificUserMetadata**](UserApi.md#deleteSpecificUserMetadata) | **DELETE** /v3/users/{user_id}/metadata/{key} | Delete user metadata
+[**deleteUserAllMetadata**](UserApi.md#deleteUserAllMetadata) | **DELETE** /v3/users/{user_id}/metadata | Delete user metadata
 [**getChannelInvitationPreference**](UserApi.md#getChannelInvitationPreference) | **GET** /v3/users/{user_id}/channel_invitation_preference | Get channel invitation preference
 [**leaveMyGroupChannels**](UserApi.md#leaveMyGroupChannels) | **PUT** /v3/users/{user_id}/my_group_channels/leave | Leave my group channels
 [**listMyGroupChannels**](UserApi.md#listMyGroupChannels) | **GET** /v3/users/{user_id}/my_group_channels | List my group channels
@@ -24,12 +27,15 @@ Method | HTTP request | Description
 [**updateCountPreferenceOfAChannel**](UserApi.md#updateCountPreferenceOfAChannel) | **PUT** /v3/users/{user_id}/count_preference/{channel_url} | Update count preference of a channel
 [**updatePushPreferences**](UserApi.md#updatePushPreferences) | **PUT** /v3/users/{user_id}/push_preference | Update push preferences
 [**updatePushPreferencesForAChannel**](UserApi.md#updatePushPreferencesForAChannel) | **PUT** /v3/users/{user_id}/push_preference/{channel_url} | Update push preferences for a channel
+[**updateSpecificUserMetadata**](UserApi.md#updateSpecificUserMetadata) | **PUT** /v3/users/{user_id}/metadata/{key} | Update specific user metadata
+[**updateUserMetadata**](UserApi.md#updateUserMetadata) | **PUT** /v3/users/{user_id}/metadata | Update user metadata
 [**viewAUser**](UserApi.md#viewAUser) | **GET** /v3/users/{user_id} | View a user
 [**viewCountPreferenceOfAChannel**](UserApi.md#viewCountPreferenceOfAChannel) | **GET** /v3/users/{user_id}/count_preference/{channel_url} | View count preference of a channel
 [**viewNumberOfChannelsWithUnreadMessages**](UserApi.md#viewNumberOfChannelsWithUnreadMessages) | **GET** /v3/users/{user_id}/unread_channel_count | View number of channels with unread messages
 [**viewNumberOfUnreadMessages**](UserApi.md#viewNumberOfUnreadMessages) | **GET** /v3/users/{user_id}/unread_message_count | View number of unread messages
 [**viewPushPreferences**](UserApi.md#viewPushPreferences) | **GET** /v3/users/{user_id}/push_preference | View push preferences
 [**viewPushPreferencesForAChannel**](UserApi.md#viewPushPreferencesForAChannel) | **GET** /v3/users/{user_id}/push_preference/{channel_url} | View push preferences for a channel
+[**viewSpecificUserMetadata**](UserApi.md#viewSpecificUserMetadata) | **GET** /v3/users/{user_id}/metadata/{key} | Get specific user metadata
 [**viewWhoOwnsARegistrationOrDeviceToken**](UserApi.md#viewWhoOwnsARegistrationOrDeviceToken) | **GET** /v3/push/device_tokens/{token_type}/{token} | View who owns a registration or device token
 
 
@@ -184,6 +190,56 @@ No authorization required
 - **Accept**: application/json
 
 
+## createUserMetadata
+
+> Object createUserMetadata(userId, opts)
+
+Create user metadata
+
+## Create metadata When creating new items of the user metadata. https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-create-metadata
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.UserApi();
+let userId = "userId_example"; // String | (Required) 
+let opts = {
+  'apiToken': "apiToken_example", // String | 
+  'createUserMetadataRequest': new SendbirdPlatformSdk.CreateUserMetadataRequest() // CreateUserMetadataRequest | 
+};
+apiInstance.createUserMetadata(userId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| (Required)  | 
+ **apiToken** | **String**|  | [optional] 
+ **createUserMetadataRequest** | [**CreateUserMetadataRequest**](CreateUserMetadataRequest.md)|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## createUserToken
 
 > CreateUserTokenResponse createUserToken(userId, opts)
@@ -253,6 +309,104 @@ let opts = {
   'apiToken': {{API_TOKEN}} // String | 
 };
 apiInstance.deleteAUser(userId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| (Required)  | 
+ **apiToken** | **String**|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## deleteSpecificUserMetadata
+
+> Object deleteSpecificUserMetadata(userId, key, opts)
+
+Delete user metadata
+
+## Delete metadata https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-delete-metadata
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.UserApi();
+let userId = "userId_example"; // String | (Required) 
+let key = "key_example"; // String | 
+let opts = {
+  'apiToken': "apiToken_example" // String | 
+};
+apiInstance.deleteSpecificUserMetadata(userId, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| (Required)  | 
+ **key** | **String**|  | 
+ **apiToken** | **String**|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## deleteUserAllMetadata
+
+> Object deleteUserAllMetadata(userId, opts)
+
+Delete user metadata
+
+## Delete metadata You can delete a specific or all metadata of a user. Metadata stores additional user information such as their preference settings. https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-delete-metadata
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.UserApi();
+let userId = "userId_example"; // String | (Required) 
+let opts = {
+  'apiToken': "apiToken_example" // String | 
+};
+apiInstance.deleteUserAllMetadata(userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1128,6 +1282,108 @@ No authorization required
 - **Accept**: application/json
 
 
+## updateSpecificUserMetadata
+
+> Object updateSpecificUserMetadata(userId, key, opts)
+
+Update specific user metadata
+
+## Update metadata https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-update-metadata
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.UserApi();
+let userId = "userId_example"; // String | (Required) 
+let key = "key_example"; // String | 
+let opts = {
+  'apiToken': "apiToken_example", // String | 
+  'updateSpecificUserMetadataRequest': new SendbirdPlatformSdk.UpdateSpecificUserMetadataRequest() // UpdateSpecificUserMetadataRequest | 
+};
+apiInstance.updateSpecificUserMetadata(userId, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| (Required)  | 
+ **key** | **String**|  | 
+ **apiToken** | **String**|  | [optional] 
+ **updateSpecificUserMetadataRequest** | [**UpdateSpecificUserMetadataRequest**](UpdateSpecificUserMetadataRequest.md)|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateUserMetadata
+
+> Object updateUserMetadata(userId, opts)
+
+Update user metadata
+
+## Update metadata When updating existing items of the user metadata by their keys or adding new items to the metadata https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-update-metadata
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.UserApi();
+let userId = "userId_example"; // String | (Required) 
+let opts = {
+  'apiToken': "apiToken_example", // String | 
+  'updateUserMetadataRequest': new SendbirdPlatformSdk.UpdateUserMetadataRequest() // UpdateUserMetadataRequest | 
+};
+apiInstance.updateUserMetadata(userId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| (Required)  | 
+ **apiToken** | **String**|  | [optional] 
+ **updateUserMetadataRequest** | [**UpdateUserMetadataRequest**](UpdateUserMetadataRequest.md)|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## viewAUser
 
 > SendbirdUser viewAUser(userId, opts)
@@ -1423,6 +1679,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ViewPushPreferencesForAChannelResponse**](ViewPushPreferencesForAChannelResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## viewSpecificUserMetadata
+
+> Object viewSpecificUserMetadata(userId, key, opts)
+
+Get specific user metadata
+
+## Get metadata https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-get-metadata
+
+### Example
+
+```javascript
+import SendbirdPlatformSdk from 'sendbird-platform-sdk';
+
+let apiInstance = new SendbirdPlatformSdk.UserApi();
+let userId = "userId_example"; // String | (Required) 
+let key = "key_example"; // String | 
+let opts = {
+  'apiToken': {{API_TOKEN}} // String | 
+};
+apiInstance.viewSpecificUserMetadata(userId, key, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| (Required)  | 
+ **key** | **String**|  | 
+ **apiToken** | **String**|  | [optional] 
+
+### Return type
+
+**Object**
 
 ### Authorization
 

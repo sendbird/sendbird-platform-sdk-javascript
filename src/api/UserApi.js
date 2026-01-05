@@ -18,6 +18,7 @@ import AddARegistrationOrDeviceTokenResponse from '../model/AddARegistrationOrDe
 import ChooseAPushNotificationContentTemplateRequest from '../model/ChooseAPushNotificationContentTemplateRequest';
 import ChooseAPushNotificationContentTemplateResponse from '../model/ChooseAPushNotificationContentTemplateResponse';
 import CreateAUserRequest from '../model/CreateAUserRequest';
+import CreateUserMetadataRequest from '../model/CreateUserMetadataRequest';
 import CreateUserTokenRequest from '../model/CreateUserTokenRequest';
 import CreateUserTokenResponse from '../model/CreateUserTokenResponse';
 import GetChannelInvitationPreferenceResponse from '../model/GetChannelInvitationPreferenceResponse';
@@ -39,6 +40,8 @@ import UpdatePushPreferencesForAChannelRequest from '../model/UpdatePushPreferen
 import UpdatePushPreferencesForAChannelResponse from '../model/UpdatePushPreferencesForAChannelResponse';
 import UpdatePushPreferencesRequest from '../model/UpdatePushPreferencesRequest';
 import UpdatePushPreferencesResponse from '../model/UpdatePushPreferencesResponse';
+import UpdateSpecificUserMetadataRequest from '../model/UpdateSpecificUserMetadataRequest';
+import UpdateUserMetadataRequest from '../model/UpdateUserMetadataRequest';
 import ViewCountPreferenceOfAChannelResponse from '../model/ViewCountPreferenceOfAChannelResponse';
 import ViewNumberOfChannelsWithUnreadMessagesResponse from '../model/ViewNumberOfChannelsWithUnreadMessagesResponse';
 import ViewNumberOfUnreadMessagesResponse from '../model/ViewNumberOfUnreadMessagesResponse';
@@ -48,7 +51,7 @@ import ViewPushPreferencesResponse from '../model/ViewPushPreferencesResponse';
 /**
 * User service.
 * @module api/UserApi
-* @version 2.1.1
+* @version 2.1.2
 */
 export default class UserApi {
 
@@ -234,6 +237,62 @@ export default class UserApi {
 
 
     /**
+     * Create user metadata
+     * ## Create metadata When creating new items of the user metadata. https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-create-metadata
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/CreateUserMetadataRequest} opts.createUserMetadataRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+    createUserMetadataWithHttpInfo(userId, opts) {
+      opts = opts || {};
+      let postBody = opts['createUserMetadataRequest'];
+      // verify the required parameter 'userId' is set
+      if (userId === undefined || userId === null) {
+        throw new Error("Missing the required parameter 'userId' when calling createUserMetadata");
+      }
+
+      let pathParams = {
+        'user_id': userId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-token': opts['apiToken']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/v3/users/{user_id}/metadata', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Create user metadata
+     * ## Create metadata When creating new items of the user metadata. https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-create-metadata
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/CreateUserMetadataRequest} opts.createUserMetadataRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+    createUserMetadata(userId, opts) {
+      return this.createUserMetadataWithHttpInfo(userId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Create user token
      * ## Create user token  This action issues a session token for user authentication. Session tokens provide an efficient stateless authentication method by not storing the tokens in the Sendbird database, and thus improving the server's performance. See [access token vs. session token](https://sendbird.com/docs/chat/platform-api/v3/user/creating-users/create-a-user#2-access-token-vs-session-token) to learn more about authenticating users.  > **Note**: The endpoint `/users/{user_id}` is deprecated. Use `/users/{user_id}/token` for greater efficiency.      https://sendbird.com/docs/chat/platform-api/v3/user/managing-session-tokens/issue-a-session-token#1-issue-a-session-token
      * @param {String} userId (Required) 
@@ -337,6 +396,121 @@ export default class UserApi {
      */
     deleteAUser(userId, opts) {
       return this.deleteAUserWithHttpInfo(userId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Delete user metadata
+     * ## Delete metadata https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-delete-metadata
+     * @param {String} userId (Required) 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+    deleteSpecificUserMetadataWithHttpInfo(userId, key, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'userId' is set
+      if (userId === undefined || userId === null) {
+        throw new Error("Missing the required parameter 'userId' when calling deleteSpecificUserMetadata");
+      }
+      // verify the required parameter 'key' is set
+      if (key === undefined || key === null) {
+        throw new Error("Missing the required parameter 'key' when calling deleteSpecificUserMetadata");
+      }
+
+      let pathParams = {
+        'user_id': userId,
+        'key': key
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-token': opts['apiToken']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/v3/users/{user_id}/metadata/{key}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Delete user metadata
+     * ## Delete metadata https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-delete-metadata
+     * @param {String} userId (Required) 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+    deleteSpecificUserMetadata(userId, key, opts) {
+      return this.deleteSpecificUserMetadataWithHttpInfo(userId, key, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Delete user metadata
+     * ## Delete metadata You can delete a specific or all metadata of a user. Metadata stores additional user information such as their preference settings. https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-delete-metadata
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+    deleteUserAllMetadataWithHttpInfo(userId, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'userId' is set
+      if (userId === undefined || userId === null) {
+        throw new Error("Missing the required parameter 'userId' when calling deleteUserAllMetadata");
+      }
+
+      let pathParams = {
+        'user_id': userId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-token': opts['apiToken']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/v3/users/{user_id}/metadata', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Delete user metadata
+     * ## Delete metadata You can delete a specific or all metadata of a user. Metadata stores additional user information such as their preference settings. https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-delete-metadata
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+    deleteUserAllMetadata(userId, opts) {
+      return this.deleteUserAllMetadataWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1360,6 +1534,125 @@ export default class UserApi {
 
 
     /**
+     * Update specific user metadata
+     * ## Update metadata https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-update-metadata
+     * @param {String} userId (Required) 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateSpecificUserMetadataRequest} opts.updateSpecificUserMetadataRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+    updateSpecificUserMetadataWithHttpInfo(userId, key, opts) {
+      opts = opts || {};
+      let postBody = opts['updateSpecificUserMetadataRequest'];
+      // verify the required parameter 'userId' is set
+      if (userId === undefined || userId === null) {
+        throw new Error("Missing the required parameter 'userId' when calling updateSpecificUserMetadata");
+      }
+      // verify the required parameter 'key' is set
+      if (key === undefined || key === null) {
+        throw new Error("Missing the required parameter 'key' when calling updateSpecificUserMetadata");
+      }
+
+      let pathParams = {
+        'user_id': userId,
+        'key': key
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-token': opts['apiToken']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/v3/users/{user_id}/metadata/{key}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Update specific user metadata
+     * ## Update metadata https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-update-metadata
+     * @param {String} userId (Required) 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateSpecificUserMetadataRequest} opts.updateSpecificUserMetadataRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+    updateSpecificUserMetadata(userId, key, opts) {
+      return this.updateSpecificUserMetadataWithHttpInfo(userId, key, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Update user metadata
+     * ## Update metadata When updating existing items of the user metadata by their keys or adding new items to the metadata https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-update-metadata
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateUserMetadataRequest} opts.updateUserMetadataRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+    updateUserMetadataWithHttpInfo(userId, opts) {
+      opts = opts || {};
+      let postBody = opts['updateUserMetadataRequest'];
+      // verify the required parameter 'userId' is set
+      if (userId === undefined || userId === null) {
+        throw new Error("Missing the required parameter 'userId' when calling updateUserMetadata");
+      }
+
+      let pathParams = {
+        'user_id': userId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-token': opts['apiToken']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/v3/users/{user_id}/metadata', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Update user metadata
+     * ## Update metadata When updating existing items of the user metadata by their keys or adding new items to the metadata https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-update-metadata
+     * @param {String} userId (Required) 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @param {module:model/UpdateUserMetadataRequest} opts.updateUserMetadataRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+    updateUserMetadata(userId, opts) {
+      return this.updateUserMetadataWithHttpInfo(userId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * View a user
      * ## View a user  You can retrieve information about a user using this API.  https://sendbird.com/docs/chat/platform-api/v3/user/listing-users/get-a-user#1-get-a-user  `user_id`   Type: string   Description: Specifies the unique ID of the user to retrieve.
      * @param {String} userId (Required) 
@@ -1712,6 +2005,67 @@ export default class UserApi {
      */
     viewPushPreferencesForAChannel(userId, channelUrl, opts) {
       return this.viewPushPreferencesForAChannelWithHttpInfo(userId, channelUrl, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get specific user metadata
+     * ## Get metadata https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-get-metadata
+     * @param {String} userId (Required) 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+    viewSpecificUserMetadataWithHttpInfo(userId, key, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'userId' is set
+      if (userId === undefined || userId === null) {
+        throw new Error("Missing the required parameter 'userId' when calling viewSpecificUserMetadata");
+      }
+      // verify the required parameter 'key' is set
+      if (key === undefined || key === null) {
+        throw new Error("Missing the required parameter 'key' when calling viewSpecificUserMetadata");
+      }
+
+      let pathParams = {
+        'user_id': userId,
+        'key': key
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-token': opts['apiToken']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/v3/users/{user_id}/metadata/{key}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Get specific user metadata
+     * ## Get metadata https://sendbird.com/docs/chat/platform-api/v3/user/managing-metadata/user-get-metadata
+     * @param {String} userId (Required) 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+    viewSpecificUserMetadata(userId, key, opts) {
+      return this.viewSpecificUserMetadataWithHttpInfo(userId, key, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

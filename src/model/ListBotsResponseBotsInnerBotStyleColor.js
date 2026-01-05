@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListBotsResponseBotsInnerBotStyleColor model module.
  * @module model/ListBotsResponseBotsInnerBotStyleColor
- * @version 2.1.1
+ * @version 2.1.2
  */
 class ListBotsResponseBotsInnerBotStyleColor {
     /**

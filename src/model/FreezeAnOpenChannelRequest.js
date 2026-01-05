@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FreezeAnOpenChannelRequest model module.
  * @module model/FreezeAnOpenChannelRequest
- * @version 2.1.1
+ * @version 2.1.2
  */
 class FreezeAnOpenChannelRequest {
     /**
