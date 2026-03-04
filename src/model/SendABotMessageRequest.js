@@ -17,7 +17,7 @@ import SendbirdExtendedMessagePayload from './SendbirdExtendedMessagePayload';
 /**
  * The SendABotMessageRequest model module.
  * @module model/SendABotMessageRequest
- * @version 2.1.2
+ * @version 2.1.5
  */
 class SendABotMessageRequest {
     /**

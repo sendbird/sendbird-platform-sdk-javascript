@@ -17,7 +17,7 @@ import SendbirdUser from './SendbirdUser';
 /**
  * The CreateAGroupChannelRequest model module.
  * @module model/CreateAGroupChannelRequest
- * @version 2.1.2
+ * @version 2.1.5
  */
 class CreateAGroupChannelRequest {
     /**

@@ -23,7 +23,7 @@ import SendbirdSortedMetaarrayInner from './SendbirdSortedMetaarrayInner';
 /**
  * The SendbirdMessageResponse model module.
  * @module model/SendbirdMessageResponse
- * @version 2.1.2
+ * @version 2.1.5
  */
 class SendbirdMessageResponse {
     /**

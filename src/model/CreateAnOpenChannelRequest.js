@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateAnOpenChannelRequest model module.
  * @module model/CreateAnOpenChannelRequest
- * @version 2.1.2
+ * @version 2.1.5
  */
 class CreateAnOpenChannelRequest {
     /**

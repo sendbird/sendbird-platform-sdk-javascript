@@ -17,7 +17,7 @@ import SendbirdPushTriggerOption from './SendbirdPushTriggerOption';
 /**
  * The SendbirdMember model module.
  * @module model/SendbirdMember
- * @version 2.1.2
+ * @version 2.1.5
  */
 class SendbirdMember {
     /**

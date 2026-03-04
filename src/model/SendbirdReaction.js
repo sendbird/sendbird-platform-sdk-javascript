@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendbirdReaction model module.
  * @module model/SendbirdReaction
- * @version 2.1.2
+ * @version 2.1.5
  */
 class SendbirdReaction {
     /**

@@ -17,7 +17,7 @@ import SendbirdOpenChannel from './SendbirdOpenChannel';
 /**
  * The ListOpenChannelsResponse model module.
  * @module model/ListOpenChannelsResponse
- * @version 2.1.2
+ * @version 2.1.5
  */
 class ListOpenChannelsResponse {
     /**

@@ -17,7 +17,7 @@ import SendbirdThumbnail from './SendbirdThumbnail';
 /**
  * The SendbirdFile model module.
  * @module model/SendbirdFile
- * @version 2.1.2
+ * @version 2.1.5
  */
 class SendbirdFile {
     /**

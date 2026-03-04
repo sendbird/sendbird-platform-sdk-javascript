@@ -17,7 +17,7 @@ import SendbirdBasicUserInfo from './SendbirdBasicUserInfo';
 /**
  * The RemoveARegistrationOrDeviceTokenResponse model module.
  * @module model/RemoveARegistrationOrDeviceTokenResponse
- * @version 2.1.2
+ * @version 2.1.5
  */
 class RemoveARegistrationOrDeviceTokenResponse {
     /**

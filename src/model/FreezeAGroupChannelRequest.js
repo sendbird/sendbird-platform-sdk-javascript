@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FreezeAGroupChannelRequest model module.
  * @module model/FreezeAGroupChannelRequest
- * @version 2.1.2
+ * @version 2.1.5
  */
 class FreezeAGroupChannelRequest {
     /**

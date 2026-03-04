@@ -13,11 +13,12 @@
 
 import ApiClient from '../ApiClient';
 import SendbirdPushTriggerOption from './SendbirdPushTriggerOption';
+import UpdatePushPreferencesRequestDndSchedulesInner from './UpdatePushPreferencesRequestDndSchedulesInner';
 
 /**
  * The UpdatePushPreferencesResponse model module.
  * @module model/UpdatePushPreferencesResponse
- * @version 2.1.2
+ * @version 2.1.5
  */
 class UpdatePushPreferencesResponse {
     /**
@@ -89,6 +90,9 @@ class UpdatePushPreferencesResponse {
             }
             if (data.hasOwnProperty('timezone')) {
                 obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
+            }
+            if (data.hasOwnProperty('dnd_schedules')) {
+                obj['dnd_schedules'] = ApiClient.convertToType(data['dnd_schedules'], [UpdatePushPreferencesRequestDndSchedulesInner]);
             }
         }
         return obj;
@@ -166,6 +170,11 @@ UpdatePushPreferencesResponse.prototype['start_min'] = undefined;
  * @member {String} timezone
  */
 UpdatePushPreferencesResponse.prototype['timezone'] = undefined;
+
+/**
+ * @member {Array.<module:model/UpdatePushPreferencesRequestDndSchedulesInner>} dnd_schedules
+ */
+UpdatePushPreferencesResponse.prototype['dnd_schedules'] = undefined;
 
 
 

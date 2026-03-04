@@ -20,7 +20,7 @@ import UpdateAChannelMetadataRequest from '../model/UpdateAChannelMetadataReques
 /**
 * Metadata service.
 * @module api/MetadataApi
-* @version 2.1.2
+* @version 2.1.5
 */
 export default class MetadataApi {
 

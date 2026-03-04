@@ -17,7 +17,7 @@ import SendTextMessageRequestBodyPushMessageTemplateOneOf from './SendTextMessag
 /**
  * The SendTextMessageRequestBodyPushMessageTemplate model module.
  * @module model/SendTextMessageRequestBodyPushMessageTemplate
- * @version 2.1.2
+ * @version 2.1.5
  */
 class SendTextMessageRequestBodyPushMessageTemplate {
     /**

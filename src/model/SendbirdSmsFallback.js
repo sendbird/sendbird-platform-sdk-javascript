@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendbirdSmsFallback model module.
  * @module model/SendbirdSmsFallback
- * @version 2.1.2
+ * @version 2.1.5
  */
 class SendbirdSmsFallback {
     /**

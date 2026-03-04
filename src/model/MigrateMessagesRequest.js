@@ -17,7 +17,7 @@ import MigrateMessagesRequestMessagesInner from './MigrateMessagesRequestMessage
 /**
  * The MigrateMessagesRequest model module.
  * @module model/MigrateMessagesRequest
- * @version 2.1.2
+ * @version 2.1.5
  */
 class MigrateMessagesRequest {
     /**

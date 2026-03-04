@@ -17,7 +17,7 @@ import SendbirdGroupChannel from './SendbirdGroupChannel';
 /**
  * The GroupChatListChannelsResponse model module.
  * @module model/GroupChatListChannelsResponse
- * @version 2.1.2
+ * @version 2.1.5
  */
 class GroupChatListChannelsResponse {
     /**

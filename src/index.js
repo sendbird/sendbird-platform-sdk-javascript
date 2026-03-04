@@ -125,6 +125,8 @@ import UpdateExtraDataInAMessageResponse from './model/UpdateExtraDataInAMessage
 import UpdatePushPreferencesForAChannelRequest from './model/UpdatePushPreferencesForAChannelRequest';
 import UpdatePushPreferencesForAChannelResponse from './model/UpdatePushPreferencesForAChannelResponse';
 import UpdatePushPreferencesRequest from './model/UpdatePushPreferencesRequest';
+import UpdatePushPreferencesRequestDndSchedulesInner from './model/UpdatePushPreferencesRequestDndSchedulesInner';
+import UpdatePushPreferencesRequestDndSchedulesInnerTimeWindowsInner from './model/UpdatePushPreferencesRequestDndSchedulesInnerTimeWindowsInner';
 import UpdatePushPreferencesResponse from './model/UpdatePushPreferencesResponse';
 import UpdateSpecificUserMetadataRequest from './model/UpdateSpecificUserMetadataRequest';
 import UpdateUserMetadataRequest from './model/UpdateUserMetadataRequest';
@@ -175,7 +177,7 @@ import UserApi from './api/UserApi';
 * </pre>
 * </p>
 * @module index
-* @version 2.1.2
+* @version 2.1.5
 */
 export {
     /**
@@ -855,6 +857,18 @@ export {
      * @property {module:model/UpdatePushPreferencesRequest}
      */
     UpdatePushPreferencesRequest,
+
+    /**
+     * The UpdatePushPreferencesRequestDndSchedulesInner model constructor.
+     * @property {module:model/UpdatePushPreferencesRequestDndSchedulesInner}
+     */
+    UpdatePushPreferencesRequestDndSchedulesInner,
+
+    /**
+     * The UpdatePushPreferencesRequestDndSchedulesInnerTimeWindowsInner model constructor.
+     * @property {module:model/UpdatePushPreferencesRequestDndSchedulesInnerTimeWindowsInner}
+     */
+    UpdatePushPreferencesRequestDndSchedulesInnerTimeWindowsInner,
 
     /**
      * The UpdatePushPreferencesResponse model constructor.

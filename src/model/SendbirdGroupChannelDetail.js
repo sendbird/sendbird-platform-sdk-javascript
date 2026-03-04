@@ -23,7 +23,7 @@ import SendbirdUser from './SendbirdUser';
 /**
  * The SendbirdGroupChannelDetail model module.
  * @module model/SendbirdGroupChannelDetail
- * @version 2.1.2
+ * @version 2.1.5
  */
 class SendbirdGroupChannelDetail {
     /**
