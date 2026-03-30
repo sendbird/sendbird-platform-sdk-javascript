@@ -17,7 +17,7 @@ import SendbirdUser from './SendbirdUser';
 /**
  * The ListUsersResponse model module.
  * @module model/ListUsersResponse
- * @version 2.1.2
+ * @version 2.1.5
  */
 class ListUsersResponse {
     /**

@@ -18,5 +18,6 @@ Name | Type | Description | Notes
 **startHour** | **Number** |  | [optional] 
 **startMin** | **Number** |  | [optional] 
 **timezone** | **String** |  | [optional] 
+**dndSchedules** | [**[UpdatePushPreferencesRequestDndSchedulesInner]**](UpdatePushPreferencesRequestDndSchedulesInner.md) |  | [optional] 
 
 

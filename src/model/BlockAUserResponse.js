@@ -17,7 +17,7 @@ import SendbirdUser from './SendbirdUser';
 /**
  * The BlockAUserResponse model module.
  * @module model/BlockAUserResponse
- * @version 2.1.2
+ * @version 2.1.5
  */
 class BlockAUserResponse {
     /**

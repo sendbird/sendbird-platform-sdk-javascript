@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScheduleAnAnnouncementRequestCreateChannelOptions model module.
  * @module model/ScheduleAnAnnouncementRequestCreateChannelOptions
- * @version 2.1.2
+ * @version 2.1.5
  */
 class ScheduleAnAnnouncementRequestCreateChannelOptions {
     /**

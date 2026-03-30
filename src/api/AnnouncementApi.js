@@ -19,7 +19,7 @@ import ScheduleAnAnnouncementResponse from '../model/ScheduleAnAnnouncementRespo
 /**
 * Announcement service.
 * @module api/AnnouncementApi
-* @version 2.1.2
+* @version 2.1.5
 */
 export default class AnnouncementApi {
 

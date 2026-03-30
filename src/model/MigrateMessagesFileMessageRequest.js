@@ -17,7 +17,7 @@ import MigrateMessagesFileMessageRequestThumbnailsInner from './MigrateMessagesF
 /**
  * The MigrateMessagesFileMessageRequest model module.
  * @module model/MigrateMessagesFileMessageRequest
- * @version 2.1.2
+ * @version 2.1.5
  */
 class MigrateMessagesFileMessageRequest {
     /**

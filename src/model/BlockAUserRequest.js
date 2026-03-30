@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BlockAUserRequest model module.
  * @module model/BlockAUserRequest
- * @version 2.1.2
+ * @version 2.1.5
  */
 class BlockAUserRequest {
     /**

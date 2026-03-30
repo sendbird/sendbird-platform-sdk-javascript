@@ -28,7 +28,7 @@ import UpdateExtraDataInAMessageResponse from '../model/UpdateExtraDataInAMessag
 /**
 * Message service.
 * @module api/MessageApi
-* @version 2.1.2
+* @version 2.1.5
 */
 export default class MessageApi {
 

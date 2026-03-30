@@ -25,7 +25,7 @@ import SendbirdUser from './SendbirdUser';
 /**
  * The InviteAsMembersResponse model module.
  * @module model/InviteAsMembersResponse
- * @version 2.1.2
+ * @version 2.1.5
  */
 class InviteAsMembersResponse {
     /**

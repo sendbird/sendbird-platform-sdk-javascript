@@ -17,7 +17,7 @@ import SendbirdBasicUserInfo from './SendbirdBasicUserInfo';
 /**
  * The AddARegistrationOrDeviceTokenResponse model module.
  * @module model/AddARegistrationOrDeviceTokenResponse
- * @version 2.1.2
+ * @version 2.1.5
  */
 class AddARegistrationOrDeviceTokenResponse {
     /**

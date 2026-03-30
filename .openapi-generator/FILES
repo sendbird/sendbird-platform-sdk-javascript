@@ -121,6 +121,8 @@ docs/UpdateExtraDataInAMessageResponse.md
 docs/UpdatePushPreferencesForAChannelRequest.md
 docs/UpdatePushPreferencesForAChannelResponse.md
 docs/UpdatePushPreferencesRequest.md
+docs/UpdatePushPreferencesRequestDndSchedulesInner.md
+docs/UpdatePushPreferencesRequestDndSchedulesInnerTimeWindowsInner.md
 docs/UpdatePushPreferencesResponse.md
 docs/UpdateSpecificUserMetadataRequest.md
 docs/UpdateUserMetadataRequest.md
@@ -257,6 +259,8 @@ src/model/UpdateExtraDataInAMessageResponse.js
 src/model/UpdatePushPreferencesForAChannelRequest.js
 src/model/UpdatePushPreferencesForAChannelResponse.js
 src/model/UpdatePushPreferencesRequest.js
+src/model/UpdatePushPreferencesRequestDndSchedulesInner.js
+src/model/UpdatePushPreferencesRequestDndSchedulesInnerTimeWindowsInner.js
 src/model/UpdatePushPreferencesResponse.js
 src/model/UpdateSpecificUserMetadataRequest.js
 src/model/UpdateUserMetadataRequest.js

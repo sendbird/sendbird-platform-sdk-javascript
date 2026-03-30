@@ -19,7 +19,7 @@ import ViewNumberOfMonthlyActiveUsersResponse from '../model/ViewNumberOfMonthly
 /**
 * Statistics service.
 * @module api/StatisticsApi
-* @version 2.1.2
+* @version 2.1.5
 */
 export default class StatisticsApi {
 

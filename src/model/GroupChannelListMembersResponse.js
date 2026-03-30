@@ -17,7 +17,7 @@ import SendbirdMember from './SendbirdMember';
 /**
  * The GroupChannelListMembersResponse model module.
  * @module model/GroupChannelListMembersResponse
- * @version 2.1.2
+ * @version 2.1.5
  */
 class GroupChannelListMembersResponse {
     /**

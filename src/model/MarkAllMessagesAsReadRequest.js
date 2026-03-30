@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MarkAllMessagesAsReadRequest model module.
  * @module model/MarkAllMessagesAsReadRequest
- * @version 2.1.2
+ * @version 2.1.5
  */
 class MarkAllMessagesAsReadRequest {
     /**

@@ -51,7 +51,7 @@ import ViewPushPreferencesResponse from '../model/ViewPushPreferencesResponse';
 /**
 * User service.
 * @module api/UserApi
-* @version 2.1.2
+* @version 2.1.5
 */
 export default class UserApi {
 

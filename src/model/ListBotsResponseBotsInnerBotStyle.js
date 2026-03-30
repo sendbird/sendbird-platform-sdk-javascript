@@ -17,7 +17,7 @@ import ListBotsResponseBotsInnerBotStyleColor from './ListBotsResponseBotsInnerB
 /**
  * The ListBotsResponseBotsInnerBotStyle model module.
  * @module model/ListBotsResponseBotsInnerBotStyle
- * @version 2.1.2
+ * @version 2.1.5
  */
 class ListBotsResponseBotsInnerBotStyle {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateAMessageRequest model module.
  * @module model/UpdateAMessageRequest
- * @version 2.1.2
+ * @version 2.1.5
  */
 class UpdateAMessageRequest {
     /**

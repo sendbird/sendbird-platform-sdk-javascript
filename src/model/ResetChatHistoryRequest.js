@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResetChatHistoryRequest model module.
  * @module model/ResetChatHistoryRequest
- * @version 2.1.2
+ * @version 2.1.5
  */
 class ResetChatHistoryRequest {
     /**

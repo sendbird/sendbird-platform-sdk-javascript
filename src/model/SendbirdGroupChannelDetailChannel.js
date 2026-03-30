@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendbirdGroupChannelDetailChannel model module.
  * @module model/SendbirdGroupChannelDetailChannel
- * @version 2.1.2
+ * @version 2.1.5
  */
 class SendbirdGroupChannelDetailChannel {
     /**

@@ -18,7 +18,7 @@ import SendbirdSortedMetaarrayInner from './SendbirdSortedMetaarrayInner';
 /**
  * The SendAdminMessageRequestBody model module.
  * @module model/SendAdminMessageRequestBody
- * @version 2.1.2
+ * @version 2.1.5
  */
 class SendAdminMessageRequestBody {
     /**

@@ -17,7 +17,7 @@ import SendbirdPushTriggerOption from './SendbirdPushTriggerOption';
 /**
  * The ViewPushPreferencesForAChannelResponse model module.
  * @module model/ViewPushPreferencesForAChannelResponse
- * @version 2.1.2
+ * @version 2.1.5
  */
 class ViewPushPreferencesForAChannelResponse {
     /**

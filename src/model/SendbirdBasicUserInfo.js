@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendbirdBasicUserInfo model module.
  * @module model/SendbirdBasicUserInfo
- * @version 2.1.2
+ * @version 2.1.5
  */
 class SendbirdBasicUserInfo {
     /**

@@ -35,7 +35,7 @@ import UpdateAGroupChannelRequest from '../model/UpdateAGroupChannelRequest';
 /**
 * GroupChannel service.
 * @module api/GroupChannelApi
-* @version 2.1.2
+* @version 2.1.5
 */
 export default class GroupChannelApi {
 
