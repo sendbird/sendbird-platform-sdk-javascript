@@ -1,12 +1,19 @@
 {
   "name": "@sendbird/sendbird-platform-sdk-javascript",
-  "version": "2.1.5",
+  "version": "2.1.6",
+  "private": true,
   "description": "Server side JavaScript SDK for Sendbirds Platform API",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sendbird/sendbird-platform-sdk-javascript.git"
+  },
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel src -d dist",
+    "build": "rm -rf ./dist && babel src -d dist && node scripts/prepare-publish.js",
     "prepare": "npm run build",
+    "prepare-publish": "node scripts/prepare-publish.js",
+    "pack:publish": "npm pack ./dist",
     "test": "mocha --require @babel/register --recursive"
   },
   "browser": {
@@ -40,9 +47,6 @@
     "mocha": "^8.0.1",
     "sinon": "^7.2.0"
   },
-  "files": [
-    "dist"
-  ],
   "publishConfig": {
     "access": "public"
   }
