@@ -27,3 +27,5 @@ test/**
 package.json
 package-lock.json
 .gitignore
+./scripts
+package.publish.json
