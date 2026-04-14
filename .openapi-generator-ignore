@@ -26,3 +26,4 @@ README.md
 test/**
 package.json
 package-lock.json
+.gitignore
