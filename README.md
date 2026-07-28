@@ -54,7 +54,10 @@ In order to make requests with this SDK you will need you master API token. This
 
 # 💻 Requirements
 
-You will need [Node.js](https://nodejs.org/en/download/) installed. This has been developed and tested with NodeJS 17+.
+You will need [Node.js](https://nodejs.org/en/download/) installed.
+
+- **Using the SDK**: the published package is pre-transpiled (ES5) and only depends on `superagent`, so it runs on Node 7+.
+- **Developing / running the tests in this repo**: Node 20+ is required (the dev toolchain — mocha 11 plus the audit-patched dev dependencies `brace-expansion`/`serialize-javascript` — requires it).
 
 
 # 📦 Installation
