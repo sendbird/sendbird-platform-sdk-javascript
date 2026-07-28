@@ -29,3 +29,4 @@ package-lock.json
 .gitignore
 ./scripts
 package.publish.json
+.travis.yml
