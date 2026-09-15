@@ -48,7 +48,7 @@
     "sinon": "^7.2.0"
   },
   "overrides": {
-    "brace-expansion": "^5.0.9",
+    "brace-expansion": "^2.1.7",
     "js-yaml": "^4.3.2",
     "serialize-javascript": "^7.0.7",
     "diff": "^9.0.0"
